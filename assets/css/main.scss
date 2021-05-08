@@ -1,0 +1,55 @@
+@charset 'utf-8';
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  cursor: pointer;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 0 1.5em;
+  font-size: 1.2em;
+  white-space: nowrap;
+
+  &.big {
+    line-height: 2.5em;
+  }
+
+  &:disabled {
+    border-color: #888;
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      box-shadow: 1px 1px 1px #666;
+    }
+
+    &[selected] {
+      background: rgb(255, 208, 138);
+    }
+  }
+}
+
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+
+  & > * {
+    display: table-row;
+
+    & > * {
+      display: table-cell;
+      padding: 8px 15px;
+      vertical-align: middle;
+    }
+  }
+}
