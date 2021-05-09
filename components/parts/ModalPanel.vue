@@ -21,18 +21,18 @@ export default {
 
 <style lang="scss" scoped>
 .modal-panel {
+  z-index: 5;
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   background: rgba(255, 248, 237, 1);
   overflow: auto;
-  overflow-y: scroll;
   padding: 10px;
 
   .contents {

@@ -96,7 +96,8 @@ export default {
 
         .title {
           font-size: 0.9em;
-          border-width: 2px;
+          text-align: center;
+          border-bottom: 1px solid #333;
         }
 
         .detail {
@@ -104,11 +105,8 @@ export default {
         }
 
         .buttons {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 0.8em;
           .button {
+            font-size: 0.8em;
             padding: 0 10px;
           }
         }

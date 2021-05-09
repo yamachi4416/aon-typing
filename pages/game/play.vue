@@ -1,45 +1,62 @@
 <template>
-  <div class="typing-page">
-    <div class="main">
-      <div class="keyboard">
-        <typing-panel :typing="typing" />
+  <basic-layout>
+    <div class="typing-page">
+      <div class="main">
+        <div class="keyboard">
+          <typing-panel :typing="typing" />
+        </div>
+      </div>
+      <div class="sub">
+        <count-down v-show="isCountDownShow" :count="countDown" />
+        <game-result
+          :show="isResultShow"
+          :result="result"
+          :problem="problem"
+          @retry="retry"
+          @next="nextProblem"
+          @setting="$router.push({ name: 'game' })"
+        />
       </div>
     </div>
-    <div class="sub">
-      <count-down v-show="isCountDownShow" :count="countDown" />
-      <typing-menu-panel
-        v-model="setting"
-        :show="isOpenSetting"
-        @start="startTyping"
-      />
-      <game-result
-        :show="isResultShow"
-        :result="result"
-        :problem="problem"
-        @retry="retry"
-        @next="nextProblem"
-        @setting="openSetting"
-      />
-    </div>
-  </div>
+  </basic-layout>
 </template>
 
 <script>
-import { mapGetters, mapActions, mapMutations } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import Util from '~/libs/Util'
 import TypingGame from '~/libs/TypingGame'
 import TypingPanel from '~/components/panels/TypingPanel.vue'
 import GameResult from '~/components/panels/GameResultPanel.vue'
 import CountDown from '~/components/parts/CountDown.vue'
-import TypingMenuPanel from '~/components/panels/TypingMenuPanel.vue'
 import TypingProblemQuestioner from '~/libs/TypingProblemQuestioner'
+import BasicLayout from '~/components/parts/BasicLayout.vue'
+
+const fetchProblem = async (store) => {
+  const setting = store.getters['typingSetting/setting']
+  const { problemId } = setting
+  if (problemId) {
+    const { problemId } = setting
+    const problem = new TypingProblemQuestioner({
+      problem: await store.dispatch('problems/getProblemDetail', problemId),
+      setting,
+    })
+    return {
+      problem,
+    }
+  }
+  return {}
+}
 
 export default {
   components: {
     TypingPanel,
     GameResult,
     CountDown,
-    TypingMenuPanel,
+    BasicLayout,
+  },
+
+  async asyncData({ store }) {
+    return await fetchProblem(store)
   },
 
   data({ query }) {
@@ -48,62 +65,40 @@ export default {
       result: null,
       countDown: 0,
       problem: null,
-      isOpenSetting: true,
-      isCountDownShow: false,
+      isCountDownShow: true,
       isResultShow: false,
     }
   },
 
-  async fetch({ store }) {
-    await store.dispatch('problems/getProblems')
-  },
-
   computed: {
     ...mapGetters({
-      typingSetting: 'typingSetting/setting',
+      setting: 'typingSetting/setting',
     }),
+  },
 
-    setting: {
-      get() {
-        return this.typingSetting
-      },
-      set(value) {
-        this.setSetting(value)
-      },
-    },
+  mounted() {
+    if (!this.setting.problemId) {
+      this.$router.replace({ name: 'game' })
+    } else {
+      this.startTyping()
+    }
   },
 
   methods: {
-    ...mapMutations({
-      setSetting: 'typingSetting/setSetting',
-    }),
-
     ...mapActions({
       getProblemDetail: 'problems/getProblemDetail',
     }),
-
-    openSetting() {
-      this.result = null
-      this.problem = null
-      this.isOpenSetting = true
-      this.isCountDownShow = true
-      this.typing.init({ words: [], setting: this.setting })
-    },
 
     async startTyping() {
       this.stopTyping()
       this.typing.init({ words: [] })
 
       if (!this.problem) {
-        const { problemId } = this.setting
-        this.problem = new TypingProblemQuestioner({
-          problem: await this.getProblemDetail(problemId),
-          setting: this.setting,
-        })
+        const { problem } = await fetchProblem(this.$store)
+        this.problem = problem
       }
 
       this.isResultShow = false
-      this.isOpenSetting = false
       this.isCountDownShow = true
 
       this.countDown = 3
@@ -144,8 +139,9 @@ export default {
 
 <style lang="scss" scoped>
 .typing-page {
+  width: 100%;
+  height: 100%;
   display: flex;
-  height: 100vh;
   align-items: center;
 
   .main {

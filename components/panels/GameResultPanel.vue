@@ -70,7 +70,9 @@
       <template #footer>
         <div class="buttons">
           <button class="button" @click="$emit('retry')">もういちど</button>
-          <button class="button" @click="$emit('setting')">設定を変更</button>
+          <button class="button" @click="$emit('setting')">
+            メニューに戻る
+          </button>
           <button
             class="button"
             :disabled="!hasNextProblem"
@@ -121,7 +123,6 @@ export default {
   .info-main {
     display: flex;
     align-items: center;
-    justify-content: center;
     font-size: 1.2rem;
     gap: 5px;
 
@@ -177,13 +178,6 @@ export default {
         }
       }
     }
-  }
-
-  .buttons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
   }
 }
 </style>

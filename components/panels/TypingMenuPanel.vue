@@ -3,9 +3,10 @@
     <modal-panel :show="show">
       <modal-content
         class="typing-menu-panel"
-        title="タイピング設定"
-        :show-close="false"
+        title="タイピングメニュー"
+        :show-close="showClose"
         :show-footer="true"
+        @close="$emit('close')"
       >
         <div class="table">
           <div>
@@ -122,7 +123,10 @@
             <div>
               <div class="list-buttons">
                 <button class="button" @click="openProblemSelect()">
-                  選択する
+                  一覧から選択
+                </button>
+                <button class="button" @click="randomProblemSelect()">
+                  ランダム選択
                 </button>
               </div>
             </div>
@@ -152,17 +156,23 @@
         <template #footer>
           <div class="buttons">
             <button :disabled="!problem.id" class="button" @click="start">
-              タイピングを開始する
+              スタートする
+            </button>
+            <button class="button" @click="$router.push({ name: 'index' })">
+              やめる
             </button>
           </div>
         </template>
       </modal-content>
     </modal-panel>
-    <problem-select-panel
-      :show="isOpenProblemSelect"
-      @select="selectProblemSelect"
-      @cancel="cancelProblemSelect"
-    />
+    <div>
+      <problem-select-panel
+        class="problem-select-modal"
+        :show="isOpenProblemSelect"
+        @select="selectProblemSelect"
+        @cancel="cancelProblemSelect"
+      />
+    </div>
   </div>
 </template>
 
@@ -183,6 +193,10 @@ export default {
       type: Object,
       required: true,
     },
+    showClose: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   data() {
@@ -195,6 +209,7 @@ export default {
   computed: {
     ...mapGetters({
       getProblem: 'problems/problem',
+      problems: 'problems/problems',
     }),
 
     timeLimit: {
@@ -265,6 +280,20 @@ export default {
       this.setting.problemId = problem.id || ''
     },
 
+    randomProblemSelect() {
+      const problems = this.problems
+      const length = problems.length
+      if (length > 0) {
+        const idx = Math.floor(Math.random() * length)
+        const problemId = problems[idx].id
+        if (this.setting.problemId !== problemId) {
+          this.setting.problemId = problemId
+        } else if (length > 1) {
+          this.randomProblemSelect()
+        }
+      }
+    },
+
     start() {
       this.$emit('input', this.setting)
       this.$emit('start', this.setting)
@@ -275,7 +304,7 @@ export default {
 
 <style lang="scss" scoped>
 .typing-menu-panel {
-  min-width: 650px;
+  min-width: 300px;
 
   label {
     white-space: nowrap;
@@ -292,11 +321,9 @@ export default {
   .problem-detail {
     font-size: 0.9em;
   }
+}
 
-  .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.problem-select-modal {
+  z-index: 20;
 }
 </style>

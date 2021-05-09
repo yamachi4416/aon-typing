@@ -9,6 +9,20 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background: #fff8ed;
+}
+
+body,
+#__nuxt,
+#__layout {
+  min-height: 100vh;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .button {
@@ -16,7 +30,7 @@ body {
   border: 2px solid #333;
   border-radius: 10px;
   padding: 0 1.5em;
-  font-size: 1.2em;
+  font-size: 1em;
   white-space: nowrap;
 
   &.big {
@@ -52,4 +66,13 @@ body {
       vertical-align: middle;
     }
   }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }

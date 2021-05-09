@@ -18,7 +18,15 @@ export const getters = {
 
 export const mutations = {
   setSetting(state, setting) {
-    const newSetting = { ...setting }
+    const newSetting = {}
+    for (const key of Object.keys(defaultSetting)) {
+      const defValue = defaultSetting[key]
+      if (key in setting && typeof defValue === typeof setting[key]) {
+        newSetting[key] = setting[key]
+      } else {
+        newSetting[key] = defValue
+      }
+    }
     state.setting = newSetting
   },
   clearSetting(state) {
