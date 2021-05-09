@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs'
 import url from 'url'
-import jaChars from '../libs/TypingJapaneseChars.js'
+import jaChars from '../libs/TypingJapaneseChars.mjs'
 
 const listJsonFiles = (dir) => {
   return fs
