@@ -1,4 +1,5 @@
 {
+  "id": "10003",
   "title": "さかな",
   "type": "japanese",
   "words": [
@@ -162,6 +163,5 @@
       "info2": "わらすぼ",
       "word": "warasubo"
     }
-  ],
-  "id": "10003"
+  ]
 }

@@ -19,15 +19,17 @@ const generateProblemData = (dataDir, apiDir) => {
   fs.mkdirSync(problemsDist, { recursive: true })
 
   const problems = listJsonFiles(dataDir).map((p) => {
-    const problem = JSON.parse(fs.readFileSync(p))
+    const dataObj = JSON.parse(fs.readFileSync(p))
+    const problem = {
+      id: path.basename(p, '.json'),
+      ...dataObj,
+    }
 
     if (problem.type === 'japanese') {
       for (const word of problem.words) {
         word.word = jaChars.typeJapaneseChars(word.info2)
       }
     }
-
-    problem.id = path.basename(p, '.json')
 
     const dist = path.resolve(problemsDist, path.basename(p))
     fs.writeFileSync(dist, JSON.stringify(problem, null, 2))

@@ -1,4 +1,5 @@
 {
+  "id": "10001",
   "title": "都道府県",
   "type": "japanese",
   "words": [
@@ -237,6 +238,5 @@
       "info2": "おきなわけん",
       "word": "okinawakenn"
     }
-  ],
-  "id": "10001"
+  ]
 }
