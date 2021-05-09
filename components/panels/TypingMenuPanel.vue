@@ -167,6 +167,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import ModalContent from '../parts/ModalContent.vue'
 import ModalPanel from '../parts/ModalPanel.vue'
 import ProblemSelectPanel from './ProblemSelectPanel.vue'
@@ -183,13 +184,19 @@ export default {
       required: true,
     },
   },
+
   data() {
     return {
       setting: { ...this.value },
       isOpenProblemSelect: false,
     }
   },
+
   computed: {
+    ...mapGetters({
+      getProblem: 'problems/problem',
+    }),
+
     timeLimit: {
       get() {
         return this.setting.timeLimit
@@ -198,6 +205,7 @@ export default {
         this.setting.timeLimit = val
       },
     },
+
     autoMode: {
       get() {
         return this.setting.autoMode
@@ -206,14 +214,7 @@ export default {
         this.setting.autoMode = val
       },
     },
-    problem: {
-      get() {
-        return this.setting.problem
-      },
-      set(val) {
-        this.setting.problem = val
-      },
-    },
+
     quantity: {
       get() {
         return this.setting.quantity
@@ -222,6 +223,7 @@ export default {
         this.setting.quantity = val
       },
     },
+
     randomMode: {
       get() {
         return this.setting.randomMode
@@ -230,7 +232,15 @@ export default {
         this.setting.randomMode = val
       },
     },
+
+    problem() {
+      if (this.setting && this.setting.problemId) {
+        return this.getProblem(this.setting.problemId) || {}
+      }
+      return {}
+    },
   },
+
   watch: {
     value(val) {
       if (val) {
@@ -240,17 +250,21 @@ export default {
       }
     },
   },
+
   methods: {
     openProblemSelect() {
       this.isOpenProblemSelect = true
     },
+
     cancelProblemSelect() {
       this.isOpenProblemSelect = false
     },
+
     selectProblemSelect(problem) {
       this.isOpenProblemSelect = false
-      this.setting.problem = problem
+      this.setting.problemId = problem.id || ''
     },
+
     start() {
       this.$emit('input', this.setting)
       this.$emit('start', this.setting)

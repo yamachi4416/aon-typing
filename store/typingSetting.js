@@ -3,7 +3,7 @@ const defaultSetting = {
   autoMode: 0,
   randomMode: false,
   quantity: 0,
-  problem: {},
+  problemId: '',
 }
 
 export const state = () => ({
@@ -18,7 +18,8 @@ export const getters = {
 
 export const mutations = {
   setSetting(state, setting) {
-    state.setting = { ...setting }
+    const newSetting = { ...setting }
+    state.setting = newSetting
   },
   clearSetting(state) {
     state.setting = Object.assign({}, defaultSetting)

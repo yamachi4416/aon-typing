@@ -7,7 +7,7 @@
     >
       <div class="problem-list">
         <div
-          v-for="(p, i) in problems.problems"
+          v-for="(p, i) in problems"
           :key="`problem-${p.id}-${i}`"
           class="problem-list-item"
         >

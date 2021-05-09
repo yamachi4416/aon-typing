@@ -6,6 +6,16 @@ export const getters = {
   problems(state) {
     return state.problems
   },
+  problem(state) {
+    const problems = state.problems
+    return (id) => {
+      if (id) {
+        const problem = problems.find((p) => p.id === id)
+        return problem ? { ...problem } : null
+      }
+      return null
+    }
+  },
 }
 
 export const mutations = {
@@ -16,21 +26,15 @@ export const mutations = {
 
 export const actions = {
   async getProblems({ commit }) {
-    const problems = await this.$axios.$get('/api/problems.json')
+    const payload = await this.$axios.$get('/api/problems.json')
+    const problems = payload.problems || []
     commit('setProblems', problems)
   },
 
-  async getProblemDetail({ commit }, { path }) {
-    return await this.$axios.$get(`/api/problems/details${path}.json`)
-  },
-
-  async getProblemById({ commit, getters }, { id }) {
-    let problems = getters.problems.problems
-    if (!problems || !problems.length) {
-      problems = await this.$axios.$get('/api/problems.json')
-      commit('setProblems', problems)
+  async getProblemDetail({ commit }, id) {
+    if (id) {
+      return await this.$axios.$get(`/api/problems/details/${id}.json`)
     }
-    const problem = problems.find((p) => p.id === id)
-    return problem ? { ...problem } : null
+    return null
   },
 }
