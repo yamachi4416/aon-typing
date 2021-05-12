@@ -21,7 +21,7 @@ export default {
 
 <style lang="scss" scoped>
 .modal-panel {
-  z-index: 5;
+  z-index: 99;
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +31,7 @@ export default {
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 248, 237, 1);
+  background: rgba(255, 248, 237, 0.7);
   overflow: auto;
   padding: 10px;
 
@@ -43,7 +43,6 @@ export default {
       display: block;
       height: 10px;
       width: 100%;
-      padding: 0;
     }
   }
 

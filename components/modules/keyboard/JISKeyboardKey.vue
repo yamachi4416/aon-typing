@@ -113,22 +113,6 @@ export default {
 
 <style lang="scss" scoped>
 .keyboard-key {
-  cursor: pointer;
-
-  path,
-  rect {
-    stroke-width: 1;
-    stroke: #333;
-    fill: #fff;
-  }
-
-  &[highlight='true'] {
-    path,
-    rect {
-      fill: rgb(255, 208, 138);
-    }
-  }
-
   .keyboard-text {
     display: flex;
     margin: 0;
@@ -139,7 +123,6 @@ export default {
     align-items: center;
     text-align: center;
     font-size: 16px;
-    color: #666;
     border-radius: 5px;
   }
 }

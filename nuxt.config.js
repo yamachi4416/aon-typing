@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'aon-typing',
+    title: 'あぉ～ん タイピング',
     htmlAttrs: {
       lang: 'ja',
     },

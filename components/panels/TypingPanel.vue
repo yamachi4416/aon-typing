@@ -35,8 +35,12 @@
           <hand-map :hand-numbers="leftHands" />
           <hand-map :hand-numbers="rightHands" />
         </div>
-        <div class="keyboard">
-          <jis-keyboard :type-key="typeKey" :keys="keys" />
+        <div class="keyboard-zone">
+          <typing-keyboard
+            :type-key="typeKey"
+            :setting="setting"
+            :keys="keys"
+          />
         </div>
       </div>
     </foreignObject>
@@ -47,9 +51,9 @@
 import TimeCircle from '../parts/TimeCircle.vue'
 import DispWordsInfo from '../modules/keyboard/DispWordsInfo.vue'
 import DisplayWords from '../modules/keyboard/DisplayWords.vue'
-import JisKeyboard from '../modules/keyboard/JISKeyboard.vue'
 import HandMap from '../modules/keyboard/HandMap.vue'
 import CloseCircle from '../parts/CloseCircle.vue'
+import TypingKeyboard from '../modules/keyboard/TypingKeyboard.vue'
 import JISKeys from '~/libs/JISKeys'
 
 export default {
@@ -57,9 +61,9 @@ export default {
     TimeCircle,
     DispWordsInfo,
     DisplayWords,
-    JisKeyboard,
     HandMap,
     CloseCircle,
+    TypingKeyboard,
   },
   props: {
     typing: {
@@ -68,7 +72,7 @@ export default {
     },
     setting: {
       type: Object,
-      default: () => ({}),
+      required: true,
     },
   },
   computed: {
@@ -98,6 +102,9 @@ export default {
         this.keys.isShiftLeftKey(this.typeKey) ? 5 : 0,
       ]
     },
+  },
+  beforeDestroy() {
+    this.typing.dispose()
   },
   methods: {
     cancel() {
@@ -185,7 +192,7 @@ export default {
     }
   }
 
-  .keyboard {
+  .keyboard-zone {
     width: 90%;
   }
 

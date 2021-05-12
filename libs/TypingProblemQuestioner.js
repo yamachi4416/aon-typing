@@ -16,11 +16,11 @@ const spliceByQuantity = (words, quantity) => {
   const ret = []
   for (const w of words) {
     const word = w.word
+    ret.push(words.shift())
     chars += word.length
     if (chars >= quantity) {
       return ret
     }
-    ret.push(words.shift())
   }
 
   return ret

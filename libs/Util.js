@@ -10,6 +10,15 @@ const countDown = (count, tick) => {
   })
 }
 
+const wait = (time) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve()
+    }, time)
+  })
+}
+
 export default {
   countDown,
+  wait,
 }

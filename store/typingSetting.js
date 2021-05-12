@@ -17,19 +17,22 @@ export const getters = {
 }
 
 export const mutations = {
-  setSetting(state, setting) {
-    const newSetting = {}
-    for (const key of Object.keys(defaultSetting)) {
-      const defValue = defaultSetting[key]
-      if (key in setting && typeof defValue === typeof setting[key]) {
-        newSetting[key] = setting[key]
-      } else {
-        newSetting[key] = defValue
-      }
-    }
-    state.setting = newSetting
+  setTimeLimit(state, value) {
+    state.setting.timeLimit = value
+  },
+  setAutoMode(state, value) {
+    state.setting.autoMode = value
+  },
+  setRandomMode(state, value) {
+    state.setting.randomMode = value
+  },
+  setQuantity(state, value) {
+    state.setting.quantity = value
+  },
+  setProblemId(state, problemId) {
+    state.setting.problemId = problemId
   },
   clearSetting(state) {
-    state.setting = Object.assign({}, defaultSetting)
+    Object.assign(state.setting, defaultSetting)
   },
 }

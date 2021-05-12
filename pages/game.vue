@@ -1,14 +1,21 @@
 <template>
-  <nuxt-child />
+  <nuxt-child :back-url="backUrl" />
 </template>
 
 <script>
 export default {
-  async fetch({ store }) {
-    const problems = store.getters['problems/problems']
-    if (!problems || problems.length === 0) {
-      await store.dispatch('problems/getProblems')
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      vm.backUrl = from.fullPath
+    })
+  },
+  data() {
+    return {
+      backUrl: null,
     }
+  },
+  async fetch({ store }) {
+    await store.dispatch('problems/getProblems')
   },
 }
 </script>

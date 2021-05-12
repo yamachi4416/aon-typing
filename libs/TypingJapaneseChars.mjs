@@ -1,3 +1,91 @@
+const Kana2HiraMap = {
+  ア: 'あ',
+  ィ: 'ぃ',
+  イ: 'い',
+  ゥ: 'ぅ',
+  ウ: 'う',
+  ェ: 'ぇ',
+  エ: 'え',
+  ォ: 'ぉ',
+  オ: 'お',
+  カ: 'か',
+  ガ: 'が',
+  キ: 'き',
+  ギ: 'ぎ',
+  ク: 'く',
+  グ: 'ぐ',
+  ケ: 'け',
+  ゲ: 'げ',
+  コ: 'こ',
+  ゴ: 'ご',
+  サ: 'さ',
+  ザ: 'ざ',
+  シ: 'し',
+  ジ: 'じ',
+  ス: 'す',
+  ズ: 'ず',
+  セ: 'せ',
+  ゼ: 'ぜ',
+  ソ: 'そ',
+  ゾ: 'ぞ',
+  タ: 'た',
+  ダ: 'だ',
+  チ: 'ち',
+  ヂ: 'ぢ',
+  ッ: 'っ',
+  ツ: 'つ',
+  ヅ: 'づ',
+  テ: 'て',
+  デ: 'で',
+  ト: 'と',
+  ド: 'ど',
+  ナ: 'な',
+  ニ: 'に',
+  ヌ: 'ぬ',
+  ネ: 'ね',
+  ノ: 'の',
+  ハ: 'は',
+  バ: 'ば',
+  パ: 'ぱ',
+  ヒ: 'ひ',
+  ビ: 'び',
+  ピ: 'ぴ',
+  フ: 'ふ',
+  ブ: 'ぶ',
+  プ: 'ぷ',
+  ヘ: 'へ',
+  ベ: 'べ',
+  ペ: 'ぺ',
+  ホ: 'ほ',
+  ボ: 'ぼ',
+  ポ: 'ぽ',
+  マ: 'ま',
+  ミ: 'み',
+  ム: 'む',
+  メ: 'め',
+  モ: 'も',
+  ャ: 'ゃ',
+  ヤ: 'や',
+  ュ: 'ゅ',
+  ユ: 'ゆ',
+  ョ: 'ょ',
+  ヨ: 'よ',
+  ラ: 'ら',
+  リ: 'り',
+  ル: 'る',
+  レ: 'れ',
+  ロ: 'ろ',
+  ヮ: 'ゎ',
+  ワ: 'わ',
+  ヰ: 'ゐ',
+  ヱ: 'ゑ',
+  ヲ: 'を',
+  ン: 'ん',
+  ヴ: 'ヴ',
+  ヵ: 'か',
+  ヶ: 'が',
+}
+
 const JapaneseToTypeCharList = [
   ['あ', 'a'],
   ['ぃ', 'li'],
@@ -207,6 +295,32 @@ const JapaneseToTypeCharList = [
   ['っみょ', 'mmyo'],
   ['。', '.'],
   ['ー', '-'],
+  ['～', '~'],
+  ['！', '!'],
+  ['？', '!'],
+  ['％', '%'],
+  ['＄', '$'],
+  ['”', '"'],
+  ['’', "'"],
+  ['＃', '#'],
+  ['（', '('],
+  ['）', ')'],
+  ['＠', '@'],
+  ['「', '['],
+  ['」', ']'],
+  ['＋', '+'],
+  ['＊', '*'],
+  ['＆', '&'],
+  ['￥', '\\'],
+  ['＜', '<'],
+  ['＞', '>'],
+  ['＾', '^'],
+  ['＝', '='],
+  ['｛', '{'],
+  ['｝', '}'],
+  ['　', ' '],
+  ['‘', '`'],
+  ['・', '/'],
 ]
 
 const TypeCharToJapaneseMap = JapaneseToTypeCharList.reduce(
@@ -234,10 +348,25 @@ const TypeCharMap = JapaneseToTypeCharList.reduce(
   { '、': ',' }
 )
 
-function typeJapaneseChars(text, length) {
+function kana2Hira(text) {
+  return Array.from(text || '')
+    .map((s) => Kana2HiraMap[s] || s)
+    .join('')
+}
+
+function typeJapaneseCharsMap(text, length, useKana = false) {
   const maps = []
   const charMap = TypeCharMap
-  const chars = (text || '').split('')
+  const chars = Array.from(text || '')
+
+  const toHira = useKana
+    ? ({ c1, c2, c3 }) => {
+        const d1 = kana2Hira(c1)
+        const d2 = kana2Hira(c2)
+        const d3 = kana2Hira(c3)
+        return { d1, d2, d3 }
+      }
+    : ({ c1, c2, c3 }) => ({ d1: c1, d2: c2, d3: c3 })
 
   length = length || text.length
   for (let i = 0; i < length; i++) {
@@ -245,28 +374,36 @@ function typeJapaneseChars(text, length) {
     const c2 = c1 + (chars[i + 1] || '')
     const c3 = c2 + (chars[i + 2] || '')
 
-    if (c1 === 'ん') {
-      if (!c2) {
-        maps.push('nn')
+    const { d1, d2, d3 } = toHira({ c1, c2, c3 })
+
+    if (d1 === 'ん') {
+      if (!d2) {
+        maps.push({ jc: c1, ec: 'nn' })
       } else if ('あいうえおん'.includes(c2)) {
-        maps.push('nn')
+        maps.push({ jc: c1, ec: 'nn' })
       } else {
-        maps.push('n')
+        maps.push({ jc: c1, ec: 'n' })
       }
-    } else if (charMap[c3]) {
+    } else if (charMap[d3]) {
       i += c3.length - 1
-      maps.push(charMap[c3][0])
-    } else if (charMap[c2]) {
+      maps.push({ jc: c3, ec: charMap[d3][0] })
+    } else if (charMap[d2]) {
       i += c2.length - 1
-      maps.push(charMap[c2][0])
-    } else if (charMap[c1]) {
-      maps.push(charMap[c1][0])
+      maps.push({ jc: c2, ec: charMap[d2][0] })
+    } else if (charMap[d1]) {
+      maps.push({ jc: c1, ec: charMap[d1][0] })
     } else {
-      maps.push(c1)
+      maps.push({ jc: c1, ec: c1 })
     }
   }
 
-  return maps.join('')
+  return maps
+}
+
+function typeJapaneseChars(text, length) {
+  return typeJapaneseCharsMap(text, length)
+    .map((v) => v.ec)
+    .join('')
 }
 
 function typeCharsToJapaneseChars(chars) {
@@ -302,7 +439,9 @@ function typeCharsFindJapaneseChars(typeChars, jpChars) {
 }
 
 export default {
+  kana2Hira,
   typeJapaneseChars,
+  typeJapaneseCharsMap,
   typeCharsToJapaneseChars,
   typeCharsFindJapaneseChars,
 }

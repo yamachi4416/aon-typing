@@ -4,7 +4,7 @@ export class TypingWordState {
     this._leftWords = []
     this._buffer = []
     this._currentWords = []
-    this._rightWords = this.word.split('')
+    this._rightWords = Array.from(this.word)
   }
 
   get buffer() {
@@ -30,7 +30,7 @@ export class TypingWordState {
     }
     this._currentWords.splice(0)
     if (value) {
-      this._currentWords.push(...value.split(''))
+      this._currentWords.push(...Array.from(value))
     }
   }
 
@@ -63,13 +63,13 @@ export class TypingWordState {
 
   pushLeft(s) {
     if (s) {
-      this._leftWords.push(...s.split(''))
+      this._leftWords.push(...Array.from(s))
     }
   }
 
   pushRight(s) {
     if (s) {
-      this._rightWords.unshift(...s.split(''))
+      this._rightWords.unshift(...Array.from(s))
     }
   }
 

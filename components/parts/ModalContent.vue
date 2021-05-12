@@ -40,19 +40,20 @@ export default {
 
 <style lang="scss" scoped>
 .modal-content {
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   background: #fff;
   flex-direction: column;
   color: #333;
-  border: 3px solid #333;
-  border-radius: 5px;
+  border: 1px solid #999;
+  border-radius: 10px;
   font-size: 1.2rem;
   max-width: calc(100vw - 20px);
   max-height: 100%;
   overflow-y: hidden;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 4px 6px 2px;
+  padding: 0 5px;
 
   & > * {
     width: 100%;
@@ -74,10 +75,8 @@ export default {
     z-index: 10;
 
     .title {
-      margin: 0;
-      padding: 0;
       padding-bottom: 3px;
-      border-bottom: 2px solid #333;
+      border-bottom: 1px solid #999;
       text-align: center;
       font-weight: normal;
     }
@@ -91,7 +90,7 @@ export default {
   & > footer {
     padding-top: 8px;
     padding-bottom: 8px;
-    border-top: 2px solid #333;
+    border-top: 1px solid #999;
   }
 }
 </style>

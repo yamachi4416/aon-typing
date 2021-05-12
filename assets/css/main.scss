@@ -1,21 +1,24 @@
-@charset 'utf-8';
+@import './vars.scss';
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Itim', 'Noto Sans JP', cursive;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  background: #fff8ed;
 }
 
 body,
 #__nuxt,
 #__layout {
+  width: 100%;
   min-height: 100vh;
+  position: relative;
 }
 
 .buttons {
@@ -27,11 +30,12 @@ body,
 
 .button {
   cursor: pointer;
-  border: 2px solid #333;
+  border: 1px solid #666;
   border-radius: 10px;
   padding: 0 1.5em;
-  font-size: 1em;
+  font-size: 0.9em;
   white-space: nowrap;
+  line-height: 1.5;
 
   &.big {
     line-height: 2.5em;
@@ -66,6 +70,108 @@ body,
       vertical-align: middle;
     }
   }
+}
+
+.sm-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  th {
+    font-weight: normal;
+    text-align: left;
+    padding: 2px 20px;
+  }
+
+  td {
+    text-align: right;
+    padding: 2px 20px;
+  }
+
+  thead {
+    th {
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+      padding: 5px 10px;
+    }
+  }
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  @for $i from 1 to 13 {
+    & > .col-#{$i} {
+      width: 100% / 12 * $i;
+    }
+
+    & > .col-#{$i}-5 {
+      width: 100% / 12 * $i + 100% / 24;
+    }
+
+    @include __media_s {
+      & > .col-s-#{$i},
+      & > .col-s-#{$i}[class^='col-'] {
+        width: 100% / 12 * $i;
+        max-width: 100% / 12 * $i;
+      }
+
+      & > .col-s-#{$i}-5,
+      & > .col-s-#{$i}-5[class^='col-'] {
+        width: 100% / 12 * $i + 100% / 24;
+        max-width: 100% / 12 * $i + 100% / 24;
+      }
+    }
+
+    @include __media_m {
+      & > .col-m-#{$i},
+      & > .col-m-#{$i}[class^='col-'] {
+        width: 100% / 12 * $i;
+        max-width: 100% / 12 * $i;
+      }
+
+      & > .col-m-#{$i}-5,
+      & > .col-m-#{$i}-5[class^='col-'] {
+        width: 100% / 12 * $i + 100% / 24;
+        max-width: 100% / 12 * $i + 100% / 24;
+      }
+    }
+
+    @include __media_sm {
+      & > .col-sm-#{$i},
+      & > .col-sm-#{$i}[class^='col-'] {
+        width: 100% / 12 * $i;
+        max-width: 100% / 12 * $i;
+      }
+
+      & > .col-sm-#{$i}-5,
+      & > .col-sm-#{$i}-5[class^='col-'] {
+        width: 100% / 12 * $i + 100% / 24;
+        max-width: 100% / 12 * $i + 100% / 24;
+      }
+    }
+
+    @include __media_ml {
+      & > .col-ml-#{$i},
+      & > .col-ml-#{$i}[class^='col-'] {
+        width: 100% / 12 * $i;
+        max-width: 100% / 12 * $i;
+      }
+
+      & > .col-ml-#{$i}-5,
+      & > .col-ml-#{$i}-5[class^='col-'] {
+        width: 100% / 12 * $i + 100% / 24;
+        max-width: 100% / 12 * $i + 100% / 24;
+      }
+    }
+  }
+}
+
+.overflow-x-a {
+  overflow-x: auto;
 }
 
 .page-enter-active,

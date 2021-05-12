@@ -1,4 +1,17 @@
-export default class {
+export const rankList = () => {
+  return [
+    { id: 1, start: 0, end: 55, name: 'ねずみ' },
+    { id: 2, start: 56, end: 106, name: 'いぬ' },
+    { id: 3, start: 107, end: 157, name: 'ねこ' },
+    { id: 4, start: 158, end: 208, name: 'うし' },
+    { id: 5, start: 209, end: 259, name: 'うま' },
+    { id: 6, start: 260, end: 276, name: 'チーター' },
+    { id: 7, start: 277, end: 299, name: 'はやぶさ' },
+    { id: 8, start: 299, end: null, name: 'あぉ～ん' },
+  ]
+}
+
+export class TypingGameInfo {
   constructor(info) {
     Object.assign(this, info)
   }
@@ -38,27 +51,10 @@ export default class {
 
   get rank() {
     const s = this.score || 0
-    if (s <= 55) {
-      return 'E'
-    }
-    if (s <= 106) {
-      return 'D'
-    }
-    if (s <= 157) {
-      return 'C'
-    }
-    if (s <= 208) {
-      return 'B'
-    }
-    if (s <= 259) {
-      return 'A'
-    }
-    if (s <= 276) {
-      return 'S'
-    }
-    if (s <= 299) {
-      return "S'"
-    }
-    return "S''"
+    return rankList().find((r) => {
+      return r.start <= s && s <= (r.end || Infinity)
+    })
   }
 }
+
+export default TypingGameInfo

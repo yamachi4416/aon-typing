@@ -96,6 +96,7 @@
 
 <script>
 import KeyboardKey from './JISKeyboardKey.vue'
+import JISKeys from '~/libs/JISKeys'
 
 export default {
   components: { KeyboardKey },
@@ -104,13 +105,13 @@ export default {
       type: String,
       default: null,
     },
-    keys: {
-      type: Object,
-      required: true,
-    },
     setting: {
       type: Object,
       default: () => ({}),
+    },
+    keys: {
+      type: Object,
+      default: () => JISKeys,
     },
   },
   data() {
@@ -140,6 +141,10 @@ export default {
       return this.keys.getLabelByIndex(n, this.shift)
     },
     hi(n) {
+      if (!this.typeKey) {
+        return false
+      }
+
       switch (n) {
         case 42:
           return this.keys.isShiftRightKey(this.typeKey)

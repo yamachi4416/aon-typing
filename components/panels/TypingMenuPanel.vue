@@ -66,8 +66,8 @@
                 </button>
                 <button
                   class="button"
-                  :selected="autoMode === 217"
-                  @click="autoMode = 217"
+                  :selected="autoMode === 220"
+                  @click="autoMode = 220"
                 >
                   チーター
                 </button>
@@ -79,20 +79,13 @@
             <div>
               <div class="list-buttons">
                 <button
-                  class="button"
-                  :selected="quantity === 0"
-                  @click="quantity = 0"
-                >
-                  なし
-                </button>
-                <button
-                  v-for="i in [100, 250, 450, 700, 1000]"
+                  v-for="i in [0, 100, 250, 450, 700, 1000]"
                   :key="`quantity-${i}`"
                   class="button"
                   :selected="i === quantity"
                   @click="quantity = i"
                 >
-                  {{ i }}
+                  {{ i || 'なし' }}
                 </button>
               </div>
             </div>
@@ -118,10 +111,10 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="problem-section">
             <label>問題</label>
             <div>
-              <div class="list-buttons">
+              <div v-if="showProblemSelect" class="list-buttons">
                 <button class="button" @click="openProblemSelect()">
                   一覧から選択
                 </button>
@@ -129,26 +122,23 @@
                   ランダム選択
                 </button>
               </div>
-            </div>
-          </div>
-          <div>
-            <label />
-            <div class="table problem-detail">
-              <div>
-                <label>タイプ</label>
-                <div>{{ problem.type }}</div>
-              </div>
-              <div>
-                <label>タイトル</label>
-                <div>{{ problem.title }}</div>
-              </div>
-              <div>
-                <label>問題数</label>
-                <div>{{ problem.words }}</div>
-              </div>
-              <div>
-                <label>タイピング数</label>
-                <div>{{ problem.chars }}</div>
+              <div class="table problem-detail">
+                <div>
+                  <label>タイプ</label>
+                  <div>{{ problem.type }}</div>
+                </div>
+                <div>
+                  <label>タイトル</label>
+                  <div>{{ problem.title }}</div>
+                </div>
+                <div>
+                  <label>問題数</label>
+                  <div>{{ problem.words }}</div>
+                </div>
+                <div>
+                  <label>タイピング数</label>
+                  <div>{{ problem.chars }}</div>
+                </div>
               </div>
             </div>
           </div>
@@ -158,15 +148,14 @@
             <button :disabled="!problem.id" class="button" @click="start">
               スタートする
             </button>
-            <button class="button" @click="$router.push({ name: 'index' })">
-              やめる
-            </button>
+            <button class="button" @click="$emit('cancel')">やめる</button>
           </div>
         </template>
       </modal-content>
     </modal-panel>
     <div>
       <problem-select-panel
+        v-if="showProblemSelect"
         class="problem-select-modal"
         :show="isOpenProblemSelect"
         @select="selectProblemSelect"
@@ -177,7 +166,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 import ModalContent from '../parts/ModalContent.vue'
 import ModalPanel from '../parts/ModalPanel.vue'
 import ProblemSelectPanel from './ProblemSelectPanel.vue'
@@ -189,9 +178,9 @@ export default {
       type: Boolean,
       default: false,
     },
-    value: {
-      type: Object,
-      required: true,
+    showProblemSelect: {
+      type: Boolean,
+      default: true,
     },
     showClose: {
       type: Boolean,
@@ -201,7 +190,6 @@ export default {
 
   data() {
     return {
-      setting: { ...this.value },
       isOpenProblemSelect: false,
     }
   },
@@ -210,14 +198,15 @@ export default {
     ...mapGetters({
       getProblem: 'problems/problem',
       problems: 'problems/problems',
+      setting: 'typingSetting/setting',
     }),
 
     timeLimit: {
       get() {
         return this.setting.timeLimit
       },
-      set(val) {
-        this.setting.timeLimit = val
+      set(value) {
+        this.setTimeLimit(value)
       },
     },
 
@@ -225,17 +214,8 @@ export default {
       get() {
         return this.setting.autoMode
       },
-      set(val) {
-        this.setting.autoMode = val
-      },
-    },
-
-    quantity: {
-      get() {
-        return this.setting.quantity
-      },
-      set(val) {
-        this.setting.quantity = val
+      set(value) {
+        this.setAutoMode(value)
       },
     },
 
@@ -243,30 +223,46 @@ export default {
       get() {
         return this.setting.randomMode
       },
-      set(val) {
-        this.setting.randomMode = val
+      set(value) {
+        this.setRandomMode(value)
+      },
+    },
+
+    quantity: {
+      get() {
+        return this.setting.quantity
+      },
+      set(value) {
+        this.setQuantity(value)
+      },
+    },
+
+    problemId: {
+      get() {
+        return this.setting.problemId
+      },
+      set(value) {
+        this.setProblemId(value)
       },
     },
 
     problem() {
-      if (this.setting && this.setting.problemId) {
-        return this.getProblem(this.setting.problemId) || {}
+      if (this.problemId) {
+        return this.getProblem(this.problemId) || {}
       }
       return {}
     },
   },
 
-  watch: {
-    value(val) {
-      if (val) {
-        this.setting = { ...val }
-      } else {
-        this.setting = {}
-      }
-    },
-  },
-
   methods: {
+    ...mapMutations('typingSetting', [
+      'setTimeLimit',
+      'setAutoMode',
+      'setRandomMode',
+      'setQuantity',
+      'setProblemId',
+    ]),
+
     openProblemSelect() {
       this.isOpenProblemSelect = true
     },
@@ -277,7 +273,7 @@ export default {
 
     selectProblemSelect(problem) {
       this.isOpenProblemSelect = false
-      this.setting.problemId = problem.id || ''
+      this.problemId = problem.id || ''
     },
 
     randomProblemSelect() {
@@ -286,8 +282,8 @@ export default {
       if (length > 0) {
         const idx = Math.floor(Math.random() * length)
         const problemId = problems[idx].id
-        if (this.setting.problemId !== problemId) {
-          this.setting.problemId = problemId
+        if (this.problemId !== problemId) {
+          this.problemId = problemId
         } else if (length > 1) {
           this.randomProblemSelect()
         }
@@ -295,7 +291,6 @@ export default {
     },
 
     start() {
-      this.$emit('input', this.setting)
       this.$emit('start', this.setting)
     },
   },
@@ -318,12 +313,20 @@ export default {
     }
   }
 
-  .problem-detail {
-    font-size: 0.9em;
+  .problem-section {
+    & > label {
+      vertical-align: top;
+    }
+    .problem-detail {
+      font-size: 0.9em;
+      label {
+        width: 1px;
+      }
+    }
   }
 }
 
 .problem-select-modal {
-  z-index: 20;
+  z-index: 100;
 }
 </style>

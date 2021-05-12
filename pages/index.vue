@@ -1,144 +1,146 @@
 <template>
-  <basic-layout>
-    <div class="top-page-wrapper">
-      <svg
-        class="top-page"
-        viewBox="0 0 1133 764"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <foreignObject class="top-page-content" width="100%" height="100%">
-          <section>
-            <header>
-              <h1 class="title">あぉ～んタピンング</h1>
-            </header>
-            <main class="top-page-main">
-              <div class="top-page-main-left"></div>
-              <div class="top-page-main-play">
-                <button class="button" @click="$router.push({ name: 'game' })">
-                  タイピングをする
-                </button>
-              </div>
-              <div class="top-page-main-info">
-                <button class="button">このサイトについて</button>
-              </div>
-              <div class="top-page-main-right"></div>
-            </main>
-          </section>
-        </foreignObject>
-      </svg>
-    </div>
-  </basic-layout>
+  <section class="basic-page">
+    <basic-header title-text="あぉ～ん タイピング" :show-anim="true">
+      <div class="basic-page-menu">
+        <nav class="basic-page-menu-content">
+          <ul>
+            <li>
+              <nuxt-link to="/game">プレイする</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/problems">問題いちらん</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link :to="{ name: 'index-about' }">サイト説明</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/">その他</nuxt-link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </basic-header>
+    <main class="basic-page-main">
+      <nuxt-child />
+    </main>
+    <footer class="basic-page-footer">
+      <nav class="basic-page-footer-nav">
+        <ul>
+          <li>
+            <nuxt-link :to="{ name: 'index-disclaimer' }">免責事項</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link :to="{ name: 'index-policy' }">
+              プライバシーポリシー
+            </nuxt-link>
+          </li>
+        </ul>
+      </nav>
+      <div class="basic-page-footer-copy">
+        <p>&copy; 2021 Studio AON</p>
+      </div>
+    </footer>
+  </section>
 </template>
 
 <script>
-import BasicLayout from '~/components/parts/BasicLayout.vue'
+import BasicHeader from '~/components/layout/BasicHeader.vue'
 export default {
-  components: { BasicLayout },
+  components: { BasicHeader },
 }
 </script>
 
 <style lang="scss" scoped>
-.top-page-wrapper {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+.basic-page {
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(~/static/img/back01.jpg);
 
-  .top-page {
-    max-width: 100%;
-    max-height: 100%;
+  &-menu {
+    margin-top: -45px;
+    &-content {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
 
-    section {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      bottom: 10px;
-      left: 10px;
-      background: #fff;
-      border-radius: 20px;
-      border: 3px solid #333;
-    }
-
-    header {
-      .title {
+      ul {
         display: flex;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        left: 8.21%;
-        right: 21.55%;
-        top: 9.29%;
-        bottom: 50%;
-        text-indent: -9999px;
-
-        background: url(~/static/img/top/title.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-    }
-
-    &-main {
-      &-left {
-        left: 8.21%;
-        right: 76.79%;
-        top: 67.27%;
-        bottom: 10.48%;
-        background: url(~/static/img/top/left.png);
-      }
-
-      &-right {
-        left: 75.01%;
-        right: 3.37%;
-        top: 55.64%;
-        bottom: 12.36%;
-
-        background: url(~/static/img/top/right.png);
-        transform: matrix(0.99, 0.18, -0.16, 0.98, 0, 0);
-      }
-
-      &-left,
-      &-right {
-        position: absolute;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        filter: grayscale(80%);
-      }
-
-      .button {
-        height: 100%;
+        justify-content: space-around;
+        list-style: none;
+        padding: 10px;
+        gap: 10px;
         width: 100%;
-        border-radius: 20px;
-        font-size: 30px;
-        border-width: 3px;
-      }
 
-      &-play {
-        position: absolute;
-        left: 32.41%;
-        right: 32.38%;
-        top: 67.27%;
-        bottom: 24.36%;
-      }
+        & > li {
+          flex: 1;
+          text-align: center;
 
-      &-info {
-        position: absolute;
-        left: 32.41%;
-        right: 32.41%;
-        top: 81.18%;
-        bottom: 10.43%;
+          a {
+            color: #666;
+            text-decoration: none;
+            white-space: nowrap;
 
-        .button {
-          background: transparent;
+            &:hover,
+            &:focus {
+              color: #999;
+            }
+          }
         }
       }
     }
+  }
+
+  &-main {
+    padding: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px);
+  }
+
+  &-footer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.8);
+    // box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 0;
+    padding-top: 10px;
+
+    &-nav {
+      & > ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        gap: 30px;
+
+        & > li {
+          a {
+            color: #666;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &-copy {
+      color: #666;
+      width: 100%;
+      text-align: center;
+      flex: 1;
+      padding-top: 10px;
+    }
+  }
+}
+</style>
+
+<style lang="scss">
+.basic-page-main {
+  * {
+    scroll-margin-top: 100px;
   }
 }
 </style>

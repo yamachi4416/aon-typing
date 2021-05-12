@@ -31,6 +31,10 @@ export const actions = {
     commit('setProblems', problems)
   },
 
+  clearProblems({ commit }) {
+    commit('setProblems', [])
+  },
+
   async getProblemDetail({ commit }, id) {
     if (id) {
       return await this.$axios.$get(`/api/problems/details/${id}.json`)

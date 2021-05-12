@@ -1,12 +1,16 @@
 <template>
-  <basic-layout>
-    <div class="typing-page">
-      <div class="main">
-        <div class="keyboard">
-          <typing-panel :typing="typing" />
+  <game-layout class="game-typing-page" :fit-main="true">
+    <div class="game-typing-page-content">
+      <div class="game-typing-page-content-main">
+        <div class="game-typing-page-content-main-keyboard">
+          <typing-panel
+            class="game-typing-page-content-main-keyboard-svg"
+            :typing="typing"
+            :setting="setting"
+          />
         </div>
       </div>
-      <div class="sub">
+      <div class="game-typing-page-content-sub">
         <count-down v-show="isCountDownShow" :count="countDown" />
         <game-result
           :show="isResultShow"
@@ -14,11 +18,11 @@
           :problem="problem"
           @retry="retry"
           @next="nextProblem"
-          @setting="$router.push({ name: 'game' })"
+          @setting="$router.replace({ name: 'game' })"
         />
       </div>
     </div>
-  </basic-layout>
+  </game-layout>
 </template>
 
 <script>
@@ -29,7 +33,7 @@ import TypingPanel from '~/components/panels/TypingPanel.vue'
 import GameResult from '~/components/panels/GameResultPanel.vue'
 import CountDown from '~/components/parts/CountDown.vue'
 import TypingProblemQuestioner from '~/libs/TypingProblemQuestioner'
-import BasicLayout from '~/components/parts/BasicLayout.vue'
+import GameLayout from '~/components/layout/GameLayout.vue'
 
 const fetchProblem = async (store) => {
   const setting = store.getters['typingSetting/setting']
@@ -52,7 +56,7 @@ export default {
     TypingPanel,
     GameResult,
     CountDown,
-    BasicLayout,
+    GameLayout,
   },
 
   async asyncData({ store }) {
@@ -67,6 +71,12 @@ export default {
       problem: null,
       isCountDownShow: true,
       isResultShow: false,
+    }
+  },
+
+  head() {
+    return {
+      title: `タイピング`,
     }
   },
 
@@ -138,27 +148,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.typing-page {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
+.game-typing-page {
+  background-image: url(~/static/img/back01.jpg);
 
-  .main {
-    display: flex;
+  &-content {
     width: 100%;
-    max-width: 1200px;
-    max-height: 100%;
-    margin: 0 auto;
-    padding: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
 
-    .keyboard {
+    &-main {
+      display: flex;
       width: 100%;
-      max-width: 100%;
+      max-width: 1200px;
       max-height: 100%;
-      & > svg {
+      margin: 0 auto;
+      padding: 10px;
+
+      &-keyboard {
+        width: 100%;
         max-width: 100%;
         max-height: 100%;
+        &-svg {
+          max-width: 100%;
+          max-height: 100%;
+        }
       }
     }
   }

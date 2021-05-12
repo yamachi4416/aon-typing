@@ -13,7 +13,7 @@
             <div>
               <label>ランク</label>
               <div class="rank">
-                {{ result.rank }}
+                {{ result.rank.name }}
               </div>
             </div>
             <div>
@@ -31,11 +31,11 @@
               <div>{{ result.time | dispTime }}</div>
             </div>
             <div>
-              <label>総タイプ数</label>
+              <label>タイプ数</label>
               <div>{{ result.totalTypeCount }}</div>
             </div>
             <div>
-              <label>総タイプ数/分</label>
+              <label>タイプ数（分）</label>
               <div>{{ result.wordPerMin }}</div>
             </div>
             <div>
@@ -118,7 +118,7 @@ export default {
 
 <style lang="scss" scoped>
 .game-result-panel {
-  min-width: 650px;
+  min-width: 550px;
 
   .info-main {
     display: flex;
@@ -143,9 +143,13 @@ export default {
     }
 
     &-left {
-      .rank,
+      .rank {
+        font-size: 2em;
+        text-align: center;
+      }
+
       .score {
-        font-size: 2.5em;
+        font-size: 2em;
         text-align: center;
       }
     }

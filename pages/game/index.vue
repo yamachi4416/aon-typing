@@ -1,37 +1,41 @@
 <template>
-  <typing-menu-panel v-model="setting" :show="true" @start="startTyping" />
+  <game-layout class="game-manu-page" :fit-main="true">
+    <typing-menu-panel
+      :show="true"
+      @start="startTyping"
+      @cancel="$router.push(backUrl || '/')"
+    />
+  </game-layout>
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import GameLayout from '~/components/layout/GameLayout.vue'
 import TypingMenuPanel from '~/components/panels/TypingMenuPanel.vue'
 
 export default {
-  components: { TypingMenuPanel },
-
-  computed: {
-    ...mapGetters({
-      typingSetting: 'typingSetting/setting',
-    }),
-
-    setting: {
-      get() {
-        return this.typingSetting
-      },
-      set(value) {
-        this.setSetting(value)
-      },
+  components: { TypingMenuPanel, GameLayout },
+  props: {
+    backUrl: {
+      type: Object,
+      default: () => ({}),
     },
+  },
+  head() {
+    return {
+      title: 'タイピングメニュー',
+    }
   },
 
   methods: {
-    ...mapMutations({
-      setSetting: 'typingSetting/setSetting',
-    }),
-
     startTyping() {
       this.$router.push({ name: 'game-play' })
     },
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.game-manu-page {
+  background-image: url(~/static/img/back01.jpg);
+}
+</style>

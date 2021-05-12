@@ -6,15 +6,17 @@ import TypingGamerJapanese from '~/libs/TypingGamerJapanese'
 
 const typingHandlers = {}
 
-const addEventHandler = (eventName, handler) => {
-  window.addEventListener(eventName, handler)
+const addEventHandler = (eventName, handler, target) => {
+  target = target || window
+  target.addEventListener(eventName, handler)
   if (!typingHandlers[eventName]) {
     typingHandlers[eventName] = []
   }
   typingHandlers[eventName].push(handler)
 }
-const removeEventHandler = (eventName, handler) => {
-  window.removeEventListener(eventName, handler)
+const removeEventHandler = (eventName, handler, target) => {
+  target = target || window
+  target.removeEventListener(eventName, handler)
   if (typingHandlers[eventName]) {
     typingHandlers[eventName] = typingHandlers[eventName].filter(
       (f) => f !== handler
@@ -77,6 +79,7 @@ class TypingGame {
   _initData() {
     this.tick = 0
     this.wordIndex = 0
+    this.active = true
     this.pausing = false
     this.canceled = false
     this.running = false
@@ -155,6 +158,16 @@ class TypingGame {
     }
   }
 
+  _visibleChange() {
+    return () => {
+      if (document.hidden) {
+        this.active = false
+      } else {
+        this.active = true
+      }
+    }
+  }
+
   start({ problem, setting }) {
     this.cancel()
 
@@ -167,18 +180,21 @@ class TypingGame {
       gamer = new TypingGamerEnglish()
     } else if (type === 'japanese') {
       gamer = new TypingGamerJapanese()
-    } else {
-      throw 'not suppert problem type.'
     }
 
     const promis = new Promise((resolve) => {
+      const visibilitychange = this._visibleChange()
       const keydown = autoMode ? () => {} : this._keydown()
       const typing = this._typing({ gamer })
       const autoTyping = this.autoTyping({ words, autoMode })
       const tickTimer = startIntervalTimer(() => {
+        if (!this.active) {
+          return
+        }
+
         if (timeLimit > 0 && this.timeUse <= 1) {
           this.cancel()
-        } else if (!this.pausing) {
+        } else if (this.isRunning) {
           this.tick += 10
           this.timeUse -= 10
         }
@@ -198,6 +214,7 @@ class TypingGame {
 
         removeEventHandler('keydown', keydown)
         removeEventHandler('c:typing', typing)
+        removeEventHandler('visibilitychange', visibilitychange, document)
 
         resolve(this.info())
       }
@@ -205,6 +222,7 @@ class TypingGame {
       this.running = true
       addEventHandler('keydown', keydown)
       addEventHandler('c:typing', typing)
+      addEventHandler('visibilitychange', visibilitychange, document)
 
       autoTyping()
     })
@@ -218,11 +236,15 @@ class TypingGame {
     }
 
     let id = null
-    const xs = words.reduce((a, d) => a + d.word, '').split('')
+    const xs = Array.from(words.reduce((a, d) => a + d.word, ''))
     return () => {
       if (id === null) {
         id = startIntervalTimer(() => {
-          if (this.pausing) {
+          if (!this.active) {
+            return
+          }
+
+          if (!this.isRunning) {
             return
           }
           const char = xs.shift()
@@ -277,6 +299,11 @@ class TypingGame {
   info() {
     const res = { ...this }
     return new TypingGameInfo(res)
+  }
+
+  dispose() {
+    removeAllEventHandler()
+    stopAllIntervalTimer()
   }
 }
 
