@@ -20,7 +20,7 @@
       <h2>自動モードってなんですか？</h2>
       <p>
         自動モードはあなたのかわりにタイピングをしてくれる機能です。<br />
-        ねこ、うし、うま、チーターのタイピングの助っ人を用意しています。
+        {{ helpAnimals }}のタイピングの助っ人を用意しています。
       </p>
       <p>
         いちど助っ人を選択してかれいな技を見てみるのもいいでしょう。<br />
@@ -105,7 +105,7 @@
 
 <script>
 import ParaSection from '~/components/parts/ParaSection.vue'
-import { rankList } from '~/libs/TypingGameInfo'
+import { rankList, helpAnimals } from '~/libs/TypingGameInfo'
 import ScrollHashMixin from '~/mixins/ScrollHashMixin'
 
 export default {
@@ -114,6 +114,9 @@ export default {
   data() {
     return {
       rankList: rankList(),
+      helpAnimals: helpAnimals()
+        .map(({ name }) => name)
+        .join('、'),
     }
   },
   head() {

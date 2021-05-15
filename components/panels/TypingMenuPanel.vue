@@ -14,21 +14,13 @@
             <div>
               <div class="list-buttons">
                 <button
-                  class="button"
-                  :selected="0 === timeLimit"
-                  @click="timeLimit = 0"
-                >
-                  なし
-                </button>
-                <button
-                  v-for="i in 5"
+                  v-for="i in [0, 1, 2, 3, 4, 5]"
                   :key="`time-limit-${i}`"
                   class="button"
                   :selected="i * 60000 === timeLimit"
                   @click="timeLimit = i * 60000"
-                >
-                  {{ i }}分
-                </button>
+                  v-text="i ? i + '分' : 'なし'"
+                />
               </div>
             </div>
           </div>
@@ -37,40 +29,13 @@
             <div>
               <div class="list-buttons">
                 <button
+                  v-for="a in helpAnimals"
+                  :key="`automode-${a.speed}`"
                   class="button"
-                  :selected="autoMode === 0"
-                  @click="autoMode = 0"
-                >
-                  オフ
-                </button>
-                <button
-                  class="button"
-                  :selected="autoMode === 382"
-                  @click="autoMode = 382"
-                >
-                  ねこ
-                </button>
-                <button
-                  class="button"
-                  :selected="autoMode === 288"
-                  @click="autoMode = 288"
-                >
-                  うし
-                </button>
-                <button
-                  class="button"
-                  :selected="autoMode === 231"
-                  @click="autoMode = 231"
-                >
-                  うま
-                </button>
-                <button
-                  class="button"
-                  :selected="autoMode === 220"
-                  @click="autoMode = 220"
-                >
-                  チーター
-                </button>
+                  :selected="autoMode === a.speed"
+                  @click="autoMode = a.speed"
+                  v-text="a.name"
+                />
               </div>
             </div>
           </div>
@@ -114,7 +79,7 @@
           <div class="problem-section">
             <label>問題</label>
             <div>
-              <div v-if="showProblemSelect" class="list-buttons">
+              <div class="list-buttons">
                 <button class="button" @click="openProblemSelect()">
                   一覧から選択
                 </button>
@@ -155,7 +120,6 @@
     </modal-panel>
     <div>
       <problem-select-panel
-        v-if="showProblemSelect"
         class="problem-select-modal"
         :show="isOpenProblemSelect"
         @select="selectProblemSelect"
@@ -170,6 +134,7 @@ import { mapGetters, mapMutations } from 'vuex'
 import ModalContent from '../parts/ModalContent.vue'
 import ModalPanel from '../parts/ModalPanel.vue'
 import ProblemSelectPanel from './ProblemSelectPanel.vue'
+import { helpAnimals } from '~/libs/TypingGameInfo'
 
 export default {
   components: { ModalPanel, ProblemSelectPanel, ModalContent },
@@ -177,10 +142,6 @@ export default {
     show: {
       type: Boolean,
       default: false,
-    },
-    showProblemSelect: {
-      type: Boolean,
-      default: true,
     },
     showClose: {
       type: Boolean,
@@ -191,6 +152,17 @@ export default {
   data() {
     return {
       isOpenProblemSelect: false,
+      helpAnimals: [
+        {
+          name: 'オフ',
+          speed: 0,
+        },
+      ].concat(
+        helpAnimals().map(({ start, end, name }) => ({
+          name,
+          speed: Math.round(60000 / ((start + end) / 2)),
+        }))
+      ),
     }
   },
 

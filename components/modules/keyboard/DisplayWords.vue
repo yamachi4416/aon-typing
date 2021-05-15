@@ -58,7 +58,7 @@ export default {
     white-space: pre;
   }
   .left-words {
-    fill: #999;
+    fill: #666;
   }
   .right-words {
     fill: #333;

@@ -63,7 +63,7 @@ export default {
     height: 100%;
     align-items: center;
     justify-content: flex-end;
-    color: #999;
+    color: #666;
     font-size: 10px;
     text-align: center;
   }

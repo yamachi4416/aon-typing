@@ -6,38 +6,34 @@
       @close="$emit('cancel')"
     >
       <div class="problem-list">
-        <div
-          v-for="(p, i) in problems"
-          :key="`problem-${p.id}-${i}`"
-          class="problem-list-item"
-        >
-          <div class="problem-list-item-card">
-            <header class="title">{{ p.title }}</header>
-            <main class="detail">
-              <div class="table">
-                <div>
-                  <label>タイプ</label>
-                  <div>{{ p.type }}</div>
-                </div>
-                <div>
-                  <label>問題数</label>
-                  <div>{{ p.words }}</div>
-                </div>
-                <div>
-                  <label>タイピング数</label>
-                  <div>{{ p.chars }}</div>
-                </div>
-              </div>
-            </main>
-            <footer>
-              <div class="buttons">
-                <button class="button" @click="selectProblem(p)">
-                  選択する
-                </button>
-              </div>
-            </footer>
-          </div>
-        </div>
+        <ol class="problem row">
+          <li
+            v-for="(p, i) in [
+              ...problems,
+              ...problems,
+              ...problems,
+              ...problems,
+              ...problems,
+              ...problems,
+              ...problems,
+              ...problems,
+            ]"
+            :key="i"
+            class="problem-item col-s-12 col-m-6 col-4"
+          >
+            <para-section class="problem-item-inner">
+              <problem-list-item :item="p">
+                <template #footer>
+                  <div class="buttons">
+                    <button class="button" @click="selectProblem(p)">
+                      選択する
+                    </button>
+                  </div>
+                </template>
+              </problem-list-item>
+            </para-section>
+          </li>
+        </ol>
       </div>
     </modal-content>
   </modal-panel>
@@ -45,11 +41,13 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import ProblemListItem from '../modules/problems/ProblemListItem.vue'
 import ModalContent from '../parts/ModalContent.vue'
 import ModalPanel from '../parts/ModalPanel.vue'
+import ParaSection from '../parts/ParaSection.vue'
 
 export default {
-  components: { ModalPanel, ModalContent },
+  components: { ModalPanel, ModalContent, ParaSection, ProblemListItem },
   props: {
     show: {
       type: Boolean,
@@ -76,39 +74,20 @@ export default {
 
   .problem-list {
     display: flex;
+    list-style-type: none;
     flex-wrap: wrap;
-    padding: 5px 10px 10px 10px;
-    align-items: center;
-    justify-content: flex-start;
 
-    &-item {
-      width: calc(100% / 3);
-      min-width: 200px;
-      padding: 5px;
+    .problem {
+      display: flex;
+      list-style-type: none;
+      flex-wrap: wrap;
 
-      &-card {
-        border: 2px solid #333;
-        border-radius: 10px;
-        padding: 10px;
+      &-item {
         display: flex;
-        flex-direction: column;
-        gap: 5px;
 
-        .title {
-          font-size: 0.9em;
-          text-align: center;
-          border-bottom: 1px solid #333;
-        }
-
-        .detail {
+        &-inner {
+          flex-grow: 1;
           font-size: 0.8em;
-        }
-
-        .buttons {
-          .button {
-            font-size: 0.8em;
-            padding: 0 10px;
-          }
         }
       }
     }

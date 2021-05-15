@@ -1,41 +1,59 @@
 <template>
-  <game-layout class="game-manu-page" :fit-main="true">
-    <typing-menu-panel
-      :show="true"
-      @start="startTyping"
-      @cancel="$router.push(backUrl || '/')"
-    />
-  </game-layout>
+  <typing-menu-panel
+    class="typing-menu-page"
+    :show="show"
+    @start="startTyping"
+    @cancel="cancel"
+  />
 </template>
 
 <script>
-import GameLayout from '~/components/layout/GameLayout.vue'
 import TypingMenuPanel from '~/components/panels/TypingMenuPanel.vue'
 
 export default {
-  components: { TypingMenuPanel, GameLayout },
+  components: { TypingMenuPanel },
+
   props: {
     backUrl: {
-      type: Object,
-      default: () => ({}),
+      type: String,
+      default: null,
     },
   },
+
+  data() {
+    return {
+      show: false,
+    }
+  },
+
   head() {
     return {
       title: 'タイピングメニュー',
     }
   },
 
+  mounted() {
+    this.show = true
+  },
+
   methods: {
     startTyping() {
-      this.$router.push({ name: 'game-play' })
+      this.show = false
+      setTimeout(() => {
+        this.$router.push({ name: 'game-play' })
+      }, 300)
+    },
+
+    cancel() {
+      this.show = false
+      setTimeout(() => {
+        if (this.backUrl) {
+          this.$router.back()
+        } else {
+          this.$router.replace('/')
+        }
+      }, 300)
     },
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.game-manu-page {
-  background-image: url(~/static/img/back01.jpg);
-}
-</style>

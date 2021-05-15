@@ -17,12 +17,8 @@ export default {
   },
   methods: {
     async scrollToHash(hash, option) {
-      if (!hash || !hash.substr(1)) {
-        return false
-      }
-
-      const name = hash.substr(1)
-      if (this.$refs[name]) {
+      const name = hash?.substr(1)
+      if (name && this.$refs[name]) {
         const ref = this.$refs[name]
         const el = ref.$el || ref
         if (el && el.scrollIntoView) {
@@ -31,7 +27,6 @@ export default {
           return true
         }
       }
-
       return false
     },
   },

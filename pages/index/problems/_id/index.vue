@@ -3,15 +3,16 @@
     <para-section>
       <div class="detail-header">
         <div class="detail-info">
-          <div class="detail-info-type">{{ detail.type }}</div>
           <div class="detail-info-id">No.{{ detail.id }}</div>
           <h2 class="detail-info-title">{{ detail.title }}</h2>
+          <div class="detail-info-type">{{ detail.type }}</div>
         </div>
         <div class="detail-actions">
           <div class="buttons">
-            <button class="button" @click="playProblem">
-              この問題をプレイする
+            <button v-if="back" class="button" @click="$router.back()">
+              もどる
             </button>
+            <button class="button" @click="playProblem">プレイする</button>
           </div>
         </div>
       </div>
@@ -44,9 +45,30 @@ import { mapGetters, mapActions, mapMutations } from 'vuex'
 import ParaSection from '~/components/parts/ParaSection.vue'
 export default {
   components: { ParaSection },
-  async asyncData({ query, store }) {
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      if (from.name) {
+        vm.back = true
+      }
+    })
+  },
+  scrollToTop: true,
+  async asyncData({ params, store, payload }) {
+    const detail =
+      payload || (await store.dispatch('problems/getProblemDetail', params.id))
     return {
-      detail: await store.dispatch('problems/getProblemDetail', query.id),
+      detail,
+    }
+  },
+  data() {
+    return {
+      back: false,
+    }
+  },
+  head() {
+    const { id, title } = this.detail
+    return {
+      title: `問題 No.${id} ${title}`,
     }
   },
   computed: {

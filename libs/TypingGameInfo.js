@@ -5,11 +5,12 @@ export const rankList = () => {
     { id: 3, start: 107, end: 157, name: 'ねこ' },
     { id: 4, start: 158, end: 208, name: 'うし' },
     { id: 5, start: 209, end: 259, name: 'うま' },
-    { id: 6, start: 260, end: 276, name: 'チーター' },
-    { id: 7, start: 277, end: 299, name: 'はやぶさ' },
-    { id: 8, start: 299, end: null, name: 'あぉ～ん' },
+    { id: 6, start: 260, end: 299, name: 'チーター' },
+    { id: 7, start: 300, end: null, name: 'あぉ～ん' },
   ]
 }
+
+export const helpAnimals = () => rankList().slice(2, 6)
 
 export class TypingGameInfo {
   constructor(info) {

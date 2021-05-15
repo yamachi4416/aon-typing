@@ -1,5 +1,7 @@
+import problems from '~/static/api/problems.json'
+
 export const state = () => ({
-  problems: [],
+  problems: problems.problems,
 })
 
 export const getters = {
@@ -18,23 +20,7 @@ export const getters = {
   },
 }
 
-export const mutations = {
-  setProblems(state, problems) {
-    state.problems = problems
-  },
-}
-
 export const actions = {
-  async getProblems({ commit }) {
-    const payload = await this.$axios.$get('/api/problems.json')
-    const problems = payload.problems || []
-    commit('setProblems', problems)
-  },
-
-  clearProblems({ commit }) {
-    commit('setProblems', [])
-  },
-
   async getProblemDetail({ commit }, id) {
     if (id) {
       return await this.$axios.$get(`/api/problems/details/${id}.json`)

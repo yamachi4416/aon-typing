@@ -37,7 +37,7 @@ export default {
     rect {
       stroke-width: 1;
       stroke: #333;
-      fill: #fff;
+      fill: rgba(255, 255, 255, 0.2);
     }
 
     &[highlight='true'] {
@@ -49,7 +49,7 @@ export default {
 
     .keyboard-text {
       font-size: 16px;
-      color: #666;
+      color: #333;
     }
   }
 }

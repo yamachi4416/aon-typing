@@ -25,6 +25,11 @@ export default {}
   padding: 10px;
   position: relative;
   display: flex;
+  z-index: 0;
+  &:hover {
+    transition: z-index 0.3s;
+    z-index: 1;
+  }
 
   &-main {
     flex: 1;

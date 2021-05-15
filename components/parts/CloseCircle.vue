@@ -24,7 +24,7 @@ export default {}
     width: 35px;
     height: 35px;
     border: 2px solid #333;
-    background: #fff;
+    background: transparent;
     border-radius: 50%;
     cursor: pointer;
 

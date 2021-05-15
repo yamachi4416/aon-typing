@@ -3,9 +3,8 @@
 </template>
 
 <script>
+import PageBaseMixin from '~/mixins/PageBaseMixin'
 export default {
-  async fetch({ store }) {
-    await store.dispatch('problems/getProblems')
-  },
+  mixins: [PageBaseMixin],
 }
 </script>

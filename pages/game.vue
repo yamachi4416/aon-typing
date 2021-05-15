@@ -1,12 +1,28 @@
 <template>
-  <nuxt-child :back-url="backUrl" />
+  <div class="game-layout">
+    {{ backUrl }}
+    <section>
+      <main>
+        <nuxt-child :back-url="backUrl" />
+      </main>
+      <footer>
+        <div>
+          <small class="copylight">&copy; 2021 Studio AON</small>
+        </div>
+      </footer>
+    </section>
+  </div>
 </template>
 
 <script>
+import PageBaseMixin from '~/mixins/PageBaseMixin'
 export default {
+  mixins: [PageBaseMixin],
   beforeRouteEnter(to, from, next) {
     next((vm) => {
-      vm.backUrl = from.fullPath
+      if (from.name) {
+        vm.backUrl = from.fullPath
+      }
     })
   },
   data() {
@@ -14,8 +30,82 @@ export default {
       backUrl: null,
     }
   },
-  async fetch({ store }) {
-    await store.dispatch('problems/getProblems')
-  },
 }
 </script>
+
+<style lang="scss" scoped>
+.game-layout {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(~/static/img/back01.jpg);
+
+  & > section {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    & > header {
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 50px;
+      width: 100%;
+    }
+
+    & > .header {
+      & > * {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .title {
+        font-weight: normal;
+        font-size: 1.1em;
+        text-align: center;
+        padding-left: 5em;
+        padding-right: 1em;
+        height: 100%;
+
+        a {
+          color: inherit;
+          display: block;
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          display: flex;
+          color: rgb(255, 145, 0);
+          align-items: center;
+          font-weight: bold;
+        }
+      }
+    }
+
+    & > main {
+      flex: 1;
+      position: relative;
+      width: 100%;
+    }
+
+    & > footer {
+      height: 30px;
+      width: 100%;
+      text-align: center;
+
+      .copylight {
+        color: #333;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+</style>

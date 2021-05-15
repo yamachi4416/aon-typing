@@ -1,5 +1,9 @@
 <template>
-  <svg viewBox="0 0 1000 462" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    class="typing-game-panel"
+    viewBox="-1 -1 1001 463"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <foreignObject class="typing-game">
       <div class="wrapper">
         <div class="display-zone">
@@ -122,87 +126,92 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.typing-game {
-  height: 100%;
-  max-height: 100%;
-  width: 100%;
-  overflow: hidden;
+.typing-game-panel {
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.4);
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    border: 2px solid #333;
-    padding: 15px;
-    border-radius: 10px;
+  .typing-game {
     height: 100%;
-    background: #fff;
-  }
-
-  .display-zone {
+    max-height: 100%;
     width: 100%;
+    overflow: hidden;
 
-    &-info {
+    .wrapper {
       display: flex;
-      gap: 10px;
-      align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 15px;
+      height: 100%;
+    }
 
-      &-left,
-      &-right {
-        width: 60px;
-        position: relative;
+    .display-zone {
+      width: 100%;
+
+      &-info {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+
+        &-left,
+        &-right {
+          width: 60px;
+          position: relative;
+        }
+
+        &-center {
+          flex: 1;
+          .display-words {
+            width: 100%;
+          }
+        }
+
+        &-right {
+          .close-circle {
+            padding-top: 10px;
+            right: -5px;
+          }
+        }
       }
 
-      &-center {
-        flex: 1;
+      &-words {
+        width: 90%;
+        margin: 0 auto;
+
         .display-words {
           width: 100%;
         }
       }
+    }
 
-      &-right {
-        .close-circle {
-          padding-top: 10px;
-          right: -5px;
-        }
+    .words-count {
+      display: flex;
+      margin: 0;
+      color: #666;
+      font-size: 14px;
+      white-space: nowrap;
+
+      &-types-count {
+        width: 3em;
+        text-align: right;
       }
     }
 
-    &-words {
+    .keyboard-zone {
       width: 90%;
-      margin: 0 auto;
+    }
 
-      .display-words {
+    .hands {
+      width: 85%;
+      display: flex;
+      gap: 20px;
+
+      & > * {
         width: 100%;
       }
-    }
-  }
-
-  .words-count {
-    display: flex;
-    margin: 0;
-    color: #666;
-    font-size: 14px;
-    white-space: nowrap;
-
-    &-types-count {
-      width: 3em;
-      text-align: right;
-    }
-  }
-
-  .keyboard-zone {
-    width: 90%;
-  }
-
-  .hands {
-    width: 85%;
-    display: flex;
-    gap: 20px;
-
-    & > * {
-      width: 100%;
     }
   }
 }

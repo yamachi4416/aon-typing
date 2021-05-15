@@ -25,15 +25,15 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  flex-direction: column;
   width: 100vw;
   height: 100vh;
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 248, 237, 0.7);
-  overflow: auto;
-  padding: 10px;
+  background: rgba(255, 255, 255, 0);
 
   .contents {
     max-height: 100%;
@@ -47,33 +47,20 @@ export default {
   }
 
   &-enter {
-    background: rgba(255, 248, 237, 0);
-
-    & > .contents {
-      transform: translateY(-150%);
-    }
+    transform: translateY(-100%);
 
     &-active {
-      transition: background 0.5s;
-      & > .contents {
-        transition: transform 0.5s;
-      }
+      transition: transform 0.5s;
     }
   }
 
   &-leave {
     &-active {
-      transition: background 0.5s;
-      & > .contents {
-        transition: transform 0.5s;
-      }
+      transition: transform 0.5s;
     }
 
     &-to {
-      background: rgba(255, 248, 237, 0);
-      & > .contents {
-        transform: translateY(-200%);
-      }
+      transform: translateY(-100%);
     }
   }
 }

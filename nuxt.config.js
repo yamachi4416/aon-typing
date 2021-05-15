@@ -1,3 +1,5 @@
+import fs from 'fs'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -18,6 +20,10 @@ export default {
 
   router: {
     base: '/',
+  },
+
+  axios: {
+    baseURL: '/',
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -51,5 +57,16 @@ export default {
 
   generate: {
     fallback: 'index.html',
+    routes() {
+      const { problems } = require('./static/api/problems.json')
+      return problems.map((p) => {
+        return {
+          route: '/problems/' + p.id,
+          payload: JSON.parse(
+            fs.readFileSync(`./static/api/problems/details/${p.path}.json`)
+          ),
+        }
+      })
+    },
   },
 }
