@@ -2,6 +2,12 @@
   "id": "10001",
   "title": "都道府県",
   "type": "japanese",
+  "tags": [
+    "日本語",
+    "地理"
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
   "words": [
     {
       "info": "北海道",

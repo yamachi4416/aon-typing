@@ -45,6 +45,9 @@ const generateProblemData = (dataDir, apiDir) => {
       type: p.type,
       words: p.words.length,
       chars: p.words.reduce((s, w) => s + w.word.length, 0),
+      createdAt: p.createdAt,
+      updatedAt: p.updatedAt,
+      tags: p.tags || [],
     })),
   }
 

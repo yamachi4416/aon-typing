@@ -2,6 +2,13 @@
   "id": "10002",
   "title": "やさい",
   "type": "japanese",
+  "tags": [
+    "日本語",
+    "漢字",
+    "たべもの"
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
   "words": [
     {
       "info": "青紫蘇",

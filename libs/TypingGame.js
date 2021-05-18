@@ -59,6 +59,7 @@ class TypingWordGameData {
       misses: [],
       infoState: new TypingInfoState(data.info, data.info2),
       wordState: new TypingWordState(data.word),
+      __data: data,
     })
   }
 
@@ -68,6 +69,10 @@ class TypingWordGameData {
 
   get success() {
     return this.wordState.finished
+  }
+
+  sync() {
+    this.__data.sync(this)
   }
 }
 
@@ -215,6 +220,8 @@ class TypingGame {
         removeEventHandler('keydown', keydown)
         removeEventHandler('c:typing', typing)
         removeEventHandler('visibilitychange', visibilitychange, document)
+
+        this.words.forEach((w) => w.sync())
 
         resolve(this.info())
       }

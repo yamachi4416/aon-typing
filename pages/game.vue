@@ -42,7 +42,7 @@ export default {
   background-size: contain;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(~/static/img/back01.jpg);
+  background-image: url(~/static/img/back01.png);
 
   & > section {
     display: flex;

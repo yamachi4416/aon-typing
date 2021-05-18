@@ -13,7 +13,9 @@
                 v-if="typing.timeLimit > 0"
                 :total-time="typing.timeLimit"
                 :time="typing.timeUse"
-                :text="~~(typing.timeUse / 1000) + 1"
+                :text="
+                  ~~(typing.timeUse / 1000) || '0.' + ~~(typing.timeUse / 100)
+                "
                 @click="pauseToggle"
               />
             </div>

@@ -92,7 +92,6 @@ export default {}
     & > img {
       z-index: 1;
       width: 100%;
-      opacity: 0.9;
     }
   }
 

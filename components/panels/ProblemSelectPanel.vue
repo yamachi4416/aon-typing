@@ -8,16 +8,7 @@
       <div class="problem-list">
         <ol class="problem row">
           <li
-            v-for="(p, i) in [
-              ...problems,
-              ...problems,
-              ...problems,
-              ...problems,
-              ...problems,
-              ...problems,
-              ...problems,
-              ...problems,
-            ]"
+            v-for="(p, i) in problems"
             :key="i"
             class="problem-item col-s-12 col-m-6 col-4"
           >
@@ -40,7 +31,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapMutations } from 'vuex'
 import ProblemListItem from '../modules/problems/ProblemListItem.vue'
 import ModalContent from '../parts/ModalContent.vue'
 import ModalPanel from '../parts/ModalPanel.vue'
@@ -53,14 +44,15 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-  computed: {
-    ...mapGetters({
-      problems: 'problems/problems',
-    }),
+    problems: {
+      type: Array,
+      default: () => [],
+    },
   },
   methods: {
+    ...mapMutations('typingSetting', ['setProblemId']),
     selectProblem(problem) {
+      this.setProblemId(problem.id)
       this.$emit('select', { ...problem })
     },
   },
@@ -69,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 .problem-select-panel {
-  width: 800px;
+  width: 850px;
   min-height: 80%;
 
   .problem-list {
@@ -87,7 +79,8 @@ export default {
 
         &-inner {
           flex-grow: 1;
-          font-size: 0.8em;
+          font-size: 0.9em;
+          flex: 1;
         }
       }
     }

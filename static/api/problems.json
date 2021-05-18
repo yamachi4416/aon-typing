@@ -6,15 +6,55 @@
       "title": "アリとキリギリス",
       "type": "english",
       "words": 28,
-      "chars": 1882
+      "chars": 1882,
+      "createdAt": "2021-05-31",
+      "updatedAt": "2021-05-31",
+      "tags": [
+        "英語",
+        "イソップ童話"
+      ]
     },
     {
       "id": "00011",
       "path": "/00011",
       "title": "中学1年英単語",
       "type": "english",
-      "words": 448,
-      "chars": 2175
+      "words": 314,
+      "chars": 1492,
+      "createdAt": "2021-05-31",
+      "updatedAt": "2021-05-31",
+      "tags": [
+        "英語",
+        "英単語"
+      ]
+    },
+    {
+      "id": "00012",
+      "path": "/00012",
+      "title": "中学2年英単語",
+      "type": "english",
+      "words": 406,
+      "chars": 2054,
+      "createdAt": "2021-05-31",
+      "updatedAt": "2021-05-31",
+      "tags": [
+        "英語",
+        "英単語"
+      ]
+    },
+    {
+      "id": "00013",
+      "path": "/00013",
+      "title": "中学3年英単語",
+      "type": "english",
+      "words": 407,
+      "chars": 2281,
+      "createdAt": "2021-05-31",
+      "updatedAt": "2021-05-31",
+      "tags": [
+        "英語",
+        "英単語"
+      ]
     },
     {
       "id": "10001",
@@ -22,7 +62,13 @@
       "title": "都道府県",
       "type": "japanese",
       "words": 47,
-      "chars": 475
+      "chars": 475,
+      "createdAt": "2021-05-31",
+      "updatedAt": "2021-05-31",
+      "tags": [
+        "日本語",
+        "地理"
+      ]
     },
     {
       "id": "10002",
@@ -30,7 +76,14 @@
       "title": "やさい",
       "type": "japanese",
       "words": 38,
-      "chars": 257
+      "chars": 257,
+      "createdAt": "2021-05-31",
+      "updatedAt": "2021-05-31",
+      "tags": [
+        "日本語",
+        "漢字",
+        "たべもの"
+      ]
     },
     {
       "id": "10003",
@@ -38,7 +91,13 @@
       "title": "さかな",
       "type": "japanese",
       "words": 32,
-      "chars": 195
+      "chars": 195,
+      "createdAt": "2021-05-31",
+      "updatedAt": "2021-05-31",
+      "tags": [
+        "日本語",
+        "いきもの"
+      ]
     }
   ]
 }

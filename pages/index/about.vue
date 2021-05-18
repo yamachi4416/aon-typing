@@ -12,7 +12,7 @@
         他のサイトにはないおもしろ機能もあるのでいちど遊んでみてください。
       </p>
       <template #right>
-        <img src="~/static/img/neko03.png" />
+        <img src="~/static/img/neko-tk-01.png" />
       </template>
     </para-section>
 
@@ -27,7 +27,7 @@
         タイピングの練習につかれたときや午後のティータイムに眺めるのもいいかもしれません。
       </p>
       <template #left>
-        <img src="~/static/img/neko03.png" />
+        <img src="~/static/img/neko-tk-01.png" />
       </template>
     </para-section>
 
@@ -60,7 +60,7 @@
         </div>
       </div>
       <template #right>
-        <img src="~/static/img/neko03.png" />
+        <img src="~/static/img/neko-tk-01.png" />
       </template>
     </para-section>
 
@@ -97,7 +97,7 @@
         </div>
       </div>
       <template #left>
-        <img src="~/static/img/neko03.png" />
+        <img src="~/static/img/neko-tk-01.png" />
       </template>
     </para-section>
   </div>

@@ -7,18 +7,30 @@
       </h2>
     </header>
     <main class="problem-list-item-main">
-      <div class="table">
-        <div>
+      <div class="problem-list-item-main-detail">
+        <div class="problem-list-item-main-detail-row">
           <label>タイプ</label>
           <div>{{ item.type }}</div>
         </div>
-        <div>
+        <div class="problem-list-item-main-detail-row">
           <label>問題数</label>
           <div>{{ item.words }}</div>
         </div>
-        <div>
+        <div class="problem-list-item-main-detail-row">
           <label>タイピング数</label>
           <div>{{ item.chars }}</div>
+        </div>
+        <div class="problem-list-item-main-detail-tags">
+          <div class="problem-list-item-main-detail-tags-list">
+            <nuxt-link
+              v-for="(tag, i) in item.tags"
+              :key="`tag-${item.id}-${i}`"
+              to="/"
+              class="problem-list-item-main-detail-tags-list-item"
+            >
+              {{ tag }}
+            </nuxt-link>
+          </div>
         </div>
       </div>
     </main>
@@ -70,6 +82,39 @@ export default {
   &-main {
     border-top: 1px solid #999;
     flex: 1;
+    &-detail {
+      padding: 5px;
+      &-row {
+        display: flex;
+        & > div {
+          flex: 1;
+          text-align: right;
+          padding: 5px 15px;
+        }
+        & > label {
+          flex: 1;
+          text-align: left;
+          white-space: nowrap;
+        }
+      }
+      &-tags {
+        &-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          padding: 10px 5px;
+          &-item {
+            font-size: 0.8em;
+            background: rgba(255, 153, 0, 1);
+            color: #fff;
+            padding: 0 8px;
+            border-radius: 10px;
+            line-height: 1.8em;
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 }
 </style>

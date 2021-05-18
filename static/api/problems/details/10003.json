@@ -2,6 +2,12 @@
   "id": "10003",
   "title": "さかな",
   "type": "japanese",
+  "tags": [
+    "日本語",
+    "いきもの"
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
   "words": [
     {
       "info": "氷魚",

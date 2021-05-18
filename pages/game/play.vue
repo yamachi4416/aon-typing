@@ -123,8 +123,7 @@ export default {
     },
 
     async nextProblem() {
-      const succ = this.result.words.filter((w) => w.success).length
-      this.problem.next(succ)
+      this.problem.next()
       await this.startTyping()
     },
 

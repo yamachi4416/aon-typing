@@ -19,7 +19,7 @@
         </p>
       </div>
       <template #right>
-        <img src="~/static/img/neko03.png" />
+        <img src="~/static/img/neko-tk-01.png" />
       </template>
     </para-section>
 
@@ -32,7 +32,7 @@
         </p>
       </div>
       <template #left>
-        <img src="~/static/img/neko03.png" />
+        <img src="~/static/img/neko-tk-01.png" />
       </template>
     </para-section>
 
@@ -46,7 +46,7 @@
         </p>
       </div>
       <template #right>
-        <img src="~/static/img/neko03.png" />
+        <img src="~/static/img/neko-tk-01.png" />
       </template>
     </para-section>
   </div>

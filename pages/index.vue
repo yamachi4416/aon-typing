@@ -5,7 +5,7 @@
         <nav class="basic-page-menu-content">
           <ul>
             <li>
-              <nuxt-link to="/game">プレイする</nuxt-link>
+              <nuxt-link :to="{ name: 'game' }">プレイする</nuxt-link>
             </li>
             <li>
               <nuxt-link to="/problems">問題いちらん</nuxt-link>
@@ -58,7 +58,7 @@ export default {
   background-size: auto 100%;
   background-position: center;
   background-attachment: fixed;
-  background-image: url(~/static/img/back01.jpg);
+  background-image: url(~/static/img/back01.png);
 
   &-menu {
     margin-top: -45px;

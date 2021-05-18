@@ -118,13 +118,8 @@
         </template>
       </modal-content>
     </modal-panel>
-    <div>
-      <problem-select-panel
-        class="problem-select-modal"
-        :show="isOpenProblemSelect"
-        @select="selectProblemSelect"
-        @cancel="cancelProblemSelect"
-      />
+    <div class="slot-modal">
+      <slot />
     </div>
   </div>
 </template>
@@ -133,11 +128,10 @@
 import { mapGetters, mapMutations } from 'vuex'
 import ModalContent from '../parts/ModalContent.vue'
 import ModalPanel from '../parts/ModalPanel.vue'
-import ProblemSelectPanel from './ProblemSelectPanel.vue'
 import { helpAnimals } from '~/libs/TypingGameInfo'
 
 export default {
-  components: { ModalPanel, ProblemSelectPanel, ModalContent },
+  components: { ModalPanel, ModalContent },
   props: {
     show: {
       type: Boolean,
@@ -151,7 +145,6 @@ export default {
 
   data() {
     return {
-      isOpenProblemSelect: false,
       helpAnimals: [
         {
           name: 'オフ',
@@ -236,17 +229,13 @@ export default {
     ]),
 
     openProblemSelect() {
-      this.isOpenProblemSelect = true
+      this.$emit('openProblemSelect')
     },
 
-    cancelProblemSelect() {
-      this.isOpenProblemSelect = false
-    },
-
-    selectProblemSelect(problem) {
-      this.isOpenProblemSelect = false
-      this.problemId = problem.id || ''
-    },
+    // selectProblemSelect(problem) {
+    //   this.isOpenProblemSelect = false
+    //   this.problemId = problem.id || ''
+    // },
 
     randomProblemSelect() {
       const problems = this.problems
@@ -298,7 +287,7 @@ export default {
   }
 }
 
-.problem-select-modal {
+.slot-modal {
   z-index: 100;
 }
 </style>

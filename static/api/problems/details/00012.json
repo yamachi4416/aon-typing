@@ -1,0 +1,1637 @@
+{
+  "id": "00012",
+  "title": "中学2年英単語",
+  "type": "english",
+  "tags": [
+    "英語",
+    "英単語"
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "農場",
+      "word": "farm"
+    },
+    {
+      "info": "市場",
+      "word": "market"
+    },
+    {
+      "info": "大学",
+      "word": "college"
+    },
+    {
+      "info": "頂上",
+      "word": "top"
+    },
+    {
+      "info": "店",
+      "word": "shop"
+    },
+    {
+      "info": "かど",
+      "word": "corner"
+    },
+    {
+      "info": "中央",
+      "word": "center"
+    },
+    {
+      "info": "人々",
+      "word": "people"
+    },
+    {
+      "info": "生活，生命，人生",
+      "word": "life"
+    },
+    {
+      "info": "言葉",
+      "word": "word"
+    },
+    {
+      "info": "英語",
+      "word": "English"
+    },
+    {
+      "info": "声",
+      "word": "voice"
+    },
+    {
+      "info": "月",
+      "word": "moon"
+    },
+    {
+      "info": "空",
+      "word": "sky"
+    },
+    {
+      "info": "海",
+      "word": "sea"
+    },
+    {
+      "info": "雲",
+      "word": "cloud"
+    },
+    {
+      "info": "風",
+      "word": "wind"
+    },
+    {
+      "info": "空港",
+      "word": "airport"
+    },
+    {
+      "info": "地面",
+      "word": "ground"
+    },
+    {
+      "info": "教室",
+      "word": "classroom"
+    },
+    {
+      "info": "博物館",
+      "word": "museum"
+    },
+    {
+      "info": "工場",
+      "word": "factory"
+    },
+    {
+      "info": "陸地，土地",
+      "word": "land"
+    },
+    {
+      "info": "会員",
+      "word": "member"
+    },
+    {
+      "info": "最後",
+      "word": "last"
+    },
+    {
+      "info": "質問",
+      "word": "question"
+    },
+    {
+      "info": "話",
+      "word": "story"
+    },
+    {
+      "info": "心",
+      "word": "heart"
+    },
+    {
+      "info": "スポーツ",
+      "word": "sport"
+    },
+    {
+      "info": "水",
+      "word": "water"
+    },
+    {
+      "info": "太陽",
+      "word": "sun"
+    },
+    {
+      "info": "お茶",
+      "word": "tea"
+    },
+    {
+      "info": "星，スター",
+      "word": "star"
+    },
+    {
+      "info": "通り",
+      "word": "street"
+    },
+    {
+      "info": "アメリカ",
+      "word": "America"
+    },
+    {
+      "info": "道",
+      "word": "road"
+    },
+    {
+      "info": "島",
+      "word": "island"
+    },
+    {
+      "info": "地球，大地",
+      "word": "earth"
+    },
+    {
+      "info": "丘",
+      "word": "hill"
+    },
+    {
+      "info": "妻",
+      "word": "wife"
+    },
+    {
+      "info": "クラブ",
+      "word": "club"
+    },
+    {
+      "info": "試合",
+      "word": "game"
+    },
+    {
+      "info": "音楽",
+      "word": "music"
+    },
+    {
+      "info": "趣味",
+      "word": "hobby"
+    },
+    {
+      "info": "ニュース",
+      "word": "news"
+    },
+    {
+      "info": "川",
+      "word": "river"
+    },
+    {
+      "info": "光，明かり，信号",
+      "word": "light"
+    },
+    {
+      "info": "湖",
+      "word": "lake"
+    },
+    {
+      "info": "石",
+      "word": "stone"
+    },
+    {
+      "info": "百",
+      "word": "hundred"
+    },
+    {
+      "info": "顔",
+      "word": "face"
+    },
+    {
+      "info": "置き時計",
+      "word": "clock"
+    },
+    {
+      "info": "ライオン",
+      "word": "lion"
+    },
+    {
+      "info": "足",
+      "word": "foot"
+    },
+    {
+      "info": "鉄砲",
+      "word": "gun"
+    },
+    {
+      "info": "髪",
+      "word": "hair"
+    },
+    {
+      "info": "辞書",
+      "word": "dictionary"
+    },
+    {
+      "info": "コンピュータ",
+      "word": "computer"
+    },
+    {
+      "info": "ラジオ",
+      "word": "radio"
+    },
+    {
+      "info": "赤ん坊",
+      "word": "baby"
+    },
+    {
+      "info": "硬貨",
+      "word": "coin"
+    },
+    {
+      "info": "ナイフ",
+      "word": "knife"
+    },
+    {
+      "info": "腕",
+      "word": "arm"
+    },
+    {
+      "info": "アルバム",
+      "word": "album"
+    },
+    {
+      "info": "船",
+      "word": "ship"
+    },
+    {
+      "info": "靴",
+      "word": "shoe"
+    },
+    {
+      "info": "カード",
+      "word": "card"
+    },
+    {
+      "info": "レコード",
+      "word": "record"
+    },
+    {
+      "info": "グローブ",
+      "word": "glove"
+    },
+    {
+      "info": "動物",
+      "word": "animal"
+    },
+    {
+      "info": "帽子",
+      "word": "hat"
+    },
+    {
+      "info": "ポケット",
+      "word": "pocket"
+    },
+    {
+      "info": "口",
+      "word": "mouth"
+    },
+    {
+      "info": "頭，先頭",
+      "word": "head"
+    },
+    {
+      "info": "コート",
+      "word": "coat"
+    },
+    {
+      "info": "ご飯",
+      "word": "rice"
+    },
+    {
+      "info": "鼻",
+      "word": "nose"
+    },
+    {
+      "info": "指",
+      "word": "finger"
+    },
+    {
+      "info": "肉",
+      "word": "meat"
+    },
+    {
+      "info": "シャツ",
+      "word": "shirt"
+    },
+    {
+      "info": "ベンチ",
+      "word": "bench"
+    },
+    {
+      "info": "目",
+      "word": "eye"
+    },
+    {
+      "info": "脚",
+      "word": "leg"
+    },
+    {
+      "info": "風呂",
+      "word": "bath"
+    },
+    {
+      "info": "列車",
+      "word": "train"
+    },
+    {
+      "info": "自転車",
+      "word": "bicycle"
+    },
+    {
+      "info": "ボール",
+      "word": "ball"
+    },
+    {
+      "info": "建物",
+      "word": "building"
+    },
+    {
+      "info": "はつかねずみ",
+      "word": "mouse"
+    },
+    {
+      "info": "子供",
+      "word": "child"
+    },
+    {
+      "info": "ニワトリ",
+      "word": "chicken"
+    },
+    {
+      "info": "葉",
+      "word": "leaf"
+    },
+    {
+      "info": "お金",
+      "word": "money"
+    },
+    {
+      "info": "コーヒー",
+      "word": "coffee"
+    },
+    {
+      "info": "皿，料理",
+      "word": "dish"
+    },
+    {
+      "info": "紙，レポート",
+      "word": "paper"
+    },
+    {
+      "info": "耳",
+      "word": "ear"
+    },
+    {
+      "info": "橋",
+      "word": "bridge"
+    },
+    {
+      "info": "新聞",
+      "word": "newspaper"
+    },
+    {
+      "info": "身体",
+      "word": "body"
+    },
+    {
+      "info": "ギター",
+      "word": "guitar"
+    },
+    {
+      "info": "じゃがいも",
+      "word": "potato"
+    },
+    {
+      "info": "ベルト",
+      "word": "belt"
+    },
+    {
+      "info": "野菜",
+      "word": "vegetable"
+    },
+    {
+      "info": "歌",
+      "word": "song"
+    },
+    {
+      "info": "楽しみ",
+      "word": "fun"
+    },
+    {
+      "info": "サッカー",
+      "word": "soccer"
+    },
+    {
+      "info": "演説",
+      "word": "speech"
+    },
+    {
+      "info": "商売",
+      "word": "business"
+    },
+    {
+      "info": "健康",
+      "word": "health"
+    },
+    {
+      "info": "考え",
+      "word": "idea"
+    },
+    {
+      "info": "忠告",
+      "word": "advice"
+    },
+    {
+      "info": "誤り",
+      "word": "mistake"
+    },
+    {
+      "info": "感覚",
+      "word": "feeling"
+    },
+    {
+      "info": "キャンプ",
+      "word": "camp"
+    },
+    {
+      "info": "パーティー",
+      "word": "party"
+    },
+    {
+      "info": "１００万",
+      "word": "million"
+    },
+    {
+      "info": "歯",
+      "word": "tooth"
+    },
+    {
+      "info": "テレビ",
+      "word": "TV"
+    },
+    {
+      "info": "あひる",
+      "word": "duck"
+    },
+    {
+      "info": "雑誌",
+      "word": "magazine"
+    },
+    {
+      "info": "ショー",
+      "word": "show"
+    },
+    {
+      "info": "旅行",
+      "word": "trip"
+    },
+    {
+      "info": "旅行",
+      "word": "travel"
+    },
+    {
+      "info": "警察",
+      "word": "police"
+    },
+    {
+      "info": "成功",
+      "word": "success"
+    },
+    {
+      "info": "平和",
+      "word": "peace"
+    },
+    {
+      "info": "ロック",
+      "word": "rock"
+    },
+    {
+      "info": "休暇",
+      "word": "vacation"
+    },
+    {
+      "info": "夢",
+      "word": "dream"
+    },
+    {
+      "info": "愛，愛する人",
+      "word": "love"
+    },
+    {
+      "info": "ピクニック",
+      "word": "picnic"
+    },
+    {
+      "info": "授業，課",
+      "word": "lesson"
+    },
+    {
+      "info": "千",
+      "word": "thousand"
+    },
+    {
+      "info": "写真",
+      "word": "photo"
+    },
+    {
+      "info": "教科書",
+      "word": "textbook"
+    },
+    {
+      "info": "ビデオ",
+      "word": "video"
+    },
+    {
+      "info": "馬",
+      "word": "horse"
+    },
+    {
+      "info": "戦争",
+      "word": "war"
+    },
+    {
+      "info": "嘘",
+      "word": "lie"
+    },
+    {
+      "info": "コンテスト",
+      "word": "contest"
+    },
+    {
+      "info": "文化",
+      "word": "culture"
+    },
+    {
+      "info": "仕事",
+      "word": "job"
+    },
+    {
+      "info": "ホームルーム",
+      "word": "homeroom"
+    },
+    {
+      "info": "ほお笑み",
+      "word": "smile"
+    },
+    {
+      "info": "幸福",
+      "word": "happiness"
+    },
+    {
+      "info": "フットボール",
+      "word": "football"
+    },
+    {
+      "info": "希望",
+      "word": "hope"
+    },
+    {
+      "info": "試験",
+      "word": "test"
+    },
+    {
+      "info": "計画",
+      "word": "plan"
+    },
+    {
+      "info": "首都",
+      "word": "capital"
+    },
+    {
+      "info": "屋根",
+      "word": "roof"
+    },
+    {
+      "info": "休日",
+      "word": "holiday"
+    },
+    {
+      "info": "クリスマス",
+      "word": "Christmas"
+    },
+    {
+      "info": "空気",
+      "word": "air"
+    },
+    {
+      "info": "木材",
+      "word": "wood"
+    },
+    {
+      "info": "布",
+      "word": "cloth"
+    },
+    {
+      "info": "油",
+      "word": "oil"
+    },
+    {
+      "info": "音",
+      "word": "sound"
+    },
+    {
+      "info": "断片",
+      "word": "piece"
+    },
+    {
+      "info": "円",
+      "word": "circle"
+    },
+    {
+      "info": "番組",
+      "word": "program"
+    },
+    {
+      "info": "ドル",
+      "word": "dollar"
+    },
+    {
+      "info": "郵便",
+      "word": "post"
+    },
+    {
+      "info": "物音",
+      "word": "noise"
+    },
+    {
+      "info": "法律",
+      "word": "law"
+    },
+    {
+      "info": "前",
+      "word": "front"
+    },
+    {
+      "info": "港",
+      "word": "port"
+    },
+    {
+      "info": "婦人",
+      "word": "lady"
+    },
+    {
+      "info": "日付",
+      "word": "date"
+    },
+    {
+      "info": "池",
+      "word": "pond"
+    },
+    {
+      "info": "塩",
+      "word": "salt"
+    },
+    {
+      "info": "金",
+      "word": "gold"
+    },
+    {
+      "info": "氷",
+      "word": "ice"
+    },
+    {
+      "info": "自然",
+      "word": "nature"
+    },
+    {
+      "info": "惑星",
+      "word": "planet"
+    },
+    {
+      "info": "部分",
+      "word": "part"
+    },
+    {
+      "info": "食べ物",
+      "word": "food"
+    },
+    {
+      "info": "座席",
+      "word": "seat"
+    },
+    {
+      "info": "美術，芸術",
+      "word": "art"
+    },
+    {
+      "info": "内側",
+      "word": "inside"
+    },
+    {
+      "info": "数学",
+      "word": "math"
+    },
+    {
+      "info": "マイル",
+      "word": "mile"
+    },
+    {
+      "info": "種類",
+      "word": "kind"
+    },
+    {
+      "info": "宇宙",
+      "word": "space"
+    },
+    {
+      "info": "未来",
+      "word": "future"
+    },
+    {
+      "info": "誕生日",
+      "word": "birthday"
+    },
+    {
+      "info": "雪",
+      "word": "snow"
+    },
+    {
+      "info": "雨",
+      "word": "rain"
+    },
+    {
+      "info": "山",
+      "word": "mountain"
+    },
+    {
+      "info": "草",
+      "word": "grass"
+    },
+    {
+      "info": "砂糖",
+      "word": "sugar"
+    },
+    {
+      "info": "火",
+      "word": "fire"
+    },
+    {
+      "info": "贈り物",
+      "word": "gift"
+    },
+    {
+      "info": "ペット",
+      "word": "pet"
+    },
+    {
+      "info": "故郷，家",
+      "word": "home"
+    },
+    {
+      "info": "言語",
+      "word": "language"
+    },
+    {
+      "info": "例",
+      "word": "example"
+    },
+    {
+      "info": "歴史",
+      "word": "history"
+    },
+    {
+      "info": "側面",
+      "word": "side"
+    },
+    {
+      "info": "フォーク",
+      "word": "fork"
+    },
+    {
+      "info": "パイ",
+      "word": "pie"
+    },
+    {
+      "info": "オーバー",
+      "word": "overcoat"
+    },
+    {
+      "info": "鏡",
+      "word": "mirror"
+    },
+    {
+      "info": "ロッカー",
+      "word": "locker"
+    },
+    {
+      "info": "ズボン",
+      "word": "pants"
+    },
+    {
+      "info": "チョーク",
+      "word": "chalk"
+    },
+    {
+      "info": "鍵",
+      "word": "key"
+    },
+    {
+      "info": "キャンディー",
+      "word": "candy"
+    },
+    {
+      "info": "ビール",
+      "word": "beer"
+    },
+    {
+      "info": "牛肉",
+      "word": "beef"
+    },
+    {
+      "info": "薬",
+      "word": "medicine"
+    },
+    {
+      "info": "電話",
+      "word": "phone"
+    },
+    {
+      "info": "馬鹿",
+      "word": "fool"
+    },
+    {
+      "info": "客",
+      "word": "guest"
+    },
+    {
+      "info": "祖母",
+      "word": "grandmother"
+    },
+    {
+      "info": "チーム",
+      "word": "team"
+    },
+    {
+      "info": "消しゴム",
+      "word": "eraser"
+    },
+    {
+      "info": "エレベーター",
+      "word": "elevator"
+    },
+    {
+      "info": "ネズミ",
+      "word": "rat"
+    },
+    {
+      "info": "ベル",
+      "word": "bell"
+    },
+    {
+      "info": "ウサギ",
+      "word": "rabbit"
+    },
+    {
+      "info": "バター",
+      "word": "butter"
+    },
+    {
+      "info": "くさり",
+      "word": "chain"
+    },
+    {
+      "info": "ろうそく",
+      "word": "candle"
+    },
+    {
+      "info": "ブタ肉",
+      "word": "pork"
+    },
+    {
+      "info": "首",
+      "word": "neck"
+    },
+    {
+      "info": "ピーナッツ",
+      "word": "peanut"
+    },
+    {
+      "info": "メダル",
+      "word": "medal"
+    },
+    {
+      "info": "巣",
+      "word": "nest"
+    },
+    {
+      "info": "祖父",
+      "word": "grandfather"
+    },
+    {
+      "info": "ファン",
+      "word": "fan"
+    },
+    {
+      "info": "人",
+      "word": "person"
+    },
+    {
+      "info": "グループ",
+      "word": "group"
+    },
+    {
+      "info": "機械",
+      "word": "machine"
+    },
+    {
+      "info": "スカート",
+      "word": "skirt"
+    },
+    {
+      "info": "指輪",
+      "word": "ring"
+    },
+    {
+      "info": "バンド",
+      "word": "band"
+    },
+    {
+      "info": "サル",
+      "word": "monkey"
+    },
+    {
+      "info": "棒，横木",
+      "word": "bar"
+    },
+    {
+      "info": "パスポート",
+      "word": "passport"
+    },
+    {
+      "info": "肩",
+      "word": "shoulder"
+    },
+    {
+      "info": "ブタ",
+      "word": "pig"
+    },
+    {
+      "info": "服",
+      "word": "clothes"
+    },
+    {
+      "info": "クマ",
+      "word": "bear"
+    },
+    {
+      "info": "じゅうたん",
+      "word": "carpet"
+    },
+    {
+      "info": "農場主",
+      "word": "farmer"
+    },
+    {
+      "info": "船員",
+      "word": "sailor"
+    },
+    {
+      "info": "紳士",
+      "word": "gentleman"
+    },
+    {
+      "info": "王様",
+      "word": "king"
+    },
+    {
+      "info": "見つける，",
+      "word": "find"
+    },
+    {
+      "info": "～とわかる",
+      "word": "find"
+    },
+    {
+      "info": "決心する",
+      "word": "decide"
+    },
+    {
+      "info": "～のように思われる",
+      "word": "seem"
+    },
+    {
+      "info": "忘れる",
+      "word": "forget"
+    },
+    {
+      "info": "計画する",
+      "word": "plan"
+    },
+    {
+      "info": "見る，わかる，",
+      "word": "see"
+    },
+    {
+      "info": "調査する、考える",
+      "word": "see"
+    },
+    {
+      "info": "信じる",
+      "word": "think"
+    },
+    {
+      "info": "成長する，になる",
+      "word": "believe"
+    },
+    {
+      "info": "増加する，育てる",
+      "word": "grow"
+    },
+    {
+      "info": "栽培する",
+      "word": "grow"
+    },
+    {
+      "info": "話す",
+      "word": "talk"
+    },
+    {
+      "info": "飛行機で行く，飛ぶ",
+      "word": "fly"
+    },
+    {
+      "info": "握る，開催する，",
+      "word": "hold"
+    },
+    {
+      "info": "眠る",
+      "word": "sleep"
+    },
+    {
+      "info": "笑う",
+      "word": "laugh"
+    },
+    {
+      "info": "言う",
+      "word": "say"
+    },
+    {
+      "info": "狩りをする",
+      "word": "hunt"
+    },
+    {
+      "info": "着る",
+      "word": "wear"
+    },
+    {
+      "info": "見る",
+      "word": "watch"
+    },
+    {
+      "info": "気にする",
+      "word": "care"
+    },
+    {
+      "info": "理解する",
+      "word": "understand"
+    },
+    {
+      "info": "感謝する",
+      "word": "thank"
+    },
+    {
+      "info": "思い出す",
+      "word": "remember"
+    },
+    {
+      "info": "覚えている",
+      "word": "remember"
+    },
+    {
+      "info": "聴く",
+      "word": "listen"
+    },
+    {
+      "info": "許す",
+      "word": "excuse"
+    },
+    {
+      "info": "愛する",
+      "word": "love"
+    },
+    {
+      "info": "描く，引く",
+      "word": "draw"
+    },
+    {
+      "info": "運転する",
+      "word": "drive"
+    },
+    {
+      "info": "たずねる，頼む",
+      "word": "ask"
+    },
+    {
+      "info": "掃除する",
+      "word": "clean"
+    },
+    {
+      "info": "登る",
+      "word": "climb"
+    },
+    {
+      "info": "電話をかける",
+      "word": "call"
+    },
+    {
+      "info": "目が覚める",
+      "word": "wake"
+    },
+    {
+      "info": "押す",
+      "word": "push"
+    },
+    {
+      "info": "泣く",
+      "word": "cry"
+    },
+    {
+      "info": "聞く",
+      "word": "hear"
+    },
+    {
+      "info": "望む",
+      "word": "hope"
+    },
+    {
+      "info": "発見する",
+      "word": "discover"
+    },
+    {
+      "info": "感じる",
+      "word": "feel"
+    },
+    {
+      "info": "悩ませる",
+      "word": "worry"
+    },
+    {
+      "info": "想像する",
+      "word": "imagine"
+    },
+    {
+      "info": "望む",
+      "word": "wish"
+    },
+    {
+      "info": "嫌う",
+      "word": "dislike"
+    },
+    {
+      "info": "教える",
+      "word": "teach"
+    },
+    {
+      "info": "叫ぶ",
+      "word": "shout"
+    },
+    {
+      "info": "座る",
+      "word": "sit"
+    },
+    {
+      "info": "投げる",
+      "word": "throw"
+    },
+    {
+      "info": "見せる",
+      "word": "show"
+    },
+    {
+      "info": "教える，語る",
+      "word": "tell"
+    },
+    {
+      "info": "入る",
+      "word": "enter"
+    },
+    {
+      "info": "答える",
+      "word": "answer"
+    },
+    {
+      "info": "着る",
+      "word": "dress"
+    },
+    {
+      "info": "(船を)走らせる",
+      "word": "sail"
+    },
+    {
+      "info": "起こる",
+      "word": "happen"
+    },
+    {
+      "info": "保つ，～を(持ち)続ける",
+      "word": "keep"
+    },
+    {
+      "info": "打つ",
+      "word": "strike"
+    },
+    {
+      "info": "名づける",
+      "word": "name"
+    },
+    {
+      "info": "失敗する",
+      "word": "fail"
+    },
+    {
+      "info": "休息する",
+      "word": "rest"
+    },
+    {
+      "info": "スキーをする",
+      "word": "ski"
+    },
+    {
+      "info": "参加する",
+      "word": "join"
+    },
+    {
+      "info": "勝つ",
+      "word": "win"
+    },
+    {
+      "info": "急ぐ",
+      "word": "hurry"
+    },
+    {
+      "info": "起き上がる，のぼる",
+      "word": "rise"
+    },
+    {
+      "info": "落ちる",
+      "word": "fall"
+    },
+    {
+      "info": "(時間が)かかる，",
+      "word": "take"
+    },
+    {
+      "info": "連れて行く，",
+      "word": "take"
+    },
+    {
+      "info": "持っていく，取る",
+      "word": "take"
+    },
+    {
+      "info": "終わる",
+      "word": "end"
+    },
+    {
+      "info": "始まる(める)",
+      "word": "begin"
+    },
+    {
+      "info": "死ぬ",
+      "word": "die"
+    },
+    {
+      "info": "支払う",
+      "word": "pay"
+    },
+    {
+      "info": "描く，(～に)ペンキを塗る",
+      "word": "paint"
+    },
+    {
+      "info": "貸す",
+      "word": "lend"
+    },
+    {
+      "info": "殺す",
+      "word": "kill"
+    },
+    {
+      "info": "閉じる",
+      "word": "close"
+    },
+    {
+      "info": "出発する，～を始める",
+      "word": "start"
+    },
+    {
+      "info": "選ぶ，摘む",
+      "word": "pick"
+    },
+    {
+      "info": "曲がる，回る，変化する",
+      "word": "turn"
+    },
+    {
+      "info": "招待する",
+      "word": "invite"
+    },
+    {
+      "info": "建てる",
+      "word": "build"
+    },
+    {
+      "info": "練習する",
+      "word": "practice"
+    },
+    {
+      "info": "跳ぶ",
+      "word": "jump"
+    },
+    {
+      "info": "乾く",
+      "word": "dry"
+    },
+    {
+      "info": "意味する",
+      "word": "mean"
+    },
+    {
+      "info": "加える",
+      "word": "add"
+    },
+    {
+      "info": "過ぎる，合格する，手渡す",
+      "word": "pass"
+    },
+    {
+      "info": "試みる",
+      "word": "test"
+    },
+    {
+      "info": "運ぶ",
+      "word": "carry"
+    },
+    {
+      "info": "失う，負ける",
+      "word": "lose"
+    },
+    {
+      "info": "切る",
+      "word": "cut"
+    },
+    {
+      "info": "借りる",
+      "word": "borrow"
+    },
+    {
+      "info": "買い物をする",
+      "word": "shop"
+    },
+    {
+      "info": "忠告する，助言する",
+      "word": "advise"
+    },
+    {
+      "info": "スケートをする",
+      "word": "skate"
+    },
+    {
+      "info": "持って来る",
+      "word": "bring"
+    },
+    {
+      "info": "費やす，過ごす",
+      "word": "spend"
+    },
+    {
+      "info": "終える",
+      "word": "finish"
+    },
+    {
+      "info": "置く",
+      "word": "set"
+    },
+    {
+      "info": "変わる",
+      "word": "change"
+    },
+    {
+      "info": "光る，輝く",
+      "word": "shine"
+    },
+    {
+      "info": "雨が降る",
+      "word": "rain"
+    },
+    {
+      "info": "～になる",
+      "word": "become"
+    },
+    {
+      "info": "利口な",
+      "word": "clever"
+    },
+    {
+      "info": "怒って",
+      "word": "angry"
+    },
+    {
+      "info": "親愛なる",
+      "word": "dear"
+    },
+    {
+      "info": "奇妙な",
+      "word": "strange"
+    },
+    {
+      "info": "この前の，最後の",
+      "word": "last"
+    },
+    {
+      "info": "ほかの",
+      "word": "other"
+    },
+    {
+      "info": "欠席の",
+      "word": "absent"
+    },
+    {
+      "info": "用意できている",
+      "word": "ready"
+    },
+    {
+      "info": "正しい，右に",
+      "word": "right"
+    },
+    {
+      "info": "いっぱいの",
+      "word": "full"
+    },
+    {
+      "info": "弱い",
+      "word": "weak"
+    },
+    {
+      "info": "茶色の",
+      "word": "brown"
+    },
+    {
+      "info": "特別の",
+      "word": "special"
+    },
+    {
+      "info": "雨降りの",
+      "word": "rainy"
+    },
+    {
+      "info": "そのような",
+      "word": "such"
+    },
+    {
+      "info": "過去の",
+      "word": "past"
+    },
+    {
+      "info": "静かな",
+      "word": "quiet"
+    },
+    {
+      "info": "(声の)大きい",
+      "word": "loud"
+    },
+    {
+      "info": "自由な，ひまな",
+      "word": "free"
+    },
+    {
+      "info": "すばらしい",
+      "word": "wonderful"
+    },
+    {
+      "info": "役に立つ",
+      "word": "useful"
+    },
+    {
+      "info": "薄い",
+      "word": "light"
+    },
+    {
+      "info": "むずかしい",
+      "word": "difficult"
+    },
+    {
+      "info": "人気のある",
+      "word": "popular"
+    },
+    {
+      "info": "人間の",
+      "word": "human"
+    },
+    {
+      "info": "ようこそ",
+      "word": "welcome"
+    },
+    {
+      "info": "自分の",
+      "word": "own"
+    },
+    {
+      "info": "明るい",
+      "word": "bright"
+    },
+    {
+      "info": "深い",
+      "word": "deep"
+    },
+    {
+      "info": "違った",
+      "word": "different"
+    },
+    {
+      "info": "同じ",
+      "word": "same"
+    },
+    {
+      "info": "低い",
+      "word": "low"
+    },
+    {
+      "info": "主な",
+      "word": "main"
+    },
+    {
+      "info": "おもしろい",
+      "word": "interesting"
+    },
+    {
+      "info": "疲れて",
+      "word": "tired"
+    },
+    {
+      "info": "愚かな",
+      "word": "foolish"
+    },
+    {
+      "info": "健康な",
+      "word": "well"
+    },
+    {
+      "info": "通常の",
+      "word": "usual"
+    },
+    {
+      "info": "恐れて",
+      "word": "afraid"
+    },
+    {
+      "info": "おのおのの",
+      "word": "each"
+    },
+    {
+      "info": "好運な",
+      "word": "lucky"
+    },
+    {
+      "info": "(aをつけ)少数の",
+      "word": "few"
+    },
+    {
+      "info": "曇った",
+      "word": "cloudy"
+    },
+    {
+      "info": "確信して",
+      "word": "sure"
+    },
+    {
+      "info": "十分な",
+      "word": "enough"
+    },
+    {
+      "info": "アメリカの",
+      "word": "American"
+    },
+    {
+      "info": "幅が広い",
+      "word": "wide"
+    },
+    {
+      "info": "重要な",
+      "word": "important"
+    },
+    {
+      "info": "すばらしい，広大な",
+      "word": "great"
+    },
+    {
+      "info": "黄色の",
+      "word": "yellow"
+    }
+  ]
+}
