@@ -44,7 +44,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxt/http'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -58,15 +58,25 @@ export default {
   generate: {
     fallback: 'index.html',
     routes() {
-      const { problems } = require('./static/api/problems.json')
-      return problems.map((p) => {
-        return {
-          route: '/problems/' + p.id,
-          payload: JSON.parse(
-            fs.readFileSync(`./static/api/problems/details/${p.path}.json`)
-          ),
-        }
-      })
+      return require('./static/api/problems.json')
+        .problems.map((p) => {
+          return {
+            route: '/problems/' + p.id,
+            payload: JSON.parse(
+              fs.readFileSync(`./static/api/problems/details/${p.path}.json`)
+            ),
+          }
+        })
+        .concat(
+          Object.values(require('./static/api/tags.json')).map((p) => {
+            return {
+              route: '/problems/tags/' + p.id,
+              payload: JSON.parse(
+                fs.readFileSync(`./static/api/tags/${p.id}.json`)
+              ),
+            }
+          })
+        )
     },
   },
 }

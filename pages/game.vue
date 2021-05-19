@@ -1,6 +1,5 @@
 <template>
   <div class="game-layout">
-    {{ backUrl }}
     <section>
       <main>
         <nuxt-child :back-url="backUrl" />

@@ -1,0 +1,116 @@
+{
+  "id": "12003",
+  "title": "あんたがたどこさ",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00004",
+      "name": "日本語"
+    },
+    {
+      "id": "00016",
+      "name": "童謡"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "あんたがた どこさ",
+      "info2": "あんたがた どこさ",
+      "word": "antagata dokosa"
+    },
+    {
+      "info": "肥後さ",
+      "info2": "ひごさ",
+      "word": "higosa"
+    },
+    {
+      "info": "肥後 どこさ",
+      "info2": "ひご どこさ",
+      "word": "higo dokosa"
+    },
+    {
+      "info": "熊本さ",
+      "info2": "くまもとさ",
+      "word": "kumamotosa"
+    },
+    {
+      "info": "熊本 どこさ",
+      "info2": "くまもと どこさ",
+      "word": "kumamoto dokosa"
+    },
+    {
+      "info": "せんばさ",
+      "info2": "せんばさ",
+      "word": "senbasa"
+    },
+    {
+      "info": "せんば山には",
+      "info2": "せんばやまには",
+      "word": "senbayamaniha"
+    },
+    {
+      "info": "狸がおってさ",
+      "info2": "たぬきがおってさ",
+      "word": "tanukigaottesa"
+    },
+    {
+      "info": "それを",
+      "info2": "それを",
+      "word": "sorewo"
+    },
+    {
+      "info": "猟師が",
+      "info2": "りょうしが",
+      "word": "rilyousiga"
+    },
+    {
+      "info": "鉄砲でうってさ",
+      "info2": "てっぽうでうってさ",
+      "word": "teppoudeuttesa"
+    },
+    {
+      "info": "煮てさ",
+      "info2": "にてさ",
+      "word": "nitesa"
+    },
+    {
+      "info": "焼いてさ",
+      "info2": "やいてさ",
+      "word": "yaitesa"
+    },
+    {
+      "info": "食ってさ",
+      "info2": "くってさ",
+      "word": "kuttesa"
+    },
+    {
+      "info": "それを木の葉で",
+      "info2": "それをこのはで",
+      "word": "sorewokonohade"
+    },
+    {
+      "info": "ちょっとかぶせ",
+      "info2": "ちょっとかぶせ",
+      "word": "tyottokabuse"
+    },
+    {
+      "info": "お伴の犬や猿雉子は",
+      "info2": "おとものいぬやさるきじは",
+      "word": "otomonoinuyasarukiziha"
+    },
+    {
+      "info": "勇んで車を えんやら",
+      "info2": "いさんでくるまを えんやら",
+      "word": "isandekurumawo enyara"
+    }
+  ],
+  "links": [
+    {
+      "site": "童謡・唱歌の世界",
+      "name": "あんたがたどこさ",
+      "link": "https://s-pst.info/00_sound/1056_k.htm"
+    }
+  ]
+}

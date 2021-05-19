@@ -1,0 +1,87 @@
+{
+  "id": "00202",
+  "title": "中東の国を英語で",
+  "type": "english",
+  "tags": [
+    {
+      "id": "00001",
+      "name": "英語"
+    },
+    {
+      "id": "00003",
+      "name": "英単語"
+    },
+    {
+      "id": "00005",
+      "name": "地理"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "アフガニスタン・イスラム共和国",
+      "word": "Afghanistan"
+    },
+    {
+      "info": "アラブ首長国連邦",
+      "word": "United Arab Emirates"
+    },
+    {
+      "info": "イエメン共和国",
+      "word": "Yemen"
+    },
+    {
+      "info": "イスラエル国",
+      "word": "Israel"
+    },
+    {
+      "info": "イラク共和国",
+      "word": "Iraq"
+    },
+    {
+      "info": "イラン・イスラム共和国",
+      "word": "Iran"
+    },
+    {
+      "info": "オマーン国",
+      "word": "Oman"
+    },
+    {
+      "info": "カタール国",
+      "word": "Qatar"
+    },
+    {
+      "info": "クウェート国",
+      "word": "Kuwait"
+    },
+    {
+      "info": "サウジアラビア王国",
+      "word": "Saudi Arabia"
+    },
+    {
+      "info": "シリア・アラブ共和国",
+      "word": "Syria"
+    },
+    {
+      "info": "トルコ共和国",
+      "word": "Turkey"
+    },
+    {
+      "info": "バーレーン王国",
+      "word": "Bahrain"
+    },
+    {
+      "info": "ヨルダン",
+      "word": "Jordan"
+    },
+    {
+      "info": "レバノン共和国",
+      "word": "Lebanon"
+    },
+    {
+      "info": "パレスチナ",
+      "word": "Palestine"
+    }
+  ]
+}

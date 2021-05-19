@@ -30,8 +30,8 @@
           <para-section class="details-item-inner">
             <div class="detail-card">
               <div class="detail-card-no">No.{{ i + 1 }}</div>
-              <div class="detail-card-word">{{ w.info }}</div>
-              <div class="detail-card-info">{{ w.word }}</div>
+              <div class="detail-card-info">{{ w.info }}</div>
+              <div class="detail-card-word">{{ w.word }}</div>
             </div>
           </para-section>
         </li>
@@ -62,7 +62,7 @@ export default {
   },
   data() {
     return {
-      back: false,
+      back: this.back || false,
     }
   },
   head() {
@@ -134,6 +134,10 @@ export default {
       flex-direction: column;
       gap: 5px;
       color: #666;
+
+      &-word {
+        word-break: break-all;
+      }
     }
   }
 }

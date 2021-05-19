@@ -1,0 +1,86 @@
+{
+  "id": "12001",
+  "title": "おにのパンツ",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00004",
+      "name": "日本語"
+    },
+    {
+      "id": "00016",
+      "name": "童謡"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "鬼のパンツは いいパンツ",
+      "info2": "おにのぱんつは いいぱんつ",
+      "word": "oninopantuha iipantu"
+    },
+    {
+      "info": "つよいぞ つよいぞ",
+      "info2": "つよいぞ つよいぞ",
+      "word": "tuyoizo tuyoizo"
+    },
+    {
+      "info": "トラの毛皮で できている",
+      "info2": "とらのけがわで できている",
+      "word": "toranokegawade dekiteiru"
+    },
+    {
+      "info": "つよいぞ つよいぞ",
+      "info2": "つよいぞ つよいぞ",
+      "word": "tuyoizo tuyoizo"
+    },
+    {
+      "info": "５年はいても やぶれない",
+      "info2": "ごねんはいても やぶれない",
+      "word": "gonenhaitemo yaburenai"
+    },
+    {
+      "info": "つよいぞ つよいぞ",
+      "info2": "つよいぞ つよいぞ",
+      "word": "tuyoizo tuyoizo"
+    },
+    {
+      "info": "10年はいても やぶれない",
+      "info2": "じゅうねんはいても やぶれない",
+      "word": "jyuunenhaitemo yaburenai"
+    },
+    {
+      "info": "つよいぞ つよいぞ",
+      "info2": "つよいぞ つよいぞ",
+      "word": "tuyoizo tuyoizo"
+    },
+    {
+      "info": "はこう はこう 鬼のパンツ",
+      "info2": "はこう はこう おにのぱんつ",
+      "word": "hakou hakou oninopantu"
+    },
+    {
+      "info": "はこう はこう 鬼のパンツ",
+      "info2": "はこう はこう おにのぱんつ",
+      "word": "hakou hakou oninopantu"
+    },
+    {
+      "info": "あなたも あなたも あなたも あなたも",
+      "info2": "あなたも あなたも あなたも あなたも",
+      "word": "anatamo anatamo anatamo anatamo"
+    },
+    {
+      "info": "みんなではこう 鬼のパンツ",
+      "info2": "みんなではこう おにのぱんつ",
+      "word": "minnadehakou oninopantu"
+    }
+  ],
+  "links": [
+    {
+      "site": "童謡・唱歌の世界",
+      "name": "おにのパンツ",
+      "link": "https://s-pst.info/00_sound/2005_k.htm"
+    }
+  ]
+}

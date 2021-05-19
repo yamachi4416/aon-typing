@@ -1,0 +1,125 @@
+{
+  "id": "51106",
+  "title": "あかい雲（小川未明）",
+  "type": "japanese",
+  "skip": true,
+  "tags": [
+    {
+      "id": "00004",
+      "name": "日本語"
+    },
+    {
+      "id": "00009",
+      "name": "青空文庫"
+    },
+    {
+      "id": "00010",
+      "name": "日本文学"
+    },
+    {
+      "id": "00011",
+      "name": "詩歌"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "あかい雲",
+      "info2": "あかいくも",
+      "word": "akaikumo"
+    },
+    {
+      "info": "小川 未明",
+      "info2": "おがわ みめい",
+      "word": "ogawa mimei"
+    },
+    {
+      "info": "あかい雲、あかい雲、",
+      "info2": "あかいくも、あかいくも、",
+      "word": "akaikumo,akaikumo,"
+    },
+    {
+      "info": "西の空の紅い雲。",
+      "info2": "にしのそらのあかいくも。",
+      "word": "nisinosoranoakaikumo."
+    },
+    {
+      "info": "おらが乳母のおまんは、",
+      "info2": "おらがうばのおまんは、",
+      "word": "oragaubanoomanha,"
+    },
+    {
+      "info": "まだ年若いに、",
+      "info2": "まだとしわかいに、",
+      "word": "madatosiwakaini,"
+    },
+    {
+      "info": "嫁入りの晩に、",
+      "info2": "よめいりのばんに、",
+      "word": "yomeirinobanni,"
+    },
+    {
+      "info": "海の中に落ちて、",
+      "info2": "うみのなかにおちて、",
+      "word": "uminonakaniotite,"
+    },
+    {
+      "info": "あかい雲となった。",
+      "info2": "あかいくもとなった。",
+      "word": "akaikumotonatta."
+    },
+    {
+      "info": "おまん、おまん、",
+      "info2": "おまん、おまん、",
+      "word": "oman,oman,"
+    },
+    {
+      "info": "まだ年若いに、",
+      "info2": "まだとしわかいに、",
+      "word": "madatosiwakaini,"
+    },
+    {
+      "info": "あかい紅つけて、",
+      "info2": "あかいべにつけて、",
+      "word": "akaibenitukete,"
+    },
+    {
+      "info": "あかい帯しめて、",
+      "info2": "あかいおびしめて、",
+      "word": "akaiobisimete,"
+    },
+    {
+      "info": "からこん、からこん、",
+      "info2": "からこん、からこん、",
+      "word": "karakon,karakon,"
+    },
+    {
+      "info": "げたはいて、",
+      "info2": "げたはいて、",
+      "word": "getahaite,"
+    },
+    {
+      "info": "西のお里へ嫁にいった。",
+      "info2": "にしのおさとへよめにいった。",
+      "word": "nisinoosatoheyomeniitta."
+    },
+    {
+      "info": "あかい雲、あかい雲、",
+      "info2": "あかいくも、あかいくも、",
+      "word": "akaikumo,akaikumo,"
+    },
+    {
+      "info": "西の空の紅い雲。",
+      "info2": "にしのそらのあかいくも。",
+      "word": "nisinosoranoakaikumo."
+    }
+  ],
+  "links": [
+    {
+      "site": "青空文庫",
+      "name": "図書カード",
+      "link": "https://www.aozora.gr.jp/cards/001475/card51106.html"
+    }
+  ]
+}

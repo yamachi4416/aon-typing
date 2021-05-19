@@ -82,6 +82,7 @@ class TypingGame {
   }
 
   _initData() {
+    this.problem = null
     this.tick = 0
     this.wordIndex = 0
     this.active = true
@@ -97,15 +98,16 @@ class TypingGame {
     this.totalTypeMiss = 0
   }
 
-  init({ words, setting }) {
+  init({ problem, setting }) {
     this._initData()
 
     setting = setting || {}
+    this.problem = problem
     this.timeLimit = setting.timeLimit || 0
     this.timeUse = this.timeLimit
     this._stop = null
 
-    this.words = (words || []).reduce((a, w, i) => {
+    this.words = (problem.words || []).reduce((a, w, i) => {
       a.push(new TypingWordGameData(i, w))
 
       this.totalWordCount += w.word.length
@@ -178,7 +180,7 @@ class TypingGame {
 
     const { words, type } = problem
     const { timeLimit, autoMode } = setting
-    this.init({ words, setting })
+    this.init({ problem, setting })
 
     let gamer = null
     if (type === 'english') {

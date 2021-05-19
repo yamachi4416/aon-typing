@@ -23,7 +23,13 @@ export const getters = {
 export const actions = {
   async getProblemDetail({ commit }, id) {
     if (id) {
-      return await this.$axios.$get(`/api/problems/details/${id}.json`)
+      return await this.$http.$get(`/api/problems/details/${id}.json`)
+    }
+    return null
+  },
+  async getTag({ commit }, id) {
+    if (id) {
+      return await this.$http.$get(`/api/tags/${id}.json`)
     }
     return null
   },

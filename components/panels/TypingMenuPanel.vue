@@ -144,18 +144,22 @@ export default {
   },
 
   data() {
+    const animals = [
+      {
+        name: 'オフ',
+        speed: 0,
+      },
+    ].concat(
+      helpAnimals().map(({ start, end, name }) => ({
+        name,
+        speed: Math.round(60000 / ((start + end) / 2)),
+      }))
+    )
+
+    animals.push({ name: 'T', speed: 30 })
+
     return {
-      helpAnimals: [
-        {
-          name: 'オフ',
-          speed: 0,
-        },
-      ].concat(
-        helpAnimals().map(({ start, end, name }) => ({
-          name,
-          speed: Math.round(60000 / ((start + end) / 2)),
-        }))
-      ),
+      helpAnimals: animals,
     }
   },
 

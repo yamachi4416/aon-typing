@@ -78,7 +78,7 @@
             :disabled="!hasNextProblem"
             @click="$emit('next')"
           >
-            次の問題
+            つづきをする
           </button>
         </div>
       </template>

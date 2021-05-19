@@ -83,7 +83,7 @@ export default {
 
     async startTyping() {
       this.stopTyping()
-      this.typing.init({ words: [] })
+      this.typing.init({ problem: {} })
 
       if (!this.problem) {
         this.problem = await fetchProblem({

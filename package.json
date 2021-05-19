@@ -12,7 +12,7 @@
     "gen-problem": "node ./scripts/gen-problem.mjs ./data/problems"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.1",
+    "@nuxt/http": "^0.6.4",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3"
   },
@@ -25,6 +25,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.7.0",
+    "jsdom": "^16.5.3",
     "node-sass": "^5.0.0",
     "prettier": "^2.2.1",
     "sass-loader": "^10.1.0"

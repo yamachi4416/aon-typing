@@ -1,0 +1,106 @@
+{
+  "id": "12002",
+  "title": "赤い靴",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00004",
+      "name": "日本語"
+    },
+    {
+      "id": "00016",
+      "name": "童謡"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "赤い靴 はいてた",
+      "info2": "あかいくつ はいてた",
+      "word": "akaikutu haiteta"
+    },
+    {
+      "info": "女の子",
+      "info2": "おんなのこ",
+      "word": "onnanoko"
+    },
+    {
+      "info": "異人さんに連れられて",
+      "info2": "いじんさんにつれられて",
+      "word": "izinsanniturerarete"
+    },
+    {
+      "info": "行っちゃった",
+      "info2": "いっちゃった",
+      "word": "ittyatta"
+    },
+    {
+      "info": "横浜の はとばから",
+      "info2": "よこはまの はとばから",
+      "word": "yokohamano hatobakara"
+    },
+    {
+      "info": "船に乗って",
+      "info2": "ふねにのって",
+      "word": "huneninotte"
+    },
+    {
+      "info": "異人さんに連れられて",
+      "info2": "いじんさんにつれられて",
+      "word": "izinsanniturerarete"
+    },
+    {
+      "info": "行っちゃった",
+      "info2": "いっちゃった",
+      "word": "ittyatta"
+    },
+    {
+      "info": "今では 青い目に",
+      "info2": "いまでは あおいめに",
+      "word": "imadeha aoimeni"
+    },
+    {
+      "info": "なっちゃって",
+      "info2": "なっちゃって",
+      "word": "nattyatte"
+    },
+    {
+      "info": "異人さんのお国に",
+      "info2": "いじんさんのおくにに",
+      "word": "izinsannookunini"
+    },
+    {
+      "info": "いるんだろ",
+      "info2": "いるんだろ",
+      "word": "irundaro"
+    },
+    {
+      "info": "赤い靴 見るたび",
+      "info2": "あかいくつ みるたび",
+      "word": "akaikutu mirutabi"
+    },
+    {
+      "info": "かんがえる",
+      "info2": "かんがえる",
+      "word": "kangaeru"
+    },
+    {
+      "info": "異人さんに逢うたび",
+      "info2": "いじんさんにあうたび",
+      "word": "izinsanniautabi"
+    },
+    {
+      "info": "かんがえる",
+      "info2": "かんがえる",
+      "word": "kangaeru"
+    }
+  ],
+  "links": [
+    {
+      "site": "童謡・唱歌の世界",
+      "name": "赤い靴",
+      "link": "https://s-pst.info/00_sound/1013_k.htm"
+    }
+  ]
+}

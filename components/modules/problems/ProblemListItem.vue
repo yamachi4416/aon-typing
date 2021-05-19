@@ -22,14 +22,14 @@
         </div>
         <div class="problem-list-item-main-detail-tags">
           <div class="problem-list-item-main-detail-tags-list">
-            <nuxt-link
+            <span
               v-for="(tag, i) in item.tags"
               :key="`tag-${item.id}-${i}`"
-              to="/"
               class="problem-list-item-main-detail-tags-list-item"
+              @click="$emit('tag', tag.id)"
             >
-              {{ tag }}
-            </nuxt-link>
+              {{ tag.name }}
+            </span>
           </div>
         </div>
       </div>
@@ -104,6 +104,7 @@ export default {
           gap: 5px;
           padding: 10px 5px;
           &-item {
+            cursor: pointer;
             font-size: 0.8em;
             background: rgba(255, 153, 0, 1);
             color: #fff;

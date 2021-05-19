@@ -1,0 +1,231 @@
+{
+  "id": "00206",
+  "title": "アフリカの国を英語で",
+  "type": "english",
+  "tags": [
+    {
+      "id": "00001",
+      "name": "英語"
+    },
+    {
+      "id": "00003",
+      "name": "英単語"
+    },
+    {
+      "id": "00005",
+      "name": "地理"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "アルジェリア民主人民共和国",
+      "word": "Algeria"
+    },
+    {
+      "info": "アンゴラ共和国",
+      "word": "Angola"
+    },
+    {
+      "info": "ウガンダ共和国",
+      "word": "Uganda"
+    },
+    {
+      "info": "エジプト・アラブ共和国",
+      "word": "Egypt"
+    },
+    {
+      "info": "エスワティニ王国",
+      "word": "Eswatini"
+    },
+    {
+      "info": "エチオピア連邦民主共和国",
+      "word": "Ethiopia"
+    },
+    {
+      "info": "エリトリア国",
+      "word": "Eritrea"
+    },
+    {
+      "info": "ガーナ共和国",
+      "word": "Ghana"
+    },
+    {
+      "info": "カーボヴェルデ共和国",
+      "word": "Cabo Verde"
+    },
+    {
+      "info": "ガボン共和国",
+      "word": "Gabon"
+    },
+    {
+      "info": "カメルーン共和国",
+      "word": "Cameroon"
+    },
+    {
+      "info": "ガンビア共和国",
+      "word": "Gambia"
+    },
+    {
+      "info": "ギニア共和国",
+      "word": "Guinea"
+    },
+    {
+      "info": "ギニアビサウ共和国",
+      "word": "Guinea-Bissau"
+    },
+    {
+      "info": "コモロ連合",
+      "word": "Comoros"
+    },
+    {
+      "info": "コンゴ共和国",
+      "word": "Republic of Congo"
+    },
+    {
+      "info": "コンゴ民主共和国",
+      "word": "Democratic Republic of the Congo"
+    },
+    {
+      "info": "サントメ・プリンシペ民主共和国",
+      "word": "Sao Tome and Principe"
+    },
+    {
+      "info": "ザンビア共和国",
+      "word": "Zambia"
+    },
+    {
+      "info": "シエラレオネ共和国",
+      "word": "Sierra Leone"
+    },
+    {
+      "info": "ジブチ共和国",
+      "word": "Djibouti"
+    },
+    {
+      "info": "ジンバブエ共和国",
+      "word": "Zimbabwe"
+    },
+    {
+      "info": "スーダン共和国",
+      "word": "Sudan"
+    },
+    {
+      "info": "セーシェル共和国",
+      "word": "Seychelles"
+    },
+    {
+      "info": "赤道ギニア共和国",
+      "word": "Equatorial Guinea"
+    },
+    {
+      "info": "セネガル共和国",
+      "word": "Senegal"
+    },
+    {
+      "info": "ソマリア連邦共和国",
+      "word": "Somalia"
+    },
+    {
+      "info": "タンザニア連合共和国",
+      "word": "Tanzania"
+    },
+    {
+      "info": "チャド共和国",
+      "word": "Chad"
+    },
+    {
+      "info": "中央アフリカ共和国",
+      "word": "Central Africa"
+    },
+    {
+      "info": "チュニジア共和国",
+      "word": "Tunisia"
+    },
+    {
+      "info": "トーゴ共和国",
+      "word": "Togo"
+    },
+    {
+      "info": "ナイジェリア連邦共和国",
+      "word": "Nigeria"
+    },
+    {
+      "info": "ナミビア共和国",
+      "word": "Namibia"
+    },
+    {
+      "info": "ニジェール共和国",
+      "word": "Niger"
+    },
+    {
+      "info": "ブルキナファソ",
+      "word": "Burkina Faso"
+    },
+    {
+      "info": "ブルンジ共和国",
+      "word": "Burundi"
+    },
+    {
+      "info": "ベナン共和国",
+      "word": "Benin"
+    },
+    {
+      "info": "ボツワナ共和国",
+      "word": "Botswana"
+    },
+    {
+      "info": "マダガスカル共和国",
+      "word": "Madagascar"
+    },
+    {
+      "info": "マラウイ共和国",
+      "word": "Malawi"
+    },
+    {
+      "info": "マリ共和国",
+      "word": "Mali"
+    },
+    {
+      "info": "南アフリカ共和国",
+      "word": "South Africa"
+    },
+    {
+      "info": "南スーダン共和国",
+      "word": "South Sudan"
+    },
+    {
+      "info": "モザンビーク共和国",
+      "word": "Mozambique"
+    },
+    {
+      "info": "モーリシャス共和国",
+      "word": "Mauritius"
+    },
+    {
+      "info": "モーリタニア・イスラム共和国",
+      "word": "Mauritania"
+    },
+    {
+      "info": "モロッコ王国",
+      "word": "Morocco"
+    },
+    {
+      "info": "リビア",
+      "word": "Libya"
+    },
+    {
+      "info": "リベリア共和国",
+      "word": "Liberia"
+    },
+    {
+      "info": "ルワンダ共和国",
+      "word": "Rwanda"
+    },
+    {
+      "info": "レソト王国",
+      "word": "Lesotho"
+    }
+  ]
+}

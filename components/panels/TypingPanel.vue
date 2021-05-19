@@ -20,21 +20,27 @@
               />
             </div>
             <div class="display-zone-info-center">
-              <disp-words-info
-                class="display-words"
+              <div class="display-words-info" :class="infoClass">
+                <span
+                  class="display-words-info-text"
+                  v-text="current.infoState.info"
+                />
+              </div>
+              <display-words
+                v-if="!!current.infoState.word"
+                width="100%"
+                class="display-words-info2"
                 :word="current.infoState"
+              />
+              <display-words
+                width="100%"
+                class="display-words-word"
+                :word="current.wordState"
               />
             </div>
             <div class="display-zone-info-right">
               <close-circle class="close-circle" @click="cancel" />
             </div>
-          </div>
-          <div class="display-zone-words">
-            <display-words
-              width="100%"
-              class="display-words"
-              :word="current.wordState"
-            />
           </div>
         </div>
         <div class="hands">
@@ -55,7 +61,6 @@
 
 <script>
 import TimeCircle from '../parts/TimeCircle.vue'
-import DispWordsInfo from '../modules/keyboard/DispWordsInfo.vue'
 import DisplayWords from '../modules/keyboard/DisplayWords.vue'
 import HandMap from '../modules/keyboard/HandMap.vue'
 import CloseCircle from '../parts/CloseCircle.vue'
@@ -65,7 +70,6 @@ import JISKeys from '~/libs/JISKeys'
 export default {
   components: {
     TimeCircle,
-    DispWordsInfo,
     DisplayWords,
     HandMap,
     CloseCircle,
@@ -82,6 +86,12 @@ export default {
     },
   },
   computed: {
+    infoClass() {
+      const chars = this.current?.infoState?.info?.length || 0
+      const n = [10, 20, 30, 40, 50, 100, 200, 300].find((c) => chars <= c) || 0
+      const type = this.typing.problem?.type || 'unknown'
+      return { [`chars-${n}`]: true, [type]: true }
+    },
     keys() {
       return JISKeys
     },
@@ -166,8 +176,85 @@ export default {
 
         &-center {
           flex: 1;
-          .display-words {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          min-height: 100px;
+
+          & > * {
             width: 100%;
+          }
+
+          .display-words-info {
+            flex: 1;
+            font-size: 1em;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.2;
+
+            &-text {
+              white-space: pre-wrap;
+            }
+
+            &.english {
+              font-size: 1.2em;
+              line-height: 1.4;
+            }
+
+            &.chars-10 {
+              font-size: 1.5em;
+              &.english {
+                font-size: 1.6em;
+              }
+            }
+            &.chars-20 {
+              font-size: 1.4em;
+              &.english {
+                font-size: 1.5em;
+              }
+            }
+            &.chars-30 {
+              font-size: 1.3em;
+              &.english {
+                font-size: 1.4em;
+              }
+            }
+            &.chars-40 {
+              font-size: 1.2em;
+              &.english {
+                font-size: 1.3em;
+              }
+            }
+            &.chars-50 {
+              font-size: 1.1em;
+              &.english {
+                font-size: 1.2em;
+              }
+            }
+            &.chars-200 {
+              font-size: 0.9em;
+              &.english {
+                font-size: 1em;
+              }
+            }
+            &.chars-300 {
+              font-size: 0.8em;
+              &.english {
+                font-size: 0.9em;
+              }
+            }
+          }
+
+          .display-words-info2 {
+            font-size: 1.1em;
+            letter-spacing: 0.1em;
+          }
+
+          .display-words-word {
+            font-size: 1.5em;
+            letter-spacing: 0.15em;
           }
         }
 

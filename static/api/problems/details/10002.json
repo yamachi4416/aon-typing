@@ -1,204 +1,134 @@
 {
   "id": "10002",
-  "title": "やさい",
+  "title": "東京２３区",
   "type": "japanese",
   "tags": [
-    "日本語",
-    "漢字",
-    "たべもの"
+    {
+      "id": "00004",
+      "name": "日本語"
+    },
+    {
+      "id": "00005",
+      "name": "地理"
+    }
   ],
   "createdAt": "2021-05-31",
   "updatedAt": "2021-05-31",
   "words": [
     {
-      "info": "青紫蘇",
-      "info2": "あおじそ",
-      "word": "aoziso"
+      "info": "足立区",
+      "info2": "あだちく",
+      "word": "adatiku"
     },
     {
-      "info": "赤紫蘇",
-      "info2": "あかじそ",
-      "word": "akaziso"
+      "info": "荒川区",
+      "info2": "あらかわく",
+      "word": "arakawaku"
     },
     {
-      "info": "浅葱",
-      "info2": "あさつき",
-      "word": "asatuki"
+      "info": "板橋区",
+      "info2": "いたばしく",
+      "word": "itabasiku"
     },
     {
-      "info": "薊",
-      "info2": "あざみ",
-      "word": "azami"
+      "info": "江戸川区",
+      "info2": "えどがわく",
+      "word": "edogawaku"
     },
     {
-      "info": "石勺柏",
-      "info2": "あすぱらがす",
-      "word": "asuparagasu"
+      "info": "大田区",
+      "info2": "おおたく",
+      "word": "ootaku"
     },
     {
-      "info": "公孫樹芋",
-      "info2": "いちょういも",
-      "word": "ityouimo"
+      "info": "葛飾区",
+      "info2": "かつしかく",
+      "word": "katusikaku"
     },
     {
-      "info": "隠元豆",
-      "info2": "いんげんまめ",
-      "word": "ingenmame"
+      "info": "北区",
+      "info2": "きたく",
+      "word": "kitaku"
     },
     {
-      "info": "鶯菜",
-      "info2": "うぐいすな",
-      "word": "uguisuna"
+      "info": "江東区",
+      "info2": "こうとうく",
+      "word": "koutouku"
     },
     {
-      "info": "独活",
-      "info2": "うど",
-      "word": "udo"
+      "info": "品川区",
+      "info2": "しながわく",
+      "word": "sinagawaku"
     },
     {
-      "info": "枝豆",
-      "info2": "えだまめ",
-      "word": "edamame"
+      "info": "渋谷区",
+      "info2": "しぶやく",
+      "word": "sibuyaku"
     },
     {
-      "info": "榎茸",
-      "info2": "えのきだけ",
-      "word": "enokidake"
+      "info": "新宿区",
+      "info2": "しんじゅくく",
+      "word": "sinjyukuku"
     },
     {
-      "info": "海老芋",
-      "info2": "えびいも",
-      "word": "ebiimo"
+      "info": "杉並区",
+      "info2": "すぎなみく",
+      "word": "suginamiku"
     },
     {
-      "info": "陸蓮根",
-      "info2": "おくら",
-      "word": "okura"
+      "info": "墨田区",
+      "info2": "すみだく",
+      "word": "sumidaku"
     },
     {
-      "info": "加茂茄子",
-      "info2": "かもなす",
-      "word": "kamonasu"
+      "info": "世田谷区",
+      "info2": "せたがやく",
+      "word": "setagayaku"
     },
     {
-      "info": "蕪",
-      "info2": "かぶら",
-      "word": "kabura"
+      "info": "台東区",
+      "info2": "たいとうく",
+      "word": "taitouku"
     },
     {
-      "info": "芥子菜",
-      "info2": "からしな",
-      "word": "karasina"
+      "info": "中央区",
+      "info2": "ちゅうおうく",
+      "word": "tyuuouku"
     },
     {
-      "info": "甘藷",
-      "info2": "かんしょ",
-      "word": "kansyo"
+      "info": "千代田区",
+      "info2": "ちよだく",
+      "word": "tiyodaku"
     },
     {
-      "info": "菊菜",
-      "info2": "きくな",
-      "word": "kikuna"
+      "info": "豊島区",
+      "info2": "としまく",
+      "word": "tosimaku"
     },
     {
-      "info": "野生苦苣",
-      "info2": "きくにがな",
-      "word": "kikunigana"
+      "info": "中野区",
+      "info2": "なかのく",
+      "word": "nakanoku"
     },
     {
-      "info": "木耳",
-      "info2": "きくらげ",
-      "word": "kikurage"
+      "info": "練馬区",
+      "info2": "ねりまく",
+      "word": "nerimaku"
     },
     {
-      "info": "茸",
-      "info2": "きのこ",
-      "word": "kinoko"
+      "info": "文京区",
+      "info2": "ぶんきょうく",
+      "word": "bunkyouku"
     },
     {
-      "info": "甘藍",
-      "info2": "かんらん",
-      "word": "kanrann"
+      "info": "港区",
+      "info2": "みなとく",
+      "word": "minatoku"
     },
     {
-      "info": "胡瓜",
-      "info2": "きゅうり",
-      "word": "kyuuri"
-    },
-    {
-      "info": "京菜",
-      "info2": "きょうな",
-      "word": "kyouna"
-    },
-    {
-      "info": "銀杏",
-      "info2": "ぎんなん",
-      "word": "ginnann"
-    },
-    {
-      "info": "茎山葵",
-      "info2": "くきわさび",
-      "word": "kukiwasabi"
-    },
-    {
-      "info": "栗",
-      "info2": "くり",
-      "word": "kuri"
-    },
-    {
-      "info": "黒藻",
-      "info2": "くろも",
-      "word": "kuromo"
-    },
-    {
-      "info": "慈姑",
-      "info2": "くわい",
-      "word": "kuwai"
-    },
-    {
-      "info": "小芋",
-      "info2": "こいも",
-      "word": "koimo"
-    },
-    {
-      "info": "草蘇鉄",
-      "info2": "こごみ",
-      "word": "kogomi"
-    },
-    {
-      "info": "牛蒡",
-      "info2": "ごぼう",
-      "word": "gobou"
-    },
-    {
-      "info": "小松菜",
-      "info2": "こまつな",
-      "word": "komatuna"
-    },
-    {
-      "info": "薩摩芋",
-      "info2": "さつまいも",
-      "word": "satumaimo"
-    },
-    {
-      "info": "里芋",
-      "info2": "さといも",
-      "word": "satoimo"
-    },
-    {
-      "info": "椎茸",
-      "info2": "しいたけ",
-      "word": "siitake"
-    },
-    {
-      "info": "紫蘇",
-      "info2": "しそ",
-      "word": "siso"
-    },
-    {
-      "info": "占地",
-      "info2": "しめじ",
-      "word": "simezi"
+      "info": "目黒区",
+      "info2": "めぐろく",
+      "word": "meguroku"
     }
   ]
 }

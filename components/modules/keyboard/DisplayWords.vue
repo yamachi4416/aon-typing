@@ -1,22 +1,11 @@
 <template>
-  <!-- prettier-ignore -->
-  <svg viewBox="0 0 510 25" xmlns="http://www.w3.org/2000/svg">
-    <g class="display-word-input">
-      <text x="48%" y="50%" 
-        text-anchor="end"
-        dominant-baseline="central"
-        class="left-words"><tspan
-      >{{ leftWord }}</tspan></text><text
-        x="48%" y="50%" dx="2"
-        text-anchor="start"
-        dominant-baseline="central"
-        class="right-words"
-      ><tspan
-        class="current-word"
-      >{{ currentWord }}</tspan><tspan
-      >{{ rightWord }}</tspan></text>
-    </g>
-  </svg>
+  <div class="word-words">
+    <div class="word-words-info">
+      <span class="word-words-info-left">{{ leftWord }}</span
+      ><span class="word-words-info-current">{{ currentWord }}</span
+      ><span class="word-words-info-right">{{ rightWord }}</span>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -51,21 +40,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.display-word-input {
-  text {
-    font-size: 16px;
-    letter-spacing: 2px;
-    white-space: pre;
-  }
-  .left-words {
-    fill: #666;
-  }
-  .right-words {
-    fill: #333;
-  }
-  .current-word {
-    padding-left: 2px;
-    fill: rgb(255, 153, 0);
+.word-words {
+  width: 100%;
+  font-size: 1.2em;
+
+  &-info {
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+
+    &-left {
+      color: #666;
+      flex: 1;
+      min-width: calc(50% - 0.5em);
+      display: flex;
+      justify-content: flex-end;
+      white-space: pre;
+    }
+
+    &-current {
+      color: rgb(255, 153, 0);
+      white-space: pre;
+    }
+
+    &-right {
+      color: #333;
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      white-space: pre;
+    }
   }
 }
 </style>
