@@ -6,7 +6,6 @@
   >
     <foreignObject class="typing-game">
       <div class="wrapper">
-        {{ typing.totalWordCount }}
         <div class="display-zone">
           <div class="display-zone-info">
             <div class="display-zone-info-left">
@@ -15,10 +14,13 @@
                 :total-time="typing.timeLimit"
                 :time="typing.timeUse"
                 :text="
-                  ~~(typing.timeUse / 1000) || '0.' + ~~(typing.timeUse / 100)
+                  typing.timeLimit - typing.timeUse
+                    ? ~~((typing.timeLimit - typing.timeUse) / 1000 + 1)
+                    : 'END'
                 "
                 @click="pauseToggle"
               />
+              <time-clock v-else :time="typing.timeUse" @click="pauseToggle" />
             </div>
             <div class="display-zone-info-center">
               <div class="display-words-info" :class="infoClass">
@@ -66,6 +68,7 @@ import DisplayWords from '../modules/keyboard/DisplayWords.vue'
 import HandMap from '../modules/keyboard/HandMap.vue'
 import CloseCircle from '../parts/CloseCircle.vue'
 import TypingKeyboard from '../modules/keyboard/TypingKeyboard.vue'
+import TimeClock from '../parts/TimeClock.vue'
 import JISKeys from '~/libs/JISKeys'
 
 export default {
@@ -75,6 +78,7 @@ export default {
     HandMap,
     CloseCircle,
     TypingKeyboard,
+    TimeClock,
   },
   props: {
     typing: {

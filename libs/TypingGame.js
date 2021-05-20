@@ -55,7 +55,6 @@ class TypingGame {
   _initData() {
     this.problem = null
     this.tick = 0
-    this.active = true
     this.pausing = false
     this.canceled = false
     this.running = false
@@ -73,7 +72,7 @@ class TypingGame {
     setting = setting || {}
     this.problem = problem
     this.timeLimit = setting.timeLimit || 0
-    this.timeUse = this.timeLimit
+    this.timeUse = 0
     this.goalCharCount = setting.goalCharCount || 0
     this._stop = null
   }
@@ -111,8 +110,8 @@ class TypingGame {
           this.totalTypeMiss++
         }
 
-        if (this.totalTypeCorrect >= this.goalCharCount) {
-          if (this._stop) {
+        if (this.goalCharCount > 0) {
+          if (this.totalTypeCorrect >= this.goalCharCount && this._stop) {
             this._stop()
             return
           }
@@ -143,13 +142,77 @@ class TypingGame {
     }
   }
 
-  _visibleChange() {
+  _visibleChange(ticks) {
     return () => {
       if (document.hidden) {
-        this.active = false
+        ticks.forEach((t) => t.stop())
       } else {
-        this.active = true
+        ticks.forEach((t) => t.start())
       }
+    }
+  }
+
+  _tickTimer(timeLimit) {
+    const tick = () => {
+      if (timeLimit > 0 && this.timeUse >= timeLimit) {
+        this.cancel()
+      } else if (this.isRunning) {
+        this.tick += 10
+        this.timeUse += 10
+      }
+    }
+
+    let id = null
+    return {
+      start() {
+        this.stop()
+        id = startIntervalTimer(tick, 10)
+      },
+      stop() {
+        if (id !== null) {
+          stopIntervalTimer(id)
+          id = null
+        }
+      },
+    }
+  }
+
+  _autoTyping({ words, autoMode }) {
+    if (!autoMode) {
+      return {
+        start() {},
+        stop() {},
+      }
+    }
+
+    let id = null
+    const xs = Array.from(words.reduce((a, w) => a + w.wordState.remaining, ''))
+    const tick = () => {
+      if (!this.isRunning) {
+        return
+      }
+
+      const char = xs.shift()
+      if (char) {
+        const detail = { char }
+        const event = new CustomEvent('c:typing', { detail })
+        window.dispatchEvent(event)
+      } else {
+        stopIntervalTimer(id)
+      }
+    }
+
+    return {
+      start() {
+        this.stop()
+        id = startIntervalTimer(tick, autoMode)
+      },
+      stop() {
+        if (id !== null) {
+          stopIntervalTimer(id)
+          id = null
+        }
+      },
     }
   }
 
@@ -168,22 +231,13 @@ class TypingGame {
     }
 
     const promis = new Promise((resolve) => {
-      const visibilitychange = this._visibleChange()
       const keydown = autoMode ? () => {} : this._keydown()
       const typing = this._typing({ gamer })
-      const autoTyping = this.autoTyping({ words, autoMode })
-      const tickTimer = startIntervalTimer(() => {
-        if (!this.active) {
-          return
-        }
-
-        if (timeLimit > 0 && this.timeUse <= 1) {
-          this.cancel()
-        } else if (this.isRunning) {
-          this.tick += 10
-          this.timeUse -= 10
-        }
-      }, 10)
+      const ticks = [
+        this._tickTimer(timeLimit),
+        this._autoTyping({ words, autoMode }),
+      ]
+      const visibilitychange = this._visibleChange(ticks)
 
       this._stop = () => {
         this._stop = null
@@ -193,9 +247,7 @@ class TypingGame {
           this.current.endTime = this.tick
         }
 
-        stopIntervalTimer(tickTimer)
-
-        autoTyping()
+        ticks.forEach((t) => t.stop())
 
         removeEventHandler('keydown', keydown)
         removeEventHandler('c:typing', typing)
@@ -204,47 +256,15 @@ class TypingGame {
         resolve(this.info())
       }
 
-      this.running = true
       addEventHandler('keydown', keydown)
       addEventHandler('c:typing', typing)
       addEventHandler('visibilitychange', visibilitychange, document)
 
-      autoTyping()
+      ticks.forEach((t) => t.start())
+      this.running = true
     })
 
     return promis
-  }
-
-  autoTyping({ words, autoMode }) {
-    if (!autoMode) {
-      return () => {}
-    }
-
-    let id = null
-    const xs = Array.from(words.reduce((a, d) => a + d.word, ''))
-    return () => {
-      if (id === null) {
-        id = startIntervalTimer(() => {
-          if (!this.active) {
-            return
-          }
-
-          if (!this.isRunning) {
-            return
-          }
-          const char = xs.shift()
-          if (char) {
-            const detail = { char }
-            const event = new CustomEvent('c:typing', { detail })
-            window.dispatchEvent(event)
-          } else {
-            stopIntervalTimer(id)
-          }
-        }, autoMode)
-      } else {
-        stopIntervalTimer(id)
-      }
-    }
   }
 
   cancel() {

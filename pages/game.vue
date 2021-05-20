@@ -2,7 +2,7 @@
   <div class="game-layout">
     <section>
       <main>
-        <nuxt-child :back-url="backUrl" @play="play" />
+        <nuxt-child :back-url="backUrl" />
       </main>
       <footer>
         <div>
@@ -29,11 +29,7 @@ export default {
       backUrl: null,
     }
   },
-  methods: {
-    play() {
-      console.log('play')
-    },
-  },
+  methods: {},
 }
 </script>
 

@@ -85,8 +85,6 @@ const fetchCard = async (cardUrl) => {
     info.dlUrl = new URL(dlLink, cardUrl).href
   }
 
-  console.log(info)
-
   return info
 }
 

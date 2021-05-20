@@ -84,22 +84,19 @@ export default {
     },
   },
   computed: {
-    par() {
-      return ((this.totalTime - this.time) / this.totalTime) * 30 * Math.PI
-    },
     dispText() {
       return this.text || this.time
     },
     totalPath() {
       const { time, totalTime } = this
-      const deg1 = (360 * (totalTime - time)) / totalTime
+      const deg1 = (360 * time) / totalTime
       const deg2 = 360
       return donut({ r: 30, cr: 20, mv: 0, fx: 10 }, { deg1, deg2 })
     },
     usedPath() {
       const { time, totalTime } = this
       const deg1 = 0
-      const deg2 = (360 * (totalTime - time)) / totalTime
+      const deg2 = (360 * time) / totalTime
       return donut({ r: 30, cr: 20, mv: 0, fx: 10 }, { deg1, deg2 })
     },
   },
