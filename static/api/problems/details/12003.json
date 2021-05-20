@@ -4,11 +4,11 @@
   "type": "japanese",
   "tags": [
     {
-      "id": "00004",
+      "id": "00005",
       "name": "日本語"
     },
     {
-      "id": "00016",
+      "id": "00010",
       "name": "童謡"
     }
   ],
@@ -63,7 +63,7 @@
     {
       "info": "猟師が",
       "info2": "りょうしが",
-      "word": "rilyousiga"
+      "word": "ryousiga"
     },
     {
       "info": "鉄砲でうってさ",

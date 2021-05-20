@@ -61,8 +61,8 @@ export default {
 
 <style lang="scss" scoped>
 .problem-select-panel {
-  width: 850px;
-  min-height: 80%;
+  width: 100%;
+  max-width: 1000px;
 
   .problem-list {
     display: flex;

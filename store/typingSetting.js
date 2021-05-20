@@ -2,7 +2,7 @@ const defaultSetting = {
   timeLimit: 0,
   autoMode: 0,
   randomMode: false,
-  quantity: 0,
+  goalCharCount: 0,
   problemId: '',
 }
 
@@ -26,8 +26,8 @@ export const mutations = {
   setRandomMode(state, value) {
     state.setting.randomMode = value
   },
-  setQuantity(state, value) {
-    state.setting.quantity = value
+  setGoalCharCount(state, value) {
+    state.setting.goalCharCount = value
   },
   setProblemId(state, problemId) {
     state.setting.problemId = problemId

@@ -1,4 +1,3 @@
-import { TypingInfoState, TypingWordState } from '~/libs/TypingStates'
 import Keys from '~/libs/Keys'
 import TypingGameInfo from '~/libs/TypingGameInfo'
 import TypingGamerEnglish from '~/libs/TypingGamerEnglish'
@@ -48,34 +47,6 @@ const stopAllIntervalTimer = () => {
   })
 }
 
-class TypingWordGameData {
-  constructor(i, data) {
-    Object.assign(this, {
-      ...data,
-      index: i,
-      startTime: 0,
-      endTime: 0,
-      count: 0,
-      misses: [],
-      infoState: new TypingInfoState(data.info, data.info2),
-      wordState: new TypingWordState(data.word),
-      __data: data,
-    })
-  }
-
-  get mistake() {
-    return this.misses.length
-  }
-
-  get success() {
-    return this.wordState.finished
-  }
-
-  sync() {
-    this.__data.sync(this)
-  }
-}
-
 class TypingGame {
   constructor() {
     this._initData()
@@ -84,15 +55,13 @@ class TypingGame {
   _initData() {
     this.problem = null
     this.tick = 0
-    this.wordIndex = 0
     this.active = true
     this.pausing = false
     this.canceled = false
     this.running = false
     this.timeLimit = 0
     this.timeUse = 0
-    this.current = null
-    this.totalWordCount = 0
+    this.goalCharCount = 0
     this.totalTypeCount = 0
     this.totalTypeCorrect = 0
     this.totalTypeMiss = 0
@@ -105,17 +74,20 @@ class TypingGame {
     this.problem = problem
     this.timeLimit = setting.timeLimit || 0
     this.timeUse = this.timeLimit
+    this.goalCharCount = setting.goalCharCount || 0
     this._stop = null
+  }
 
-    this.words = (problem.words || []).reduce((a, w, i) => {
-      a.push(new TypingWordGameData(i, w))
+  get words() {
+    return this.problem?.words || []
+  }
 
-      this.totalWordCount += w.word.length
+  get current() {
+    return this.problem?.current
+  }
 
-      return a
-    }, [])
-
-    this.current = this.words[this.wordIndex]
+  get totalWordCount() {
+    return this.problem?.totalWordCount
   }
 
   _typing({ gamer }) {
@@ -139,10 +111,16 @@ class TypingGame {
           this.totalTypeMiss++
         }
 
+        if (this.totalTypeCorrect >= this.goalCharCount) {
+          if (this._stop) {
+            this._stop()
+            return
+          }
+        }
+
         if (word.success) {
           word.endTime = this.tick
-          this.wordIndex++
-          this.current = this.words[this.wordIndex]
+          this.problem.nextWord()
 
           if (this.current) {
             this.current.startTime = word.endTime
@@ -222,8 +200,6 @@ class TypingGame {
         removeEventHandler('keydown', keydown)
         removeEventHandler('c:typing', typing)
         removeEventHandler('visibilitychange', visibilitychange, document)
-
-        this.words.forEach((w) => w.sync())
 
         resolve(this.info())
       }
@@ -306,8 +282,7 @@ class TypingGame {
   }
 
   info() {
-    const res = { ...this }
-    return new TypingGameInfo(res)
+    return new TypingGameInfo(this)
   }
 
   dispose() {

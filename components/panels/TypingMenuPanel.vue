@@ -8,8 +8,8 @@
         :show-footer="true"
         @close="$emit('close')"
       >
-        <div class="table">
-          <div>
+        <div class="typing-menu-panel-content">
+          <div class="typing-menu-panel-content-row">
             <label>制限時間</label>
             <div>
               <div class="list-buttons">
@@ -24,7 +24,23 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="typing-menu-panel-content-row">
+            <label>目標タイプ数</label>
+            <div>
+              <div class="list-buttons">
+                <button
+                  v-for="i in goalCharCounts"
+                  :key="`goalCharCount-${i}`"
+                  class="button"
+                  :selected="i === goalCharCount"
+                  @click="goalCharCount = i"
+                >
+                  {{ i || 'なし' }}
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="typing-menu-panel-content-row">
             <label>自動モード</label>
             <div>
               <div class="list-buttons">
@@ -39,23 +55,7 @@
               </div>
             </div>
           </div>
-          <div>
-            <label>目安タイプ数</label>
-            <div>
-              <div class="list-buttons">
-                <button
-                  v-for="i in [0, 100, 250, 450, 700, 1000]"
-                  :key="`quantity-${i}`"
-                  class="button"
-                  :selected="i === quantity"
-                  @click="quantity = i"
-                >
-                  {{ i || 'なし' }}
-                </button>
-              </div>
-            </div>
-          </div>
-          <div>
+          <div class="typing-menu-panel-content-row">
             <label>シャッフル</label>
             <div>
               <div class="list-buttons">
@@ -76,7 +76,7 @@
               </div>
             </div>
           </div>
-          <div class="problem-section">
+          <div class="typing-menu-panel-content-row problem-section">
             <label>問題</label>
             <div>
               <div class="list-buttons">
@@ -160,6 +160,7 @@ export default {
 
     return {
       helpAnimals: animals,
+      goalCharCounts: [0, 100, 250, 450, 700, 1000],
     }
   },
 
@@ -197,12 +198,12 @@ export default {
       },
     },
 
-    quantity: {
+    goalCharCount: {
       get() {
-        return this.setting.quantity
+        return this.setting.goalCharCount
       },
       set(value) {
-        this.setQuantity(value)
+        this.setGoalCharCount(value)
       },
     },
 
@@ -216,10 +217,7 @@ export default {
     },
 
     problem() {
-      if (this.problemId) {
-        return this.getProblem(this.problemId) || {}
-      }
-      return {}
+      return this.problemId ? this.getProblem(this.problemId) || {} : {}
     },
   },
 
@@ -228,18 +226,13 @@ export default {
       'setTimeLimit',
       'setAutoMode',
       'setRandomMode',
-      'setQuantity',
+      'setGoalCharCount',
       'setProblemId',
     ]),
 
     openProblemSelect() {
       this.$emit('openProblemSelect')
     },
-
-    // selectProblemSelect(problem) {
-    //   this.isOpenProblemSelect = false
-    //   this.problemId = problem.id || ''
-    // },
 
     randomProblemSelect() {
       const problems = this.problems
@@ -264,17 +257,37 @@ export default {
 
 <style lang="scss" scoped>
 .typing-menu-panel {
-  min-width: 300px;
+  width: 100%;
+  max-width: 1000px;
 
-  label {
-    white-space: nowrap;
-  }
+  &-content {
+    padding: 5px 0;
 
-  .list-buttons {
-    display: flex;
-    gap: 5px;
-    .button {
-      padding: 0 10px;
+    &-row {
+      display: flex;
+      flex-wrap: nowrap;
+      padding: 5px;
+
+      & > * {
+        flex: 1;
+      }
+
+      & > label {
+        min-width: 8em;
+        max-width: 8em;
+      }
+    }
+
+    label {
+      white-space: nowrap;
+    }
+
+    .list-buttons {
+      display: flex;
+      gap: 5px;
+      .button {
+        padding: 0 10px;
+      }
     }
   }
 

@@ -1,6 +1,8 @@
 export class TypingGamerEnglish {
   init(word) {
-    word.wordState.next(1)
+    if (!word.wordState.current) {
+      word.wordState.next(1)
+    }
   }
 
   expect(char, word) {

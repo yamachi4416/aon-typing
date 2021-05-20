@@ -6,6 +6,7 @@
   >
     <foreignObject class="typing-game">
       <div class="wrapper">
+        {{ typing.totalWordCount }}
         <div class="display-zone">
           <div class="display-zone-info">
             <div class="display-zone-info-left">

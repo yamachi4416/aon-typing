@@ -13,8 +13,12 @@ export const rankList = () => {
 export const helpAnimals = () => rankList().slice(2, 6)
 
 export class TypingGameInfo {
-  constructor(info) {
-    Object.assign(this, info)
+  constructor(game) {
+    this.tick = game.tick
+    this.totalTypeCount = game.totalTypeCount
+    this.totalTypeMiss = game.totalTypeMiss
+    this.totalTypeCorrect = game.totalTypeCorrect
+    this.words = game.words.slice(0)
   }
 
   get time() {

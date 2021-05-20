@@ -2,9 +2,11 @@ import jChars from '~/libs/TypingJapaneseChars'
 
 export class TypingGamerJapanese {
   init(word) {
-    const { jc, ec } = jChars.typeCharsToJapaneseChars(word.wordState.word)
-    word.infoState.push(jc.length)
-    word.wordState.push(ec.length)
+    if (!word.wordState.current) {
+      const { jc, ec } = jChars.typeCharsToJapaneseChars(word.wordState.word)
+      word.infoState.push(jc.length)
+      word.wordState.push(ec.length)
+    }
   }
 
   expect(char, word) {

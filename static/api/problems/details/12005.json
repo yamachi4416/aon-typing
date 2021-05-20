@@ -4,11 +4,11 @@
   "type": "japanese",
   "tags": [
     {
-      "id": "00004",
+      "id": "00005",
       "name": "日本語"
     },
     {
-      "id": "00016",
+      "id": "00010",
       "name": "童謡"
     }
   ],
@@ -18,7 +18,7 @@
     {
       "info": "通りゃんせ 通りゃんせ",
       "info2": "とおりゃんせ とおりゃんせ",
-      "word": "toorilyanse toorilyanse"
+      "word": "tooryanse tooryanse"
     },
     {
       "info": "ここはどこの 細道じゃ",
@@ -63,7 +63,7 @@
     {
       "info": "通りゃんせ 通りゃんせ",
       "info2": "とおりゃんせ とおりゃんせ",
-      "word": "toorilyanse toorilyanse"
+      "word": "tooryanse tooryanse"
     }
   ],
   "links": [

@@ -1,13 +1,14 @@
 <template>
-  <typing-menu-panel
-    class="typing-menu-page"
-    :show="show"
-    @start="startTyping"
-    @cancel="cancel"
-    @openProblemSelect="openProblemSelect"
-  >
-    <nuxt-child :back-url="backUrl" />
-  </typing-menu-panel>
+  <div class="typing-menu-page">
+    <typing-menu-panel
+      :show="show"
+      @start="startTyping"
+      @cancel="cancel"
+      @openProblemSelect="openProblemSelect"
+    >
+      <nuxt-child :back-url="backUrl" />
+    </typing-menu-panel>
+  </div>
 </template>
 
 <script>

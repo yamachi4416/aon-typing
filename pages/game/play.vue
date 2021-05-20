@@ -50,6 +50,13 @@ export default {
     CountDown,
   },
 
+  props: {
+    backUrl: {
+      type: String,
+      default: '',
+    },
+  },
+
   data() {
     return {
       setting: { ...this.$store.getters['typingSetting/setting'] },
@@ -118,12 +125,13 @@ export default {
       return this.typing.cancel()
     },
 
-    retry() {
-      this.startTyping()
+    async retry() {
+      this.problem.reset()
+      await this.startTyping()
     },
 
     async nextProblem() {
-      this.problem.next()
+      this.problem.continue()
       await this.startTyping()
     },
 

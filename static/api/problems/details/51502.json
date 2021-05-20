@@ -5,19 +5,19 @@
   "skip": true,
   "tags": [
     {
-      "id": "00004",
+      "id": "00005",
       "name": "日本語"
     },
     {
-      "id": "00009",
+      "id": "00011",
       "name": "青空文庫"
     },
     {
-      "id": "00010",
+      "id": "00012",
       "name": "日本文学"
     },
     {
-      "id": "00012",
+      "id": "00013",
       "name": "物語"
     }
   ],
@@ -67,7 +67,7 @@
     {
       "info": "なにか材料を探しにいったのでしょう、しばらくすると、またもどってきました。",
       "info2": "なにかざいりょうをさがしにいったのでしょう、しばらくすると、またもどってきました。",
-      "word": "nanikazairilyouwosagasiniittanodesyou,sibarakusuruto,matamodottekimasita."
+      "word": "nanikazairyouwosagasiniittanodesyou,sibarakusuruto,matamodottekimasita."
     },
     {
       "info": "そして、同じようなことをうまずに繰り返していました。「このはち一ぴきだけだろうか。」",
@@ -132,7 +132,7 @@
     {
       "info": "なんと並々ならぬ心遣いと、努力が、その巣に傾けられていることか。",
       "info2": "なんとなみなみならぬこころづかいと、どりょくが、そのすにかたむけられていることか。",
-      "word": "nantonaminaminaranukokorodukaito,dorilyokuga,sonosunikatamukerareteirukotoka."
+      "word": "nantonaminaminaranukokorodukaito,doryokuga,sonosunikatamukerareteirukotoka."
     },
     {
       "info": "たとえば、雨風に吹かれても容易に折れそうもない、じょうぶな枝が選ばれていました。",

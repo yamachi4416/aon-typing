@@ -1,10 +1,10 @@
-export class TypingWordState {
+export class TypingGameWordState {
   constructor(word) {
     this.word = word || ''
     this._leftWords = []
     this._buffer = []
     this._currentWords = []
-    this._rightWords = Array.from(this.word)
+    this._rightWords = Array.from(word || '')
   }
 
   get buffer() {
@@ -54,6 +54,14 @@ export class TypingWordState {
     return this._currentWords.length === 0 && this._rightWords.length === 0
   }
 
+  get words() {
+    return this.left + this.remaining
+  }
+
+  get remaining() {
+    return this.current + this.right
+  }
+
   push(n = 1) {
     const v = this._rightWords.splice(0, n)
     if (v.length) {
@@ -101,7 +109,7 @@ export class TypingWordState {
   }
 }
 
-export class TypingInfoState extends TypingWordState {
+export class TypingGameWordInfoState extends TypingGameWordState {
   constructor(info, word) {
     super(word || '')
     this.info = info
