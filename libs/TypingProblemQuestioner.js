@@ -23,10 +23,10 @@ export class TypingProblemQuestioner {
   }
 
   get hasNext() {
-    return this.words.some((w) => !w.success)
+    return this.words.length > 0
   }
 
-  get totalWordCount() {
+  get totalCharCount() {
     return (
       this.words.reduce((a, w) => a + w.wordState.words.length, 0) +
       this.endWords.reduce((a, w) => a + w.wordState.words.length, 0)
@@ -57,9 +57,8 @@ export class TypingProblemQuestioner {
   }
 
   continue() {
-    const words = this.words.filter((w) => !w.success)
-    words.forEach((w, i) => w.continue(i))
-    this.words = words
+    this.endWords.splice(0)
+    this.words.forEach((w, i) => w.continue(i))
   }
 }
 

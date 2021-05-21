@@ -4,6 +4,11 @@
     viewBox="-1 -1 1001 463"
     xmlns="http://www.w3.org/2000/svg"
   >
+    <line-gauge
+      class="line-gauge"
+      :limit="typing.goalCharCount || typing.totalCharCount || 0"
+      :used="typing.totalTypeCorrect"
+    />
     <foreignObject class="typing-game">
       <div class="wrapper">
         <div class="display-zone">
@@ -69,6 +74,7 @@ import HandMap from '../modules/keyboard/HandMap.vue'
 import CloseCircle from '../parts/CloseCircle.vue'
 import TypingKeyboard from '../modules/keyboard/TypingKeyboard.vue'
 import TimeClock from '../parts/TimeClock.vue'
+import LineGauge from '../parts/LineGauge.vue'
 import JISKeys from '~/libs/JISKeys'
 
 export default {
@@ -79,6 +85,7 @@ export default {
     CloseCircle,
     TypingKeyboard,
     TimeClock,
+    LineGauge,
   },
   props: {
     typing: {
@@ -149,6 +156,10 @@ export default {
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(20px);
+
+  .line-gauge {
+    transform: translate(-1px, -1px);
+  }
 
   .typing-game {
     height: 100%;

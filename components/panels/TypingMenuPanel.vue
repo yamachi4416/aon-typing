@@ -152,7 +152,7 @@ export default {
     ].concat(
       helpAnimals().map(({ start, end, name }) => ({
         name,
-        speed: Math.round(60000 / ((start + end) / 2)),
+        speed: Math.round(60000 / ((start + end - (end - start) / 3) / 2)),
       }))
     )
 

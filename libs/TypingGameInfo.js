@@ -18,7 +18,13 @@ export class TypingGameInfo {
     this.totalTypeCount = game.totalTypeCount
     this.totalTypeMiss = game.totalTypeMiss
     this.totalTypeCorrect = game.totalTypeCorrect
-    this.words = game.words.slice(0)
+    this.endWords = []
+    if (game.problem?.endWords) {
+      this.endWords.push(...game.problem?.endWords)
+    }
+    if (game.problem?.current) {
+      this.endWords.push(game.problem?.current)
+    }
   }
 
   get time() {
@@ -42,7 +48,7 @@ export class TypingGameInfo {
   }
 
   get missKeys() {
-    const sums = this.words
+    const sums = this.endWords
       .reduce((a, w) => a.concat(w.misses), [])
       .reduce((a, w) => {
         a[w] = (a[w] || 0) + 1

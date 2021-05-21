@@ -77,16 +77,12 @@ class TypingGame {
     this._stop = null
   }
 
-  get words() {
-    return this.problem?.words || []
-  }
-
   get current() {
     return this.problem?.current
   }
 
-  get totalWordCount() {
-    return this.problem?.totalWordCount
+  get totalCharCount() {
+    return this.problem?.totalCharCount
   }
 
   _typing({ gamer }) {
