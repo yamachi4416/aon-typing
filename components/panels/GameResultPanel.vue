@@ -58,9 +58,9 @@
                 <div
                   v-for="(k, i) in result.missKeys"
                   :key="`miss-key-${i}`"
-                  class="miss-keys-char"
+                  class="miss-keys-chars-item"
                 >
-                  <code>{{ k.w }}</code>
+                  <span class="miss-keys-chars-item-char">{{ k.w }}</span>
                 </div>
               </div>
             </div>
@@ -166,19 +166,19 @@ export default {
           display: flex;
           align-items: center;
           flex-wrap: wrap;
-        }
 
-        &-char {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 50%;
-          width: 30px;
-          height: 30px;
-          white-space: pre;
-          padding: 5px;
-          background: #333;
-          color: #fff;
+          &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            white-space: pre;
+            padding: 5px;
+            background: #333;
+            color: #fff;
+          }
         }
       }
     }

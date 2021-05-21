@@ -47,7 +47,11 @@
               />
             </div>
             <div class="display-zone-info-right">
-              <close-circle class="close-circle" @click="cancel" />
+              <close-circle
+                class="close-circle"
+                tabindex="-1"
+                @click="cancel"
+              />
             </div>
           </div>
         </div>

@@ -114,6 +114,7 @@ export default {
   }
 
   &-center {
+    cursor: pointer;
     fill: transparent;
   }
 

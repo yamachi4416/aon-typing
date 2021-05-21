@@ -1,6 +1,10 @@
 <template>
   <span class="cancel">
-    <button class="cancel-button" @click="$emit('click')"></button>
+    <button
+      class="cancel-button"
+      v-bind="$attrs"
+      @click="$emit('click')"
+    ></button>
   </span>
 </template>
 

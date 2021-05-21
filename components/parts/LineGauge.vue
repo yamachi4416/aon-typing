@@ -32,7 +32,11 @@ export default {
   },
   computed: {
     usedWidth() {
-      return Math.round((this.used / this.limit) * this.width)
+      if (this.limit) {
+        return Math.round((this.used / this.limit) * this.width)
+      } else {
+        return 0
+      }
     },
   },
 }
