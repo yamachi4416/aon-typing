@@ -18,7 +18,20 @@ const wait = (time) => {
   })
 }
 
+const getScrollContainer = (node) => {
+  if (node == null) {
+    return null
+  }
+
+  if (node.scrollHeight > node.clientHeight) {
+    return node
+  } else {
+    return getScrollContainer(node.parentNode)
+  }
+}
+
 export default {
   countDown,
   wait,
+  getScrollContainer,
 }

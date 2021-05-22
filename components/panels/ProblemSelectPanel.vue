@@ -5,40 +5,25 @@
       title="タイピング問題の選択"
       @close="$emit('cancel')"
     >
-      <div class="problem-list">
-        <ol class="problem row">
-          <li
-            v-for="(p, i) in problems"
-            :key="i"
-            class="problem-item col-s-12 col-m-6 col-4"
-          >
-            <para-section class="problem-item-inner">
-              <problem-list-item :item="p">
-                <template #footer>
-                  <div class="buttons">
-                    <button class="button" @click="selectProblem(p)">
-                      選択する
-                    </button>
-                  </div>
-                </template>
-              </problem-list-item>
-            </para-section>
-          </li>
-        </ol>
-      </div>
+      <problem-list v-slot="{ problem }" :problems="problems">
+        <div class="buttons">
+          <button class="button" @click="selectProblem(problem)">
+            選択する
+          </button>
+        </div>
+      </problem-list>
     </modal-content>
   </modal-panel>
 </template>
 
 <script>
 import { mapMutations } from 'vuex'
-import ProblemListItem from '../modules/problems/ProblemListItem.vue'
+import ProblemList from '../modules/problems/ProblemList.vue'
 import ModalContent from '../parts/ModalContent.vue'
 import ModalPanel from '../parts/ModalPanel.vue'
-import ParaSection from '../parts/ParaSection.vue'
 
 export default {
-  components: { ModalPanel, ModalContent, ParaSection, ProblemListItem },
+  components: { ModalPanel, ModalContent, ProblemList },
   props: {
     show: {
       type: Boolean,
