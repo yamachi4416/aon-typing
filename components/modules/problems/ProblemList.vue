@@ -73,14 +73,8 @@ export default {
     },
   },
   watch: {
-    '$route.query.page'(p) {
-      Object.assign(this, this.pageParam(p))
-      if (!p) {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        })
-      }
+    '$route.query.page'(page) {
+      Object.assign(this, this.pageParam(page))
     },
   },
   methods: {
@@ -93,7 +87,8 @@ export default {
       }
     },
     changePage(page) {
-      this.$router.replace({ query: { page } })
+      const query = { ...this.$route.query, page }
+      this.$router.replace({ query })
     },
     selectTag(tagId) {
       this.$emit('tag', tagId)

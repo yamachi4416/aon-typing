@@ -191,16 +191,19 @@ const main = async () => {
   page.links = [{ site: '青空文庫', name: '図書カード', link }]
 
   const max = 40
-  page.words = splitWords(
-    page.words.slice(0),
-    /(?=「)|(?<=(?<!。)」)|(?<=。(?!」))/,
-    max
-  )
-  page.words = splitWords(
-    page.words.slice(0),
-    /(?=「)|(?<=(?<!。)」)|(?<=。(?!」))|(?<=、)/,
-    max + 20
-  )
+
+  if (max > 0) {
+    page.words = splitWords(
+      page.words.slice(0),
+      /(?=「)|(?<=(?<!。)」)|(?<=。(?!」))/,
+      max
+    )
+    page.words = splitWords(
+      page.words.slice(0),
+      /(?=「)|(?<=(?<!。)」)|(?<=。(?!」))|(?<=、)/,
+      max + 20
+    )
+  }
 
   page.words.unshift(
     { info: info.title, info2: info.titleKana },

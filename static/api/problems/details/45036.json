@@ -1,0 +1,90 @@
+{
+  "id": "45036",
+  "title": "稲かけ（山村暮鳥）",
+  "type": "japanese",
+  "skip": false,
+  "tags": [
+    {
+      "id": "00005",
+      "name": "日本語"
+    },
+    {
+      "id": "00011",
+      "name": "青空文庫"
+    },
+    {
+      "id": "00012",
+      "name": "日本文学"
+    },
+    {
+      "id": "00014",
+      "name": "詩歌"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "稲かけ",
+      "info2": "いねかけ",
+      "word": "inekake"
+    },
+    {
+      "info": "山村 暮鳥",
+      "info2": "やまむら ぼちょう",
+      "word": "yamamura botyou"
+    },
+    {
+      "info": "いねかけ",
+      "info2": "いねかけ",
+      "word": "inekake"
+    },
+    {
+      "info": "ゆツさゆさ",
+      "info2": "ゆつさゆさ",
+      "word": "yutusayusa"
+    },
+    {
+      "info": "雀の子どもがあそんでた",
+      "info2": "すずめのこどもがあそんでた",
+      "word": "suzumenokodomogaasondeta"
+    },
+    {
+      "info": "いねかけ",
+      "info2": "いねかけ",
+      "word": "inekake"
+    },
+    {
+      "info": "ゆツさゆさ",
+      "info2": "ゆつさゆさ",
+      "word": "yutusayusa"
+    },
+    {
+      "info": "すずめのこどもが喧嘩した",
+      "info2": "すずめのこどもがけんくわした",
+      "word": "suzumenokodomogakenkuwasita"
+    },
+    {
+      "info": "いねかけ",
+      "info2": "いねかけ",
+      "word": "inekake"
+    },
+    {
+      "info": "ゆツさゆさ",
+      "info2": "ゆつさゆさ",
+      "word": "yutusayusa"
+    },
+    {
+      "info": "すぐまたなかよくしやべつてた",
+      "info2": "すぐまたなかよくしやべつてた",
+      "word": "sugumatanakayokusiyabetuteta"
+    }
+  ],
+  "links": [
+    {
+      "site": "青空文庫",
+      "name": "図書カード",
+      "link": "https://www.aozora.gr.jp/cards/000136/card45036.html"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "id": "00101",
-  "title": "果物の名前を英語で",
+  "title": "Be動詞 その1",
   "type": "english",
   "tags": [
     {
@@ -8,152 +8,76 @@
       "name": "英語"
     },
     {
-      "id": "00002",
-      "name": "英単語"
+      "id": "00016",
+      "name": "英文法"
     },
     {
-      "id": "00003",
-      "name": "たべもの"
+      "id": "00015",
+      "name": "中学1年"
     }
   ],
   "createdAt": "2021-05-31",
   "updatedAt": "2021-05-31",
   "words": [
     {
-      "info": "りんご",
-      "word": "apple"
+      "info": "私は生徒です",
+      "word": "I am a student"
     },
     {
-      "info": "青りんご",
-      "word": "greenapple"
+      "info": "私は男の子です",
+      "word": "I am a boy"
     },
     {
-      "info": "イチゴ",
-      "word": "strawberry"
+      "info": "あなたは私の友達です",
+      "word": "You are my friend"
     },
     {
-      "info": "アボカド",
-      "word": "avocado"
+      "info": "あなたは女の子です",
+      "word": "You are a girl"
     },
     {
-      "info": "オレンジ",
-      "word": "orange"
+      "info": "花子は今大阪にいます",
+      "word": "Hanako is in Osaka now"
     },
     {
-      "info": "木イチゴ",
-      "word": "raspberry"
+      "info": "私のペンは机の上にあります",
+      "word": "My pen is on the desk"
     },
     {
-      "info": "キウィ",
-      "word": "kiwi"
+      "info": "私は東京から来ました",
+      "word": "I'm from Tokyo"
     },
     {
-      "info": "グレープフルーツ",
-      "word": "grapefruit"
+      "info": "私たちは大阪出身です",
+      "word": "We are from Osaka"
     },
     {
-      "info": "ココナッツ",
-      "word": "coconut"
+      "info": "花子は東京出身です",
+      "word": "Hanako is from Tokyo"
     },
     {
-      "info": "さくらんぼ",
-      "word": "cherry"
+      "info": "私は花子です",
+      "word": "I'm Hanako"
     },
     {
-      "info": "パイナップル",
-      "word": "pineapple"
+      "info": "あなたは私たちのお母さんです",
+      "word": "You are our mother"
     },
     {
-      "info": "バナナ",
-      "word": "banana"
+      "info": "これは私の家です",
+      "word": "This is my house"
     },
     {
-      "info": "パパイヤ",
-      "word": "papaya"
+      "info": "私はとても幸せです",
+      "word": "I am very happy"
     },
     {
-      "info": "ドリアン",
-      "word": "durian"
+      "info": "あなたはとても優しいです",
+      "word": "You are very kind"
     },
     {
-      "info": "ぶどう",
-      "word": "grape"
-    },
-    {
-      "info": "プラム",
-      "word": "plum"
-    },
-    {
-      "info": "ブルーベリー",
-      "word": "blueberry"
-    },
-    {
-      "info": "マスカット",
-      "word": "muscat"
-    },
-    {
-      "info": "マスクメロン",
-      "word": "muskmelon"
-    },
-    {
-      "info": "マンゴー",
-      "word": "mango"
-    },
-    {
-      "info": "桃",
-      "word": "peach"
-    },
-    {
-      "info": "ゆず",
-      "word": "yuzu"
-    },
-    {
-      "info": "ライム",
-      "word": "lime"
-    },
-    {
-      "info": "レモン",
-      "word": "lemon"
-    },
-    {
-      "info": "あんず",
-      "word": "apricot"
-    },
-    {
-      "info": "イチジク",
-      "word": "fig"
-    },
-    {
-      "info": "柿",
-      "word": "persimmon"
-    },
-    {
-      "info": "栗",
-      "word": "chestnut"
-    },
-    {
-      "info": "スイカ",
-      "word": "watermelon"
-    },
-    {
-      "info": "梨",
-      "word": "pear"
-    },
-    {
-      "info": "びわ",
-      "word": "loquat"
-    },
-    {
-      "info": "メロン",
-      "word": "Honeydewmelon"
-    },
-    {
-      "info": "みかん",
-      "word": "mandarinorange"
-    },
-    {
-      "info": "ざくろ",
-      "word": "Pomegranate"
+      "info": "あなたの車はかっこいいです",
+      "word": "Your car is cool"
     }
   ]
 }

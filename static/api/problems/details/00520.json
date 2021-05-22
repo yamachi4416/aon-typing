@@ -1,0 +1,383 @@
+{
+  "id": "00520",
+  "title": "花の名前を英語で",
+  "type": "english",
+  "tags": [
+    {
+      "id": "00001",
+      "name": "英語"
+    },
+    {
+      "id": "00002",
+      "name": "英単語"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "アサガオ",
+      "word": "Morning Glory"
+    },
+    {
+      "info": "アザミ",
+      "word": "Japanese thistle"
+    },
+    {
+      "info": "アジサイ",
+      "word": "Hydrangea"
+    },
+    {
+      "info": "アネモネ",
+      "word": "Anemone"
+    },
+    {
+      "info": "アヤメ",
+      "word": "Iris"
+    },
+    {
+      "info": "アロエ",
+      "word": "Aloe"
+    },
+    {
+      "info": "ウメ",
+      "word": "Japanese apricot"
+    },
+    {
+      "info": "オイランソウ",
+      "word": "Phlox"
+    },
+    {
+      "info": "オオハンゴウソウ",
+      "word": "Black-eyed Susan"
+    },
+    {
+      "info": "オシロイバナ",
+      "word": "Four-o'clock"
+    },
+    {
+      "info": "オダマキ",
+      "word": "Columbine"
+    },
+    {
+      "info": "オミナエシ",
+      "word": "Golden lace"
+    },
+    {
+      "info": "カスミソウ",
+      "word": "Baby's breath"
+    },
+    {
+      "info": "カーネーション",
+      "word": "Carnation"
+    },
+    {
+      "info": "ガーベラ",
+      "word": "Gerbera"
+    },
+    {
+      "info": "キキョウ",
+      "word": "Balloon flower"
+    },
+    {
+      "info": "キク",
+      "word": "Chrysanthemum"
+    },
+    {
+      "info": "キンギョソウ",
+      "word": "Snapdragon"
+    },
+    {
+      "info": "キンポウゲ",
+      "word": "Buttercup"
+    },
+    {
+      "info": "キンレンカ",
+      "word": "Nasturtium"
+    },
+    {
+      "info": "クサレダマ",
+      "word": "Lysimachia"
+    },
+    {
+      "info": "クマガイソウ",
+      "word": "Cypripedium japonicum"
+    },
+    {
+      "info": "クリンソウ",
+      "word": "Japanese Primrose"
+    },
+    {
+      "info": "クレマチス",
+      "word": "Clematis"
+    },
+    {
+      "info": "ケイトウ",
+      "word": "Cockscomb"
+    },
+    {
+      "info": "ゲッカビジン",
+      "word": "Dutchman's pipe"
+    },
+    {
+      "info": "コスモス",
+      "word": "Cosmos"
+    },
+    {
+      "info": "コバイケイソウ",
+      "word": "Veratrum stamineum"
+    },
+    {
+      "info": "コマクサ",
+      "word": "Komakusa"
+    },
+    {
+      "info": "コルチカム",
+      "word": "Colchicum"
+    },
+    {
+      "info": "サクラ",
+      "word": "Sakura"
+    },
+    {
+      "info": "シクラメン",
+      "word": "Cyclamen"
+    },
+    {
+      "info": "シバザクラ",
+      "word": "Phlox subulata"
+    },
+    {
+      "info": "シモツケソウ",
+      "word": "Filipendula"
+    },
+    {
+      "info": "シャクナゲ",
+      "word": "Rhododendron"
+    },
+    {
+      "info": "シャクヤク",
+      "word": "Peony"
+    },
+    {
+      "info": "シュウメイギク",
+      "word": "Japanese anemone"
+    },
+    {
+      "info": "シラカシ",
+      "word": "Bamboo-leaf oak"
+    },
+    {
+      "info": "シロタエギク",
+      "word": "Dusty miller"
+    },
+    {
+      "info": "ジャガイモ",
+      "word": "Potato"
+    },
+    {
+      "info": "スイセン",
+      "word": "Daffodil"
+    },
+    {
+      "info": "スイレン",
+      "word": "Water lily"
+    },
+    {
+      "info": "スズラン",
+      "word": "Lily of the valley"
+    },
+    {
+      "info": "ストレリチア",
+      "word": "Bird of paradise"
+    },
+    {
+      "info": "スミレ",
+      "word": "Violet"
+    },
+    {
+      "info": "センニチコウ",
+      "word": "Globe amaranth"
+    },
+    {
+      "info": "ソバ",
+      "word": "Buckwheat"
+    },
+    {
+      "info": "ソメイヨシノ",
+      "word": "Somei-yoshino"
+    },
+    {
+      "info": "タンポポ",
+      "word": "Dandelion"
+    },
+    {
+      "info": "チューリップ",
+      "word": "Tulip"
+    },
+    {
+      "info": "ツツジ",
+      "word": "Azalea"
+    },
+    {
+      "info": "ナデシコ",
+      "word": "Dianthus"
+    },
+    {
+      "info": "ニチニチソウ",
+      "word": "Periwinkle"
+    },
+    {
+      "info": "ニッコウキスゲ",
+      "word": "Zenteika"
+    },
+    {
+      "info": "ネモフィラ",
+      "word": "Nemophila"
+    },
+    {
+      "info": "ハイビスカス",
+      "word": "Hibiscus"
+    },
+    {
+      "info": "ハス",
+      "word": "Lotus"
+    },
+    {
+      "info": "ハナショウブ",
+      "word": "Iris"
+    },
+    {
+      "info": "ハルシャギク",
+      "word": "Coreopsis"
+    },
+    {
+      "info": "バショウ",
+      "word": "Musa basjoo"
+    },
+    {
+      "info": "バラ",
+      "word": "Rose"
+    },
+    {
+      "info": "ヒアシンス",
+      "word": "Hyacinth"
+    },
+    {
+      "info": "ヒガンバナ",
+      "word": "Lycoris"
+    },
+    {
+      "info": "ヒナギク",
+      "word": "Daisy"
+    },
+    {
+      "info": "ヒナゲシ",
+      "word": "Corn poppy"
+    },
+    {
+      "info": "ヒマラヤスギ",
+      "word": "Himalayan cedar"
+    },
+    {
+      "info": "ヒマワリ",
+      "word": "Sunflower"
+    },
+    {
+      "info": "ヒャクニチソウ",
+      "word": "Zinnia"
+    },
+    {
+      "info": "フクジュソウ",
+      "word": "Adonis"
+    },
+    {
+      "info": "フジ",
+      "word": "Wisteria"
+    },
+    {
+      "info": "フリージア",
+      "word": "Freesia"
+    },
+    {
+      "info": "プルメリア",
+      "word": "Plumeria"
+    },
+    {
+      "info": "ヘメロカリス",
+      "word": "Daylily"
+    },
+    {
+      "info": "ヘリコニア",
+      "word": "Heliconia"
+    },
+    {
+      "info": "ベニバナ",
+      "word": "Safflower"
+    },
+    {
+      "info": "ホウセンカ",
+      "word": "Balsam"
+    },
+    {
+      "info": "ポピー",
+      "word": "Shirley poppy"
+    },
+    {
+      "info": "マツバボタン",
+      "word": "Rose moss"
+    },
+    {
+      "info": "マツムシソウ",
+      "word": "Scabiosa japonica"
+    },
+    {
+      "info": "ミズバショウ",
+      "word": "Asian skunk-cabbage"
+    },
+    {
+      "info": "ミヤマキンバイ",
+      "word": "Potentilla matsumurae"
+    },
+    {
+      "info": "ヤグルマギク",
+      "word": "Cornflower"
+    },
+    {
+      "info": "ユウガオ",
+      "word": "Bottle gourd"
+    },
+    {
+      "info": "ユリ",
+      "word": "Lily"
+    },
+    {
+      "info": "ラクウショウ",
+      "word": "Bald Cypress"
+    },
+    {
+      "info": "ラベンダー",
+      "word": "Lavender"
+    },
+    {
+      "info": "ラン",
+      "word": "Orchid"
+    },
+    {
+      "info": "リンドウ",
+      "word": "Gentian"
+    },
+    {
+      "info": "ルピナス",
+      "word": "Lupine"
+    },
+    {
+      "info": "レンゲツツジ",
+      "word": "Japanese azalea"
+    },
+    {
+      "info": "ワスレナグサ",
+      "word": "Forget-me-not"
+    }
+  ]
+}
