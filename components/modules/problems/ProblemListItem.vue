@@ -26,7 +26,7 @@
               v-for="(tag, i) in item.tags"
               :key="`tag-${item.id}-${i}`"
               class="problem-list-item-main-detail-tags-list-item"
-              @click="$emit('tag', tag.id)"
+              @click="$emit('tag', tag)"
             >
               {{ tag.name }}
             </span>

@@ -39,8 +39,11 @@ export default {
       this.setProblemId(problemId)
       this.$router.push({ name: 'game' })
     },
-    selectTag(id) {
-      this.$router.push({ name: 'index-problems-tags-id', params: { id } })
+    selectTag(tag) {
+      this.$router.push({
+        name: 'index-problems-tags-id',
+        params: { id: tag.id },
+      })
     },
   },
 }

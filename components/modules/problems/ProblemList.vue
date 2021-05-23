@@ -3,13 +3,14 @@
     :lists="lists"
     :page="page"
     :max-page="maxPage"
+    :stop-paging="stopPaging"
     @change="changePage"
   >
     <template #default="sp">
       <ol class="problem-list row">
         <li
-          v-for="(p, i) in sp.list"
-          :key="`problem-${p.id}-${i}`"
+          v-for="p in sp.list"
+          :key="`problem-${p.id}`"
           class="problem-list-item col-s-12 col-m-6 col-4"
         >
           <para-section class="problem-list-item-inner">
@@ -49,7 +50,11 @@ export default {
     },
     pageSize: {
       type: Number,
-      default: 30,
+      default: 18,
+    },
+    stopPaging: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
@@ -76,6 +81,9 @@ export default {
     '$route.query.page'(page) {
       Object.assign(this, this.pageParam(page))
     },
+    problems() {
+      this.maxPage = Math.ceil(this.problems.length / this.pageSize)
+    },
   },
   methods: {
     pageParam(p) {
@@ -90,8 +98,8 @@ export default {
       const query = { ...this.$route.query, page }
       this.$router.replace({ query })
     },
-    selectTag(tagId) {
-      this.$emit('tag', tagId)
+    selectTag(tag) {
+      this.$emit('tag', tag)
     },
   },
 }

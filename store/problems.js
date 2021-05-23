@@ -1,7 +1,15 @@
 import problems from '~/static/api/problems.json'
+import tags from '~/static/api/tags.json'
 
 export const state = () => ({
   problems: problems.problems,
+  tags: Object.keys(tags).reduce((a, name) => {
+    a[tags[name].id] = {
+      ...tags[name],
+      name,
+    }
+    return a
+  }, {}),
 })
 
 export const getters = {
@@ -17,6 +25,9 @@ export const getters = {
       }
       return null
     }
+  },
+  tags(state) {
+    return state.tags
   },
 }
 

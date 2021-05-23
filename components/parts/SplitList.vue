@@ -39,6 +39,10 @@ export default {
       type: String,
       default: 'div',
     },
+    stopPaging: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -49,6 +53,9 @@ export default {
     const prev = this.$refs.prev
     const next = this.$refs.next
     const obs = new IntersectionObserver(async (entries) => {
+      if (this.stopPaging) {
+        return
+      }
       const entry = entries[0]
       if (entry.isIntersecting) {
         if (entry.target === prev) {

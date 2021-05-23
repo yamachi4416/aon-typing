@@ -37,11 +37,18 @@ export default {
 
   .contents {
     max-height: 100%;
-    max-width: 100%;
-    &::after {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &::after,
+    &::before {
       content: ' ';
       display: block;
-      height: 10px;
+      flex: 1;
       width: 100%;
     }
   }

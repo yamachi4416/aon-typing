@@ -257,8 +257,7 @@ export default {
 
 <style lang="scss" scoped>
 .typing-menu-panel {
-  width: 100%;
-  max-width: 1000px;
+  max-width: 100%;
 
   &-content {
     padding: 5px 0;

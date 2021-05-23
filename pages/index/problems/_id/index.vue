@@ -3,9 +3,49 @@
     <para-section>
       <div class="detail-header">
         <div class="detail-info">
-          <div class="detail-info-id">No.{{ detail.id }}</div>
+          <div class="detail-info-id">
+            <span>No.{{ detail.id }}</span>
+          </div>
           <h2 class="detail-info-title">{{ detail.title }}</h2>
-          <div class="detail-info-type">{{ detail.type }}</div>
+          <div class="detail-info-info">
+            <dl class="detail-info-info-type">
+              <dt>タイプ</dt>
+              <dd>{{ detail.type }}</dd>
+            </dl>
+            <dl>
+              <dt>タグ</dt>
+              <dd class="detail-info-info-tags">
+                <div class="detail-info-info-tags-list">
+                  <span
+                    v-for="(tag, i) in detail.tags"
+                    :key="`tag-${i}`"
+                    class="detail-info-info-tags-list-item"
+                    @click="selectTag(tag.id)"
+                  >
+                    {{ tag.name }}
+                  </span>
+                </div>
+              </dd>
+            </dl>
+            <dl
+              v-if="detail.links && detail.links.length"
+              class="detail-info-info-links"
+            >
+              <dt>引用元サイト</dt>
+              <dd>
+                <ul>
+                  <li
+                    v-for="(link, i) in detail.links"
+                    :key="`detail-link-${i}`"
+                  >
+                    <a :href="link.link" target="_blank"
+                      >{{ link.site }}：{{ link.name }}</a
+                    >
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
         </div>
         <div class="detail-actions">
           <div class="buttons">
@@ -48,7 +88,7 @@ export default {
   beforeRouteEnter(to, from, next) {
     next((vm) => {
       if (from.name) {
-        vm.back = true
+        vm.back = from.name
       }
     })
   },
@@ -62,7 +102,7 @@ export default {
   },
   data() {
     return {
-      back: this.back || false,
+      back: this.back || '',
     }
   },
   head() {
@@ -87,6 +127,9 @@ export default {
       this.setProblemId(this.detail.id)
       this.$router.push({ name: 'game' })
     },
+    selectTag(id) {
+      this.$router.push({ name: 'index-problems-tags-id', params: { id } })
+    },
   },
 }
 </script>
@@ -103,12 +146,62 @@ export default {
 
     .detail-info {
       &-type,
-      &-id {
+      &-id,
+      &-info {
         padding: 5px;
+      }
+
+      &-info {
+        font-size: 0.9em;
+
+        &-links {
+          ul {
+            list-style: none;
+          }
+        }
+
+        & > * {
+          & > dt {
+            padding: 5px 0px;
+            color: #666;
+          }
+          & > dd {
+            padding: 5px;
+          }
+          @include __media_l {
+            display: flex;
+            & > dt {
+              white-space: nowrap;
+              max-width: 8em;
+            }
+            & > * {
+              flex: 1;
+            }
+          }
+        }
+      }
+
+      .detail-info-info-tags {
+        &-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          &-item {
+            cursor: pointer;
+            font-size: 0.9em;
+            background: rgba(255, 153, 0, 1);
+            color: #fff;
+            padding: 0 8px;
+            border-radius: 10px;
+            line-height: 1.8em;
+            text-decoration: none;
+          }
+        }
       }
     }
 
     .detail-actions {
+      padding-top: 5px;
       .buttons {
         display: flex;
         justify-content: flex-start;
