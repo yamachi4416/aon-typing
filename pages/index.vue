@@ -4,17 +4,13 @@
       <div class="basic-page-menu">
         <nav class="basic-page-menu-content">
           <ul>
-            <li>
-              <nuxt-link :to="{ name: 'game' }">プレイする</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/problems">問題いちらん</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link :to="{ name: 'index-about' }">サイト説明</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/">その他</nuxt-link>
+            <li v-for="(menu, i) in menus" :key="`menu-${i}`">
+              <nuxt-link
+                v-if="$route.name !== menu.route.name"
+                :to="menu.route"
+                v-text="menu.label"
+              />
+              <a v-else @click="scrollTop(menu.route)" v-text="menu.label" />
             </li>
           </ul>
         </nav>
@@ -47,6 +43,28 @@
 import BasicHeader from '~/components/layout/BasicHeader.vue'
 export default {
   components: { BasicHeader },
+  data() {
+    return {
+      menus: [
+        { route: { name: 'game' }, label: 'プレイする' },
+        { route: { name: 'index-problems' }, label: '問題いちらん' },
+        { route: { name: 'index-about' }, label: 'サイト説明' },
+        { route: { name: 'index' }, label: 'その他' },
+      ],
+    }
+  },
+  methods: {
+    async scrollTop(query) {
+      if (Object.keys(this.$route.query).length) {
+        this.$router.push(query)
+        await this.$nextTick()
+      }
+      document.scrollingElement.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      })
+    },
+  },
 }
 </script>
 
@@ -80,6 +98,7 @@ export default {
           text-align: center;
 
           a {
+            cursor: pointer;
             color: #666;
             text-decoration: none;
             white-space: nowrap;
