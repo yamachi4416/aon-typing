@@ -1,0 +1,250 @@
+{
+  "id": "8051502",
+  "title": "ある夏の日のこと（小川未明）",
+  "type": "japanese",
+  "skip": true,
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00015",
+      "name": "青空文庫"
+    },
+    {
+      "id": "00016",
+      "name": "日本文学"
+    },
+    {
+      "id": "00017",
+      "name": "物語"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "ある夏の日のこと",
+      "info2": "あるなつのひのこと",
+      "word": "arunatunohinokoto"
+    },
+    {
+      "info": "小川 未明",
+      "info2": "おがわ みめい",
+      "word": "ogawa mimei"
+    },
+    {
+      "info": "姉さんは、庭前のつつじの枝に、はちの巣を見つけました。",
+      "info2": "ねえさんは、にわさきのつつじのえだに、はちのすをみつけました。",
+      "word": "neesanha,niwasakinotutuzinoedani,hatinosuwomitukemasita."
+    },
+    {
+      "info": "「まあ、こんなところへ巣を造って、あぶないから落としてしまおうか。」",
+      "info2": "「まあ、こんなところへすをつくって、あぶないからおとしてしまおうか。」",
+      "word": "[maa,konnnatokorohesuwotukutte,abunaikaraotositesimaouka.]"
+    },
+    {
+      "info": "と、ほうきを持った手を抑えてためらいましたが、「さわらなければ、なんにもしないでしょう。」",
+      "info2": "と、ほうきをもったてをおさえてためらいましたが、「さわらなければ、なんにもしないでしょう。」",
+      "word": "to,houkiwomottatewoosaetetameraimasitaga,[sawaranakereba,nannnimosinaidesyou.]"
+    },
+    {
+      "info": "せっかく造りかけた巣をこわすのもかわいそうだと考え直して、しばらく立ち止まって、一ぴきの親ばちが、",
+      "info2": "せっかくつくりかけたすをこわすのもかわいそうだとかんがえなおして、しばらくたちどまって、１ぴきのおやばちが、",
+      "word": "sekkakutukurikaketasuwokowasunomokawaisoudatokangaenaosite,sibarakutatidomatte,1pikinooyabatiga,"
+    },
+    {
+      "info": "わき見もせず、熱心に小さな口で、だんだんと大きくしようと、固めていくのをながめていました。",
+      "info2": "わきみもせず、ねっしんにちいさなくちで、だんだんとおおきくしようと、かためていくのをながめていました。",
+      "word": "wakimimosezu,nessinnnitiisanakutide,dandantoookikusiyouto,katameteikunowonagameteimasita."
+    },
+    {
+      "info": "そのうちに、はちはどこへか飛び去りました。",
+      "info2": "そのうちに、はちはどこへかとびさりました。",
+      "word": "sonoutini,hatihadokohekatobisarimasita."
+    },
+    {
+      "info": "なにか材料を探しにいったのでしょう、しばらくすると、またもどってきました。",
+      "info2": "なにかざいりょうをさがしにいったのでしょう、しばらくすると、またもどってきました。",
+      "word": "nanikazairyouwosagasiniittanodesyou,sibarakusuruto,matamodottekimasita."
+    },
+    {
+      "info": "そして、同じようなことをうまずに繰り返していました。「このはち一ぴきだけだろうか。」",
+      "info2": "そして、おなじようなことをうまずにくりかえしていました。「このはち１ぴきだけだろうか。」",
+      "word": "sosite,onaziyounakotowoumazunikurikaesiteimasita.[konohati1pikidakedarouka.]"
+    },
+    {
+      "info": "彼女は、同じ一ぴきのはちが、往ったり返ったりして、働いているのしか見なかったからです。",
+      "info2": "かのじょは、おなじ１ぴきのはちが、いったりかえったりして、はたらいているのしかみなかったからです。",
+      "word": "kanojyoha,onazi1pikinohatiga,ittarikaettarisite,hataraiteirunosikaminakattakaradesu."
+    },
+    {
+      "info": "「勇ちゃんに、だまっていよう。」見つけたら、きっと巣を取るであろうと思いました。",
+      "info2": "「ゆうちゃんに、だまっていよう。」みつけたら、きっとすをとるであろうとおもいました。",
+      "word": "[yuutyannni,damatteiyou.]mituketara,kittosuwotorudearoutoomoimasita."
+    },
+    {
+      "info": "姉さんは、すわって、仕事をしながら、ときどき思い出したように、日の当たる庭前を見ました。",
+      "info2": "ねえさんは、すわって、しごとをしながら、ときどきおもいだしたように、ひのあたるにわさきをみました。",
+      "word": "neesanha,suwatte,sigotowosinagara,tokidokiomoidasitayouni,hinoataruniwasakiwomimasita."
+    },
+    {
+      "info": "葉の黒ずんだざくろの木に、真っ赤な花が、点々と火のともるように咲いていました。",
+      "info2": "はのくろずんだざくろのきに、まっかなはなが、てんてんとひのともるようにさいていました。",
+      "word": "hanokurozundazakuronokini,makkanahanaga,tententohinotomoruyounisaiteimasita."
+    },
+    {
+      "info": "そして、水盤の水に浮いたすいれんの葉に、はちが下りて止まっているのを見ました。",
+      "info2": "そして、すいばんのみずにういたすいれんのはに、はちがおりてとまっているのをみました。",
+      "word": "sosite,suibannnomizuniuitasuirennnohani,hatigaoritetomatteirunowomimasita."
+    },
+    {
+      "info": "「あのはちは、さっきのはちかしらん。」",
+      "info2": "「あのはちは、さっきのはちかしらん。」",
+      "word": "[anohatiha,sakkinohatikasiran.]"
+    },
+    {
+      "info": "目をはなさずに見ていると、はちは、しばらくたって、つつじの枝の方へ飛んでいきました。",
+      "info2": "めをはなさずにみていると、はちは、しばらくたって、つつじのえだのほうへとんでいきました。",
+      "word": "mewohanasazunimiteiruto,hatiha,sibarakutatte,tutuzinoedanohouhetondeikimasita."
+    },
+    {
+      "info": "「やはりそうだわ。水を飲みにきたんでしょう。」",
+      "info2": "「やはりそうだわ。みずをのみにきたんでしょう。」",
+      "word": "[yaharisoudawa.mizuwonominikitandesyou.]"
+    },
+    {
+      "info": "翌朝、庭をそうじするときに、姉さんは、はちがどうしているだろうとわざわざつつじの木のところへいって、巣をのぞいてみました。",
+      "info2": "よくあさ、にわをそうじするときに、ねえさんは、はちがどうしているだろうとわざわざつつじのきのところへいって、すをのぞいてみました。",
+      "word": "yokuasa,niwawosouzisurutokini,neesanha,hatigadousiteirudaroutowazawazatutuzinokinotokoroheitte,suwonozoitemimasita."
+    },
+    {
+      "info": "そこには、昨日の親ばちが、やはり一ぴきで、いっしょうけんめいに巣を大きくしようとしていました。",
+      "info2": "そこには、きのうのおやばちが、やはり１ぴきで、いっしょうけんめいにすをおおきくしようとしていました。",
+      "word": "sokoniha,kinounooyabatiga,yahari1pikide,issyoukenmeinisuwoookikusiyoutositeimasita."
+    },
+    {
+      "info": "彼女は、はじめてそのとき、一ぴきのはちの力で造られた巣に注意を向けたのです。",
+      "info2": "かのじょは、はじめてそのとき、１ぴきのはちのちからでつくられたすにちゅういをむけたのです。",
+      "word": "kanojyoha,hazimetesonotoki,1pikinohatinotikaradetukuraretasunityuuiwomuketanodesu."
+    },
+    {
+      "info": "なんと並々ならぬ心遣いと、努力が、その巣に傾けられていることか。",
+      "info2": "なんとなみなみならぬこころづかいと、どりょくが、そのすにかたむけられていることか。",
+      "word": "nantonaminaminaranukokorodukaito,doryokuga,sonosunikatamukerareteirukotoka."
+    },
+    {
+      "info": "たとえば、雨風に吹かれても容易に折れそうもない、じょうぶな枝が選ばれていました。",
+      "info2": "たとえば、あめかぜにふかれてもよういにおれそうもない、じょうぶなえだがえらばれていました。",
+      "word": "tatoeba,amekazenihukaretemoyouinioresoumonai,jyoubunaedagaerabareteimasita."
+    },
+    {
+      "info": "また、巣のつけ根は、さわっても落ちないように、強そうに黒光りがしていました。",
+      "info2": "また、すのつけねは、さわってもおちないように、つよそうにくろびかりがしていました。",
+      "word": "mata,sunotukeneha,sawattemootinaiyouni,tuyosounikurobikarigasiteimasita."
+    },
+    {
+      "info": "小さなはちにどうして、こんな智慧があるかと不思議に思われたほどでした。",
+      "info2": "ちいさなはちにどうして、こんなちえがあるかとふしぎにおもわれたほどでした。",
+      "word": "tiisanahatinidousite,konnnatiegaarukatohusiginiomowaretahododesita."
+    },
+    {
+      "info": "「そうだ、これを弟に見せてやろう。",
+      "info2": "「そうだ、これをおとうとにみせてやろう。",
+      "word": "[souda,korewootoutonimiseteyarou."
+    },
+    {
+      "info": "そして、りこうなはちが、どうして巣を造り、また子供を育てるのに苦心するかを教えてやろう。",
+      "info2": "そして、りこうなはちが、どうしてすをつくり、またこどもをそだてるのにくしんするかをおしえてやろう。",
+      "word": "sosite,rikounahatiga,dousitesuwotukuri,matakodomowosodaterunonikusinsurukawoosieteyarou."
+    },
+    {
+      "info": "そうすれば弟は、ここに巣のあることを知っても、けっして落とすことはあるまい。」と、考えたのでした。",
+      "info2": "そうすればおとうとは、ここにすのあることをしっても、けっしておとすことはあるまい。」と、かんがえたのでした。",
+      "word": "sousurebaotoutoha,kokonisunoarukotowosittemo,kessiteotosukotohaarumai.]to,kangaetanodesita."
+    },
+    {
+      "info": "午後になって勇ちゃんは、学校から帰ると、庭に出て、一人で遊んでいました。",
+      "info2": "ごごになってゆうちゃんは、がっこうからかえると、にわにでて、ひとりであそんでいました。",
+      "word": "gogoninatteyuutyanha,gakkoukarakaeruto,niwanidete,hitorideasondeimasita."
+    },
+    {
+      "info": "「勇ちゃん、はちの巣があってよ。」彼女は、弟の顔を見ました。",
+      "info2": "「ゆうちゃん、はちのすがあってよ。」かのじょは、おとうとのかおをみました。",
+      "word": "[yuutyan,hatinosugaatteyo.]kanojyoha,otoutonokaowomimasita."
+    },
+    {
+      "info": "「ああ、知っている。」「え、知っているの。」弟が、どうして、それを落とさなかったろうと疑われました。",
+      "info2": "「ああ、しっている。」「え、しっているの。」おとうとが、どうして、それをおとさなかったろうとうたがわれました。",
+      "word": "[aa,sitteiru.][e,sitteiruno.]otoutoga,dousite,sorewootosanakattaroutoutagawaremasita."
+    },
+    {
+      "info": "「姉さん、つつじの木だろう。お母さんばちがひとりで巣を造っているのだよ。」「ええ、そうなの。」",
+      "info2": "「ねえさん、つつじのきだろう。おかあさんばちがひとりですをつくっているのだよ。」「ええ、そうなの。」",
+      "word": "[neesan,tutuzinokidarou.okaasanbatigahitoridesuwotukutteirunodayo.][ee,sounano.]"
+    },
+    {
+      "info": "「このあいだから見ると、だいぶ大きくなった。あの穴の中に子供がいるんだね。",
+      "info2": "「このあいだからみると、だいぶおおきくなった。あのあなのなかにこどもがいるんだね。",
+      "word": "[konoaidakaramiruto,daibuookikunatta.anoananonakanikodomogairundane."
+    },
+    {
+      "info": "暑いときは、水盤の水を含んでいって、巣の上を冷やしているよ。」",
+      "info2": "あついときは、すいばんのみずをふくんでいって、すのうえをひやしているよ。」",
+      "word": "atuitokiha,suibannnomizuwohukundeitte,sunouewohiyasiteiruyo.]"
+    },
+    {
+      "info": "「まあ。」そんなくわしいことまで、いつ弟は観察していたのだろうとびっくりしました。",
+      "info2": "「まあ。」そんなくわしいことまで、いつおとうとはかんさつしていたのだろうとびっくりしました。",
+      "word": "[maa.]sonnnakuwasiikotomade,ituotoutohakansatusiteitanodaroutobikkurisimasita."
+    },
+    {
+      "info": "しかし、姉さんは、弟が、どんなにそのはちをかわいがっているかを、まだ知らなかったのです。",
+      "info2": "しかし、ねえさんは、おとうとが、どんなにそのはちをかわいがっているかを、まだしらなかったのです。",
+      "word": "sikasi,neesanha,otoutoga,donnnanisonohatiwokawaigatteirukawo,madasiranakattanodesu."
+    },
+    {
+      "info": "「君、はちの子を持っていくと、ほんとうによく釣れるよ。」",
+      "info2": "「きみ、はちのこをもっていくと、ほんとうによくつれるよ。」",
+      "word": "[kimi,hatinokowomotteikuto,hontouniyokutureruyo.]"
+    },
+    {
+      "info": "子供たちは、日課のように、みんなで川へ釣りに出かけました。",
+      "info2": "こどもたちは、にっかのように、みんなでかわへつりにでかけました。",
+      "word": "kodomotatiha,nikkanoyouni,minnnadekawaheturinidekakemasita."
+    },
+    {
+      "info": "彼らは、血眼になって、はちの巣をさがしていたのです。",
+      "info2": "かれらは、ちまなこになって、はちのすをさがしていたのです。",
+      "word": "kareraha,timanakoninatte,hatinosuwosagasiteitanodesu."
+    },
+    {
+      "info": "勇ちゃんは、その話を聞くたびに、庭のはちの巣を目に浮かべました。",
+      "info2": "ゆうちゃんは、そのはなしをきくたびに、にわのはちのすをめにうかべました。",
+      "word": "yuutyanha,sonohanasiwokikutabini,niwanohatinosuwomeniukabemasita."
+    },
+    {
+      "info": "このごろ母ばちの片方の羽がすこし破れているのを考えると、胸が痛くなるのを感じました。",
+      "info2": "このごろははばちのかたほうのはねがすこしやぶれているのをかんがえると、むねがいたくなるのをかんじました。",
+      "word": "konogorohahabatinokatahounohanegasukosiyabureteirunowokangaeruto,munegaitakunarunowokanzimasita."
+    },
+    {
+      "info": "ほかの子供は、どこからか、はちの子をさがして持っていくことがあったが、",
+      "info2": "ほかのこどもは、どこからか、はちのこをさがしてもっていくことがあったが、",
+      "word": "hokanokodomoha,dokokaraka,hatinokowosagasitemotteikukotogaattaga,"
+    },
+    {
+      "info": "勇ちゃんだけは、いつもうどん粉の餌を造って、釣りに出かけたのでした。",
+      "info2": "ゆうちゃんだけは、いつもうどんこのえさをつくって、つりにでかけたのでした。",
+      "word": "yuutyandakeha,itumoudonkonoesawotukutte,turinidekaketanodesita."
+    }
+  ],
+  "links": [
+    {
+      "site": "青空文庫",
+      "name": "図書カード",
+      "link": "https://www.aozora.gr.jp/cards/001475/card51502.html"
+    }
+  ]
+}

@@ -9,6 +9,8 @@ import jaChars from '../libs/TypingJapaneseChars.mjs'
 
 const normalizeMap = {
   一: '１',
+  二: '２',
+  三: '３',
   '…': '...',
 }
 
@@ -17,6 +19,13 @@ const normalizeKana = (text) => {
   return Array.from(hira)
     .map((s) => normalizeMap[s] || s)
     .join('')
+    .replace(/ヽ/g, (c, i, a) => {
+      let j = 1
+      while (a[i - j] === c) {
+        j--
+      }
+      return a[i - j]
+    })
 }
 
 const httpGet = async (url) => {
@@ -110,8 +119,11 @@ const fetchDocument = async (url) => {
         .map((r) => r.textContent)
         .join('')
       word.info += rb
-      word.info2 += rt
-    } else if (node.nodeName === '#text') {
+      word.info2 += normalizeKana(rt)
+    } else if (node) {
+      if (node.classList && node.classList.contains('notes')) {
+        return
+      }
       const text = node.textContent.trimStart()
       if (text) {
         word.info += text
@@ -183,25 +195,26 @@ const main = async () => {
     cardUrl = new URL(args[1])
   }
 
+  const wordMax = ~~(process.env.WORD_MAX || 40)
+
   const link = cardUrl.href
   const info = await fetchCard(link)
   const page = await fetchDocument(info.dlUrl)
 
   page.id = path.basename(cardUrl.pathname, '.html').replace('card', '')
+  page.id = '80' + page.id.padStart(5, '0')
   page.links = [{ site: '青空文庫', name: '図書カード', link }]
 
-  const max = 40
-
-  if (max > 0) {
+  if (wordMax > 0) {
     page.words = splitWords(
       page.words.slice(0),
       /(?=「)|(?<=(?<!。)」)|(?<=。(?!」))/,
-      max
+      wordMax
     )
     page.words = splitWords(
       page.words.slice(0),
       /(?=「)|(?<=(?<!。)」)|(?<=。(?!」))|(?<=、)/,
-      max + 20
+      wordMax + 20
     )
   }
 

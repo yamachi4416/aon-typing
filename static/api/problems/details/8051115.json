@@ -1,0 +1,110 @@
+{
+  "id": "8051115",
+  "title": "赤い鳥（小川未明）",
+  "type": "japanese",
+  "skip": false,
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00015",
+      "name": "青空文庫"
+    },
+    {
+      "id": "00016",
+      "name": "日本文学"
+    },
+    {
+      "id": "00018",
+      "name": "詩歌"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "赤い鳥",
+      "info2": "あかいとり",
+      "word": "akaitori"
+    },
+    {
+      "info": "小川 未明",
+      "info2": "おがわ みめい",
+      "word": "ogawa mimei"
+    },
+    {
+      "info": "鳥屋の前に立ったらば",
+      "info2": "とりやのまえにたったらば",
+      "word": "toriyanomaenitattaraba"
+    },
+    {
+      "info": "赤い鳥がないていた。",
+      "info2": "あかいとりがないていた。",
+      "word": "akaitoriganaiteita."
+    },
+    {
+      "info": "私は姉さんを思い出す。",
+      "info2": "わたしはねえさんをおもいだす。",
+      "word": "watasihaneesanwoomoidasu."
+    },
+    {
+      "info": "電車や汽車の通ってる",
+      "info2": "でんしゃやきしゃのとおってる",
+      "word": "densyayakisyanotootteru"
+    },
+    {
+      "info": "町に住んでる姉さんが",
+      "info2": "まちにすんでるねえさんが",
+      "word": "matinisunderuneesanga"
+    },
+    {
+      "info": "ほんとに恋しい、なつかしい。",
+      "info2": "ほんとにこいしい、なつかしい。",
+      "word": "hontonikoisii,natukasii."
+    },
+    {
+      "info": "もう夕方か、日がかげる。",
+      "info2": "もうゆうがたか、ひがかげる。",
+      "word": "mouyuugataka,higakageru."
+    },
+    {
+      "info": "村の方からガタ馬車が",
+      "info2": "むらのほうからがたばしゃが",
+      "word": "muranohoukaragatabasyaga"
+    },
+    {
+      "info": "らっぱを吹いて駆けてくる。",
+      "info2": "らっぱをふいてかけてくる。",
+      "word": "rappawohuitekaketekuru."
+    },
+    {
+      "info": "鳥屋の前に立ったらば",
+      "info2": "とりやのまえにたったらば",
+      "word": "toriyanomaenitattaraba"
+    },
+    {
+      "info": "赤い鳥がないていた。",
+      "info2": "あかいとりがないていた。",
+      "word": "akaitoriganaiteita."
+    },
+    {
+      "info": "都の方をながめると、",
+      "info2": "みやこのほうをながめると、",
+      "word": "miyakonohouwonagameruto,"
+    },
+    {
+      "info": "黒い煙が上がってる。",
+      "info2": "くろいけむりがあがってる。",
+      "word": "kuroikemurigaagatteru."
+    }
+  ],
+  "links": [
+    {
+      "site": "青空文庫",
+      "name": "図書カード",
+      "link": "https://www.aozora.gr.jp/cards/001475/card51115.html"
+    }
+  ]
+}

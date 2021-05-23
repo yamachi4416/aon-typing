@@ -1,0 +1,205 @@
+{
+  "id": "8046940",
+  "title": "山のコドモ（岡本かの子）",
+  "type": "japanese",
+  "skip": true,
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00015",
+      "name": "青空文庫"
+    },
+    {
+      "id": "00016",
+      "name": "日本文学"
+    },
+    {
+      "id": "00017",
+      "name": "物語"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "山のコドモ",
+      "info2": "やまのこども",
+      "word": "yamanokodomo"
+    },
+    {
+      "info": "岡本 かの子",
+      "info2": "おかもと かのこ",
+      "word": "okamoto kanoko"
+    },
+    {
+      "info": "ヤマキチ　ハ　ヤマオク　ノ　キコリ　ノ　コ　デアリマシタ。",
+      "info2": "やまきち　は　やまおく　の　きこり　の　こ　でありました。",
+      "word": "yamakiti ha yamaoku no kikori no ko dearimasita."
+    },
+    {
+      "info": "チイサイ　トキカラ、ヤマ　ノ　ケモノ　ヤ、トリタチ　ト、ナカヨク　アソンデ　ソダチマシタ。",
+      "info2": "ちいさい　ときから、やま　の　けもの　や、とりたち　と、なかよく　あそんで　そだちました。",
+      "word": "tiisai tokikara,yama no kemono ya,toritati to,nakayoku asonde sodatimasita."
+    },
+    {
+      "info": "アルヒ、ヤマキチ　ノ　トモダチデ、イチワ　ノ　オオキナ　タカ　ガ、ヤマキチ　ヲ　ヒロイ　ツバサ　ニ　ノセ、",
+      "info2": "あるひ、やまきち　の　ともだちで、いちわ　の　おおきな　たか　が、やまきち　を　ひろい　つばさ　に　のせ、",
+      "word": "aruhi,yamakiti no tomodatide,itiwa no ookina taka ga,yamakiti wo hiroi tubasa ni nose,"
+    },
+    {
+      "info": "ヒコウキ　ノ　ヨウニ　ソラ　ヲ　トンデ、シバラク　タカイ　キ　ノ　ウエデ、ヤスミマシタ。",
+      "info2": "ひこうき　の　ように　そら　を　とんで、しばらく　たかい　き　の　うえで、やすみました。",
+      "word": "hikouki no youni sora wo tonde,sibaraku takai ki no uede,yasumimasita."
+    },
+    {
+      "info": "ソノトキ、ハルカ　トオク　ノ　ホウニ、ミドリ　ノ　ミズ　ガ、カギリナク　ヒロク　ツヅイタ　セカイ　ガ　ミエマシタ。",
+      "info2": "そのとき、はるか　とおく　の　ほうに、みどり　の　みず　が、かぎりなく　ひろく　つづいた　せかい　が　みえました。",
+      "word": "sonotoki,haruka tooku no houni,midori no mizu ga,kagirinaku hiroku tuduita sekai ga miemasita."
+    },
+    {
+      "info": "ヤマキチ　ハ、ウマレテ　ハジメテ　コンナ　メズラシイ　ケシキ　ヲ　ミマシタノデ、フシギ　デ　タマリマセン。",
+      "info2": "やまきち　は、うまれて　はじめて　こんな　めずらしい　けしき　を　みましたので、ふしぎ　で　たまりません。",
+      "word": "yamakiti ha,umarete hazimete konnna mezurasii kesiki wo mimasitanode,husigi de tamarimasen."
+    },
+    {
+      "info": "タカ　ニ、アレハ　ドコカ　ト、タズネマシタ。アレハ　ウミ　ト　イウ　ミズ　ノ　セカイダ　ト、タカ　ハ　コタエマシタ。",
+      "info2": "たか　に、あれは　どこか　と、たずねました。あれは　うみ　と　いう　みず　の　せかいだ　と、たか　は　こたえました。",
+      "word": "taka ni,areha dokoka to,tazunemasita.areha umi to iu mizu no sekaida to,taka ha kotaemasita."
+    },
+    {
+      "info": "ソレカラ、アソコニハ、サカナ　ト　イウ　キレイナ　オヨグ　モノ　ガ　イテ、ソレハ、ソレハ、",
+      "info2": "それから、あそこには、さかな　と　いう　きれいな　およぐ　もの　が　いて、それは、それは、",
+      "word": "sorekara,asokoniha,sakana to iu kireina oyogu mono ga ite,soreha,soreha,"
+    },
+    {
+      "info": "オモシロイ　トコロダ　ト　タカ　ハ、ヤマキチ　ヘ　オシエマシタ。",
+      "info2": "おもしろい　ところだ　と　たか　は、やまきち　へ　おしえました。",
+      "word": "omosiroi tokoroda to taka ha,yamakiti he osiemasita."
+    },
+    {
+      "info": "ヤマキチ　ハ、ソノ　ハナシヲ　キイテ、スグニ、ウミ　ト　イウトコロ　ヘ　ユキタクテ　タマラナク　ナリマシタ。",
+      "info2": "やまきち　は、その　はなしを　きいて、すぐに、うみ　と　いうところ　へ　ゆきたくて　たまらなく　なりました。",
+      "word": "yamakiti ha,sono hanasiwo kiite,suguni,umi to iutokoro he yukitakute tamaranaku narimasita."
+    },
+    {
+      "info": "ソシテ、タカ　ニ、ドウカ　アソコヘ　ツレテ　イッテクレ　ト、タノミマシタ。",
+      "info2": "そして、たか　に、どうか　あそこへ　つれて　いってくれ　と、たのみました。",
+      "word": "sosite,taka ni,douka asokohe turete ittekure to,tanomimasita."
+    },
+    {
+      "info": "タカ　モ　トウトウ　コトワリカネテ、ソノママ　ツバサ　ニ　ヤマキチ　ヲ　ノセ、ウミ　ヲ　サシテ　トンデ　ユキマシタ。",
+      "info2": "たか　も　とうとう　ことわりかねて、そのまま　つばさ　に　やまきち　を　のせ、うみ　を　さして　とんで　ゆきました。",
+      "word": "taka mo toutou kotowarikanete,sonomama tubasa ni yamakiti wo nose,umi wo sasite tonde yukimasita."
+    },
+    {
+      "info": "ウミ　ノ　マンナカ　ニ、オオキナ　イワ　ガ　アリマシタ。タカ　ハ、ヤマキチ　ヲ　ソコ　ヘ　オロシ、",
+      "info2": "うみ　の　まんなか　に、おおきな　いわ　が　ありました。たか　は、やまきち　を　そこ　へ　おろし、",
+      "word": "umi no mannnaka ni,ookina iwa ga arimasita.taka ha,yamakiti wo soko he orosi,"
+    },
+    {
+      "info": "シバラク　ソラ　ヲ　トンデカラ、マタ　ヨウス　ヲ　ミニクル　ヤクソク　ヲ　シマシタ。",
+      "info2": "しばらく　そら　を　とんでから、また　ようす　を　みにくる　やくそく　を　しました。",
+      "word": "sibaraku sora wo tondekara,mata yousu wo minikuru yakusoku wo simasita."
+    },
+    {
+      "info": "ヤマキチ　ハ、ソコラニ　タノシソウニ　オヨイデ　イル　サカナ　ニ　イイマシタ。",
+      "info2": "やまきち　は、そこらに　たのしそうに　およいで　いる　さかな　に　いいました。",
+      "word": "yamakiti ha,sokorani tanosisouni oyoide iru sakana ni iimasita."
+    },
+    {
+      "info": "『ミナサン、ボク　ト　アソンデ　クダサイ』ト。",
+      "info2": "『みなさん、ぼく　と　あそんで　ください』と。",
+      "word": "[minasan,boku to asonde kudasai]to."
+    },
+    {
+      "info": "スルト　サカナタチ　ハ、ソレデハ　ココマデ　オヨイデ　キナサイ、ト　ヤマキチ　ニ　イイマス。",
+      "info2": "すると　さかなたち　は、それでは　ここまで　およいで　きなさい、と　やまきち　に　いいます。",
+      "word": "suruto sakanatati ha,soredeha kokomade oyoide kinasai,to yamakiti ni iimasu."
+    },
+    {
+      "info": "ヤマキチ　ハ　コマッテ、ボク　ハ　ヤマニソダッテ　オヨギ　ハ　シラナイ。ト　モウシマス　ト、サカナタチ　ハ、",
+      "info2": "やまきち　は　こまって、ぼく　は　やまにそだって　およぎ　は　しらない。と　もうします　と、さかなたち　は、",
+      "word": "yamakiti ha komatte,boku ha yamanisodatte oyogi ha siranai.to mousimasu to,sakanatati ha,"
+    },
+    {
+      "info": "サモサモ　バカ　ニ　スルヨウニ、ワラッテ　オヨギ　モ　シラナイデ　ウミ　ニ　クルナンテ、",
+      "info2": "さもさも　ばか　に　するように、わらって　およぎ　も　しらないで　うみ　に　くるなんて、",
+      "word": "samosamo baka ni suruyouni,waratte oyogi mo siranaide umi ni kurunante,"
+    },
+    {
+      "info": "キミ　ハ　オオバカサンダ　ト　イッテ　アイテ　ニ　シテ　クレマセンノデ、ヤマキチ　ハ　コンド　ハ　ナミ　ニ　ムカッテ、",
+      "info2": "きみ　は　おおばかさんだ　と　いって　あいて　に　して　くれませんので、やまきち　は　こんど　は　なみ　に　むかって、",
+      "word": "kimi ha oobakasanda to itte aite ni site kuremasennnode,yamakiti ha kondo ha nami ni mukatte,"
+    },
+    {
+      "info": "ボク　ヲ　オヨガセテ　クダサイ　ト　タノミマシタ。スルト　ナミ　ハ、",
+      "info2": "ぼく　を　およがせて　ください　と　たのみました。すると　なみ　は、",
+      "word": "boku wo oyogasete kudasai to tanomimasita.suruto nami ha,"
+    },
+    {
+      "info": "ヤマ　ノ　コドモ　ガ　ウミ　ニ　クルナンテ　ナマイキダ　ト　オコッテ、",
+      "info2": "やま　の　こども　が　うみ　に　くるなんて　なまいきだ　と　おこって、",
+      "word": "yama no kodomo ga umi ni kurunante namaikida to okotte,"
+    },
+    {
+      "info": "ヤマキチ　ヲ　ヒトマキ　マイテ　イワ　ノ　ウエ　ヘ　タタキツケマシタ。",
+      "info2": "やまきち　を　ひとまき　まいて　いわ　の　うえ　へ　たたきつけました。",
+      "word": "yamakiti wo hitomaki maite iwa no ue he tatakitukemasita."
+    },
+    {
+      "info": "ヤマキチ　ハ　イタクテ　オイオイ　ナイテ　イマスト、タカ　ガ　ムカイ　ニ　キマシタノデ、",
+      "info2": "やまきち　は　いたくて　おいおい　ないて　いますと、たか　が　むかい　に　きましたので、",
+      "word": "yamakiti ha itakute oioi naite imasuto,taka ga mukai ni kimasitanode,"
+    },
+    {
+      "info": "イソイデ　ヤマ　ヘ　ツレテ　カエッテ　モライマシタ。ヤマデハ　ヤマキチ　ノ　ナカヨシ　ノ　イロイロ　ノ、",
+      "info2": "いそいで　やま　へ　つれて　かえって　もらいました。やまでは　やまきち　の　なかよし　の　いろいろ　の、",
+      "word": "isoide yama he turete kaette moraimasita.yamadeha yamakiti no nakayosi no iroiro no,"
+    },
+    {
+      "info": "トリ　ヤ　ケモノ　ガ、ヤマキチ　ノ　カエリ　ヲ、タイソウ　ヨロコビマシテ、ウタ　ヲ　ウタウヤラ、",
+      "info2": "とり　や　けもの　が、やまきち　の　かえり　を、たいそう　よろこびまして、うた　を　うたうやら、",
+      "word": "tori ya kemono ga,yamakiti no kaeri wo,taisou yorokobimasite,uta wo utauyara,"
+    },
+    {
+      "info": "オドリ　ヲ　オドルヤラシテ　カンゲイ　シマシタ。ヤマキチ　ハ、ウミ　デ、ヒドイメ　ニ　アッタ　ハナシ　ヲ　シ、",
+      "info2": "おどり　を　おどるやらして　かんげい　しました。やまきち　は、うみ　で、ひどいめ　に　あった　はなし　を　し、",
+      "word": "odori wo odoruyarasite kangei simasita.yamakiti ha,umi de,hidoime ni atta hanasi wo si,"
+    },
+    {
+      "info": "ヤマ　デ　ソダッタ　ジブン　ハ　イツマデモ、ヤマ　デ　キミタチ　ノ　トモダチ　デ　クラス、",
+      "info2": "やま　で　そだった　じぶん　は　いつまでも、やま　で　きみたち　の　ともだち　で　くらす、",
+      "word": "yama de sodatta zibun ha itumademo,yama de kimitati no tomodati de kurasu,"
+    },
+    {
+      "info": "ト　モウシマス　ト　トリ　ヤ　ケモノ　タチハ　オオヨロコビデ　キョウカラ　ヤマ　ノ　コドモ　ノ　ヤマキチサン　ヲ、",
+      "info2": "と　もうします　と　とり　や　けもの　たちは　おおよろこびで　きょうから　やま　の　こども　の　やまきちさん　を、",
+      "word": "to mousimasu to tori ya kemono tatiha ooyorokobide kyoukara yama no kodomo no yamakitisan wo,"
+    },
+    {
+      "info": "ボクタチ　ノ　タイショウサン　ニ　シマショウ　ト　イッテ、ヤマ　ノ　オハナ　ヲ　ツミアツメ、",
+      "info2": "ぼくたち　の　たいしょうさん　に　しましょう　と　いって、やま　の　おはな　を　つみあつめ、",
+      "word": "bokutati no taisyousan ni simasyou to itte,yama no ohana wo tumiatume,"
+    },
+    {
+      "info": "ヤマキチ　ノ　カタ　ヤ　ムネ　ニ　イッパイ　カザリツケマシタ。",
+      "info2": "やまきち　の　かた　や　むね　に　いっぱい　かざりつけました。",
+      "word": "yamakiti no kata ya mune ni ippai kazaritukemasita."
+    },
+    {
+      "info": "ソレガ　ヤマ　ノ　オヒサマ　ニ　カガヤイテ、チョウド　クンショウ　ノ　ヨウニ　ミエマシタ。",
+      "info2": "それが　やま　の　おひさま　に　かがやいて、ちょうど　くんしょう　の　ように　みえました。",
+      "word": "sorega yama no ohisama ni kagayaite,tyoudo kunsyou no youni miemasita."
+    }
+  ],
+  "links": [
+    {
+      "site": "青空文庫",
+      "name": "図書カード",
+      "link": "https://www.aozora.gr.jp/cards/000076/card46940.html"
+    }
+  ]
+}

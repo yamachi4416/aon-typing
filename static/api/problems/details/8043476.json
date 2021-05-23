@@ -1,0 +1,135 @@
+{
+  "id": "8043476",
+  "title": "カンザシ（新美南吉）",
+  "type": "japanese",
+  "skip": false,
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00015",
+      "name": "青空文庫"
+    },
+    {
+      "id": "00016",
+      "name": "日本文学"
+    },
+    {
+      "id": "00017",
+      "name": "物語"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "カンザシ",
+      "info2": "かんざし",
+      "word": "kanzasi"
+    },
+    {
+      "info": "新美 南吉",
+      "info2": "にいみ なんきち",
+      "word": "niimi nankiti"
+    },
+    {
+      "info": "ヲンナノ　コガ　イケノ　フチカラ　ミズノ　ナカヲ　ノゾイテ　ヲリマシタ。",
+      "info2": "をんなの　こが　いけの　ふちから　みずの　なかを　のぞいて　をりました。",
+      "word": "wonnnano koga ikeno hutikara mizuno nakawo nozoite worimasita."
+    },
+    {
+      "info": "ミズノ　ナカニハ　イツピキノ　サカナガ　シヅンデ　ヲリマシタ。「アツ」ト　ヲンナノ　コガ　サケビマシタ。",
+      "info2": "みずの　なかには　いつぴきの　さかなが　しづんで　をりました。「あつ」と　をんなの　こが　さけびました。",
+      "word": "mizuno nakaniha itupikino sakanaga sidunde worimasita.[atu]to wonnnano koga sakebimasita."
+    },
+    {
+      "info": "カンザシガ　ヲンナノ　コノ　アタマカラ　ヌケテ、イケノ　ナカニ　オチタカラデ　アリマス。",
+      "info2": "かんざしが　をんなの　この　あたまから　ぬけて、いけの　なかに　おちたからで　あります。",
+      "word": "kanzasiga wonnnano kono atamakara nukete,ikeno nakani otitakarade arimasu."
+    },
+    {
+      "info": "カンザシハ　サカナノ　ソバニ　シヅンデ　キマシタ。",
+      "info2": "かんざしは　さかなの　そばに　しづんで　きました。",
+      "word": "kanzasiha sakanano sobani sidunde kimasita."
+    },
+    {
+      "info": "「サカナサン、カンザシヲ　ヒロツテ　クダサイ」ト　ヲンナノ　コガ　サカナニ　タノミマシタ。",
+      "info2": "「さかなさん、かんざしを　ひろつて　ください」と　をんなの　こが　さかなに　たのみました。",
+      "word": "[sakanasan,kanzasiwo hirotute kudasai]to wonnnano koga sakanani tanomimasita."
+    },
+    {
+      "info": "「コレハ　ナンデスカ」ト　サカナハ　キキマシタ。",
+      "info2": "「これは　なんですか」と　さかなは　ききました。",
+      "word": "[koreha nandesuka]to sakanaha kikimasita."
+    },
+    {
+      "info": "「ソレハ　カンザシト　イツテ、アタマニ　サスモノデス」ト　ヲンナノ　コハ　オシヘテ　ヤリマシタ。",
+      "info2": "「それは　かんざしと　いつて、あたまに　さすものです」と　をんなの　こは　おしへて　やりました。",
+      "word": "[soreha kanzasito itute,atamani sasumonodesu]to wonnnano koha osihete yarimasita."
+    },
+    {
+      "info": "「ダイジナ　モノデスカ」「エエ、ワタシニハ　ダイジナ　モノデス」ソコデ、サカナハ　ヨクガ　デマシタ。",
+      "info2": "「だいじな　ものですか」「ええ、わたしには　だいじな　ものです」そこで、さかなは　よくが　でました。",
+      "word": "[daizina monodesuka][ee,watasiniha daizina monodesu]sokode,sakanaha yokuga demasita."
+    },
+    {
+      "info": "カンザシヲ　ジブンノ　モノニ　シタイト　オモヒマシタ。「ワタシハ　ヒロツテ　アゲマセン。ジブンデ　オヒロヒナサイ」",
+      "info2": "かんざしを　じぶんの　ものに　したいと　おもひました。「わたしは　ひろつて　あげません。じぶんで　おひろひなさい」",
+      "word": "kanzasiwo zibunnno mononi sitaito omohimasita.[watasiha hirotute agemasen.zibunde ohirohinasai]"
+    },
+    {
+      "info": "ヲンナノ　コハ　コマツテ　シマヒマシタ。ミズハ　フカイノデ　トテモ　ジブンデ　ヒロフ　コトハ　デキマセン。",
+      "info2": "をんなの　こは　こまつて　しまひました。みずは　ふかいので　とても　じぶんで　ひろふ　ことは　できません。",
+      "word": "wonnnano koha komatute simahimasita.mizuha hukainode totemo zibunde hirohu kotoha dekimasen."
+    },
+    {
+      "info": "ヲンナノ　コハ　ナキナガラ　イツテ　シマヒマシタ。サカナハ　タイヘン　トクヲ　シタト　オモヒマシタ。",
+      "info2": "をんなの　こは　なきながら　いつて　しまひました。さかなは　たいへん　とくを　したと　おもひました。",
+      "word": "wonnnano koha nakinagara itute simahimasita.sakanaha taihen tokuwo sitato omohimasita."
+    },
+    {
+      "info": "「ヒトツ　アタマニ　サシテ　ミヨウ」ト　イツテ、カンザシヲ　サシテ　ミマシタ。",
+      "info2": "「ひとつ　あたまに　さして　みよう」と　いつて、かんざしを　さして　みました。",
+      "word": "[hitotu atamani sasite miyou]to itute,kanzasiwo sasite mimasita."
+    },
+    {
+      "info": "ソシテ、ソノ　トキ、ジブンノ　アタマニハ　カンザシハ　サセナイ　コトガ　ハジメテ　ワカリマシタ。",
+      "info2": "そして、その　とき、じぶんの　あたまには　かんざしは　させない　ことが　はじめて　わかりました。",
+      "word": "sosite,sono toki,zibunnno atamaniha kanzasiha sasenai kotoga hazimete wakarimasita."
+    },
+    {
+      "info": "ソシテ　マタ、ホカノ　ヒトニハ　トウトイ　モノデ　アツテモ、ジブンニハ　チツトモ　トウトクナイ　コトモ　アルノダ、ト　イフ　コトガ　ワカリマシタ。",
+      "info2": "そして　また、ほかの　ひとには　とうとい　もので　あつても、じぶんには　ちつとも　とうとくない　ことも　あるのだ、と　いふ　ことが　わかりました。",
+      "word": "sosite mata,hokano hitoniha toutoi monode atutemo,zibunnniha titutomo toutokunai kotomo arunoda,to ihu kotoga wakarimasita."
+    },
+    {
+      "info": "ツギノ　ヒ　ヲンナノ　コハ　マタ　イケノ　フチニ　ヤツテ　キマシタ。",
+      "info2": "つぎの　ひ　をんなの　こは　また　いけの　ふちに　やつて　きました。",
+      "word": "tugino hi wonnnano koha mata ikeno hutini yatute kimasita."
+    },
+    {
+      "info": "サカナハ　カンザシヲ　クワヘテ　ミズノ　ウエニ　ウカビマシタ。",
+      "info2": "さかなは　かんざしを　くわへて　みずの　うえに　うかびました。",
+      "word": "sakanaha kanzasiwo kuwahete mizuno ueni ukabimasita."
+    },
+    {
+      "info": "「ワタシガ　ワルウ　ゴザイマシタ。サア　カンザシヲ　オカヘシシマス」ヲンナノ　コハ　ドンナニ　ヨロコンダ　コトデセウ。",
+      "info2": "「わたしが　わるう　ございました。さあ　かんざしを　おかへしします」をんなの　こは　どんなに　よろこんだ　ことでせう。",
+      "word": "[watasiga waruu gozaimasita.saa kanzasiwo okahesisimasu]wonnnano koha donnnani yorokonda kotodeseu."
+    },
+    {
+      "info": "ナンドモ　ナンドモ　オレイヲ　イヒマシタ。",
+      "info2": "なんども　なんども　おれいを　いひました。",
+      "word": "nandomo nandomo oreiwo ihimasita."
+    }
+  ],
+  "links": [
+    {
+      "site": "青空文庫",
+      "name": "図書カード",
+      "link": "https://www.aozora.gr.jp/cards/000121/card43476.html"
+    }
+  ]
+}

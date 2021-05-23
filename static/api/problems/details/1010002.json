@@ -1,0 +1,134 @@
+{
+  "id": "1010002",
+  "title": "東京23区",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00007",
+      "name": "地理"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "足立区",
+      "info2": "あだちく",
+      "word": "adatiku"
+    },
+    {
+      "info": "荒川区",
+      "info2": "あらかわく",
+      "word": "arakawaku"
+    },
+    {
+      "info": "板橋区",
+      "info2": "いたばしく",
+      "word": "itabasiku"
+    },
+    {
+      "info": "江戸川区",
+      "info2": "えどがわく",
+      "word": "edogawaku"
+    },
+    {
+      "info": "大田区",
+      "info2": "おおたく",
+      "word": "ootaku"
+    },
+    {
+      "info": "葛飾区",
+      "info2": "かつしかく",
+      "word": "katusikaku"
+    },
+    {
+      "info": "北区",
+      "info2": "きたく",
+      "word": "kitaku"
+    },
+    {
+      "info": "江東区",
+      "info2": "こうとうく",
+      "word": "koutouku"
+    },
+    {
+      "info": "品川区",
+      "info2": "しながわく",
+      "word": "sinagawaku"
+    },
+    {
+      "info": "渋谷区",
+      "info2": "しぶやく",
+      "word": "sibuyaku"
+    },
+    {
+      "info": "新宿区",
+      "info2": "しんじゅくく",
+      "word": "sinjukuku"
+    },
+    {
+      "info": "杉並区",
+      "info2": "すぎなみく",
+      "word": "suginamiku"
+    },
+    {
+      "info": "墨田区",
+      "info2": "すみだく",
+      "word": "sumidaku"
+    },
+    {
+      "info": "世田谷区",
+      "info2": "せたがやく",
+      "word": "setagayaku"
+    },
+    {
+      "info": "台東区",
+      "info2": "たいとうく",
+      "word": "taitouku"
+    },
+    {
+      "info": "中央区",
+      "info2": "ちゅうおうく",
+      "word": "tyuuouku"
+    },
+    {
+      "info": "千代田区",
+      "info2": "ちよだく",
+      "word": "tiyodaku"
+    },
+    {
+      "info": "豊島区",
+      "info2": "としまく",
+      "word": "tosimaku"
+    },
+    {
+      "info": "中野区",
+      "info2": "なかのく",
+      "word": "nakanoku"
+    },
+    {
+      "info": "練馬区",
+      "info2": "ねりまく",
+      "word": "nerimaku"
+    },
+    {
+      "info": "文京区",
+      "info2": "ぶんきょうく",
+      "word": "bunkyouku"
+    },
+    {
+      "info": "港区",
+      "info2": "みなとく",
+      "word": "minatoku"
+    },
+    {
+      "info": "目黒区",
+      "info2": "めぐろく",
+      "word": "meguroku"
+    }
+  ]
+}

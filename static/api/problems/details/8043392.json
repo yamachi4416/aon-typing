@@ -1,0 +1,380 @@
+{
+  "id": "8043392",
+  "title": "ウマヤノ　ソバノ　ナタネ（新美南吉）",
+  "type": "japanese",
+  "skip": false,
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00015",
+      "name": "青空文庫"
+    },
+    {
+      "id": "00016",
+      "name": "日本文学"
+    },
+    {
+      "id": "00017",
+      "name": "物語"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "ウマヤノ　ソバノ　ナタネ",
+      "info2": "うまやの　そばの　なたね",
+      "word": "umayano sobano natane"
+    },
+    {
+      "info": "新美 南吉",
+      "info2": "にいみ なんきち",
+      "word": "niimi nankiti"
+    },
+    {
+      "info": "ウマヤノ　マドノ　ソトニ　ナタネガ　ハエテ　ヲリマシタ。",
+      "info2": "うまやの　まどの　そとに　なたねが　はえて　をりました。",
+      "word": "umayano madono sotoni natanega haete worimasita."
+    },
+    {
+      "info": "マダ　花ハ　サイテ　ヲリマセン。ケレド　ツボミガ　タクサン　ツイテ　ヲリマシタ。モウ　ヂキ　ハルガ　クルノデス。",
+      "info2": "まだ　はなは　さいて　をりません。けれど　つぼみが　たくさん　ついて　をりました。もう　ぢき　はるが　くるのです。",
+      "word": "mada hanaha saite worimasen.keredo tubomiga takusan tuite worimasita.mou diki haruga kurunodesu."
+    },
+    {
+      "info": "ウマヤノ　マエノ　ヒザシガ　ヒニ　ヒニ　アタタカク　ナツテ　クロイ　土カラ　白イ　ユゲガ　ノボリハヂメテ　ヰマス。",
+      "info2": "うまやの　まえの　ひざしが　ひに　ひに　あたたかく　なつて　くろい　つちから　しろい　ゆげが　のぼりはぢめて　ゐます。",
+      "word": "umayano maeno hizasiga hini hini atatakaku natute kuroi tutikara siroi yugega noborihadimete imasu."
+    },
+    {
+      "info": "ナタネノ　ツボミタチハ　カンバシイ　ニホヒノ　ナカデ　ダンダン　フクランデ　イキマス。",
+      "info2": "なたねの　つぼみたちは　かんばしい　にほひの　なかで　だんだん　ふくらんで　いきます。",
+      "word": "nataneno tubomitatiha kanbasii nihohino nakade dandan hukurande ikimasu."
+    },
+    {
+      "info": "「モウ　ヂキ、ネ」ト　一ツノ　ツボミガ　ササヤキマス。",
+      "info2": "「もう　ぢき、ね」と　１つの　つぼみが　ささやきます。",
+      "word": "[mou diki,ne]to 1tuno tubomiga sasayakimasu."
+    },
+    {
+      "info": "「エエ、モウ　スグ、オンモガ　ミラレマス」ト　ホカノ　ツボミガ　コタヘマス。",
+      "info2": "「ええ、もう　すぐ、おんもが　みられます」と　ほかの　つぼみが　こたへます。",
+      "word": "[ee,mou sugu,onmoga miraremasu]to hokano tubomiga kotahemasu."
+    },
+    {
+      "info": "ツボミタチハ　マダ　コノ　セカイヲ　ミタ　コトガ　アリマセン。コノ　セカイハ　ヂビタト　ソラノ　二ツニ　ワカレテ　ヰテ、",
+      "info2": "つぼみたちは　まだ　この　せかいを　みた　ことが　ありません。この　せかいは　ぢびたと　そらの　２つに　わかれて　ゐて、",
+      "word": "tubomitatiha mada kono sekaiwo mita kotoga arimasen.kono sekaiha dibitato sorano 2tuni wakarete ite,"
+    },
+    {
+      "info": "ソノ　アヒダニ、ニンゲント　イフ　リコウナ　モノガ　イキテ　ヰルト　イフ　コトモ、",
+      "info2": "その　あひだに、にんげんと　いふ　りこうな　ものが　いきて　ゐると　いふ　ことも、",
+      "word": "sono ahidani,ningento ihu rikouna monoga ikite iruto ihu kotomo,"
+    },
+    {
+      "info": "コトリト　イフ　ヤサシイ　イキモノノ　ヰルト　イフ　コトモ、マタ　ツボミタチジシンガ、",
+      "info2": "ことりと　いふ　やさしい　いきものの　ゐると　いふ　ことも、また　つぼみたちじしんが、",
+      "word": "kotorito ihu yasasii ikimonono iruto ihu kotomo,mata tubomitatizisinga,"
+    },
+    {
+      "info": "花ト　イフ　ウツクシイ　モノニ　ナルノダト　イフ　コトモ　シツテ　ヰマセン。ソレデ、「オンモハ　ドンナ　トコロデセウ」",
+      "info2": "はなと　いふ　うつくしい　ものに　なるのだと　いふ　ことも　しつて　ゐません。それで、「おんもは　どんな　ところでせう」",
+      "word": "hanato ihu utukusii mononi narunodato ihu kotomo situte imasen.sorede,[onmoha donnna tokorodeseu]"
+    },
+    {
+      "info": "ト　ドノ　ツボミモ　オモツテ　ヰルノデ　アリマシタ。",
+      "info2": "と　どの　つぼみも　おもつて　ゐるので　ありました。",
+      "word": "to dono tubomimo omotute irunode arimasita."
+    },
+    {
+      "info": "ソノ　トキ　ムカウノ　ムギバタケカラ　コトシニ　ナツテカラ　ハジメテノ　ヒバリガ　ソラニ　マヒアガリマシタ。",
+      "info2": "その　とき　むかうの　むぎばたけから　ことしに　なつてから　はじめての　ひばりが　そらに　まひあがりました。",
+      "word": "sono toki mukauno mugibatakekara kotosini natutekara hazimeteno hibariga sorani mahiagarimasita."
+    },
+    {
+      "info": "ソシテ　ヒバリハ　スガタガ　ミエナク　ナルホド　タカク　ノボツタ　トキ　ウツクシイ　コヱデ　ウタヒハジメマシタ。",
+      "info2": "そして　ひばりは　すがたが　みえなく　なるほど　たかく　のぼつた　とき　うつくしい　こゑで　うたひはじめました。",
+      "word": "sosite hibariha sugataga mienaku naruhodo takaku nobotuta toki utukusii koede utahihazimemasita."
+    },
+    {
+      "info": "「ピイチク　ピイチク　ピイチク　ピイチク」ヒバリノ　コヱハ　タカイ　ソラカラ　キンノ　アメノヤウニ　フツテ　キテ、",
+      "info2": "「ぴいちく　ぴいちく　ぴいちく　ぴいちく」ひばりの　こゑは　たかい　そらから　きんの　あめのやうに　ふつて　きて、",
+      "word": "[piitiku piitiku piitiku piitiku]hibarino koeha takai sorakara kinnno amenoyauni hutute kite,"
+    },
+    {
+      "info": "ウマヤノ　ソバノ　ナタネノ　マワリニ　フリソソギマシタ。「ナント　イフ　キレイナ　コヱデセウ」",
+      "info2": "うまやの　そばの　なたねの　まわりに　ふりそそぎました。「なんと　いふ　きれいな　こゑでせう」",
+      "word": "umayano sobano nataneno mawarini hurisosogimasita.[nanto ihu kireina koedeseu]"
+    },
+    {
+      "info": "「アンナニ　ヨイ　コヱデ　ウタフ　コトノ　デキルノハ　タレデセウ」",
+      "info2": "「あんなに　よい　こゑで　うたふ　ことの　できるのは　たれでせう」",
+      "word": "[annnani yoi koede utahu kotono dekirunoha taredeseu]"
+    },
+    {
+      "info": "ト　ナタネノ　ツボミタチハ　ウツトリシテ　ササヤキアヒマシタ。スルト、ツボミタチノ　アタマノ　ウエデ　ダレカガ、",
+      "info2": "と　なたねの　つぼみたちは　うつとりして　ささやきあひました。すると、つぼみたちの　あたまの　うえで　だれかが、",
+      "word": "to nataneno tubomitatiha ututorisite sasayakiahimasita.suruto,tubomitatino atamano uede darekaga,"
+    },
+    {
+      "info": "「ヒバリデス、ヨ」ト　フトイ　コヱデ　イヒマシタ。ツボミタチハ　ビツクリシテ、ダマツテ　シマヒマシタ。",
+      "info2": "「ひばりです、よ」と　ふとい　こゑで　いひました。つぼみたちは　びつくりして、だまつて　しまひました。",
+      "word": "[hibaridesu,yo]to hutoi koede ihimasita.tubomitatiha bitukurisite,damatute simahimasita."
+    },
+    {
+      "info": "ヤガテ　オドロキガ　トマルト、「イマノ　フトイ　コヱハ　ダレデセウ」",
+      "info2": "やがて　おどろきが　とまると、「いまの　ふとい　こゑは　だれでせう」",
+      "word": "yagate odorokiga tomaruto,[imano hutoi koeha daredeseu]"
+    },
+    {
+      "info": "「キツト　オソロシイ　モノニ　チガヒナイネ」ト　ヒソヒソ　イヒアヒマシタ。スルト　マタ　サツキノ　フトイ　コヱデ、",
+      "info2": "「きつと　おそろしい　ものに　ちがひないね」と　ひそひそ　いひあひました。すると　また　さつきの　ふとい　こゑで、",
+      "word": "[kituto osorosii mononi tigahinaine]to hisohiso ihiahimasita.suruto mata satukino hutoi koede,"
+    },
+    {
+      "info": "「ワタシハ　ウマデス、チツトモ　オソロシイ　モノヂヤ　アリマセン」ト　イヒマシタ。",
+      "info2": "「わたしは　うまです、ちつとも　おそろしい　ものぢや　ありません」と　いひました。",
+      "word": "[watasiha umadesu,titutomo osorosii monodiya arimasen]to ihimasita."
+    },
+    {
+      "info": "シカシ　ツボミタチハ　ウマガ　ドンナ　モノデ　アルカモ　シツテ　ヰマセン。",
+      "info2": "しかし　つぼみたちは　うまが　どんな　もので　あるかも　しつて　ゐません。",
+      "word": "sikasi tubomitatiha umaga donnna monode arukamo situte imasen."
+    },
+    {
+      "info": "ヤワラカナ　ケムリノヤウナ　ハルノ　アメガ　二三日フリツヅキマシタ。",
+      "info2": "やわらかな　けむりのやうな　はるの　あめが　２３にちふりつづきました。",
+      "word": "yawarakana kemurinoyauna haruno amega 23nitihuritudukimasita."
+    },
+    {
+      "info": "アメガ　ヤムト　マヘヨリモ　イツソウ　アタタカナ　ヒノ　ヒカリガ　ソソギマシタ。",
+      "info2": "あめが　やむと　まへよりも　いつそう　あたたかな　ひの　ひかりが　そそぎました。",
+      "word": "amega yamuto maheyorimo itusou atatakana hino hikariga sosogimasita."
+    },
+    {
+      "info": "ソコデ　タウトウ　イチバン　イタダキニ　ヰタ　ツボミガ　オメメヲ　ヒライテ　花ニ　ナリマシタ。",
+      "info2": "そこで　たうとう　いちばん　いただきに　ゐた　つぼみが　おめめを　ひらいて　はなに　なりました。",
+      "word": "sokode tautou itiban itadakini ita tubomiga omemewo hiraite hanani narimasita."
+    },
+    {
+      "info": "ソレカラ　ツギツギニ　ツボミタチハ　上ノ　方カラ　下ノ　方ヘ　ヒライテ　イキマシタ。",
+      "info2": "それから　つぎつぎに　つぼみたちは　うへの　はうから　したの　はうへ　ひらいて　いきました。",
+      "word": "sorekara tugitugini tubomitatiha uheno haukara sitano hauhe hiraite ikimasita."
+    },
+    {
+      "info": "「オオ　マブシイ」ト　ドノ　ツボミモ　ハジメハ　サケビマシタ。",
+      "info2": "「おお　まぶしい」と　どの　つぼみも　はじめは　さけびました。",
+      "word": "[oo mabusii]to dono tubomimo hazimeha sakebimasita."
+    },
+    {
+      "info": "ソレハ　ハジメテ　ミル　セカイガ　イママデト　チガツテ　ピカピカ　ヒカツテ　ヰタカラデ　アリマス。",
+      "info2": "それは　はじめて　みる　せかいが　いままでと　ちがつて　ぴかぴか　ひかつて　ゐたからで　あります。",
+      "word": "soreha hazimete miru sekaiga imamadeto tigatute pikapika hikatute itakarade arimasu."
+    },
+    {
+      "info": "ヤガテ　ツヨイ　ヒカリニ　ナレテ　クルト　ナタネノ　花タチハ　アタリヲ　ミマハシテ、",
+      "info2": "やがて　つよい　ひかりに　なれて　くると　なたねの　はなたちは　あたりを　みまはして、",
+      "word": "yagate tuyoi hikarini narete kuruto nataneno hanatatiha atariwo mimahasite,"
+    },
+    {
+      "info": "木ヤ　ハタケヤ　ミチヤ　イヘヤ　ソラヤ　ミズヲ　ミマシタ。",
+      "info2": "きや　はたけや　みちや　いへや　そらや　みずを　みました。",
+      "word": "kiya hatakeya mitiya iheya soraya mizuwo mimasita."
+    },
+    {
+      "info": "ソレハ　タイヘン　ウツクシク　ミエタノデ　花タチハ　コノヤウナ　セカイニ　ウマレテ　キタ　コトヲ　ヨロコビアヒマシタ。",
+      "info2": "それは　たいへん　うつくしく　みえたので　はなたちは　このやうな　せかいに　うまれて　きた　ことを　よろこびあひました。",
+      "word": "soreha taihen utukusiku mietanode hanatatiha konoyauna sekaini umarete kita kotowo yorokobiahimasita."
+    },
+    {
+      "info": "ソレカラ　花タチハ　ジブンタチノ　スガタヲ　ナガメアヒ、ジブンタチカラ　ナガレデル　ニホヒヲバ　カギアツテ、",
+      "info2": "それから　はなたちは　じぶんたちの　すがたを　ながめあひ、じぶんたちから　ながれでる　にほひをば　かぎあつて、",
+      "word": "sorekara hanatatiha zibuntatino sugatawo nagameahi,zibuntatikara nagarederu nihohiwoba kagiatute,"
+    },
+    {
+      "info": "ジブンタチガ　ミナ　オナジヤウニ　キイロイ　キモノヲ　キテ　ヲリ、",
+      "info2": "じぶんたちが　みな　おなじやうに　きいろい　きものを　きて　をり、",
+      "word": "zibuntatiga mina onaziyauni kiiroi kimonowo kite wori,"
+    },
+    {
+      "info": "ホカノ　木ヤ　クサニ　マケナイホド　ウツクシイノヲ　シツテ　イツソウ　ヨロコビアヒマシタ。",
+      "info2": "ほかの　きや　くさに　まけないほど　うつくしいのを　しつて　いつそう　よろこびあひました。",
+      "word": "hokano kiya kusani makenaihodo utukusiinowo situte itusou yorokobiahimasita."
+    },
+    {
+      "info": "ソノ　トキ　花タチノ　アタマノ　上デ、「オヤ　マア　キレイニ　サキマシタネ」ト　イフ　コヱガ　シマシタ。",
+      "info2": "その　とき　はなたちの　あたまの　うへで、「おや　まあ　きれいに　さきましたね」と　いふ　こゑが　しました。",
+      "word": "sono toki hanatatino atamano uhede,[oya maa kireini sakimasitane]to ihu koega simasita."
+    },
+    {
+      "info": "花タチハ　キイタ　コトノ　アル　コヱダト　オモツテ　ミルト、",
+      "info2": "はなたちは　きいた　ことの　ある　こゑだと　おもつて　みると、",
+      "word": "hanatatiha kiita kotono aru koedato omotute miruto,"
+    },
+    {
+      "info": "ウマヤノ　マドニ　大キナ　ヤサシイ　ウマノ　カホガ　ノゾイテ　ヲリマシタ。",
+      "info2": "うまやの　まどに　おほきな　やさしい　うまの　かほが　のぞいて　をりました。",
+      "word": "umayano madoni ohokina yasasii umano kahoga nozoite worimasita."
+    },
+    {
+      "info": "コンナニ　ヤサシイ　モノガ　花タチノ　オソロシク　オモツタ　ウマダツタノデシタ。",
+      "info2": "こんなに　やさしい　ものが　はなたちの　おそろしく　おもつた　うまだつたのでした。",
+      "word": "konnnani yasasii monoga hanatatino osorosiku omotuta umadatutanodesita."
+    },
+    {
+      "info": "「オウマノ　ヲバサン、コノ　セカイハ　ナント　イフ　ウツクシイ　ヨイ　トコロデセウ」ト　花ノ　ヒトツガ　イヒマシタ。",
+      "info2": "「おうまの　をばさん、この　せかいは　なんと　いふ　うつくしい　よい　ところでせう」と　はなの　ひとつが　いひました。",
+      "word": "[oumano wobasan,kono sekaiha nanto ihu utukusii yoi tokorodeseu]to hanano hitotuga ihimasita."
+    },
+    {
+      "info": "「ホントウニ　ソウデスヨ、ワタシモ　ハヤク　ボウヤニ　コノ　ヨイ　セカイヲ　ミセテ　ヤリタクテ　タマリマセン」",
+      "info2": "「ほんとうに　そうですよ、わたしも　はやく　ぼうやに　この　よい　せかいを　みせて　やりたくて　たまりません」",
+      "word": "[hontouni soudesuyo,watasimo hayaku bouyani kono yoi sekaiwo misete yaritakute tamarimasen]"
+    },
+    {
+      "info": "ト　ウマハ　コタヘマシタ。「オヤ、ヲバサン、アカンボガ　ウマレルノデスカ」「モウ　ウマレテ　ヲリマス。",
+      "info2": "と　うまは　こたへました。「おや、をばさん、あかんぼが　うまれるのですか」「もう　うまれて　をります。",
+      "word": "to umaha kotahemasita.[oya,wobasan,akanboga umarerunodesuka][mou umarete worimasu."
+    },
+    {
+      "info": "デモ　マダ　オメメヲ　トヂテ　ネネシテ　ヰルノデスヨ」花タチハ　ウマノ　アカンボヲ　ミタイト　オモヒマシタ。",
+      "info2": "でも　まだ　おめめを　とぢて　ねねして　ゐるのですよ」はなたちは　うまの　あかんぼを　みたいと　おもひました。",
+      "word": "demo mada omemewo todite nenesite irunodesuyo]hanatatiha umano akanbowo mitaito omohimasita."
+    },
+    {
+      "info": "ケレド　アンナニ　マドガ　タカクテ、ドウシテ　ナカヲ　ノゾク　コトガ　デキマセウ。",
+      "info2": "けれど　あんなに　まどが　たかくて、どうして　なかを　のぞく　ことが　できませう。",
+      "word": "keredo annnani madoga takakute,dousite nakawo nozoku kotoga dekimaseu."
+    },
+    {
+      "info": "「オヤ　ミナサン」ト　ソノ　トキ　ウマノ　ヲバサンガ　イヒマシタ。「マダ　ヒラカナイ　ツボミガ　アルヂヤ　アリマセンカ」",
+      "info2": "「おや　みなさん」と　その　とき　うまの　をばさんが　いひました。「まだ　ひらかない　つぼみが　あるぢや　ありませんか」",
+      "word": "[oya minasan]to sono toki umano wobasanga ihimasita.[mada hirakanai tubomiga arudiya arimasenka]"
+    },
+    {
+      "info": "花タチハ　ビツクリシテ　ミマワシマシタ。「ドレ　ドコニ」「ソラ、ソラ、ソコニ」",
+      "info2": "はなたちは　びつくりして　みまわしました。「どれ　どこに」「そら、そら、そこに」",
+      "word": "hanatatiha bitukurisite mimawasimasita.[dore dokoni][sora,sora,sokoni]"
+    },
+    {
+      "info": "ナルホド、ミルト　ナタネノ　ミキニ　マダ　ヒラカナイ　ツボミガ　ヒトツ　ノコツテ　ヲリマシタ。",
+      "info2": "なるほど、みると　なたねの　みきに　まだ　ひらかない　つぼみが　ひとつ　のこつて　をりました。",
+      "word": "naruhodo,miruto nataneno mikini mada hirakanai tubomiga hitotu nokotute worimasita."
+    },
+    {
+      "info": "「ドウ　シタノデセウ」「マダ　ネンネシテルノカシラ」「ワタシタチガ　モウ　オメメヲ　ヒライタ　コトヲ　シラナイノカシラ」",
+      "info2": "「どう　したのでせう」「まだ　ねんねしてるのかしら」「わたしたちが　もう　おめめを　ひらいた　ことを　しらないのかしら」",
+      "word": "[dou sitanodeseu][mada nennnesiterunokasira][watasitatiga mou omemewo hiraita kotowo siranainokasira]"
+    },
+    {
+      "info": "「モウ　ハルガ　キテルノヲ　シラナイノカシラ」ソコデ　花タチハ　マダ　ヒラカナイ　ツボミヲ　オコシニ　カカリマシタ。",
+      "info2": "「もう　はるが　きてるのを　しらないのかしら」そこで　はなたちは　まだ　ひらかない　つぼみを　おこしに　かかりました。",
+      "word": "[mou haruga kiterunowo siranainokasira]sokode hanatatiha mada hirakanai tubomiwo okosini kakarimasita."
+    },
+    {
+      "info": "「マダ　ヒラカナイ　ツボミサン　モウ　ハルデスヨ、オンモニ　デテ　イラツシヤイ」",
+      "info2": "「まだ　ひらかない　つぼみさん　もう　はるですよ、おんもに　でて　いらつしやい」",
+      "word": "[mada hirakanai tubomisan mou harudesuyo,onmoni dete iratusiyai]"
+    },
+    {
+      "info": "「マダ　ネンネシテル　ツボミサン　オメメヲ　サマシナサイ」",
+      "info2": "「まだ　ねんねしてる　つぼみさん　おめめを　さましなさい」",
+      "word": "[mada nennnesiteru tubomisan omemewo samasinasai]"
+    },
+    {
+      "info": "スルト　ツボミガ　コタヘマシタ。「ワタシハ　モウ　メヲ　サマシテ　ヰマス」",
+      "info2": "すると　つぼみが　こたへました。「わたしは　もう　めを　さまして　ゐます」",
+      "word": "suruto tubomiga kotahemasita.[watasiha mou mewo samasite imasu]"
+    },
+    {
+      "info": "「アラ　アラ、ソレデハ　スグ　デテ　イラツシヤイ」",
+      "info2": "「あら　あら、それでは　すぐ　でて　いらつしやい」",
+      "word": "[ara ara,soredeha sugu dete iratusiyai]"
+    },
+    {
+      "info": "ヤガテ　ソノ　ツボミガ　フタツニ　ワレテ　ナカカラ　ナニカ　デテ　マヰリマシタ。トコロガ、",
+      "info2": "やがて　その　つぼみが　ふたつに　われて　なかから　なにか　でて　まゐりました。ところが、",
+      "word": "yagate sono tubomiga hutatuni warete nakakara nanika dete mairimasita.tokoroga,"
+    },
+    {
+      "info": "花タチノ　オドロイタ　コトニハ　ソレハ　花タチノヤウニ　キイロイ　キモノノ　カハリニ　マツシロイ　キモノヲ　キテ　ヲリマシタ。",
+      "info2": "はなたちの　おどろいた　ことには　それは　はなたちのやうに　きいろい　きものの　かはりに　まつしろい　きものを　きて　をりました。",
+      "word": "hanatatino odoroita kotoniha soreha hanatatinoyauni kiiroi kimonono kaharini matusiroi kimonowo kite worimasita."
+    },
+    {
+      "info": "「アラ　ドウ　シタノデシヨ、アナタノ　オベベハ　マツシロヨ」ト　オドロイタ　花ノ　ヒトツガ　イヒマシタ。",
+      "info2": "「あら　どう　したのでしよ、あなたの　おべべは　まつしろよ」と　おどろいた　はなの　ひとつが　いひました。",
+      "word": "[ara dou sitanodesiyo,anatano obebeha matusiroyo]to odoroita hanano hitotuga ihimasita."
+    },
+    {
+      "info": "スルト　ソノ　トキ　マドカラ　ミテ　ヰタ　オウマノ　ヲバサンガ、「テフテフデスヨ」ト　花タチニ　シラセマシタ。",
+      "info2": "すると　その　とき　まどから　みて　ゐた　おうまの　をばさんが、「てふてふですよ」と　はなたちに　しらせました。",
+      "word": "suruto sono toki madokara mite ita oumano wobasanga,[tehutehudesuyo]to hanatatini sirasemasita."
+    },
+    {
+      "info": "ソレハ　ホントニ　イツピキノ　テフテフデ　アリマシタ。",
+      "info2": "それは　ほんとに　いつぴきの　てふてふで　ありました。",
+      "word": "soreha hontoni itupikino tehutehude arimasita."
+    },
+    {
+      "info": "テフテフハ　花トハ　チガヒマス、オハネガ　アツテ　アチラ　コチラ　トビマワル　コトガ　デキマス。",
+      "info2": "てふてふは　はなとは　ちがひます、おはねが　あつて　あちら　こちら　とびまわる　ことが　できます。",
+      "word": "tehutehuha hanatoha tigahimasu,ohanega atute atira kotira tobimawaru kotoga dekimasu."
+    },
+    {
+      "info": "サテ　コノ　テフテフモ　オハネガ　ジヨウブニ　ナルト　カゼニ　ノツテ　ウマヤノ　ヤネヲ　コエタリ、",
+      "info2": "さて　この　てふてふも　おはねが　じようぶに　なると　かぜに　のつて　うまやの　やねを　こえたり、",
+      "word": "sate kono tehutehumo ohanega ziyoubuni naruto kazeni notute umayano yanewo koetari,"
+    },
+    {
+      "info": "ヲガハノ　ウエニ　イツテ　ミタリ　シマシタ。",
+      "info2": "をがはの　うえに　いつて　みたり　しました。",
+      "word": "wogahano ueni itute mitari simasita."
+    },
+    {
+      "info": "ケレド　ナタネノ　ツボミト　イツシヨニ　ソダツタ　テフテフデスカラ、ナタネノ　花タチトハ　タイヘン　ナカヨシデシタ。",
+      "info2": "けれど　なたねの　つぼみと　いつしよに　そだつた　てふてふですから、なたねの　はなたちとは　たいへん　なかよしでした。",
+      "word": "keredo nataneno tubomito itusiyoni sodatuta tehutehudesukara,nataneno hanatatitoha taihen nakayosidesita."
+    },
+    {
+      "info": "「テフテフサン」ト　トブ　コトノ　デキナイ　花タチハ　イフノデシタ。",
+      "info2": "「てふてふさん」と　とぶ　ことの　できない　はなたちは　いふのでした。",
+      "word": "[tehutehusan]to tobu kotono dekinai hanatatiha ihunodesita."
+    },
+    {
+      "info": "「オウマノ　アカチヤンハ　モウ　オメメヲ　アイタカ　ミテ　キテ　チヨウダイ」",
+      "info2": "「おうまの　あかちやんは　もう　おめめを　あいたか　みて　きて　ちようだい」",
+      "word": "[oumano akatiyanha mou omemewo aitaka mite kite tiyoudai]"
+    },
+    {
+      "info": "テフテフハ　スグ　ウマヤノ　マドカラ　ナカニ　ハイツテ　イキマシタ。",
+      "info2": "てふてふは　すぐ　うまやの　まどから　なかに　はいつて　いきました。",
+      "word": "tehutehuha sugu umayano madokara nakani haitute ikimasita."
+    },
+    {
+      "info": "「オウマノ　ヲバサン　コンニチハ」「オヤ　テフテフサン　コンニチハ」",
+      "info2": "「おうまの　をばさん　こんにちは」「おや　てふてふさん　こんにちは」",
+      "word": "[oumano wobasan konnnitiha][oya tehutehusan konnnitiha]"
+    },
+    {
+      "info": "「アカチヤンノ　オメメハ　アキマシタカ」「ケサ　ヤツト　アキマシタ」",
+      "info2": "「あかちやんの　おめめは　あきましたか」「けさ　やつと　あきました」",
+      "word": "[akatiyannno omemeha akimasitaka][kesa yatuto akimasita]"
+    },
+    {
+      "info": "ミルト　オウマノ　アカンボハ　ネワラノ　ナカデ　パツチリ　オメメヲ　アケテ　オトナシク　シテ　ヰマシタ。",
+      "info2": "みると　おうまの　あかんぼは　ねわらの　なかで　ぱつちり　おめめを　あけて　おとなしく　して　ゐました。",
+      "word": "miruto oumano akanboha newarano nakade patutiri omemewo akete otonasiku site imasita."
+    }
+  ],
+  "links": [
+    {
+      "site": "青空文庫",
+      "name": "図書カード",
+      "link": "https://www.aozora.gr.jp/cards/000121/card43392.html"
+    }
+  ]
+}

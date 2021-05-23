@@ -1,0 +1,125 @@
+{
+  "id": "8051124",
+  "title": "海（小川未明）",
+  "type": "japanese",
+  "skip": false,
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00015",
+      "name": "青空文庫"
+    },
+    {
+      "id": "00016",
+      "name": "日本文学"
+    },
+    {
+      "id": "00018",
+      "name": "詩歌"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "海",
+      "info2": "うみ",
+      "word": "umi"
+    },
+    {
+      "info": "小川 未明",
+      "info2": "おがわ みめい",
+      "word": "ogawa mimei"
+    },
+    {
+      "info": "海",
+      "info2": "うみ",
+      "word": "umi"
+    },
+    {
+      "info": "海",
+      "info2": "うみ",
+      "word": "umi"
+    },
+    {
+      "info": "黒い",
+      "info2": "くろい",
+      "word": "kuroi"
+    },
+    {
+      "info": "黒い旗のように",
+      "info2": "くろいはたのように",
+      "word": "kuroihatanoyouni"
+    },
+    {
+      "info": "黒い",
+      "info2": "くろい",
+      "word": "kuroi"
+    },
+    {
+      "info": "海",
+      "info2": "うみ",
+      "word": "umi"
+    },
+    {
+      "info": "海",
+      "info2": "うみ",
+      "word": "umi"
+    },
+    {
+      "info": "海が鳴る",
+      "info2": "うみがうなる",
+      "word": "umigaunaru"
+    },
+    {
+      "info": "黒い旗振るように",
+      "info2": "くろいはたふるように",
+      "word": "kuroihatahuruyouni"
+    },
+    {
+      "info": "黒いふろしき振るように",
+      "info2": "くろいふろしきふるように",
+      "word": "kuroihurosikihuruyouni"
+    },
+    {
+      "info": "海が鳴る",
+      "info2": "うみがなる",
+      "word": "umiganaru"
+    },
+    {
+      "info": "海",
+      "info2": "うみ",
+      "word": "umi"
+    },
+    {
+      "info": "海",
+      "info2": "うみ",
+      "word": "umi"
+    },
+    {
+      "info": "黒い",
+      "info2": "くろい",
+      "word": "kuroi"
+    },
+    {
+      "info": "晩のように黒い",
+      "info2": "ばんのようにくろい",
+      "word": "bannnoyounikuroi"
+    },
+    {
+      "info": "墨のように黒い",
+      "info2": "すみのようにくろい",
+      "word": "suminoyounikuroi"
+    }
+  ],
+  "links": [
+    {
+      "site": "青空文庫",
+      "name": "図書カード",
+      "link": "https://www.aozora.gr.jp/cards/001475/card51124.html"
+    }
+  ]
+}

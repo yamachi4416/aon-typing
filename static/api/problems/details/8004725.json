@@ -1,0 +1,125 @@
+{
+  "id": "8004725",
+  "title": "たけのこ（新美南吉）",
+  "type": "japanese",
+  "skip": false,
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00015",
+      "name": "青空文庫"
+    },
+    {
+      "id": "00016",
+      "name": "日本文学"
+    },
+    {
+      "id": "00017",
+      "name": "物語"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "たけのこ",
+      "info2": "たけのこ",
+      "word": "takenoko"
+    },
+    {
+      "info": "新美 南吉",
+      "info2": "にいみ なんきち",
+      "word": "niimi nankiti"
+    },
+    {
+      "info": "たけのこは　はじめ　じびたの　したに　いて、あっち　こっちへ　くぐって　いく　もので　あります。",
+      "info2": "たけのこは　はじめ　じびたの　したに　いて、あっち　こっちへ　くぐって　いく　もので　あります。",
+      "word": "takenokoha hazime zibitano sitani ite,atti kottihe kugutte iku monode arimasu."
+    },
+    {
+      "info": "そして、あめが　ふった　あとなどに　ぽこぽこと　つちから　あたまを　だすので　あります。",
+      "info2": "そして、あめが　ふった　あとなどに　ぽこぽこと　つちから　あたまを　だすので　あります。",
+      "word": "sosite,amega hutta atonadoni pokopokoto tutikara atamawo dasunode arimasu."
+    },
+    {
+      "info": "さて、この　おはなしは、まだ　その　たけのこが　じびたの　なかに　いた　ときの　ことです。",
+      "info2": "さて、この　おはなしは、まだ　その　たけのこが　じびたの　なかに　いた　ときの　ことです。",
+      "word": "sate,kono ohanasiha,mada sono takenokoga zibitano nakani ita tokino kotodesu."
+    },
+    {
+      "info": "たけのこたちは　とおくへ　いきたがって　しようが　ないので、おかあさんの　たけが、",
+      "info2": "たけのこたちは　とおくへ　いきたがって　しようが　ないので、おかあさんの　たけが、",
+      "word": "takenokotatiha tookuhe ikitagatte siyouga nainode,okaasannno takega,"
+    },
+    {
+      "info": "「そんなに　とおくへ　いっちゃ　いけないよ、やぶの　そとに　でると　うまの　あしに　ふまれるから」と　しかって　おりました。",
+      "info2": "「そんなに　とおくへ　いっちゃ　いけないよ、やぶの　そとに　でると　うまの　あしに　ふまれるから」と　しかって　おりました。",
+      "word": "[sonnnani tookuhe ittya ikenaiyo,yabuno sotoni deruto umano asini humarerukara]to sikatte orimasita."
+    },
+    {
+      "info": "しかし、いくら　しかられても、ひとつの　たけのこは　どんどん　とおくへ　もぐって　いくので　ありました。",
+      "info2": "しかし、いくら　しかられても、ひとつの　たけのこは　どんどん　とおくへ　もぐって　いくので　ありました。",
+      "word": "sikasi,ikura sikararetemo,hitotuno takenokoha dondon tookuhe mogutte ikunode arimasita."
+    },
+    {
+      "info": "「おまえは　なぜ　おかあさんの　いう　ことを　きかないの」と　おかあさんの　たけが　ききました。",
+      "info2": "「おまえは　なぜ　おかあさんの　いう　ことを　きかないの」と　おかあさんの　たけが　ききました。",
+      "word": "[omaeha naze okaasannno iu kotowo kikanaino]to okaasannno takega kikimasita."
+    },
+    {
+      "info": "「あっちの　ほうで　うつくしい　やさしい　こえが　わたしを　よぶからです」と　その　たけのこは　こたえました。",
+      "info2": "「あっちの　ほうで　うつくしい　やさしい　こえが　わたしを　よぶからです」と　その　たけのこは　こたえました。",
+      "word": "[attino houde utukusii yasasii koega watasiwo yobukaradesu]to sono takenokoha kotaemasita."
+    },
+    {
+      "info": "「わたしたちには　なんにも　きこえやしない」と　ほかの　たけのこたちは　いいました。",
+      "info2": "「わたしたちには　なんにも　きこえやしない」と　ほかの　たけのこたちは　いいました。",
+      "word": "[watasitatiniha nannnimo kikoeyasinai]to hokano takenokotatiha iimasita."
+    },
+    {
+      "info": "「けれど、わたしには　きこえます。それは　もう　なんとも　いわれぬ　よい　こえです」と　その　たけのこは　いいました。",
+      "info2": "「けれど、わたしには　きこえます。それは　もう　なんとも　いわれぬ　よい　こえです」と　その　たけのこは　いいました。",
+      "word": "[keredo,watasiniha kikoemasu.soreha mou nantomo iwarenu yoi koedesu]to sono takenokoha iimasita."
+    },
+    {
+      "info": "そして　どんどん　はなれて　いきました。",
+      "info2": "そして　どんどん　はなれて　いきました。",
+      "word": "sosite dondon hanarete ikimasita."
+    },
+    {
+      "info": "とうとう　この　たけのこは　ほかの　たけのこたちと　わかれて、かきねの　そとに　あたまを　だして　しまいました。",
+      "info2": "とうとう　この　たけのこは　ほかの　たけのこたちと　わかれて、かきねの　そとに　あたまを　だして　しまいました。",
+      "word": "toutou kono takenokoha hokano takenokotatito wakarete,kakineno sotoni atamawo dasite simaimasita."
+    },
+    {
+      "info": "すると　そこへ　よこぶえを　もった　ひとが　ちかよって　きて、「おや、おまえは　まいごの　たけのこだね」と　いいました。",
+      "info2": "すると　そこへ　よこぶえを　もった　ひとが　ちかよって　きて、「おや、おまえは　まいごの　たけのこだね」と　いいました。",
+      "word": "suruto sokohe yokobuewo motta hitoga tikayotte kite,[oya,omaeha maigono takenokodane]to iimasita."
+    },
+    {
+      "info": "「いえいえ、わたしは、あなたの　ふいて　いらっしゃった、その　ふえの　こえが　あんまり　よかったので、",
+      "info2": "「いえいえ、わたしは、あなたの　ふいて　いらっしゃった、その　ふえの　こえが　あんまり　よかったので、",
+      "word": "[ieie,watasiha,anatano huite irassyatta,sono hueno koega anmari yokattanode,"
+    },
+    {
+      "info": "こっちへ　さそわれて　きました」と　たけのこは　こたえました。",
+      "info2": "こっちへ　さそわれて　きました」と　たけのこは　こたえました。",
+      "word": "kottihe sasowarete kimasita]to takenokoha kotaemasita."
+    },
+    {
+      "info": "さて、この　たけのこは　おおきく　かたく　なった　とき、りっぱな　よこぶえと　なりました。",
+      "info2": "さて、この　たけのこは　おおきく　かたく　なった　とき、りっぱな　よこぶえと　なりました。",
+      "word": "sate,kono takenokoha ookiku kataku natta toki,rippana yokobueto narimasita."
+    }
+  ],
+  "links": [
+    {
+      "site": "青空文庫",
+      "name": "図書カード",
+      "link": "https://www.aozora.gr.jp/cards/000121/card4725.html"
+    }
+  ]
+}

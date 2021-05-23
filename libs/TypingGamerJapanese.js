@@ -3,7 +3,10 @@ import jChars from '~/libs/TypingJapaneseChars'
 export class TypingGamerJapanese {
   init(word) {
     if (!word.wordState.current) {
-      const { jc, ec } = jChars.typeCharsToJapaneseChars(word.wordState.word)
+      const { jc, ec } = jChars.typeCharsToJapaneseChars(
+        word.wordState.word,
+        word.infoState.word
+      )
       word.infoState.push(jc.length)
       word.wordState.push(ec.length)
     }
@@ -21,7 +24,8 @@ export class TypingGamerJapanese {
 
         if (word.wordState.rightWord) {
           const { jc, ec } = jChars.typeCharsToJapaneseChars(
-            word.wordState.rightWord
+            word.wordState.rightWord,
+            word.infoState.rightWord
           )
           word.infoState.push(jc.length)
           word.wordState.push(ec.length)
@@ -31,13 +35,15 @@ export class TypingGamerJapanese {
       return true
     }
 
-    if (char === 'n') {
-      if (word.infoState.leftWord.endsWith('ん')) {
-        if (/[^n]n$/.test(word.wordState.leftWord)) {
-          word.wordState.pushLeft('n')
-          return true
-        }
-      }
+    if (
+      jChars.allowDoubleN(
+        char,
+        word.wordState.leftWord,
+        word.infoState.leftWord
+      )
+    ) {
+      word.wordState.pushLeft(char)
+      return true
     }
 
     const { jc, ec } = jChars.typeCharsFindJapaneseChars(

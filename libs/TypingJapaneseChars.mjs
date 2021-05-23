@@ -129,7 +129,7 @@ const JapaneseToTypeCharList = [
   ['しょ', 'syo,sho'],
   ['じゃ', 'jya'],
   ['じぃ', 'jyi'],
-  ['じゅ', 'jyu'],
+  ['じゅ', 'ju,jyu'],
   ['じぇ', 'jye'],
   ['じょ', 'jyo'],
   ['す', 'su'],
@@ -313,7 +313,7 @@ const JapaneseToTypeCharList = [
   ['っしょ', 'ssyo,ssho'],
   ['っじゃ', 'jjya'],
   ['っじぃ', 'jjyi'],
-  ['っじゅ', 'jjyu'],
+  ['っじゅ', 'jju,jjyu'],
   ['っじぇ', 'jjye'],
   ['っじょ', 'jjyo'],
   ['っちゃ', 'ttya,ccha'],
@@ -389,6 +389,8 @@ const JapaneseToTypeCharList = [
   ['―', '-'],
   ['『', '['],
   ['』', ']'],
+  ['《', '['],
+  ['》', ']'],
 ]
 
 const TypeCharToJapaneseMap = JapaneseToTypeCharList.reduce(
@@ -445,9 +447,7 @@ function typeJapaneseCharsMap(text, length, useKana = false) {
     const { d1, d2, d3 } = toHira({ c1, c2, c3 })
 
     if (d1 === 'ん') {
-      if (!d2) {
-        maps.push({ jc: c1, ec: 'nn' })
-      } else if ('あいうえおん'.includes(c2)) {
+      if (!d2 || 'あいうえおなにぬねのん'.includes(d2[1])) {
         maps.push({ jc: c1, ec: 'nn' })
       } else {
         maps.push({ jc: c1, ec: 'n' })
@@ -474,21 +474,24 @@ function typeJapaneseChars(text, length) {
     .join('')
 }
 
-function typeCharsToJapaneseChars(chars) {
-  const c1 = chars[0]
-  const c2 = c1 + (chars[1] || '')
-  const c3 = c2 + (chars[2] || '')
-  const c4 = c3 + (chars[3] || '')
+function typeCharsToJapaneseChars(typeChars, jpChars) {
+  const c1 = typeChars[0]
+  const c2 = c1 + (typeChars[1] || '')
+  const c3 = c2 + (typeChars[2] || '')
+  const c4 = c3 + (typeChars[3] || '')
+
+  if (jpChars[0] === 'ん') {
+    if (!jpChars[1] || 'あいうえおなにぬねのん'.includes(jpChars[1])) {
+      return { jc: 'ん', ec: 'nn' }
+    } else {
+      return { jc: 'ん', ec: 'n' }
+    }
+  }
 
   for (const c of [c4, c3, c2, c1]) {
     const jc = TypeCharToJapaneseMap[c]
     if (jc) {
       return { jc, ec: c }
-    }
-    if (c === c2) {
-      if (/^n[^n]$/.test(c)) {
-        return { jc: 'ん', ec: 'n' }
-      }
     }
   }
   return { jc: null, ec: null }
@@ -506,10 +509,23 @@ function typeCharsFindJapaneseChars(typeChars, jpChars) {
   return { jc: null, ec: null }
 }
 
+function allowDoubleN(typeChar, typeChars, jpChars) {
+  if (typeChar === 'n') {
+    if (jpChars.endsWith('ん')) {
+      const m = (typeChars || '').match(/n+$/)
+      if (m && m[0].length % 2 === 1) {
+        return true
+      }
+    }
+  }
+  return false
+}
+
 export default {
   kana2Hira,
   typeJapaneseChars,
   typeJapaneseCharsMap,
   typeCharsToJapaneseChars,
   typeCharsFindJapaneseChars,
+  allowDoubleN,
 }

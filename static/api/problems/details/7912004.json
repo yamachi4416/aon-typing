@@ -1,0 +1,106 @@
+{
+  "id": "7912004",
+  "title": "うさぎとかめ",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00014",
+      "name": "童謡"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "もしもし かめよ かめさんよ",
+      "info2": "もしもし かめよ かめさんよ",
+      "word": "mosimosi kameyo kamesanyo"
+    },
+    {
+      "info": "せかいのうちで おまえほど",
+      "info2": "せかいのうちで おまえほど",
+      "word": "sekainoutide omaehodo"
+    },
+    {
+      "info": "あゆみの のろい ものはない",
+      "info2": "あゆみの のろい ものはない",
+      "word": "ayumino noroi monohanai"
+    },
+    {
+      "info": "どうして そんなに のろいのか",
+      "info2": "どうして そんなに のろいのか",
+      "word": "dousite sonnnani noroinoka"
+    },
+    {
+      "info": "なんと おっしゃる うさぎさん",
+      "info2": "なんと おっしゃる うさぎさん",
+      "word": "nanto ossyaru usagisan"
+    },
+    {
+      "info": "そんなら おまえと かけくらべ",
+      "info2": "そんなら おまえと かけくらべ",
+      "word": "sonnnara omaeto kakekurabe"
+    },
+    {
+      "info": "むこうの 小山の ふもとまで",
+      "info2": "むこうの こやまの ふもとまで",
+      "word": "mukouno koyamano humotomade"
+    },
+    {
+      "info": "どちらが さきに かけつくか",
+      "info2": "どちらが さきに かけつくか",
+      "word": "dotiraga sakini kaketukuka"
+    },
+    {
+      "info": "どんなに かめが いそいでも",
+      "info2": "どんなに かめが いそいでも",
+      "word": "donnnani kamega isoidemo"
+    },
+    {
+      "info": "どうせ ばんまで かかるだろ",
+      "info2": "どうせ ばんまで かかるだろ",
+      "word": "douse banmade kakarudaro"
+    },
+    {
+      "info": "ここらで ちょっと 一ねむり",
+      "info2": "ここらで ちょっと ひとねむり",
+      "word": "kokorade tyotto hitonemuri"
+    },
+    {
+      "info": "グーグーグーグー グーグーグー",
+      "info2": "ぐーぐーぐーぐー ぐーぐーぐー",
+      "word": "gu-gu-gu-gu- gu-gu-gu-"
+    },
+    {
+      "info": "これは ねすぎた しくじった",
+      "info2": "これは ねすぎた しくじった",
+      "word": "koreha nesugita sikuzitta"
+    },
+    {
+      "info": "ピョンピョンピョンピョン ピョンピョンピョン",
+      "info2": "ぴょんぴょんぴょんぴょん ぴょんぴょんぴょん",
+      "word": "pyonpyonpyonpyon pyonpyonpyon"
+    },
+    {
+      "info": "あんまりおそい うさぎさん",
+      "info2": "あんまりおそい うさぎさん",
+      "word": "anmariosoi usagisan"
+    },
+    {
+      "info": "さっきのじまんは どうしたの",
+      "info2": "さっきのじまんは どうしたの",
+      "word": "sakkinozimanha dousitano"
+    }
+  ],
+  "links": [
+    {
+      "site": "童謡・唱歌の世界",
+      "name": "うさぎとかめ",
+      "link": "https://s-pst.info/00_sound/1086_k.htm"
+    }
+  ]
+}

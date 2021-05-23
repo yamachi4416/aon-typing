@@ -1,0 +1,254 @@
+{
+  "id": "1010001",
+  "title": "47都道府県",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00007",
+      "name": "地理"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "北海道",
+      "info2": "ほっかいどう",
+      "word": "hokkaidou"
+    },
+    {
+      "info": "青森県",
+      "info2": "あおもりけん",
+      "word": "aomoriken"
+    },
+    {
+      "info": "岩手県",
+      "info2": "いわてけん",
+      "word": "iwateken"
+    },
+    {
+      "info": "宮城県",
+      "info2": "みやぎけん",
+      "word": "miyagiken"
+    },
+    {
+      "info": "秋田県",
+      "info2": "あきたけん",
+      "word": "akitaken"
+    },
+    {
+      "info": "山形県",
+      "info2": "やまがたけん",
+      "word": "yamagataken"
+    },
+    {
+      "info": "福島県",
+      "info2": "ふくしまけん",
+      "word": "hukusimaken"
+    },
+    {
+      "info": "茨城県",
+      "info2": "いばらきけん",
+      "word": "ibarakiken"
+    },
+    {
+      "info": "栃木県",
+      "info2": "とちぎけん",
+      "word": "totigiken"
+    },
+    {
+      "info": "群馬県",
+      "info2": "ぐんまけん",
+      "word": "gunmaken"
+    },
+    {
+      "info": "埼玉県",
+      "info2": "さいたまけん",
+      "word": "saitamaken"
+    },
+    {
+      "info": "千葉県",
+      "info2": "ちばけん",
+      "word": "tibaken"
+    },
+    {
+      "info": "東京都",
+      "info2": "とうきょうと",
+      "word": "toukyouto"
+    },
+    {
+      "info": "神奈川県",
+      "info2": "かながわけん",
+      "word": "kanagawaken"
+    },
+    {
+      "info": "新潟県",
+      "info2": "にいがたけん",
+      "word": "niigataken"
+    },
+    {
+      "info": "富山県",
+      "info2": "とやまけん",
+      "word": "toyamaken"
+    },
+    {
+      "info": "石川県",
+      "info2": "いしかわけん",
+      "word": "isikawaken"
+    },
+    {
+      "info": "福井県",
+      "info2": "ふくいけん",
+      "word": "hukuiken"
+    },
+    {
+      "info": "山梨県",
+      "info2": "やまなしけん",
+      "word": "yamanasiken"
+    },
+    {
+      "info": "長野県",
+      "info2": "ながのけん",
+      "word": "naganoken"
+    },
+    {
+      "info": "岐阜県",
+      "info2": "ぎふけん",
+      "word": "gihuken"
+    },
+    {
+      "info": "静岡県",
+      "info2": "しずおかけん",
+      "word": "sizuokaken"
+    },
+    {
+      "info": "愛知県",
+      "info2": "あいちけん",
+      "word": "aitiken"
+    },
+    {
+      "info": "三重県",
+      "info2": "みえけん",
+      "word": "mieken"
+    },
+    {
+      "info": "滋賀県",
+      "info2": "しがけん",
+      "word": "sigaken"
+    },
+    {
+      "info": "京都府",
+      "info2": "きょうとふ",
+      "word": "kyoutohu"
+    },
+    {
+      "info": "大阪府",
+      "info2": "おおさかふ",
+      "word": "oosakahu"
+    },
+    {
+      "info": "兵庫県",
+      "info2": "ひょうごけん",
+      "word": "hyougoken"
+    },
+    {
+      "info": "奈良県",
+      "info2": "ならけん",
+      "word": "naraken"
+    },
+    {
+      "info": "和歌山県",
+      "info2": "わかやまけん",
+      "word": "wakayamaken"
+    },
+    {
+      "info": "鳥取県",
+      "info2": "とっとりけん",
+      "word": "tottoriken"
+    },
+    {
+      "info": "島根県",
+      "info2": "しまねけん",
+      "word": "simaneken"
+    },
+    {
+      "info": "岡山県",
+      "info2": "おかやまけん",
+      "word": "okayamaken"
+    },
+    {
+      "info": "広島県",
+      "info2": "ひろしまけん",
+      "word": "hirosimaken"
+    },
+    {
+      "info": "山口県",
+      "info2": "やまぐちけん",
+      "word": "yamagutiken"
+    },
+    {
+      "info": "徳島県",
+      "info2": "とくしまけん",
+      "word": "tokusimaken"
+    },
+    {
+      "info": "香川県",
+      "info2": "かがわけん",
+      "word": "kagawaken"
+    },
+    {
+      "info": "愛媛県",
+      "info2": "えひめけん",
+      "word": "ehimeken"
+    },
+    {
+      "info": "高知県",
+      "info2": "こうちけん",
+      "word": "koutiken"
+    },
+    {
+      "info": "福岡県",
+      "info2": "ふくおかけん",
+      "word": "hukuokaken"
+    },
+    {
+      "info": "佐賀県",
+      "info2": "さがけん",
+      "word": "sagaken"
+    },
+    {
+      "info": "長崎県",
+      "info2": "ながさきけん",
+      "word": "nagasakiken"
+    },
+    {
+      "info": "熊本県",
+      "info2": "くまもとけん",
+      "word": "kumamotoken"
+    },
+    {
+      "info": "大分県",
+      "info2": "おおいたけん",
+      "word": "ooitaken"
+    },
+    {
+      "info": "宮崎県",
+      "info2": "みやざきけん",
+      "word": "miyazakiken"
+    },
+    {
+      "info": "鹿児島県",
+      "info2": "かごしまけん",
+      "word": "kagosimaken"
+    },
+    {
+      "info": "沖縄県",
+      "info2": "おきなわけん",
+      "word": "okinawaken"
+    }
+  ]
+}

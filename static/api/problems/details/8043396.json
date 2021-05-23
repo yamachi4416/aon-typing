@@ -1,0 +1,160 @@
+{
+  "id": "8043396",
+  "title": "カナヅチ（新美南吉）",
+  "type": "japanese",
+  "skip": false,
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00015",
+      "name": "青空文庫"
+    },
+    {
+      "id": "00016",
+      "name": "日本文学"
+    },
+    {
+      "id": "00017",
+      "name": "物語"
+    }
+  ],
+  "createdAt": "2021-05-31",
+  "updatedAt": "2021-05-31",
+  "words": [
+    {
+      "info": "カナヅチ",
+      "info2": "かなづち",
+      "word": "kanaduti"
+    },
+    {
+      "info": "新美 南吉",
+      "info2": "にいみ なんきち",
+      "word": "niimi nankiti"
+    },
+    {
+      "info": "ヒトリノ　フエフキガ　アリマシタ。フエヲ　一ポン　モツテ　イエイエノ　トグチニ　タツテ、",
+      "info2": "ひとりの　ふえふきが　ありました。ふえを　１ぽん　もつて　いえいえの　とぐちに　たつて、",
+      "word": "hitorino huehukiga arimasita.huewo 1pon motute ieieno togutini tatute,"
+    },
+    {
+      "info": "ヒロ　ヒロ　ヒート　カナシイ　オトヲ　フルハセ、一セン　二センヲ　モラツテ　タビヲ　シマシタ。",
+      "info2": "ひろ　ひろ　ひーと　かなしい　おとを　ふるはせ、１せん　２せんを　もらつて　たびを　しました。",
+      "word": "hiro hiro hi-to kanasii otowo huruhase,1sen 2senwo moratute tabiwo simasita."
+    },
+    {
+      "info": "アル　ヒ　ミチバタデ　カナヅチヲ　一ツ　ヒロヒマシタ。「ナンダ　カナヅチカ、オンナジヤウナ　カタチヲ　シテ　ヰルガ、",
+      "info2": "ある　ひ　みちばたで　かなづちを　１つ　ひろひました。「なんだ　かなづちか、おんなじやうな　かたちを　して　ゐるが、",
+      "word": "aru hi mitibatade kanadutiwo 1tu hirohimasita.[nanda kanadutika,onnnaziyauna katatiwo site iruga,"
+    },
+    {
+      "info": "フエハ　ヨイ　オトヲ　タテヽ　ナルノニ、カナヅチハ　ナンニモ　ナラナイ。」ト　イヒマシタ。",
+      "info2": "ふえは　よい　おとを　たてて　なるのに、かなづちは　なんにも　ならない。」と　いひました。",
+      "word": "hueha yoi otowo tatete narunoni,kanadutiha nannnimo naranai.]to ihimasita."
+    },
+    {
+      "info": "デモ　ステナイデ、コシニ　サシ、ツギノ　ムラニ　ハイリマシタ。",
+      "info2": "でも　すてないで、こしに　さし、つぎの　むらに　はいりました。",
+      "word": "demo sutenaide,kosini sasi,tugino murani hairimasita."
+    },
+    {
+      "info": "テンカン　テンカント　イサマシイ　オトガ　シテ　ヰルノデ　イツテ　ミルト　カジヤデシタ。",
+      "info2": "てんかん　てんかんと　いさましい　おとが　して　ゐるので　いつて　みると　かじやでした。",
+      "word": "tenkan tenkanto isamasii otoga site irunode itute miruto kaziyadesita."
+    },
+    {
+      "info": "カジヤハ　マツカニ　ヤケタ　カネカラ　クワヲ　ツクツテ　ヰマシタ。",
+      "info2": "かじやは　まつかに　やけた　かねから　くわを　つくつて　ゐました。",
+      "word": "kaziyaha matukani yaketa kanekara kuwawo tukutute imasita."
+    },
+    {
+      "info": "デキアガツタ　クワガ　タクサン　ヘイタイノヤウニ　ナランデ　ヰマシタ。",
+      "info2": "できあがつた　くわが　たくさん　へいたいのやうに　ならんで　ゐました。",
+      "word": "dekiagatuta kuwaga takusan heitainoyauni narande imasita."
+    },
+    {
+      "info": "トコロガ　ミルト　カジヤノ　テニハ、カナヅチガ　ニギラレテ　ヰマシタ。「ナルホド、イママデ　キヅカズニ　ヰタガ、",
+      "info2": "ところが　みると　かじやの　てには、かなづちが　にぎられて　ゐました。「なるほど、いままで　きづかずに　ゐたが、",
+      "word": "tokoroga miruto kaziyano teniha,kanadutiga nigirarete imasita.[naruhodo,imamade kidukazuni itaga,"
+    },
+    {
+      "info": "カナヅチハ　クワヲ　ツクル　コトガ　デキルノダナ。」ト　フエフキハ　イヒマシタ。",
+      "info2": "かなづちは　くわを　つくる　ことが　できるのだな。」と　ふえふきは　いひました。",
+      "word": "kanadutiha kuwawo tukuru kotoga dekirunodana.]to huehukiha ihimasita."
+    },
+    {
+      "info": "スコシ　ユクト、オカノ　上ニ　ダイクガ　オホゼイデ　大キナ　ウチヲ　タテヽ　ヰマシタ。「ホウ、デカイ　ウチダゾ。オヤ、",
+      "info2": "すこし　ゆくと、おかの　うえに　だいくが　おほぜいで　おおきな　うちを　たてて　ゐました。「ほう、でかい　うちだぞ。おや、",
+      "word": "sukosi yukuto,okano ueni daikuga ohozeide ookina utiwo tatete imasita.[hou,dekai utidazo.oya,"
+    },
+    {
+      "info": "ナルホド、コノ　ウチモ　ヤツパリ　カナヅチガ　ツクルノダナ。」フエフキハ、",
+      "info2": "なるほど、この　うちも　やつぱり　かなづちが　つくるのだな。」ふえふきは、",
+      "word": "naruhodo,kono utimo yatupari kanadutiga tukurunodana.]huehukiha,"
+    },
+    {
+      "info": "タカイ　トコロデ　ハタライテ　ヰル　ダイクノ　テニ　カナヅチガ　ニギラレテ　ヰルノニ、",
+      "info2": "たかい　ところで　はたらいて　ゐる　だいくの　てに　かなづちが　にぎられて　ゐるのに、",
+      "word": "takai tokorode hataraite iru daikuno teni kanadutiga nigirarete irunoni,"
+    },
+    {
+      "info": "ハジメテ　キガ　ツイタヤウニ　オドロキマシタ。ソレカラ　スコシ　イクト　フエフキハ　小サナ　クツヤノ　マエニ　キマシタ。",
+      "info2": "はじめて　きが　ついたやうに　おどろきました。それから　すこし　いくと　ふえふきは　ちいさな　くつやの　まえに　きました。",
+      "word": "hazimete kiga tuitayauni odorokimasita.sorekara sukosi ikuto huehukiha tiisana kutuyano maeni kimasita."
+    },
+    {
+      "info": "クツヤノ　ヂイサンハ　一リデ　セツセト　クツヲ　ツクツテ　ヰテ、フエフキガ　フエヲ　フキハジメルト、",
+      "info2": "くつやの　ぢいさんは　１りで　せつせと　くつを　つくつて　ゐて、ふえふきが　ふえを　ふきはじめると、",
+      "word": "kutuyano diisanha 1ride setuseto kutuwo tukutute ite,huehukiga huewo hukihazimeruto,"
+    },
+    {
+      "info": "「ウルサイカラ　イツテ　オクレ。」ト　イヒマシタ。",
+      "info2": "「うるさいから　いつて　おくれ。」と　いひました。",
+      "word": "[urusaikara itute okure.]to ihimasita."
+    },
+    {
+      "info": "「ヂイサン、マア　オキヽヨ、オレノ　フエハ　トテモ　スバラシインダゼ。」",
+      "info2": "「ぢいさん、まあ　おききよ、おれの　ふえは　とても　すばらしいんだぜ。」",
+      "word": "[diisan,maa okikiyo,oreno hueha totemo subarasiindaze.]"
+    },
+    {
+      "info": "「ソンナ　モノガ　ナンニ　ナル。」ト　イツテ　クツヲ　タヽイテルノヲ　ミルト　ヤツパリ　カナヅチデス。",
+      "info2": "「そんな　ものが　なんに　なる。」と　いつて　くつを　たたいてるのを　みると　やつぱり　かなづちです。",
+      "word": "[sonnna monoga nannni naru.]to itute kutuwo tataiterunowo miruto yatupari kanadutidesu."
+    },
+    {
+      "info": "「カナヅチハ　クツモ　ツクルンダナ。」ト　フエフキガ　ヒトリゴトヲ　イフト　ヂイサンハ　カホヲ　アゲテ、",
+      "info2": "「かなづちは　くつも　つくるんだな。」と　ふえふきが　ひとりごとを　いふと　ぢいさんは　かほを　あげて、",
+      "word": "[kanadutiha kutumo tukurundana.]to huehukiga hitorigotowo ihuto diisanha kahowo agete,"
+    },
+    {
+      "info": "「サウサ、カナヅチハ　ナンデモ　ツクルンダ。",
+      "info2": "「さうさ、かなづちは　なんでも　つくるんだ。",
+      "word": "[sausa,kanadutiha nandemo tukurunda."
+    },
+    {
+      "info": "オンナジヤウナ　カタチヲ　シテ　ヰテモ、フエナンカ　ピロ　ピロト　ナクダケヂヤ。」ト　イヒマシタ。",
+      "info2": "おんなじやうな　かたちを　して　ゐても、ふえなんか　ぴろ　ぴろと　なくだけぢや。」と　いひました。",
+      "word": "onnnaziyauna katatiwo site itemo,huenanka piro piroto nakudakediya.]to ihimasita."
+    },
+    {
+      "info": "フエフキハ　ツギノ　マチヘ　ハイル　ミチデ、ヒロツタ　カナヅチヲ　フリアゲ、クシヤント　フエヲ　クダイテ　シマヒマシタ。",
+      "info2": "ふえふきは　つぎの　まちへ　はいる　みちで、ひろつた　かなづちを　ふりあげ、くしやんと　ふえを　くだいて　しまひました。",
+      "word": "huehukiha tugino matihe hairu mitide,hirotuta kanadutiwo huriage,kusiyanto huewo kudaite simahimasita."
+    },
+    {
+      "info": "ソシテ　シツカリト　カナヅチヲ　ニギリシメテ、コウババカリノ　マチヘ　マツスグ　アルイテ　ユキマシタ。",
+      "info2": "そして　しつかりと　かなづちを　にぎりしめて、こうばばかりの　まちへ　まつすぐ　あるいて　ゆきました。",
+      "word": "sosite situkarito kanadutiwo nigirisimete,koubabakarino matihe matusugu aruite yukimasita."
+    }
+  ],
+  "links": [
+    {
+      "site": "青空文庫",
+      "name": "図書カード",
+      "link": "https://www.aozora.gr.jp/cards/000121/card43396.html"
+    }
+  ]
+}
