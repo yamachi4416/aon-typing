@@ -15,15 +15,15 @@
             <dl>
               <dt>タグ</dt>
               <dd class="detail-info-info-tags">
-                <div class="detail-info-info-tags-list">
-                  <span
+                <div class="detail-info-info-tags-list buttons">
+                  <button
                     v-for="(tag, i) in detail.tags"
                     :key="`tag-${i}`"
-                    class="detail-info-info-tags-list-item"
+                    class="detail-info-info-tags-list-item button"
                     @click="selectTag(tag.id)"
                   >
                     {{ tag.name }}
-                  </span>
+                  </button>
                 </div>
               </dd>
             </dl>
@@ -161,22 +161,22 @@ export default {
         }
 
         & > * {
+          display: flex;
+          align-items: center;
+
+          & > * {
+            flex: 1;
+          }
+
           & > dt {
             padding: 5px 0px;
             color: #666;
+            white-space: nowrap;
+            max-width: 5em;
           }
           & > dd {
             padding: 5px;
-          }
-          @include __media_l {
-            display: flex;
-            & > dt {
-              white-space: nowrap;
-              max-width: 8em;
-            }
-            & > * {
-              flex: 1;
-            }
+            flex: 1;
           }
         }
       }
@@ -185,16 +185,14 @@ export default {
         &-list {
           display: flex;
           flex-wrap: wrap;
+          justify-content: flex-start;
           gap: 5px;
           &-item {
-            cursor: pointer;
-            font-size: 0.9em;
+            font-size: 1em;
             background: rgba(255, 153, 0, 1);
             color: #fff;
-            padding: 0 8px;
-            border-radius: 10px;
-            line-height: 1.8em;
-            text-decoration: none;
+            padding: 0 1em;
+            border: none;
           }
         }
       }

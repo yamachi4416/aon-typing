@@ -1,59 +1,75 @@
 <template>
-  <div class="problem-select-page">
-    <problem-select-panel
-      :show="show"
-      :problems="problems"
-      @select="close"
-      @cancel="close"
-    />
+  <div class="game-menu-problems">
+    <modal-panel :show="show">
+      <modal-content
+        class="game-menu-problems-select-panel"
+        title="タイピング問題の選択"
+        @close="close"
+      >
+        <problem-list
+          v-slot="{ problem }"
+          :problems="problems"
+          @tag="selectTag"
+        >
+          <div class="buttons">
+            <button class="button" @click="selectProblem(problem)">
+              選択する
+            </button>
+          </div>
+        </problem-list>
+      </modal-content>
+    </modal-panel>
+    <nuxt-child back-url="backUrl" @closePrev="closeThis" />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import ProblemSelectPanel from '~/components/panels/ProblemSelectPanel.vue'
+import { mapGetters, mapMutations } from 'vuex'
+import ProblemList from '~/components/modules/problems/ProblemList.vue'
+import ModalContent from '~/components/parts/ModalContent.vue'
+import ModalPanel from '~/components/parts/ModalPanel.vue'
+import { ModalContentMixin } from '~/mixins/ModalContentMixin'
+
 export default {
-  components: { ProblemSelectPanel },
-  props: {
-    backUrl: {
-      type: String,
-      default: null,
-    },
-  },
-  data() {
-    return {
-      show: false,
-    }
-  },
+  components: { ModalPanel, ModalContent, ProblemList },
+  mixins: [ModalContentMixin],
   computed: {
     ...mapGetters({
       problems: 'problems/problems',
     }),
   },
-  mounted() {
-    this.show = true
-  },
   methods: {
+    ...mapMutations('typingSetting', ['setProblemId']),
     close() {
       this.show = false
-      setTimeout(() => {
-        if (this.backUrl) {
-          this.$router.back()
-        } else {
-          this.$router.replace({ name: 'game-menu' })
-        }
-      }, 300)
+      this.backOrReplace({ name: 'game-menu' })
+    },
+    selectProblem(problem) {
+      this.setProblemId(problem.id)
+      this.close()
+    },
+    selectTag(tag) {
+      this.$router.push({
+        name: 'game-menu-problems-tags-id',
+        params: {
+          id: tag.id,
+        },
+      })
     },
   },
 }
 </script>
 
 <style lang="scss">
-.problem-select-page {
-  .para-section-main {
-    border: 2px solid #333;
-    .problem-list-item {
-      color: #333;
+.game-menu-problems {
+  &-select-panel {
+    width: 100%;
+    height: 100%;
+    .para-section-main {
+      border: 2px solid #333;
+      .problem-list-item {
+        color: #333;
+      }
     }
   }
 }

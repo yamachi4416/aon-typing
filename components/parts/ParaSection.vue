@@ -27,7 +27,6 @@ export default {}
   display: flex;
   z-index: 0;
   &:hover {
-    transition: z-index 0.3s;
     z-index: 1;
   }
 

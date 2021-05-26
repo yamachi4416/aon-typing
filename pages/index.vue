@@ -40,7 +40,10 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import BasicHeader from '~/components/layout/BasicHeader.vue'
+import Util from '~/libs/Util'
+
 export default {
   components: { BasicHeader },
   data() {
@@ -54,15 +57,17 @@ export default {
     }
   },
   methods: {
-    async scrollTop(query) {
+    ...mapMutations('uiStatus', ['setScrolling']),
+    async scrollTop(route) {
+      this.setScrolling(true)
+
       if (Object.keys(this.$route.query).length) {
-        this.$router.push(query)
+        await this.$router.push({ ...route, query: null })
         await this.$nextTick()
       }
-      document.scrollingElement.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      })
+
+      await Util.scrollTo(this.$el)
+      this.setScrolling(false)
     },
   },
 }

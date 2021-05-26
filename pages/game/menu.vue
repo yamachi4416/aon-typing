@@ -5,9 +5,8 @@
       @start="startTyping"
       @cancel="cancel"
       @openProblemSelect="openProblemSelect"
-    >
-      <nuxt-child :back-url="backUrl" />
-    </typing-menu-panel>
+    />
+    <nuxt-child :back-url="backUrl" />
   </div>
 </template>
 
@@ -16,7 +15,12 @@ import TypingMenuPanel from '~/components/panels/TypingMenuPanel.vue'
 
 export default {
   components: { TypingMenuPanel },
-
+  beforeRouteLeave(to, from, next) {
+    this.show = false
+    setTimeout(() => {
+      next()
+    }, 300)
+  },
   props: {
     backUrl: {
       type: String,
@@ -42,10 +46,7 @@ export default {
 
   methods: {
     startTyping() {
-      this.show = false
-      setTimeout(() => {
-        this.$router.push({ name: 'game-play' })
-      }, 300)
+      this.$router.push({ name: 'game-play' })
     },
 
     openProblemSelect() {
@@ -53,14 +54,11 @@ export default {
     },
 
     cancel() {
-      this.show = false
-      setTimeout(() => {
-        if (this.backUrl) {
-          this.$router.back()
-        } else {
-          this.$router.replace('/')
-        }
-      }, 300)
+      if (this.backUrl) {
+        this.$router.back()
+      } else {
+        this.$router.replace('/')
+      }
     },
   },
 }

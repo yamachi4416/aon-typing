@@ -24,14 +24,39 @@ const getScrollContainer = (node) => {
   }
 
   if (node.scrollHeight > node.clientHeight) {
+    if (node.tagName === 'HTML') {
+      return window
+    }
     return node
   } else {
     return getScrollContainer(node.parentNode)
   }
 }
 
+const scrollTo = (node, { top = 0, behavior = 'smooth' }) => {
+  return new Promise((resolve) => {
+    const sc = getScrollContainer(node)
+    if (!sc) {
+      resolve()
+    }
+
+    const check =
+      sc === window ? () => window.scrollY === top : () => sc.scrollTop === top
+    const handler = () => {
+      if (check()) {
+        resolve()
+      }
+    }
+
+    sc.addEventListener('scroll', handler)
+    handler()
+    sc.scrollTo({ top, behavior })
+  })
+}
+
 export default {
   countDown,
   wait,
   getScrollContainer,
+  scrollTo,
 }

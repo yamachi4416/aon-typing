@@ -3,7 +3,6 @@
     :lists="lists"
     :page="page"
     :max-page="maxPage"
-    :stop-paging="stopPaging"
     @change="changePage"
   >
     <template #default="sp">
@@ -50,11 +49,7 @@ export default {
     },
     pageSize: {
       type: Number,
-      default: 18,
-    },
-    stopPaging: {
-      type: Boolean,
-      default: false,
+      default: 12,
     },
   },
   data() {
@@ -67,22 +62,27 @@ export default {
       const start = (this.page - 1) * this.pageSize
       const end = this.page * this.pageSize
       return [
-        this.page > 1
-          ? this.problems.slice(start - this.pageSize, start)
-          : null,
+        this.page > 1 ? this.problems.slice(start - this.pageSize, start) : [],
         this.problems.slice(start, end),
         this.page < this.maxPage
           ? this.problems.slice(end, end + this.pageSize)
-          : null,
+          : [],
       ]
     },
   },
   watch: {
-    '$route.query.page'(page) {
-      Object.assign(this, this.pageParam(page))
+    $route(to, from) {
+      if (to.name === from.name) {
+        if (to.query.page || from.query.page) {
+          if (to.query.page !== from.query.page) {
+            Object.assign(this, this.pageParam(to.query.page))
+          }
+        }
+      }
     },
     problems() {
       this.maxPage = Math.ceil(this.problems.length / this.pageSize)
+      Object.assign(this, this.pageParam(this.$route.query.page))
     },
   },
   methods: {

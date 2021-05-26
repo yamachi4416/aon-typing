@@ -77,6 +77,16 @@ export default {
             }
           })
         )
+        .concat(
+          Object.values(require('./static/api/tags.json')).map((p) => {
+            return {
+              route: '/game/menu/problems/tags/' + p.id,
+              payload: JSON.parse(
+                fs.readFileSync(`./static/api/tags/${p.id}.json`)
+              ),
+            }
+          })
+        )
     },
   },
 }

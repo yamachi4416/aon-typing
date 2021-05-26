@@ -54,7 +54,7 @@ export default {
   }
 
   &-enter {
-    transform: translateY(-100%);
+    transform: translateY(-120%);
 
     &-active {
       transition: transform 0.5s;
@@ -67,7 +67,7 @@ export default {
     }
 
     &-to {
-      transform: translateY(-100%);
+      transform: translateY(-120%);
     }
   }
 }

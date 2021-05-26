@@ -21,15 +21,15 @@
           <div>{{ item.chars }}</div>
         </div>
         <div class="problem-list-item-main-detail-tags">
-          <div class="problem-list-item-main-detail-tags-list">
-            <span
+          <div class="problem-list-item-main-detail-tags-list buttons">
+            <button
               v-for="(tag, i) in item.tags"
               :key="`tag-${item.id}-${i}`"
-              class="problem-list-item-main-detail-tags-list-item"
+              class="problem-list-item-main-detail-tags-list-item button"
               @click="$emit('tag', tag)"
             >
               {{ tag.name }}
-            </span>
+            </button>
           </div>
         </div>
       </div>
@@ -99,19 +99,16 @@ export default {
       }
       &-tags {
         &-list {
-          display: flex;
           flex-wrap: wrap;
+          justify-content: flex-start;
           gap: 5px;
           padding: 10px 5px;
           &-item {
-            cursor: pointer;
             font-size: 0.8em;
             background: rgba(255, 153, 0, 1);
             color: #fff;
             padding: 0 8px;
-            border-radius: 10px;
-            line-height: 1.8em;
-            text-decoration: none;
+            border: none;
           }
         }
       }

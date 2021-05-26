@@ -1,17 +1,17 @@
 <template>
   <component :is="tag">
-    <span v-show="page > 1" ref="prev" class="prev-link" />
+    <span v-show="page > 1" ref="prev" class="prev-link" @click="prevPage" />
     <span ref="prevList">
-      <slot v-show="lists[0]" :list="lists[0]" />
+      <slot :list="lists[0]" />
     </span>
-    <span v-show="show" ref="mainList">
+    <span ref="mainList">
       <slot :list="lists[1]" />
     </span>
     <span ref="nextList">
-      <slot v-if="lists[2]" :list="lists[2]" />
+      <slot :list="lists[2]" />
     </span>
     <div
-      v-show="show && page < maxPage - 1"
+      v-show="page < maxPage - 1"
       ref="next"
       class="next-link"
       @click="nextPage"
@@ -20,7 +20,9 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Util from '~/libs/Util'
+
 export default {
   props: {
     lists: {
@@ -39,23 +41,23 @@ export default {
       type: String,
       default: 'div',
     },
-    stopPaging: {
-      type: Boolean,
-      default: false,
-    },
   },
   data() {
     return {
       show: true,
     }
   },
+  computed: {
+    ...mapGetters('uiStatus', ['scrolling']),
+  },
   mounted() {
     const prev = this.$refs.prev
     const next = this.$refs.next
     const obs = new IntersectionObserver(async (entries) => {
-      if (this.stopPaging) {
+      if (this.scrolling) {
         return
       }
+
       const entry = entries[0]
       if (entry.isIntersecting) {
         if (entry.target === prev) {
@@ -77,6 +79,9 @@ export default {
   },
   methods: {
     async prevPage() {
+      if (this.page <= 1) {
+        return
+      }
       const stop = (event) => event.preventDefault()
       const sc = Util.getScrollContainer(this.$el)
       sc.addEventListener('scroll', stop)
@@ -91,15 +96,17 @@ export default {
     async nextPage() {
       const stop = (event) => event.preventDefault()
       const sc = Util.getScrollContainer(this.$el)
+      sc.addEventListener('scroll', stop)
 
-      this.show = false
+      const pd =
+        this.page <= 1
+          ? this.$refs.mainList.getBoundingClientRect().height
+          : this.$refs.prevList.getBoundingClientRect().height
+
       this.$emit('change', this.page + 1)
       await this.$nextTick()
 
-      const pt = sc.scrollTop
-      this.show = true
-      await this.$nextTick()
-      sc.scrollTo(0, pt)
+      sc.scrollBy(0, -pd)
       sc.removeEventListener('scroll', stop)
     },
   },
