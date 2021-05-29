@@ -2,7 +2,7 @@
   <div class="game-layout">
     <section>
       <main>
-        <nuxt-child :back-url="backUrl" />
+        <nuxt-child />
       </main>
       <footer>
         <div>
@@ -14,22 +14,32 @@
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex'
 import PageBaseMixin from '~/mixins/PageBaseMixin'
+
 export default {
   mixins: [PageBaseMixin],
-  beforeRouteEnter(to, from, next) {
-    next((vm) => {
-      if (from.name) {
-        vm.backUrl = from.fullPath
+  async beforeRouteUpdate(to, from, next) {
+    await next()
+    if (to.path !== from.path) {
+      await this.$nuxt.$nextTick()
+      const { top = 0, left = 0, selector = null } = this.currentHist
+      if (selector) {
+        const el = document.querySelector(selector)
+        if (el) {
+          el.scrollTo({ top, left })
+        }
       }
-    })
-  },
-  data() {
-    return {
-      backUrl: null,
     }
   },
-  methods: {},
+  computed: {
+    ...mapGetters('uiStatus', ['currentHist']),
+  },
+  methods: {
+    ...mapMutations({
+      setScrolling: 'uiStatus/setScrolling',
+    }),
+  },
 }
 </script>
 

@@ -50,13 +50,6 @@ export default {
     CountDown,
   },
 
-  props: {
-    backUrl: {
-      type: String,
-      default: '',
-    },
-  },
-
   data() {
     return {
       setting: { ...this.$store.getters['typingSetting/setting'] },

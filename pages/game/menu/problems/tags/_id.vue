@@ -3,7 +3,7 @@
     <modal-panel :show="show">
       <modal-content
         class="game-menu-problems-tags-id-select-panel"
-        title="タイピング問題の選択"
+        :title="`タイピング問題の選択（タグ：${tag.name}）`"
         @close="close"
       >
         <transition name="fade">
@@ -48,26 +48,13 @@ import ProblemList from '~/components/modules/problems/ProblemList.vue'
 import TagInfo from '~/components/modules/problems/TagInfo.vue'
 import ModalContent from '~/components/parts/ModalContent.vue'
 import ModalPanel from '~/components/parts/ModalPanel.vue'
-import Util from '~/libs/Util'
 import { ModalContentMixin } from '~/mixins/ModalContentMixin'
 
 export default {
+  scrollContainer:
+    '.game-menu-problems-tags-id-select-panel .modal-content-main',
   components: { ProblemList, TagInfo, ModalPanel, ModalContent },
   mixins: [ModalContentMixin],
-  async beforeRouteUpdate(to, from, next) {
-    if (to.params?.id && to.params?.id !== from.params?.id) {
-      await next()
-      if (!this.push) {
-        await this.$nuxt.$nextTick()
-        await this.scrollToTop(this.backs.pop())
-      } else {
-        await this.scrollToTop(0)
-      }
-    } else {
-      await next()
-    }
-    this.push = false
-  },
   async asyncData({ params, store, payload }) {
     const tag = payload || (await store.dispatch('problems/getTag', params.id))
     return {
@@ -77,8 +64,11 @@ export default {
   data() {
     return {
       tags: null,
-      backs: this.backs || [],
-      push: this.push || false,
+    }
+  },
+  head() {
+    return {
+      title: `タイピング問題の選択（タグ：${this.tag?.name}）`,
     }
   },
   computed: {
@@ -101,10 +91,10 @@ export default {
       setProblemId: 'typingSetting/setProblemId',
     }),
     close() {
-      this.backOrReplace({ name: 'game-menu-problems' }, this.backs.length + 1)
+      this.backOrReplace({ name: 'game-menu-problems' })
     },
     back() {
-      if (this.backs.length) {
+      if (this.matchedBeforeHist(/^game-menu-problems-tags-id$/)) {
         this.$router.back()
       } else {
         this.close()
@@ -113,14 +103,10 @@ export default {
     selectProblem(problem) {
       this.closePrev()
       this.setProblemId(problem.id)
-      this.$router.replace({ name: 'game-menu' })
+      this.backOrReplace({ name: 'game-menu' })
     },
-    async selectTag(tag) {
+    selectTag(tag) {
       if (this.tag.id !== tag.id) {
-        this.push = true
-        this.backs.push(
-          Util.getScrollContainer(this.$refs.tagInfo.$el)?.scrollTop
-        )
         this.$router.push({
           params: { id: tag.id },
         })
@@ -132,21 +118,11 @@ export default {
             query,
             params: { id: tag.id },
           })
-        } else {
-          await this.scrollToTop(0, true)
         }
       }
     },
     selectTags(tags) {
       this.tags = tags
-    },
-    async scrollToTop(top = 0, smooth) {
-      this.setScrolling(true)
-      await Util.scrollTo(this.$refs.tagInfo.$el, {
-        top,
-        behavior: smooth ? 'smooth' : 'auto',
-      })
-      this.setScrolling(false)
     },
   },
 }

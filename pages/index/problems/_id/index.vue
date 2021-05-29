@@ -31,7 +31,7 @@
               v-if="detail.links && detail.links.length"
               class="detail-info-info-links"
             >
-              <dt>引用元サイト</dt>
+              <dt>引用元</dt>
               <dd>
                 <ul>
                   <li

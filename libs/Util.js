@@ -33,7 +33,7 @@ const getScrollContainer = (node) => {
   }
 }
 
-const scrollTo = (node, { top = 0, behavior = 'smooth' }) => {
+const scrollTo = (node, { top = 0, left = 0, behavior = 'smooth' } = {}) => {
   return new Promise((resolve) => {
     const sc = getScrollContainer(node)
     if (!sc) {
@@ -50,7 +50,7 @@ const scrollTo = (node, { top = 0, behavior = 'smooth' }) => {
 
     sc.addEventListener('scroll', handler)
     handler()
-    sc.scrollTo({ top, behavior })
+    sc.scrollTo({ top, left, behavior })
   })
 }
 

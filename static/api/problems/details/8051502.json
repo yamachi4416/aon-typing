@@ -37,7 +37,7 @@
     {
       "info": "姉さんは、庭前のつつじの枝に、はちの巣を見つけました。",
       "info2": "ねえさんは、にわさきのつつじのえだに、はちのすをみつけました。",
-      "word": "neesanha,niwasakinotutuzinoedani,hatinosuwomitukemasita."
+      "word": "neesanha,niwasakinotutujinoedani,hatinosuwomitukemasita."
     },
     {
       "info": "「まあ、こんなところへ巣を造って、あぶないから落としてしまおうか。」",
@@ -72,12 +72,12 @@
     {
       "info": "そして、同じようなことをうまずに繰り返していました。「このはち一ぴきだけだろうか。」",
       "info2": "そして、おなじようなことをうまずにくりかえしていました。「このはち１ぴきだけだろうか。」",
-      "word": "sosite,onaziyounakotowoumazunikurikaesiteimasita.[konohati1pikidakedarouka.]"
+      "word": "sosite,onajiyounakotowoumazunikurikaesiteimasita.[konohati1pikidakedarouka.]"
     },
     {
       "info": "彼女は、同じ一ぴきのはちが、往ったり返ったりして、働いているのしか見なかったからです。",
       "info2": "かのじょは、おなじ１ぴきのはちが、いったりかえったりして、はたらいているのしかみなかったからです。",
-      "word": "kanojyoha,onazi1pikinohatiga,ittarikaettarisite,hataraiteirunosikaminakattakaradesu."
+      "word": "kanojoha,onaji1pikinohatiga,ittarikaettarisite,hataraiteirunosikaminakattakaradesu."
     },
     {
       "info": "「勇ちゃんに、だまっていよう。」見つけたら、きっと巣を取るであろうと思いました。",
@@ -107,7 +107,7 @@
     {
       "info": "目をはなさずに見ていると、はちは、しばらくたって、つつじの枝の方へ飛んでいきました。",
       "info2": "めをはなさずにみていると、はちは、しばらくたって、つつじのえだのほうへとんでいきました。",
-      "word": "mewohanasazunimiteiruto,hatiha,sibarakutatte,tutuzinoedanohouhetondeikimasita."
+      "word": "mewohanasazunimiteiruto,hatiha,sibarakutatte,tutujinoedanohouhetondeikimasita."
     },
     {
       "info": "「やはりそうだわ。水を飲みにきたんでしょう。」",
@@ -117,7 +117,7 @@
     {
       "info": "翌朝、庭をそうじするときに、姉さんは、はちがどうしているだろうとわざわざつつじの木のところへいって、巣をのぞいてみました。",
       "info2": "よくあさ、にわをそうじするときに、ねえさんは、はちがどうしているだろうとわざわざつつじのきのところへいって、すをのぞいてみました。",
-      "word": "yokuasa,niwawosouzisurutokini,neesanha,hatigadousiteirudaroutowazawazatutuzinokinotokoroheitte,suwonozoitemimasita."
+      "word": "yokuasa,niwawosoujisurutokini,neesanha,hatigadousiteirudaroutowazawazatutujinokinotokoroheitte,suwonozoitemimasita."
     },
     {
       "info": "そこには、昨日の親ばちが、やはり一ぴきで、いっしょうけんめいに巣を大きくしようとしていました。",
@@ -127,7 +127,7 @@
     {
       "info": "彼女は、はじめてそのとき、一ぴきのはちの力で造られた巣に注意を向けたのです。",
       "info2": "かのじょは、はじめてそのとき、１ぴきのはちのちからでつくられたすにちゅういをむけたのです。",
-      "word": "kanojyoha,hazimetesonotoki,1pikinohatinotikaradetukuraretasunityuuiwomuketanodesu."
+      "word": "kanojoha,hajimetesonotoki,1pikinohatinotikaradetukuraretasunityuuiwomuketanodesu."
     },
     {
       "info": "なんと並々ならぬ心遣いと、努力が、その巣に傾けられていることか。",
@@ -137,7 +137,7 @@
     {
       "info": "たとえば、雨風に吹かれても容易に折れそうもない、じょうぶな枝が選ばれていました。",
       "info2": "たとえば、あめかぜにふかれてもよういにおれそうもない、じょうぶなえだがえらばれていました。",
-      "word": "tatoeba,amekazenihukaretemoyouinioresoumonai,jyoubunaedagaerabareteimasita."
+      "word": "tatoeba,amekazenihukaretemoyouinioresoumonai,joubunaedagaerabareteimasita."
     },
     {
       "info": "また、巣のつけ根は、さわっても落ちないように、強そうに黒光りがしていました。",
@@ -172,7 +172,7 @@
     {
       "info": "「勇ちゃん、はちの巣があってよ。」彼女は、弟の顔を見ました。",
       "info2": "「ゆうちゃん、はちのすがあってよ。」かのじょは、おとうとのかおをみました。",
-      "word": "[yuutyan,hatinosugaatteyo.]kanojyoha,otoutonokaowomimasita."
+      "word": "[yuutyan,hatinosugaatteyo.]kanojoha,otoutonokaowomimasita."
     },
     {
       "info": "「ああ、知っている。」「え、知っているの。」弟が、どうして、それを落とさなかったろうと疑われました。",
@@ -182,7 +182,7 @@
     {
       "info": "「姉さん、つつじの木だろう。お母さんばちがひとりで巣を造っているのだよ。」「ええ、そうなの。」",
       "info2": "「ねえさん、つつじのきだろう。おかあさんばちがひとりですをつくっているのだよ。」「ええ、そうなの。」",
-      "word": "[neesan,tutuzinokidarou.okaasanbatigahitoridesuwotukutteirunodayo.][ee,sounano.]"
+      "word": "[neesan,tutujinokidarou.okaasanbatigahitoridesuwotukutteirunodayo.][ee,sounano.]"
     },
     {
       "info": "「このあいだから見ると、だいぶ大きくなった。あの穴の中に子供がいるんだね。",
@@ -227,7 +227,7 @@
     {
       "info": "このごろ母ばちの片方の羽がすこし破れているのを考えると、胸が痛くなるのを感じました。",
       "info2": "このごろははばちのかたほうのはねがすこしやぶれているのをかんがえると、むねがいたくなるのをかんじました。",
-      "word": "konogorohahabatinokatahounohanegasukosiyabureteirunowokangaeruto,munegaitakunarunowokanzimasita."
+      "word": "konogorohahabatinokatahounohanegasukosiyabureteirunowokangaeruto,munegaitakunarunowokanjimasita."
     },
     {
       "info": "ほかの子供は、どこからか、はちの子をさがして持っていくことがあったが、",

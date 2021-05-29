@@ -6,20 +6,22 @@
         title="タイピング問題の選択"
         @close="close"
       >
-        <problem-list
-          v-slot="{ problem }"
-          :problems="problems"
-          @tag="selectTag"
-        >
-          <div class="buttons">
-            <button class="button" @click="selectProblem(problem)">
-              選択する
-            </button>
-          </div>
-        </problem-list>
+        <div>
+          <problem-list
+            v-slot="{ problem }"
+            :problems="problems"
+            @tag="selectTag"
+          >
+            <div class="buttons">
+              <button class="button" @click="selectProblem(problem)">
+                選択する
+              </button>
+            </div>
+          </problem-list>
+        </div>
       </modal-content>
     </modal-panel>
-    <nuxt-child back-url="backUrl" @closePrev="closeThis" />
+    <nuxt-child @closePrev="closeThis" />
   </div>
 </template>
 
@@ -33,6 +35,11 @@ import { ModalContentMixin } from '~/mixins/ModalContentMixin'
 export default {
   components: { ModalPanel, ModalContent, ProblemList },
   mixins: [ModalContentMixin],
+  head() {
+    return {
+      title: 'タイピング問題の選択',
+    }
+  },
   computed: {
     ...mapGetters({
       problems: 'problems/problems',
@@ -41,7 +48,6 @@ export default {
   methods: {
     ...mapMutations('typingSetting', ['setProblemId']),
     close() {
-      this.show = false
       this.backOrReplace({ name: 'game-menu' })
     },
     selectProblem(problem) {

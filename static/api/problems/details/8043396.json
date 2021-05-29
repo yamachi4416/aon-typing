@@ -47,7 +47,7 @@
     {
       "info": "アル　ヒ　ミチバタデ　カナヅチヲ　一ツ　ヒロヒマシタ。「ナンダ　カナヅチカ、オンナジヤウナ　カタチヲ　シテ　ヰルガ、",
       "info2": "ある　ひ　みちばたで　かなづちを　１つ　ひろひました。「なんだ　かなづちか、おんなじやうな　かたちを　して　ゐるが、",
-      "word": "aru hi mitibatade kanadutiwo 1tu hirohimasita.[nanda kanadutika,onnnaziyauna katatiwo site iruga,"
+      "word": "aru hi mitibatade kanadutiwo 1tu hirohimasita.[nanda kanadutika,onnnajiyauna katatiwo site iruga,"
     },
     {
       "info": "フエハ　ヨイ　オトヲ　タテヽ　ナルノニ、カナヅチハ　ナンニモ　ナラナイ。」ト　イヒマシタ。",
@@ -62,12 +62,12 @@
     {
       "info": "テンカン　テンカント　イサマシイ　オトガ　シテ　ヰルノデ　イツテ　ミルト　カジヤデシタ。",
       "info2": "てんかん　てんかんと　いさましい　おとが　して　ゐるので　いつて　みると　かじやでした。",
-      "word": "tenkan tenkanto isamasii otoga site irunode itute miruto kaziyadesita."
+      "word": "tenkan tenkanto isamasii otoga site irunode itute miruto kajiyadesita."
     },
     {
       "info": "カジヤハ　マツカニ　ヤケタ　カネカラ　クワヲ　ツクツテ　ヰマシタ。",
       "info2": "かじやは　まつかに　やけた　かねから　くわを　つくつて　ゐました。",
-      "word": "kaziyaha matukani yaketa kanekara kuwawo tukutute imasita."
+      "word": "kajiyaha matukani yaketa kanekara kuwawo tukutute imasita."
     },
     {
       "info": "デキアガツタ　クワガ　タクサン　ヘイタイノヤウニ　ナランデ　ヰマシタ。",
@@ -77,7 +77,7 @@
     {
       "info": "トコロガ　ミルト　カジヤノ　テニハ、カナヅチガ　ニギラレテ　ヰマシタ。「ナルホド、イママデ　キヅカズニ　ヰタガ、",
       "info2": "ところが　みると　かじやの　てには、かなづちが　にぎられて　ゐました。「なるほど、いままで　きづかずに　ゐたが、",
-      "word": "tokoroga miruto kaziyano teniha,kanadutiga nigirarete imasita.[naruhodo,imamade kidukazuni itaga,"
+      "word": "tokoroga miruto kajiyano teniha,kanadutiga nigirarete imasita.[naruhodo,imamade kidukazuni itaga,"
     },
     {
       "info": "カナヅチハ　クワヲ　ツクル　コトガ　デキルノダナ。」ト　フエフキハ　イヒマシタ。",
@@ -102,12 +102,12 @@
     {
       "info": "ハジメテ　キガ　ツイタヤウニ　オドロキマシタ。ソレカラ　スコシ　イクト　フエフキハ　小サナ　クツヤノ　マエニ　キマシタ。",
       "info2": "はじめて　きが　ついたやうに　おどろきました。それから　すこし　いくと　ふえふきは　ちいさな　くつやの　まえに　きました。",
-      "word": "hazimete kiga tuitayauni odorokimasita.sorekara sukosi ikuto huehukiha tiisana kutuyano maeni kimasita."
+      "word": "hajimete kiga tuitayauni odorokimasita.sorekara sukosi ikuto huehukiha tiisana kutuyano maeni kimasita."
     },
     {
       "info": "クツヤノ　ヂイサンハ　一リデ　セツセト　クツヲ　ツクツテ　ヰテ、フエフキガ　フエヲ　フキハジメルト、",
       "info2": "くつやの　ぢいさんは　１りで　せつせと　くつを　つくつて　ゐて、ふえふきが　ふえを　ふきはじめると、",
-      "word": "kutuyano diisanha 1ride setuseto kutuwo tukutute ite,huehukiga huewo hukihazimeruto,"
+      "word": "kutuyano diisanha 1ride setuseto kutuwo tukutute ite,huehukiga huewo hukihajimeruto,"
     },
     {
       "info": "「ウルサイカラ　イツテ　オクレ。」ト　イヒマシタ。",
@@ -137,7 +137,7 @@
     {
       "info": "オンナジヤウナ　カタチヲ　シテ　ヰテモ、フエナンカ　ピロ　ピロト　ナクダケヂヤ。」ト　イヒマシタ。",
       "info2": "おんなじやうな　かたちを　して　ゐても、ふえなんか　ぴろ　ぴろと　なくだけぢや。」と　いひました。",
-      "word": "onnnaziyauna katatiwo site itemo,huenanka piro piroto nakudakediya.]to ihimasita."
+      "word": "onnnajiyauna katatiwo site itemo,huenanka piro piroto nakudakediya.]to ihimasita."
     },
     {
       "info": "フエフキハ　ツギノ　マチヘ　ハイル　ミチデ、ヒロツタ　カナヅチヲ　フリアゲ、クシヤント　フエヲ　クダイテ　シマヒマシタ。",

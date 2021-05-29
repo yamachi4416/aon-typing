@@ -6,42 +6,28 @@
       @cancel="cancel"
       @openProblemSelect="openProblemSelect"
     />
-    <nuxt-child :back-url="backUrl" />
+    <nuxt-child />
   </div>
 </template>
 
 <script>
 import TypingMenuPanel from '~/components/panels/TypingMenuPanel.vue'
+import { ModalContentMixin } from '~/mixins/ModalContentMixin'
 
 export default {
   components: { TypingMenuPanel },
+  mixins: [ModalContentMixin],
   beforeRouteLeave(to, from, next) {
     this.show = false
     setTimeout(() => {
       next()
     }, 300)
   },
-  props: {
-    backUrl: {
-      type: String,
-      default: null,
-    },
-  },
-
-  data() {
-    return {
-      show: false,
-    }
-  },
 
   head() {
     return {
       title: 'タイピングメニュー',
     }
-  },
-
-  mounted() {
-    this.show = true
   },
 
   methods: {
@@ -54,11 +40,7 @@ export default {
     },
 
     cancel() {
-      if (this.backUrl) {
-        this.$router.back()
-      } else {
-        this.$router.replace('/')
-      }
+      this.backOrReplace({ name: 'index' }, /^index/)
     },
   },
 }

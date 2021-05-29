@@ -23,12 +23,15 @@
       <nav class="basic-page-footer-nav">
         <ul>
           <li>
-            <nuxt-link :to="{ name: 'index-disclaimer' }">免責事項</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link :to="{ name: 'index-policy' }">
-              プライバシーポリシー
+            <nuxt-link
+              v-if="$route.name !== 'index-policy'"
+              :to="{ name: 'index-policy' }"
+            >
+              サイトポリシー
             </nuxt-link>
+            <a v-else @click="scrollTop({ name: 'index-policy' })">
+              サイトポリシー
+            </a>
           </li>
         </ul>
       </nav>
@@ -62,6 +65,7 @@ export default {
       this.setScrolling(true)
 
       if (Object.keys(this.$route.query).length) {
+        await Util.scrollTo(this.$el)
         await this.$router.push({ ...route, query: null })
         await this.$nextTick()
       }
@@ -143,8 +147,13 @@ export default {
 
         & > li {
           a {
+            cursor: pointer;
             color: #666;
             text-decoration: none;
+            &:hover,
+            &:focus {
+              color: #999;
+            }
           }
         }
       }

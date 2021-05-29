@@ -22,15 +22,11 @@ export default {
     base: '/',
   },
 
-  axios: {
-    baseURL: '/',
-  },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~plugins/filters.js'],
+  plugins: ['~plugins/filters.js', '~plugins/router'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -58,34 +54,36 @@ export default {
   generate: {
     fallback: 'index.html',
     routes() {
-      return require('./static/api/problems.json')
-        .problems.map((p) => {
-          return {
-            route: '/problems/' + p.id,
-            payload: JSON.parse(
-              fs.readFileSync(`./static/api/problems/details/${p.path}.json`)
-            ),
-          }
-        })
-        .concat(
-          Object.values(require('./static/api/tags.json')).map((p) => {
-            return {
-              route: '/problems/tags/' + p.id,
-              payload: JSON.parse(
-                fs.readFileSync(`./static/api/tags/${p.id}.json`)
-              ),
-            }
-          })
+      const problems = require('./static/api/problems.json').problems
+      const problemMap = problems.reduce((a, p) => {
+        a[p.id] = JSON.parse(
+          fs.readFileSync(`./static/api/problems/details/${p.path}.json`)
         )
+        return a
+      }, {})
+
+      return Object.values(problemMap)
+        .map((p) => ({
+          route: '/problems/' + p.id,
+          payload: p,
+        }))
         .concat(
-          Object.values(require('./static/api/tags.json')).map((p) => {
-            return {
-              route: '/game/menu/problems/tags/' + p.id,
-              payload: JSON.parse(
-                fs.readFileSync(`./static/api/tags/${p.id}.json`)
-              ),
-            }
-          })
+          Object.values(require('./static/api/tags.json')).reduce((a, p) => {
+            const tags = JSON.parse(
+              fs.readFileSync(`./static/api/tags/${p.id}.json`)
+            )
+            a.push(
+              {
+                route: '/problems/tags/' + p.id,
+                payload: tags,
+              },
+              {
+                route: '/game/menu/problems/tags/' + p.id,
+                payload: tags,
+              }
+            )
+            return a
+          }, [])
         )
     },
   },

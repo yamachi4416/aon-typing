@@ -1,22 +1,15 @@
-import { mapMutations } from 'vuex'
+import { mapMutations, mapGetters } from 'vuex'
 
 export const ModalContentMixin = {
   beforeRouteLeave(to, from, next) {
     if (!from.name.startsWith(`${to.name}-`)) {
       next()
-    } else {
+    } else if (this.show) {
       this.show = false
-      this.setScrolling(true)
-      setTimeout(() => {
-        next()
-      }, 300)
+      setTimeout(() => next(), 300)
+    } else {
+      next()
     }
-  },
-  props: {
-    backUrl: {
-      type: String,
-      default: null,
-    },
   },
   data() {
     return {
@@ -25,27 +18,29 @@ export const ModalContentMixin = {
     }
   },
   mounted() {
-    this.show = true
-    this.showLoading = false
-    this.setScrolling(false)
+    setTimeout(() => {
+      this.show = true
+      this.showLoading = false
+    }, 1)
   },
   updated() {
     setTimeout(() => {
       this.showLoading = false
     }, 1)
-    this.setScrolling(false)
+  },
+  computed: {
+    ...mapGetters('uiStatus', ['currentHist', 'matchedBeforeHist']),
   },
   methods: {
     ...mapMutations({
       setScrolling: 'uiStatus/setScrolling',
     }),
-    backOrReplace(replaceRoute, go) {
-      if (this.backUrl) {
-        if (go != null) {
-          this.$router.go(go * -1)
-        } else {
-          this.$router.back()
-        }
+    backOrReplace(replaceRoute, matchName) {
+      const regexp = matchName || new RegExp(`^${replaceRoute.name}$`)
+      const backHist = this.matchedBeforeHist(regexp)
+      if (backHist) {
+        const back = backHist.index - this.currentHist.index
+        this.$router.go(back)
       } else {
         this.$router.replace(replaceRoute)
       }
