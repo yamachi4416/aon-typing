@@ -22,14 +22,14 @@
               <dt>タグ</dt>
               <dd class="detail-info-info-tags">
                 <div class="detail-info-info-tags-list buttons">
-                  <button
-                    v-for="(tag, i) in detail.tags"
-                    :key="`tag-${i}`"
-                    class="detail-info-info-tags-list-item button"
-                    @click="selectTag(tag.id)"
-                  >
-                    {{ tag.name }}
-                  </button>
+                  <span v-for="(tag, i) in detail.tags" :key="`tag-${i}`">
+                    <button
+                      class="detail-info-info-tags-list-item button"
+                      @click="selectTag(tag.id)"
+                    >
+                      {{ tag.name }}
+                    </button>
+                  </span>
                 </div>
               </dd>
             </dl>
@@ -55,10 +55,14 @@
         </div>
         <div class="detail-actions">
           <div class="buttons">
-            <button v-if="back" class="button" @click="$router.back()">
-              もどる
-            </button>
-            <button class="button" @click="playProblem">プレイする</button>
+            <span>
+              <button v-if="back" class="button" @click="$router.back()">
+                もどる
+              </button>
+            </span>
+            <span>
+              <button class="button" @click="playProblem">プレイする</button>
+            </span>
           </div>
         </div>
       </div>
@@ -192,7 +196,9 @@ export default {
           display: flex;
           flex-wrap: wrap;
           justify-content: flex-start;
-          gap: 5px;
+          & > * {
+            padding-left: 0;
+          }
           &-item {
             font-size: 1em;
             background: rgba(255, 153, 0, 1);
@@ -229,7 +235,6 @@ export default {
     .detail-card {
       display: flex;
       flex-direction: column;
-      gap: 5px;
       color: #666;
 
       &-word {

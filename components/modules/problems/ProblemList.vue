@@ -16,12 +16,16 @@
             <problem-list-item :item="p" @tag="selectTag">
               <template v-if="!$scopedSlots.default && !$slots.default" #footer>
                 <div class="buttons">
-                  <button class="button" @click="$emit('detail', p.id)">
-                    内容を見る
-                  </button>
-                  <button class="button" @click="$emit('play', p.id)">
-                    プレイする
-                  </button>
+                  <span>
+                    <button class="button" @click="$emit('detail', p.id)">
+                      内容を見る
+                    </button>
+                  </span>
+                  <span>
+                    <button class="button" @click="$emit('play', p.id)">
+                      プレイする
+                    </button>
+                  </span>
                 </div>
               </template>
               <template v-else #footer>

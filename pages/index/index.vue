@@ -16,9 +16,11 @@
             </span>
           </div>
           <div class="buttons">
-            <button class="button" :disabled="!kwd" @click="searchProblems">
-              検索する
-            </button>
+            <span>
+              <button class="button" :disabled="!kwd" @click="searchProblems">
+                検索する
+              </button>
+            </span>
           </div>
         </div>
       </div>
@@ -29,19 +31,19 @@
     <para-section class="index-page-tags">
       <h2>タグいちらん</h2>
       <div class="buttons index-page-tags-list">
-        <nuxt-link
-          v-for="tag in Object.values(tags)"
-          :key="`tag-${tag.id}`"
-          :to="{ name: 'index-problems-tags-id', params: { id: tag.id } }"
-          class="index-page-tags-list-item button"
-        >
-          <span class="tag-item">
-            <span class="tag-item-name">{{ tag.name }}</span>
-            <span class="tag-item-count">
-              <span class="tag-item-count-number">{{ tag.count }}</span>
+        <span v-for="tag in Object.values(tags)" :key="`tag-${tag.id}`">
+          <nuxt-link
+            :to="{ name: 'index-problems-tags-id', params: { id: tag.id } }"
+            class="index-page-tags-list-item button"
+          >
+            <span class="tag-item">
+              <span class="tag-item-name">{{ tag.name }}</span>
+              <span class="tag-item-count">
+                <span class="tag-item-count-number">{{ tag.count }}</span>
+              </span>
             </span>
-          </span>
-        </nuxt-link>
+          </nuxt-link>
+        </span>
       </div>
       <template #left>
         <img src="~/static/img/neko-tk-01.png" />
@@ -148,13 +150,14 @@ export default {
         color: #fff;
         border: none;
         border-radius: 15px;
+        display: block;
 
         .tag-item {
           display: flex;
           align-items: center;
-          gap: 5px;
 
           &-count {
+            margin-left: 5px;
             &-number {
               background: #fff;
               color: #ff9900;
@@ -172,6 +175,7 @@ export default {
             height: 8px;
             border-radius: 100%;
             background: #fff;
+            margin-right: 5px;
           }
         }
       }
@@ -182,7 +186,6 @@ export default {
       display: flex;
       flex-wrap: wrap;
       padding: 10px;
-      gap: 10px;
 
       &-search {
         flex: 1;

@@ -13,9 +13,11 @@
             @tag="selectTag"
           >
             <div class="buttons">
-              <button class="button" @click="selectProblem(problem)">
-                選択する
-              </button>
+              <span>
+                <button class="button" @click="selectProblem(problem)">
+                  選択する
+                </button>
+              </span>
             </div>
           </problem-list>
         </div>

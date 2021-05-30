@@ -17,7 +17,9 @@
               <template #default>
                 <div class="tags-actions">
                   <div class="buttons">
-                    <button class="button" @click="back()">もどる</button>
+                    <span>
+                      <button class="button" @click="back()">もどる</button>
+                    </span>
                   </div>
                 </div>
               </template>
@@ -30,9 +32,11 @@
               @tag="selectTag"
             >
               <div class="buttons">
-                <button class="button" @click="selectProblem(problem)">
-                  選択する
-                </button>
+                <span>
+                  <button class="button" @click="selectProblem(problem)">
+                    選択する
+                  </button>
+                </span>
               </div>
             </problem-list>
           </div>

@@ -12,80 +12,88 @@
           <div class="typing-menu-panel-content-row">
             <label>制限時間</label>
             <div>
-              <div class="list-buttons">
-                <button
-                  v-for="i in [0, 1, 2, 3, 4, 5]"
-                  :key="`time-limit-${i}`"
-                  class="button"
-                  :selected="i * 60000 === timeLimit"
-                  @click="timeLimit = i * 60000"
-                  v-text="i ? i + '分' : 'なし'"
-                />
+              <div class="buttons">
+                <span v-for="i in [0, 1, 2, 3, 4, 5]" :key="`time-limit-${i}`">
+                  <button
+                    class="button"
+                    :selected="i * 60000 === timeLimit"
+                    @click="timeLimit = i * 60000"
+                    v-text="i ? i + '分' : 'なし'"
+                  />
+                </span>
               </div>
             </div>
           </div>
           <div class="typing-menu-panel-content-row">
             <label>目標タイプ数</label>
             <div>
-              <div class="list-buttons">
-                <button
-                  v-for="i in goalCharCounts"
-                  :key="`goalCharCount-${i}`"
-                  class="button"
-                  :selected="i === goalCharCount"
-                  @click="goalCharCount = i"
-                >
-                  {{ i || 'なし' }}
-                </button>
+              <div class="buttons">
+                <span v-for="i in goalCharCounts" :key="`goalCharCount-${i}`">
+                  <button
+                    class="button"
+                    :selected="i === goalCharCount"
+                    @click="goalCharCount = i"
+                  >
+                    {{ i || 'なし' }}
+                  </button>
+                </span>
               </div>
             </div>
           </div>
           <div class="typing-menu-panel-content-row">
             <label>自動モード</label>
             <div>
-              <div class="list-buttons">
-                <button
-                  v-for="a in helpAnimals"
-                  :key="`automode-${a.speed}`"
-                  class="button"
-                  :selected="autoMode === a.speed"
-                  @click="autoMode = a.speed"
-                  v-text="a.name"
-                />
+              <div class="buttons">
+                <span v-for="a in helpAnimals" :key="`automode-${a.speed}`">
+                  <button
+                    class="button"
+                    :selected="autoMode === a.speed"
+                    @click="autoMode = a.speed"
+                    v-text="a.name"
+                  />
+                </span>
               </div>
             </div>
           </div>
           <div class="typing-menu-panel-content-row">
             <label>シャッフル</label>
             <div>
-              <div class="list-buttons">
-                <button
-                  class="button"
-                  :selected="!randomMode"
-                  @click="randomMode = false"
-                >
-                  オフ
-                </button>
-                <button
-                  class="button"
-                  :selected="randomMode"
-                  @click="randomMode = true"
-                >
-                  オン
-                </button>
+              <div class="buttons">
+                <span>
+                  <button
+                    class="button"
+                    :selected="!randomMode"
+                    @click="randomMode = false"
+                  >
+                    オフ
+                  </button>
+                </span>
+                <span>
+                  <button
+                    class="button"
+                    :selected="randomMode"
+                    @click="randomMode = true"
+                  >
+                    オン
+                  </button>
+                </span>
               </div>
             </div>
           </div>
           <div class="typing-menu-panel-content-row problem-section">
             <label>問題</label>
             <div>
-              <div class="list-buttons">
-                <button class="button" @click="openProblemSelect()">
-                  一覧から選択
-                </button>
-                <button class="button" @click="randomProblemSelect()">
-                  ランダム選択
-                </button>
+              <div class="buttons">
+                <span>
+                  <button class="button" @click="openProblemSelect()">
+                    一覧から選択
+                  </button>
+                </span>
+                <span>
+                  <button class="button" @click="randomProblemSelect()">
+                    ランダム選択
+                  </button>
+                </span>
               </div>
               <div class="table problem-detail">
                 <div>
@@ -110,10 +118,14 @@
         </div>
         <template #footer>
           <div class="buttons">
-            <button :disabled="!problem.id" class="button" @click="start">
-              スタートする
-            </button>
-            <button class="button" @click="$emit('cancel')">やめる</button>
+            <span>
+              <button :disabled="!problem.id" class="button" @click="start">
+                スタートする
+              </button>
+            </span>
+            <span>
+              <button class="button" @click="$emit('cancel')">やめる</button>
+            </span>
           </div>
         </template>
       </modal-content>
@@ -276,9 +288,12 @@ export default {
       white-space: nowrap;
     }
 
-    .list-buttons {
-      display: flex;
-      gap: 5px;
+    .buttons {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      & > * {
+        padding-left: 0;
+      }
       .button {
         padding: 0 10px;
       }

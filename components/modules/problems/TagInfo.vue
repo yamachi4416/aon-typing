@@ -4,15 +4,15 @@
       <div class="tag-info-id">No.{{ tag.id }}</div>
       <h2 class="tag-info-title">タグ：{{ tag.name }}</h2>
       <div ref="taglist" class="tag-info-taglist buttons">
-        <button
-          v-for="t in tags"
-          :key="`tag-${t.id}`"
-          class="tag-info-taglist-item button"
-          :selected="selectedTagSet.has(t.id)"
-          @click="filterTag(t)"
-        >
-          {{ t.name }}
-        </button>
+        <span v-for="t in tags" :key="`tag-${t.id}`">
+          <button
+            class="tag-info-taglist-item button"
+            :selected="selectedTagSet.has(t.id)"
+            @click="filterTag(t)"
+          >
+            {{ t.name }}
+          </button>
+        </span>
       </div>
       <slot v-if="$slots.default" name="default" />
     </div>
@@ -119,7 +119,10 @@ export default {
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-top: 10px;
-    gap: 5px;
+
+    & > * {
+      padding-left: 0;
+    }
 
     &-item {
       border: none;

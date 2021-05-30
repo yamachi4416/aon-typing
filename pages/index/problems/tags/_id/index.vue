@@ -4,9 +4,11 @@
       <template #default>
         <div class="tags-actions">
           <div class="buttons">
-            <button v-if="back" class="button" @click="$router.back()">
-              もどる
-            </button>
+            <span>
+              <button v-if="back" class="button" @click="$router.back()">
+                もどる
+              </button>
+            </span>
           </div>
         </div>
       </template>

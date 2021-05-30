@@ -175,7 +175,6 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2px;
       padding: 15px;
       height: 100%;
     }
@@ -185,7 +184,8 @@ export default {
 
       &-info {
         display: flex;
-        gap: 10px;
+        row-gap: 10px;
+        column-gap: 10px;
         align-items: flex-start;
 
         &-left,
@@ -316,8 +316,8 @@ export default {
     .hands {
       width: 85%;
       display: flex;
-      gap: 20px;
-
+      row-gap: 20px;
+      column-gap: 20px;
       & > * {
         width: 100%;
       }

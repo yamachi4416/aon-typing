@@ -1,6 +1,10 @@
 import fs from 'fs'
 
 export default {
+  server: {
+    host: '0.0.0.0',
+  },
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -47,6 +51,11 @@ export default {
     babel: {
       presets({ isServer }, [preset, options]) {
         options.loose = true
+      },
+    },
+    postcss: {
+      preset: {
+        autoprefixer: { grid: 'autoplace' },
       },
     },
   },

@@ -28,14 +28,14 @@
         </div>
         <div class="problem-list-item-main-detail-tags">
           <div class="problem-list-item-main-detail-tags-list buttons">
-            <button
-              v-for="(tag, i) in item.tags"
-              :key="`tag-${item.id}-${i}`"
-              class="problem-list-item-main-detail-tags-list-item button"
-              @click="$emit('tag', tag)"
-            >
-              {{ tag.name }}
-            </button>
+            <span v-for="(tag, i) in item.tags" :key="`tag-${item.id}-${i}`">
+              <button
+                class="problem-list-item-main-detail-tags-list-item button"
+                @click="$emit('tag', tag)"
+              >
+                {{ tag.name }}
+              </button>
+            </span>
           </div>
         </div>
       </div>
@@ -61,7 +61,6 @@ export default {
 .problem-list-item {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   color: #666;
   height: 100%;
 
@@ -107,8 +106,10 @@ export default {
         &-list {
           flex-wrap: wrap;
           justify-content: flex-start;
-          gap: 5px;
           padding: 10px 5px;
+          & > * {
+            padding-left: 0;
+          }
           &-item {
             font-size: 0.8em;
             background: rgba(255, 153, 0, 1);

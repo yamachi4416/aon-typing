@@ -104,6 +104,7 @@ export default {
       flex: 1;
       position: relative;
       width: 100%;
+      max-height: calc(100% - 30px);
     }
 
     & > footer {

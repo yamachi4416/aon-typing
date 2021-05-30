@@ -99,7 +99,6 @@ export default {
         justify-content: space-around;
         list-style: none;
         padding: 10px;
-        gap: 10px;
         width: 100%;
 
         & > li {
@@ -143,7 +142,6 @@ export default {
         display: flex;
         list-style: none;
         justify-content: center;
-        gap: 30px;
 
         & > li {
           a {

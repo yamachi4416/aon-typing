@@ -60,7 +60,9 @@
                   :key="`miss-key-${i}`"
                   class="miss-keys-chars-item"
                 >
-                  <span class="miss-keys-chars-item-char">{{ k.w }}</span>
+                  <div class="miss-keys-chars-item-char">
+                    <span class="miss-keys-chars-item-char-key">{{ k.w }}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -69,17 +71,23 @@
       </div>
       <template #footer>
         <div class="buttons">
-          <button class="button" @click="$emit('retry')">もういちど</button>
-          <button class="button" @click="$emit('setting')">
-            メニューに戻る
-          </button>
-          <button
-            class="button"
-            :disabled="!hasNextProblem"
-            @click="$emit('next')"
-          >
-            つづきをする
-          </button>
+          <span>
+            <button class="button" @click="$emit('retry')">もういちど</button>
+          </span>
+          <span>
+            <button class="button" @click="$emit('setting')">
+              メニューに戻る
+            </button>
+          </span>
+          <span>
+            <button
+              class="button"
+              :disabled="!hasNextProblem"
+              @click="$emit('next')"
+            >
+              つづきをする
+            </button>
+          </span>
         </div>
       </template>
     </modal-content>
@@ -124,7 +132,6 @@ export default {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
-    gap: 5px;
 
     &-left,
     &-right {
@@ -162,22 +169,24 @@ export default {
         }
 
         &-chars {
-          gap: 5px;
           display: flex;
           align-items: center;
           flex-wrap: wrap;
 
           &-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            white-space: pre;
-            padding: 5px;
-            background: #333;
-            color: #fff;
+            padding: 3px;
+            &-char {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+              white-space: pre;
+              padding: 5px;
+              background: #333;
+              color: #fff;
+            }
           }
         }
       }
