@@ -28,7 +28,7 @@
         <img src="~/static/img/neko-tk-01.png" />
       </template>
     </para-section>
-    <div class="index-page-newProblems">
+    <para-section class="index-page-newProblems">
       <h2>新着の問題</h2>
       <problem-list
         :problems="newProblems"
@@ -36,7 +36,7 @@
         @play="playProblem"
         @detail="detail"
       />
-    </div>
+    </para-section>
     <para-section class="index-page-tags">
       <h2>タグいちらん</h2>
       <div class="buttons index-page-tags-list">
@@ -193,13 +193,11 @@ export default {
   }
 
   &-newProblems {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    h2 {
-      color: #666;
-      padding: 10px 20px;
-      border-radius: 20px 20px 0 0;
-      background: rgba(255, 255, 255, 0.8);
+    & > .para-section-main {
+      padding: 0;
+      & > h2 {
+        padding: 20px 20px 5px 20px;
+      }
     }
   }
 }

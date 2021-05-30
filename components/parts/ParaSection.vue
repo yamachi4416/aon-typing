@@ -99,6 +99,7 @@ export default {}
   }
 
   @include __media_s {
+    padding: 5px;
     &-right,
     &-left {
       display: none;
