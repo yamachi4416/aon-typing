@@ -28,6 +28,15 @@
         <img src="~/static/img/neko-tk-01.png" />
       </template>
     </para-section>
+    <div class="index-page-newProblems">
+      <h2>新着の問題</h2>
+      <problem-list
+        :problems="newProblems"
+        @tag="selectTag"
+        @play="playProblem"
+        @detail="detail"
+      />
+    </div>
     <para-section class="index-page-tags">
       <h2>タグいちらん</h2>
       <div class="buttons index-page-tags-list">
@@ -48,17 +57,6 @@
       <template #left>
         <img src="~/static/img/neko-tk-01.png" />
       </template>
-    </para-section>
-    <para-section class="index-page-newProblems">
-      <h2>新着の問題</h2>
-      <div>
-        <problem-list
-          :problems="newProblems"
-          @tag="selectTag"
-          @play="playProblem"
-          @detail="detail"
-        />
-      </div>
     </para-section>
   </div>
 </template>
@@ -181,6 +179,7 @@ export default {
       }
     }
   }
+
   &-search {
     &-form {
       display: flex;
@@ -190,6 +189,17 @@ export default {
       &-search {
         flex: 1;
       }
+    }
+  }
+
+  &-newProblems {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    h2 {
+      color: #666;
+      padding: 10px 20px;
+      border-radius: 20px 20px 0 0;
+      background: rgba(255, 255, 255, 0.8);
     }
   }
 }
