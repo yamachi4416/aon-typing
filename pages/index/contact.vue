@@ -2,14 +2,7 @@
   <div class="contact-page">
     <para-section v-if="!success" class="contact-page-section">
       <h2>お問い合わせ</h2>
-      <form
-        class="contact-form"
-        name="contact"
-        method="post"
-        data-netlify="true"
-        netlify-honeypot="username"
-        @submit.prevent="submit"
-      >
+      <div class="contact-form" name="contact">
         <div class="form-group row">
           <label class="form-group-label col-3 col-sm-12" for="name">
             <span>お名前</span>
@@ -76,11 +69,15 @@
           </span>
         </div>
         <div class="buttons">
-          <button :disabled="!canSubmit || sending" class="button big">
+          <button
+            :disabled="!canSubmit || sending"
+            class="button big"
+            @click="submit"
+          >
             送信する
           </button>
         </div>
-      </form>
+      </div>
     </para-section>
     <para-section v-else class="contact-page-thanks">
       <h2>お問い合わせありがとうございます</h2>
@@ -97,6 +94,7 @@
 import ParaSection from '~/components/parts/ParaSection.vue'
 export default {
   components: { ParaSection },
+  scrollToTop: true,
   data() {
     return {
       sending: false,
