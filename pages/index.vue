@@ -33,6 +33,17 @@
               サイトポリシー
             </a>
           </li>
+          <li>
+            <nuxt-link
+              v-if="$route.name !== 'index-contact'"
+              :to="{ name: 'index-contact' }"
+            >
+              お問い合わせ
+            </nuxt-link>
+            <a v-else @click="scrollTop({ name: 'index-contact' })">
+              お問い合わせ
+            </a>
+          </li>
         </ul>
       </nav>
       <div class="basic-page-footer-copy">
@@ -143,6 +154,7 @@ export default {
         justify-content: center;
 
         & > li {
+          padding: 0 10px;
           a {
             cursor: pointer;
             color: #666;
