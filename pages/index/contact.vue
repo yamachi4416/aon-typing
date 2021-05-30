@@ -1,6 +1,6 @@
 <template>
   <div class="contact-page">
-    <para-section class="contact-page-section">
+    <para-section v-if="!success" class="contact-page-section">
       <h2>お問い合わせ</h2>
       <form
         class="contact-form"
@@ -20,6 +20,7 @@
               id="name"
               v-model="contact.name"
               name="name"
+              :disabled="sending"
               @change="change"
             />
             <span
@@ -45,6 +46,7 @@
               v-model="contact.email"
               type="email"
               name="email"
+              :disabled="sending"
               @change="change"
             />
             <span
@@ -63,6 +65,7 @@
               id="message"
               v-model="contact.message"
               name="message"
+              :disabled="sending"
               @change="change"
             />
             <span
@@ -73,9 +76,19 @@
           </span>
         </div>
         <div class="buttons">
-          <button :disabled="!canSubmit" class="button big">送信する</button>
+          <button :disabled="!canSubmit || sending" class="button big">
+            送信する
+          </button>
         </div>
       </form>
+    </para-section>
+    <para-section v-else class="contact-page-thanks">
+      <h2>お問い合わせありがとうございます</h2>
+      <p>この度はお問い合わせいただきありがとうございます。</p>
+      <p>
+        お問い合わせ内容によっては、お返事を差し上げるまでにお時間をいただく場合やお返事を差し上げられない場合もございますことをあらかじめご了承ください。
+      </p>
+      <p>今後とも引き続き「あぉ～ん タイピング」をよろしくお願いいたします。</p>
     </para-section>
   </div>
 </template>
@@ -86,6 +99,8 @@ export default {
   components: { ParaSection },
   data() {
     return {
+      sending: false,
+      success: false,
       contact: {
         name: '',
         email: '',
@@ -158,8 +173,24 @@ export default {
       params.append('email', contact.email.trim())
       params.append('message', contact.message.trim())
 
-      const res = await this.$http.$post(window.location.origin, params)
-      console.log(res)
+      this.sending = true
+      await this.$http
+        .$post(window.location.origin, params)
+        .then((res) => {
+          this.success = true
+          this.errors = {}
+          this.contact = {
+            name: '',
+            email: '',
+            message: '',
+            username: 'username',
+          }
+        })
+        .catch((err) => {
+          window.console.log(err)
+          alert('申し訳ありません。送信できませんでした。')
+        })
+      this.sending = false
     },
   },
 }
