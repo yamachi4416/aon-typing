@@ -29,7 +29,6 @@ export default {
     },
     problems() {
       const kwds = this.kwds
-      console.log(kwds)
       if (kwds.length) {
         return this.allProblems.filter((p) =>
           kwds.every((kwd) => p.title.includes(kwd))

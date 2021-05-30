@@ -55,7 +55,7 @@ export default {
         { route: { name: 'game' }, label: 'プレイする' },
         { route: { name: 'index-problems' }, label: '問題いちらん' },
         { route: { name: 'index-about' }, label: 'サイト説明' },
-        { route: { name: 'index' }, label: 'その他' },
+        // { route: { name: 'index' }, label: 'その他' },
       ],
     }
   },
@@ -134,7 +134,6 @@ export default {
     display: flex;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.8);
-    // box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 0;
     padding-top: 10px;
 
     &-nav {

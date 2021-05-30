@@ -84,19 +84,41 @@ export default {
       }
       const stop = (event) => event.preventDefault()
       const sc = Util.getScrollContainer(this.$el)
+      const cn = sc === window ? document.getElementsByTagName('html')[0] : sc
+      const cw = cn.clientWidth
+      const co = cn.style.overflowY
+      cn.style.overflowY = 'hidden'
+      if (cw !== cn.clientWidth) {
+        cn.style.overflowY = ''
+      }
       sc.addEventListener('scroll', stop)
+      window.addEventListener('touchmove', stop, { passive: false })
+
       this.$emit('change', this.page - 1)
       await this.$nextTick()
+
       if (this.page > 2) {
         const rect = this.$refs.prevList.getBoundingClientRect()
         sc.scrollTo(0, rect.height)
       }
-      sc.removeEventListener('scroll', stop)
+      setTimeout(() => {
+        sc.removeEventListener('scroll', stop)
+        cn.style.overflowY = co
+        window.removeEventListener('touchmove', stop, { passive: false })
+      }, 10)
     },
     async nextPage() {
       const stop = (event) => event.preventDefault()
       const sc = Util.getScrollContainer(this.$el)
+      const cn = sc === window ? document.getElementsByTagName('html')[0] : sc
+      const cw = cn.clientWidth
+      const co = cn.style.overflowY
+      cn.style.overflowY = 'hidden'
+      if (cw !== cn.clientWidth) {
+        cn.style.overflowY = ''
+      }
       sc.addEventListener('scroll', stop)
+      window.addEventListener('touchmove', stop, { passive: false })
 
       const pd =
         this.page <= 1
@@ -107,7 +129,12 @@ export default {
       await this.$nextTick()
 
       sc.scrollBy(0, -pd)
-      sc.removeEventListener('scroll', stop)
+
+      setTimeout(() => {
+        sc.removeEventListener('scroll', stop)
+        cn.style.overflowY = co
+        window.removeEventListener('touchmove', stop, { passive: false })
+      }, 10)
     },
   },
 }
