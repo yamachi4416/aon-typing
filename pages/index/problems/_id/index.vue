@@ -12,6 +12,12 @@
               <dt>タイプ</dt>
               <dd>{{ detail.type }}</dd>
             </dl>
+            <dl class="detail-info-info-createdAt">
+              <dt>登録日</dt>
+              <dd>
+                <time :datetime="detail.createdAt">{{ detail.createdAt }}</time>
+              </dd>
+            </dl>
             <dl>
               <dt>タグ</dt>
               <dd class="detail-info-info-tags">

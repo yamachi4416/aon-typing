@@ -57,7 +57,7 @@ export default {
       const problems = require('./static/api/problems.json').problems
       const problemMap = problems.reduce((a, p) => {
         a[p.id] = JSON.parse(
-          fs.readFileSync(`./static/api/problems/details/${p.path}.json`)
+          fs.readFileSync(`./static/api/problems/details/${p.id}.json`)
         )
         return a
       }, {})

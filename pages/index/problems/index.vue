@@ -22,8 +22,21 @@ export default {
   },
   computed: {
     ...mapGetters({
-      problems: 'problems/problems',
+      allProblems: 'problems/problems',
     }),
+    kwds() {
+      return this.convertKwds(this.$route.query.kwd)
+    },
+    problems() {
+      const kwds = this.kwds
+      console.log(kwds)
+      if (kwds.length) {
+        return this.allProblems.filter((p) =>
+          kwds.every((kwd) => p.title.includes(kwd))
+        )
+      }
+      return this.allProblems
+    },
   },
   methods: {
     ...mapMutations({
@@ -44,6 +57,20 @@ export default {
         name: 'index-problems-tags-id',
         params: { id: tag.id },
       })
+    },
+    convertKwds(val) {
+      let kwds = []
+      if (val) {
+        if (typeof val === 'string') {
+          kwds = val ? [val] : []
+        } else {
+          kwds = Array.from(val).filter((v) => v)
+        }
+      }
+      return kwds.reduce(
+        (a, kwd) => a.concat(kwd.split(/[\u{20}\u{3000}]/u)),
+        []
+      )
     },
   },
 }

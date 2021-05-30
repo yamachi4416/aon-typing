@@ -2,9 +2,12 @@
   <header class="basic-header">
     <nav>
       <h1>
-        <nuxt-link to="/">
+        <nuxt-link v-if="$route.name !== 'index'" to="/">
           {{ title }}
         </nuxt-link>
+        <a v-else @click="scrollTop({ name: 'index' })">
+          {{ title }}
+        </a>
       </h1>
     </nav>
     <div v-if="$slots.default">
@@ -14,6 +17,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import Util from '~/libs/Util'
 import jpChars from '~/libs/TypingJapaneseChars.mjs'
 
@@ -47,6 +51,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations('uiStatus', ['setScrolling']),
     typing(text, chars) {
       return new Promise((resolve) => {
         const types = jpChars
@@ -80,6 +85,18 @@ export default {
         setTimeout(type, 1)
       })
     },
+    async scrollTop(route) {
+      this.setScrolling(true)
+
+      if (Object.keys(this.$route.query).length) {
+        await Util.scrollTo(this.$el)
+        await this.$router.push({ ...route, query: null })
+        await this.$nextTick()
+      }
+
+      await Util.scrollTo(this.$el)
+      this.setScrolling(false)
+    },
   },
 }
 </script>
@@ -111,6 +128,7 @@ export default {
       align-items: center;
 
       a {
+        cursor: pointer;
         margin-top: -20px;
         color: inherit;
         text-decoration: none;

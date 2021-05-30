@@ -54,6 +54,8 @@ const generateProblemData = (dataDir, apiDir) => {
     const dist = path.resolve(problemsDist, path.basename(p))
     fs.writeFileSync(dist, JSON.stringify(problem, null, 2))
 
+    problem.stat = fs.statSync(p)
+
     return problem
   })
 
@@ -61,7 +63,6 @@ const generateProblemData = (dataDir, apiDir) => {
     problems: problems.map((p) => {
       const problem = {
         id: p.id,
-        path: `/${p.id}`,
         title: p.title,
         type: p.type,
         words: p.words.length,
@@ -110,6 +111,29 @@ const generateProblemData = (dataDir, apiDir) => {
   }
 
   fs.writeFileSync(tagsFile, JSON.stringify(tagSummary, null, 2))
+
+  const newProblems = Array.from(problems)
+    .sort(
+      (a, b) =>
+        new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime() ||
+        new Date(a.updatedAt).getTime() - new Date(b.updatedAt).getTime() ||
+        a.stat.birthtimeMs - b.stat.birthtimeMs
+    )
+    .slice(0, 6)
+    .map((p) => ({
+      id: p.id,
+      title: p.title,
+      type: p.type,
+      words: p.words.length,
+      chars: p.words.reduce((s, w) => s + w.word.length, 0),
+      createdAt: p.createdAt,
+      updatedAt: p.updatedAt,
+      tags: p.tags || [],
+    }))
+  fs.writeFileSync(
+    path.join(apiDir, 'newProblems.json'),
+    JSON.stringify(newProblems, null, 2)
+  )
 }
 
 const main = () => {

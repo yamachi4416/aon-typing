@@ -118,7 +118,7 @@ export default {
 
 <style lang="scss" scoped>
 .game-result-panel {
-  min-width: 550px;
+  max-width: 100%;
 
   .info-main {
     display: flex;

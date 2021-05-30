@@ -118,9 +118,6 @@
         </template>
       </modal-content>
     </modal-panel>
-    <div class="slot-modal">
-      <slot />
-    </div>
   </div>
 </template>
 
@@ -155,8 +152,6 @@ export default {
         speed: Math.round(60000 / ((start + end - (end - start) / 3) / 2)),
       }))
     )
-
-    animals.push({ name: 'T', speed: 30 })
 
     return {
       helpAnimals: animals,
@@ -301,9 +296,5 @@ export default {
       }
     }
   }
-}
-
-.slot-modal {
-  z-index: 100;
 }
 </style>

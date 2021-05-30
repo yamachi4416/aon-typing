@@ -20,6 +20,12 @@
           <label>タイピング数</label>
           <div>{{ item.chars }}</div>
         </div>
+        <div class="problem-list-item-main-detail-row">
+          <label>登録日</label>
+          <div>
+            <time :datetime="item.createdAt">{{ item.createdAt }}</time>
+          </div>
+        </div>
         <div class="problem-list-item-main-detail-tags">
           <div class="problem-list-item-main-detail-tags-list buttons">
             <button

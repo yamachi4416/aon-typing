@@ -1,8 +1,10 @@
 import problems from '~/static/api/problems.json'
+import newProblems from '~/static/api/newProblems.json'
 import tags from '~/static/api/tags.json'
 
 export const state = () => ({
   problems: problems.problems,
+  newProblems,
   tags: Object.keys(tags).reduce((a, name) => {
     a[tags[name].id] = {
       ...tags[name],
@@ -15,6 +17,9 @@ export const state = () => ({
 export const getters = {
   problems(state) {
     return state.problems
+  },
+  newProblems(state) {
+    return state.newProblems
   },
   problem(state) {
     const problems = state.problems
