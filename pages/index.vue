@@ -50,16 +50,18 @@
         <p>&copy; 2021 Studio AON</p>
       </div>
     </footer>
+    <loading />
   </section>
 </template>
 
 <script>
 import { mapMutations } from 'vuex'
 import BasicHeader from '~/components/layout/BasicHeader.vue'
+import Loading from '~/components/parts/Loading.vue'
 import Util from '~/libs/Util'
 
 export default {
-  components: { BasicHeader },
+  components: { BasicHeader, Loading },
   data() {
     return {
       menus: [

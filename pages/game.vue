@@ -10,14 +10,17 @@
         </div>
       </footer>
     </section>
+    <loading />
   </div>
 </template>
 
 <script>
 import { mapMutations, mapGetters } from 'vuex'
+import Loading from '~/components/parts/Loading.vue'
 import PageBaseMixin from '~/mixins/PageBaseMixin'
 
 export default {
+  components: { Loading },
   mixins: [PageBaseMixin],
   async beforeRouteUpdate(to, from, next) {
     await next()

@@ -27,6 +27,11 @@ export default {
       show: false,
     }
   },
+  head() {
+    return {
+      title: 'お問い合わせありがとうございます',
+    }
+  },
   mounted() {
     if (!this.contact.confirm) {
       this.$router.replace({ name: 'index-contact' })

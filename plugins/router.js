@@ -32,12 +32,14 @@ export default ({ app, store }) => {
     $store: store,
     ...mapMutations({
       setScrolling: 'uiStatus/setScrolling',
+      setLoading: 'uiStatus/setLoading',
       setCurrentHist: 'uiStatus/setCurrentHist',
     }),
     ...mapGetters('uiStatus', ['histories', 'currentHist']),
   }
 
   app.router.beforeEach((to, from, next) => {
+    mod.setLoading(2)
     mod.setScrolling(true)
     const key = Number(history.state?.key)
     if (key && from.name) {
@@ -65,5 +67,6 @@ export default ({ app, store }) => {
       override: false,
     })
     mod.setScrolling(false)
+    mod.setLoading(0)
   })
 }

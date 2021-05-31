@@ -16,7 +16,7 @@
               id="name"
               v-model="name"
               name="name"
-              :disabled="sending"
+              :disabled="loading"
               @change="change"
             />
             <span
@@ -42,7 +42,7 @@
               v-model="email"
               type="email"
               name="email"
-              :disabled="sending"
+              :disabled="loading"
               @change="change"
             />
             <span
@@ -61,7 +61,7 @@
               id="message"
               v-model="message"
               name="message"
-              :disabled="sending"
+              :disabled="loading"
               @change="change"
             />
             <span
@@ -73,7 +73,7 @@
         </div>
         <div class="buttons">
           <button
-            :disabled="contact.hasErrors || sending"
+            :disabled="contact.hasErrors || loading"
             class="button big"
             @click="submit"
           >
@@ -86,8 +86,10 @@
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex'
 import Util from '~/libs/Util'
 import ParaSection from '~/components/parts/ParaSection.vue'
+
 export default {
   components: { ParaSection },
   scrollToTop: true,
@@ -99,15 +101,32 @@ export default {
   },
   data() {
     return {
-      sending: false,
       errors: this.contact.errors,
       gError: '',
     }
   },
+  head() {
+    return {
+      title: 'お問い合わせ',
+    }
+  },
   computed: {
     ...Util.mapModel('contact', ['name', 'email', 'message', 'confirm']),
+    ...mapGetters({
+      loading: 'uiStatus/isLoading',
+    }),
+  },
+  beforeMount() {
+    if (this.contact.confirm) {
+      this.name = ''
+      this.email = ''
+      this.message = ''
+    }
   },
   methods: {
+    ...mapMutations({
+      setLoading: 'uiStatus/setLoading',
+    }),
     change() {
       this.errors = this.contact.errors
     },
@@ -117,7 +136,7 @@ export default {
       }
 
       this.gError = ''
-      this.sending = true
+      this.setLoading(2)
       await this.$http
         .$post('/api/contact/success.json', this.contact.toParams())
         .then((res) => {
@@ -126,8 +145,9 @@ export default {
         })
         .catch(() => {
           this.gError = '申し訳ありません。お問い合わせを送信できませんでした。'
+          this.setLoading(0)
+          Util.scrollTo(this.$el, { top: 0, behavior: 'smooth' })
         })
-      this.sending = false
     },
   },
 }

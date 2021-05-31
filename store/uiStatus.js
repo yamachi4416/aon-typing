@@ -1,5 +1,6 @@
 export const state = () => ({
   scrolling: false,
+  loading: 0,
   histories: [],
   currentHist: null,
 })
@@ -7,6 +8,12 @@ export const state = () => ({
 export const getters = {
   scrolling(state) {
     return state.scrolling
+  },
+  loading(state) {
+    return state.loading
+  },
+  isLoading(state) {
+    return state.loading > 0
   },
   histories(state) {
     return state.histories
@@ -30,6 +37,9 @@ export const getters = {
 export const mutations = {
   setScrolling(state, value) {
     state.scrolling = value
+  },
+  setLoading(state, value) {
+    state.loading = value
   },
   setCurrentHist(
     state,
