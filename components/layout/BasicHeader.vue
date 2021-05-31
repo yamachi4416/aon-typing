@@ -45,9 +45,9 @@ export default {
       return this.titleText
     },
   },
-  async mounted() {
+  mounted() {
     if (this.showAnim) {
-      await this.typing(this.titleText, this.titleChars)
+      this.typing(this.titleText, this.titleChars)
     }
   },
   methods: {
@@ -60,7 +60,7 @@ export default {
 
         const fins = []
         const buf = []
-        const type = () => {
+        const type = async () => {
           const val = types.shift()
           if (val) {
             if (val.ec.length > 1) {
@@ -73,13 +73,13 @@ export default {
               buf.splice(0)
               fins.push(val.jc)
             }
-            setTimeout(type, 100)
+            await Util.wait(100)
+            requestAnimationFrame(type)
           } else {
             chars.splice(0)
             chars.push(...Array.from(text))
-            Util.wait(300).then(() => {
-              resolve()
-            })
+            await Util.wait(300)
+            requestAnimationFrame(resolve)
           }
         }
         setTimeout(type, 1)

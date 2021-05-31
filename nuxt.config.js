@@ -119,6 +119,7 @@ export default {
   },
 
   googleFonts: {
+    display: 'swap',
     families: {
       Itim: true,
       'Noto+Sans+JP': [400],
