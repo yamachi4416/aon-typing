@@ -1,6 +1,6 @@
 <template>
   <component :is="tag">
-    <span v-show="page > 1" ref="prev" class="prev-link" @click="prevPage" />
+    <span v-show="page > 1" ref="prev" class="prev-link" />
     <span ref="prevList">
       <slot :list="lists[0]" />
     </span>
@@ -10,12 +10,7 @@
     <span ref="nextList">
       <slot :list="lists[2]" />
     </span>
-    <div
-      v-show="page < maxPage - 1"
-      ref="next"
-      class="next-link"
-      @click="nextPage"
-    />
+    <div v-show="page < maxPage - 1" ref="next" class="next-link" />
   </component>
 </template>
 
@@ -143,6 +138,6 @@ export default {
 <style lang="scss" scoped>
 .next-link,
 .prev-link {
-  height: 100px;
+  height: 110px;
 }
 </style>

@@ -9,7 +9,6 @@
             <span>
               <input
                 v-model="kwd"
-                maxlength="20"
                 @keyup.enter="searchEnterProblems"
                 @change="changeKwds"
               />
@@ -17,7 +16,11 @@
           </div>
           <div class="buttons">
             <span>
-              <button class="button" :disabled="!kwd" @click="searchProblems">
+              <button
+                class="button big"
+                :disabled="!enableSearch"
+                @click="searchProblems"
+              >
                 検索する
               </button>
             </span>
@@ -75,8 +78,19 @@ export default {
   },
   computed: {
     ...mapGetters('problems', ['newProblems', 'tags']),
+    enableSearch() {
+      return !!this.kwd?.trim()
+    },
   },
   watch: {
+    kwd(val) {
+      if (val) {
+        const xs = Array.from(val)
+        if (xs.length > 100) {
+          this.kwd = xs.slice(0, 100).join('')
+        }
+      }
+    },
     '$route.query.kwd'(val) {
       this.kwd = this.convertKwds(val)
     },
@@ -104,14 +118,15 @@ export default {
       })
     },
     async searchProblems() {
-      const kwd = this.kwd || ''
-      if (!kwd) {
-        return
+      if (this.enableSearch) {
+        await this.$router.push({
+          name: 'index-problems',
+          query: { kwd: this.kwd },
+        })
       }
-      await this.$router.push({ name: 'index-problems', query: { kwd } })
     },
     async searchEnterProblems() {
-      if (this.kwd) {
+      if (this.enableSearch) {
         await this.changeKwds()
         await this.searchProblems()
       }

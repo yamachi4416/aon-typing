@@ -61,6 +61,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -114,6 +115,13 @@ export default {
             return a
           }, [])
         )
+    },
+  },
+
+  googleFonts: {
+    families: {
+      Itim: true,
+      'Noto+Sans+JP': [400],
     },
   },
 }
