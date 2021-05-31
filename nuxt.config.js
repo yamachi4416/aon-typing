@@ -16,8 +16,17 @@ export default {
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'viewport',
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1',
+      },
+      { hid: 'robots', name: 'robots', content: 'noindex,nofollow' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'あぉ～ん タイピングは無料のタイピング練習サイトです。',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
