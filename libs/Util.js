@@ -33,6 +33,23 @@ const getScrollContainer = (node) => {
   }
 }
 
+const mapModel = (modelName, fieldNames) => {
+  return fieldNames.reduce(
+    (a, name) => ({
+      ...a,
+      [name]: {
+        get() {
+          return this[modelName][name]
+        },
+        set(val) {
+          this.$set(this[modelName], name, val)
+        },
+      },
+    }),
+    {}
+  )
+}
+
 const scrollTo = (node, { top = 0, left = 0, behavior = 'smooth' } = {}) => {
   return new Promise((resolve) => {
     const sc = getScrollContainer(node)
@@ -59,4 +76,5 @@ export default {
   wait,
   getScrollContainer,
   scrollTo,
+  mapModel,
 }
