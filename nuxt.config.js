@@ -65,7 +65,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxt/http'],
+  modules: ['@nuxt/http', '@nuxtjs/sitemap'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -124,5 +124,15 @@ export default {
       Itim: true,
       'Noto+Sans+JP': [400],
     },
+  },
+
+  sitemap: {
+    hostname: process.env.SERVER_URL || 'http://localhost',
+    sitemaps: [
+      {
+        path: '/sitemap.xml',
+        exclude: ['/404', '/contact/thanks'],
+      },
+    ],
   },
 }
