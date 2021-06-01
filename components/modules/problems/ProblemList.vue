@@ -6,7 +6,7 @@
     @change="changePage"
   >
     <template #default="sp">
-      <ol class="problem-list row">
+      <ol v-if="sp.list && sp.list.length > 0" class="problem-list row">
         <li
           v-for="p in sp.list"
           :key="`problem-${p.id}`"

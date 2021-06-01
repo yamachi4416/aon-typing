@@ -131,7 +131,7 @@ export default {
     sitemaps: [
       {
         path: '/sitemap.xml',
-        exclude: ['/404', '/contact/thanks'],
+        exclude: ['/404', '/contact/thanks', '/game/play'],
       },
     ],
   },

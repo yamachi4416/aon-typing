@@ -22,21 +22,17 @@
         </div>
         <div class="problem-list-item-main-detail-row">
           <label>登録日</label>
-          <div>
-            <time :datetime="item.createdAt">{{ item.createdAt }}</time>
-          </div>
+          <time :datetime="item.createdAt">{{ item.createdAt }}</time>
         </div>
-        <div class="problem-list-item-main-detail-tags">
-          <div class="problem-list-item-main-detail-tags-list buttons">
-            <span v-for="(tag, i) in item.tags" :key="`tag-${item.id}-${i}`">
-              <button
-                class="problem-list-item-main-detail-tags-list-item button"
-                @click="$emit('tag', tag)"
-              >
-                {{ tag.name }}
-              </button>
-            </span>
-          </div>
+        <div class="problem-list-item-main-detail-tags buttons">
+          <span v-for="(tag, i) in item.tags" :key="`tag-${item.id}-${i}`">
+            <button
+              class="problem-list-item-main-detail-tags-item button"
+              @click="$emit('tag', tag)"
+            >
+              {{ tag.name }}
+            </button>
+          </span>
         </div>
       </div>
     </main>
@@ -91,7 +87,7 @@ export default {
       padding: 5px;
       &-row {
         display: flex;
-        & > div {
+        & > *:not(label) {
           flex: 1;
           text-align: right;
           padding: 5px 15px;
@@ -103,20 +99,18 @@ export default {
         }
       }
       &-tags {
-        &-list {
-          flex-wrap: wrap;
-          justify-content: flex-start;
-          padding: 10px 5px;
-          & > * {
-            padding-left: 0;
-          }
-          &-item {
-            font-size: 0.8em;
-            background: rgba(255, 153, 0, 1);
-            color: #fff;
-            padding: 0 8px;
-            border: none;
-          }
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 10px 5px;
+        & > * {
+          padding-left: 0;
+        }
+        &-item {
+          font-size: 0.8em;
+          background: rgba(255, 153, 0, 1);
+          color: #fff;
+          padding: 0 8px;
+          border: none;
         }
       }
     }

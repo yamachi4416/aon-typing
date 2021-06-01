@@ -1,6 +1,6 @@
 export const state = () => ({
   scrolling: false,
-  loading: 0,
+  loading: 3,
   histories: [],
   currentHist: null,
 })

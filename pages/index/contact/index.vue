@@ -15,7 +15,6 @@
             <input
               id="name"
               v-model="name"
-              name="name"
               :disabled="loading"
               @change="change"
             />
@@ -24,12 +23,7 @@
               class="error-message"
               v-text="errors.name"
             />
-            <input
-              v-show="false"
-              id="username"
-              name="username"
-              value="enter username"
-            />
+            <input v-show="false" id="username" value="enter username" />
           </span>
         </div>
         <div class="form-group row">
@@ -41,7 +35,6 @@
               id="email"
               v-model="email"
               type="email"
-              name="email"
               :disabled="loading"
               @change="change"
             />
@@ -60,7 +53,6 @@
             <textarea
               id="message"
               v-model="message"
-              name="message"
               :disabled="loading"
               @change="change"
             />

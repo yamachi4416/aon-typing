@@ -1,9 +1,18 @@
 <template>
   <div class="default-layout">
+    <loading />
     <div class="background" />
     <Nuxt />
   </div>
 </template>
+
+<script>
+import Loading from '~/components/parts/Loading.vue'
+
+export default {
+  components: { Loading },
+}
+</script>
 
 <style lang="scss" scoped>
 .default-layout {
