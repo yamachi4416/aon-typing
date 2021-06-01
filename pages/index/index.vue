@@ -31,15 +31,19 @@
         <img src="~/static/img/neko-tk-01.png" />
       </template>
     </para-section>
-    <para-section class="index-page-newProblems">
-      <h2>新着の問題</h2>
-      <problem-list
-        :problems="newProblems"
-        @tag="selectTag"
-        @play="playProblem"
-        @detail="detail"
-      />
-    </para-section>
+    <section class="index-page-newProblems">
+      <div class="index-page-newProblems-inner">
+        <h2>新着の問題</h2>
+        <div>
+          <problem-list
+            :problems="newProblems"
+            @tag="selectTag"
+            @play="playProblem"
+            @detail="detail"
+          />
+        </div>
+      </div>
+    </section>
     <para-section class="index-page-tags">
       <h2>タグいちらん</h2>
       <div class="buttons index-page-tags-list">
@@ -151,6 +155,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~/assets/css/vars.scss';
+
 .index-page {
   &-tags {
     &-list {
@@ -208,10 +214,17 @@ export default {
   }
 
   &-newProblems {
-    & > .para-section-main {
-      padding: 0;
-      & > h2 {
-        padding: 20px 20px 5px 20px;
+    padding: 0 10px;
+    @include __media_s {
+      padding: 0 5px;
+    }
+    &-inner {
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 0;
+      border-radius: 20px;
+      h2 {
+        color: #666;
+        padding: 20px;
       }
     }
   }

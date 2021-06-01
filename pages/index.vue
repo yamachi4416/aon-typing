@@ -89,6 +89,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/css/vars.scss';
+
 .basic-page {
   min-height: 100vh;
 
@@ -131,6 +133,9 @@ export default {
     max-width: 1000px;
     margin: 0 auto;
     min-height: calc(100vh - 200px);
+    @include __media_s {
+      padding: 0;
+    }
   }
 
   &-footer {
