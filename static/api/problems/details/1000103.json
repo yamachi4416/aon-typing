@@ -1,0 +1,83 @@
+{
+  "id": "1000103",
+  "title": "一般動詞 その1",
+  "type": "english",
+  "tags": [
+    {
+      "id": "00001",
+      "name": "英語"
+    },
+    {
+      "id": "00006",
+      "name": "英文法"
+    },
+    {
+      "id": "00003",
+      "name": "中学1年"
+    }
+  ],
+  "createdAt": "2021-06-01",
+  "updatedAt": "2021-06-01",
+  "words": [
+    {
+      "info": "私はサッカーをします",
+      "word": "I play soccer"
+    },
+    {
+      "info": "私は友達と野球をします",
+      "word": "I play baseball with my friends"
+    },
+    {
+      "info": "私は毎日勉強をします",
+      "word": "I study every day"
+    },
+    {
+      "info": "私は毎日英語を勉強をします",
+      "word": "I study english every day"
+    },
+    {
+      "info": "あなたは毎日英語を勉強します",
+      "word": "You study english every day"
+    },
+    {
+      "info": "あなたは私とテニスをします",
+      "word": "You play tennis with me"
+    },
+    {
+      "info": "私は野球とサッカーが好きです",
+      "word": "I like baseball and soccer"
+    },
+    {
+      "info": "私は勉強も好きです",
+      "word": "I also like studying"
+    },
+    {
+      "info": "あなたは歌うのが好きです",
+      "word": "You like to sing"
+    },
+    {
+      "info": "私たちは公園でサッカーをします",
+      "word": "We play soccer in the park"
+    },
+    {
+      "info": "私たちは毎月テストを受けます",
+      "word": "We take the exam every month"
+    },
+    {
+      "info": "私たちは私たちの担任の先生が好きです",
+      "word": "We like our homeroom teacher"
+    },
+    {
+      "info": "私はテニスラケットを持っています",
+      "word": "I have a tennis racket"
+    },
+    {
+      "info": "私はお父さんと一緒に海で泳ぎます",
+      "word": "I swim in the sea with my father"
+    },
+    {
+      "info": "私は祖母と散歩に行きます",
+      "word": "I go for a walk with my grandmother"
+    }
+  ]
+}

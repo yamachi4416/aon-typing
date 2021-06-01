@@ -102,11 +102,15 @@ const generateProblemData = (dataDir, apiDir) => {
     const tagProblemsFile = path.join(tagsDist, `${tag.id}.json`)
     fs.writeFileSync(
       tagProblemsFile,
-      JSON.stringify({
-        id: tag.id,
-        name: tagName,
-        problems: tag.problems,
-      })
+      JSON.stringify(
+        {
+          id: tag.id,
+          name: tagName,
+          problems: tag.problems,
+        },
+        null,
+        2
+      )
     )
   }
 
@@ -115,9 +119,9 @@ const generateProblemData = (dataDir, apiDir) => {
   const newProblems = Array.from(problems)
     .sort(
       (a, b) =>
-        new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime() ||
-        new Date(a.updatedAt).getTime() - new Date(b.updatedAt).getTime() ||
-        a.stat.birthtimeMs - b.stat.birthtimeMs
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() ||
+        new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
+        b.stat.birthtimeMs - a.stat.birthtimeMs
     )
     .slice(0, 6)
     .map((p) => ({
