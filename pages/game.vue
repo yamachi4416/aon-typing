@@ -50,12 +50,6 @@ export default {
 .game-layout {
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-repeat: repeat-x;
-  background-size: contain;
-  background-position: center;
-  background-attachment: fixed;
-  background-image: url(~/static/img/back01.png);
 
   & > section {
     display: flex;

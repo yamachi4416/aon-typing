@@ -93,12 +93,6 @@ export default {
 <style lang="scss" scoped>
 .basic-page {
   min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  background-position: center;
-  background-attachment: fixed;
-  background-image: url(~/static/img/back01.png);
 
   &-menu {
     margin-top: -45px;
@@ -186,14 +180,6 @@ export default {
   .page-enter,
   .page-leave-to {
     opacity: 0;
-  }
-}
-</style>
-
-<style lang="scss">
-.basic-page-main {
-  * {
-    scroll-margin-top: 100px;
   }
 }
 </style>
