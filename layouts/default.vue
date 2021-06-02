@@ -9,10 +9,30 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import Loading from '~/components/parts/Loading'
 
 export default {
   components: { Loading },
+  mounted() {
+    this.setScrollbarWidth(this.getScrollberWidth())
+  },
+  methods: {
+    ...mapMutations('uiStatus', ['setScrollbarWidth']),
+    getScrollberWidth() {
+      const chks = document.createElement('div')
+      chks.style.overflowY = 'scroll'
+      chks.style.width = '100%'
+      chks.style.height = '1px'
+      document.body.appendChild(chks)
+
+      const pw = chks.clientWidth
+      chks.style.overflowY = 'hidden'
+      const sw = chks.clientWidth - pw
+      document.body.removeChild(chks)
+      return sw
+    },
+  },
 }
 </script>
 

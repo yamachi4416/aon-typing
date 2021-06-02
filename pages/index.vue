@@ -19,7 +19,7 @@
     <main class="basic-page-main">
       <nuxt-child />
     </main>
-    <footer class="basic-page-footer">
+    <footer class="basic-page-footer" :class="{ 'hide-footer': hideFooter }">
       <nav class="basic-page-footer-nav">
         <ul>
           <li>
@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapGetters } from 'vuex'
 import BasicHeader from '~/components/layout/BasicHeader.vue'
 import Util from '~/libs/Util'
 
@@ -69,6 +69,9 @@ export default {
         // { route: { name: 'index' }, label: 'その他' },
       ],
     }
+  },
+  computed: {
+    ...mapGetters('uiStatus', ['hideFooter']),
   },
   methods: {
     ...mapMutations('uiStatus', ['setScrolling']),
@@ -145,6 +148,10 @@ export default {
     flex-direction: column;
     background: rgba(255, 255, 255, 0.8);
     padding-top: 10px;
+
+    &.hide-footer {
+      visibility: hidden;
+    }
 
     &-nav {
       & > ul {

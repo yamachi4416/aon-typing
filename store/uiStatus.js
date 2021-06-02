@@ -1,13 +1,18 @@
 export const state = () => ({
   scrolling: false,
+  hideFooter: false,
   loading: 3,
   histories: [],
   currentHist: null,
+  scrollbarWidth: 0,
 })
 
 export const getters = {
   scrolling(state) {
     return state.scrolling
+  },
+  hideFooter(state) {
+    return state.hideFooter
   },
   loading(state) {
     return state.loading
@@ -32,11 +37,17 @@ export const getters = {
         .find((h) => regx.test(h.name))
     }
   },
+  scrollbarWidth(state) {
+    return state.scrollbarWidth
+  },
 }
 
 export const mutations = {
   setScrolling(state, value) {
     state.scrolling = value
+  },
+  setHideFooter(state, value) {
+    state.hideFooter = value
   },
   setLoading(state, value) {
     state.loading = value
@@ -72,5 +83,8 @@ export const mutations = {
     state.histories.forEach((h, i) => {
       h.index = i
     })
+  },
+  setScrollbarWidth(state, value) {
+    state.scrollbarWidth = value
   },
 }
