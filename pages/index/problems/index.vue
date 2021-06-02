@@ -21,6 +21,9 @@
           </span>
         </div>
       </div>
+      <template #right>
+        <img-neko-user-keyboard />
+      </template>
     </para-section>
     <problem-list
       :problems="problems"
@@ -33,10 +36,14 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
+import ImgNekoUserKeyboard from '~/components/imgs/ImgNekoUserKeyboard.vue'
 import ProblemList from '~/components/modules/problems/ProblemList.vue'
 import ParaSection from '~/components/parts/ParaSection.vue'
+import PageBaseMixin from '~/mixins/PageBaseMixin'
+
 export default {
-  components: { ProblemList, ParaSection },
+  components: { ProblemList, ParaSection, ImgNekoUserKeyboard },
+  mixins: [PageBaseMixin],
   beforeRouteEnter(to, from, next) {
     next((vm) => {
       if (from.name) {

@@ -59,7 +59,7 @@ export default {}
     z-index: 2;
     flex-direction: column;
 
-    & > {
+    & > * {
       width: 100%;
     }
 
@@ -91,6 +91,9 @@ export default {}
     & > img {
       z-index: 1;
       width: 100%;
+      height: auto;
+      min-width: 90px;
+      min-height: 90px;
     }
   }
 
@@ -99,7 +102,7 @@ export default {}
   }
 
   @include __media_s {
-    padding: 5px;
+    padding: 7px;
     &-right,
     &-left {
       display: none;

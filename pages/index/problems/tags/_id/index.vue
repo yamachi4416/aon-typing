@@ -13,7 +13,7 @@
         </div>
       </template>
       <template #right>
-        <img src="~/static/img/neko-tk-01.png" />
+        <img-neko-user-keyboard />
       </template>
     </tag-info>
     <problem-list
@@ -30,9 +30,11 @@ import { mapMutations } from 'vuex'
 import ProblemList from '~/components/modules/problems/ProblemList.vue'
 import TagInfo from '~/components/modules/problems/TagInfo.vue'
 import Util from '~/libs/Util'
+import PageBaseMixin from '~/mixins/PageBaseMixin'
 
 export default {
   components: { ProblemList, TagInfo },
+  mixins: [PageBaseMixin],
   beforeRouteEnter(to, from, next) {
     next((vm) => {
       if (from.name) {

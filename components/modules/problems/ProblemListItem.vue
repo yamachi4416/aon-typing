@@ -9,10 +9,6 @@
     <main class="problem-list-item-main">
       <div class="problem-list-item-main-detail">
         <div class="problem-list-item-main-detail-row">
-          <label>タイプ</label>
-          <div>{{ item.type }}</div>
-        </div>
-        <div class="problem-list-item-main-detail-row">
           <label>問題数</label>
           <div>{{ item.words }}</div>
         </div>

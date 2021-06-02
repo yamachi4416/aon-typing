@@ -4,8 +4,17 @@
       <div class="background-image" />
     </div>
     <Nuxt />
+    <loading />
   </div>
 </template>
+
+<script>
+import Loading from '~/components/parts/Loading'
+
+export default {
+  components: { Loading },
+}
+</script>
 
 <style lang="scss" scoped>
 .default-layout {
@@ -27,7 +36,7 @@
       background-repeat: repeat-x;
       background-size: auto 100%;
       background-position: top 0 left 50vw;
-      background-image: url(~/static/img/back01.png);
+      background-image: url(~assets/img/back01.png);
       @media (max-height: 450px) {
         height: 500px;
       }

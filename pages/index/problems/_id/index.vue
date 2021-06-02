@@ -8,14 +8,16 @@
           </div>
           <h2 class="detail-info-title">{{ detail.title }}</h2>
           <div class="detail-info-info">
-            <dl class="detail-info-info-type">
-              <dt>タイプ</dt>
-              <dd>{{ detail.type }}</dd>
-            </dl>
             <dl class="detail-info-info-createdAt">
               <dt>登録日</dt>
               <dd>
                 <time :datetime="detail.createdAt">{{ detail.createdAt }}</time>
+              </dd>
+            </dl>
+            <dl class="detail-info-info-updatedAt">
+              <dt>更新日</dt>
+              <dd>
+                <time :datetime="detail.updatedAt">{{ detail.updatedAt }}</time>
               </dd>
             </dl>
             <dl>
@@ -67,7 +69,7 @@
         </div>
       </div>
       <template #right>
-        <img src="~/static/img/neko-tk-01.png" />
+        <img-neko-user-keyboard />
       </template>
     </para-section>
     <div>
@@ -93,8 +95,11 @@
 <script>
 import { mapGetters, mapActions, mapMutations } from 'vuex'
 import ParaSection from '~/components/parts/ParaSection.vue'
+import PageBaseMixin from '~/mixins/PageBaseMixin'
+
 export default {
   components: { ParaSection },
+  mixins: [PageBaseMixin],
   beforeRouteEnter(to, from, next) {
     next((vm) => {
       if (from.name) {
@@ -155,14 +160,13 @@ export default {
     justify-content: space-between;
 
     .detail-info {
-      &-type,
       &-id,
       &-info {
         padding: 5px;
       }
 
       &-info {
-        font-size: 0.9em;
+        font-size: 1em;
 
         &-links {
           ul {
@@ -186,6 +190,7 @@ export default {
           }
           & > dd {
             padding: 5px;
+            color: #666;
             flex: 1;
           }
         }
@@ -200,7 +205,7 @@ export default {
             padding-left: 0;
           }
           &-item {
-            font-size: 1em;
+            font-size: 0.85em;
             background: rgba(255, 153, 0, 1);
             color: #fff;
             padding: 0 1em;

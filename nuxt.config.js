@@ -1,4 +1,6 @@
 import fs from 'fs'
+import path from 'path'
+import console from 'console'
 
 export default {
   server: {
@@ -134,5 +136,25 @@ export default {
         exclude: ['/404', '/contact/thanks', '/game/play'],
       },
     ],
+  },
+
+  hooks: {
+    'generate:distCopied': (nuxt) => {
+      const listJsonFiles = (dir) => {
+        return fs
+          .readdirSync(dir, { withFileTypes: true })
+          .filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
+          .map((entry) => path.resolve(dir, entry.name))
+      }
+
+      const apiDir = path.resolve(nuxt.distPath, 'api')
+      if (fs.existsSync(apiDir)) {
+        console.log(apiDir)
+        listJsonFiles(apiDir).forEach((p) => {
+          const d = JSON.parse(fs.readFileSync(p))
+          fs.writeFileSync(p, JSON.stringify(d))
+        })
+      }
+    },
   },
 }

@@ -1,5 +1,4 @@
+import ImgNekoUserKeyboard from '~/components/imgs/ImgNekoUserKeyboard'
 export default {
-  beforeRouteEnter(to, from, next) {
-    next((vm) => {})
-  },
+  components: { ImgNekoUserKeyboard },
 }

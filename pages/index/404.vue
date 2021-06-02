@@ -12,8 +12,11 @@
 
 <script>
 import ParaSection from '~/components/parts/ParaSection.vue'
+import PageBaseMixin from '~/mixins/PageBaseMixin'
+
 export default {
   components: { ParaSection },
+  mixins: [PageBaseMixin],
   head() {
     return {
       meta: [{ hid: 'robots', name: 'robots', content: 'noindex' }],

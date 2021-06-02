@@ -28,7 +28,7 @@
         </div>
       </div>
       <template #right>
-        <img src="~/static/img/neko-tk-01.png" />
+        <img-neko-user-keyboard />
       </template>
     </para-section>
     <section class="index-page-newProblems">
@@ -62,7 +62,7 @@
         </span>
       </div>
       <template #left>
-        <img src="~/static/img/neko-tk-01.png" />
+        <img-neko-user-keyboard />
       </template>
     </para-section>
   </div>
@@ -72,8 +72,11 @@
 import { mapMutations, mapGetters } from 'vuex'
 import ProblemList from '~/components/modules/problems/ProblemList.vue'
 import ParaSection from '~/components/parts/ParaSection.vue'
+import PageBaseMixin from '~/mixins/PageBaseMixin'
+
 export default {
   components: { ParaSection, ProblemList },
+  mixins: [PageBaseMixin],
   scrollToTop: true,
   data() {
     return {
@@ -154,7 +157,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '~/assets/css/vars.scss';
 
 .index-page {
@@ -216,13 +219,13 @@ export default {
   &-newProblems {
     padding: 0 10px;
     @include __media_s {
-      padding: 0 5px;
+      padding: 0 7px;
     }
     &-inner {
       background: rgba(255, 255, 255, 0.9);
       box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 0;
       border-radius: 20px;
-      h2 {
+      & > h2 {
         color: #666;
         padding: 20px;
       }

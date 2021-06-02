@@ -12,7 +12,7 @@
         他のサイトにはないおもしろ機能もあるのでいちど遊んでみてください。
       </p>
       <template #right>
-        <img src="~/static/img/neko-tk-01.png" />
+        <img-neko-user-keyboard />
       </template>
     </para-section>
 
@@ -27,7 +27,7 @@
         タイピングの練習につかれたときや午後のティータイムに眺めるのもいいかもしれません。
       </p>
       <template #left>
-        <img src="~/static/img/neko-tk-01.png" />
+        <img-neko-user-keyboard />
       </template>
     </para-section>
 
@@ -60,7 +60,7 @@
         </div>
       </div>
       <template #right>
-        <img src="~/static/img/neko-tk-01.png" />
+        <img-neko-user-keyboard />
       </template>
     </para-section>
 
@@ -89,7 +89,7 @@
               <tr v-for="r in rankList" :key="`about-rank-table-${r.id}`">
                 <th>{{ r.end === null ? '？？？？' : r.name }}</th>
                 <td>{{ r.start }}</td>
-                <td>～</td>
+                <td class="sm-table-between">～</td>
                 <td>{{ r.end }}</td>
               </tr>
             </tbody>
@@ -97,7 +97,19 @@
         </div>
       </div>
       <template #left>
-        <img src="~/static/img/neko-tk-01.png" />
+        <img-neko-user-keyboard />
+      </template>
+    </para-section>
+
+    <para-section ref="automode">
+      <h2>目標タイプ数ってなんですか？</h2>
+      <p>
+        目標タイプ数はタイピングのタイプ数の目標を設定する機能です。<br />
+        設定した場合は目標に設定したタイプ数タイピングしたときにも終了するようになります。<br />
+        制限時間を「なし」に設定して、時間を気にせずに目標のタイプ数まで続けるのもいいかもしれません。
+      </p>
+      <template #right>
+        <img-neko-user-keyboard />
       </template>
     </para-section>
   </div>
@@ -106,11 +118,12 @@
 <script>
 import ParaSection from '~/components/parts/ParaSection.vue'
 import { rankList, helpAnimals } from '~/libs/TypingGameInfo'
+import PageBaseMixin from '~/mixins/PageBaseMixin'
 import ScrollHashMixin from '~/mixins/ScrollHashMixin'
 
 export default {
   components: { ParaSection },
-  mixins: [ScrollHashMixin],
+  mixins: [PageBaseMixin, ScrollHashMixin],
   data() {
     return {
       rankList: rankList(),
@@ -132,6 +145,9 @@ export default {
   &-body {
     align-items: center;
     justify-content: space-around;
+    dl {
+      padding-left: 10px;
+    }
   }
 }
 
@@ -139,6 +155,10 @@ export default {
   &-body {
     align-items: flex-start;
     justify-content: space-around;
+    .sm-table-between {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 }
 </style>
