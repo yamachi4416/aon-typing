@@ -36,6 +36,7 @@
         <h2>新着の問題</h2>
         <div>
           <problem-list
+            :paging="false"
             :problems="newProblems"
             @tag="selectTag"
             @play="playProblem"

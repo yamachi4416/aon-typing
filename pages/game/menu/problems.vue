@@ -9,6 +9,7 @@
         <div>
           <problem-list
             v-slot="{ problem }"
+            route-name="game-menu-problems"
             :problems="problems"
             @tag="selectTag"
           >

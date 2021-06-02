@@ -47,6 +47,14 @@ import SplitList from '~/components/parts/SplitList.vue'
 export default {
   components: { ParaSection, ProblemListItem, SplitList },
   props: {
+    routeName: {
+      type: String,
+      default: null,
+    },
+    paging: {
+      type: Boolean,
+      default: true,
+    },
     problems: {
       type: Array,
       default: () => [],
@@ -76,6 +84,12 @@ export default {
   },
   watch: {
     $route(to, from) {
+      if (!this.paging) {
+        return
+      }
+      if (this.routeName && this.routeName !== from.name) {
+        return
+      }
       if (to.name === from.name) {
         if (to.query.page || from.query.page) {
           if (to.query.page !== from.query.page) {
@@ -99,8 +113,10 @@ export default {
       }
     },
     changePage(page) {
-      const query = { ...this.$route.query, page }
-      this.$router.replace({ query })
+      if (this.paging) {
+        const query = { ...this.$route.query, page }
+        this.$router.replace({ query })
+      }
     },
     selectTag(tag) {
       this.$emit('tag', tag)
