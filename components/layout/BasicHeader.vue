@@ -1,18 +1,20 @@
 <template>
   <header class="basic-header">
-    <nav>
-      <h1>
-        <nuxt-link v-if="$route.name !== 'index'" to="/">
-          {{ title }}
-        </nuxt-link>
-        <a v-else @click="scrollTop({ name: 'index' })">
-          {{ title }}
-        </a>
-      </h1>
+    <nav class="basic-header-nav">
+      <div class="basic-header-nav-main">
+        <h1>
+          <nuxt-link v-if="$route.name !== 'index'" to="/">
+            {{ title }}
+          </nuxt-link>
+          <a v-else @click="scrollTop({ name: 'index' })">
+            {{ title }}
+          </a>
+        </h1>
+      </div>
+      <div class="basic-header-nav-sub">
+        <slot />
+      </div>
     </nav>
-    <div v-if="$slots.default">
-      <slot />
-    </div>
   </header>
 </template>
 
@@ -110,28 +112,37 @@ export default {
   z-index: 99;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 
-  nav {
+  &-nav {
     height: 100%;
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
     max-width: 1000px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 
-    h1,
-    h2 {
-      color: rgba(255, 145, 0, 1);
-      height: 100%;
-      font-size: 1.5em;
-      text-align: left;
+    &-main {
+      flex: 1;
       display: flex;
       align-items: center;
 
-      a {
-        cursor: pointer;
-        margin-top: -20px;
-        color: inherit;
-        text-decoration: none;
+      h1 {
+        color: rgba(255, 145, 0, 1);
+        height: 100%;
+        font-size: 1.5em;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+
+        a {
+          cursor: pointer;
+          color: inherit;
+          text-decoration: none;
+        }
       }
     }
   }

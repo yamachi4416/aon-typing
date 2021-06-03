@@ -98,7 +98,6 @@ export default {
   min-height: 100vh;
 
   &-menu {
-    margin-top: -45px;
     &-content {
       width: 100%;
       max-width: 1000px;
@@ -108,7 +107,7 @@ export default {
         display: flex;
         justify-content: space-around;
         list-style: none;
-        padding: 10px;
+        padding: 0 10px;
         width: 100%;
 
         & > li {
@@ -137,7 +136,7 @@ export default {
     margin: 0 auto;
     min-height: calc(100vh - 200px);
     @include __media_s {
-      padding: 0;
+      padding: 5px 0;
     }
   }
 

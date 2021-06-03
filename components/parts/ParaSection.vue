@@ -102,7 +102,7 @@ export default {}
   }
 
   @include __media_s {
-    padding: 7px;
+    padding: 5px 7px 5px 7px;
     &-right,
     &-left {
       display: none;

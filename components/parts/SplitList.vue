@@ -157,7 +157,7 @@ export default {
 .prev-link {
   height: 100px;
   &.prev-link-2 {
-    height: 1px;
+    height: 0px;
   }
 }
 .next-link {

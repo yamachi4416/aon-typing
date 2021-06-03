@@ -218,9 +218,9 @@ export default {
   }
 
   &-newProblems {
-    padding: 0 10px;
+    padding: 10px;
     @include __media_s {
-      padding: 0 7px;
+      padding: 5px 7px;
     }
     &-inner {
       background: rgba(255, 255, 255, 0.9);

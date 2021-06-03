@@ -42,6 +42,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/css/vars.scss';
+
 .modal-content {
   display: flex;
   align-items: center;
@@ -68,6 +70,9 @@ export default {
   &-main {
     flex: 1;
     overflow-y: auto;
+    @include __media_s {
+      padding: 5px 0;
+    }
   }
 
   &-header {
