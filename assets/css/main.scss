@@ -70,7 +70,8 @@ body,
       flex: 1;
     }
   }
-  input, textarea {
+  input,
+  textarea {
     display: block;
     width: 100%;
     height: calc(1.5em + 0.7rem + 2px);
@@ -96,6 +97,33 @@ body,
       outline: 0;
       border-color: rgba(255, 153, 0, 1);
       box-shadow: 0 0 0 0.2rem rgba(255, 153, 0, 0.6);
+    }
+  }
+  &.placeholder {
+    position: relative;
+    input {
+      z-index: 1;
+      background: transparent;
+      &:focus,
+      &:active {
+        & + label {
+          display: none;
+        }
+      }
+    }
+    label {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      height: 100%;
+      width: 100%;
+      pointer-events: none;
+      color: #aaa;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }

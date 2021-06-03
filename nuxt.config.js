@@ -23,7 +23,6 @@ export default {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1',
       },
-      { hid: 'robots', name: 'robots', content: 'noindex,nofollow' },
       {
         hid: 'description',
         name: 'description',
@@ -41,10 +40,10 @@ export default {
   css: ['~assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~plugins/filters.js', '~plugins/router'],
+  plugins: ['~plugins/filters', '~plugins/router'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: false,
 
   loading: false,
 

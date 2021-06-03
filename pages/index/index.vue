@@ -5,14 +5,21 @@
       <p>問題のタイトルをキーワードで検索します。</p>
       <div class="index-page-search-form">
         <div class="index-page-search-form-search row">
-          <div class="row form-group">
-            <span>
-              <input
-                v-model="kwd"
-                @keyup.enter="searchEnterProblems"
-                @change="changeKwds"
-              />
-            </span>
+          <div
+            class="
+              index-page-search-form-search-keyword
+              row
+              form-group
+              placeholder
+            "
+          >
+            <input
+              id="search-keyword"
+              v-model="kwd"
+              @keyup.enter="searchEnterProblems"
+              @change="changeKwds"
+            />
+            <label v-show="!kwd" for="search-keyword">検索キーワード</label>
           </div>
           <div class="buttons">
             <span>
@@ -213,6 +220,9 @@ export default {
 
       &-search {
         flex: 1;
+        &-keyword {
+          padding-right: 3px;
+        }
       }
     }
   }
@@ -229,6 +239,7 @@ export default {
       & > h2 {
         color: #666;
         padding: 20px;
+        padding-bottom: 5px;
       }
     }
   }
