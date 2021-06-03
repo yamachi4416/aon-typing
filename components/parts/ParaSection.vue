@@ -26,6 +26,8 @@ export default {}
   position: relative;
   display: flex;
   z-index: 0;
+  page-break-inside: avoid;
+
   &:hover {
     z-index: 1;
   }
