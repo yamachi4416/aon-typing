@@ -59,10 +59,16 @@
         <p class="keyboard-text" v-text="'space'" />
       </foreignObject>
     </g>
-    <g v-else>
+    <g v-else-if="text === 'back\nspace'">
       <rect x="0" y="0" rx="5" ry="5" width="60" height="60" />
       <foreignObject width="60" height="60">
         <p class="keyboard-text" v-text="text" />
+      </foreignObject>
+    </g>
+    <g v-else>
+      <rect x="0" y="0" rx="5" ry="5" width="60" height="60" />
+      <foreignObject width="60" height="60">
+        <p class="keyboard-text normal" v-text="text" />
       </foreignObject>
     </g>
   </g>
@@ -117,13 +123,17 @@ export default {
     display: flex;
     margin: 0;
     height: 100%;
-    line-height: 1em;
+    line-height: 1;
     white-space: pre;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 5px;
+    &.normal {
+      font-size: 22px;
+      line-height: 2;
+    }
   }
 }
 </style>

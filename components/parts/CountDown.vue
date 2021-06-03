@@ -1,11 +1,7 @@
 <template>
   <div class="count-down">
     <div v-if="count > 0" class="count">
-      <svg width="100%" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central">
-          <tspan>{{ count }}</tspan>
-        </text>
-      </svg>
+      <span>{{ count }}</span>
     </div>
   </div>
 </template>
@@ -21,7 +17,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .count-down {
   z-index: 20;
   position: fixed;
@@ -29,17 +25,22 @@ export default {
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: var(--maxvh, 100vh);
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 1);
 }
 .count-down .count {
-  width: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.count-down svg text {
-  font-size: 58px;
+.count-down .count span {
+  font-size: 100px;
+  font-size: 35vmin;
   font-weight: bold;
-  fill: rgb(64, 125, 255);
+  color: rgb(64, 125, 255);
 }
 </style>

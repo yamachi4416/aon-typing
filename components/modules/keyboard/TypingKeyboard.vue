@@ -48,7 +48,6 @@ export default {
     }
 
     .keyboard-text {
-      font-size: 16px;
       color: #333;
     }
   }

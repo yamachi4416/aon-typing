@@ -9,7 +9,7 @@
       :limit="typing.goalCharCount || typing.totalCharCount || 0"
       :used="typing.totalTypeCorrect"
     />
-    <foreignObject class="typing-game">
+    <foreignObject class="typing-game" width="1001" height="463">
       <div class="wrapper">
         <div class="display-zone">
           <div class="display-zone-info">
@@ -47,11 +47,9 @@
               />
             </div>
             <div class="display-zone-info-right">
-              <close-circle
-                class="close-circle"
-                tabindex="-1"
-                @click="cancel"
-              />
+              <div class="close-circle">
+                <close-circle tabindex="-1" @click="cancel" />
+              </div>
             </div>
           </div>
         </div>
@@ -177,6 +175,7 @@ export default {
       align-items: center;
       padding: 15px;
       height: 100%;
+      width: 100%;
     }
 
     .display-zone {
@@ -184,14 +183,22 @@ export default {
 
       &-info {
         display: flex;
-        row-gap: 10px;
-        column-gap: 10px;
         align-items: flex-start;
 
         &-left,
         &-right {
           width: 60px;
-          position: relative;
+        }
+
+        &-right {
+          display: flex;
+          justify-content: flex-end;
+          .close-circle {
+            width: 35px;
+            height: 35px;
+            margin-top: -5px;
+            margin-right: -5px;
+          }
         }
 
         &-center {
@@ -277,13 +284,6 @@ export default {
             letter-spacing: 0.15em;
           }
         }
-
-        &-right {
-          .close-circle {
-            padding-top: 10px;
-            right: -5px;
-          }
-        }
       }
 
       &-words {
@@ -314,6 +314,7 @@ export default {
     }
 
     .hands {
+      height: 15px;
       width: 85%;
       display: flex;
       row-gap: 20px;

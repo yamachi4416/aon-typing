@@ -1,11 +1,30 @@
 <template>
-  <span class="cancel">
-    <button
-      class="cancel-button"
-      v-bind="$attrs"
-      @click="$emit('click')"
-    ></button>
-  </span>
+  <button class="close-button" v-bind="$attrs" @click="$emit('click')">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      height="100%"
+      stroke="currentColor"
+      viewBox="0 0 100 100"
+    >
+      <line
+        x1="30"
+        y1="30"
+        x2="70"
+        y2="70"
+        stroke-width="8"
+        stroke-linecap="round"
+      />
+      <line
+        x1="30"
+        y1="70"
+        x2="70"
+        y2="30"
+        stroke-width="8"
+        stroke-linecap="round"
+      />
+    </svg>
+  </button>
 </template>
 
 <script>
@@ -13,44 +32,12 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.cancel {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  position: absolute;
-  top: 0;
-  right: 0;
+.close-button {
+  width: 100%;
   height: 100%;
-  width: 45px;
-
-  &-button {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    border: 2px solid #333;
-    background: transparent;
-    border-radius: 50%;
-    cursor: pointer;
-
-    &::before,
-    &::after {
-      content: '';
-      display: block;
-      width: calc(100% - 9px);
-      height: 4px;
-      background: #333;
-      transform-origin: 50% 50%;
-      position: absolute;
-      top: calc(50% - 1.5px);
-      left: 4.5px;
-      border-radius: 5px;
-    }
-    &::before {
-      transform: rotate(-45deg);
-    }
-    &::after {
-      transform: rotate(45deg);
-    }
-  }
+  border: 2px solid #333;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
 }
 </style>

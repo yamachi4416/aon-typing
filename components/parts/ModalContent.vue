@@ -4,11 +4,9 @@
       <span class="modal-content-header-left" />
       <h3 class="modal-content-header-title" v-text="title" />
       <span class="modal-content-header-right">
-        <close-circle
-          v-if="showClose"
-          class="close-circle"
-          @click="$emit('close')"
-        />
+        <div class="close-circle">
+          <close-circle v-if="showClose" @click="$emit('close')" />
+        </div>
       </span>
     </header>
     <main class="modal-content-main">
@@ -100,7 +98,11 @@ export default {
       flex: 1;
       min-width: 50px;
       .close-circle {
-        right: 5px;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        right: 0px;
+        top: 3px;
       }
     }
   }

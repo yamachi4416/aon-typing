@@ -46,7 +46,8 @@ export default {
 <style lang="scss" scoped>
 .game-layout {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  height: var(--maxvh, 100vh);
 
   & > section {
     display: flex;

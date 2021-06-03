@@ -14,6 +14,13 @@ import Loading from '~/components/parts/Loading'
 
 export default {
   components: { Loading },
+  beforeMount() {
+    this.setVH()
+    window.addEventListener('resize', this.setVH)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.setVH)
+  },
   mounted() {
     this.setScrollbarWidth(this.getScrollberWidth())
   },
@@ -31,6 +38,10 @@ export default {
       const sw = chks.clientWidth - pw
       document.body.removeChild(chks)
       return sw
+    },
+    setVH() {
+      const vh = window.innerHeight
+      document.body.style.setProperty('--maxvh', `${vh}px`)
     },
   },
 }
