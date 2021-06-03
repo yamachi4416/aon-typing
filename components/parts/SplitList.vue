@@ -15,13 +15,7 @@
     <div id="m3" ref="nextList">
       <slot :list="lists[2]" />
     </div>
-    <div
-      v-show="hasNext"
-      ref="next"
-      class="next-link"
-      :class="{ [`next-link-${page}`]: true }"
-    />
-    <span ref="chkScrollbar" />
+    <div v-show="hasNext" ref="next" class="next-link" />
   </component>
 </template>
 
@@ -67,29 +61,33 @@ export default {
   mounted() {
     this.setHideFooter(this.hasNext)
     const prev = this.$refs.prev
-    const next = this.$refs.next
-    const obs = new IntersectionObserver(async (entries) => {
-      if (this.scrolling) {
-        return
-      }
-
-      const entry = entries[0]
-      if (entry.isIntersecting) {
-        if (entry.target === prev) {
-          await this.prevPage()
+    const obs1 = new IntersectionObserver(
+      async (entries) => {
+        if (!this.scrolling) {
+          if (entries[0].isIntersecting) {
+            await this.prevPage()
+          }
         }
-        if (entry.target === next) {
+      },
+      { threshold: 1 }
+    )
+    obs1.observe(prev)
+
+    const next = this.$refs.next
+    const obs2 = new IntersectionObserver(async (entries) => {
+      if (!this.scrolling) {
+        if (entries[0].isIntersecting) {
           await this.nextPage()
         }
       }
     })
-    obs.observe(prev)
-    obs.observe(next)
-    this._obs = obs
+    obs2.observe(next)
+
+    this._obses = [obs1, obs2]
   },
   beforeDestroy() {
-    if (this._obs) {
-      this._obs.disconnect()
+    if (this._obses) {
+      this._obses.forEach((o) => o.disconnect())
     }
     this.setHideFooter(false)
   },
@@ -109,20 +107,16 @@ export default {
         cn.style.overflowY = 'hidden'
       }
 
-      cn.style.overflowY = 'hidden'
       sc.addEventListener('scroll', stop)
 
-      const pp = this.$refs.prev?.clientHeight || 0
+      const pp =
+        this.$refs.prev?.clientHeight -
+        (sc === window ? sc.scrollY : sc.scrollTop)
       this.$emit('change', this.page - 1)
       await this.$nextTick()
 
       if (this.page > 2) {
-        sc.scrollTo(
-          0,
-          this.$refs.prevList.clientHeight +
-            this.$el.clientTop +
-            ((this.$refs.prev?.clientHeight || 0) - pp)
-        )
+        sc.scrollTo(0, this.$refs.prevList.clientHeight - pp)
       }
 
       sc.removeEventListener('scroll', stop)
@@ -161,9 +155,9 @@ export default {
 
 <style lang="scss" scoped>
 .prev-link {
-  height: 30px;
+  height: 100px;
   &.prev-link-2 {
-    height: 0;
+    height: 1px;
   }
 }
 .next-link {
