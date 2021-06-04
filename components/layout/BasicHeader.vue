@@ -3,7 +3,7 @@
     <nav class="basic-header-nav">
       <div class="basic-header-nav-main">
         <h1>
-          <nuxt-link v-if="$route.name !== 'index'" to="/">
+          <nuxt-link v-if="$route.name !== 'index'" :to="{ name: 'index' }">
             {{ title }}
           </nuxt-link>
           <a v-else @click="scrollTop({ name: 'index' })">
@@ -12,18 +12,30 @@
         </h1>
       </div>
       <div class="basic-header-nav-sub">
-        <slot />
+        <nav class="basic-header-nav-sub-menu">
+          <ul>
+            <li v-for="(menu, i) in menus" :key="`menu-${i}`">
+              <nuxt-link
+                v-if="$route.name !== menu.route.name"
+                :to="menu.route"
+                v-text="menu.label"
+              />
+              <a v-else @click="scrollTop(menu.route)" v-text="menu.label" />
+            </li>
+          </ul>
+        </nav>
       </div>
     </nav>
   </header>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
 import Util from '~/libs/Util'
 import jpChars from '~/libs/TypingJapaneseChars.mjs'
+import PageBaseMixin from '~/mixins/PageBaseMixin'
 
 export default {
+  mixins: [PageBaseMixin],
   props: {
     titleText: {
       type: String,
@@ -32,6 +44,10 @@ export default {
     showAnim: {
       type: Boolean,
       default: false,
+    },
+    menus: {
+      type: Array,
+      default: () => [],
     },
   },
   data() {
@@ -53,7 +69,6 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('uiStatus', ['setScrolling']),
     typing(text, chars) {
       return new Promise((resolve) => {
         const types = jpChars
@@ -86,18 +101,6 @@ export default {
         }
         setTimeout(type, 1)
       })
-    },
-    async scrollTop(route) {
-      this.setScrolling(true)
-
-      if (Object.keys(this.$route.query).length) {
-        await Util.scrollTo(this.$el)
-        await this.$router.push({ ...route, query: null })
-        await this.$nextTick()
-      }
-
-      await Util.scrollTo(this.$el)
-      this.setScrolling(false)
     },
   },
 }
@@ -142,6 +145,39 @@ export default {
           cursor: pointer;
           color: inherit;
           text-decoration: none;
+        }
+      }
+    }
+
+    &-sub {
+      &-menu {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        ul {
+          display: flex;
+          justify-content: space-around;
+          list-style: none;
+          padding: 0 10px;
+          width: 100%;
+
+          & > li {
+            flex: 1;
+            text-align: center;
+
+            a {
+              cursor: pointer;
+              color: #666;
+              text-decoration: none;
+              white-space: nowrap;
+
+              &:hover,
+              &:focus {
+                color: #999;
+              }
+            }
+          }
         }
       }
     }

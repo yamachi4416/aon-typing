@@ -40,8 +40,10 @@ export default {
       return sw
     },
     setVH() {
-      const vh = window.innerHeight
-      document.body.style.setProperty('--maxvh', `${vh}px`)
+      if (document.body.style.setProperty) {
+        const vh = window.innerHeight
+        document.body.style.setProperty('--maxvh', `${vh}px`)
+      }
     },
   },
 }

@@ -83,7 +83,7 @@ export default {
   },
 
   generate: {
-    fallback: 'index.html',
+    fallback: '404.html',
     routes() {
       const problems = require('./static/api/problems.json').problems
       const problemMap = problems.reduce((a, p) => {

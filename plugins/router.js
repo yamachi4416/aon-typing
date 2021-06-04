@@ -41,6 +41,10 @@ export default ({ app, store }) => {
   app.router.beforeEach((to, from, next) => {
     mod.setLoading(2)
     mod.setScrolling(true)
+    next()
+  })
+
+  app.router.beforeResolve((to, from, next) => {
     const key = Number(history.state?.key)
     if (key && from.name) {
       const hist =
@@ -57,6 +61,8 @@ export default ({ app, store }) => {
       mod.setCurrentHist(hist)
     }
     next()
+    mod.setScrolling(false)
+    mod.setLoading(0)
   })
 
   app.router.afterEach((to, from) => {
