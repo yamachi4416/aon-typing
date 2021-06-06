@@ -130,7 +130,11 @@ export default {
       this.gError = ''
       this.setLoading(2)
       await this.$http
-        .$post('/api/contact/success.json', this.contact.toParams())
+        .$post('https://c.studio-aon.com/contact', {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+        })
         .then((res) => {
           this.confirm = true
           this.$router.replace({ name: 'index-contact-thanks' })
