@@ -39,11 +39,7 @@ export class ContactModel {
           if (Array.from(contact.email).length > 30) {
             return 'メールアドレスは30文字以内で入力ください'
           }
-          if (
-            !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-              contact.email
-            )
-          ) {
+          if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(contact.email)) {
             return 'メールアドレスの形式が間違っています'
           }
         }
