@@ -145,7 +145,9 @@ export default {
 
   &-main {
     display: flex;
+    align-items: center;
     width: 100%;
+    height: 100%;
     max-width: 1350px;
     max-height: 100%;
     margin: 0 auto;
@@ -160,10 +162,11 @@ export default {
       align-items: center;
       justify-content: center;
       &-svg {
-        width: 100%;
-        height: 100%;
+        width: auto;
+        height: auto;
         max-width: 100%;
-        max-height: 100%;
+        max-height: 100vh;
+        max-height: calc(100vh - 20px);
       }
     }
   }

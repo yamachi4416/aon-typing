@@ -1,7 +1,9 @@
 <template>
   <svg
     class="typing-game-panel"
-    viewBox="-1 -1 1001 463"
+    viewBox="0 0 1000 460"
+    width="1002"
+    height="464"
     xmlns="http://www.w3.org/2000/svg"
   >
     <line-gauge
@@ -9,7 +11,7 @@
       :limit="typing.goalCharCount || typing.totalCharCount || 0"
       :used="typing.totalTypeCorrect"
     />
-    <foreignObject class="typing-game" width="1001" height="463">
+    <foreignObject class="typing-game" width="1000" height="460">
       <div class="wrapper">
         <div class="display-zone">
           <div class="display-zone-info">

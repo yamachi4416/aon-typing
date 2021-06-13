@@ -4,11 +4,6 @@
       <main>
         <nuxt-child />
       </main>
-      <footer>
-        <div>
-          <small class="copylight">&copy; 2021 Studio AON</small>
-        </div>
-      </footer>
     </section>
   </div>
 </template>
@@ -99,18 +94,6 @@ export default {
       flex: 1;
       position: relative;
       width: 100%;
-      max-height: calc(100% - 30px);
-    }
-
-    & > footer {
-      height: 30px;
-      width: 100%;
-      text-align: center;
-
-      .copylight {
-        color: #333;
-        font-size: 1.1em;
-      }
     }
   }
 }
