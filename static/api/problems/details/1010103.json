@@ -1,0 +1,198 @@
+{
+  "id": "1010103",
+  "title": "東海道・山陽新幹線の駅名一覧",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00007",
+      "name": "地理"
+    },
+    {
+      "id": "00019",
+      "name": "駅名"
+    }
+  ],
+  "createdAt": "2021-06-13",
+  "updatedAt": "2021-06-13",
+  "words": [
+    {
+      "info": "東京",
+      "info2": "とうきょう",
+      "word": "toukyou"
+    },
+    {
+      "info": "品川",
+      "info2": "しながわ",
+      "word": "sinagawa"
+    },
+    {
+      "info": "新横浜",
+      "info2": "しんよこはま",
+      "word": "sinyokohama"
+    },
+    {
+      "info": "小田原",
+      "info2": "おだわら",
+      "word": "odawara"
+    },
+    {
+      "info": "熱海",
+      "info2": "あたみ",
+      "word": "atami"
+    },
+    {
+      "info": "三島",
+      "info2": "みしま",
+      "word": "misima"
+    },
+    {
+      "info": "新富士",
+      "info2": "しんふじ",
+      "word": "sinhuji"
+    },
+    {
+      "info": "静岡",
+      "info2": "しずおか",
+      "word": "sizuoka"
+    },
+    {
+      "info": "掛川",
+      "info2": "かけがわ",
+      "word": "kakegawa"
+    },
+    {
+      "info": "浜松",
+      "info2": "はままつ",
+      "word": "hamamatu"
+    },
+    {
+      "info": "豊橋",
+      "info2": "とよはし",
+      "word": "toyohasi"
+    },
+    {
+      "info": "三河安城",
+      "info2": "みかわあんじょう",
+      "word": "mikawaanjou"
+    },
+    {
+      "info": "名古屋",
+      "info2": "なごや",
+      "word": "nagoya"
+    },
+    {
+      "info": "岐阜羽島",
+      "info2": "ぎふはしま",
+      "word": "gihuhasima"
+    },
+    {
+      "info": "米原",
+      "info2": "まいばら",
+      "word": "maibara"
+    },
+    {
+      "info": "京都",
+      "info2": "きょうと",
+      "word": "kyouto"
+    },
+    {
+      "info": "新大阪",
+      "info2": "しんおおさか",
+      "word": "sinnoosaka"
+    },
+    {
+      "info": "新神戸",
+      "info2": "しんこうべ",
+      "word": "sinkoube"
+    },
+    {
+      "info": "西明石",
+      "info2": "にしあかし",
+      "word": "nisiakasi"
+    },
+    {
+      "info": "姫路",
+      "info2": "ひめじ",
+      "word": "himeji"
+    },
+    {
+      "info": "相生",
+      "info2": "あいおい",
+      "word": "aioi"
+    },
+    {
+      "info": "岡山",
+      "info2": "おかやま",
+      "word": "okayama"
+    },
+    {
+      "info": "新倉敷",
+      "info2": "しんくらしき",
+      "word": "sinkurasiki"
+    },
+    {
+      "info": "福山",
+      "info2": "ふくやま",
+      "word": "hukuyama"
+    },
+    {
+      "info": "新尾道",
+      "info2": "しんおのみち",
+      "word": "sinnonomiti"
+    },
+    {
+      "info": "三原",
+      "info2": "みはら",
+      "word": "mihara"
+    },
+    {
+      "info": "東広島",
+      "info2": "ひがしひろしま",
+      "word": "higasihirosima"
+    },
+    {
+      "info": "広島",
+      "info2": "ひろしま",
+      "word": "hirosima"
+    },
+    {
+      "info": "新岩国",
+      "info2": "しんいわくに",
+      "word": "sinniwakuni"
+    },
+    {
+      "info": "徳山",
+      "info2": "とくやま",
+      "word": "tokuyama"
+    },
+    {
+      "info": "新山口",
+      "info2": "しんやまぐち",
+      "word": "sinyamaguti"
+    },
+    {
+      "info": "厚狭",
+      "info2": "あさ",
+      "word": "asa"
+    },
+    {
+      "info": "新下関",
+      "info2": "しんしものせき",
+      "word": "sinsimonoseki"
+    },
+    {
+      "info": "小倉",
+      "info2": "こくら",
+      "word": "kokura"
+    },
+    {
+      "info": "博多",
+      "info2": "はかた",
+      "word": "hakata"
+    }
+  ]
+}
