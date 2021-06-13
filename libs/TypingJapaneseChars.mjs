@@ -164,6 +164,7 @@ const JapaneseToTypeCharList1 = [
   ['っ', 'ltu,ltsu'],
   ['つ', 'tu,tsu'],
   ['つぁ', 'tsa'],
+  ['つぃ', 'tsi'],
   ['つぇ', 'tse'],
   ['つぉ', 'tso'],
   ['づ', 'du'],
