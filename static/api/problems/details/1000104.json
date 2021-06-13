@@ -1,0 +1,83 @@
+{
+  "id": "1000104",
+  "title": "一般動詞 その2",
+  "type": "english",
+  "tags": [
+    {
+      "id": "00001",
+      "name": "英語"
+    },
+    {
+      "id": "00006",
+      "name": "英文法"
+    },
+    {
+      "id": "00003",
+      "name": "中学1年"
+    }
+  ],
+  "createdAt": "2021-06-13",
+  "updatedAt": "2021-06-13",
+  "words": [
+    {
+      "info": "彼は公園でサッカーをします",
+      "word": "He plays soccer in the park"
+    },
+    {
+      "info": "彼女はバイオリンを弾きます",
+      "word": "She plays the violin"
+    },
+    {
+      "info": "彼女は音楽室でピアノを弾きます",
+      "word": "She plays the piano in the music room"
+    },
+    {
+      "info": "彼女は音楽室でピアノを弾いています",
+      "word": "She is playing the piano in the music room"
+    },
+    {
+      "info": "彼はお昼に1時間休憩します",
+      "word": "He takes a break for an hour at noon"
+    },
+    {
+      "info": "彼女は今学校で勉強しています",
+      "word": "She is studying at school now"
+    },
+    {
+      "info": "彼の父は彼とサッカーをします",
+      "word": "His father plays soccer with him"
+    },
+    {
+      "info": "彼は勉強をしません",
+      "word": "He does not study"
+    },
+    {
+      "info": "彼らはまったく勉強をしません",
+      "word": "They don't study at all"
+    },
+    {
+      "info": "その鳥は空を飛びますか？",
+      "word": "Does the bird fly in the sky?"
+    },
+    {
+      "info": "あなたは毎日勉強をしますか？",
+      "word": "Do you study every day?"
+    },
+    {
+      "info": "あなたは昨日勉強をしましたか？",
+      "word": "Did you study yesterday?"
+    },
+    {
+      "info": "彼女は昨日勉強をしましたか？",
+      "word": "Did she study yesterday?"
+    },
+    {
+      "info": "太郎は先週仕事をしましたか？",
+      "word": "Did Taro work last week?"
+    },
+    {
+      "info": "花子は昨年海外旅行に行きましたか？",
+      "word": "Did Hanako go on an overseas trip last year?"
+    }
+  ]
+}
