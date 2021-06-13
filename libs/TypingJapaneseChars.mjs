@@ -326,17 +326,12 @@ const JapaneseToTypeCharList2 = [
 
 const JapaneseToTypeCharList = [
   ...JapaneseToTypeCharList1,
-  ...JapaneseToTypeCharList1.slice(0, JapaneseToTypeCharList1.length - 1).map(
-    (v) => {
-      return [
-        `っ${v[0]}`,
-        v[1]
-          .split(',')
-          .map((s) => s[0] + s)
-          .join(','),
-      ]
-    }
-  ),
+  ...JapaneseToTypeCharList1.slice(0, JapaneseToTypeCharList1.length - 1)
+    .map((v) => {
+      const cs = v[1].split(',').filter((c) => !'aiueon'.includes(c[0]))
+      return cs.length ? [`っ${v[0]}`, cs.map((s) => s[0] + s).join(',')] : null
+    })
+    .filter((v) => v),
   ...JapaneseToTypeCharList2,
 ]
 
