@@ -82,7 +82,7 @@
           <para-section class="details-item-inner">
             <div class="detail-card">
               <div class="detail-card-no">No.{{ i + 1 }}</div>
-              <div class="detail-card-info">{{ w.info }}</div>
+              <div class="detail-card-info">{{ w.info || w.info2 }}</div>
               <div class="detail-card-word">{{ w.word }}</div>
             </div>
           </para-section>

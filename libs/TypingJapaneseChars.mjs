@@ -87,17 +87,20 @@ const Kana2HiraMap = {
 }
 
 const JapaneseToTypeCharList1 = [
-  ['ぁ', 'la'],
+  ['ぁ', 'la,xa'],
   ['あ', 'a'],
-  ['ぃ', 'li'],
+  ['ぃ', 'li,xi'],
   ['い', 'i'],
-  ['ぅ', 'lu'],
+  ['いぇ', 'ye'],
+  ['ぅ', 'lu,xu'],
   ['う', 'u'],
+  ['うぁ', 'wha,ula,uxa'],
   ['うぃ', 'wi'],
   ['うぇ', 'we'],
-  ['ぇ', 'le'],
+  ['うぉ', 'who,ulo,uxo'],
+  ['ぇ', 'le,xe'],
   ['え', 'e'],
-  ['ぉ', 'lo'],
+  ['ぉ', 'lo,xo'],
   ['お', 'o'],
   ['か', 'ka'],
   ['が', 'ga'],
@@ -129,10 +132,10 @@ const JapaneseToTypeCharList1 = [
   ['しょ', 'syo,sho'],
   ['じ', 'ji,zi'],
   ['じぃ', 'jyi'],
-  ['じぇ', 'je,jye'],
-  ['じゃ', 'ja,jya'],
-  ['じゅ', 'ju,jyu'],
-  ['じょ', 'jo,jyo'],
+  ['じぇ', 'je,jye,zye'],
+  ['じゃ', 'ja,jya,zya'],
+  ['じゅ', 'ju,jyu,zyu'],
+  ['じょ', 'jo,jyo,zyo'],
   ['す', 'su'],
   ['すぁ', 'swa'],
   ['すぃ', 'swi'],
@@ -160,6 +163,9 @@ const JapaneseToTypeCharList1 = [
   ['ぢょ', 'dyo'],
   ['っ', 'ltu,ltsu'],
   ['つ', 'tu,tsu'],
+  ['つぁ', 'tsa'],
+  ['つぇ', 'tse'],
+  ['つぉ', 'tso'],
   ['づ', 'du'],
   ['て', 'te'],
   ['てぃ', 'thi'],
@@ -262,7 +268,12 @@ const JapaneseToTypeCharList1 = [
   ['ゎ', 'lwa'],
   ['わ', 'wa'],
   ['を', 'wo'],
-  ['ん', 'nn'],
+  ['ん', 'nn,xn'],
+  ['ヴァ', 'va'],
+  ['ヴィ', 'vi'],
+  ['ヴ', 'vu'],
+  ['ヴェ', 've'],
+  ['ヴォ', 'vo'],
 ]
 
 const JapaneseToTypeCharList2 = [
@@ -383,7 +394,7 @@ function typeJapaneseCharsMap(text, length, useKana = false) {
     const { d1, d2, d3 } = toHira({ c1, c2, c3 })
 
     if (d1 === 'ん') {
-      if (!d2 || 'あいうえおなにぬねのん'.includes(d2[1])) {
+      if (d1 === d2 || 'あいうえおなにぬねのん'.includes(d2[1])) {
         maps.push({ jc: c1, ec: 'nn' })
       } else {
         maps.push({ jc: c1, ec: 'n' })
@@ -457,6 +468,10 @@ function allowDoubleN(typeChar, typeChars, jpChars) {
   return false
 }
 
+function japaneseToTypeCharList() {
+  return JapaneseToTypeCharList1.slice(0)
+}
+
 export default {
   kana2Hira,
   typeJapaneseChars,
@@ -464,4 +479,5 @@ export default {
   typeCharsToJapaneseChars,
   typeCharsFindJapaneseChars,
   allowDoubleN,
+  japaneseToTypeCharList,
 }

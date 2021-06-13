@@ -15,25 +15,29 @@ export default {
       type: Object,
       default: null,
     },
+    charMode: {
+      type: Boolean,
+      default: true,
+    },
   },
   computed: {
     leftWord() {
       if (!this.word) {
         return ''
       }
-      return this.word.left
+      return this.charMode ? this.word.left : this.word.leftWord
     },
     rightWord() {
       if (!this.word) {
         return ''
       }
-      return this.word.right
+      return this.charMode ? this.word.right : this.word.rightWord
     },
     currentWord() {
       if (!this.word) {
         return ''
       }
-      return this.word.current
+      return this.charMode ? this.word.current : this.word.currentWord
     },
   },
 }

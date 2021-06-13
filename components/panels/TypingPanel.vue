@@ -41,6 +41,7 @@
                 width="100%"
                 class="display-words-info2"
                 :word="current.infoState"
+                :char-mode="false"
               />
               <display-words
                 width="100%"
