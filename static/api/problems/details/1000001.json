@@ -1,0 +1,59 @@
+{
+  "id": "1000001",
+  "title": "基本練習 その1",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00020",
+      "name": "基本練習"
+    }
+  ],
+  "createdAt": "2021-06-13",
+  "updatedAt": "2021-06-13",
+  "words": [
+    {
+      "info2": "あ い う え お",
+      "word": "a i u e o"
+    },
+    {
+      "info2": "か き く け こ",
+      "word": "ka ki ku ke ko"
+    },
+    {
+      "info2": "さ し す せ そ",
+      "word": "sa si su se so"
+    },
+    {
+      "info2": "た ち つ て と",
+      "word": "ta ti tu te to"
+    },
+    {
+      "info2": "な に ぬ ね の",
+      "word": "na ni nu ne no"
+    },
+    {
+      "info2": "は ひ ふ へ ほ",
+      "word": "ha hi hu he ho"
+    },
+    {
+      "info2": "ま み む め も",
+      "word": "ma mi mu me mo"
+    },
+    {
+      "info2": "や ゆ よ",
+      "word": "ya yu yo"
+    },
+    {
+      "info2": "ら り る れ ろ",
+      "word": "ra ri ru re ro"
+    },
+    {
+      "info2": "わ お ん",
+      "word": "wa o nn"
+    }
+  ]
+}

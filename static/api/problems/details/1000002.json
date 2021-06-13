@@ -1,0 +1,63 @@
+{
+  "id": "1000002",
+  "title": "基本練習 その2",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00020",
+      "name": "基本練習"
+    }
+  ],
+  "createdAt": "2021-06-13",
+  "updatedAt": "2021-06-13",
+  "words": [
+    {
+      "info2": "が ぎ ぐ げ ご",
+      "word": "ga gi gu ge go"
+    },
+    {
+      "info2": "ぎぃ ぎぇ ぎゃ ぎゅ ぎょ",
+      "word": "gyi gye gya gyu gyo"
+    },
+    {
+      "info2": "ざ じ ず ぜ ぞ",
+      "word": "za ji zu ze zo"
+    },
+    {
+      "info2": "じぃ じぇ じゃ じゅ じょ",
+      "word": "jyi je ja ju jo"
+    },
+    {
+      "info2": "だ ぢ づ で ど",
+      "word": "da di du de do"
+    },
+    {
+      "info2": "でぃ でゅ どぅ",
+      "word": "dhi dhu dwu"
+    },
+    {
+      "info2": "どぁ どぃ どぅ どぇ どぉ",
+      "word": "dwa dwi dwu dwe dwo"
+    },
+    {
+      "info2": "ば び ぶ べ ぼ",
+      "word": "ba bi bu be bo"
+    },
+    {
+      "info2": "ぱ ぴ ぷ ぺ ぽ",
+      "word": "pa pi pu pe po"
+    },
+    {
+      "info2": "びぃ びぇ びゃ びゅ びょ",
+      "word": "byi bye bya byu byo"
+    },
+    {
+      "info2": "ぴぃ ぴぇ ぴゃ ぴゅ ぴょ",
+      "word": "pyi pye pya pyu pyo"
+    }
+  ]
+}

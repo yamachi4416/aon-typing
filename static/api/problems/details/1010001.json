@@ -23,57 +23,57 @@
     {
       "info": "青森県",
       "info2": "あおもりけん",
-      "word": "aomoriken"
+      "word": "aomorikenn"
     },
     {
       "info": "岩手県",
       "info2": "いわてけん",
-      "word": "iwateken"
+      "word": "iwatekenn"
     },
     {
       "info": "宮城県",
       "info2": "みやぎけん",
-      "word": "miyagiken"
+      "word": "miyagikenn"
     },
     {
       "info": "秋田県",
       "info2": "あきたけん",
-      "word": "akitaken"
+      "word": "akitakenn"
     },
     {
       "info": "山形県",
       "info2": "やまがたけん",
-      "word": "yamagataken"
+      "word": "yamagatakenn"
     },
     {
       "info": "福島県",
       "info2": "ふくしまけん",
-      "word": "hukusimaken"
+      "word": "hukusimakenn"
     },
     {
       "info": "茨城県",
       "info2": "いばらきけん",
-      "word": "ibarakiken"
+      "word": "ibarakikenn"
     },
     {
       "info": "栃木県",
       "info2": "とちぎけん",
-      "word": "totigiken"
+      "word": "totigikenn"
     },
     {
       "info": "群馬県",
       "info2": "ぐんまけん",
-      "word": "gunmaken"
+      "word": "gunmakenn"
     },
     {
       "info": "埼玉県",
       "info2": "さいたまけん",
-      "word": "saitamaken"
+      "word": "saitamakenn"
     },
     {
       "info": "千葉県",
       "info2": "ちばけん",
-      "word": "tibaken"
+      "word": "tibakenn"
     },
     {
       "info": "東京都",
@@ -83,62 +83,62 @@
     {
       "info": "神奈川県",
       "info2": "かながわけん",
-      "word": "kanagawaken"
+      "word": "kanagawakenn"
     },
     {
       "info": "新潟県",
       "info2": "にいがたけん",
-      "word": "niigataken"
+      "word": "niigatakenn"
     },
     {
       "info": "富山県",
       "info2": "とやまけん",
-      "word": "toyamaken"
+      "word": "toyamakenn"
     },
     {
       "info": "石川県",
       "info2": "いしかわけん",
-      "word": "isikawaken"
+      "word": "isikawakenn"
     },
     {
       "info": "福井県",
       "info2": "ふくいけん",
-      "word": "hukuiken"
+      "word": "hukuikenn"
     },
     {
       "info": "山梨県",
       "info2": "やまなしけん",
-      "word": "yamanasiken"
+      "word": "yamanasikenn"
     },
     {
       "info": "長野県",
       "info2": "ながのけん",
-      "word": "naganoken"
+      "word": "naganokenn"
     },
     {
       "info": "岐阜県",
       "info2": "ぎふけん",
-      "word": "gihuken"
+      "word": "gihukenn"
     },
     {
       "info": "静岡県",
       "info2": "しずおかけん",
-      "word": "sizuokaken"
+      "word": "sizuokakenn"
     },
     {
       "info": "愛知県",
       "info2": "あいちけん",
-      "word": "aitiken"
+      "word": "aitikenn"
     },
     {
       "info": "三重県",
       "info2": "みえけん",
-      "word": "mieken"
+      "word": "miekenn"
     },
     {
       "info": "滋賀県",
       "info2": "しがけん",
-      "word": "sigaken"
+      "word": "sigakenn"
     },
     {
       "info": "京都府",
@@ -153,102 +153,102 @@
     {
       "info": "兵庫県",
       "info2": "ひょうごけん",
-      "word": "hyougoken"
+      "word": "hyougokenn"
     },
     {
       "info": "奈良県",
       "info2": "ならけん",
-      "word": "naraken"
+      "word": "narakenn"
     },
     {
       "info": "和歌山県",
       "info2": "わかやまけん",
-      "word": "wakayamaken"
+      "word": "wakayamakenn"
     },
     {
       "info": "鳥取県",
       "info2": "とっとりけん",
-      "word": "tottoriken"
+      "word": "tottorikenn"
     },
     {
       "info": "島根県",
       "info2": "しまねけん",
-      "word": "simaneken"
+      "word": "simanekenn"
     },
     {
       "info": "岡山県",
       "info2": "おかやまけん",
-      "word": "okayamaken"
+      "word": "okayamakenn"
     },
     {
       "info": "広島県",
       "info2": "ひろしまけん",
-      "word": "hirosimaken"
+      "word": "hirosimakenn"
     },
     {
       "info": "山口県",
       "info2": "やまぐちけん",
-      "word": "yamagutiken"
+      "word": "yamagutikenn"
     },
     {
       "info": "徳島県",
       "info2": "とくしまけん",
-      "word": "tokusimaken"
+      "word": "tokusimakenn"
     },
     {
       "info": "香川県",
       "info2": "かがわけん",
-      "word": "kagawaken"
+      "word": "kagawakenn"
     },
     {
       "info": "愛媛県",
       "info2": "えひめけん",
-      "word": "ehimeken"
+      "word": "ehimekenn"
     },
     {
       "info": "高知県",
       "info2": "こうちけん",
-      "word": "koutiken"
+      "word": "koutikenn"
     },
     {
       "info": "福岡県",
       "info2": "ふくおかけん",
-      "word": "hukuokaken"
+      "word": "hukuokakenn"
     },
     {
       "info": "佐賀県",
       "info2": "さがけん",
-      "word": "sagaken"
+      "word": "sagakenn"
     },
     {
       "info": "長崎県",
       "info2": "ながさきけん",
-      "word": "nagasakiken"
+      "word": "nagasakikenn"
     },
     {
       "info": "熊本県",
       "info2": "くまもとけん",
-      "word": "kumamotoken"
+      "word": "kumamotokenn"
     },
     {
       "info": "大分県",
       "info2": "おおいたけん",
-      "word": "ooitaken"
+      "word": "ooitakenn"
     },
     {
       "info": "宮崎県",
       "info2": "みやざきけん",
-      "word": "miyazakiken"
+      "word": "miyazakikenn"
     },
     {
       "info": "鹿児島県",
       "info2": "かごしまけん",
-      "word": "kagosimaken"
+      "word": "kagosimakenn"
     },
     {
       "info": "沖縄県",
       "info2": "おきなわけん",
-      "word": "okinawaken"
+      "word": "okinawakenn"
     }
   ]
 }
