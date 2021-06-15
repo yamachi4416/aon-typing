@@ -1,123 +1,48 @@
 <template>
-  <split-list
-    :lists="lists"
-    :page="page"
-    :max-page="maxPage"
-    @change="changePage"
-  >
-    <template #default="sp">
-      <ol v-if="sp.list && sp.list.length > 0" class="problem-list row">
-        <li
-          v-for="p in sp.list"
-          :key="`problem-${p.id}`"
-          class="problem-list-item col-s-12 col-m-6 col-4"
-        >
-          <para-section class="problem-list-item-inner">
-            <problem-list-item :item="p" @tag="selectTag">
-              <template v-if="!$scopedSlots.default && !$slots.default" #footer>
-                <div class="buttons">
-                  <span>
-                    <button class="button" @click="$emit('detail', p.id)">
-                      内容を見る
-                    </button>
-                  </span>
-                  <span>
-                    <button class="button" @click="$emit('play', p.id)">
-                      プレイする
-                    </button>
-                  </span>
-                </div>
-              </template>
-              <template v-else #footer>
-                <slot :problem="p" />
-              </template>
-            </problem-list-item>
-          </para-section>
-        </li>
-      </ol>
-    </template>
-  </split-list>
+  <ol class="problem-list row">
+    <li
+      v-for="p in problems"
+      :key="`problem-${p.id}`"
+      class="problem-list-item col-s-12 col-m-6 col-4"
+    >
+      <para-section class="problem-list-item-inner">
+        <problem-list-item :item="p" @tag="selectTag">
+          <template v-if="!$scopedSlots.default && !$slots.default" #footer>
+            <div class="buttons">
+              <span>
+                <button class="button" @click="$emit('detail', p.id)">
+                  内容を見る
+                </button>
+              </span>
+              <span>
+                <button class="button" @click="$emit('play', p.id)">
+                  プレイする
+                </button>
+              </span>
+            </div>
+          </template>
+          <template v-else #footer>
+            <slot :problem="p" />
+          </template>
+        </problem-list-item>
+      </para-section>
+    </li>
+  </ol>
 </template>
 
 <script>
 import ProblemListItem from './ProblemListItem.vue'
 import ParaSection from '~/components/parts/ParaSection.vue'
-import SplitList from '~/components/parts/SplitList.vue'
 
 export default {
-  components: { ParaSection, ProblemListItem, SplitList },
+  components: { ParaSection, ProblemListItem },
   props: {
-    routeName: {
-      type: String,
-      default: null,
-    },
-    paging: {
-      type: Boolean,
-      default: true,
-    },
     problems: {
       type: Array,
       default: () => [],
     },
-    pageSize: {
-      type: Number,
-      default: 12,
-    },
-  },
-  data() {
-    return {
-      ...this.pageParam(this.$route.query.page),
-    }
-  },
-  computed: {
-    lists() {
-      const start = (this.page - 1) * this.pageSize
-      const end = this.page * this.pageSize
-      return [
-        this.page > 1 ? this.problems.slice(start - this.pageSize, start) : [],
-        this.problems.slice(start, end),
-        this.page < this.maxPage
-          ? this.problems.slice(end, end + this.pageSize)
-          : [],
-      ]
-    },
-  },
-  watch: {
-    $route(to, from) {
-      if (!this.paging) {
-        return
-      }
-      if (this.routeName && this.routeName !== from.name) {
-        return
-      }
-      if (to.name === from.name) {
-        if (to.query.page || from.query.page) {
-          if (to.query.page !== from.query.page) {
-            Object.assign(this, this.pageParam(to.query.page))
-          }
-        }
-      }
-    },
-    problems() {
-      this.maxPage = Math.ceil(this.problems.length / this.pageSize)
-      Object.assign(this, this.pageParam(this.$route.query.page))
-    },
   },
   methods: {
-    pageParam(p) {
-      const page = (p ? ~~p : 1) || 1
-      const maxPage = Math.ceil(this.problems.length / this.pageSize)
-      return {
-        page: Math.min(page, maxPage),
-        maxPage,
-      }
-    },
-    changePage(page) {
-      if (this.paging) {
-        const query = { ...this.$route.query, page }
-        this.$router.replace({ query })
-      }
-    },
     selectTag(tag) {
       this.$emit('tag', tag)
     },

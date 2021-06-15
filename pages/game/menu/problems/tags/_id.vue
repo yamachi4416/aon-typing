@@ -28,7 +28,6 @@
             <problem-list
               v-slot="{ problem }"
               class="game-menu-problems-tags-id-select-panel-problem-list"
-              route-name="game-menu-problems-tags-id"
               :problems="problems"
               @tag="selectTag"
             >
