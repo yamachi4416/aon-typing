@@ -176,9 +176,14 @@ export default {
   max-width: 100%;
   overflow-x: auto;
   padding: 3px;
+
   .keymaps {
     padding: 6px;
+    @media print {
+      padding: 0;
+    }
   }
+
   .keymaps-description {
     h2 {
       font-size: 1.1em;
@@ -190,6 +195,9 @@ export default {
         justify-content: flex-start;
       }
     }
+    @media print {
+      display: none;
+    }
   }
 }
 
@@ -200,6 +208,7 @@ export default {
   border-bottom: 1px solid #ccc;
   border-right: 1px solid #ccc;
   background: rgba(255, 255, 255, 0.8);
+  page-break-inside: avoid;
 
   &:first-of-type {
     border-top: 1px solid #ccc;
@@ -269,43 +278,36 @@ export default {
       }
     }
   }
+
+  @media print {
+    page-break-inside: avoid;
+    &-title {
+      font-size: 0.9em;
+    }
+    &-section {
+      font-size: 9px !important;
+      padding: 3px;
+      &-items {
+        @media print and (max-width: 600px) {
+          width: calc(100% / 2);
+        }
+        @media print and (min-width: 600px) and (max-width: 1000px) {
+          width: calc(100% / 3);
+        }
+        @media print and (min-width: 1000px) and (max-width: 1600px) {
+          width: calc(100% / 4);
+        }
+      }
+    }
+  }
 }
 </style>
 
 <style lang="scss">
-@media print {
-  .index-contents-keymap-page {
-    .keymaps-description {
-      display: none;
-    }
-    .keymaps {
-      padding: 0;
-    }
-  }
-  .index-contents-keymap {
+.index-contents-keymap {
+  @media print {
     .basic-page-main {
       max-width: 100% !important;
-      .chars {
-        page-break-inside: avoid;
-        &-title {
-          font-size: 0.9em;
-        }
-        &-section {
-          font-size: 9px !important;
-          padding: 3px;
-          &-items {
-            @media print and (max-width: 600px) {
-              width: calc(100% / 2);
-            }
-            @media print and (min-width: 600px) and (max-width: 1000px) {
-              width: calc(100% / 3);
-            }
-            @media print and (min-width: 1000px) and (max-width: 1600px) {
-              width: calc(100% / 4);
-            }
-          }
-        }
-      }
     }
   }
 }

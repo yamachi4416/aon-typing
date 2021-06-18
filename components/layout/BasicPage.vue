@@ -63,24 +63,3 @@ export default {
   }
 }
 </style>
-
-<style lang="scss">
-@media print {
-  .basic-page {
-    .basic-header {
-      position: relative;
-      height: unset;
-      width: 100%;
-      &-nav {
-        &-sub {
-          display: none;
-        }
-      }
-    }
-
-    .basic-footer {
-      display: none;
-    }
-  }
-}
-</style>

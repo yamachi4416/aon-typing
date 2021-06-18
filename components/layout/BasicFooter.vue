@@ -45,6 +45,10 @@ export default {
   background: rgba(255, 255, 255, 0.8);
   padding-top: 10px;
 
+  @media print {
+    display: none;
+  }
+
   &.hide-footer {
     visibility: hidden;
   }
