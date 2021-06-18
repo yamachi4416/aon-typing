@@ -57,6 +57,30 @@ export default {
     @include __media_s {
       padding: 5px 0;
     }
+    @media print {
+      padding: 3px;
+    }
+  }
+}
+</style>
+
+<style lang="scss">
+@media print {
+  .basic-page {
+    .basic-header {
+      position: relative;
+      height: unset;
+      width: 100%;
+      &-nav {
+        &-sub {
+          display: none;
+        }
+      }
+    }
+
+    .basic-footer {
+      display: none;
+    }
   }
 }
 </style>

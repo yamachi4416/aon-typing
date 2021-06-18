@@ -6,7 +6,11 @@
       class="problem-list-item col-s-12 col-m-6 col-4"
     >
       <para-section class="problem-list-item-inner">
-        <problem-list-item :item="p" @tag="selectTag">
+        <problem-list-item
+          :item="p"
+          class="problem-list-item-item"
+          @tag="selectTag"
+        >
           <template v-if="!$scopedSlots.default && !$slots.default" #footer>
             <div class="buttons">
               <span>
@@ -77,6 +81,21 @@ export default {
       }
       &:nth-of-type(2n) {
         justify-content: flex-end;
+      }
+    }
+  }
+
+  @media print {
+    display: table;
+    &-item {
+      display: inline-block;
+      &-inner {
+        .buttons {
+          display: none;
+        }
+      }
+      &-item {
+        width: 100%;
       }
     }
   }

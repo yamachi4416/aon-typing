@@ -118,6 +118,9 @@ export default {
   display: flex;
   justify-content: center;
   padding: 10px;
+  @media print {
+    display: none;
+  }
 
   &-nav {
     height: 100%;

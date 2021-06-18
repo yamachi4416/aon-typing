@@ -1,5 +1,5 @@
 <template>
-  <basic-page>
+  <basic-page class="index-page" :class="{ [$route.name]: true }">
     <nuxt-child />
   </basic-page>
 </template>

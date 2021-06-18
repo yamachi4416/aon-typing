@@ -1,10 +1,10 @@
 <template>
   <div class="problem-list-item">
     <header class="problem-list-item-header">
-      <h2>
+      <h3>
         <span class="problem-list-item-header-no">No.{{ item.id }}</span>
         <span class="problem-list-item-header-title">{{ item.title }}</span>
-      </h2>
+      </h3>
     </header>
     <main class="problem-list-item-main">
       <div class="problem-list-item-main-detail">
@@ -58,7 +58,7 @@ export default {
 
   &-header {
     text-align: center;
-    & > h2 {
+    & > h3 {
       font-weight: normal;
       font-size: 1em;
       display: flex;

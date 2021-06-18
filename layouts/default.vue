@@ -59,6 +59,7 @@ export default {
     height: 100vh;
     overflow: hidden;
     z-index: -1;
+    background-color: #057523;
     &-image {
       position: absolute;
       top: 0;

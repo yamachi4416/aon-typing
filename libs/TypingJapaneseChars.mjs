@@ -1,4 +1,5 @@
 const Kana2HiraMap = {
+  ァ: 'ぁ',
   ア: 'あ',
   ィ: 'ぃ',
   イ: 'い',
@@ -86,6 +87,13 @@ const Kana2HiraMap = {
   ヶ: 'が',
 }
 
+const Hira2KanaMap = Object.keys(Kana2HiraMap).reduce((a, h) => {
+  if (!a[Kana2HiraMap[h]]) {
+    a[Kana2HiraMap[h]] = h
+  }
+  return a
+}, {})
+
 const JapaneseToTypeCharList1 = [
   ['ぁ', 'la,xa'],
   ['あ', 'a'],
@@ -94,10 +102,10 @@ const JapaneseToTypeCharList1 = [
   ['いぇ', 'ye'],
   ['ぅ', 'lu,xu'],
   ['う', 'u'],
-  ['うぁ', 'wha,ula,uxa'],
+  ['うぁ', 'wha'],
   ['うぃ', 'wi'],
   ['うぇ', 'we'],
-  ['うぉ', 'who,ulo,uxo'],
+  ['うぉ', 'who'],
   ['ぇ', 'le,xe'],
   ['え', 'e'],
   ['ぉ', 'lo,xo'],
@@ -150,16 +158,16 @@ const JapaneseToTypeCharList1 = [
   ['た', 'ta'],
   ['だ', 'da'],
   ['ち', 'ti,chi'],
-  ['ちぃ', 'tyi'],
-  ['ちぇ', 'tye'],
   ['ちゃ', 'tya,cha'],
+  ['ちぃ', 'tyi'],
   ['ちゅ', 'tyu,chu'],
+  ['ちぇ', 'tye,che'],
   ['ちょ', 'tyo,cho'],
   ['ぢ', 'di'],
-  ['ぢぃ', 'dyi'],
-  ['ぢぇ', 'dye'],
   ['ぢゃ', 'dya'],
+  ['ぢぃ', 'dyi'],
   ['ぢゅ', 'dyu'],
+  ['ぢぇ', 'dye'],
   ['ぢょ', 'dyo'],
   ['っ', 'ltu,ltsu,xtu,xtsu'],
   ['つ', 'tu,tsu'],
@@ -169,16 +177,16 @@ const JapaneseToTypeCharList1 = [
   ['つぉ', 'tso'],
   ['づ', 'du'],
   ['て', 'te'],
-  ['てぃ', 'thi'],
-  ['てぇ', 'the'],
   ['てゃ', 'tha'],
+  ['てぃ', 'thi'],
   ['てゅ', 'thu'],
+  ['てぇ', 'the'],
   ['てょ', 'tho'],
   ['で', 'de'],
-  ['でぃ', 'dhi'],
-  ['でぇ', 'dhe'],
   ['でゃ', 'dha'],
+  ['でぃ', 'dhi'],
   ['でゅ', 'dhu'],
+  ['でぇ', 'dhe'],
   ['でょ', 'dho'],
   ['と', 'to'],
   ['とぁ', 'twa'],
@@ -194,10 +202,10 @@ const JapaneseToTypeCharList1 = [
   ['どぉ', 'dwo'],
   ['な', 'na'],
   ['に', 'ni'],
-  ['にぃ', 'nyi'],
-  ['にぇ', 'nye'],
   ['にゃ', 'nya'],
+  ['にぃ', 'nyi'],
   ['にゅ', 'nyu'],
+  ['にぇ', 'nye'],
   ['にょ', 'nyo'],
   ['ぬ', 'nu'],
   ['ね', 'ne'],
@@ -206,22 +214,22 @@ const JapaneseToTypeCharList1 = [
   ['ば', 'ba'],
   ['ぱ', 'pa'],
   ['ひ', 'hi'],
-  ['ひぃ', 'hyi'],
-  ['ひぇ', 'hye'],
   ['ひゃ', 'hya'],
+  ['ひぃ', 'hyi'],
   ['ひゅ', 'hyu'],
+  ['ひぇ', 'hye'],
   ['ひょ', 'hyo'],
   ['び', 'bi'],
-  ['びぃ', 'byi'],
-  ['びぇ', 'bye'],
   ['びゃ', 'bya'],
+  ['びぃ', 'byi'],
   ['びゅ', 'byu'],
+  ['びぇ', 'bye'],
   ['びょ', 'byo'],
   ['ぴ', 'pi'],
-  ['ぴぃ', 'pyi'],
-  ['ぴぇ', 'pye'],
   ['ぴゃ', 'pya'],
+  ['ぴぃ', 'pyi'],
   ['ぴゅ', 'pyu'],
+  ['ぴぇ', 'pye'],
   ['ぴょ', 'pyo'],
   ['ふ', 'hu,fu'],
   ['ふぁ', 'fa'],
@@ -229,7 +237,6 @@ const JapaneseToTypeCharList1 = [
   ['ふぇ', 'fe'],
   ['ふぉ', 'fo'],
   ['ふゃ', 'fya'],
-  ['ふゅ', 'fyu'],
   ['ふゅ', 'fyu'],
   ['ふょ', 'fyo'],
   ['ぶ', 'bu'],
@@ -242,10 +249,10 @@ const JapaneseToTypeCharList1 = [
   ['ぽ', 'po'],
   ['ま', 'ma'],
   ['み', 'mi'],
-  ['みぃ', 'myi'],
-  ['みぇ', 'mye'],
   ['みゃ', 'mya'],
+  ['みぃ', 'myi'],
   ['みゅ', 'myu'],
+  ['みぇ', 'mye'],
   ['みょ', 'myo'],
   ['む', 'mu'],
   ['め', 'me'],
@@ -258,10 +265,10 @@ const JapaneseToTypeCharList1 = [
   ['よ', 'yo'],
   ['ら', 'ra'],
   ['り', 'ri'],
-  ['りぃ', 'ryi'],
-  ['りぇ', 'rye'],
   ['りゃ', 'rya'],
+  ['りぃ', 'ryi'],
   ['りゅ', 'ryu'],
+  ['りぇ', 'rye'],
   ['りょ', 'ryo'],
   ['る', 'ru'],
   ['れ', 're'],
@@ -364,6 +371,12 @@ const TypeCharMap = JapaneseToTypeCharList.reduce(
 function kana2Hira(text) {
   return Array.from(text || '')
     .map((s) => Kana2HiraMap[s] || s)
+    .join('')
+}
+
+function hira2Kana(text) {
+  return Array.from(text || '')
+    .map((s) => Hira2KanaMap[s] || s)
     .join('')
 }
 
@@ -470,6 +483,7 @@ function japaneseToTypeCharList() {
 
 export default {
   kana2Hira,
+  hira2Kana,
   typeJapaneseChars,
   typeJapaneseCharsMap,
   typeCharsToJapaneseChars,

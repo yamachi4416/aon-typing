@@ -72,6 +72,21 @@
         <img-neko-user-keyboard />
       </template>
     </para-section>
+    <para-section class="index-page-others">
+      <h2>その他</h2>
+      <nav class="others-contents">
+        <ul class="others-contents-list">
+          <li class="others-contents-list-item">
+            <nuxt-link :to="{ name: 'index-contents-keymap' }" class="button"
+              >ローマ字タイピング入力表</nuxt-link
+            >
+          </li>
+        </ul>
+      </nav>
+      <template #right>
+        <img-neko-user-keyboard />
+      </template>
+    </para-section>
   </div>
 </template>
 
@@ -239,6 +254,39 @@ export default {
         color: #666;
         padding: 20px;
         padding-bottom: 5px;
+      }
+    }
+  }
+
+  &-others {
+    .others-contents {
+      &-list {
+        list-style: none;
+        padding: 15px 10px;
+        display: flex;
+        &-item {
+          a {
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+            padding: 5px 15px;
+            border: 1.5px solid #ff9900;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #ff9900;
+            background: #fff;
+
+            &::before {
+              content: '';
+              display: block;
+              width: 8px;
+              height: 8px;
+              border-radius: 100%;
+              background: #ff9900;
+              margin-right: 8px;
+            }
+          }
+        }
       }
     }
   }

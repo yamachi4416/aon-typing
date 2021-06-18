@@ -64,5 +64,9 @@ export default {
       fill: rgba(253, 207, 0, 0.1);
     }
   }
+
+  @media print {
+    display: none;
+  }
 }
 </style>
