@@ -12,6 +12,11 @@ body {
   margin: 0;
   padding: 0;
   -webkit-print-color-adjust: exact;
+  font-size: 16px;
+  @media print {
+    font-size: 10px;
+    height: 100%;
+  }
 }
 
 body,
@@ -22,7 +27,8 @@ body,
   min-height: var(--maxvh, 100vh);
   position: relative;
   @media print {
-    min-height: 100vh !important;
+    height: 100%;
+    min-height: unset !important;
   }
 }
 

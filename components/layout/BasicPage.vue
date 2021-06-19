@@ -48,6 +48,9 @@ export default {
 
 .basic-page {
   min-height: 100vh;
+  @media print {
+    min-height: unset;
+  }
 
   &-main {
     padding: 10px;

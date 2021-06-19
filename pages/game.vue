@@ -43,6 +43,9 @@ export default {
   width: 100%;
   height: 100vh;
   height: var(--maxvh, 100vh);
+  @media print {
+    height: 100%;
+  }
 
   & > section {
     display: flex;

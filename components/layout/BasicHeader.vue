@@ -3,13 +3,11 @@
     <nav class="basic-header-nav">
       <div class="basic-header-nav-main">
         <h1>
-          <nuxt-link
-            v-if="$route.name !== 'index'"
-            :to="{ name: 'index' }"
-            class="anim-title"
-            :class="{ 'start-anim': startAmin }"
-          >
-            {{ title }}
+          <nuxt-link v-if="$route.name !== 'index'" :to="{ name: 'index' }">
+            <span v-if="startAmin" class="title-anim">{{ title }}</span>
+            <span v-show="!startAmin" class="title-no-anim">{{
+              titleText
+            }}</span>
           </nuxt-link>
           <a v-else @click="scrollTop({ name: 'index' })">
             {{ title }}
@@ -63,7 +61,7 @@ export default {
   },
   computed: {
     title() {
-      if (this.showAnim && this.startAmin) {
+      if (this.showAnim) {
         return this.titleChars.join('')
       }
       return this.titleText
@@ -128,7 +126,8 @@ export default {
   justify-content: center;
   padding: 10px;
   @media print {
-    display: none;
+    height: unset;
+    position: relative;
   }
 
   &-nav {
@@ -139,7 +138,9 @@ export default {
     max-width: 1000px;
     display: flex;
     flex-direction: column;
-
+    @media print {
+      max-width: unset;
+    }
     &-main {
       flex: 1;
       display: flex;
@@ -157,9 +158,15 @@ export default {
           cursor: pointer;
           color: inherit;
           text-decoration: none;
-          &.anim-title {
-            opacity: 0.3;
-            &.start-anim {
+          &.title-no-anim {
+            opacity: 0;
+          }
+
+          @media print {
+            &.title-anim {
+              display: none;
+            }
+            &.title-no-anim {
               opacity: 1;
             }
           }
@@ -168,6 +175,9 @@ export default {
     }
 
     &-sub {
+      @media print {
+        display: none;
+      }
       &-menu {
         width: 100%;
         max-width: 1000px;

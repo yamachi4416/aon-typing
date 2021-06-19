@@ -1,22 +1,24 @@
 <template>
   <div class="index-contents-keymap-page">
     <para-section class="keymaps-description">
-      <h2>ローマ字タイピング入力表</h2>
-      <p>
-        ローマ字でのタイピングの入力の組み合わせをまとめた表です。<br />
-        入力方法がわからない文字をさがすときや入力方法をおぼえたいときにご利用ください。<br />
-        印刷してご利用する場合はB5サイズがおすすめです。
-      </p>
-      <div class="detail-actions">
-        <div class="buttons">
-          <span>
-            <button v-if="back" class="button" @click="$router.back()">
-              もどる
-            </button>
-          </span>
-          <span>
-            <button class="button" @click="print()">印刷する</button>
-          </span>
+      <h2 class="keymaps-description-title">ローマ字タイピング入力表</h2>
+      <div class="keymaps-description-body">
+        <p>
+          ローマ字でのタイピングの入力の組み合わせをまとめた表です。<br />
+          入力方法がわからない文字をさがすときや入力方法をおぼえたいときなどにどうぞ。<br />
+          印刷してご利用される場合はタテB5サイズがおすすめです。
+        </p>
+        <div class="detail-actions">
+          <div class="buttons">
+            <span>
+              <button v-if="back" class="button" @click="$router.back()">
+                もどる
+              </button>
+            </span>
+            <span>
+              <button class="button" @click="print()">印刷する</button>
+            </span>
+          </div>
         </div>
       </div>
     </para-section>
@@ -49,7 +51,7 @@
         <div class="chars-title">ッ</div>
         <div class="chars-section">
           <p>
-            小さい「ッ」のあとの入力が「A」「I」「U」「E」「O」「N」以外の場合はあとの入力を2回打って「ッ」を入力できます。<br />
+            小さい「ッ」のあとに続くキーが「A」「I」「U」「E」「O」「N」以外の場合は、あとに続くキーを2回打って「ッ」を入力できます。
             たとえば「ヤッター」は「YA<span style="color: #ff9100">TT</span
             >A-」で入力できます。
           </p>
@@ -185,18 +187,20 @@ export default {
   }
 
   .keymaps-description {
-    h2 {
+    &-title {
       font-size: 1.1em;
     }
-    .detail-actions {
-      padding-top: 5px;
-      .buttons {
-        display: flex;
-        justify-content: flex-start;
+    &-body {
+      .detail-actions {
+        padding-top: 5px;
+        .buttons {
+          display: flex;
+          justify-content: flex-start;
+        }
       }
-    }
-    @media print {
-      display: none;
+      @media print {
+        display: none;
+      }
     }
   }
 }
