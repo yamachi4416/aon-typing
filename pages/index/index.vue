@@ -1,8 +1,20 @@
 <template>
   <div class="index-page">
+    <para-section class="index-page-hello">
+      <h2>ようこそ「あぉ～ん タイピング」へ</h2>
+      <p>
+        あぉ～ん
+        タイピングはインターネット上でタイピングの練習ができる無料のタイピング練習サイトです。
+        パソコンを使いはじめた初心者さんや、タイピングがもっと早くなりたい中級者さんにおすすめです。
+        たのしくタイピングを練習しましょう。
+      </p>
+      <template #right>
+        <img-neko-user-keyboard />
+      </template>
+    </para-section>
     <para-section class="index-page-search">
       <h2>タイトル検索</h2>
-      <p>問題のタイトルをキーワードで検索します。</p>
+      <p>タイピングの問題のタイトルをキーワードで検索します。</p>
       <div class="index-page-search-form">
         <div class="index-page-search-form-search row">
           <div
@@ -34,7 +46,7 @@
           </div>
         </div>
       </div>
-      <template #right>
+      <template #left>
         <img-neko-user-keyboard />
       </template>
     </para-section>
@@ -68,7 +80,7 @@
           </nuxt-link>
         </span>
       </div>
-      <template #left>
+      <template #right>
         <img-neko-user-keyboard />
       </template>
     </para-section>
@@ -83,7 +95,7 @@
           </li>
         </ul>
       </nav>
-      <template #right>
+      <template #left>
         <img-neko-user-keyboard />
       </template>
     </para-section>
