@@ -3,7 +3,12 @@
     <nav class="basic-header-nav">
       <div class="basic-header-nav-main">
         <h1>
-          <nuxt-link v-if="$route.name !== 'index'" :to="{ name: 'index' }">
+          <nuxt-link
+            v-if="$route.name !== 'index'"
+            :to="{ name: 'index' }"
+            class="anim-title"
+            :class="{ 'start-anim': startAmin }"
+          >
             {{ title }}
           </nuxt-link>
           <a v-else @click="scrollTop({ name: 'index' })">
@@ -52,12 +57,13 @@ export default {
   },
   data() {
     return {
+      startAmin: false,
       titleChars: [],
     }
   },
   computed: {
     title() {
-      if (this.showAnim) {
+      if (this.showAnim && this.startAmin) {
         return this.titleChars.join('')
       }
       return this.titleText
@@ -99,7 +105,10 @@ export default {
             requestAnimationFrame(resolve)
           }
         }
-        setTimeout(type, 1)
+        setTimeout(() => {
+          this.startAmin = true
+          type()
+        }, 1)
       })
     },
   },
@@ -148,6 +157,12 @@ export default {
           cursor: pointer;
           color: inherit;
           text-decoration: none;
+          &.anim-title {
+            opacity: 0.3;
+            &.start-anim {
+              opacity: 1;
+            }
+          }
         }
       }
     }
