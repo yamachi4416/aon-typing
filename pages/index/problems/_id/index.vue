@@ -8,18 +8,6 @@
           </div>
           <h2 class="detail-info-title">{{ detail.title }}</h2>
           <div class="detail-info-info">
-            <dl class="detail-info-info-createdAt">
-              <dt>登録日</dt>
-              <dd>
-                <time :datetime="detail.createdAt">{{ detail.createdAt }}</time>
-              </dd>
-            </dl>
-            <dl class="detail-info-info-updatedAt">
-              <dt>更新日</dt>
-              <dd>
-                <time :datetime="detail.updatedAt">{{ detail.updatedAt }}</time>
-              </dd>
-            </dl>
             <dl>
               <dt>タグ</dt>
               <dd class="detail-info-info-tags">

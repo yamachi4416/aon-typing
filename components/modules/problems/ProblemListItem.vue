@@ -16,10 +16,6 @@
           <label>タイピング数</label>
           <div>{{ item.chars }}</div>
         </div>
-        <div class="problem-list-item-main-detail-row">
-          <label>登録日</label>
-          <time :datetime="item.createdAt">{{ item.createdAt }}</time>
-        </div>
         <div class="problem-list-item-main-detail-tags buttons">
           <span v-for="(tag, i) in item.tags" :key="`tag-${item.id}-${i}`">
             <button
