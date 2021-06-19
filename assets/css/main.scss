@@ -21,6 +21,9 @@ body,
   min-height: 100vh;
   min-height: var(--maxvh, 100vh);
   position: relative;
+  @media print {
+    min-height: 100vh !important;
+  }
 }
 
 .buttons {
