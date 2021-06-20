@@ -1,9 +1,9 @@
 <template>
   <svg
     class="typing-game-panel"
-    viewBox="0 0 1000 460"
-    width="1002"
-    height="464"
+    viewBox="0 0 1000 470"
+    width="1000"
+    height="470"
     xmlns="http://www.w3.org/2000/svg"
   >
     <line-gauge
@@ -11,7 +11,7 @@
       :limit="typing.goalCharCount || typing.totalCharCount || 0"
       :used="typing.totalTypeCorrect"
     />
-    <foreignObject class="typing-game" width="1000" height="460">
+    <foreignObject class="typing-game" width="1000" height="470">
       <div class="wrapper">
         <div class="display-zone">
           <div class="display-zone-info">
@@ -313,12 +313,12 @@ export default {
     }
 
     .keyboard-zone {
-      width: 90%;
+      width: 98%;
     }
 
     .hands {
       height: 15px;
-      width: 85%;
+      width: 90%;
       display: flex;
       row-gap: 20px;
       column-gap: 20px;
