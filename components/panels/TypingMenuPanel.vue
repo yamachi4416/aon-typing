@@ -86,7 +86,7 @@
               <div class="buttons">
                 <span>
                   <button class="button" @click="openProblemSelect()">
-                    一覧から選択
+                    いちらん選択
                   </button>
                 </span>
                 <span>
