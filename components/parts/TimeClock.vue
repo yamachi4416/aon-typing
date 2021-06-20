@@ -1,5 +1,5 @@
 <template>
-  <svg viewBox="-31 -31 62 62" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="-31 -31 62 62" width="60" xmlns="http://www.w3.org/2000/svg">
     <g class="time-clock" @click="$emit('click')">
       <text
         class="time-clock-text"
@@ -44,7 +44,7 @@ export default {
   text {
     cursor: pointer;
     font-family: monospace;
-    font-size: 1.5em;
+    font-size: 1.3em;
     white-space: pre;
   }
 }
