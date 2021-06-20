@@ -2,8 +2,9 @@
   <g
     class="keyboard-key"
     :highlight="hi"
-    @touchstart.prevent="touchstart()"
-    @touchend.prevent="touchend()"
+    @touchstart.prevent.stop="touchstart"
+    @touchmove.prevent.stop="touchmove"
+    @touchend="touchend"
   >
     <g v-if="text === 'enter'">
       <path
@@ -105,6 +106,23 @@ export default {
       if (this.text) {
         this.clicked = true
         this.$emit('click', this, true)
+      }
+    },
+    touchmove(e) {
+      if (!this.clicked) {
+        return
+      }
+
+      for (let i = 0; i < e.changedTouches.length; ++i) {
+        const touch = e.changedTouches[i]
+        const bounds = touch.target.getBoundingClientRect()
+        const x = touch.clientX - bounds.left
+        const y = touch.clientY - bounds.top
+        if (bounds.width < x || bounds.height < y) {
+          this.clicked = false
+          this.$emit('click', this, false)
+          return
+        }
       }
     },
     touchend() {
