@@ -67,7 +67,11 @@ const scrollTo = (node, { top = 0, left = 0, behavior = 'smooth' } = {}) => {
 
     sc.addEventListener('scroll', handler)
     handler()
-    sc.scrollTo({ top, left, behavior })
+    const optinos = { top, left }
+    if (behavior) {
+      optinos.behavior = behavior
+    }
+    sc.scrollTo(optinos)
   })
 }
 
