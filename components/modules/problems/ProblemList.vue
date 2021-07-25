@@ -62,6 +62,7 @@ export default {
   },
   data() {
     return {
+      path: this.$route.path,
       page: Number(this.$route.query.page) || 1,
     }
   },
@@ -78,10 +79,13 @@ export default {
     },
   },
   watch: {
-    async '$route.query'(to, from) {
-      if (to.page !== from.page) {
-        await Util.scrollTo(this.$el, { behavior: '' })
-        this.page = Number(to.page) || 1
+    async '$route.query.page'(to, from) {
+      if (this.path === this.$route.path && to !== from) {
+        const page = Number(to) || 1
+        if (this.page !== page) {
+          await Util.scrollTo(this.$el, { behavior: '' })
+          this.page = page
+        }
       }
     },
   },
