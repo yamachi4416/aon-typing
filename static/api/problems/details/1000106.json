@@ -1,0 +1,83 @@
+{
+  "id": "1000106",
+  "title": "現在進行形",
+  "type": "english",
+  "tags": [
+    {
+      "id": "00001",
+      "name": "英語"
+    },
+    {
+      "id": "00006",
+      "name": "英文法"
+    },
+    {
+      "id": "00003",
+      "name": "中学1年"
+    }
+  ],
+  "createdAt": "2021-07-25",
+  "updatedAt": "2021-07-25",
+  "words": [
+    {
+      "info": "私は今、英語を勉強しています",
+      "word": "I am studying english now"
+    },
+    {
+      "info": "彼は今、校庭で走っています",
+      "word": "He is now running in the schoolyard"
+    },
+    {
+      "info": "彼らは今、学校で授業を受けています",
+      "word": "They are now taking classes at school"
+    },
+    {
+      "info": "そのテニス選手は今、試合中です",
+      "word": "The tennis player is playing a match now"
+    },
+    {
+      "info": "乗客は今、列車から降りています",
+      "word": "Passengers are now getting off the train"
+    },
+    {
+      "info": "リンゴは今、市場にトラックで運ばれています",
+      "word": "Apples are trucked to the market now"
+    },
+    {
+      "info": "私は今、競技場に私の車で向かっています",
+      "word": "I'm driving to the stadium now"
+    },
+    {
+      "info": "あなたは今、そのテレビ番組を見ていますか？",
+      "word": "Are you watching the TV show now?"
+    },
+    {
+      "info": "今駅に向かっていますか？",
+      "word": "Are you heading to the station now?"
+    },
+    {
+      "info": "その電車に乗っていますか？",
+      "word": "Are you on the train?"
+    },
+    {
+      "info": "何をしていますか？",
+      "word": "What are you doing?"
+    },
+    {
+      "info": "彼は何をしていますか？",
+      "word": "What is he doing?"
+    },
+    {
+      "info": "彼は今、何もしていません",
+      "word": "He's not doing anything right now"
+    },
+    {
+      "info": "彼女は今、それを使っていません",
+      "word": "She isn't using it now"
+    },
+    {
+      "info": "今はまだ雨が降りつずいています",
+      "word": "It's still raining now"
+    }
+  ]
+}
