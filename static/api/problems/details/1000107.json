@@ -1,0 +1,83 @@
+{
+  "id": "1000107",
+  "title": "Canの用法 その1",
+  "type": "english",
+  "tags": [
+    {
+      "id": "00001",
+      "name": "英語"
+    },
+    {
+      "id": "00006",
+      "name": "英文法"
+    },
+    {
+      "id": "00003",
+      "name": "中学1年"
+    }
+  ],
+  "createdAt": "2021-08-11",
+  "updatedAt": "2021-08-11",
+  "words": [
+    {
+      "info": "私は朝早く起きることができます",
+      "word": "I can wake up early in the morning"
+    },
+    {
+      "info": "あなたはもっと速く走ることができます",
+      "word": "You can run faster"
+    },
+    {
+      "info": "彼はホームランを打つことができます",
+      "word": "He can hit a home run"
+    },
+    {
+      "info": "私は英語を話すことができます",
+      "word": "I can speak English"
+    },
+    {
+      "info": "あなたは日本語を上手に話すことができます",
+      "word": "You can speak Japanese well"
+    },
+    {
+      "info": "彼は日本語と英語をとても上手に話すことができます",
+      "word": "He can speak Japanese and English very well"
+    },
+    {
+      "info": "あなたは日本語を話すことができますか？",
+      "word": "Can you speak Japanese?"
+    },
+    {
+      "info": "私は日本語を少し話すことができます",
+      "word": "I can speak a little Japanese"
+    },
+    {
+      "info": "彼はネコより速く走ることができますか？",
+      "word": "Can he run faster than a cat?"
+    },
+    {
+      "info": "彼はネコより速く走ることができません",
+      "word": "He can't run faster than a cat"
+    },
+    {
+      "info": "私は英語がまったく話せません",
+      "word": "I can't speak English at all"
+    },
+    {
+      "info": "ネズミとネコは友達になれますか？",
+      "word": "Can mice and cats be friends?"
+    },
+    {
+      "info": "そのネズミとあの猫は親友になることができます",
+      "word": "The mouse and that cat can be best friends"
+    },
+    {
+      "info": "この橋は渡ることができますか？",
+      "word": "Can this bridge be crossed?"
+    },
+    {
+      "info": "人間は宇宙に住むことができますか？",
+      "word": "Can humans live in space?"
+    }
+  ]
+}
