@@ -47,16 +47,7 @@ export default {
 
   loading: false,
 
-  serverMiddleware: [
-    {
-      path: '/api/contact/success.json',
-      handler: (req, res, next) => {
-        setTimeout(() => {
-          res.end(fs.readFileSync('./static/api/contact/success.json'))
-        }, 1000)
-      },
-    },
-  ],
+  serverMiddleware: [],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
