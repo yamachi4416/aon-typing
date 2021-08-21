@@ -1,0 +1,183 @@
+{
+  "id": "1010105",
+  "title": "中央線（東京-高尾）の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00007",
+      "name": "地理"
+    },
+    {
+      "id": "00019",
+      "name": "駅名"
+    }
+  ],
+  "createdAt": "2021-08-21",
+  "updatedAt": "2021-08-21",
+  "words": [
+    {
+      "info": "東京",
+      "info2": "とうきょう",
+      "word": "toukyou"
+    },
+    {
+      "info": "神田",
+      "info2": "かんだ",
+      "word": "kanda"
+    },
+    {
+      "info": "御茶ノ水",
+      "info2": "おちゃのみず",
+      "word": "otyanomizu"
+    },
+    {
+      "info": "水道橋",
+      "info2": "すいどうばし",
+      "word": "suidoubasi"
+    },
+    {
+      "info": "飯田橋",
+      "info2": "いいだばし",
+      "word": "iidabasi"
+    },
+    {
+      "info": "市ケ谷",
+      "info2": "いちがや",
+      "word": "itigaya"
+    },
+    {
+      "info": "四ツ谷",
+      "info2": "よつや",
+      "word": "yotuya"
+    },
+    {
+      "info": "信濃町",
+      "info2": "しなのまち",
+      "word": "sinanomati"
+    },
+    {
+      "info": "千駄ケ谷",
+      "info2": "せんだがや",
+      "word": "sendagaya"
+    },
+    {
+      "info": "代々木",
+      "info2": "よよぎ",
+      "word": "yoyogi"
+    },
+    {
+      "info": "新宿",
+      "info2": "しんじゅく",
+      "word": "sinjuku"
+    },
+    {
+      "info": "大久保",
+      "info2": "おおくぼ",
+      "word": "ookubo"
+    },
+    {
+      "info": "東中野",
+      "info2": "ひがしなかの",
+      "word": "higasinakano"
+    },
+    {
+      "info": "中野",
+      "info2": "なかの",
+      "word": "nakano"
+    },
+    {
+      "info": "高円寺",
+      "info2": "こうえんじ",
+      "word": "kouenji"
+    },
+    {
+      "info": "阿佐ケ谷",
+      "info2": "あさがや",
+      "word": "asagaya"
+    },
+    {
+      "info": "荻窪",
+      "info2": "おぎくぼ",
+      "word": "ogikubo"
+    },
+    {
+      "info": "西荻窪",
+      "info2": "にしおぎくぼ",
+      "word": "nisiogikubo"
+    },
+    {
+      "info": "吉祥寺",
+      "info2": "きちじょうじ",
+      "word": "kitijouji"
+    },
+    {
+      "info": "三鷹",
+      "info2": "みたか",
+      "word": "mitaka"
+    },
+    {
+      "info": "武蔵境",
+      "info2": "むさしさかい",
+      "word": "musasisakai"
+    },
+    {
+      "info": "東小金井",
+      "info2": "ひがしこがねい",
+      "word": "higasikoganei"
+    },
+    {
+      "info": "武蔵小金井",
+      "info2": "むさしこがねい",
+      "word": "musasikoganei"
+    },
+    {
+      "info": "国分寺",
+      "info2": "こくぶんじ",
+      "word": "kokubunji"
+    },
+    {
+      "info": "西国分寺",
+      "info2": "にしこくぶんじ",
+      "word": "nisikokubunji"
+    },
+    {
+      "info": "国立",
+      "info2": "くにたち",
+      "word": "kunitati"
+    },
+    {
+      "info": "立川",
+      "info2": "たちかわ",
+      "word": "tatikawa"
+    },
+    {
+      "info": "日野",
+      "info2": "ひの",
+      "word": "hino"
+    },
+    {
+      "info": "豊田",
+      "info2": "とよだ",
+      "word": "toyoda"
+    },
+    {
+      "info": "八王子",
+      "info2": "はちおうじ",
+      "word": "hatiouji"
+    },
+    {
+      "info": "西八王子",
+      "info2": "にしはちおうじ",
+      "word": "nisihatiouji"
+    },
+    {
+      "info": "高尾",
+      "info2": "たかお",
+      "word": "takao"
+    }
+  ]
+}
