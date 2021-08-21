@@ -1,0 +1,118 @@
+{
+  "id": "1010106",
+  "title": "埼京線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00007",
+      "name": "地理"
+    },
+    {
+      "id": "00019",
+      "name": "駅名"
+    }
+  ],
+  "createdAt": "2021-08-21",
+  "updatedAt": "2021-08-21",
+  "words": [
+    {
+      "info": "大崎",
+      "info2": "おおさき",
+      "word": "oosaki"
+    },
+    {
+      "info": "恵比寿",
+      "info2": "えびす",
+      "word": "ebisu"
+    },
+    {
+      "info": "渋谷",
+      "info2": "しぶや",
+      "word": "sibuya"
+    },
+    {
+      "info": "新宿",
+      "info2": "しんじゅく",
+      "word": "sinjuku"
+    },
+    {
+      "info": "池袋",
+      "info2": "いけぶくろ",
+      "word": "ikebukuro"
+    },
+    {
+      "info": "板橋",
+      "info2": "いたばし",
+      "word": "itabasi"
+    },
+    {
+      "info": "十条",
+      "info2": "じゅうじょう",
+      "word": "juujou"
+    },
+    {
+      "info": "赤羽",
+      "info2": "あかばね",
+      "word": "akabane"
+    },
+    {
+      "info": "北赤羽",
+      "info2": "きたあかばね",
+      "word": "kitaakabane"
+    },
+    {
+      "info": "浮間舟渡",
+      "info2": "うきまふなど",
+      "word": "ukimahunado"
+    },
+    {
+      "info": "戸田公園",
+      "info2": "とだこうえん",
+      "word": "todakouenn"
+    },
+    {
+      "info": "戸田",
+      "info2": "とだ",
+      "word": "toda"
+    },
+    {
+      "info": "北戸田",
+      "info2": "きたとだ",
+      "word": "kitatoda"
+    },
+    {
+      "info": "武蔵浦和",
+      "info2": "むさしうらわ",
+      "word": "musasiurawa"
+    },
+    {
+      "info": "中浦和",
+      "info2": "なかうらわ",
+      "word": "nakaurawa"
+    },
+    {
+      "info": "南与野",
+      "info2": "みなみよの",
+      "word": "minamiyono"
+    },
+    {
+      "info": "与野本町",
+      "info2": "よのほんまち",
+      "word": "yonohonmati"
+    },
+    {
+      "info": "北与野",
+      "info2": "きたよの",
+      "word": "kitayono"
+    },
+    {
+      "info": "大宮",
+      "info2": "おおみや",
+      "word": "oomiya"
+    }
+  ]
+}

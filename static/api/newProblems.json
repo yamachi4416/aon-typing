@@ -1,5 +1,28 @@
 [
   {
+    "id": "1010106",
+    "title": "埼京線の駅いちらん",
+    "type": "japanese",
+    "words": 19,
+    "chars": 152,
+    "createdAt": "2021-08-21",
+    "updatedAt": "2021-08-21",
+    "tags": [
+      {
+        "id": "00009",
+        "name": "日本語"
+      },
+      {
+        "id": "00007",
+        "name": "地理"
+      },
+      {
+        "id": "00019",
+        "name": "駅名"
+      }
+    ]
+  },
+  {
     "id": "1010105",
     "title": "中央線（東京-高尾）の駅いちらん",
     "type": "japanese",
@@ -97,25 +120,6 @@
     "type": "japanese",
     "words": 18,
     "chars": 236,
-    "createdAt": "2021-06-13",
-    "updatedAt": "2021-06-13",
-    "tags": [
-      {
-        "id": "00009",
-        "name": "日本語"
-      },
-      {
-        "id": "00020",
-        "name": "基本練習"
-      }
-    ]
-  },
-  {
-    "id": "1000002",
-    "title": "基本練習 その2",
-    "type": "japanese",
-    "words": 11,
-    "chars": 172,
     "createdAt": "2021-06-13",
     "updatedAt": "2021-06-13",
     "tags": [
