@@ -1,0 +1,83 @@
+{
+  "id": "1000108",
+  "title": "Canの用法 その2",
+  "type": "english",
+  "tags": [
+    {
+      "id": "00001",
+      "name": "英語"
+    },
+    {
+      "id": "00006",
+      "name": "英文法"
+    },
+    {
+      "id": "00003",
+      "name": "中学1年"
+    }
+  ],
+  "createdAt": "2021-08-27",
+  "updatedAt": "2021-08-27",
+  "words": [
+    {
+      "info": "そのリンゴを食べてもいいですか？",
+      "word": "Can I eat the apple?"
+    },
+    {
+      "info": "ここで歌ってもいいですか？",
+      "word": "Can I sing here?"
+    },
+    {
+      "info": "ここで写真を撮影してもいいですか？",
+      "word": "Can I take a picture here?"
+    },
+    {
+      "info": "明日学校を休んでもいいですか？",
+      "word": "Can I absent from school tomorrow?"
+    },
+    {
+      "info": "駅までの道を教えてくれますか？",
+      "word": "Can you tell me the way to the station?"
+    },
+    {
+      "info": "お水をもらえますか？",
+      "word": "Can you get some water?"
+    },
+    {
+      "info": "メガネをはずしてもらえますか？",
+      "word": "Can you take off your glasses?"
+    },
+    {
+      "info": "その本をとってもらえますか？",
+      "word": "Can you take the book?"
+    },
+    {
+      "info": "正解を教えてくれませんか？",
+      "word": "Can you tell me the right answer?"
+    },
+    {
+      "info": "私たちを祝ってくれますか？",
+      "word": "Can you celebrate us?"
+    },
+    {
+      "info": "祝ってもいいですか？",
+      "word": "Can I celebrate?"
+    },
+    {
+      "info": "手をつないでもいいですか？",
+      "word": "Can I hold hands?"
+    },
+    {
+      "info": "それを好きになれますか？",
+      "word": "Can you like it?"
+    },
+    {
+      "info": "ずっと彼を愛せますか？",
+      "word": "Can you love him forever?"
+    },
+    {
+      "info": "卒業しても先生に会いに来ていいですか？",
+      "word": "Can I come to see my teacher even after graduating?"
+    }
+  ]
+}
