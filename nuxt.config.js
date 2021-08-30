@@ -54,6 +54,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/google-gtag',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -126,6 +127,13 @@ export default {
         exclude: ['/404', '/contact/thanks', '/game/play'],
       },
     ],
+  },
+
+  'google-gtag': {
+    id: 'G-QZNDVF8J4S',
+    config: {
+      anonymize_ip: true,
+    },
   },
 
   hooks: {
