@@ -119,6 +119,13 @@ export default {
     },
   },
 
+  googleGtag: {
+    id: process.env.G_TAGID,
+    config: {
+      anonymize_ip: true,
+    },
+  },
+
   sitemap: {
     hostname: process.env.SERVER_URL || 'http://localhost',
     sitemaps: [
@@ -127,13 +134,6 @@ export default {
         exclude: ['/404', '/contact/thanks', '/game/play'],
       },
     ],
-  },
-
-  'google-gtag': {
-    id: 'G-QZNDVF8J4S',
-    config: {
-      anonymize_ip: true,
-    },
   },
 
   hooks: {
