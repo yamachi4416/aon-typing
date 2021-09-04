@@ -1,0 +1,88 @@
+{
+  "id": "5100001",
+  "title": "石器時代",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00012",
+      "name": "社会"
+    },
+    {
+      "id": "00003",
+      "name": "中学1年"
+    }
+  ],
+  "createdAt": "2021-09-04",
+  "updatedAt": "2021-09-04",
+  "words": [
+    {
+      "info": "岩宿遺跡は旧石器時代の遺跡",
+      "info2": "いわじゅくいせきはきゅうせっきじだいのいせき",
+      "word": "iwajukuisekihakyuusekkijidainoiseki"
+    },
+    {
+      "info": "岩宿遺跡は群馬県にある",
+      "info2": "いわじゅくいせきはぐんまけんにある",
+      "word": "iwajukuisekihagunmakennniaru"
+    },
+    {
+      "info": "岩宿遺跡は相沢忠洋が発見した",
+      "info2": "いわじゅくいせきはあいざわただひろがはっけんした",
+      "word": "iwajukuisekihaaizawatadahirogahakkensita"
+    },
+    {
+      "info": "更新世には少なくとも4回の氷河期があった",
+      "info2": "こうしんせいにはすくなくとも4かいのひょうがきがあった",
+      "word": "kousinseinihasukunakutomo4kainohyougakigaatta"
+    },
+    {
+      "info": "約1万年前を境に更新世と完新世に分けられる",
+      "info2": "やく1まんねんまえをさかいにこうしんせいとかんしんせいにわけられる",
+      "word": "yaku1mannnenmaewosakainikousinseitokansinseiniwakerareru"
+    },
+    {
+      "info": "旧石器時代には打製石器が使われた",
+      "info2": "きゅうせっきじだいにはだせいせっきがつかわれた",
+      "word": "kyuusekkijidainihadaseisekkigatukawareta"
+    },
+    {
+      "info": "打製石器は石を砕いて作った",
+      "info2": "だせいせっきはいしをくだいてつくった",
+      "word": "daseisekkihaisiwokudaitetukutta"
+    },
+    {
+      "info": "新石器時代には磨製石器が使われた",
+      "info2": "しんせっきじだいにはませいせっきがつかわれた",
+      "word": "sinsekkijidainihamaseisekkigatukawareta"
+    },
+    {
+      "info": "磨製石器は石を磨いて作った",
+      "info2": "ませいせっきはいしをみがいてつくった",
+      "word": "maseisekkihaisiwomigaitetukutta"
+    },
+    {
+      "info": "ナウマンゾウは約2万年前まで日本にも生息していた",
+      "info2": "なうまんぞうはやく2まんねんまえまでにほんにもせいそくしていた",
+      "word": "naumanzouhayaku2mannnenmaemadenihonnnimoseisokusiteita"
+    },
+    {
+      "info": "マンモスは約1万年前までユーラシア大陸、アフリカ大陸、アメリカ大陸に生息していた",
+      "info2": "まんもすはやく1まんねんまえまでゆーらしあたいりく、あふりかたいりく、あめりかたいりくにせいそくしていた",
+      "word": "manmosuhayaku1mannnenmaemadeyu-rasiatairiku,ahurikatairiku,amerikatairikuniseisokusiteita"
+    },
+    {
+      "info": "ナウマンゾウはアジアゾウ属",
+      "info2": "なうまんぞうはあじあぞうぞく",
+      "word": "naumanzouhaajiazouzoku"
+    },
+    {
+      "info": "マンモスはマンモス属",
+      "info2": "まんもすはまんもすぞく",
+      "word": "manmosuhamanmosuzoku"
+    }
+  ]
+}
