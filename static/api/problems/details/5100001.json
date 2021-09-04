@@ -1,6 +1,6 @@
 {
   "id": "5100001",
-  "title": "石器時代",
+  "title": "旧石器時代",
   "type": "japanese",
   "tags": [
     {
@@ -53,16 +53,6 @@
       "info": "打製石器は石を砕いて作った",
       "info2": "だせいせっきはいしをくだいてつくった",
       "word": "daseisekkihaisiwokudaitetukutta"
-    },
-    {
-      "info": "新石器時代には磨製石器が使われた",
-      "info2": "しんせっきじだいにはませいせっきがつかわれた",
-      "word": "sinsekkijidainihamaseisekkigatukawareta"
-    },
-    {
-      "info": "磨製石器は石を磨いて作った",
-      "info2": "ませいせっきはいしをみがいてつくった",
-      "word": "maseisekkihaisiwomigaitetukutta"
     },
     {
       "info": "ナウマンゾウは約2万年前まで日本にも生息していた",
