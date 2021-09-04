@@ -1,0 +1,78 @@
+{
+  "id": "5100002",
+  "title": "縄文時代",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00012",
+      "name": "社会"
+    },
+    {
+      "id": "00003",
+      "name": "中学1年"
+    }
+  ],
+  "createdAt": "2021-09-04",
+  "updatedAt": "2021-09-04",
+  "words": [
+    {
+      "info": "三内丸山遺跡は縄文時代の遺跡",
+      "info2": "さんないまるやまいせきはじょうもんじだいのいせき",
+      "word": "sannnaimaruyamaisekihajoumonjidainoiseki"
+    },
+    {
+      "info": "三内丸山遺跡は青森県にある",
+      "info2": "さんないまるやまいせきはあおもりけんにある",
+      "word": "sannnaimaruyamaisekihaaomorikennniaru"
+    },
+    {
+      "info": "貝塚は人が貝殻などを捨てた場所",
+      "info2": "かいづかはひとがかいがらなどをすてたばしょ",
+      "word": "kaidukahahitogakaigaranadowosutetabasyo"
+    },
+    {
+      "info": "大森貝塚は縄文時代の遺跡",
+      "info2": "おおもりかいづかはじょうもんじだいのいせき",
+      "word": "oomorikaidukahajoumonjidainoiseki"
+    },
+    {
+      "info": "大森貝塚は東京都にある",
+      "info2": "おおもりかいづかはとうきょうとにある",
+      "word": "oomorikaidukahatoukyoutoniaru"
+    },
+    {
+      "info": "大森貝塚はアメリカ人の学者モースによって発見された",
+      "info2": "おおもりかいづかはあめりかじんのがくしゃもーすによってはっけんされた",
+      "word": "oomorikaidukahaamerikajinnnogakusyamo-suniyottehakkensareta"
+    },
+    {
+      "info": "縄文土器の特徴は表面につけられた縄目の文様",
+      "info2": "じょうもんどきのとくちょうはひょうめんにつけられたなわめのもんよう",
+      "word": "joumondokinotokutyouhahyoumennnitukeraretanawamenomonyou"
+    },
+    {
+      "info": "土偶は縄文時代に作られた素焼きの土人形",
+      "info2": "どぐうはじょうもんじだいにつくられたすやきのつちにんぎょう",
+      "word": "doguuhajoumonjidainitukuraretasuyakinotutiningyou"
+    },
+    {
+      "info": "縄文時代には磨製石器が使われた",
+      "info2": "じょうもんじだいにはませいせっきがつかわれた",
+      "word": "joumonjidainihamaseisekkigatukawareta"
+    },
+    {
+      "info": "磨製石器は石を磨いて作った",
+      "info2": "ませいせっきはいしをみがいてつくった",
+      "word": "maseisekkihaisiwomigaitetukutta"
+    },
+    {
+      "info": "竪穴式住居は半地下式の住居",
+      "info2": "たてあなしきじゅうきょははんちかしきのじゅうきょ",
+      "word": "tateanasikijuukyohahantikasikinojuukyo"
+    }
+  ]
+}
