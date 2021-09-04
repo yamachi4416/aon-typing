@@ -119,7 +119,7 @@ export default {
     },
   },
 
-  googleGtag: {
+  'google-gtag': {
     id: process.env.G_TAGID,
     config: {
       anonymize_ip: true,
