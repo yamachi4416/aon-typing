@@ -1,0 +1,83 @@
+{
+  "id": "1000109",
+  "title": "過去形 その1",
+  "type": "english",
+  "tags": [
+    {
+      "id": "00001",
+      "name": "英語"
+    },
+    {
+      "id": "00006",
+      "name": "英文法"
+    },
+    {
+      "id": "00003",
+      "name": "中学1年"
+    }
+  ],
+  "createdAt": "2021-09-09",
+  "updatedAt": "2021-09-09",
+  "words": [
+    {
+      "info": "私は英語を勉強しました",
+      "word": "I studied english"
+    },
+    {
+      "info": "私は昨日リンゴを食べました",
+      "word": "I ate an apple yesterday"
+    },
+    {
+      "info": "私は先週彼に会いました",
+      "word": "I met him last week"
+    },
+    {
+      "info": "私は去年フランスに行きました",
+      "word": "I went to France last year"
+    },
+    {
+      "info": "私は飛行機のパイロットになりたかったです",
+      "word": "I wanted to be an airplane pilot"
+    },
+    {
+      "info": "私は彼に会いたかったです",
+      "word": "I wanted to see him"
+    },
+    {
+      "info": "私は昨夜あなたに会いたかったです",
+      "word": "I wanted to see you last night"
+    },
+    {
+      "info": "私は昨日走りました",
+      "word": "I ran yesterday"
+    },
+    {
+      "info": "私は昨日走らなかったです",
+      "word": "I didn't run yesterday"
+    },
+    {
+      "info": "私は昨日寝ませんでした",
+      "word": "I didn't sleep yesterday"
+    },
+    {
+      "info": "彼らは昨日着きました",
+      "word": "They arrived yesterday"
+    },
+    {
+      "info": "彼らは5年前までここに住んでいました",
+      "word": "They lived here until 5 years ago"
+    },
+    {
+      "info": "彼はあなたをとても愛していました",
+      "word": "He loved you so much"
+    },
+    {
+      "info": "彼女はとても綺麗でした",
+      "word": "She was very beautiful"
+    },
+    {
+      "info": "私たちはそこでたくさんの事を学びました",
+      "word": "We learned a lot there"
+    }
+  ]
+}
