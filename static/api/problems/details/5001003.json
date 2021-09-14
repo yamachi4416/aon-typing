@@ -1,0 +1,84 @@
+{
+  "id": "5001003",
+  "title": "ことわざ その3",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00021",
+      "name": "国語"
+    }
+  ],
+  "createdAt": "2021-09-14",
+  "updatedAt": "2021-09-14",
+  "words": [
+    {
+      "info": "枯れ木も山の賑わい",
+      "info2": "かれきもやまのにぎわい",
+      "word": "karekimoyamanonigiwai"
+    },
+    {
+      "info": "可愛い子には旅をさせよ",
+      "info2": "かわいいこにはたびをさせよ",
+      "word": "kawaiikonihatabiwosaseyo"
+    },
+    {
+      "info": "窮鼠猫を噛む",
+      "info2": "きゅうそねこをかむ",
+      "word": "kyuusonekowokamu"
+    },
+    {
+      "info": "木を見て森を見ず",
+      "info2": "きをみてもりをみず",
+      "word": "kiwomitemoriwomizu"
+    },
+    {
+      "info": "口八丁手八丁",
+      "info2": "くちはっちょうてはっちょう",
+      "word": "kutihattyoutehattyou"
+    },
+    {
+      "info": "口は災いの門",
+      "info2": "くちはわざわいのかど",
+      "word": "kutihawazawainokado"
+    },
+    {
+      "info": "継続は力なり",
+      "info2": "けいぞくはちからなり",
+      "word": "keizokuhatikaranari"
+    },
+    {
+      "info": "犬猿の仲",
+      "info2": "けんえんのなか",
+      "word": "kennennnonaka"
+    },
+    {
+      "info": "後悔先に立たず",
+      "info2": "こうかいさきにたたず",
+      "word": "koukaisakinitatazu"
+    },
+    {
+      "info": "郷に入っては郷に従え",
+      "info2": "ごうにいってはごうにしたがえ",
+      "word": "gouniittehagounisitagae"
+    },
+    {
+      "info": "弘法も筆の誤り",
+      "info2": "こうぼうもふでのあやまり",
+      "word": "kouboumohudenoayamari"
+    },
+    {
+      "info": "山椒は小粒でもぴりりと辛い",
+      "info2": "さんしょうはこつぶでもぴりりとからい",
+      "word": "sansyouhakotubudemopiriritokarai"
+    },
+    {
+      "info": "三人寄れば文殊の知恵",
+      "info2": "さんにんよればもんじゅのちえ",
+      "word": "sannninyorebamonjunotie"
+    }
+  ]
+}

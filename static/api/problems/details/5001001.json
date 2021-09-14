@@ -1,0 +1,94 @@
+{
+  "id": "5001001",
+  "title": "ことわざ その1",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00021",
+      "name": "国語"
+    }
+  ],
+  "createdAt": "2021-09-14",
+  "updatedAt": "2021-09-14",
+  "words": [
+    {
+      "info": "阿吽の呼吸",
+      "info2": "あうんのこきゅう",
+      "word": "aunnnokokyuu"
+    },
+    {
+      "info": "青は藍より出でて藍より青し",
+      "info2": "あおはあいよりいでてあいよりあおし",
+      "word": "aohaaiyoriideteaiyoriaosi"
+    },
+    {
+      "info": "秋茄子は嫁に食わすな",
+      "info2": "あきなすはよめにくわすな",
+      "word": "akinasuhayomenikuwasuna"
+    },
+    {
+      "info": "秋の日は釣瓶落とし",
+      "info2": "あきのひはつるべおとし",
+      "word": "akinohihaturubeotosi"
+    },
+    {
+      "info": "足元を見る",
+      "info2": "あしもとをみる",
+      "word": "asimotowomiru"
+    },
+    {
+      "info": "足をすくわれる",
+      "info2": "あしをすくわれる",
+      "word": "asiwosukuwareru"
+    },
+    {
+      "info": "虻蜂取らず",
+      "info2": "あぶはちとらず",
+      "word": "abuhatitorazu"
+    },
+    {
+      "info": "雨降って地固まる",
+      "info2": "あめふってじかたまる",
+      "word": "amehuttejikatamaru"
+    },
+    {
+      "info": "石橋を叩いて渡る",
+      "info2": "いしばしをたたいてわたる",
+      "word": "isibasiwotataitewataru"
+    },
+    {
+      "info": "石の上にも三年",
+      "info2": "いしのうえにもさんねん",
+      "word": "isinouenimosannnenn"
+    },
+    {
+      "info": "急がば回れ",
+      "info2": "いそがばまわれ",
+      "word": "isogabamaware"
+    },
+    {
+      "info": "一矢報いる",
+      "info2": "いっしむくいる",
+      "word": "issimukuiru"
+    },
+    {
+      "info": "犬の遠吠え",
+      "info2": "いぬのとおぼえ",
+      "word": "inunotooboe"
+    },
+    {
+      "info": "犬も歩けば棒に当たる",
+      "info2": "いぬもあるけばぼうにあたる",
+      "word": "inumoarukebabouniataru"
+    },
+    {
+      "info": "魚心あれば水心",
+      "info2": "うおごころあればみずごころ",
+      "word": "uogokoroarebamizugokoro"
+    }
+  ]
+}

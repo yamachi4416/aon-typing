@@ -1,0 +1,84 @@
+{
+  "id": "5001007",
+  "title": "ことわざ その7",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00021",
+      "name": "国語"
+    }
+  ],
+  "createdAt": "2021-09-14",
+  "updatedAt": "2021-09-14",
+  "words": [
+    {
+      "info": "桃栗三年柿八年",
+      "info2": "ももくりさんねんかきはちねん",
+      "word": "momokurisannnenkakihatinenn"
+    },
+    {
+      "info": "焼け石に水",
+      "info2": "やけいしにみず",
+      "word": "yakeisinimizu"
+    },
+    {
+      "info": "柳に雪折れなし",
+      "info2": "やなぎにゆきおれなし",
+      "word": "yanaginiyukiorenasi"
+    },
+    {
+      "info": "山あり谷あり",
+      "info2": "やまありたにあり",
+      "word": "yamaaritaniari"
+    },
+    {
+      "info": "病は気から",
+      "info2": "やまいはきから",
+      "word": "yamaihakikara"
+    },
+    {
+      "info": "山より大きな猪は出ぬ",
+      "info2": "やまよりおおきないのししはでぬ",
+      "word": "yamayoriookinainosisihadenu"
+    },
+    {
+      "info": "来年の事を言えば鬼が笑う",
+      "info2": "らいねんのことをいえばおにがわらう",
+      "word": "rainennnokotowoiebaonigawarau"
+    },
+    {
+      "info": "良薬は口に苦し",
+      "info2": "りょうやくはくちににがし",
+      "word": "ryouyakuhakutininigasi"
+    },
+    {
+      "info": "類は友を呼ぶ",
+      "info2": "るいはともをよぶ",
+      "word": "ruihatomowoyobu"
+    },
+    {
+      "info": "老兵は死なず、消え去るのみ",
+      "info2": "ろうへいはしなず、きえさるのみ",
+      "word": "rouheihasinazu,kiesarunomi"
+    },
+    {
+      "info": "我が身をつねって人の痛さを知れ",
+      "info2": "わがみをつねってひとのいたさをしれ",
+      "word": "wagamiwotunettehitonoitasawosire"
+    },
+    {
+      "info": "禍を転じて福と為す",
+      "info2": "わざわいをてんじてふくとなす",
+      "word": "wazawaiwotenjitehukutonasu"
+    },
+    {
+      "info": "笑う門には福来る",
+      "info2": "わらうかどにはふくきたる",
+      "word": "waraukadonihahukukitaru"
+    }
+  ]
+}

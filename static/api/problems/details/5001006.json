@@ -1,0 +1,94 @@
+{
+  "id": "5001006",
+  "title": "ことわざ その6",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00021",
+      "name": "国語"
+    }
+  ],
+  "createdAt": "2021-09-14",
+  "updatedAt": "2021-09-14",
+  "words": [
+    {
+      "info": "百聞は一見に如かず",
+      "info2": "ひゃくぶんはいっけんにしかず",
+      "word": "hyakubunhaikkennnisikazu"
+    },
+    {
+      "info": "夫婦喧嘩は犬も食わぬ",
+      "info2": "ふうふげんかはいぬもくわぬ",
+      "word": "huuhugenkahainumokuwanu"
+    },
+    {
+      "info": "不幸中の幸い",
+      "info2": "ふこうちゅうのさいわい",
+      "word": "hukoutyuunosaiwai"
+    },
+    {
+      "info": "冬来たりなば春遠からじ",
+      "info2": "ふゆきたりなばはるとおからじ",
+      "word": "huyukitarinabaharutookaraji"
+    },
+    {
+      "info": "へそで茶を沸かす",
+      "info2": "へそでちゃをわかす",
+      "word": "hesodetyawowakasu"
+    },
+    {
+      "info": "下手の横好き",
+      "info2": "へたのよこずき",
+      "word": "hetanoyokozuki"
+    },
+    {
+      "info": "仏の顔も三度",
+      "info2": "ほとけのかおもさんど",
+      "word": "hotokenokaomosando"
+    },
+    {
+      "info": "馬子にも衣装",
+      "info2": "まごにもいしょう",
+      "word": "magonimoisyou"
+    },
+    {
+      "info": "ミイラ取りがミイラになる",
+      "info2": "みいらとりがみいらになる",
+      "word": "miiratorigamiiraninaru"
+    },
+    {
+      "info": "耳が痛い",
+      "info2": "みみがいたい",
+      "word": "mimigaitai"
+    },
+    {
+      "info": "昔取った杵柄",
+      "info2": "むかしとったきねづか",
+      "word": "mukasitottakineduka"
+    },
+    {
+      "info": "名馬に癖あり",
+      "info2": "めいばにくせあり",
+      "word": "meibanikuseari"
+    },
+    {
+      "info": "目から鱗が落ちる",
+      "info2": "めからうろこがおちる",
+      "word": "mekaraurokogaotiru"
+    },
+    {
+      "info": "目には目を",
+      "info2": "めにはめを",
+      "word": "menihamewo"
+    },
+    {
+      "info": "餅は餅屋",
+      "info2": "もちはもちや",
+      "word": "motihamotiya"
+    }
+  ]
+}

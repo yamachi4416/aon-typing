@@ -1,0 +1,94 @@
+{
+  "id": "5001005",
+  "title": "ことわざ その5",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00021",
+      "name": "国語"
+    }
+  ],
+  "createdAt": "2021-09-14",
+  "updatedAt": "2021-09-14",
+  "words": [
+    {
+      "info": "煮え湯を飲まされる",
+      "info2": "にえゆをのまされる",
+      "word": "nieyuwonomasareru"
+    },
+    {
+      "info": "二階から目薬",
+      "info2": "にかいからめぐすり",
+      "word": "nikaikaramegusuri"
+    },
+    {
+      "info": "二兎を追う者は一兎をも得ず",
+      "info2": "にとをおうものはいっとをもえず",
+      "word": "nitowooumonohaittowomoezu"
+    },
+    {
+      "info": "人間いたるところ青山あり",
+      "info2": "にんげんいたるところせいざんあり",
+      "word": "ningennitarutokoroseizannari"
+    },
+    {
+      "info": "人間万事塞翁が馬",
+      "info2": "にんげんばんじさいおうがうま",
+      "word": "ningenbanjisaiougauma"
+    },
+    {
+      "info": "糠に釘",
+      "info2": "ぬかにくぎ",
+      "word": "nukanikugi"
+    },
+    {
+      "info": "盗人猛々しい",
+      "info2": "ぬすっとたけだけしい",
+      "word": "nusuttotakedakesii"
+    },
+    {
+      "info": "猫に鰹節",
+      "info2": "ねこにかつおぶし",
+      "word": "nekonikatuobusi"
+    },
+    {
+      "info": "猫に小判",
+      "info2": "ねこにこばん",
+      "word": "nekonikobann"
+    },
+    {
+      "info": "猫の額",
+      "info2": "ねこのひたい",
+      "word": "nekonohitai"
+    },
+    {
+      "info": "寝耳に水",
+      "info2": "ねみみにみず",
+      "word": "nemiminimizu"
+    },
+    {
+      "info": "暖簾に腕押し",
+      "info2": "のれんにうでおし",
+      "word": "norennniudeosi"
+    },
+    {
+      "info": "人の振り見て我が振り直せ",
+      "info2": "ひとのふりみてわがふりなおせ",
+      "word": "hitonohurimitewagahurinaose"
+    },
+    {
+      "info": "火に油を注ぐ",
+      "info2": "ひにあぶらをそそぐ",
+      "word": "hiniaburawososogu"
+    },
+    {
+      "info": "火のない所に煙は立たぬ",
+      "info2": "ひのないところにけむりはたたぬ",
+      "word": "hinonaitokoronikemurihatatanu"
+    }
+  ]
+}
