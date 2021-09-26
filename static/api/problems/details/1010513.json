@@ -1,0 +1,214 @@
+{
+  "id": "1010513",
+  "title": "いぬの種類（大型犬）",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00011",
+      "name": "いきもの"
+    }
+  ],
+  "createdAt": "2021-09-26",
+  "updatedAt": "2021-09-26",
+  "words": [
+    {
+      "info": "アイリッシュウルフハウンド",
+      "info2": "あいりっしゅうるふはうんど",
+      "word": "airissyuuruhuhaundo"
+    },
+    {
+      "info": "アイリッシュセッター",
+      "info2": "あいりっしゅせったー",
+      "word": "airissyusetta-"
+    },
+    {
+      "info": "アフガンハウンド",
+      "info2": "あふがんはうんど",
+      "word": "ahuganhaundo"
+    },
+    {
+      "info": "アラスカンマラミュート",
+      "info2": "あらすかんまらみゅーと",
+      "word": "arasukanmaramyu-to"
+    },
+    {
+      "info": "イングリッシュセッター",
+      "info2": "いんぐりっしゅせったー",
+      "word": "ingurissyusetta-"
+    },
+    {
+      "info": "イングリッシュポインター",
+      "info2": "いんぐりっしゅぽいんたー",
+      "word": "ingurissyupointa-"
+    },
+    {
+      "info": "エアデールテリア",
+      "info2": "えあでーるてりあ",
+      "word": "eade-ruteria"
+    },
+    {
+      "info": "オールドイングリッシュシープドッグ",
+      "info2": "おーるどいんぐりっしゅしーぷどっぐ",
+      "word": "o-rudoingurissyusi-pudoggu"
+    },
+    {
+      "info": "カーリーコーテッドレトリバー",
+      "info2": "かーりーこーてっどれとりばー",
+      "word": "ka-ri-ko-teddoretoriba-"
+    },
+    {
+      "info": "グレートデン",
+      "info2": "ぐれーとでん",
+      "word": "gure-todenn"
+    },
+    {
+      "info": "グレートピレニーズ",
+      "info2": "ぐれーとぴれにーず",
+      "word": "gure-topireni-zu"
+    },
+    {
+      "info": "コモンドール",
+      "info2": "こもんどーる",
+      "word": "komondo-ru"
+    },
+    {
+      "info": "ゴールデンレトリバー",
+      "info2": "ごーるでんれとりばー",
+      "word": "go-rudenretoriba-"
+    },
+    {
+      "info": "サモエド",
+      "info2": "さもえど",
+      "word": "samoedo"
+    },
+    {
+      "info": "サルーキ",
+      "info2": "さるーき",
+      "word": "saru-ki"
+    },
+    {
+      "info": "シベリアンハスキー",
+      "info2": "しべりあんはすきー",
+      "word": "siberianhasuki-"
+    },
+    {
+      "info": "ジャイアントシュナウザー",
+      "info2": "じゃいあんとしゅなうざー",
+      "word": "jaiantosyunauza-"
+    },
+    {
+      "info": "ジャーマン・シェパード・ドッグ",
+      "info2": "じゃーまん・しぇぱーど・どっぐ",
+      "word": "ja-man/syepa-do/doggu"
+    },
+    {
+      "info": "スタンダードプードル",
+      "info2": "すたんだーどぷーどる",
+      "word": "sutanda-dopu-doru"
+    },
+    {
+      "info": "セントバーナード",
+      "info2": "せんとばーなーど",
+      "word": "sentoba-na-do"
+    },
+    {
+      "info": "ダルメシアン",
+      "info2": "だるめしあん",
+      "word": "darumesiann"
+    },
+    {
+      "info": "チェサピークベイレトリバー",
+      "info2": "ちぇさぴーくべいれとりばー",
+      "word": "tyesapi-kubeiretoriba-"
+    },
+    {
+      "info": "チャウチャウ",
+      "info2": "ちゃうちゃう",
+      "word": "tyautyau"
+    },
+    {
+      "info": "ドーベルマン",
+      "info2": "どーべるまん",
+      "word": "do-berumann"
+    },
+    {
+      "info": "ニューファンドランド",
+      "info2": "にゅーふぁんどらんど",
+      "word": "nyu-fandorando"
+    },
+    {
+      "info": "バーニーズ・マウンテン・ドッグ",
+      "info2": "ばーにーず・まうんてん・どっぐ",
+      "word": "ba-ni-zu/maunten/doggu"
+    },
+    {
+      "info": "ビアデッドコリー",
+      "info2": "びあでっどこりー",
+      "word": "biadeddokori-"
+    },
+    {
+      "info": "フラットコーテッドレトリバー",
+      "info2": "ふらっとこーてっどれとりばー",
+      "word": "hurattoko-teddoretoriba-"
+    },
+    {
+      "info": "ブリアード",
+      "info2": "ぶりあーど",
+      "word": "buria-do"
+    },
+    {
+      "info": "ブービエ・デ・フランダース",
+      "info2": "ぶーびえ・で・ふらんだーす",
+      "word": "bu-bie/de/huranda-su"
+    },
+    {
+      "info": "ボクサー",
+      "info2": "ぼくさー",
+      "word": "bokusa-"
+    },
+    {
+      "info": "ボルゾイ",
+      "info2": "ぼるぞい",
+      "word": "boruzoi"
+    },
+    {
+      "info": "ラフコリー",
+      "info2": "らふこりー",
+      "word": "rahukori-"
+    },
+    {
+      "info": "ラブラドールレトリバー",
+      "info2": "らぶらどーるれとりばー",
+      "word": "raburado-ruretoriba-"
+    },
+    {
+      "info": "レオンベルガー",
+      "info2": "れおんべるがー",
+      "word": "reonberuga-"
+    },
+    {
+      "info": "ロットワイラー",
+      "info2": "ろっとわいらー",
+      "word": "rottowaira-"
+    },
+    {
+      "info": "ワイマラナー",
+      "info2": "わいまらなー",
+      "word": "waimarana-"
+    },
+    {
+      "info": "土佐犬",
+      "info2": "とさいぬ",
+      "word": "tosainu"
+    },
+    {
+      "info": "秋田犬",
+      "info2": "あきたいぬ",
+      "word": "akitainu"
+    }
+  ]
+}

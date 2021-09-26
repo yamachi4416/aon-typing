@@ -1,5 +1,81 @@
 [
   {
+    "id": "1010513",
+    "title": "いぬの種類（大型犬）",
+    "type": "japanese",
+    "words": 39,
+    "chars": 550,
+    "createdAt": "2021-09-26",
+    "updatedAt": "2021-09-26",
+    "tags": [
+      {
+        "id": "00009",
+        "name": "日本語"
+      },
+      {
+        "id": "00011",
+        "name": "いきもの"
+      }
+    ]
+  },
+  {
+    "id": "1010512",
+    "title": "いぬの種類（中型犬）",
+    "type": "japanese",
+    "words": 33,
+    "chars": 543,
+    "createdAt": "2021-09-26",
+    "updatedAt": "2021-09-26",
+    "tags": [
+      {
+        "id": "00009",
+        "name": "日本語"
+      },
+      {
+        "id": "00011",
+        "name": "いきもの"
+      }
+    ]
+  },
+  {
+    "id": "1010511",
+    "title": "いぬの種類（小型犬）",
+    "type": "japanese",
+    "words": 30,
+    "chars": 411,
+    "createdAt": "2021-09-26",
+    "updatedAt": "2021-09-26",
+    "tags": [
+      {
+        "id": "00009",
+        "name": "日本語"
+      },
+      {
+        "id": "00011",
+        "name": "いきもの"
+      }
+    ]
+  },
+  {
+    "id": "1010510",
+    "title": "いぬの種類（超小型犬）",
+    "type": "japanese",
+    "words": 17,
+    "chars": 226,
+    "createdAt": "2021-09-26",
+    "updatedAt": "2021-09-26",
+    "tags": [
+      {
+        "id": "00009",
+        "name": "日本語"
+      },
+      {
+        "id": "00011",
+        "name": "いきもの"
+      }
+    ]
+  },
+  {
     "id": "1010501",
     "title": "ねこの種類",
     "type": "japanese",
@@ -24,82 +100,6 @@
     "type": "japanese",
     "words": 13,
     "chars": 286,
-    "createdAt": "2021-09-14",
-    "updatedAt": "2021-09-14",
-    "tags": [
-      {
-        "id": "00009",
-        "name": "日本語"
-      },
-      {
-        "id": "00021",
-        "name": "国語"
-      }
-    ]
-  },
-  {
-    "id": "5001006",
-    "title": "ことわざ その6",
-    "type": "japanese",
-    "words": 15,
-    "chars": 258,
-    "createdAt": "2021-09-14",
-    "updatedAt": "2021-09-14",
-    "tags": [
-      {
-        "id": "00009",
-        "name": "日本語"
-      },
-      {
-        "id": "00021",
-        "name": "国語"
-      }
-    ]
-  },
-  {
-    "id": "5001005",
-    "title": "ことわざ その5",
-    "type": "japanese",
-    "words": 15,
-    "chars": 273,
-    "createdAt": "2021-09-14",
-    "updatedAt": "2021-09-14",
-    "tags": [
-      {
-        "id": "00009",
-        "name": "日本語"
-      },
-      {
-        "id": "00021",
-        "name": "国語"
-      }
-    ]
-  },
-  {
-    "id": "5001004",
-    "title": "ことわざ その4",
-    "type": "japanese",
-    "words": 15,
-    "chars": 277,
-    "createdAt": "2021-09-14",
-    "updatedAt": "2021-09-14",
-    "tags": [
-      {
-        "id": "00009",
-        "name": "日本語"
-      },
-      {
-        "id": "00021",
-        "name": "国語"
-      }
-    ]
-  },
-  {
-    "id": "5001003",
-    "title": "ことわざ その3",
-    "type": "japanese",
-    "words": 13,
-    "chars": 267,
     "createdAt": "2021-09-14",
     "updatedAt": "2021-09-14",
     "tags": [

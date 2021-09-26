@@ -1,0 +1,169 @@
+{
+  "id": "1010511",
+  "title": "いぬの種類（小型犬）",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00011",
+      "name": "いきもの"
+    }
+  ],
+  "createdAt": "2021-09-26",
+  "updatedAt": "2021-09-26",
+  "words": [
+    {
+      "info": "イタリアングレーハウンド",
+      "info2": "いたりあんぐれーはうんど",
+      "word": "itariangure-haundo"
+    },
+    {
+      "info": "ウェルシュテリア",
+      "info2": "うぇるしゅてりあ",
+      "word": "werusyuteria"
+    },
+    {
+      "info": "ウエストハイランドホワイトテリア",
+      "info2": "うえすとはいらんどほわいとてりあ",
+      "word": "uesutohairandohowaitoteria"
+    },
+    {
+      "info": "キャバリア",
+      "info2": "きゃばりあ",
+      "word": "kyabaria"
+    },
+    {
+      "info": "ケアーンテリア",
+      "info2": "けあーんてりあ",
+      "word": "kea-nteria"
+    },
+    {
+      "info": "シェットランドシープドッグ",
+      "info2": "しぇっとらんどしーぷどっぐ",
+      "word": "syettorandosi-pudoggu"
+    },
+    {
+      "info": "シーズー",
+      "info2": "しーずー",
+      "word": "si-zu-"
+    },
+    {
+      "info": "シーリハムテリア",
+      "info2": "しーりはむてりあ",
+      "word": "si-rihamuteria"
+    },
+    {
+      "info": "ジャックラッセルテリア",
+      "info2": "じゃっくらっせるてりあ",
+      "word": "jakkurasseruteria"
+    },
+    {
+      "info": "スキッパーキ",
+      "info2": "すきっぱーき",
+      "word": "sukippa-ki"
+    },
+    {
+      "info": "スコティッシュテリア",
+      "info2": "すこてぃっしゅてりあ",
+      "word": "sukothissyuteria"
+    },
+    {
+      "info": "チベタンスパニエル",
+      "info2": "ちべたんすぱにえる",
+      "word": "tibetansupanieru"
+    },
+    {
+      "info": "チャイニーズ・クレステッド・ドッグ",
+      "info2": "ちゃいにーず・くれすてっど・どっぐ",
+      "word": "tyaini-zu/kuresuteddo/doggu"
+    },
+    {
+      "info": "チン",
+      "info2": "ちん",
+      "word": "tinn"
+    },
+    {
+      "info": "ノーフォークテリア",
+      "info2": "のーふぉーくてりあ",
+      "word": "no-fo-kuteria"
+    },
+    {
+      "info": "ノーリッチテリア",
+      "info2": "のーりっちてりあ",
+      "word": "no-rittiteria"
+    },
+    {
+      "info": "パグ",
+      "info2": "ぱぐ",
+      "word": "pagu"
+    },
+    {
+      "info": "ビションフリーゼ",
+      "info2": "びしょんふりーぜ",
+      "word": "bisyonhuri-ze"
+    },
+    {
+      "info": "ペキニーズ",
+      "info2": "ぺきにーず",
+      "word": "pekini-zu"
+    },
+    {
+      "info": "ボストンテリア",
+      "info2": "ぼすとんてりあ",
+      "word": "bosutonteria"
+    },
+    {
+      "info": "マンチェスターテリア",
+      "info2": "まんちぇすたーてりあ",
+      "word": "mantyesuta-teria"
+    },
+    {
+      "info": "ミニチュアシュナウザー",
+      "info2": "みにちゅあしゅなうざー",
+      "word": "minityuasyunauza-"
+    },
+    {
+      "info": "ミニチュアダックスフンド",
+      "info2": "みにちゅあだっくすふんど",
+      "word": "minityuadakkusuhundo"
+    },
+    {
+      "info": "ミニチュアピンシャー",
+      "info2": "みにちゅあぴんしゃー",
+      "word": "minityuapinsya-"
+    },
+    {
+      "info": "ミニチュアプードル",
+      "info2": "みにちゅあぷーどる",
+      "word": "minityuapu-doru"
+    },
+    {
+      "info": "ラサアプソ",
+      "info2": "らさあぷそ",
+      "word": "rasaapuso"
+    },
+    {
+      "info": "レークランドテリア",
+      "info2": "れーくらんどてりあ",
+      "word": "re-kurandoteria"
+    },
+    {
+      "info": "ワイアーフォックステリア",
+      "info2": "わいあーふぉっくすてりあ",
+      "word": "waia-fokkusuteria"
+    },
+    {
+      "info": "柴犬",
+      "info2": "しばいぬ",
+      "word": "sibainu"
+    },
+    {
+      "info": "ロシアンブルー",
+      "info2": "ろしあんぶるー",
+      "word": "rosianburu-"
+    }
+  ]
+}

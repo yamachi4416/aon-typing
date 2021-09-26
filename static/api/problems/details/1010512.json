@@ -1,0 +1,184 @@
+{
+  "id": "1010512",
+  "title": "いぬの種類（中型犬）",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00011",
+      "name": "いきもの"
+    }
+  ],
+  "createdAt": "2021-09-26",
+  "updatedAt": "2021-09-26",
+  "words": [
+    {
+      "info": "アメリカンコッカースパニエル",
+      "info2": "あめりかんこっかーすぱにえる",
+      "word": "amerikankokka-supanieru"
+    },
+    {
+      "info": "アメリカンスタッフォードシャーテリア",
+      "info2": "あめりかんすたっふぉーどしゃーてりあ",
+      "word": "amerikansutaffo-dosya-teria"
+    },
+    {
+      "info": "アメリカンピットブルテリア",
+      "info2": "あめりかんぴっとぶるてりあ",
+      "word": "amerikanpittoburuteria"
+    },
+    {
+      "info": "イングリッシュコッカースパニエル",
+      "info2": "いんぐりっしゅこっかーすぱにえる",
+      "word": "ingurissyukokka-supanieru"
+    },
+    {
+      "info": "イングリッシュスプリンガースパニエル",
+      "info2": "いんぐりっしゅすぷりんがーすぱにえる",
+      "word": "ingurissyusupuringa-supanieru"
+    },
+    {
+      "info": "ウィペット",
+      "info2": "うぃぺっと",
+      "word": "wipetto"
+    },
+    {
+      "info": "ウェルシュ・コーギー・カーディガン",
+      "info2": "うぇるしゅ・こーぎー・かーでぃがん",
+      "word": "werusyu/ko-gi-/ka-dhigann"
+    },
+    {
+      "info": "ウェルシュ・コーギー・ペンブローク",
+      "info2": "うぇるしゅ・こーぎー・ぺんぶろーく",
+      "word": "werusyu/ko-gi-/penburo-ku"
+    },
+    {
+      "info": "オーストラリアンケルピー",
+      "info2": "おーすとらりあんけるぴー",
+      "word": "o-sutorariankerupi-"
+    },
+    {
+      "info": "キースホンド",
+      "info2": "きーすほんど",
+      "word": "ki-suhondo"
+    },
+    {
+      "info": "ケリーブルーテリア",
+      "info2": "けりーぶるーてりあ",
+      "word": "keri-buru-teria"
+    },
+    {
+      "info": "コーイケルホンディエ",
+      "info2": "こーいけるほんでぃえ",
+      "word": "ko-ikeruhondhie"
+    },
+    {
+      "info": "シャーペイ",
+      "info2": "しゃーぺい",
+      "word": "sya-pei"
+    },
+    {
+      "info": "ジャーマンピンシャー",
+      "info2": "じゃーまんぴんしゃー",
+      "word": "ja-manpinsya-"
+    },
+    {
+      "info": "スタッフォードシャーブルテリア",
+      "info2": "すたっふぉーどしゃーぶるてりあ",
+      "word": "sutaffo-dosya-buruteria"
+    },
+    {
+      "info": "スタンダードシュナウザー",
+      "info2": "すたんだーどしゅなうざー",
+      "word": "sutanda-dosyunauza-"
+    },
+    {
+      "info": "スタンダードダックスフンド",
+      "info2": "すたんだーどだっくすふんど",
+      "word": "sutanda-dodakkusuhundo"
+    },
+    {
+      "info": "バセットハウンド",
+      "info2": "ばせっとはうんど",
+      "word": "basettohaundo"
+    },
+    {
+      "info": "バセンジー",
+      "info2": "ばせんじー",
+      "word": "basenji-"
+    },
+    {
+      "info": "ビーグル",
+      "info2": "びーぐる",
+      "word": "bi-guru"
+    },
+    {
+      "info": "フレンチブルドッグ",
+      "info2": "ふれんちぶるどっぐ",
+      "word": "hurentiburudoggu"
+    },
+    {
+      "info": "ブリタニースパニエル",
+      "info2": "ぶりたにーすぱにえる",
+      "word": "buritani-supanieru"
+    },
+    {
+      "info": "ブルドッグ",
+      "info2": "ぶるどっぐ",
+      "word": "burudoggu"
+    },
+    {
+      "info": "プチバセットグリフォンバンデーン",
+      "info2": "ぷちばせっとぐりふぉんばんでーん",
+      "word": "putibasettogurifonbande-nn"
+    },
+    {
+      "info": "ボーダーコリー",
+      "info2": "ぼーだーこりー",
+      "word": "bo-da-kori-"
+    },
+    {
+      "info": "ポリッシュローランドシープドッグ",
+      "info2": "ぽりっしゅろーらんどしーぷどっぐ",
+      "word": "porissyuro-randosi-pudoggu"
+    },
+    {
+      "info": "ミディアムプードル",
+      "info2": "みでぃあむぷーどる",
+      "word": "midhiamupu-doru"
+    },
+    {
+      "info": "ミニチュアブルテリア",
+      "info2": "みにちゅあぶるてりあ",
+      "word": "minityuaburuteria"
+    },
+    {
+      "info": "北海道犬",
+      "info2": "ほっかいどうけん",
+      "word": "hokkaidoukenn"
+    },
+    {
+      "info": "四国犬",
+      "info2": "しこくいぬ",
+      "word": "sikokuinu"
+    },
+    {
+      "info": "日本スピッツ",
+      "info2": "にほんすぴっつ",
+      "word": "nihonsupittu"
+    },
+    {
+      "info": "甲斐犬",
+      "info2": "かいけん",
+      "word": "kaikenn"
+    },
+    {
+      "info": "紀州犬",
+      "info2": "きしゅうけん",
+      "word": "kisyuukenn"
+    }
+  ]
+}
