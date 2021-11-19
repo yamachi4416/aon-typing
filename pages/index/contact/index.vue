@@ -130,7 +130,7 @@ export default {
       this.gError = ''
       this.setLoading(2)
       await this.$http
-        .$post('https://c.studio-aon.com/contact', {
+        .$post('https://c.aon-typing.com/contact', {
           name: this.name,
           email: this.email,
           message: this.message,
