@@ -1,0 +1,83 @@
+{
+  "id": "1000110",
+  "title": "過去形 その2",
+  "type": "english",
+  "tags": [
+    {
+      "id": "00001",
+      "name": "英語"
+    },
+    {
+      "id": "00006",
+      "name": "英文法"
+    },
+    {
+      "id": "00003",
+      "name": "中学1年"
+    }
+  ],
+  "createdAt": "2022-01-22",
+  "updatedAt": "2022-01-22",
+  "words": [
+    {
+      "info": "昨日勉強しましたか？",
+      "word": "Did you study yesterday?"
+    },
+    {
+      "info": "昨日学校に行きしましたか？",
+      "word": "Did you go to school yesterday?"
+    },
+    {
+      "info": "昨日勉強をしませんでしたか？",
+      "word": "Didn't you study yesterday?"
+    },
+    {
+      "info": "去年旅行に行きましたか？",
+      "word": "Did you go on a trip last year?"
+    },
+    {
+      "info": "彼は彼女の彼氏でした",
+      "word": "He was her boyfriend"
+    },
+    {
+      "info": "彼は昨日まで彼女の彼氏でした",
+      "word": "He was her boyfriend until yesterday"
+    },
+    {
+      "info": "彼は昨日まで私の彼氏でした",
+      "word": "He was my boyfriend until yesterday"
+    },
+    {
+      "info": "昨日私はそれを太郎に売りました",
+      "word": "Yesterday I sold it to Taro"
+    },
+    {
+      "info": "3年前ここにいましたか？",
+      "word": "Were you here 3 years ago?"
+    },
+    {
+      "info": "彼は3年前ここにいましたか？",
+      "word": "Was he here three years ago?"
+    },
+    {
+      "info": "ノートパソコンは昨日まで動いていましたか？",
+      "word": "Did your laptop work until yesterday?"
+    },
+    {
+      "info": "彼は彼女の彼氏でしたか？",
+      "word": "Was he her boyfriend?"
+    },
+    {
+      "info": "去年までそこに公園がありました",
+      "word": "There was a park there until last year"
+    },
+    {
+      "info": "去年までそこに動物園がありましたか？",
+      "word": "Was there a zoo there until last year?"
+    },
+    {
+      "info": "彼らは有名なサッカーチームの選手でした",
+      "word": "They were players of a famous soccer team"
+    }
+  ]
+}
