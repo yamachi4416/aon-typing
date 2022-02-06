@@ -1,0 +1,103 @@
+{
+  "id": "1010111",
+  "title": "山形新幹線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00007",
+      "name": "地理"
+    },
+    {
+      "id": "00019",
+      "name": "駅名"
+    }
+  ],
+  "createdAt": "2022-02-06",
+  "updatedAt": "2022-02-06",
+  "words": [
+    {
+      "info": "東京",
+      "info2": "とうきょう",
+      "word": "toukyou"
+    },
+    {
+      "info": "上野",
+      "info2": "うえの",
+      "word": "ueno"
+    },
+    {
+      "info": "大宮",
+      "info2": "おおみや",
+      "word": "oomiya"
+    },
+    {
+      "info": "宇都宮",
+      "info2": "うつのみや",
+      "word": "utunomiya"
+    },
+    {
+      "info": "郡山",
+      "info2": "こおりやま",
+      "word": "kooriyama"
+    },
+    {
+      "info": "福島",
+      "info2": "ふくしま",
+      "word": "hukusima"
+    },
+    {
+      "info": "米沢",
+      "info2": "よねざわ",
+      "word": "yonezawa"
+    },
+    {
+      "info": "高畠",
+      "info2": "たかはた",
+      "word": "takahata"
+    },
+    {
+      "info": "赤湯",
+      "info2": "あかゆ",
+      "word": "akayu"
+    },
+    {
+      "info": "かみのやま温泉",
+      "info2": "かみのやまおんせん",
+      "word": "kaminoyamaonsenn"
+    },
+    {
+      "info": "山形",
+      "info2": "やまがた",
+      "word": "yamagata"
+    },
+    {
+      "info": "天童",
+      "info2": "てんどう",
+      "word": "tendou"
+    },
+    {
+      "info": "さくらんぼ東根",
+      "info2": "さくらんぼひがしね",
+      "word": "sakuranbohigasine"
+    },
+    {
+      "info": "村山",
+      "info2": "むらやま",
+      "word": "murayama"
+    },
+    {
+      "info": "大石田",
+      "info2": "おおいしだ",
+      "word": "ooisida"
+    },
+    {
+      "info": "新庄",
+      "info2": "しんじょう",
+      "word": "sinjou"
+    }
+  ]
+}
