@@ -198,9 +198,9 @@ export default {
           justify-content: flex-start;
         }
       }
-      @media print {
-        display: none;
-      }
+    }
+    @media print {
+      display: none;
     }
   }
 }

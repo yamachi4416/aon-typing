@@ -128,6 +128,7 @@ export default {
   @media print {
     height: unset;
     position: relative;
+    padding-top: 25px;
   }
 
   &-nav {
