@@ -1,0 +1,193 @@
+{
+  "id": "1010113",
+  "title": "宇都宮線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00007",
+      "name": "地理"
+    },
+    {
+      "id": "00019",
+      "name": "駅名"
+    }
+  ],
+  "createdAt": "2022-06-10",
+  "updatedAt": "2022-06-10",
+  "words": [
+    {
+      "info": "東京",
+      "info2": "とうきょう",
+      "word": "toukyou"
+    },
+    {
+      "info": "上野",
+      "info2": "うえの",
+      "word": "ueno"
+    },
+    {
+      "info": "尾久",
+      "info2": "おく",
+      "word": "oku"
+    },
+    {
+      "info": "赤羽",
+      "info2": "あかばね",
+      "word": "akabane"
+    },
+    {
+      "info": "浦和",
+      "info2": "うらわ",
+      "word": "urawa"
+    },
+    {
+      "info": "さいたま新都心",
+      "info2": "さいたましんとしん",
+      "word": "saitamasintosinn"
+    },
+    {
+      "info": "大宮",
+      "info2": "おおみや",
+      "word": "oomiya"
+    },
+    {
+      "info": "土呂",
+      "info2": "とろ",
+      "word": "toro"
+    },
+    {
+      "info": "東大宮",
+      "info2": "ひがしおおみや",
+      "word": "higasioomiya"
+    },
+    {
+      "info": "蓮田",
+      "info2": "はすだ",
+      "word": "hasuda"
+    },
+    {
+      "info": "白岡",
+      "info2": "しらおか",
+      "word": "siraoka"
+    },
+    {
+      "info": "新白岡",
+      "info2": "しんしらおか",
+      "word": "sinsiraoka"
+    },
+    {
+      "info": "久喜",
+      "info2": "くき",
+      "word": "kuki"
+    },
+    {
+      "info": "東鷲宮",
+      "info2": "ひがしわしのみや",
+      "word": "higasiwasinomiya"
+    },
+    {
+      "info": "栗橋",
+      "info2": "くりはし",
+      "word": "kurihasi"
+    },
+    {
+      "info": "古河",
+      "info2": "こが",
+      "word": "koga"
+    },
+    {
+      "info": "野木",
+      "info2": "のぎ",
+      "word": "nogi"
+    },
+    {
+      "info": "間々田",
+      "info2": "ままだ",
+      "word": "mamada"
+    },
+    {
+      "info": "小山",
+      "info2": "おやま",
+      "word": "oyama"
+    },
+    {
+      "info": "小金井",
+      "info2": "こがねい",
+      "word": "koganei"
+    },
+    {
+      "info": "自治医大",
+      "info2": "じちいだい",
+      "word": "jitiidai"
+    },
+    {
+      "info": "石橋",
+      "info2": "いしばし",
+      "word": "isibasi"
+    },
+    {
+      "info": "雀宮",
+      "info2": "すずめのみや",
+      "word": "suzumenomiya"
+    },
+    {
+      "info": "宇都宮",
+      "info2": "うつのみや",
+      "word": "utunomiya"
+    },
+    {
+      "info": "岡本",
+      "info2": "おかもと",
+      "word": "okamoto"
+    },
+    {
+      "info": "宝積寺",
+      "info2": "ほうしゃくじ",
+      "word": "housyakuji"
+    },
+    {
+      "info": "氏家",
+      "info2": "うじいえ",
+      "word": "ujiie"
+    },
+    {
+      "info": "蒲須坂",
+      "info2": "かますさか",
+      "word": "kamasusaka"
+    },
+    {
+      "info": "片岡",
+      "info2": "かたおか",
+      "word": "kataoka"
+    },
+    {
+      "info": "矢板",
+      "info2": "やいた",
+      "word": "yaita"
+    },
+    {
+      "info": "野崎",
+      "info2": "のざき",
+      "word": "nozaki"
+    },
+    {
+      "info": "西那須野",
+      "info2": "にしなすの",
+      "word": "nisinasuno"
+    },
+    {
+      "info": "那須塩原",
+      "info2": "なすしおばら",
+      "word": "nasusiobara"
+    },
+    {
+      "info": "黒磯",
+      "info2": "くろいそ",
+      "word": "kuroiso"
+    }
+  ]
+}
