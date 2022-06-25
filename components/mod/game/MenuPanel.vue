@@ -155,10 +155,14 @@ const HelpAnimals = [
     name: "オフ",
     speed: 0,
   },
-  ...helpAnimals().map(({ start, end, name }) => ({
-    name,
-    speed: Math.round(60000 / ((start + end - (end - start) / 3) / 2)),
-  })),
+  ...helpAnimals().map(({ start, end, name }) => {
+    const avg = Math.round(start + (end - start) / 2);
+    return {
+      name,
+      avg,
+      speed: Math.round(60000 / avg),
+    };
+  }),
 ];
 
 const goalCharCounts = [0, 100, 250, 450, 700, 1000];

@@ -61,20 +61,32 @@ function removeAllEventHandler() {
   });
 }
 
-const intervalTimerIds = new Map<number, boolean>();
-function startIntervalTimer(func: TimerHandler, interval: number) {
-  const id = window.setInterval(func, interval);
-  intervalTimerIds.set(id, true);
+let intervalTimerIds: Record<number, number> = Object.create(null);
+function startIntervalTimer(func: () => void, interval: number) {
+  let id: number;
+  let time = new Date().getTime() + interval;
+  const fn = () => {
+    func();
+    time += interval;
+    intervalTimerIds[id] = window.setTimeout(fn, time - new Date().getTime());
+  };
+  id = window.setTimeout(fn, interval);
+  intervalTimerIds[id] = id;
   return id;
 }
 
 function stopIntervalTimer(id: number) {
-  window.clearInterval(id);
-  intervalTimerIds.delete(id);
+  const timerId = intervalTimerIds[id];
+  delete intervalTimerIds[id];
+  if (timerId) {
+    window.clearInterval(timerId);
+  }
 }
 
 function stopAllIntervalTimer() {
-  Array.from(intervalTimerIds.keys()).forEach(stopIntervalTimer);
+  const ids = Object.values(intervalTimerIds);
+  intervalTimerIds = Object.create(null);
+  ids.forEach((id) => window.clearInterval(id));
 }
 
 type TypingEventDetail = {
