@@ -46,8 +46,6 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      title: "あぉ～ん タイピング",
-      titleTemplate: "%s | あぉ～ん タイピング",
       htmlAttrs: {
         lang: "ja",
       },

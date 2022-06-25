@@ -103,6 +103,10 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: "トップページ",
+});
+
 const route = useRoute();
 const router = useRouter();
 const problemState = useProblems();
