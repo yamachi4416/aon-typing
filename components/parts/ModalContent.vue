@@ -79,7 +79,7 @@ defineExpose({
     flex: 1;
     overflow-y: auto;
     @include __media_s {
-      padding: 5px 0;
+      padding: 0 0 5px 0;
     }
   }
 
