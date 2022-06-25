@@ -1,10 +1,11 @@
 <template>
   <div />
 </template>
-<script>
-export default {
-  mounted() {
-    this.$router.replace({ name: 'game-menu' })
-  },
-}
+
+<script setup lang="ts">
+onMounted(() => {
+  if (useRoute().name.toString() !== "game-menu") {
+    useRouter().replace({ name: "game-menu" });
+  }
+});
 </script>

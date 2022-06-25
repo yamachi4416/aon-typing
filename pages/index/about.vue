@@ -1,6 +1,6 @@
 <template>
   <div>
-    <para-section>
+    <PartsSection>
       <h2>あぉ～ん タイピングとは？</h2>
       <p>
         あぉ～ん タイピングは無料のタイピング練習サイトです。<br />
@@ -14,24 +14,24 @@
       <template #right>
         <img-neko-user-keyboard />
       </template>
-    </para-section>
+    </PartsSection>
 
-    <para-section ref="automode">
+    <PartsSection>
       <h2>自動モードってなんですか？</h2>
       <p>
         自動モードはあなたのかわりにタイピングをしてくれる機能です。<br />
-        {{ helpAnimals }}のタイピングの助っ人を用意しています。
+        {{ animals }}のタイピングの助っ人を用意しています。
       </p>
       <p>
         いちど助っ人を選択してかれいな技を見てみるのもいいでしょう。<br />
         タイピングの練習につかれたときや午後のティータイムに眺めるのもいいかもしれません。
       </p>
       <template #left>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
+    </PartsSection>
 
-    <para-section ref="score" class="about-score">
+    <PartsSection class="about-score">
       <div class="about-score-body row">
         <div class="col-sm-12 col-6">
           <h2>スコアってなんですか？</h2>
@@ -62,9 +62,9 @@
       <template #right>
         <img-neko-user-keyboard />
       </template>
-    </para-section>
+    </PartsSection>
 
-    <para-section ref="rank" class="about-rank">
+    <PartsSection class="about-rank">
       <div class="about-rank-body row">
         <div class="col-sm-12 col-6">
           <h2>ランクってなんですか？</h2>
@@ -86,8 +86,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="r in rankList" :key="`about-rank-table-${r.id}`">
-                <th>{{ r.end === null ? '？？？？' : r.name }}</th>
+              <tr v-for="r in ranks" :key="`about-rank-table-${r.id}`">
+                <th>{{ r.end === null ? "？？？？" : r.name }}</th>
                 <td>{{ r.start }}</td>
                 <td class="sm-table-between">～</td>
                 <td>{{ r.end }}</td>
@@ -97,11 +97,11 @@
         </div>
       </div>
       <template #left>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
+    </PartsSection>
 
-    <para-section ref="automode">
+    <PartsSection>
       <h2>目標タイプ数ってなんですか？</h2>
       <p>
         目標タイプ数はタイピングのタイプ数の目標を設定する機能です。<br />
@@ -109,35 +109,23 @@
         制限時間を「なし」に設定して、時間を気にせずに目標のタイプ数まで続けるのもいいかもしれません。
       </p>
       <template #right>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
+    </PartsSection>
   </div>
 </template>
 
-<script>
-import ParaSection from '~/components/parts/ParaSection.vue'
-import { rankList, helpAnimals } from '~/libs/TypingGameInfo'
-import PageBaseMixin from '~/mixins/PageBaseMixin'
-import ScrollHashMixin from '~/mixins/ScrollHashMixin'
+<script setup lang="ts">
+import { rankList, helpAnimals } from "~/libs/TypingGameInfo";
 
-export default {
-  components: { ParaSection },
-  mixins: [PageBaseMixin, ScrollHashMixin],
-  data() {
-    return {
-      rankList: rankList(),
-      helpAnimals: helpAnimals()
-        .map(({ name }) => name)
-        .join('、'),
-    }
-  },
-  head() {
-    return {
-      title: 'サイト説明',
-    }
-  },
-}
+const animals = helpAnimals()
+  .map(({ name }) => name)
+  .join("、");
+const ranks = rankList();
+
+useHead({
+  title: "サイト説明",
+});
 </script>
 
 <style lang="scss" scoped>

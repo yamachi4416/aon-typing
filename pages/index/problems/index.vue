@@ -1,12 +1,12 @@
 <template>
   <div class="problem-list-page">
-    <para-section
+    <PartsSection
       v-if="kwds.length > 0"
       class="problem-list-page-search-header"
     >
       <h2>
         <span class="problem-list-page-search-header-kwd">{{
-          kwds.join(' ')
+          kwds.join(" ")
         }}</span>
         の検索結果
       </h2>
@@ -15,107 +15,57 @@
       <div class="actions">
         <div class="buttons">
           <span>
-            <button v-if="back" class="button" @click="$router.back()">
+            <button
+              v-if="$navigator.enable"
+              class="button"
+              @click="$router.back()"
+            >
               もどる
             </button>
           </span>
         </div>
       </div>
       <template #right>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
-    <problem-list
+    </PartsSection>
+    <ModProblemLists
       :problems="problems"
-      @play="playProblem"
-      @detail="detail"
-      @tag="selectTag"
+      @tag="$navigator.indexTagDetail"
+      @detail="$navigator.indexProblemDetail"
+      @play="$navigator.gameMenu"
     />
   </div>
 </template>
 
-<script>
-import { mapGetters, mapMutations } from 'vuex'
-import ImgNekoUserKeyboard from '~/components/imgs/ImgNekoUserKeyboard.vue'
-import ProblemList from '~/components/modules/problems/ProblemList.vue'
-import ParaSection from '~/components/parts/ParaSection.vue'
-import PageBaseMixin from '~/mixins/PageBaseMixin'
+<script setup lang="ts">
+useHead({
+  title: "問題いちらん",
+});
 
-export default {
-  components: { ProblemList, ParaSection, ImgNekoUserKeyboard },
-  mixins: [PageBaseMixin],
-  beforeRouteEnter(to, from, next) {
-    next((vm) => {
-      if (from.name) {
-        vm.back = from.name
-      }
-    })
-  },
-  scrollToTop: true,
-  data() {
-    return {
-      back: false,
-    }
-  },
-  head() {
-    return {
-      title: '問題いちらん',
-    }
-  },
-  computed: {
-    ...mapGetters({
-      allProblems: 'problems/problems',
-    }),
-    kwds() {
-      return this.convertKwds(this.$route.query.kwd)
-    },
-    problems() {
-      const kwds = this.kwds
-      if (kwds.length) {
-        return this.allProblems.filter((p) =>
-          kwds.every((kwd) => p.title.includes(kwd))
-        )
-      }
-      return this.allProblems
-    },
-  },
-  methods: {
-    ...mapMutations({
-      setProblemId: 'typingSetting/setProblemId',
-    }),
-    detail(id) {
-      this.$router.push({
-        name: 'index-problems-id',
-        params: { id },
-      })
-    },
-    playProblem(problemId) {
-      this.setProblemId(problemId)
-      this.$router.push({ name: 'game' })
-    },
-    selectTag(tag) {
-      this.$router.push({
-        name: 'index-problems-tags-id',
-        params: { id: tag.id },
-      })
-    },
-    convertKwds(val) {
-      let kwds = []
-      if (val) {
-        if (typeof val === 'string') {
-          kwds = val ? [val] : []
-        } else {
-          kwds = Array.from(val)
-        }
-      }
-      return kwds
-        .filter((v) => v)
-        .reduce(
-          (a, kwd) => a.concat(kwd.split(/[\u{20}\u{3000}]/u).filter((v) => v)),
-          []
-        )
-    },
-  },
+const route = useRoute();
+const problemState = useProblems();
+
+const kwds = computed(() => convertKwds(route.query.kwd));
+const problems = computed(() => {
+  if (kwds.value?.length) {
+    return (
+      problemState.problems.filter((p) =>
+        kwds.value.every((kwd) => p.title.includes(kwd))
+      ) ?? []
+    );
+  }
+  return problemState.problems;
+});
+
+function convertKwds(val: string | string[]) {
+  const kwds = () => {
+    if (!val) return [];
+    return typeof val === "string" ? [val] : val;
+  };
+  return kwds().flatMap((kwd) =>
+    kwd.split(/[\u{20}\u{3000}]/u).filter((v) => v)
+  );
 }
 </script>
 

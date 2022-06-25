@@ -1,9 +1,9 @@
 <template>
   <div class="contact-page">
-    <para-section v-show="gError" class="contact-page-global-error-message">
+    <PartsSection v-show="gError" class="contact-page-global-error-message">
       <div class="error-message">{{ gError }}</div>
-    </para-section>
-    <para-section class="contact-page-section">
+    </PartsSection>
+    <PartsSection class="contact-page-section">
       <h2>お問い合わせ</h2>
       <div class="contact-form" name="contact">
         <div class="form-group row">
@@ -12,18 +12,10 @@
             <small>（ハンドルネーム）</small>
           </label>
           <span class="form-group-input">
-            <input
-              id="name"
-              v-model="name"
-              :disabled="loading"
-              @change="change"
-            />
-            <span
-              v-show="errors.name"
-              class="error-message"
-              v-text="errors.name"
-            />
-            <input v-show="false" id="username" value="enter username" />
+            <input id="name" v-model="contact.name" @change="change" />
+            <span v-show="contact.errors.name" class="error-message">{{
+              contact.errors.name
+            }}</span>
           </span>
         </div>
         <div class="form-group row">
@@ -33,16 +25,13 @@
           <span class="form-group-input">
             <input
               id="email"
-              v-model="email"
+              v-model="contact.email"
               type="email"
-              :disabled="loading"
               @change="change"
             />
-            <span
-              v-show="errors.email"
-              class="error-message"
-              v-text="errors.email"
-            />
+            <span v-show="errors.email" class="error-message">{{
+              errors.email
+            }}</span>
           </span>
         </div>
         <div class="form-group row">
@@ -50,102 +39,63 @@
             >お問い合わせ内容</label
           >
           <span class="form-group-input">
-            <textarea
-              id="message"
-              v-model="message"
-              :disabled="loading"
-              @change="change"
-            />
-            <span
-              v-show="errors.message"
-              class="error-message"
-              v-text="errors.message"
-            />
+            <textarea id="message" v-model="contact.message" />
+            <span v-show="contact.errors.message" class="error-message">{{
+              contact.errors.message
+            }}</span>
           </span>
         </div>
         <div class="buttons">
           <button
-            :disabled="contact.hasErrors || loading"
             class="button big"
+            :disabled="contact.hasErrors || null"
             @click="submit"
           >
             送信する
           </button>
         </div>
       </div>
-    </para-section>
+    </PartsSection>
   </div>
 </template>
 
-<script>
-import { mapMutations, mapGetters } from 'vuex'
-import Util from '~/libs/Util'
-import ParaSection from '~/components/parts/ParaSection.vue'
+<script setup lang="ts">
+useHead({
+  title: "お問い合わせ",
+  meta: [{ name: "robots", content: "noindex" }],
+});
 
-export default {
-  components: { ParaSection },
-  scrollToTop: true,
-  props: {
-    contact: {
-      type: Object,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      errors: this.contact.errors,
-      gError: '',
-    }
-  },
-  head() {
-    return {
-      title: 'お問い合わせ',
-    }
-  },
-  computed: {
-    ...Util.mapModel('contact', ['name', 'email', 'message', 'confirm']),
-    ...mapGetters({
-      loading: 'uiStatus/isLoading',
-    }),
-  },
-  beforeMount() {
-    if (this.contact.confirm) {
-      this.name = ''
-      this.email = ''
-      this.message = ''
-    }
-  },
-  methods: {
-    ...mapMutations({
-      setLoading: 'uiStatus/setLoading',
-    }),
-    change() {
-      this.errors = this.contact.errors
-    },
-    async submit() {
-      if (this.contact.hasErrors) {
-        return
+const contact = shallowReactive(useContact().init().contact);
+const errors = ref(contact.errors);
+const gError = ref("");
+
+function change() {
+  errors.value = contact.errors;
+}
+
+async function submit() {
+  if (contact.hasErrors) return;
+  try {
+    gError.value = "";
+    useScrollWaiter().add();
+    await fetch(useRuntimeConfig().public.contactUrl, {
+      method: "post",
+      body: contact.toJSON(),
+      mode: "cors",
+    }).then((res) => {
+      if (!res.ok) {
+        throw res.statusText;
       }
-
-      this.gError = ''
-      this.setLoading(2)
-      await this.$http
-        .$post('https://c.aon-typing.com/contact', {
-          name: this.name,
-          email: this.email,
-          message: this.message,
-        })
-        .then((res) => {
-          this.confirm = true
-          this.$router.replace({ name: 'index-contact-thanks' })
-        })
-        .catch(() => {
-          this.gError = '申し訳ありません。お問い合わせを送信できませんでした。'
-          this.setLoading(0)
-          Util.scrollTo(this.$el, { top: 0, behavior: 'smooth' })
-        })
-    },
-  },
+      contact.confirm = true;
+      useRouter().replace({ name: "index-contact-thanks" });
+    });
+    useScrollWaiter().flush();
+  } catch (err) {
+    useScrollWaiter().flush();
+    console.log(err);
+    gError.value = "申し訳ありません。お問い合わせを送信できませんでした。";
+    window.scroll({ top: 0, behavior: "smooth" });
+  }
 }
 </script>
 
@@ -153,13 +103,11 @@ export default {
 .contact-page {
   max-width: 900px;
   margin: auto;
-
   &-global-error-message {
     .error-message {
       color: #ff3434;
     }
   }
-
   &-section {
     display: block;
   }

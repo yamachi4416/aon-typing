@@ -6,15 +6,15 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    count: {
-      type: Number,
-      default: 0,
-    },
-  },
-}
+<script setup lang="ts">
+withDefaults(
+  defineProps<{
+    count?: number;
+  }>(),
+  {
+    count: 0,
+  }
+);
 </script>
 
 <style lang="scss" scoped>

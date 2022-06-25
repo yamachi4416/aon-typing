@@ -1,7 +1,6 @@
 <template>
-  <div v-show="loadingStatus > 0" class="loading">
+  <div class="loading">
     <svg
-      v-show="loadingStatus > 1"
       xmlns="http://www.w3.org/2000/svg"
       width="200px"
       height="200px"
@@ -10,7 +9,7 @@
     >
       <circle v-for="c in 4" :key="c" :cx="c * 20" cy="50" r="6">
         <animate
-          ref="anim"
+          ref="anims"
           attributeName="r"
           :begin="`${0 - 0.125 * (4 - c)}s`"
           values="0;6;0"
@@ -23,26 +22,13 @@
   </div>
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
-export default {
-  computed: {
-    ...mapGetters({
-      loadingStatus: 'uiStatus/loading',
-    }),
-  },
-  mounted() {
-    this.animation()
-  },
-  methods: {
-    async animation() {
-      await this.$nextTick()
-      await Promise.all(
-        Array.from(this.$refs.anim).map((a) => a.beginElement())
-      )
-    },
-  },
-}
+<script setup lang="ts">
+const anims = ref<SVGAnimateElement[]>();
+
+onMounted(async () => {
+  await nextTick();
+  await Promise.all(Array.from(anims.value).map((a) => a.beginElement()));
+});
 </script>
 
 <style lang="scss" scoped>

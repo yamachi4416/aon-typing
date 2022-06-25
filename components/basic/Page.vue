@@ -1,0 +1,48 @@
+<template>
+  <section class="basic-page">
+    <BasicHeader v-if="showHeader" :anim="anim" />
+    <main class="basic-page-main">
+      <slot />
+    </main>
+    <BasicFooter v-if="showFooter" />
+  </section>
+</template>
+
+<script setup lang="ts">
+withDefaults(
+  defineProps<{
+    anim?: boolean;
+    showHeader?: boolean;
+    showFooter?: boolean;
+  }>(),
+  {
+    anim: true,
+    showHeader: true,
+    showFooter: true,
+  }
+);
+</script>
+
+<style lang="scss" scoped>
+@import "~/assets/css/vars.scss";
+
+.basic-page {
+  min-height: 100vh;
+  @media print {
+    min-height: unset;
+  }
+
+  &-main {
+    padding: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px);
+    @include __media_s {
+      padding: 5px 0;
+    }
+    @media print {
+      padding: 3px;
+    }
+  }
+}
+</style>

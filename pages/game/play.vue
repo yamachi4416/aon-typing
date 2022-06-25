@@ -2,144 +2,118 @@
   <div class="game-typing-page-content">
     <div class="game-typing-page-content-main">
       <div class="game-typing-page-content-main-keyboard">
-        <typing-panel
+        <ModGameTypingPanel
           class="game-typing-page-content-main-keyboard-svg"
-          :typing="typing"
-          :setting="setting"
+          :typing="state.typing"
         />
       </div>
     </div>
     <div class="game-typing-page-content-sub">
-      <count-down v-show="isCountDownShow" :count="countDown" />
-      <game-result
-        :show="isResultShow"
-        :result="result"
-        :problem="problem"
-        @retry="retry"
-        @next="nextProblem"
-        @setting="back"
-      />
+      <PartsCountDown v-show="state.isCountDownShow" :count="state.countDown" />
+      <ModalPanel ref="modalGameResult">
+        <ModGameResultPanel
+          :result="state.result"
+          :problem="state.problem"
+          @menu="menu"
+          @next="next"
+          @retry="retry"
+        />
+      </ModalPanel>
     </div>
   </div>
 </template>
 
-<script>
-import { mapActions } from 'vuex'
-import Util from '~/libs/Util'
-import TypingGame from '~/libs/TypingGame'
-import TypingPanel from '~/components/panels/TypingPanel.vue'
-import GameResult from '~/components/panels/GameResultPanel.vue'
-import CountDown from '~/components/parts/CountDown.vue'
-import TypingProblemQuestioner from '~/libs/TypingProblemQuestioner'
+<script setup lang="ts">
+import ModalPanel from "~/components/parts/ModalPanel.vue";
+import { TypingGame } from "~/libs/TypingGame";
+import { TypingProblemQuestioner } from "~/libs/TypingProblemQuestioner";
+import { countDown } from "~/libs/Util";
 
-const fetchProblem = async ({ store, setting }) => {
-  const { problemId } = setting
-  if (problemId) {
-    return new TypingProblemQuestioner({
-      problem: await store.dispatch('problems/getProblemDetail', problemId),
-      setting,
-    })
+const state = reactive({
+  typing: new TypingGame(),
+  result: null,
+  countDown: 0,
+  problem: null as TypingProblemQuestioner,
+  isCountDownShow: true,
+});
+
+const id = useRoute().query.id as string;
+const modalGameResult = ref<InstanceType<typeof ModalPanel>>();
+
+onBeforeMount(() => {
+  if (!id) {
+    useRouter().replace({ name: "game-menu" });
   }
-  return null
+});
+
+onMounted(async () => {
+  const problem = await useProblems().retrieveProblemDetail({ id });
+  if (!problem?.id) {
+    useRouter().replace({ name: "game-menu" });
+  } else {
+    state.problem = new TypingProblemQuestioner({
+      problem,
+      setting: useProblems().setting,
+    });
+    startTyping();
+  }
+});
+
+async function startTyping() {
+  stopTyping();
+  state.typing.init({});
+
+  state.countDown = 3;
+  state.isCountDownShow = true;
+  await countDown(state.countDown, (c: number) => {
+    state.countDown = c;
+    if (c === 0) {
+      state.isCountDownShow = false;
+    }
+  });
+
+  state.result = await state.typing.start({
+    problem: state.problem,
+    setting: useProblems().setting,
+  });
+
+  await modalGameResult.value.open();
 }
 
-export default {
-  components: {
-    TypingPanel,
-    GameResult,
-    CountDown,
-  },
-
-  data() {
-    return {
-      setting: { ...this.$store.getters['typingSetting/setting'] },
-      typing: new TypingGame(),
-      result: null,
-      countDown: 0,
-      problem: null,
-      isCountDownShow: true,
-      isResultShow: false,
-    }
-  },
-
-  head() {
-    return {
-      title: `タイピング`,
-    }
-  },
-
-  mounted() {
-    if (!this.setting.problemId) {
-      this.$router.replace({ name: 'game' })
-    } else {
-      this.startTyping()
-    }
-  },
-
-  methods: {
-    ...mapActions({
-      getProblemDetail: 'problems/getProblemDetail',
-    }),
-
-    async startTyping() {
-      this.stopTyping()
-      this.typing.init({ problem: {} })
-
-      if (!this.problem) {
-        this.problem = await fetchProblem({
-          store: this.$store,
-          setting: this.setting,
-        })
-      }
-
-      this.isResultShow = false
-      this.isCountDownShow = true
-
-      this.countDown = 3
-      await Util.countDown(this.countDown, (c) => {
-        this.countDown = c
-        if (c === 0) {
-          this.isCountDownShow = false
-        }
-      })
-
-      this.result = await this.typing.start({
-        problem: this.problem,
-        setting: this.setting,
-      })
-
-      this.isResultShow = true
-    },
-
-    stopTyping() {
-      this.result = null
-      this.countDown = 0
-      this.isCountDownShow = true
-      return this.typing.cancel()
-    },
-
-    async retry() {
-      this.problem.reset()
-      await this.startTyping()
-    },
-
-    async nextProblem() {
-      this.problem.continue()
-      await this.startTyping()
-    },
-
-    back() {
-      this.isResultShow = false
-      setTimeout(() => this.$router.back(), 300)
-    },
-  },
+function stopTyping() {
+  state.result = null;
+  state.countDown = 0;
+  state.isCountDownShow = false;
+  return state.typing.cancel();
 }
+
+async function retry() {
+  state.problem.reset();
+  await modalGameResult.value.close();
+  await startTyping();
+}
+
+async function menu() {
+  state.problem.reset();
+  await modalGameResult.value.close();
+  await useNavigator().backOrGameMenu();
+}
+
+async function next() {
+  state.problem.continue();
+  await modalGameResult.value.close();
+  await startTyping();
+}
+
+useHead({
+  title: `タイピング No.${id}`,
+});
 </script>
 
 <style lang="scss" scoped>
 .game-typing-page-content {
   width: 100%;
-  height: 100%;
+  height: var(--maxvh, 100vh);
   display: flex;
   align-items: center;
 

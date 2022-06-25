@@ -1,24 +1,44 @@
 <template>
-  <basic-page class="index-page" :class="{ [$route.name]: true }">
-    <nuxt-child />
-  </basic-page>
+  <BasicPage>
+    <div class="main">
+      <NuxtPage />
+    </div>
+  </BasicPage>
 </template>
 
-<script>
-import BasicPage from '~/components/layout/BasicPage.vue'
+<script setup lang="ts">
+useHead({
+  bodyAttrs: {
+    class: "scroll-y",
+  },
+});
 
-export default {
-  components: { BasicPage },
-}
+onBeforeUpdate(() => {
+  useScrollWaiter().add();
+});
+
+definePageMeta({
+  pageTransition: {
+    duration: 100,
+    onAfterEnter() {
+      useScrollWaiter().flush();
+    },
+  },
+});
 </script>
 
-<style lang="scss" scoped>
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.3s;
-}
-.page-enter,
-.page-leave-to {
-  opacity: 0;
+<style scoped lang="scss">
+.main {
+  :where(.v-leave-to) {
+    opacity: 0;
+  }
+
+  :where(.v-leave-active) {
+    transition: opacity 0.3s;
+  }
+
+  :where(.v-enter-active) {
+    display: none;
+  }
 }
 </style>

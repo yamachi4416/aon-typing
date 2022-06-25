@@ -1,22 +1,53 @@
 <template>
-  <transition name="modal-panel">
-    <div v-if="show" class="modal-panel">
-      <div class="contents">
-        <slot />
-      </div>
+  <div ref="modal" v-if="show" class="modal-panel hide">
+    <div class="contents">
+      <slot />
     </div>
-  </transition>
+  </div>
 </template>
 
-<script>
-export default {
-  props: {
-    show: {
-      type: Boolean,
-      default: false,
-    },
+<script setup lang="ts">
+import { wait } from "~~/libs/Util";
+
+const pending = ref(false);
+const show = ref(false);
+const modal = ref<HTMLElement>();
+
+defineExpose({
+  get isOpen() {
+    return show.value;
   },
-}
+  get isPending() {
+    return pending.value;
+  },
+  async open(anim = true) {
+    if (show.value || pending.value) return;
+    pending.value = true;
+    show.value = true;
+    await nextTick();
+    modal.value.classList.remove("hide");
+    if (anim) {
+      if (modal.value) {
+        modal.value.classList.add("open");
+        await wait(300);
+        modal.value.classList.remove("open");
+      }
+    }
+    pending.value = false;
+  },
+  async close(anim = true) {
+    if (!show.value || pending.value) return;
+    pending.value = true;
+    if (anim && modal.value) {
+      modal.value.classList.add("close");
+      await wait(300);
+      modal.value.classList.remove("close");
+    }
+    show.value = false;
+    await nextTick();
+    pending.value = false;
+  },
+});
 </script>
 
 <style lang="scss" scoped>
@@ -46,29 +77,32 @@ export default {
     align-items: center;
     &::after,
     &::before {
-      content: ' ';
+      content: " ";
       display: block;
       flex: 1;
       width: 100%;
     }
   }
 
-  &-enter {
-    transform: translateY(-120%);
-
-    &-active {
-      transition: transform 0.5s;
+  @keyframes modal {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 
-  &-leave {
-    &-active {
-      transition: transform 0.5s;
-    }
+  &.hide {
+    display: none;
+  }
 
-    &-to {
-      transform: translateY(-120%);
-    }
+  &.open {
+    animation: modal 0.3s ease-in forwards;
+  }
+
+  &.close {
+    animation: modal 0.3s ease-out reverse forwards;
   }
 }
 </style>

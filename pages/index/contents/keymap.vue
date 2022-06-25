@@ -1,6 +1,6 @@
 <template>
   <div class="index-contents-keymap-page">
-    <para-section class="keymaps-description">
+    <PartsSection class="keymaps-description">
       <h2 class="keymaps-description-title">ローマ字タイピング入力表</h2>
       <div class="keymaps-description-body">
         <p>
@@ -11,7 +11,11 @@
         <div class="detail-actions">
           <div class="buttons">
             <span>
-              <button v-if="back" class="button" @click="$router.back()">
+              <button
+                v-if="$navigator.enable"
+                class="button"
+                @click="$router.back()"
+              >
                 もどる
               </button>
             </span>
@@ -21,7 +25,11 @@
           </div>
         </div>
       </div>
-    </para-section>
+      <template #right>
+        <ImgNekoUserKeyboard />
+      </template>
+    </PartsSection>
+
     <div class="keymaps">
       <div v-for="(tb, i) in table" :key="`chars-${i}`" class="chars">
         <div class="chars-title">{{ tb[0][0] }}</div>
@@ -47,6 +55,7 @@
           </div>
         </div>
       </div>
+
       <div class="chars">
         <div class="chars-title">ッ</div>
         <div class="chars-section">
@@ -61,118 +70,98 @@
   </div>
 </template>
 
-<script>
-import ParaSection from '~/components/parts/ParaSection.vue'
-import PageBaseMixin from '~/mixins/PageBaseMixin'
-import Chars from '~/libs/TypingJapaneseChars'
+<script setup lang="ts">
+import { hira2Kana, japaneseToTypeCharList } from "~/libs/TypingJapaneseChars";
 
-export default {
-  components: { ParaSection },
-  mixins: [PageBaseMixin],
-  beforeRouteEnter(to, from, next) {
-    next((vm) => {
-      if (from.name) {
-        vm.back = true
-      }
-    })
-  },
-  scrollToTop: true,
-  data() {
-    return {
-      back: this.back || false,
-      chars: Chars.japaneseToTypeCharList()
-        .map((c) => ({
-          jc: Chars.hira2Kana(c[0]),
-          keys: c[1].split(','),
-        }))
-        .reduce((a, c) => {
-          const m = c.keys.reduce((n, k) => Math.min(n, k.length), Infinity)
-          a[c.jc] = c.keys
-            .filter((k) => k.length === m)
-            .map((s) => s.toUpperCase())
-            .join('/')
-          return a
-        }, {}),
-      table: [
-        [
-          ['ア', 'イ', 'ウ', 'エ', 'オ'],
-          ['ァ', 'ィ', 'ゥ', 'ェ', 'ォ'],
-          ['', '', '', 'イェ', ''],
-          ['ウァ', 'ウィ', '', 'ウェ', 'ウォ'],
-          ['ヴァ', 'ヴィ', 'ヴ', 'ヴェ', 'ヴォ'],
-        ],
-        [
-          ['カ', 'キ', 'ク', 'ケ', 'コ'],
-          ['ガ', 'ギ', 'グ', 'ゲ', 'ゴ'],
-          ['キャ', 'キィ', 'キュ', 'キェ', 'キョ'],
-          ['ギャ', 'ギィ', 'ギュ', 'ギェ', 'ギョ'],
-        ],
-        [
-          ['サ', 'シ', 'ス', 'セ', 'ソ'],
-          ['ザ', 'ジ', 'ズ', 'ゼ', 'ゾ'],
-          ['シャ', 'シィ', 'シュ', 'シェ', 'ショ'],
-          ['ジャ', 'ジィ', 'ジュ', 'ジェ', 'ジョ'],
-          ['スァ', 'スィ', 'スゥ', 'スェ', 'スォ'],
-        ],
-        [
-          ['タ', 'チ', 'ツ', 'テ', 'ト'],
-          ['ダ', 'ヂ', 'ヅ', 'デ', 'ド'],
-          ['チャ', 'チィ', 'チュ', 'チェ', 'チョ'],
-          ['ヂャ', 'ヂィ', 'ヂュ', 'ヂェ', 'ヂョ'],
-          ['ツァ', 'ツィ', '', 'ツェ', 'ツォ'],
-          ['テャ', 'ティ', 'テュ', 'テェ', 'テョ'],
-          ['デャ', 'ディ', 'デュ', 'デェ', 'デョ'],
-          ['トァ', 'トィ', 'トゥ', 'トェ', 'トォ'],
-          ['ドァ', 'ドィ', 'ドゥ', 'ドェ', 'ドォ'],
-          ['', '', 'ッ', '', ''],
-        ],
-        [
-          ['ナ', 'ニ', 'ヌ', 'ネ', 'ノ'],
-          ['ニャ', 'ニィ', 'ニュ', 'ニェ', 'ニョ'],
-        ],
-        [
-          ['ハ', 'ヒ', 'フ', 'ヘ', 'ホ'],
-          ['バ', 'ビ', 'ブ', 'ベ', 'ボ'],
-          ['パ', 'ピ', 'プ', 'ペ', 'ポ'],
-          ['ヒャ', 'ヒィ', 'ヒュ', 'ヒェ', 'ヒョ'],
-          ['ビャ', 'ビィ', 'ビュ', 'ビェ', 'ビョ'],
-          ['ピャ', 'ピィ', 'ピュ', 'ピェ', 'ピョ'],
-          ['ファ', '', '', '', 'フォ'],
-          ['フャ', 'フィ', 'フュ', 'フェ', 'フョ'],
-        ],
-        [
-          ['マ', 'ミ', 'ム', 'メ', 'モ'],
-          ['ミャ', 'ミィ', 'ミュ', 'ミェ', 'ミョ'],
-        ],
-        [
-          ['ヤ', '', 'ユ', '', 'ヨ'],
-          ['ャ', 'ュ', 'ョ', 'ッ', 'ヮ'],
-        ],
-        [
-          ['ラ', 'リ', 'ル', 'レ', 'ロ'],
-          ['リャ', 'リィ', 'リュ', 'リェ', 'リョ'],
-        ],
-        [['ワ', '', 'ヲ', '', 'ン']],
-      ],
-    }
-  },
-  head() {
-    return {
-      title: 'ローマ字タイピング入力表',
-    }
-  },
-  methods: {
-    print() {
-      if (typeof window.print === 'function') {
-        window.print()
-      }
-    },
-  },
+const table = [
+  [
+    ["ア", "イ", "ウ", "エ", "オ"],
+    ["ァ", "ィ", "ゥ", "ェ", "ォ"],
+    ["", "", "", "イェ", ""],
+    ["ウァ", "ウィ", "", "ウェ", "ウォ"],
+    ["ヴァ", "ヴィ", "ヴ", "ヴェ", "ヴォ"],
+  ],
+  [
+    ["カ", "キ", "ク", "ケ", "コ"],
+    ["ガ", "ギ", "グ", "ゲ", "ゴ"],
+    ["キャ", "キィ", "キュ", "キェ", "キョ"],
+    ["ギャ", "ギィ", "ギュ", "ギェ", "ギョ"],
+  ],
+  [
+    ["サ", "シ", "ス", "セ", "ソ"],
+    ["ザ", "ジ", "ズ", "ゼ", "ゾ"],
+    ["シャ", "シィ", "シュ", "シェ", "ショ"],
+    ["ジャ", "ジィ", "ジュ", "ジェ", "ジョ"],
+    ["スァ", "スィ", "スゥ", "スェ", "スォ"],
+  ],
+  [
+    ["タ", "チ", "ツ", "テ", "ト"],
+    ["ダ", "ヂ", "ヅ", "デ", "ド"],
+    ["チャ", "チィ", "チュ", "チェ", "チョ"],
+    ["ヂャ", "ヂィ", "ヂュ", "ヂェ", "ヂョ"],
+    ["ツァ", "ツィ", "", "ツェ", "ツォ"],
+    ["テャ", "ティ", "テュ", "テェ", "テョ"],
+    ["デャ", "ディ", "デュ", "デェ", "デョ"],
+    ["トァ", "トィ", "トゥ", "トェ", "トォ"],
+    ["ドァ", "ドィ", "ドゥ", "ドェ", "ドォ"],
+    ["", "", "ッ", "", ""],
+  ],
+  [
+    ["ナ", "ニ", "ヌ", "ネ", "ノ"],
+    ["ニャ", "ニィ", "ニュ", "ニェ", "ニョ"],
+  ],
+  [
+    ["ハ", "ヒ", "フ", "ヘ", "ホ"],
+    ["バ", "ビ", "ブ", "ベ", "ボ"],
+    ["パ", "ピ", "プ", "ペ", "ポ"],
+    ["ヒャ", "ヒィ", "ヒュ", "ヒェ", "ヒョ"],
+    ["ビャ", "ビィ", "ビュ", "ビェ", "ビョ"],
+    ["ピャ", "ピィ", "ピュ", "ピェ", "ピョ"],
+    ["ファ", "", "", "", "フォ"],
+    ["フャ", "フィ", "フュ", "フェ", "フョ"],
+  ],
+  [
+    ["マ", "ミ", "ム", "メ", "モ"],
+    ["ミャ", "ミィ", "ミュ", "ミェ", "ミョ"],
+  ],
+  [
+    ["ヤ", "", "ユ", "", "ヨ"],
+    ["ャ", "ュ", "ョ", "ッ", "ヮ"],
+  ],
+  [
+    ["ラ", "リ", "ル", "レ", "ロ"],
+    ["リャ", "リィ", "リュ", "リェ", "リョ"],
+  ],
+  [["ワ", "", "ヲ", "", "ン"]],
+];
+
+const chars = japaneseToTypeCharList()
+  .map((c) => ({
+    jc: hira2Kana(c[0]),
+    keys: c[1].split(","),
+  }))
+  .reduce((a, c) => {
+    const m = c.keys.reduce((n, k) => Math.min(n, k.length), Infinity);
+    a[c.jc] = c.keys
+      .filter((k) => k.length === m)
+      .map((s) => s.toUpperCase())
+      .join("/");
+    return a;
+  }, {} as Record<string, string>);
+
+useHead({
+  title: "ローマ字タイピング入力表",
+});
+
+function print() {
+  if (typeof window.print === "function") {
+    window.print();
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars.scss';
+@import "~/assets/css/vars.scss";
 
 .index-contents-keymap-page {
   max-width: 100%;

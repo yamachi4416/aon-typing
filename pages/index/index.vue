@@ -1,6 +1,6 @@
 <template>
-  <div class="index-page">
-    <para-section class="index-page-hello">
+  <div>
+    <PartsSection class="index-page-hello">
       <h2>ようこそ「あぉ～ん タイピング」へ</h2>
       <p>
         あぉ～ん
@@ -9,35 +9,32 @@
         たのしくタイピングを練習しましょう。
       </p>
       <template #right>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
-    <para-section class="index-page-search">
+    </PartsSection>
+
+    <PartsSection class="index-page-search">
       <h2>タイトル検索</h2>
       <p>タイピングの問題のタイトルをキーワードで検索します。</p>
       <div class="index-page-search-form">
         <div class="index-page-search-form-search row">
           <div
-            class="
-              index-page-search-form-search-keyword
-              row
-              form-group
-              placeholder
-            "
+            class="index-page-search-form-search-keyword row form-group placeholder"
           >
             <input
               id="search-keyword"
-              v-model="kwd"
+              placeholder=" "
+              v-model="state.kwd"
               @keyup.enter="searchEnterProblems"
               @change="changeKwds"
             />
-            <label v-show="!kwd" for="search-keyword">検索キーワード</label>
+            <label for="search-keyword">検索キーワード</label>
           </div>
           <div class="buttons">
             <span>
               <button
                 class="button big"
-                :disabled="!enableSearch"
+                :disabled="!enableSearch || null"
                 @click="searchProblems"
               >
                 検索する
@@ -47,27 +44,29 @@
         </div>
       </div>
       <template #left>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
+    </PartsSection>
+
     <section class="index-page-newProblems">
       <div class="index-page-newProblems-inner">
         <h2>新着の問題</h2>
         <div>
-          <problem-list
+          <ModProblemLists
             :problems="newProblems"
-            @tag="selectTag"
-            @play="playProblem"
-            @detail="detail"
+            @tag="$navigator.indexTagDetail"
+            @detail="$navigator.indexProblemDetail"
+            @play="$navigator.gameMenu"
           />
         </div>
       </div>
     </section>
-    <para-section class="index-page-tags">
+
+    <PartsSection class="index-page-tags">
       <h2>タグいちらん</h2>
       <div class="buttons index-page-tags-list">
-        <span v-for="tag in Object.values(tags)" :key="`tag-${tag.id}`">
-          <nuxt-link
+        <span v-for="tag in tagSummary" :key="`tag-${tag.id}`">
+          <NuxtLink
             :to="{ name: 'index-problems-tags-id', params: { id: tag.id } }"
             class="index-page-tags-list-item button"
           >
@@ -77,122 +76,91 @@
                 <span class="tag-item-count-number">{{ tag.count }}</span>
               </span>
             </span>
-          </nuxt-link>
+          </NuxtLink>
         </span>
       </div>
       <template #right>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
-    <para-section class="index-page-others">
+    </PartsSection>
+
+    <PartsSection class="index-page-others">
       <h2>その他</h2>
       <nav class="others-contents">
         <ul class="others-contents-list">
           <li class="others-contents-list-item">
-            <nuxt-link :to="{ name: 'index-contents-keymap' }" class="button"
-              >ローマ字タイピング入力表</nuxt-link
+            <NuxtLink :to="{ name: 'index-contents-keymap' }" class="button"
+              >ローマ字タイピング入力表</NuxtLink
             >
           </li>
         </ul>
       </nav>
       <template #left>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
+    </PartsSection>
   </div>
 </template>
 
-<script>
-import { mapMutations, mapGetters } from 'vuex'
-import ProblemList from '~/components/modules/problems/ProblemList.vue'
-import ParaSection from '~/components/parts/ParaSection.vue'
-import PageBaseMixin from '~/mixins/PageBaseMixin'
+<script setup lang="ts">
+const route = useRoute();
+const router = useRouter();
+const problemState = useProblems();
+const newProblems = computed(() => problemState.newProblems);
+const tagSummary = computed(() => problemState.tagSummary);
 
-export default {
-  components: { ParaSection, ProblemList },
-  mixins: [PageBaseMixin],
-  scrollToTop: true,
-  data() {
-    return {
-      kwd: this.convertKwds(this.$route.query.kwd),
+const state = reactive({
+  kwd: (route.query.kwd as string) ?? "",
+});
+
+const kwd = computed({
+  get: () => state.kwd ?? "",
+  set: (val) => {
+    if (val) {
+      const xs = Array.from(val);
+      if (xs.length > 100) {
+        state.kwd = xs.slice(0, 100).join("");
+      }
+    } else {
+      state.kwd = val;
     }
   },
-  computed: {
-    ...mapGetters('problems', ['newProblems', 'tags']),
-    enableSearch() {
-      return !!this.kwd?.trim()
-    },
-  },
-  watch: {
-    kwd(val) {
-      if (val) {
-        const xs = Array.from(val)
-        if (xs.length > 100) {
-          this.kwd = xs.slice(0, 100).join('')
-        }
-      }
-    },
-    '$route.query.kwd'(val) {
-      this.kwd = this.convertKwds(val)
-    },
-  },
-  methods: {
-    ...mapMutations({
-      setProblemId: 'typingSetting/setProblemId',
-    }),
-    detail(id) {
-      this.$router.push({
-        name: 'index-problems-id',
-        params: { id },
-      })
-    },
-    playProblem(problemId) {
-      this.setProblemId(problemId)
-      this.$router.push({ name: 'game' })
-    },
-    selectTag(tag) {
-      this.$router.push({
-        name: 'index-problems-tags-id',
-        params: {
-          id: tag.id,
-        },
-      })
-    },
-    async searchProblems() {
-      if (this.enableSearch) {
-        await this.$router.push({
-          name: 'index-problems',
-          query: { kwd: this.kwd },
-        })
-      }
-    },
-    async searchEnterProblems() {
-      if (this.enableSearch) {
-        await this.changeKwds()
-        await this.searchProblems()
-      }
-    },
-    async changeKwds() {
-      const kwd = this.kwd
-      const query = { ...this.$route.query }
-      if (kwd !== query.kwd) {
-        if (!kwd) {
-          delete query.kwd
-        } else {
-          query.kwd = kwd
-        }
-        await this.$router.replace({ query })
-      }
-    },
-    convertKwds(val) {
-      return val
-    },
-  },
+});
+
+const enableSearch = computed(() => !!kwd.value.trim());
+
+async function searchProblems() {
+  if (enableSearch.value) {
+    await router.push({
+      name: "index-problems",
+      query: { kwd: kwd.value },
+    });
+  }
+}
+
+async function searchEnterProblems() {
+  if (enableSearch.value) {
+    await changeKwds();
+    await searchProblems();
+  }
+}
+
+async function changeKwds() {
+  const query = { ...route.query };
+  if (kwd.value !== (query.kwd ?? "")) {
+    if (!kwd.value) {
+      delete query.kwd;
+    } else {
+      query.kwd = kwd.value;
+    }
+    useScrollWaiter().noScroll();
+    await router.replace({ query });
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars.scss';
+@import "~/assets/css/vars.scss";
 
 .index-page {
   &-tags {
@@ -225,7 +193,7 @@ export default {
           }
 
           &::before {
-            content: '';
+            content: "";
             display: block;
             width: 8px;
             height: 8px;
@@ -289,7 +257,7 @@ export default {
             background: #fff;
 
             &::before {
-              content: '';
+              content: "";
               display: block;
               width: 8px;
               height: 8px;

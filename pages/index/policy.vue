@@ -1,6 +1,6 @@
 <template>
   <div>
-    <para-section>
+    <PartsSection>
       <div>
         <h2>免責について</h2>
         <p>
@@ -9,10 +9,10 @@
         </p>
       </div>
       <template #right>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
-    <para-section>
+    </PartsSection>
+    <PartsSection>
       <div>
         <h2>リンクについて</h2>
         <p>
@@ -22,10 +22,10 @@
         </p>
       </div>
       <template #left>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
-    <para-section>
+    </PartsSection>
+    <PartsSection>
       <div>
         <h2>著作権等について</h2>
         <p>
@@ -34,10 +34,10 @@
         </p>
       </div>
       <template #right>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
-    <para-section>
+    </PartsSection>
+    <PartsSection>
       <div>
         <h2>個人情報の取り扱いについて</h2>
         <p>
@@ -48,10 +48,10 @@
         </p>
       </div>
       <template #left>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
-    <para-section>
+    </PartsSection>
+    <PartsSection>
       <div>
         <h2>個人情報の第三者への開示について</h2>
         <p>
@@ -65,10 +65,10 @@
         </div>
       </div>
       <template #right>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
-    <para-section>
+    </PartsSection>
+    <PartsSection>
       <div>
         <h2>Cookieについて</h2>
         <p>
@@ -80,10 +80,10 @@
         </p>
       </div>
       <template #left>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
-    <para-section>
+    </PartsSection>
+    <PartsSection>
       <div>
         <h2>アクセス解析ツールについて</h2>
         <p>
@@ -102,10 +102,10 @@
         </p>
       </div>
       <template #right>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
-    <para-section>
+    </PartsSection>
+    <PartsSection>
       <div>
         <h2>サイト閲覧について</h2>
         <p>
@@ -116,26 +116,16 @@
         </p>
       </div>
       <template #left>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
-    </para-section>
+    </PartsSection>
   </div>
 </template>
 
-<script>
-import ParaSection from '~/components/parts/ParaSection.vue'
-import PageBaseMixin from '~/mixins/PageBaseMixin'
-
-export default {
-  components: { ParaSection },
-  mixins: [PageBaseMixin],
-  scrollToTop: true,
-  head() {
-    return {
-      title: 'サイトポリシー',
-    }
-  },
-}
+<script setup lang="ts">
+useHead({
+  title: "サイトポリシー",
+});
 </script>
 
 <style lang="scss" scoped>
