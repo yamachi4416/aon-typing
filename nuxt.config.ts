@@ -1,5 +1,10 @@
 import { readFileSync } from "node:fs";
 import { defineNuxtConfig } from "nuxt";
+import { createResolver } from "@nuxt/kit";
+import { NuxtPage } from "@nuxt/schema";
+import { NitroConfig } from "nitropack";
+
+const resolver = createResolver(import.meta.url);
 
 export const routes = (() => {
   const { problems } = JSON.parse(
@@ -67,13 +72,25 @@ export default defineNuxtConfig({
     },
   },
 
-  generate: {
-    routes: routes(),
-  },
-
   nitro: {
     prerender: {
       routes: routes(),
+    },
+  },
+
+  hooks: {
+    "pages:extend"(pages: NuxtPage[]) {
+      pages.push({
+        name: "error404",
+        path: "/404.html",
+        file: resolver.resolve("error.vue"),
+      });
+    },
+    "nitro:config"(config: NitroConfig) {
+      config.prerender.routes = config.prerender.routes.filter(
+        (route) => route !== "/404" && route !== "/200"
+      );
+      config.prerender.routes.push("/404.html");
     },
   },
 });

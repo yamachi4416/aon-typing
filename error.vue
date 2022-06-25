@@ -35,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-const error = useError();
+const error = computed(() => useError().value ?? { statusCode: 404 });
 
 onBeforeMount(() => {
   useScrollWaiter().flush();
