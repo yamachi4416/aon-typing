@@ -80,8 +80,10 @@ async function submit() {
     useScrollWaiter().add();
     await fetch(useRuntimeConfig().public.contactUrl, {
       method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: contact.toJSON(),
-      mode: "cors",
     }).then((res) => {
       if (!res.ok) {
         throw res.statusText;
