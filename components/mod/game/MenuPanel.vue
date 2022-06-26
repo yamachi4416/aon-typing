@@ -46,8 +46,9 @@
                 class="button"
                 :selected="setting.autoMode === a.speed || null"
                 @click="setting.autoMode = a.speed"
-                v-text="a.name"
-              />
+              >
+                {{ a.name }}
+              </button>
             </span>
           </div>
         </div>
@@ -159,7 +160,6 @@ const HelpAnimals = [
     const avg = Math.round(start + (end - start) / 2);
     return {
       name,
-      avg,
       speed: Math.round(60000 / avg),
     };
   }),

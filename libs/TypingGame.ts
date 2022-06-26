@@ -45,11 +45,13 @@ export class TypingGame {
   totalTypeMiss = 0;
 
   private eventManager: EventManager;
+  private timerManager: TimerManager;
 
   private _stop: () => void = null;
 
   constructor() {
     this.eventManager = new EventManager();
+    this.timerManager = new TimerManager();
     this._initData();
   }
 
@@ -143,42 +145,29 @@ export class TypingGame {
     };
   }
 
-  private _visibleChange(ticks: { stop: () => void; start: () => void }[]) {
-    return () => {
-      if (document.hidden) {
-        ticks.forEach((t) => t.stop());
-      } else {
-        ticks.forEach((t) => t.start());
-      }
-    };
+  private visibleChange() {
+    if (document.hidden) {
+      this.timerManager.pause();
+    } else {
+      this.timerManager.resume();
+    }
   }
 
-  private _tickTimer(timeLimit: number) {
-    const tick = () => {
-      if (timeLimit > 0 && this.timeUse >= timeLimit) {
-        this.cancel();
-      } else if (this.isRunning) {
-        this.tick += 10;
-        this.timeUse += 10;
-      }
-    };
-
-    return {
-      id: null as number,
-      start() {
-        this.stop();
-        this.id = startIntervalTimer(tick, 10);
-      },
-      stop() {
-        if (this.id !== null) {
-          stopIntervalTimer(this.id);
-          this.id = null;
+  private addTickTimer(timeLimit: number) {
+    return this.timerManager.create({
+      handler: () => {
+        if (timeLimit > 0 && this.timeUse >= timeLimit) {
+          this.cancel();
+        } else if (this.isRunning) {
+          this.tick += 10;
+          this.timeUse += 10;
         }
       },
-    };
+      interval: 10,
+    });
   }
 
-  private _autoTyping({
+  private addAutoTyping({
     words,
     autoMode,
   }: {
@@ -186,43 +175,32 @@ export class TypingGame {
     autoMode: number;
   }) {
     if (!autoMode) {
-      return {
-        start() {},
-        stop() {},
-      };
+      return;
     }
 
-    let id = null;
     const xs = Array.from(
       words.reduce((a, w) => a + w.wordState.remaining, "")
     );
-    const tick = () => {
-      if (!this.isRunning) {
-        return;
-      }
 
-      const char = xs.shift();
-      if (char) {
-        const detail = { char };
-        const event = new CustomEvent("c:typing", { detail });
-        window.dispatchEvent(event);
-      } else {
-        stopIntervalTimer(id);
-      }
-    };
+    const timer = this.timerManager.create({
+      handler: () => {
+        if (!this.isRunning) {
+          return;
+        }
 
-    return {
-      start() {
-        this.stop();
-        id = startIntervalTimer(tick, autoMode);
-      },
-      stop() {
-        if (id !== null) {
-          stopIntervalTimer(id);
-          id = null;
+        const char = xs.shift();
+        if (char) {
+          const detail = { char };
+          const event = new CustomEvent("c:typing", { detail });
+          window.dispatchEvent(event);
+        } else {
+          timer?.stop();
         }
       },
-    };
+      interval: autoMode,
+    });
+
+    return timer;
   }
 
   start({
@@ -248,12 +226,6 @@ export class TypingGame {
     return new Promise((resolve) => {
       const keydown = autoMode ? () => {} : this._keydown();
       const typing = this._typing({ gamer });
-      const ticks = [
-        this._tickTimer(timeLimit),
-        this._autoTyping({ words, autoMode }),
-      ];
-
-      const visibilitychange = this._visibleChange(ticks);
 
       this._stop = () => {
         this._stop = null;
@@ -263,22 +235,23 @@ export class TypingGame {
           this.current.endTime = this.tick;
         }
 
-        ticks.forEach((t) => t.stop());
-
-        this.eventManager.removeAllEventHandler();
+        this.eventManager.clear();
+        this.timerManager.clear();
 
         resolve(this.info());
       };
 
-      this.eventManager.addEventHandler("keydown", keydown);
-      this.eventManager.addEventHandler("c:typing", typing);
-      this.eventManager.addEventHandler(
+      this.eventManager.add("keydown", keydown);
+      this.eventManager.add("c:typing", typing);
+      this.eventManager.add(
         "visibilitychange",
-        visibilitychange,
+        this.visibleChange.bind(this),
         document
       );
 
-      ticks.forEach((t) => t.start());
+      this.addTickTimer(timeLimit);
+      this.addAutoTyping({ words, autoMode });
+      this.timerManager.start();
       this.running = true;
     });
   }
@@ -288,14 +261,15 @@ export class TypingGame {
       this.canceled = true;
       this._stop();
     }
-    this.eventManager.removeAllEventHandler();
-    stopAllIntervalTimer();
+    this.eventManager.clear();
+    this.timerManager.clear();
     return this.info();
   }
 
   pause() {
     if (this.isRunning) {
       this.pausing = true;
+      this.timerManager.pause();
       return true;
     }
     return false;
@@ -304,6 +278,7 @@ export class TypingGame {
   resume() {
     if (this.isPausing) {
       this.pausing = false;
+      this.timerManager.resume();
       return true;
     }
     return false;
@@ -322,8 +297,8 @@ export class TypingGame {
   }
 
   dispose() {
-    this.eventManager.removeAllEventHandler();
-    stopAllIntervalTimer();
+    this.eventManager.clear();
+    this.timerManager.clear();
   }
 }
 
@@ -335,7 +310,7 @@ class EventManager {
     active: boolean;
   }[] = [];
 
-  addEventHandler(
+  add(
     eventName: string,
     handler: EventListener,
     target?: Document | Element | Window
@@ -350,7 +325,7 @@ class EventManager {
     });
   }
 
-  removeEventHandler(
+  remove(
     eventName: string,
     handler: EventListener,
     target?: Document | Element | Window
@@ -372,7 +347,7 @@ class EventManager {
     });
   }
 
-  removeAllEventHandler() {
+  clear() {
     const targets = [...this.listeners];
     this.listeners = [];
     targets.forEach((it) => {
@@ -381,32 +356,103 @@ class EventManager {
   }
 }
 
-let intervalTimerIds: Record<number, number> = Object.create(null);
-function startIntervalTimer(func: () => void, interval: number) {
-  let id: number;
-  let time = new Date().getTime() + interval;
-  const fn = () => {
-    func();
-    intervalTimerIds[id] = window.setTimeout(
-      fn,
-      Math.max((time += interval) - new Date().getTime(), 0)
-    );
-  };
-  id = window.setTimeout(fn, interval);
-  intervalTimerIds[id] = id;
-  return id;
-}
+class TimerEntry {
+  private uid: number;
+  private id: number;
+  private time: number;
+  private tick: number | void;
 
-function stopIntervalTimer(id: number) {
-  const timerId = intervalTimerIds[id];
-  delete intervalTimerIds[id];
-  if (timerId) {
-    window.clearInterval(timerId);
+  private handler: () => void;
+  private interval: () => number;
+
+  constructor(handler: () => void, interval: (() => number) | number) {
+    if (typeof interval === "function") {
+      this.interval = interval;
+    } else {
+      this.interval = () => interval;
+    }
+    this.handler = handler;
+  }
+
+  private *ticker() {
+    while (true) {
+      if (typeof this.tick === "number") {
+        this.time += this.tick;
+        yield this.tick;
+        delete this.tick;
+      }
+      const next = this.interval();
+      if (typeof next === "number") {
+        yield Math.max((this.time += next) - Date.now(), 0);
+      } else {
+        return;
+      }
+    }
+  }
+
+  start() {
+    const handler = this.handler;
+    const tick = this.ticker();
+
+    const fn = () => {
+      handler();
+      const next = tick.next().value;
+      if (typeof next === "number") {
+        this.id = window.setTimeout(fn, next);
+      }
+    };
+
+    this.time = Date.now();
+    const next = tick.next().value;
+    if (typeof next === "number") {
+      this.uid = window.setTimeout(fn, next);
+      this.id = this.uid;
+    } else {
+      this.time = undefined;
+    }
+
+    return this.uid;
+  }
+
+  stop() {
+    if (this.id) {
+      this.tick = Math.max(this.time - Date.now(), 0);
+      window.clearTimeout(this.id);
+    }
+    this.id = undefined;
+    this.time = undefined;
   }
 }
 
-function stopAllIntervalTimer() {
-  const ids = Object.values(intervalTimerIds);
-  intervalTimerIds = Object.create(null);
-  ids.forEach((id) => window.clearInterval(id));
+class TimerManager {
+  private timers: TimerEntry[] = [];
+
+  create({
+    handler,
+    interval,
+  }: {
+    handler: () => void;
+    interval: (() => number) | number;
+  }) {
+    const timer = new TimerEntry(handler, interval);
+    this.timers.push(timer);
+    return timer;
+  }
+
+  start() {
+    this.timers.forEach((timer) => timer.start());
+  }
+
+  pause() {
+    this.timers.forEach((timer) => timer.stop());
+  }
+
+  resume() {
+    this.start();
+  }
+
+  clear() {
+    this.timers.forEach((timer) => timer.stop());
+    this.timers = [];
+  }
 }
