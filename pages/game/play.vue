@@ -55,6 +55,7 @@ onMounted(async () => {
   if (!problem?.id) {
     useRouter().replace({ name: "game-menu" });
   } else {
+    useProblems().setting.problemId = id;
     state.problem = new TypingProblemQuestioner({
       problem,
       setting: useProblems().setting,
