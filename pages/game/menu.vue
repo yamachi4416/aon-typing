@@ -49,8 +49,8 @@ const hasPendingModal = computed(
   () => (modals.filter((modal) => modal.value.isPending)?.length ?? 0) > 0
 );
 
-const openModal = computed(() =>
-  modals.reverse().find((modal) => modal.value.isOpen)?.value
+const openModal = computed(
+  () => modals.reverse().find((modal) => modal.value.isOpen)?.value
 );
 
 onBeforeRouteLeave(async (to, from, next) => {

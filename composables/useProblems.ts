@@ -57,9 +57,7 @@ class UseProblems {
   }
 
   async retrieveProblemDetail({ id }: { id: string }) {
-    const { data: detail, error } = await useFetch(
-      `/api/problems/${id}.json`
-    );
+    const { data: detail, error } = await useFetch(`/api/problems/${id}.json`);
     if (error.value instanceof Error) {
       throwError(error.value);
     }
@@ -67,13 +65,9 @@ class UseProblems {
   }
 
   async lazyProblemDetail({ id }: { id: string }) {
-    const { data: detail, error } = await useLazyFetch(
-      `/api/problems/${id}.json`
-    );
-    if (error.value instanceof Error) {
-      throwError(error.value);
-    }
-    return detail.value as ProblemDetail;
+    return (await fetch(`/api/problems/${id}.json`, {
+      method: "get",
+    }).then((res) => res.json())) as ProblemDetail;
   }
 
   problemTagFilter({

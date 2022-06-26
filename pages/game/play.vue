@@ -46,8 +46,12 @@ onBeforeMount(() => {
   }
 });
 
+onBeforeUnmount(() => {
+  state.typing?.dispose();
+});
+
 onMounted(async () => {
-  const problem = await useProblems().retrieveProblemDetail({ id });
+  const problem = await useProblems().lazyProblemDetail({ id });
   if (!problem?.id) {
     useRouter().replace({ name: "game-menu" });
   } else {
