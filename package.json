@@ -4,8 +4,9 @@
     "build": "nuxt generate",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "npx serve -s dist",
-    "gen-problem": "node -r esbuild-register ./scripts/gen-problem.ts ./data/problems"
+    "preview": "nuxt preview",
+    "gen-problem": "node -r esbuild-register ./scripts/gen-problem.ts ./data/problems",
+    "preview:dist": "node -r esbuild-register ./scripts/preview-server.ts --dist ./dist"
   },
   "devDependencies": {
     "esbuild-register": "^3.3.3",
