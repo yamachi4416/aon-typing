@@ -25,7 +25,7 @@ const tag = await useProblems().retrieveTag({
 });
 const problems = computed(() =>
   useProblems().problemTagFilter({
-    problems: useProblems().problems,
+    problems: tag.problems,
     tagId: tag.id,
     qtags: (useRoute().query.tags as string)?.split(","),
   })
