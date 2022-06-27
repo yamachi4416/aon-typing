@@ -1,12 +1,14 @@
-import { default as http } from "node:http";
+import { IncomingMessage, ServerResponse, createServer } from "node:http";
 import { default as path } from "node:path";
+import { parse as urlParse, UrlWithStringQuery } from "node:url";
 import { default as fs } from "node:fs/promises";
 
 type Hanlder = {
-  match: (req: http.IncomingMessage) => boolean;
+  match: (url: UrlWithStringQuery, req: IncomingMessage) => boolean;
   handle: (
-    req: http.IncomingMessage,
-    res: http.ServerResponse
+    url: UrlWithStringQuery,
+    req: IncomingMessage,
+    res: ServerResponse
   ) => Promise<void>;
 };
 
@@ -16,14 +18,14 @@ function defineHandler(handler: Hanlder) {
 
 function contactHandler() {
   return defineHandler({
-    match(req) {
+    match(url, req) {
       return (
         req.method.toLowerCase() === "post" &&
-        req.url === "/api/contact" &&
+        url.pathname === "/api/contact" &&
         /^application\/json/i.test(req.headers["content-type"])
       );
     },
-    async handle(req, res) {
+    async handle(url, req, res) {
       const buffers = [];
       for await (const buffer of req) {
         buffers.push(buffer);
@@ -42,13 +44,13 @@ function sendFileHandler(dist: string) {
   const root = path.normalize(path.resolve(dist));
 
   return defineHandler({
-    match(req) {
+    match(url, req) {
       return req.method.toLowerCase() === "get";
     },
-    async handle(req, res) {
+    async handle(url, req, res) {
       try {
         const file = path.normalize(
-          path.resolve(dist, ...normalize(req.url).split("/"))
+          path.resolve(dist, ...normalize(url.pathname).split("/"))
         );
 
         if (!file.startsWith(root)) {
@@ -78,38 +80,38 @@ function sendFileHandler(dist: string) {
       }
     },
   });
-}
 
-function normalize(url: string) {
-  if (url.endsWith("/")) {
-    return `${url}index.html`;
-  } else if (!/\.[^./]+$/.test(url)) {
-    return `${url}/index.html`;
+  function normalize(pathname: string) {
+    if (pathname.endsWith("/")) {
+      return `${pathname}index.html`;
+    } else if (!/\.[^./]+$/.test(pathname)) {
+      return `${pathname}/index.html`;
+    }
+    return pathname;
   }
-  return url;
-}
 
-function mimetype(filename: string) {
-  return (
-    {
-      ".js": "text/javascript",
-      ".mjs": "text/javascript",
-      ".json": "application/json",
-      ".css": "text/css",
-      ".htm": "text/html",
-      ".html": "text/html",
-      ".xml": "text/xml",
-      ".png": "image/png",
-      ".jpeg": "image/jpeg",
-      ".jpg": "image/jpeg",
-      ".ico": "image/vnd.microsoft.icon",
-      ".webp": "image/webp",
-      ".gif": "image/gif",
-      ".svg": "image/svg+xml",
-      ".pdf": "application/pdf",
-    }[path.extname(filename)?.toLocaleLowerCase() ?? ""] ??
-    "application/octet-stream"
-  );
+  function mimetype(filename: string) {
+    return (
+      {
+        ".js": "text/javascript",
+        ".mjs": "text/javascript",
+        ".json": "application/json",
+        ".css": "text/css",
+        ".htm": "text/html",
+        ".html": "text/html",
+        ".xml": "text/xml",
+        ".png": "image/png",
+        ".jpeg": "image/jpeg",
+        ".jpg": "image/jpeg",
+        ".ico": "image/vnd.microsoft.icon",
+        ".webp": "image/webp",
+        ".gif": "image/gif",
+        ".svg": "image/svg+xml",
+        ".pdf": "application/pdf",
+      }[path.extname(filename)?.toLocaleLowerCase() ?? ""] ??
+      "application/octet-stream"
+    );
+  }
 }
 
 function optparse() {
@@ -128,7 +130,7 @@ function optparse() {
   return [opts, args] as [typeof opts, typeof args];
 }
 
-function logging(req: http.IncomingMessage, res: http.ServerResponse) {
+function logging(req: IncomingMessage, res: ServerResponse) {
   res.once("close", () => {
     try {
       const date = new Date().toISOString();
@@ -142,7 +144,6 @@ function logging(req: http.IncomingMessage, res: http.ServerResponse) {
   });
 
   const date = new Date().toISOString();
-  const headers = JSON.stringify(req.headers);
   console.log(`${date} : ${req.method} ${req.url}`);
 }
 
@@ -155,12 +156,13 @@ function main() {
 
   const handlers = [contactHandler(), sendFileHandler(dist)];
 
-  const server = http.createServer(async (req, res) => {
+  const server = createServer(async (req, res) => {
     try {
       logging(req, res);
-      const handler = handlers.find((handler) => handler.match(req));
+      const url = urlParse(req.url);
+      const handler = handlers.find((handler) => handler.match(url, req));
       if (handler) {
-        handler.handle(req, res);
+        handler.handle(url, req, res);
       }
     } catch (e) {
       console.error(e);
