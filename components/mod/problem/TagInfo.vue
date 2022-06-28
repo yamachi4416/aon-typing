@@ -7,8 +7,8 @@
         <span v-for="t in tags" :key="`tag-${t.id}`">
           <button
             class="tag-info-taglist-item button"
-            :selected="selectedTags.has(t.id) || null"
-            @click="selectTag(t.id)"
+            :selected="t.selected || null"
+            @click="selectTag(t)"
           >
             {{ t.name }}
           </button>
@@ -41,7 +41,9 @@ const props = withDefaults(
   }
 );
 
-const tags = computed(() => {
+const tags = ref(getTags());
+
+function getTags() {
   const mp = new Set<string>();
   return (
     props.tag.problems
@@ -52,30 +54,37 @@ const tags = computed(() => {
         }
         mp.add(tag.id);
         return true;
-      }) ?? []
+      })
+      .map((tag) => ({
+        ...tag,
+        selected: false,
+      })) ?? []
   );
-});
+}
 
-const selectedTags = computed(() => {
-  const ids = new Set(tags.value.map((t) => t.id));
-  const qtags = (route.query.tags as string) ?? "";
-  return new Set(qtags.split(",").filter((id) => ids.has(id)));
-});
-
-function selectTag(id: string) {
-  const stags = new Set([...selectedTags.value]);
-  if (stags.has(id)) {
-    stags.delete(id);
-  } else {
-    stags.add(id);
-  }
-  const query = { ...route.query, tags: [...stags].join(",") };
+function selectTag(tag: { selected: boolean }) {
+  tag.selected = !tag.selected;
+  const query = {
+    ...route.query,
+    tags: tags.value
+      .filter((t) => t.selected)
+      .map((t) => t.id)
+      .join(","),
+  };
   if (!query.tags) {
     delete query.tags;
   }
   useScrollWaiter().noScroll();
   router.replace({ query });
 }
+
+onMounted(() => {
+  const qtags = (route.query.tags as string) ?? "";
+  const stags = new Set([...qtags.split(",")]);
+  tags.value.forEach((tag) => {
+    tag.selected = stags.has(tag.id);
+  });
+});
 </script>
 
 <style lang="scss" scoped>

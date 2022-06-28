@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ModProblemTagInfo :tag="tag" :problems="problems">
+    <ModProblemTagInfo :tag="tag">
       <span>
         <button v-if="$navigator.enable" class="button" @click="$router.back()">
           もどる
