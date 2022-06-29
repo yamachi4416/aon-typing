@@ -1,0 +1,115 @@
+{
+  "id": "8052990",
+  "title": "ある男と無花果（小川未明）",
+  "type": "japanese",
+  "skip": false,
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00015",
+      "name": "青空文庫"
+    },
+    {
+      "id": "00016",
+      "name": "日本文学"
+    },
+    {
+      "id": "00017",
+      "name": "物語"
+    }
+  ],
+  "createdAt": "2022-06-29",
+  "updatedAt": "2022-06-29",
+  "words": [
+    {
+      "info": "ある男と無花果",
+      "info2": "あるおとこといちじく",
+      "word": "aruotokotoitijiku"
+    },
+    {
+      "info": "小川 未明",
+      "info2": "おがわ みめい",
+      "word": "ogawa mimei"
+    },
+    {
+      "info": "ある男が、縁日にいって、植木をひやかしているうちに、とうとうなにか買わなければならなくなりました。",
+      "info2": "あるおとこが、えんにちにいって、うえきをひやかしているうちに、とうとうなにかかわなければならなくなりました。",
+      "word": "aruotokoga,ennnitiniitte,uekiwohiyakasiteiruutini,toutounanikakawanakerebanaranakunarimasita."
+    },
+    {
+      "info": "そして、無花果の鉢植えを買いました。「いつになったら、実がなるだろう。」",
+      "info2": "そして、いちじくのはちうえをかいました。「いつになったら、みがなるだろう。」",
+      "word": "sosite,itijikunohatiuewokaimasita.[ituninattara,miganarudarou.]"
+    },
+    {
+      "info": "「来年はなります。」と、植木屋は答えました。しかしその木は、小さくありました。",
+      "info2": "「らいねんはなります。」と、うえきやはこたえました。しかしそのきは、ちいさくありました。",
+      "word": "[rainenhanarimasu.]to,uekiyahakotaemasita.sikasisonokiha,tiisakuarimasita."
+    },
+    {
+      "info": "男は、それを持って帰る途中夕立にあいました。もう、そのときは、そんな木どころではありません。",
+      "info2": "おとこは、それをもってかえるとちゅうゆうだちにあいました。もう、そのときは、そんなきどころではありません。",
+      "word": "otokoha,sorewomottekaerutotyuuyuudatiniaimasita.mou,sonotokiha,sonnnakidokorodehaarimasen."
+    },
+    {
+      "info": "木などは、どうでもよかったのです。友だちの家に頼って、雨のやむまで待って、帰りには、その無花果の鉢を預けてゆきました。",
+      "info2": "きなどは、どうでもよかったのです。ともだちのうちにたよって、あめのやむまでまって、かえりには、そのいちじくのはちをあずけてゆきました。",
+      "word": "kinadoha,doudemoyokattanodesu.tomodatinoutinitayotte,amenoyamumadematte,kaeriniha,sonoitijikunohatiwoazuketeyukimasita."
+    },
+    {
+      "info": "幾月も、幾年もたちましたけれど、男は、忘れたものか、友だちの家へあずけた木を取りにゆきませんでした。",
+      "info2": "いくつきも、いくとしもたちましたけれど、おとこは、わすれたものか、ともだちのいえへあずけたきをとりにゆきませんでした。",
+      "word": "ikutukimo,ikutosimotatimasitakeredo,otokoha,wasuretamonoka,tomodatinoieheazuketakiwotoriniyukimasendesita."
+    },
+    {
+      "info": "しかし、この男は、なかなか欲深でありました。",
+      "info2": "しかし、このおとこは、なかなかよくふかでありました。",
+      "word": "sikasi,konootokoha,nakanakayokuhukadearimasita."
+    },
+    {
+      "info": "五、六年もたって、ふと、いつか自分は無花果の木を友だちのもとにあずけておいたことを思い出しました。",
+      "info2": "ご、ろくねんもたって、ふと、いつかじぶんはいちじくのきをともだちのもとにあずけておいたことをおもいだしました。",
+      "word": "go,rokunenmotatte,huto,itukajibunhaitijikunokiwotomodatinomotoniazuketeoitakotowoomoidasimasita."
+    },
+    {
+      "info": "さっそく取りにゆきました。",
+      "info2": "さっそくとりにゆきました。",
+      "word": "sassokutoriniyukimasita."
+    },
+    {
+      "info": "「あなたが、きっと取りにおいでなさると思って、大事に育てておきました。」と、その家の人はいって、裏庭に案内しました。",
+      "info2": "「あなたが、きっととりにおいでなさるとおもって、だいじにそだてておきました。」と、そのいえのひとはいって、うらにわにあんないしました。",
+      "word": "[anataga,kittotorinioidenasarutoomotte,daijinisodateteokimasita.]to,sonoienohitohaitte,uraniwaniannnaisimasita."
+    },
+    {
+      "info": "大きな無花果の木に、実がいっぱいなっていたのです。男は、驚きました。",
+      "info2": "おおきないちじくのきに、みがいっぱいなっていたのです。おとこは、おどろきました。",
+      "word": "ookinaitijikunokini,migaippainatteitanodesu.otokoha,odorokimasita."
+    },
+    {
+      "info": "かつ当惑しました。しかたがなく、掘って、車に載せて帰りました。",
+      "info2": "かつとうわくしました。しかたがなく、ほって、くるまにのせてかえりました。",
+      "word": "katutouwakusimasita.sikataganaku,hotte,kurumaninosetekaerimasita."
+    },
+    {
+      "info": "しかし、それは、木を移す時期でなかったので、実もしなびてしまえば、木も枯れてしまいました。",
+      "info2": "しかし、それは、きをうつすじきでなかったので、みもしなびてしまえば、きもかれてしまいました。",
+      "word": "sikasi,soreha,kiwoutusujikidenakattanode,mimosinabitesimaeba,kimokaretesimaimasita."
+    },
+    {
+      "info": "けっきょく、男は、ほねおり損に終わったわけです。",
+      "info2": "けっきょく、おとこは、ほねおりぞんにおわったわけです。",
+      "word": "kekkyoku,otokoha,honeorizonnniowattawakedesu."
+    }
+  ],
+  "links": [
+    {
+      "site": "青空文庫",
+      "name": "図書カード",
+      "link": "https://www.aozora.gr.jp/cards/001475/card52990.html"
+    }
+  ]
+}
