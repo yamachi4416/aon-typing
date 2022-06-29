@@ -1,15 +1,16 @@
-import * as path from "path";
-import * as fs from "fs";
-import * as jaChars from "../libs/TypingJapaneseChars";
+import path from "node:path";
+import fs from "node:fs";
+import jaChars from "../libs/TypingJapaneseChars";
+import { optparse } from "./lib/util";
 
-const listJsonFiles = (dir) => {
+function listJsonFiles(dir: string) {
   return fs
     .readdirSync(dir, { withFileTypes: true })
     .filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
     .map((entry) => path.resolve(dir, entry.name));
-};
+}
 
-const generateProblemData = (dataDir, apiDir) => {
+function generateProblemData(dataDir: string, apiDir: string) {
   const problemsDist = path.resolve(apiDir, "problems");
 
   if (fs.existsSync(problemsDist)) {
@@ -138,17 +139,39 @@ const generateProblemData = (dataDir, apiDir) => {
     path.join(apiDir, "newProblems.json"),
     JSON.stringify(newProblems, null, 2)
   );
-};
+}
 
-const main = () => {
-  const args = process.argv.slice(2);
+function help() {
+  console.log(
+    `
+Usage: gen-problem
+Options:
+  -i, --in    [dir]   input data directory
+  -o, --out   [dir]   output directory
+  -h, --help          print command line options
+`.trimStart()
+  );
+}
 
-  if (args.length) {
-    const dirname = path.dirname(__filename);
-    const apiDir = path.resolve(dirname, "..", "assets", "api");
-    const dataDir = args[0];
-    generateProblemData(dataDir, apiDir);
+function main() {
+  const { opts } = optparse();
+
+  if ((opts["--help"] ?? opts["-h"]) !== undefined) {
+    help();
+    return 0;
   }
-};
 
-main();
+  const input = opts["--in"] ?? opts["-i"];
+  const output = opts["--out"] ?? opts["-o"];
+
+  if (!input && !output) {
+    help();
+    return 1;
+  }
+
+  generateProblemData(input, output);
+
+  return 0;
+}
+
+process.exit(main());

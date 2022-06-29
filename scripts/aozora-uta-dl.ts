@@ -1,4 +1,4 @@
-import jsdom from "jsdom";
+import { JSDOM } from "jsdom";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { TextDecoder } from "node:util";
@@ -29,7 +29,7 @@ function normalizeKana(text) {
 
 async function fetchCard(cardUrl: string) {
   const { data } = await httpFetch(cardUrl);
-  const document = new jsdom.JSDOM(data).window.document;
+  const document = new JSDOM(data).window.document;
   const info = {
     title: "",
     titleKana: "",
@@ -80,7 +80,7 @@ async function fetchCard(cardUrl: string) {
 async function fetchDocument(url: string) {
   const txt = new TextDecoder("sjis");
   const res = txt.decode(await httpFetch(url).then(({ data }) => data));
-  const document = new jsdom.JSDOM(res).window.document;
+  const document = new JSDOM(res).window.document;
   const mainText = document.querySelector(".main_text");
   const words = [{ info: "", info2: "" }];
 
@@ -175,14 +175,14 @@ Options:
 async function main() {
   const { opts } = optparse();
 
-  if (opts["--help"] || opts["-h"]) {
+  if ((opts["--help"] ?? opts["-h"]) !== undefined) {
     help();
-    process.exit(0);
+    return 0;
   }
 
   if (!opts["--url"] && !opts["-u"]) {
     help();
-    process.exit(1);
+    return 1;
   }
 
   const cardUrl = new URL(opts["--url"] ?? opts["-u"]);
@@ -237,18 +237,20 @@ async function main() {
     const stat = await fs.stat(distDir);
     if (stat.isDirectory) {
       console.error(`${distDir} is not directory.`);
-      process.exit(1);
+      return 1;
     }
     const dist = path.resolve(distDir, `${page.id}.json`);
     const temp = JSON.parse((await fs.readFile(dist)).toString());
     if (temp.skip) {
       console.info(`skip write: ${dist}`);
-      return;
+      return 0;
     }
     await fs.writeFile(dist, JSON.stringify(temp, null, 2));
   } else {
     console.log(data);
   }
+
+  return 0;
 }
 
-main();
+main().then((code) => process.exit(code));

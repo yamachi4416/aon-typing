@@ -145,12 +145,12 @@ Options:
   );
 }
 
-function main() {
+async function main() {
   const { opts } = optparse();
 
-  if (opts["--help"] || opts["-h"]) {
+  if ((opts["--help"] ?? opts["-h"]) !== undefined) {
     help();
-    process.exit(0);
+    return 0;
   }
 
   const dist = opts["--dir"] ?? opts["-d"] ?? ".";
@@ -174,15 +174,21 @@ function main() {
     }
   });
 
-  console.log(
-    `
-${"-".repeat(50)}
+  return await new Promise<number>((resolve) => {
+    server
+      .listen(port, host, () => {
+        console.log(
+          `
+  ${"-".repeat(50)}
 Server Listen On  : ${host}:${port}
 Static Files Root : ${dist}
-${"-".repeat(50)}`.trimStart()
-  );
-
-  server.listen(port, host);
+  ${"-".repeat(50)}`.trimStart()
+        );
+      })
+      .on("close", () => {
+        resolve(0);
+      });
+  });
 }
 
-main();
+main().then((code) => process.exit(code));
