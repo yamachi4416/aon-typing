@@ -6,6 +6,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "gen-problem": "node -r esbuild-register ./scripts/gen-problem.ts ./data/problems",
+    "aozora": "node -r esbuild-register ./scripts/aozora-uta-dl.ts",
     "preview:dist": "node -r esbuild-register ./scripts/preview-server.ts --dist ./dist"
   },
   "devDependencies": {
