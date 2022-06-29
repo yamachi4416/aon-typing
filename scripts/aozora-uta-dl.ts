@@ -1,12 +1,10 @@
-import fs from "fs";
-import http from "http";
-import https from "https";
-import path from "path";
-import { TextDecoder } from "util";
-import console from "console";
 import jsdom from "jsdom";
-import jaChars from "../libs/TypingJapaneseChars";
-import { ProblemDetail, ProblemDetailWord } from "~~/types/problems";
+import fs from "node:fs/promises";
+import path from "node:path";
+import { TextDecoder } from "node:util";
+import { ProblemDetailWord } from "~~/types/problems";
+import { kana2Hira } from "../libs/TypingJapaneseChars";
+import { httpFetch, optparse } from "./lib/util";
 
 const normalizeMap = {
   一: "１",
@@ -16,7 +14,7 @@ const normalizeMap = {
 };
 
 function normalizeKana(text) {
-  const hira = jaChars.kana2Hira(text || "") || "";
+  const hira = kana2Hira(text || "") || "";
   return Array.from(hira)
     .map((s) => normalizeMap[s] || s)
     .join("")
@@ -29,29 +27,9 @@ function normalizeKana(text) {
     });
 }
 
-async function httpGet(url: string) {
-  return await new Promise<any>((resolve) => {
-    const h = url.startsWith("https") ? https : http;
-    const req = h.request(url, (res) => {
-      let body = Buffer.from([]);
-      res.on("data", (chunk) => {
-        body = Buffer.concat([body, chunk]);
-      });
-      res.on("end", () => {
-        resolve(body);
-      });
-    });
-    req.setHeader(
-      "user-agent",
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 Edg/90.0.818.62"
-    );
-    req.end();
-  });
-}
-
 async function fetchCard(cardUrl: string) {
-  const res = await httpGet(cardUrl);
-  const document = new jsdom.JSDOM(res).window.document;
+  const { data } = await httpFetch(cardUrl);
+  const document = new jsdom.JSDOM(data).window.document;
   const info = {
     title: "",
     titleKana: "",
@@ -75,6 +53,7 @@ async function fetchCard(cardUrl: string) {
       }
     }
   })();
+
   (() => {
     const tds = Array.from(
       document.querySelectorAll('[summary="作家データ"] td')
@@ -100,7 +79,7 @@ async function fetchCard(cardUrl: string) {
 
 async function fetchDocument(url: string) {
   const txt = new TextDecoder("sjis");
-  const res = txt.decode(await httpGet(url));
+  const res = txt.decode(await httpFetch(url).then(({ data }) => data));
   const document = new jsdom.JSDOM(res).window.document;
   const mainText = document.querySelector(".main_text");
   const words = [{ info: "", info2: "" }];
@@ -180,24 +159,35 @@ function splitWords(words: ProblemDetailWord[], regex: RegExp, max: number) {
   return ret;
 }
 
+function help() {
+  console.log(
+    `
+Usage: aozora-uta-dl
+Options:
+  -u, --url   [url]   request url
+  -d, --dist  [dir]   output directory
+  -w, --word  [max]   word max default(40)
+  -h, --help          print command line options
+`.trimStart()
+  );
+}
+
 async function main() {
-  const args = process.argv.slice(2);
+  const { opts } = optparse();
 
-  if (!args.length) {
-    console.error("args: [dataDir] [cardUrl]");
-    return;
+  if (opts["--help"] || opts["-h"]) {
+    help();
+    process.exit(0);
   }
 
-  let cardUrl: URL;
-  let distDir: string;
-  if (args.length === 1) {
-    cardUrl = new URL(args[0]);
-  } else {
-    distDir = args[0];
-    cardUrl = new URL(args[1]);
+  if (!opts["--url"] && !opts["-u"]) {
+    help();
+    process.exit(1);
   }
 
-  const wordMax = ~~(process.env.WORD_MAX || 40);
+  const cardUrl = new URL(opts["--url"] ?? opts["-u"]);
+  const distDir = opts["--dist"] ?? opts["-d"];
+  const wordMax = Number(opts["--word"] ?? opts["-w"]) || 40;
 
   const link = cardUrl.href;
   const info = await fetchCard(link);
@@ -244,20 +234,18 @@ async function main() {
   };
 
   if (distDir) {
-    if (fs.existsSync(distDir)) {
-      const dist = path.resolve(distDir, `${page.id}.json`);
-      if (fs.existsSync(dist)) {
-        const tmp = JSON.parse(String(fs.readFileSync(dist)));
-        if (tmp.skip) {
-          console.info(`skip write: ${dist}`);
-          return;
-        }
-      }
-      fs.writeFileSync(dist, JSON.stringify(data, null, 2));
-      console.info(`write: ${dist}`);
-    } else {
-      console.error(`${distDir} is not exists.`);
+    const stat = await fs.stat(distDir);
+    if (stat.isDirectory) {
+      console.error(`${distDir} is not directory.`);
+      process.exit(1);
     }
+    const dist = path.resolve(distDir, `${page.id}.json`);
+    const temp = JSON.parse((await fs.readFile(dist)).toString());
+    if (temp.skip) {
+      console.info(`skip write: ${dist}`);
+      return;
+    }
+    await fs.writeFile(dist, JSON.stringify(temp, null, 2));
   } else {
     console.log(data);
   }
