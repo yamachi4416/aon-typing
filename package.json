@@ -3,11 +3,11 @@
   "scripts": {
     "build": "nuxt generate",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "gen-problem": "node -r esbuild-register ./scripts/gen-problem.ts ./data/problems",
-    "aozora": "node -r esbuild-register ./scripts/aozora-uta-dl.ts",
-    "preview:dist": "node -r esbuild-register ./scripts/preview-server.ts --dist ./dist"
+    "preview:dist": "node -r esbuild-register ./scripts/preview-server.ts --dir ./dist",
+    "generate": "nuxt generate",
+    "generate:problem": "node -r esbuild-register ./scripts/gen-problem.ts ./data/problems",
+    "download:aozora": "node -r esbuild-register ./scripts/aozora-uta-dl.ts"
   },
   "devDependencies": {
     "esbuild-register": "^3.3.3",

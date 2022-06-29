@@ -1,7 +1,8 @@
-import { IncomingMessage, ServerResponse, createServer } from "node:http";
+import { default as fs } from "node:fs/promises";
+import { createServer, IncomingMessage, ServerResponse } from "node:http";
 import { default as path } from "node:path";
 import { parse as urlParse, UrlWithStringQuery } from "node:url";
-import { default as fs } from "node:fs/promises";
+import { optparse } from "./lib/util";
 
 type Hanlder = {
   match: (url: UrlWithStringQuery, req: IncomingMessage) => boolean;
@@ -114,22 +115,6 @@ function sendFileHandler(dist: string) {
   }
 }
 
-function optparse() {
-  const opts: Record<string, string> = {};
-  const args: string[] = [];
-
-  for (let i = 2; i < process.argv.length; i++) {
-    const o = process.argv[i];
-    if (o.startsWith("-")) {
-      opts[o] = process.argv[++i];
-    } else {
-      args.push(o);
-    }
-  }
-
-  return [opts, args] as [typeof opts, typeof args];
-}
-
 function logging(req: IncomingMessage, res: ServerResponse) {
   res.once("close", () => {
     try {
@@ -147,10 +132,28 @@ function logging(req: IncomingMessage, res: ServerResponse) {
   console.log(`${date} : ${req.method} ${req.url}`);
 }
 
-function main() {
-  const [opts, args] = optparse();
+function help() {
+  console.log(
+    `
+Usage: preview-server
+Options:
+  -d, --dir  [dir]    static file root directory default(.)
+  -h, --host [host]   listen host default(localhost)
+  -p, --port [port]   listen port default(3000)
+  -h, --help          print command line options
+`.trimStart()
+  );
+}
 
-  const dist = opts["--dist"] ?? args[args.length - 1] ?? ".";
+function main() {
+  const { opts } = optparse();
+
+  if (opts["--help"] || opts["-h"]) {
+    help();
+    process.exit(0);
+  }
+
+  const dist = opts["--dir"] ?? opts["-d"] ?? ".";
   const host = opts["--host"] ?? opts["-h"] ?? "localhost";
   const port = Number(opts["--port"] ?? opts["-p"] ?? "3000");
 
