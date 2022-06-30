@@ -2,7 +2,7 @@ import { default as fs } from "node:fs/promises";
 import { createServer, IncomingMessage, ServerResponse } from "node:http";
 import { default as path } from "node:path";
 import { parse as urlParse, UrlWithStringQuery } from "node:url";
-import { optparse } from "./lib/util";
+import yargs from "yargs";
 
 type Hanlder = {
   match: (url: UrlWithStringQuery, req: IncomingMessage) => boolean;
@@ -49,36 +49,33 @@ function sendFileHandler(dist: string) {
       return req.method.toLowerCase() === "get";
     },
     async handle(url, req, res) {
-      try {
-        const file = path.normalize(
-          path.resolve(dist, ...normalize(url.pathname).split("/"))
-        );
+      const file = path.normalize(
+        path.resolve(dist, ...normalize(url.pathname).split("/"))
+      );
 
-        if (!file.startsWith(root)) {
-          res.statusCode = 404;
-          res.end();
-          return;
-        }
-
-        const stat = await fs.stat(file);
-
-        res.statusCode = 200;
-        res.setHeader("Content-Length", stat.size);
-        res.setHeader("Content-Type", mimetype(file));
-
-        const fd = await fs.open(file, "r");
-        const stream = fd.createReadStream({ autoClose: true });
-
-        res.flushHeaders();
-        stream.pipe(res);
-      } catch (e) {
-        if (e.code === "ENOENT") {
-          res.statusCode = 404;
-          res.end();
-        } else {
-          throw e;
-        }
+      if (!file.startsWith(root)) {
+        res.statusCode = 404;
+        res.end();
+        return;
       }
+
+      const stat = await fs.stat(file).catch(() => {});
+
+      if (!stat) {
+        res.statusCode = 404;
+        res.end();
+        return;
+      }
+
+      res.statusCode = 200;
+      res.setHeader("Content-Length", stat.size);
+      res.setHeader("Content-Type", mimetype(file));
+
+      const fd = await fs.open(file, "r");
+      const stream = fd.createReadStream({ autoClose: true });
+
+      res.flushHeaders();
+      stream.pipe(res);
     },
   });
 
@@ -132,32 +129,40 @@ function logging(req: IncomingMessage, res: ServerResponse) {
   console.log(`${date} : ${req.method} ${req.url}`);
 }
 
-function help() {
-  console.log(
-    `
-Usage: preview-server
-Options:
-  -d, --dir  [dir]    static file root directory default(.)
-  -h, --host [host]   listen host default(localhost)
-  -p, --port [port]   listen port default(3000)
-  -h, --help          print command line options
-`.trimStart()
-  );
-}
-
 async function main() {
-  const { opts } = optparse();
+  const args = await yargs
+    .options("dir", {
+      alias: "d",
+      type: "string",
+      description: "static file root directory",
+      default: ".",
+      requiresArg: true,
+    })
+    .options("host", {
+      alias: "H",
+      type: "string",
+      description: "listen host default",
+      default: "localhost",
+      requiresArg: true,
+    })
+    .options("port", {
+      alias: "p",
+      type: "number",
+      description:
+        "listen host default. that in directory of specify by '--dir'",
+      default: 3000,
+      requiresArg: true,
+    })
+    .options("404", {
+      alias: "404",
+      type: "string",
+      description: "404 error html file",
+      requiresArg: true,
+    })
+    .help()
+    .alias("h", "help").argv;
 
-  if ((opts["--help"] ?? opts["-h"]) !== undefined) {
-    help();
-    return 0;
-  }
-
-  const dist = opts["--dir"] ?? opts["-d"] ?? ".";
-  const host = opts["--host"] ?? opts["-h"] ?? "localhost";
-  const port = Number(opts["--port"] ?? opts["-p"] ?? "3000");
-
-  const handlers = [contactHandler(), sendFileHandler(dist)];
+  const handlers = [contactHandler(), sendFileHandler(args.dir)];
 
   const server = createServer(async (req, res) => {
     try {
@@ -176,12 +181,12 @@ async function main() {
 
   return await new Promise<number>((resolve) => {
     server
-      .listen(port, host, () => {
+      .listen(args.port, args.host, () => {
         console.log(
           `
   ${"-".repeat(50)}
-Server Listen On  : ${host}:${port}
-Static Files Root : ${dist}
+Server Listen On  : ${args.host}:${args.port}
+Static Files Root : ${args.dist}
   ${"-".repeat(50)}`.trimStart()
         );
       })

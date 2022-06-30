@@ -4,16 +4,14 @@
     "build": "nuxt generate",
     "dev": "nuxt dev",
     "preview": "nuxt preview",
-    "preview:dist": "node ./scripts/dist/preview-server.js --dir ./dist",
+    "preview:dist": "node ./scripts/dist/preview-server.js -d ./dist",
     "generate": "nuxt generate",
-    "generate:problem": "node ./scripts/dist/gen-problem.js --in ./data/problems --out ./assets/api",
+    "generate:problem": "node ./scripts/dist/gen-problem.js -i ./data/problems -o ./assets/api",
     "download:aozora": "node ./scripts/dist/aozora-uta-dl.js",
-    "build:script:aozora": "esbuild ./scripts/aozora-uta-dl.ts --bundle --platform=node --external:jsdom --outdir=scripts/dist",
-    "build:script:gen-problem": "esbuild ./scripts/gen-problem.ts --bundle --platform=node --outdir=scripts/dist",
-    "build:script:preview-server": "esbuild ./scripts/preview-server.ts --bundle --platform=node --outdir=scripts/dist",
-    "build:scripts": "npm run build:script:aozora && npm run build:script:gen-problem && npm run build:script:preview-server"
+    "build:scripts": "node scripts/build-scripts.mjs"
   },
   "devDependencies": {
+    "@types/yargs": "^17.0.10",
     "jsdom": "^20.0.0",
     "nuxt": "3.0.0-rc.4",
     "sass": "^1.52.3"

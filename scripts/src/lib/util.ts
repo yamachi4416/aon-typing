@@ -1,22 +1,6 @@
 import http from "http";
 import https from "https";
 
-export function optparse() {
-  const opts: Record<string, string> = {};
-  const args: string[] = [];
-
-  for (let i = 2; i < process.argv.length; i++) {
-    const o = process.argv[i];
-    if (o.startsWith("-")) {
-      opts[o] = process.argv[++i];
-    } else {
-      args.push(o);
-    }
-  }
-
-  return { opts, args };
-}
-
 interface HttpRequestOptions {
   method?: string;
   headers?: http.OutgoingHttpHeaders;

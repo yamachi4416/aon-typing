@@ -2,9 +2,10 @@ import { JSDOM } from "jsdom";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { TextDecoder } from "node:util";
+import yargs from "yargs";
 import { ProblemDetailWord } from "~~/types/problems";
-import { kana2Hira } from "../libs/TypingJapaneseChars";
-import { httpFetch, optparse } from "./lib/util";
+import { kana2Hira } from "../../libs/TypingJapaneseChars";
+import { httpFetch } from "./lib/util";
 
 const normalizeMap = {
   一: "１",
@@ -159,35 +160,35 @@ function splitWords(words: ProblemDetailWord[], regex: RegExp, max: number) {
   return ret;
 }
 
-function help() {
-  console.log(
-    `
-Usage: aozora-uta-dl
-Options:
-  -u, --url   [url]   request url
-  -d, --dist  [dir]   output directory
-  -w, --word  [max]   word max default(40)
-  -h, --help          print command line options
-`.trimStart()
-  );
-}
-
 async function main() {
-  const { opts } = optparse();
+  const args = await yargs
+    .options("url", {
+      alias: "u",
+      type: "string",
+      description: "request url",
+      demandOption: true,
+      requiresArg: true,
+    })
+    .options("dist", {
+      alias: "d",
+      type: "string",
+      description: "output directory",
+      requiresArg: true,
+    })
+    .options("word", {
+      alias: "w",
+      type: "number",
+      description: "word max",
+      default: 40,
+      requiresArg: true,
+    })
+    .help()
+    .alias("h", "help")
+    .parse();
 
-  if ((opts["--help"] ?? opts["-h"]) !== undefined) {
-    help();
-    return 0;
-  }
-
-  if (!opts["--url"] && !opts["-u"]) {
-    help();
-    return 1;
-  }
-
-  const cardUrl = new URL(opts["--url"] ?? opts["-u"]);
-  const distDir = opts["--dist"] ?? opts["-d"];
-  const wordMax = Number(opts["--word"] ?? opts["-w"]) || 40;
+  const cardUrl = new URL(args.url);
+  const distDir = args.dist;
+  const wordMax = args.word;
 
   const link = cardUrl.href;
   const info = await fetchCard(link);

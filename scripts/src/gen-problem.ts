@@ -1,8 +1,7 @@
-import path from "node:path";
 import fs from "node:fs/promises";
-import jaChars from "../libs/TypingJapaneseChars";
-import { optparse } from "./lib/util";
-import { a } from "~~/dist/_nuxt/ModalPanel-a279a22b.mjs";
+import path from "node:path";
+import yargs from "yargs";
+import jaChars from "../../libs/TypingJapaneseChars";
 
 async function listJsonFiles(dir: string) {
   const files = await fs.readdir(dir, { withFileTypes: true });
@@ -165,35 +164,27 @@ async function generateProblemData(dataDir: string, apiDir: string) {
   );
 }
 
-function help() {
-  console.log(
-    `
-Usage: gen-problem
-Options:
-  -i, --in    [dir]   input data directory
-  -o, --out   [dir]   output directory
-  -h, --help          print command line options
-`.trimStart()
-  );
-}
-
 async function main() {
-  const { opts } = optparse();
+  const args = await yargs
+    .options("in", {
+      alias: "i",
+      type: "string",
+      description: "input data directory",
+      demandOption: true,
+      requiresArg: true,
+    })
+    .options("out", {
+      alias: "o",
+      type: "string",
+      description: "output directory",
+      demandOption: true,
+      requiresArg: true,
+    })
+    .help()
+    .alias("h", "help")
+    .parse();
 
-  if ((opts["--help"] ?? opts["-h"]) !== undefined) {
-    help();
-    return 0;
-  }
-
-  const input = opts["--in"] ?? opts["-i"];
-  const output = opts["--out"] ?? opts["-o"];
-
-  if (!input && !output) {
-    help();
-    return 1;
-  }
-
-  await generateProblemData(input, output);
+  await generateProblemData(args.in, args.out);
 
   return 0;
 }
