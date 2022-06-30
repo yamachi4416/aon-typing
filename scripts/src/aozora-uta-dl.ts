@@ -3,8 +3,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { TextDecoder } from "node:util";
 import yargs from "yargs";
-import { ProblemDetailWord } from "~~/types/problems";
-import { kana2Hira } from "../../libs/TypingJapaneseChars";
+import { kana2Hira } from "~/libs/TypingJapaneseChars";
+import { ProblemDetailWord } from "~/types/problems";
 import { httpFetch } from "./lib/util";
 
 const normalizeMap = {
@@ -14,7 +14,7 @@ const normalizeMap = {
   "…": "...",
 };
 
-function normalizeKana(text) {
+function normalizeKana(text: string) {
   const hira = kana2Hira(text || "") || "";
   return Array.from(hira)
     .map((s) => normalizeMap[s] || s)
@@ -79,8 +79,9 @@ async function fetchCard(cardUrl: string) {
 }
 
 async function fetchDocument(url: string) {
-  const txt = new TextDecoder("sjis");
-  const res = txt.decode(await httpFetch(url).then(({ data }) => data));
+  const res = new TextDecoder("sjis").decode(
+    await httpFetch(url).then(({ data }) => data)
+  );
   const document = new JSDOM(res).window.document;
   const mainText = document.querySelector(".main_text");
   const words = [{ info: "", info2: "" }];

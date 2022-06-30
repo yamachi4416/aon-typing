@@ -1,6 +1,6 @@
-import { default as fs } from "node:fs/promises";
+import fs from "node:fs/promises";
 import { createServer, IncomingMessage, ServerResponse } from "node:http";
-import { default as path } from "node:path";
+import path from "node:path";
 import { parse as urlParse, UrlWithStringQuery } from "node:url";
 import yargs from "yargs";
 

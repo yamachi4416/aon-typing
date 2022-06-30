@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import yargs from "yargs";
-import jaChars from "../../libs/TypingJapaneseChars";
+import jaChars from "~/libs/TypingJapaneseChars";
 
 async function listJsonFiles(dir: string) {
   const files = await fs.readdir(dir, { withFileTypes: true });
