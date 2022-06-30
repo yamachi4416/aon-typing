@@ -1,64 +1,64 @@
 import esbuild from "esbuild";
-import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
-import { default as yargs } from "yargs";
+import fs from "node:fs/promises";
+import path from "node:path";
+import url from "node:url";
+import yargs from "yargs";
 
-/**
- * @param {Array<esbuild.BuildOptions & { name: string }>} options
- */
-function defineBuilders(...options) {
-  const basedir = dirname(fileURLToPath(import.meta.url));
-  const builders = options.reduce((b, { name, ...option }) => {
-    return {
-      ...b,
-      [name]: () =>
-        esbuild.build({
-          outdir: resolve(basedir, "dist"),
-          entryPoints: [resolve(basedir, "src", `${name}.ts`)],
-          bundle: true,
-          platform: "node",
-          ...option,
+(async function main() {
+  const basedir = path.dirname(url.fileURLToPath(import.meta.url));
+  const outdir = path.resolve(basedir, "dist");
+  const srcdir = path.resolve(basedir, "src");
+
+  const scripts = await fs
+    .readdir(srcdir, { withFileTypes: true })
+    .then((items) => items.filter((item) => item.isFile()));
+
+  const builders = scripts.reduce(
+    (builders, script) => ({
+      ...builders,
+      [path.basename(script.name, path.extname(script.name))]: {
+        outdir,
+        entryPoints: [path.resolve(srcdir, script.name)],
+        bundle: true,
+        platform: "node",
+        external: ["yargs", "jsdom"],
+      },
+    }),
+    {}
+  );
+
+  yargs(process.argv.splice(2))
+    .locale("en")
+    .command(
+      ["$0 [build..]"],
+      "build script file",
+      (yargs) =>
+        yargs.positional("build", {
+          choices: ["all", ...Object.keys(builders)],
+          describe: "select build target",
+          default: ["all"],
         }),
-    };
-  }, {});
-
-  return {
-    ...builders,
-    all() {
-      return Promise.all(
-        Object.keys(builders)
-          .filter((k) => k !== "all" && typeof builders[k] === "function")
-          .map(async (k) => builders[k]())
-      );
-    },
-  };
-}
-
-const builders = defineBuilders(
-  {
-    name: "gen-problem",
-    external: ["yargs"],
-  },
-  {
-    name: "aozora-uta-dl",
-    external: ["yargs", "jsdom"],
-  },
-  {
-    name: "preview-server",
-    external: ["yargs"],
-  }
-);
-
-yargs(process.argv.splice(2))
-  .command(
-    ["$0 [build]"],
-    "",
-    (yargs) =>
-      yargs.positional("build", {
-        choices: Object.keys(builders),
-        default: "all",
-      }),
-    (argv) => builders[argv.build]()
-  )
-  .help()
-  .alias("h", "help").argv;
+      async (argv) => {
+        const build = [...new Set(argv.build)];
+        const targets = build.includes("all")
+          ? Object.values(builders)
+          : build.map((name) => builders[name]);
+        return await Promise.all(
+          targets.map((builder) =>
+            esbuild.build(builder).then((result) =>
+              console.log({
+                entryPoints: builder.entryPoints,
+                ...result,
+              })
+            )
+          )
+        );
+      }
+    )
+    .command("clean", "clean outdir", {}, async (argv) => {
+      await fs.rm(outdir, { recursive: true });
+    })
+    .strictCommands()
+    .help()
+    .alias("h", "help").argv;
+})();
