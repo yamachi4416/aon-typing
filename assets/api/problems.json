@@ -581,7 +581,7 @@
       "words": 30,
       "chars": 236,
       "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
+      "updatedAt": "2022-07-01",
       "tags": [
         {
           "id": "00009",
@@ -604,7 +604,7 @@
       "words": 30,
       "chars": 236,
       "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
+      "updatedAt": "2022-07-01",
       "tags": [
         {
           "id": "00009",
@@ -831,8 +831,8 @@
       "id": "1010112",
       "title": "京浜東北線の駅いちらん",
       "type": "japanese",
-      "words": 47,
-      "chars": 393,
+      "words": 36,
+      "chars": 304,
       "createdAt": "2022-06-10",
       "updatedAt": "2022-06-10",
       "tags": [
@@ -881,6 +881,52 @@
       "chars": 179,
       "createdAt": "2022-06-10",
       "updatedAt": "2022-06-10",
+      "tags": [
+        {
+          "id": "00009",
+          "name": "日本語"
+        },
+        {
+          "id": "00007",
+          "name": "地理"
+        },
+        {
+          "id": "00019",
+          "name": "駅名"
+        }
+      ]
+    },
+    {
+      "id": "1010116",
+      "title": "横須賀線の駅いちらん",
+      "type": "japanese",
+      "words": 19,
+      "chars": 155,
+      "createdAt": "2022-07-01",
+      "updatedAt": "2022-07-01",
+      "tags": [
+        {
+          "id": "00009",
+          "name": "日本語"
+        },
+        {
+          "id": "00007",
+          "name": "地理"
+        },
+        {
+          "id": "00019",
+          "name": "駅名"
+        }
+      ]
+    },
+    {
+      "id": "1010124",
+      "title": "根岸線の駅いちらん",
+      "type": "japanese",
+      "words": 12,
+      "chars": 97,
+      "createdAt": "2022-07-01",
+      "updatedAt": "2022-07-01",
       "tags": [
         {
           "id": "00009",

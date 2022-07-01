@@ -1,0 +1,118 @@
+{
+  "id": "1010116",
+  "title": "横須賀線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00007",
+      "name": "地理"
+    },
+    {
+      "id": "00019",
+      "name": "駅名"
+    }
+  ],
+  "createdAt": "2022-07-01",
+  "updatedAt": "2022-07-01",
+  "words": [
+    {
+      "info": "東京",
+      "info2": "とうきょう",
+      "word": "toukyou"
+    },
+    {
+      "info": "新橋",
+      "info2": "しんばし",
+      "word": "sinbasi"
+    },
+    {
+      "info": "品川",
+      "info2": "しながわ",
+      "word": "sinagawa"
+    },
+    {
+      "info": "西大井",
+      "info2": "にしおおい",
+      "word": "nisiooi"
+    },
+    {
+      "info": "武蔵小杉",
+      "info2": "むさしこすぎ",
+      "word": "musasikosugi"
+    },
+    {
+      "info": "新川崎",
+      "info2": "しんかわさき",
+      "word": "sinkawasaki"
+    },
+    {
+      "info": "横浜",
+      "info2": "よこはま",
+      "word": "yokohama"
+    },
+    {
+      "info": "保土ケ谷",
+      "info2": "ほどがや",
+      "word": "hodogaya"
+    },
+    {
+      "info": "東戸塚",
+      "info2": "ひがしとつか",
+      "word": "higasitotuka"
+    },
+    {
+      "info": "戸塚",
+      "info2": "とつか",
+      "word": "totuka"
+    },
+    {
+      "info": "大船",
+      "info2": "おおふな",
+      "word": "oohuna"
+    },
+    {
+      "info": "北鎌倉",
+      "info2": "きたかまくら",
+      "word": "kitakamakura"
+    },
+    {
+      "info": "鎌倉",
+      "info2": "かまくら",
+      "word": "kamakura"
+    },
+    {
+      "info": "逗子",
+      "info2": "ずし",
+      "word": "zusi"
+    },
+    {
+      "info": "東逗子",
+      "info2": "ひがしずし",
+      "word": "higasizusi"
+    },
+    {
+      "info": "田浦",
+      "info2": "たうら",
+      "word": "taura"
+    },
+    {
+      "info": "横須賀",
+      "info2": "よこすか",
+      "word": "yokosuka"
+    },
+    {
+      "info": "衣笠",
+      "info2": "きぬがさ",
+      "word": "kinugasa"
+    },
+    {
+      "info": "久里浜",
+      "info2": "くりはま",
+      "word": "kurihama"
+    }
+  ]
+}
