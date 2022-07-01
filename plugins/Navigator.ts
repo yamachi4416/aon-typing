@@ -7,6 +7,12 @@ class Navigator {
     return !!this.path;
   }
 
+  replaceQuery(query: Record<string, string | string[]>) {
+    const router = useRouter();
+    const to = router.resolve({ query }, router.currentRoute.value);
+    router.options.history.replace(to.fullPath);
+  }
+
   async indexProblemDetail({ id }: { id: string }) {
     await useRouter().push({
       name: "index-problems-id",
@@ -63,10 +69,10 @@ class Navigator {
 
 export const navigator = new Navigator();
 
-export default defineNuxtPlugin((ctx) => {
-  if (!ctx.ssrContext) {
+export default defineNuxtPlugin((nuxtApp) => {
+  if (process.client) {
     useRouter().afterEach((to, from) => {
-      navigator.path = history.state.back;
+      navigator.path = useRouter().options.history.state.back as string;
     });
   }
 

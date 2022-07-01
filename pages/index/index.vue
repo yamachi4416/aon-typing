@@ -133,6 +133,10 @@ const kwd = computed({
 
 const enableSearch = computed(() => !!kwd.value.trim());
 
+onMounted(() => {
+  state.kwd = (route.query.kwd as string) ?? "";
+});
+
 async function searchProblems() {
   if (enableSearch.value) {
     await router.push({
@@ -144,12 +148,12 @@ async function searchProblems() {
 
 async function searchEnterProblems() {
   if (enableSearch.value) {
-    await changeKwds();
+    changeKwds();
     await searchProblems();
   }
 }
 
-async function changeKwds() {
+function changeKwds() {
   const query = { ...route.query };
   if (kwd.value !== (query.kwd ?? "")) {
     if (!kwd.value) {
@@ -157,8 +161,7 @@ async function changeKwds() {
     } else {
       query.kwd = kwd.value;
     }
-    useScrollWaiter().noScroll();
-    await router.replace({ query });
+    useNavigator().replaceQuery(query);
   }
 }
 </script>

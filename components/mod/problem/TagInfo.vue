@@ -30,16 +30,21 @@
 import { TagInfo } from "~/types/problems";
 
 const route = useRoute();
-const router = useRouter();
 
 const props = withDefaults(
   defineProps<{
     tag: TagInfo;
+    qtags?: string[];
   }>(),
   {
     tag: () => ({} as TagInfo),
+    qtags: () => [],
   }
 );
+
+const emit = defineEmits<{
+  (e: "tag", tags: string[]);
+}>();
 
 const tags = ref(getTags());
 
@@ -64,27 +69,27 @@ function getTags() {
 
 function selectTag(tag: { selected: boolean }) {
   tag.selected = !tag.selected;
+  const stags = tags.value.filter((t) => t.selected).map((t) => t.id);
   const query = {
     ...route.query,
-    tags: tags.value
-      .filter((t) => t.selected)
-      .map((t) => t.id)
-      .join(","),
+    tags: stags.join(","),
   };
   if (!query.tags) {
     delete query.tags;
   }
-  useScrollWaiter().noScroll();
-  router.replace({ query });
+  useNavigator().replaceQuery(query);
+  emit("tag", stags);
 }
 
-onMounted(() => {
-  const qtags = (route.query.tags as string) ?? "";
-  const stags = new Set([...qtags.split(",")]);
-  tags.value.forEach((tag) => {
-    tag.selected = stags.has(tag.id);
-  });
-});
+watch(
+  () => props.qtags,
+  (value) => {
+    const stags = new Set(value ?? []);
+    tags.value.forEach((tag) => {
+      tag.selected = stags.has(tag.id);
+    });
+  }
+);
 </script>
 
 <style lang="scss" scoped>

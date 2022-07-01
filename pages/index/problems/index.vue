@@ -43,19 +43,20 @@ useHead({
   title: "問題いちらん",
 });
 
-const route = useRoute();
-const problemState = useProblems();
-
-const kwds = computed(() => convertKwds(route.query.kwd));
+const kwds = ref(convertKwds(useRoute().query.kwd));
 const problems = computed(() => {
   if (kwds.value?.length) {
     return (
-      problemState.problems.filter((p) =>
+      useProblems().problems.filter((p) =>
         kwds.value.every((kwd) => p.title.includes(kwd))
       ) ?? []
     );
   }
-  return problemState.problems;
+  return useProblems().problems;
+});
+
+onMounted(() => {
+  kwds.value = convertKwds(useRoute().query.kwd);
 });
 
 function convertKwds(val: string | string[]) {
