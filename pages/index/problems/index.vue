@@ -59,6 +59,13 @@ onMounted(() => {
   kwds.value = convertKwds(useRoute().query.kwd);
 });
 
+watch(
+  () => useRoute().query,
+  () => {
+    kwds.value = convertKwds(useRoute().query.kwd);
+  }
+);
+
 function convertKwds(val: string | string[]) {
   const kwds = () => {
     if (!val) return [];
