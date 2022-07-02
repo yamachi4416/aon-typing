@@ -2,7 +2,7 @@
   <ModProblemDetail :detail="detail" @tag="$navigator.indexTagDetail">
     <span>
       <button
-        v-if="$navigator.enable"
+        v-show="$navigator.enable"
         class="button"
         @click="$navigator.backOrIndex()"
       >

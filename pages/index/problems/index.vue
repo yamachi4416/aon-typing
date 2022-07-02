@@ -16,7 +16,7 @@
         <div class="buttons">
           <span>
             <button
-              v-if="$navigator.enable"
+              v-show="$navigator.enable"
               class="button"
               @click="$router.back()"
             >

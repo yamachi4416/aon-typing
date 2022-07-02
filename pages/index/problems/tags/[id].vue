@@ -2,7 +2,11 @@
   <div>
     <ModProblemTagInfo :tag="tag" :qtags="tags" @tag="changeTags">
       <span>
-        <button v-if="$navigator.enable" class="button" @click="$router.back()">
+        <button
+          v-show="$navigator.enable"
+          class="button"
+          @click="$router.back()"
+        >
           もどる
         </button>
       </span>
