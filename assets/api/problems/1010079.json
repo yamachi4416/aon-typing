@@ -1,0 +1,61 @@
+{
+  "id": "1010079",
+  "title": "日光線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    {
+      "id": "00009",
+      "name": "日本語"
+    },
+    {
+      "id": "00007",
+      "name": "地理"
+    },
+    {
+      "id": "00019",
+      "name": "駅名"
+    }
+  ],
+  "createdAt": "2022-07-01",
+  "updatedAt": "2022-07-01",
+  "optional": {
+    "cd": "92"
+  },
+  "words": [
+    {
+      "info": "日光",
+      "info2": "にっこう",
+      "word": "nikkou"
+    },
+    {
+      "info": "今市",
+      "info2": "いまいち",
+      "word": "imaiti"
+    },
+    {
+      "info": "下野大沢",
+      "info2": "しもつけおおさわ",
+      "word": "simotukeoosawa"
+    },
+    {
+      "info": "文挾",
+      "info2": "ふばさみ",
+      "word": "hubasami"
+    },
+    {
+      "info": "鹿沼",
+      "info2": "かぬま",
+      "word": "kanuma"
+    },
+    {
+      "info": "鶴田",
+      "info2": "つるた",
+      "word": "turuta"
+    },
+    {
+      "info": "宇都宮",
+      "info2": "うつのみや",
+      "word": "utunomiya"
+    }
+  ]
+}
