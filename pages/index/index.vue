@@ -107,41 +107,29 @@ useHead({
   title: "トップページ",
 });
 
-const route = useRoute();
-const router = useRouter();
-const problemState = useProblems();
-const newProblems = computed(() => problemState.newProblems);
-const tagSummary = computed(() => problemState.tagSummary);
+const newProblems = computed(() => useProblems().newProblems);
+const tagSummary = computed(() => useProblems().tagSummary);
 
 const state = reactive({
-  kwd: (route.query.kwd as string) ?? "",
+  kwd: "",
 });
 
-const kwd = computed({
-  get: () => state.kwd ?? "",
-  set: (val) => {
-    if (val) {
-      const xs = Array.from(val);
-      if (xs.length > 100) {
-        state.kwd = xs.slice(0, 100).join("");
-      }
-    } else {
-      state.kwd = val;
-    }
-  },
-});
-
-const enableSearch = computed(() => !!kwd.value.trim());
+const enableSearch = computed(() => !!normalizedKwd(state.kwd));
 
 onMounted(() => {
-  state.kwd = (route.query.kwd as string) ?? "";
+  state.kwd = normalizedKwd((useRoute().query.kwd as string) ?? "");
 });
+
+function normalizedKwd(val: string) {
+  const kwd = val ? Array.from(val).slice(0, 100).join("") : "";
+  return kwd.trim();
+}
 
 async function searchProblems() {
   if (enableSearch.value) {
-    await router.push({
+    await useRouter().push({
       name: "index-problems",
-      query: { kwd: kwd.value },
+      query: { kwd: normalizedKwd(state.kwd) },
     });
   }
 }
@@ -154,12 +142,13 @@ async function searchEnterProblems() {
 }
 
 function changeKwds() {
-  const query = { ...route.query };
-  if (kwd.value !== (query.kwd ?? "")) {
-    if (!kwd.value) {
+  const kwd = normalizedKwd(state.kwd);
+  const query = { ...useRoute().query };
+  if (kwd !== (query.kwd ?? "")) {
+    if (!kwd) {
       delete query.kwd;
     } else {
-      query.kwd = kwd.value;
+      query.kwd = kwd;
     }
     useNavigator().replaceQuery(query);
   }
