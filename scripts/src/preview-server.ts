@@ -129,8 +129,8 @@ function logging(req: IncomingMessage, res: ServerResponse) {
   console.log(`${date} : ${req.method} ${req.url}`);
 }
 
-async function main() {
-  const args = await yargs
+function setup(yargs: yargs.Argv) {
+  return yargs
     .options("dir", {
       alias: "d",
       type: "string",
@@ -160,8 +160,14 @@ async function main() {
       requiresArg: true,
     })
     .help()
-    .alias("h", "help").argv;
+    .alias("h", "help");
+}
 
+type MainArgs = ReturnType<typeof setup> extends yargs.Argv<infer T>
+  ? T
+  : never;
+
+async function command(args: MainArgs) {
   const handlers = [contactHandler(), sendFileHandler(args.dir)];
 
   const server = createServer(async (req, res) => {
@@ -186,7 +192,7 @@ async function main() {
           `
   ${"-".repeat(50)}
 Server Listen On  : ${args.host}:${args.port}
-Static Files Root : ${args.dist}
+Static Files Root : ${args.dir}
   ${"-".repeat(50)}`.trimStart()
         );
       })
@@ -196,4 +202,11 @@ Static Files Root : ${args.dist}
   });
 }
 
-main().then((code) => process.exit(code));
+if (require.main) {
+  (async () => command(await setup(yargs).argv))();
+}
+
+export default {
+  setup,
+  command,
+};

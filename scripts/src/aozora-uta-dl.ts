@@ -2,7 +2,7 @@ import { JSDOM } from "jsdom";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { TextDecoder } from "node:util";
-import yargs from "yargs";
+import yargs, { Arguments } from "yargs";
 import { kana2Hira } from "~/libs/TypingJapaneseChars";
 import { ProblemDetailWord } from "~/types/problems";
 import { httpFetch } from "./lib/util";
@@ -161,8 +161,8 @@ function splitWords(words: ProblemDetailWord[], regex: RegExp, max: number) {
   return ret;
 }
 
-async function main() {
-  const args = await yargs
+function setup(yargs: yargs.Argv) {
+  return yargs
     .options("url", {
       alias: "u",
       type: "string",
@@ -184,9 +184,14 @@ async function main() {
       requiresArg: true,
     })
     .help()
-    .alias("h", "help")
-    .parse();
+    .alias("h", "help");
+}
 
+type MainArgs = ReturnType<typeof setup> extends yargs.Argv<infer T>
+  ? T
+  : never;
+
+async function command(args: MainArgs) {
   const cardUrl = new URL(args.url);
   const distDir = args.dist;
   const wordMax = args.word;
@@ -217,7 +222,7 @@ async function main() {
     { info: info.author, info2: info.authorKana }
   );
 
-  page.words.forEach((word) => {
+  page.words.forEach((word: { info: string; info2: string }) => {
     word.info = word.info.trim();
     word.info2 = word.info2.trim();
   });
@@ -255,4 +260,11 @@ async function main() {
   return 0;
 }
 
-main().then((code) => process.exit(code));
+if (require.main) {
+  (async () => command(await setup(yargs).argv))();
+}
+
+export default {
+  setup,
+  command,
+};

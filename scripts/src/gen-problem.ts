@@ -164,8 +164,8 @@ async function generateProblemData(dataDir: string, apiDir: string) {
   );
 }
 
-async function main() {
-  const args = await yargs
+function setup(yargs: yargs.Argv) {
+  return yargs
     .options("in", {
       alias: "i",
       type: "string",
@@ -181,12 +181,22 @@ async function main() {
       requiresArg: true,
     })
     .help()
-    .alias("h", "help")
-    .parse();
-
-  await generateProblemData(args.in, args.out);
-
-  return 0;
+    .alias("h", "help");
 }
 
-main().then((code) => process.exit(code));
+type MainArgs = ReturnType<typeof setup> extends yargs.Argv<infer T>
+  ? T
+  : never;
+
+async function command(args: MainArgs) {
+  await generateProblemData(args.in, args.out);
+}
+
+if (require.main) {
+  (async () => command(await setup(yargs).argv))();
+}
+
+export default {
+  setup,
+  command,
+};
