@@ -1,5 +1,6 @@
 import http from "http";
 import https from "https";
+import type { CommandModule } from "yargs";
 
 interface HttpRequestOptions {
   method?: string;
@@ -49,4 +50,8 @@ export async function httpFetch(url: string, options: HttpRequestOptions = {}) {
 
     req.end();
   });
+}
+
+export function defineCommand<T, R>(def: CommandModule<T, R>) {
+  return def;
 }

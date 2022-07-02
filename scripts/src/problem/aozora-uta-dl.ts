@@ -2,10 +2,9 @@ import { JSDOM } from "jsdom";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { TextDecoder } from "node:util";
-import yargs from "yargs";
 import { kana2Hira } from "~/libs/TypingJapaneseChars";
 import { ProblemDetailWord } from "~/types/problems";
-import { httpFetch } from "../lib/util";
+import { defineCommand, httpFetch } from "../lib/util";
 
 const normalizeMap = {
   一: "１",
@@ -161,35 +160,7 @@ function splitWords(words: ProblemDetailWord[], regex: RegExp, max: number) {
   return ret;
 }
 
-function builder(yargs: yargs.Argv) {
-  return yargs
-    .options("url", {
-      alias: "u",
-      type: "string",
-      description: "request url",
-      demandOption: true,
-      requiresArg: true,
-    })
-    .options("dist", {
-      alias: "d",
-      type: "string",
-      description: "output directory",
-      requiresArg: true,
-    })
-    .options("word", {
-      alias: "w",
-      type: "number",
-      description: "word max",
-      default: 40,
-      requiresArg: true,
-    });
-}
-
-type MainArgs = ReturnType<typeof builder> extends yargs.Argv<infer T>
-  ? T
-  : never;
-
-async function handler(args: MainArgs) {
+async function aozoraDL(args: { url: string; dist: string; word: number }) {
   const cardUrl = new URL(args.url);
   const distDir = args.dist;
   const wordMax = args.word;
@@ -256,9 +227,30 @@ async function handler(args: MainArgs) {
   }
 }
 
-export default {
+export default defineCommand({
   command: "aozora",
   describe: "download uta info for typing problem json",
-  builder,
-  handler,
-};
+  builder: (argv) =>
+    argv
+      .options("url", {
+        alias: "u",
+        type: "string",
+        description: "request url",
+        demandOption: true,
+        requiresArg: true,
+      })
+      .options("dist", {
+        alias: "d",
+        type: "string",
+        description: "output directory",
+        requiresArg: true,
+      })
+      .options("word", {
+        alias: "w",
+        type: "number",
+        description: "word max",
+        default: 40,
+        requiresArg: true,
+      }),
+  handler: (args) => aozoraDL(args),
+});

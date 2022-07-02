@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import yargs from "yargs";
 import jaChars from "~/libs/TypingJapaneseChars";
+import { defineCommand } from "../lib/util";
 
 async function listJsonFiles(dir: string) {
   const files = await fs.readdir(dir, { withFileTypes: true });
@@ -164,35 +164,27 @@ async function generateProblemData(dataDir: string, apiDir: string) {
   );
 }
 
-function setup(yargs: yargs.Argv) {
-  return yargs
-    .options("in", {
-      alias: "i",
-      type: "string",
-      description: "input data directory",
-      demandOption: true,
-      requiresArg: true,
-    })
-    .options("out", {
-      alias: "o",
-      type: "string",
-      description: "output directory",
-      demandOption: true,
-      requiresArg: true,
-    });
-}
-
-type MainArgs = ReturnType<typeof setup> extends yargs.Argv<infer T>
-  ? T
-  : never;
-
-async function command(args: MainArgs) {
-  await generateProblemData(args.in, args.out);
-}
-
-export default {
+export default defineCommand({
   command: "generate",
   describe: "typing problem json sets",
-  builder: setup,
-  handler: command,
-};
+  builder(yargs) {
+    return yargs
+      .options("in", {
+        alias: "i",
+        type: "string",
+        description: "input data directory",
+        demandOption: true,
+        requiresArg: true,
+      })
+      .options("out", {
+        alias: "o",
+        type: "string",
+        description: "output directory",
+        demandOption: true,
+        requiresArg: true,
+      });
+  },
+  async handler(args) {
+    await generateProblemData(args.in, args.out);
+  },
+});

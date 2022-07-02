@@ -3,6 +3,7 @@ import { createServer, IncomingMessage, ServerResponse } from "node:http";
 import path from "node:path";
 import { parse as urlParse, UrlWithStringQuery } from "node:url";
 import yargs from "yargs";
+import { defineCommand } from "./lib/util";
 
 type Hanlder = {
   match: (url: UrlWithStringQuery, req: IncomingMessage) => boolean;
@@ -129,7 +130,7 @@ function logging(req: IncomingMessage, res: ServerResponse) {
   console.log(`${date} : ${req.method} ${req.url}`);
 }
 
-function setup(yargs: yargs.Argv) {
+function builder(yargs: yargs.Argv) {
   return yargs
     .options("dir", {
       alias: "d",
@@ -161,11 +162,11 @@ function setup(yargs: yargs.Argv) {
     });
 }
 
-type MainArgs = ReturnType<typeof setup> extends yargs.Argv<infer T>
+type MainArgs = ReturnType<typeof builder> extends yargs.Argv<infer T>
   ? T
   : never;
 
-async function command(args: MainArgs) {
+async function handler(args: MainArgs) {
   const handlers = [contactHandler(), sendFileHandler(args.dir)];
 
   const server = createServer(async (req, res) => {
@@ -200,12 +201,12 @@ ${"-".repeat(50)}`.trimStart()
   });
 }
 
-const problem = {
+const problem = defineCommand({
   command: "preview",
   describe: "generate preview server",
-  builder: setup,
-  handler: command,
-};
+  builder,
+  handler,
+});
 
 export async function main() {
   yargs
