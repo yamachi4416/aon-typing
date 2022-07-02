@@ -70,14 +70,7 @@ function getTags() {
 function selectTag(tag: { selected: boolean }) {
   tag.selected = !tag.selected;
   const stags = tags.value.filter((t) => t.selected).map((t) => t.id);
-  const query = {
-    ...route.query,
-    tags: stags.join(","),
-  };
-  if (!query.tags) {
-    delete query.tags;
-  }
-  useNavigator().replaceQuery(query);
+  useNavigator().replaceQuery({ tags: stags.join(",") });
   emit("tag", stags);
 }
 

@@ -7,9 +7,15 @@ class Navigator {
     return !!this.path;
   }
 
-  replaceQuery(query: Record<string, string | string[]>) {
+  replaceQuery(query: Record<string, string | string[]>, keep: boolean = true) {
     const router = useRouter();
-    const to = router.resolve({ query }, router.currentRoute.value);
+    const repQuery = keep ? { ...useRoute().query, ...query } : { ...query };
+    Object.keys(repQuery).forEach((key) => {
+      if (!repQuery[key]) {
+        delete repQuery[key];
+      }
+    });
+    const to = router.resolve({ query: repQuery }, router.currentRoute.value);
     router.options.history.replace(to.fullPath);
   }
 

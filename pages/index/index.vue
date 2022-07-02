@@ -143,14 +143,8 @@ async function searchEnterProblems() {
 
 function changeKwds() {
   const kwd = normalizedKwd(state.kwd);
-  const query = { ...useRoute().query };
-  if (kwd !== (query.kwd ?? "")) {
-    if (!kwd) {
-      delete query.kwd;
-    } else {
-      query.kwd = kwd;
-    }
-    useNavigator().replaceQuery(query);
+  if (kwd !== (useRoute().query.kwd ?? "")) {
+    useNavigator().replaceQuery({ kwd });
   }
 }
 </script>
