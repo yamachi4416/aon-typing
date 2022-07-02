@@ -158,9 +158,7 @@ function setup(yargs: yargs.Argv) {
       type: "string",
       description: "404 error html file",
       requiresArg: true,
-    })
-    .help()
-    .alias("h", "help");
+    });
 }
 
 type MainArgs = ReturnType<typeof setup> extends yargs.Argv<infer T>
@@ -185,28 +183,39 @@ async function command(args: MainArgs) {
     }
   });
 
-  return await new Promise<number>((resolve) => {
+  return await new Promise<void>((resolve) => {
     server
       .listen(args.port, args.host, () => {
         console.log(
           `
-  ${"-".repeat(50)}
+${"-".repeat(50)}
 Server Listen On  : ${args.host}:${args.port}
 Static Files Root : ${args.dir}
-  ${"-".repeat(50)}`.trimStart()
+${"-".repeat(50)}`.trimStart()
         );
       })
       .on("close", () => {
-        resolve(0);
+        resolve();
       });
   });
 }
 
-if (require.main) {
-  (async () => command(await setup(yargs).argv))();
+const problem = {
+  command: "preview",
+  describe: "generate preview server",
+  builder: setup,
+  handler: command,
+};
+
+export async function main() {
+  yargs
+    .locale("en")
+    .help()
+    .alias("h", "help")
+    .command({ ...problem, aliases: "$0" })
+    .parse();
 }
 
-export default {
-  setup,
-  command,
-};
+export default problem;
+
+main();

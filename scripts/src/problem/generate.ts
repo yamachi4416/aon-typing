@@ -179,9 +179,7 @@ function setup(yargs: yargs.Argv) {
       description: "output directory",
       demandOption: true,
       requiresArg: true,
-    })
-    .help()
-    .alias("h", "help");
+    });
 }
 
 type MainArgs = ReturnType<typeof setup> extends yargs.Argv<infer T>
@@ -192,11 +190,9 @@ async function command(args: MainArgs) {
   await generateProblemData(args.in, args.out);
 }
 
-if (require.main) {
-  (async () => command(await setup(yargs).argv))();
-}
-
 export default {
-  setup,
-  command,
+  command: "generate",
+  describe: "typing problem json sets",
+  builder: setup,
+  handler: command,
 };

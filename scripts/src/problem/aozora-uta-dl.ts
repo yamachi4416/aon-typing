@@ -2,10 +2,10 @@ import { JSDOM } from "jsdom";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { TextDecoder } from "node:util";
-import yargs, { Arguments } from "yargs";
+import yargs from "yargs";
 import { kana2Hira } from "~/libs/TypingJapaneseChars";
 import { ProblemDetailWord } from "~/types/problems";
-import { httpFetch } from "./lib/util";
+import { httpFetch } from "../lib/util";
 
 const normalizeMap = {
   一: "１",
@@ -161,7 +161,7 @@ function splitWords(words: ProblemDetailWord[], regex: RegExp, max: number) {
   return ret;
 }
 
-function setup(yargs: yargs.Argv) {
+function builder(yargs: yargs.Argv) {
   return yargs
     .options("url", {
       alias: "u",
@@ -182,16 +182,14 @@ function setup(yargs: yargs.Argv) {
       description: "word max",
       default: 40,
       requiresArg: true,
-    })
-    .help()
-    .alias("h", "help");
+    });
 }
 
-type MainArgs = ReturnType<typeof setup> extends yargs.Argv<infer T>
+type MainArgs = ReturnType<typeof builder> extends yargs.Argv<infer T>
   ? T
   : never;
 
-async function command(args: MainArgs) {
+async function handler(args: MainArgs) {
   const cardUrl = new URL(args.url);
   const distDir = args.dist;
   const wordMax = args.word;
@@ -244,27 +242,23 @@ async function command(args: MainArgs) {
     const stat = await fs.stat(distDir);
     if (stat.isDirectory) {
       console.error(`${distDir} is not directory.`);
-      return 1;
+      return;
     }
     const dist = path.resolve(distDir, `${page.id}.json`);
     const temp = JSON.parse((await fs.readFile(dist)).toString());
     if (temp.skip) {
       console.info(`skip write: ${dist}`);
-      return 0;
+      return;
     }
     await fs.writeFile(dist, JSON.stringify(temp, null, 2));
   } else {
     console.log(data);
   }
-
-  return 0;
-}
-
-if (require.main) {
-  (async () => command(await setup(yargs).argv))();
 }
 
 export default {
-  setup,
-  command,
+  command: "aozora",
+  describe: "download uta info for typing problem json",
+  builder,
+  handler,
 };

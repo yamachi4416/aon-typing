@@ -6,8 +6,8 @@
     "preview": "nuxt preview",
     "preview:dist": "node ./scripts/dist/preview-server.js -d ./dist",
     "generate": "nuxt generate",
-    "generate:problem": "node ./scripts/dist/gen-problem.js -i ./data/problems -o ./assets/api",
-    "download:aozora": "node ./scripts/dist/aozora-uta-dl.js",
+    "generate:problem": "node ./scripts/dist/problem.js generate -i ./data/problems -o ./assets/api",
+    "download:aozora": "node ./scripts/dist/problem.js aozora",
     "build:scripts": "node scripts/build-scripts.mjs"
   },
   "devDependencies": {

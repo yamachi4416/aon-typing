@@ -29,21 +29,21 @@ import yargs from "yargs";
 
   yargs(process.argv.splice(2))
     .locale("en")
-    .command(
-      ["$0 [build..]"],
-      "build script file",
-      (yargs) =>
-        yargs.positional("build", {
+    .command({
+      command: "$0 [build..]",
+      describe: "build script files",
+      builder: (args) =>
+        args.positional("build", {
           choices: ["all", ...Object.keys(builders)],
           describe: "select build target",
           default: ["all"],
         }),
-      async (argv) => {
+      handler: async (argv) => {
         const build = [...new Set(argv.build)];
         const targets = build.includes("all")
           ? Object.values(builders)
           : build.map((name) => builders[name]);
-        return await Promise.all(
+        await Promise.all(
           targets.map((builder) =>
             esbuild.build(builder).then((result) =>
               console.log({
@@ -53,10 +53,14 @@ import yargs from "yargs";
             )
           )
         );
-      }
-    )
-    .command("clean", "clean outdir", {}, async (argv) => {
-      await fs.rm(outdir, { recursive: true });
+      },
+    })
+    .command({
+      command: "clean",
+      describe: "clean outdir",
+      handler: async (argv) => {
+        await fs.rm(outdir, { recursive: true });
+      },
     })
     .strictCommands()
     .help()
