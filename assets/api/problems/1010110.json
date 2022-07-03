@@ -1,6 +1,6 @@
 {
   "id": "1010110",
-  "title": "秋田新幹線の駅いちらん",
+  "title": "ＪＲ秋田新幹線の駅いちらん",
   "type": "japanese",
   "tags": [
     {
@@ -18,76 +18,14 @@
   ],
   "createdAt": "2022-02-06",
   "updatedAt": "2022-02-06",
+  "optional": {
+    "cd": "28"
+  },
   "words": [
     {
-      "info": "東京",
-      "info2": "とうきょう",
-      "word": "toukyou"
-    },
-    {
-      "info": "上野",
-      "info2": "うえの",
-      "word": "ueno"
-    },
-    {
-      "info": "大宮",
-      "info2": "おおみや",
-      "word": "oomiya"
-    },
-    {
-      "info": "仙台",
-      "info2": "せんだい",
-      "word": "sendai"
-    },
-    {
-      "info": "古川",
-      "info2": "ふるかわ",
-      "word": "hurukawa"
-    },
-    {
-      "info": "くりこま高原",
-      "info2": "くりこまこうげん",
-      "word": "kurikomakougenn"
-    },
-    {
-      "info": "一ノ関",
-      "info2": "いちのせき",
-      "word": "itinoseki"
-    },
-    {
-      "info": "水沢江刺",
-      "info2": "みずさわえさし",
-      "word": "mizusawaesasi"
-    },
-    {
-      "info": "北上",
-      "info2": "きたかみ",
-      "word": "kitakami"
-    },
-    {
-      "info": "新花巻",
-      "info2": "しんはなまき",
-      "word": "sinhanamaki"
-    },
-    {
-      "info": "盛岡",
-      "info2": "もりおか",
-      "word": "morioka"
-    },
-    {
-      "info": "雫石",
-      "info2": "しずくいし",
-      "word": "sizukuisi"
-    },
-    {
-      "info": "田沢湖",
-      "info2": "たざわこ",
-      "word": "tazawako"
-    },
-    {
-      "info": "角館",
-      "info2": "かくのだて",
-      "word": "kakunodate"
+      "info": "秋田",
+      "info2": "あきた",
+      "word": "akita"
     },
     {
       "info": "大曲",
@@ -95,9 +33,74 @@
       "word": "oomagari"
     },
     {
-      "info": "秋田",
-      "info2": "あきた",
-      "word": "akita"
+      "info": "角館",
+      "info2": "かくのだて",
+      "word": "kakunodate"
+    },
+    {
+      "info": "田沢湖",
+      "info2": "たざわこ",
+      "word": "tazawako"
+    },
+    {
+      "info": "雫石",
+      "info2": "しずくいし",
+      "word": "sizukuisi"
+    },
+    {
+      "info": "盛岡",
+      "info2": "もりおか",
+      "word": "morioka"
+    },
+    {
+      "info": "新花巻",
+      "info2": "しんはなまき",
+      "word": "sinhanamaki"
+    },
+    {
+      "info": "北上",
+      "info2": "きたかみ",
+      "word": "kitakami"
+    },
+    {
+      "info": "水沢江刺",
+      "info2": "みずさわえさし",
+      "word": "mizusawaesasi"
+    },
+    {
+      "info": "一ノ関",
+      "info2": "いちのせき",
+      "word": "itinoseki"
+    },
+    {
+      "info": "くりこま高原",
+      "info2": "くりこまこうげん",
+      "word": "kurikomakougenn"
+    },
+    {
+      "info": "古川",
+      "info2": "ふるかわ",
+      "word": "hurukawa"
+    },
+    {
+      "info": "仙台",
+      "info2": "せんだい",
+      "word": "sendai"
+    },
+    {
+      "info": "大宮",
+      "info2": "おおみや",
+      "word": "oomiya"
+    },
+    {
+      "info": "上野",
+      "info2": "うえの",
+      "word": "ueno"
+    },
+    {
+      "info": "東京",
+      "info2": "とうきょう",
+      "word": "toukyou"
     }
   ]
 }

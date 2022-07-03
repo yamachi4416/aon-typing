@@ -1,6 +1,6 @@
 {
   "id": "1010124",
-  "title": "根岸線の駅いちらん",
+  "title": "ＪＲ根岸線の駅いちらん",
   "type": "japanese",
   "tags": [
     {
@@ -18,56 +18,14 @@
   ],
   "createdAt": "2022-07-01",
   "updatedAt": "2022-07-01",
+  "optional": {
+    "cd": "124"
+  },
   "words": [
     {
-      "info": "横浜",
-      "info2": "よこはま",
-      "word": "yokohama"
-    },
-    {
-      "info": "桜木町",
-      "info2": "さくらぎちょう",
-      "word": "sakuragityou"
-    },
-    {
-      "info": "関内",
-      "info2": "かんない",
-      "word": "kannnai"
-    },
-    {
-      "info": "石川町",
-      "info2": "いしかわちょう",
-      "word": "isikawatyou"
-    },
-    {
-      "info": "山手",
-      "info2": "やまて",
-      "word": "yamate"
-    },
-    {
-      "info": "根岸",
-      "info2": "ねぎし",
-      "word": "negisi"
-    },
-    {
-      "info": "磯子",
-      "info2": "いそご",
-      "word": "isogo"
-    },
-    {
-      "info": "新杉田",
-      "info2": "しんすぎた",
-      "word": "sinsugita"
-    },
-    {
-      "info": "洋光台",
-      "info2": "ようこうだい",
-      "word": "youkoudai"
-    },
-    {
-      "info": "港南台",
-      "info2": "こうなんだい",
-      "word": "kounandai"
+      "info": "大船",
+      "info2": "おおふな",
+      "word": "oohuna"
     },
     {
       "info": "本郷台",
@@ -75,9 +33,54 @@
       "word": "hongoudai"
     },
     {
-      "info": "大船",
-      "info2": "おおふな",
-      "word": "oohuna"
+      "info": "港南台",
+      "info2": "こうなんだい",
+      "word": "kounandai"
+    },
+    {
+      "info": "洋光台",
+      "info2": "ようこうだい",
+      "word": "youkoudai"
+    },
+    {
+      "info": "新杉田",
+      "info2": "しんすぎた",
+      "word": "sinsugita"
+    },
+    {
+      "info": "磯子",
+      "info2": "いそご",
+      "word": "isogo"
+    },
+    {
+      "info": "根岸",
+      "info2": "ねぎし",
+      "word": "negisi"
+    },
+    {
+      "info": "山手",
+      "info2": "やまて",
+      "word": "yamate"
+    },
+    {
+      "info": "石川町",
+      "info2": "いしかわちょう",
+      "word": "isikawatyou"
+    },
+    {
+      "info": "関内",
+      "info2": "かんない",
+      "word": "kannnai"
+    },
+    {
+      "info": "桜木町",
+      "info2": "さくらぎちょう",
+      "word": "sakuragityou"
+    },
+    {
+      "info": "横浜",
+      "info2": "よこはま",
+      "word": "yokohama"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "id": "1010108",
-  "title": "上越新幹線の駅いちらん",
+  "title": "ＪＲ上越新幹線の駅いちらん",
   "type": "japanese",
   "tags": [
     {
@@ -18,61 +18,14 @@
   ],
   "createdAt": "2022-02-06",
   "updatedAt": "2022-02-06",
+  "optional": {
+    "cd": "24"
+  },
   "words": [
     {
-      "info": "東京",
-      "info2": "とうきょう",
-      "word": "toukyou"
-    },
-    {
-      "info": "上野",
-      "info2": "うえの",
-      "word": "ueno"
-    },
-    {
-      "info": "大宮",
-      "info2": "おおみや",
-      "word": "oomiya"
-    },
-    {
-      "info": "熊谷",
-      "info2": "くまがや",
-      "word": "kumagaya"
-    },
-    {
-      "info": "本庄早稲田",
-      "info2": "ほんじょうわせだ",
-      "word": "honjouwaseda"
-    },
-    {
-      "info": "高崎",
-      "info2": "たかさき",
-      "word": "takasaki"
-    },
-    {
-      "info": "上毛高原",
-      "info2": "じょうもうこうげん",
-      "word": "joumoukougenn"
-    },
-    {
-      "info": "越後湯沢",
-      "info2": "えちごゆざわ",
-      "word": "etigoyuzawa"
-    },
-    {
-      "info": "ガーラ湯沢",
-      "info2": "がーらゆざわ",
-      "word": "ga-rayuzawa"
-    },
-    {
-      "info": "浦佐",
-      "info2": "うらさ",
-      "word": "urasa"
-    },
-    {
-      "info": "長岡",
-      "info2": "ながおか",
-      "word": "nagaoka"
+      "info": "新潟",
+      "info2": "にいがた",
+      "word": "niigata"
     },
     {
       "info": "燕三条",
@@ -80,9 +33,54 @@
       "word": "tubamesanjou"
     },
     {
-      "info": "新潟",
-      "info2": "にいがた",
-      "word": "niigata"
+      "info": "長岡",
+      "info2": "ながおか",
+      "word": "nagaoka"
+    },
+    {
+      "info": "浦佐",
+      "info2": "うらさ",
+      "word": "urasa"
+    },
+    {
+      "info": "越後湯沢",
+      "info2": "えちごゆざわ",
+      "word": "etigoyuzawa"
+    },
+    {
+      "info": "上毛高原",
+      "info2": "じょうもうこうげん",
+      "word": "joumoukougenn"
+    },
+    {
+      "info": "高崎",
+      "info2": "たかさき",
+      "word": "takasaki"
+    },
+    {
+      "info": "本庄早稲田",
+      "info2": "ほんじょうわせだ",
+      "word": "honjouwaseda"
+    },
+    {
+      "info": "熊谷",
+      "info2": "くまがや",
+      "word": "kumagaya"
+    },
+    {
+      "info": "大宮",
+      "info2": "おおみや",
+      "word": "oomiya"
+    },
+    {
+      "info": "上野",
+      "info2": "うえの",
+      "word": "ueno"
+    },
+    {
+      "info": "東京",
+      "info2": "とうきょう",
+      "word": "toukyou"
     }
   ]
 }

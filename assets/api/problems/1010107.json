@@ -1,6 +1,6 @@
 {
   "id": "1010107",
-  "title": "九州新幹線の駅いちらん",
+  "title": "ＪＲ九州新幹線の駅いちらん",
   "type": "japanese",
   "tags": [
     {
@@ -18,56 +18,14 @@
   ],
   "createdAt": "2022-02-06",
   "updatedAt": "2022-02-06",
+  "optional": {
+    "cd": "233"
+  },
   "words": [
     {
-      "info": "博多",
-      "info2": "はかた",
-      "word": "hakata"
-    },
-    {
-      "info": "新鳥栖",
-      "info2": "しんとす",
-      "word": "sintosu"
-    },
-    {
-      "info": "久留米",
-      "info2": "くるめ",
-      "word": "kurume"
-    },
-    {
-      "info": "筑後船小屋",
-      "info2": "ちくごふなごや",
-      "word": "tikugohunagoya"
-    },
-    {
-      "info": "新大牟田",
-      "info2": "しんおおむた",
-      "word": "sinnoomuta"
-    },
-    {
-      "info": "新玉名",
-      "info2": "しんたまな",
-      "word": "sintamana"
-    },
-    {
-      "info": "熊本",
-      "info2": "くまもと",
-      "word": "kumamoto"
-    },
-    {
-      "info": "新八代",
-      "info2": "しんやつしろ",
-      "word": "sinyatusiro"
-    },
-    {
-      "info": "新水俣",
-      "info2": "しんみなまた",
-      "word": "sinminamata"
-    },
-    {
-      "info": "出水",
-      "info2": "いずみ",
-      "word": "izumi"
+      "info": "鹿児島中央",
+      "info2": "かごしまちゅうおう",
+      "word": "kagosimatyuuou"
     },
     {
       "info": "川内",
@@ -75,9 +33,54 @@
       "word": "sendai"
     },
     {
-      "info": "鹿児島中央",
-      "info2": "かごしまちゅうおう",
-      "word": "kagosimatyuuou"
+      "info": "出水",
+      "info2": "いずみ",
+      "word": "izumi"
+    },
+    {
+      "info": "新水俣",
+      "info2": "しんみなまた",
+      "word": "sinminamata"
+    },
+    {
+      "info": "新八代",
+      "info2": "しんやつしろ",
+      "word": "sinyatusiro"
+    },
+    {
+      "info": "熊本",
+      "info2": "くまもと",
+      "word": "kumamoto"
+    },
+    {
+      "info": "新玉名",
+      "info2": "しんたまな",
+      "word": "sintamana"
+    },
+    {
+      "info": "新大牟田",
+      "info2": "しんおおむた",
+      "word": "sinnoomuta"
+    },
+    {
+      "info": "筑後船小屋",
+      "info2": "ちくごふなごや",
+      "word": "tikugohunagoya"
+    },
+    {
+      "info": "久留米",
+      "info2": "くるめ",
+      "word": "kurume"
+    },
+    {
+      "info": "新鳥栖",
+      "info2": "しんとす",
+      "word": "sintosu"
+    },
+    {
+      "info": "博多",
+      "info2": "はかた",
+      "word": "hakata"
     }
   ]
 }
