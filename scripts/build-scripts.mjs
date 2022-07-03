@@ -21,7 +21,7 @@ import yargs from "yargs";
         entryPoints: [path.resolve(srcdir, script.name)],
         bundle: true,
         platform: "node",
-        external: ["yargs", "jsdom"],
+        external: ["yargs", "jsdom", "prettier"],
       },
     }),
     {}

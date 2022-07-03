@@ -4,8 +4,6 @@ import path from "node:path";
 import { defineCommand } from "../lib/util";
 
 type Data = {
-  id: string;
-  file: string;
   title: string;
   tags: string[];
   optional?: {
@@ -13,9 +11,15 @@ type Data = {
   };
 };
 
+type InfoData = {
+  id: string;
+  file: string;
+  data: Data;
+};
+
 export default defineCommand({
-  command: "ls-eki",
-  describe: "list eki info",
+  command: "eki-ls",
+  describe: "eki list info",
   builder: (argv) =>
     argv
       .option("in", {
@@ -47,17 +51,17 @@ export default defineCommand({
             ({
               id: path.basename(file, path.extname(file)),
               file,
-              ...JSON.parse(b.toString()),
-            } as Data)
+              data: JSON.parse(b.toString()),
+            } as InfoData)
         )
       )
     );
 
     const lines = dataset
-      .filter((data) => data.tags.includes("駅名"))
+      .filter((info) => info.data.tags.includes("駅名"))
       .sort((a, b) => Number(a.id) - Number(b.id))
-      .map((d) =>
-        [d.id, d.title, String(d.optional?.cd ?? ""), d.file].join("\t")
+      .map(({ id, file, data: { title, optional } }) =>
+        [id, title, String(optional?.cd ?? ""), file].join("\t")
       );
 
     if (args.stdout) {
