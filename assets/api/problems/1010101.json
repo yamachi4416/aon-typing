@@ -1,6 +1,6 @@
 {
   "id": "1010101",
-  "title": "ＪＲ山手線内回りの駅いちらん",
+  "title": "ＪＲ高崎線の駅いちらん",
   "type": "japanese",
   "tags": [
     {
@@ -16,161 +16,131 @@
       "name": "駅名"
     }
   ],
-  "createdAt": "2021-05-31",
-  "updatedAt": "2022-07-01",
+  "createdAt": "2022-06-10",
+  "updatedAt": "2022-07-04",
   "optional": {
-    "cd": "113"
+    "cd": "101"
   },
   "words": [
     {
-      "info": "五反田",
-      "info2": "ごたんだ",
-      "word": "gotanda"
+      "info": "高崎",
+      "info2": "たかさき",
+      "word": "takasaki"
     },
     {
-      "info": "目黒",
-      "info2": "めぐろ",
-      "word": "meguro"
+      "info": "倉賀野",
+      "info2": "くらがの",
+      "word": "kuragano"
     },
     {
-      "info": "恵比寿",
-      "info2": "えびす",
-      "word": "ebisu"
+      "info": "新町",
+      "info2": "しんまち",
+      "word": "sinmati"
     },
     {
-      "info": "渋谷",
-      "info2": "しぶや",
-      "word": "sibuya"
+      "info": "神保原",
+      "info2": "じんぼはら",
+      "word": "jinbohara"
     },
     {
-      "info": "原宿",
-      "info2": "はらじゅく",
-      "word": "harajuku"
+      "info": "本庄",
+      "info2": "ほんじょう",
+      "word": "honjou"
     },
     {
-      "info": "代々木",
-      "info2": "よよぎ",
-      "word": "yoyogi"
+      "info": "岡部",
+      "info2": "おかべ",
+      "word": "okabe"
     },
     {
-      "info": "新宿",
-      "info2": "しんじゅく",
-      "word": "sinjuku"
+      "info": "深谷",
+      "info2": "ふかや",
+      "word": "hukaya"
     },
     {
-      "info": "新大久保",
-      "info2": "しんおおくぼ",
-      "word": "sinnookubo"
+      "info": "籠原",
+      "info2": "かごはら",
+      "word": "kagohara"
     },
     {
-      "info": "高田馬場",
-      "info2": "たかだのばば",
-      "word": "takadanobaba"
+      "info": "熊谷",
+      "info2": "くまがや",
+      "word": "kumagaya"
     },
     {
-      "info": "目白",
-      "info2": "めじろ",
-      "word": "mejiro"
+      "info": "行田",
+      "info2": "ぎょうだ",
+      "word": "gyouda"
     },
     {
-      "info": "池袋",
-      "info2": "いけぶくろ",
-      "word": "ikebukuro"
+      "info": "吹上",
+      "info2": "ふきあげ",
+      "word": "hukiage"
     },
     {
-      "info": "大塚",
-      "info2": "おおつか",
-      "word": "ootuka"
+      "info": "北鴻巣",
+      "info2": "きたこうのす",
+      "word": "kitakounosu"
     },
     {
-      "info": "巣鴨",
-      "info2": "すがも",
-      "word": "sugamo"
+      "info": "鴻巣",
+      "info2": "こうのす",
+      "word": "kounosu"
     },
     {
-      "info": "駒込",
-      "info2": "こまごめ",
-      "word": "komagome"
+      "info": "北本",
+      "info2": "きたもと",
+      "word": "kitamoto"
     },
     {
-      "info": "田端",
-      "info2": "たばた",
-      "word": "tabata"
+      "info": "桶川",
+      "info2": "おけがわ",
+      "word": "okegawa"
     },
     {
-      "info": "西日暮里",
-      "info2": "にしにっぽり",
-      "word": "nisinippori"
+      "info": "北上尾",
+      "info2": "きたあげお",
+      "word": "kitaageo"
     },
     {
-      "info": "日暮里",
-      "info2": "にっぽり",
-      "word": "nippori"
+      "info": "上尾",
+      "info2": "あげお",
+      "word": "ageo"
     },
     {
-      "info": "鶯谷",
-      "info2": "うぐいすだに",
-      "word": "uguisudani"
+      "info": "宮原",
+      "info2": "みやはら",
+      "word": "miyahara"
+    },
+    {
+      "info": "大宮",
+      "info2": "おおみや",
+      "word": "oomiya"
+    },
+    {
+      "info": "さいたま新都心",
+      "info2": "さいたましんとしん",
+      "word": "saitamasintosinn"
+    },
+    {
+      "info": "浦和",
+      "info2": "うらわ",
+      "word": "urawa"
+    },
+    {
+      "info": "赤羽",
+      "info2": "あかばね",
+      "word": "akabane"
+    },
+    {
+      "info": "尾久",
+      "info2": "おく",
+      "word": "oku"
     },
     {
       "info": "上野",
       "info2": "うえの",
       "word": "ueno"
-    },
-    {
-      "info": "御徒町",
-      "info2": "おかちまち",
-      "word": "okatimati"
-    },
-    {
-      "info": "秋葉原",
-      "info2": "あきはばら",
-      "word": "akihabara"
-    },
-    {
-      "info": "神田",
-      "info2": "かんだ",
-      "word": "kanda"
-    },
-    {
-      "info": "東京",
-      "info2": "とうきょう",
-      "word": "toukyou"
-    },
-    {
-      "info": "有楽町",
-      "info2": "ゆうらくちょう",
-      "word": "yuurakutyou"
-    },
-    {
-      "info": "新橋",
-      "info2": "しんばし",
-      "word": "sinbasi"
-    },
-    {
-      "info": "浜松町",
-      "info2": "はままつちょう",
-      "word": "hamamatutyou"
-    },
-    {
-      "info": "田町",
-      "info2": "たまち",
-      "word": "tamati"
-    },
-    {
-      "info": "高輪ゲートウェイ",
-      "info2": "たかなわげーとうぇい",
-      "word": "takanawage-towei"
-    },
-    {
-      "info": "品川",
-      "info2": "しながわ",
-      "word": "sinagawa"
-    },
-    {
-      "info": "大崎",
-      "info2": "おおさき",
-      "word": "oosaki"
     }
   ]
 }

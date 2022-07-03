@@ -1,6 +1,6 @@
 {
   "id": "1010113",
-  "title": "ＪＲ宇都宮線の駅いちらん",
+  "title": "ＪＲ山手線内回りの駅いちらん",
   "type": "japanese",
   "tags": [
     {
@@ -16,176 +16,161 @@
       "name": "駅名"
     }
   ],
-  "createdAt": "2022-06-10",
-  "updatedAt": "2022-06-10",
+  "createdAt": "2021-05-31",
+  "updatedAt": "2022-07-04",
   "optional": {
-    "cd": "60"
+    "cd": "113"
   },
   "words": [
     {
-      "info": "黒磯",
-      "info2": "くろいそ",
-      "word": "kuroiso"
+      "info": "五反田",
+      "info2": "ごたんだ",
+      "word": "gotanda"
     },
     {
-      "info": "那須塩原",
-      "info2": "なすしおばら",
-      "word": "nasusiobara"
+      "info": "目黒",
+      "info2": "めぐろ",
+      "word": "meguro"
     },
     {
-      "info": "西那須野",
-      "info2": "にしなすの",
-      "word": "nisinasuno"
+      "info": "恵比寿",
+      "info2": "えびす",
+      "word": "ebisu"
     },
     {
-      "info": "野崎",
-      "info2": "のざき",
-      "word": "nozaki"
+      "info": "渋谷",
+      "info2": "しぶや",
+      "word": "sibuya"
     },
     {
-      "info": "矢板",
-      "info2": "やいた",
-      "word": "yaita"
+      "info": "原宿",
+      "info2": "はらじゅく",
+      "word": "harajuku"
     },
     {
-      "info": "片岡",
-      "info2": "かたおか",
-      "word": "kataoka"
+      "info": "代々木",
+      "info2": "よよぎ",
+      "word": "yoyogi"
     },
     {
-      "info": "蒲須坂",
-      "info2": "かますさか",
-      "word": "kamasusaka"
+      "info": "新宿",
+      "info2": "しんじゅく",
+      "word": "sinjuku"
     },
     {
-      "info": "氏家",
-      "info2": "うじいえ",
-      "word": "ujiie"
+      "info": "新大久保",
+      "info2": "しんおおくぼ",
+      "word": "sinnookubo"
     },
     {
-      "info": "宝積寺",
-      "info2": "ほうしゃくじ",
-      "word": "housyakuji"
+      "info": "高田馬場",
+      "info2": "たかだのばば",
+      "word": "takadanobaba"
     },
     {
-      "info": "岡本",
-      "info2": "おかもと",
-      "word": "okamoto"
+      "info": "目白",
+      "info2": "めじろ",
+      "word": "mejiro"
     },
     {
-      "info": "宇都宮",
-      "info2": "うつのみや",
-      "word": "utunomiya"
+      "info": "池袋",
+      "info2": "いけぶくろ",
+      "word": "ikebukuro"
     },
     {
-      "info": "雀宮",
-      "info2": "すずめのみや",
-      "word": "suzumenomiya"
+      "info": "大塚",
+      "info2": "おおつか",
+      "word": "ootuka"
     },
     {
-      "info": "石橋",
-      "info2": "いしばし",
-      "word": "isibasi"
+      "info": "巣鴨",
+      "info2": "すがも",
+      "word": "sugamo"
     },
     {
-      "info": "自治医大",
-      "info2": "じちいだい",
-      "word": "jitiidai"
+      "info": "駒込",
+      "info2": "こまごめ",
+      "word": "komagome"
     },
     {
-      "info": "小金井",
-      "info2": "こがねい",
-      "word": "koganei"
+      "info": "田端",
+      "info2": "たばた",
+      "word": "tabata"
     },
     {
-      "info": "小山",
-      "info2": "おやま",
-      "word": "oyama"
+      "info": "西日暮里",
+      "info2": "にしにっぽり",
+      "word": "nisinippori"
     },
     {
-      "info": "間々田",
-      "info2": "ままだ",
-      "word": "mamada"
+      "info": "日暮里",
+      "info2": "にっぽり",
+      "word": "nippori"
     },
     {
-      "info": "野木",
-      "info2": "のぎ",
-      "word": "nogi"
-    },
-    {
-      "info": "古河",
-      "info2": "こが",
-      "word": "koga"
-    },
-    {
-      "info": "栗橋",
-      "info2": "くりはし",
-      "word": "kurihasi"
-    },
-    {
-      "info": "東鷲宮",
-      "info2": "ひがしわしのみや",
-      "word": "higasiwasinomiya"
-    },
-    {
-      "info": "久喜",
-      "info2": "くき",
-      "word": "kuki"
-    },
-    {
-      "info": "新白岡",
-      "info2": "しんしらおか",
-      "word": "sinsiraoka"
-    },
-    {
-      "info": "白岡",
-      "info2": "しらおか",
-      "word": "siraoka"
-    },
-    {
-      "info": "蓮田",
-      "info2": "はすだ",
-      "word": "hasuda"
-    },
-    {
-      "info": "東大宮",
-      "info2": "ひがしおおみや",
-      "word": "higasioomiya"
-    },
-    {
-      "info": "土呂",
-      "info2": "とろ",
-      "word": "toro"
-    },
-    {
-      "info": "大宮",
-      "info2": "おおみや",
-      "word": "oomiya"
-    },
-    {
-      "info": "さいたま新都心",
-      "info2": "さいたましんとしん",
-      "word": "saitamasintosinn"
-    },
-    {
-      "info": "浦和",
-      "info2": "うらわ",
-      "word": "urawa"
-    },
-    {
-      "info": "赤羽",
-      "info2": "あかばね",
-      "word": "akabane"
-    },
-    {
-      "info": "尾久",
-      "info2": "おく",
-      "word": "oku"
+      "info": "鶯谷",
+      "info2": "うぐいすだに",
+      "word": "uguisudani"
     },
     {
       "info": "上野",
       "info2": "うえの",
       "word": "ueno"
+    },
+    {
+      "info": "御徒町",
+      "info2": "おかちまち",
+      "word": "okatimati"
+    },
+    {
+      "info": "秋葉原",
+      "info2": "あきはばら",
+      "word": "akihabara"
+    },
+    {
+      "info": "神田",
+      "info2": "かんだ",
+      "word": "kanda"
+    },
+    {
+      "info": "東京",
+      "info2": "とうきょう",
+      "word": "toukyou"
+    },
+    {
+      "info": "有楽町",
+      "info2": "ゆうらくちょう",
+      "word": "yuurakutyou"
+    },
+    {
+      "info": "新橋",
+      "info2": "しんばし",
+      "word": "sinbasi"
+    },
+    {
+      "info": "浜松町",
+      "info2": "はままつちょう",
+      "word": "hamamatutyou"
+    },
+    {
+      "info": "田町",
+      "info2": "たまち",
+      "word": "tamati"
+    },
+    {
+      "info": "高輪ゲートウェイ",
+      "info2": "たかなわげーとうぇい",
+      "word": "takanawage-towei"
+    },
+    {
+      "info": "品川",
+      "info2": "しながわ",
+      "word": "sinagawa"
+    },
+    {
+      "info": "大崎",
+      "info2": "おおさき",
+      "word": "oosaki"
     }
   ]
 }
