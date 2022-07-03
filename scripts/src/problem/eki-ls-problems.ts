@@ -22,7 +22,7 @@ export default defineCommand({
   describe: "eki list info",
   builder: (argv) =>
     argv
-      .option("in", {
+      .option("data-dir", {
         alias: "i",
         type: "string",
         describe: "input data directory",
@@ -36,12 +36,11 @@ export default defineCommand({
         default: false,
       }),
   async handler(args) {
-    const dir = path.resolve(args.in);
-    const files = await readdir(args.in, { withFileTypes: true }).then(
-      (items) =>
-        items
-          .filter((item) => item.isFile())
-          .map((item) => path.join(dir, item.name))
+    const dir = path.resolve(args.dataDir);
+    const files = await readdir(dir, { withFileTypes: true }).then((items) =>
+      items
+        .filter((item) => item.isFile())
+        .map((item) => path.join(dir, item.name))
     );
 
     const dataset = await Promise.all(

@@ -24,14 +24,14 @@ export default defineCommand({
   describe: "eki words data download from api",
   builder: (argv) =>
     argv
-      .option("in", {
+      .option("data-dir", {
         alias: "i",
         type: "string",
         describe: "input data directory",
         demandOption: true,
         requiresArg: true,
       })
-      .option("key", {
+      .option("ekispert-api-key", {
         alias: "k",
         type: "string",
         describe: "api key",
@@ -45,22 +45,20 @@ export default defineCommand({
         demandOption: false,
         requiresArg: true,
       })
-      .option("dry", {
-        alias: "d",
+      .option("dry-run", {
         type: "boolean",
         describe: "dry run show stdout",
         demandOption: false,
         requiresArg: false,
-      }),
-  handler: async (args) => {
-    const dir = path.resolve(args.in);
-    const pattern = args.pattern ? RegExp(args.pattern) : undefined;
-    const files = await readdir(args.in, { withFileTypes: true }).then(
+      })
+      .coerce("pattern", (p) => RegExp(p)),
+  handler: async ({ dataDir, pattern, dryRun, ekispertApiKey }) => {
+    const files = await readdir(dataDir, { withFileTypes: true }).then(
       (items) =>
         items
           .filter((item) => item.isFile())
           .filter((item) => (pattern ? pattern.test(item.name) : true))
-          .map((item) => path.join(dir, item.name))
+          .map((item) => path.join(dataDir, item.name))
     );
 
     const dataset = await Promise.all(
@@ -77,7 +75,7 @@ export default defineCommand({
       )
     );
 
-    const urlbase = `https://api.ekispert.jp/v1/json/station?key=${args.key}`;
+    const urlbase = `https://api.ekispert.jp/v1/json/station?key=${ekispertApiKey}`;
     const problems = await Promise.all(
       dataset
         .filter(({ data: { tags } }) => tags.includes("駅名"))
@@ -134,7 +132,7 @@ export default defineCommand({
           parser: "json",
         });
 
-        if (args.dry) {
+        if (dryRun) {
           console.log(
             `${text === json ? "-" : "+"} ${id} ${data.title} ${file}`
           );

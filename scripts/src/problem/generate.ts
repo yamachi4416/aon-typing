@@ -10,7 +10,13 @@ async function listJsonFiles(dir: string) {
     .map((entry) => path.resolve(dir, entry.name));
 }
 
-async function generateProblemData(dataDir: string, apiDir: string) {
+async function generateProblemData({
+  dataDir,
+  apiDir,
+}: {
+  dataDir: string;
+  apiDir: string;
+}) {
   const problemsDist = path.resolve(apiDir, "problems");
   const problemsFile = path.join(apiDir, "problems.json");
   const newProblemsFile = path.join(apiDir, "newProblems.json");
@@ -169,14 +175,14 @@ export default defineCommand({
   describe: "typing problem json sets",
   builder(yargs) {
     return yargs
-      .options("in", {
+      .options("data-dir", {
         alias: "i",
         type: "string",
         description: "input data directory",
         demandOption: true,
         requiresArg: true,
       })
-      .options("out", {
+      .options("api-dir", {
         alias: "o",
         type: "string",
         description: "output directory",
@@ -184,7 +190,10 @@ export default defineCommand({
         requiresArg: true,
       });
   },
-  async handler(args) {
-    await generateProblemData(args.in, args.out);
+  async handler({ dataDir, apiDir }) {
+    await generateProblemData({
+      dataDir,
+      apiDir,
+    });
   },
 });

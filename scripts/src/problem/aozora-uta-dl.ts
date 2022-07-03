@@ -232,25 +232,30 @@ export default defineCommand({
   describe: "download uta info for typing problem json",
   builder: (argv) =>
     argv
-      .options("url", {
+      .options("aorora-uta-url", {
         alias: "u",
         type: "string",
         description: "request url",
         demandOption: true,
         requiresArg: true,
       })
-      .options("dist", {
-        alias: "d",
+      .options("data-dir", {
+        alias: "o",
         type: "string",
-        description: "output directory",
+        description: "data directory",
         requiresArg: true,
       })
-      .options("word", {
-        alias: "w",
+      .options("word-count", {
+        alias: "W",
         type: "number",
         description: "word max",
         default: 40,
         requiresArg: true,
       }),
-  handler: (args) => aozoraDL(args),
+  handler: ({ aororaUtaUrl, wordCount, dataDir }) =>
+    aozoraDL({
+      url: aororaUtaUrl,
+      word: wordCount,
+      dist: dataDir,
+    }),
 });
