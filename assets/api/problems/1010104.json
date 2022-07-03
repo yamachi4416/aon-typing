@@ -1,6 +1,6 @@
 {
   "id": "1010104",
-  "title": "ＪＲ北海道・東北新幹線の駅いちらん",
+  "title": "ＪＲ川越線の駅いちらん",
   "type": "japanese",
   "tags": [
     {
@@ -16,144 +16,68 @@
       "name": "駅名"
     }
   ],
-  "createdAt": "2021-06-13",
-  "updatedAt": "2021-06-13",
+  "createdAt": "2022-07-03",
+  "updatedAt": "2022-07-03",
   "optional": {
     "cd": [
-      "23",
-      "802"
+      "104"
     ]
   },
   "words": [
     {
-      "info": "新函館北斗",
-      "info2": "しんはこだてほくと",
-      "word": "sinhakodatehokuto"
+      "info": "高麗川",
+      "info2": "こまがわ",
+      "word": "komagawa"
     },
     {
-      "info": "木古内",
-      "info2": "きこない",
-      "word": "kikonai"
+      "info": "武蔵高萩",
+      "info2": "むさしたかはぎ",
+      "word": "musasitakahagi"
     },
     {
-      "info": "奥津軽いまべつ",
-      "info2": "おくつがるいまべつ",
-      "word": "okutugaruimabetu"
+      "info": "笠幡",
+      "info2": "かさはた",
+      "word": "kasahata"
     },
     {
-      "info": "新青森",
-      "info2": "しんあおもり",
-      "word": "sinnaomori"
+      "info": "的場",
+      "info2": "まとば",
+      "word": "matoba"
     },
     {
-      "info": "七戸十和田",
-      "info2": "しちのへとわだ",
-      "word": "sitinohetowada"
+      "info": "西川越",
+      "info2": "にしかわごえ",
+      "word": "nisikawagoe"
     },
     {
-      "info": "八戸",
-      "info2": "はちのへ",
-      "word": "hatinohe"
+      "info": "川越",
+      "info2": "かわごえ",
+      "word": "kawagoe"
     },
     {
-      "info": "二戸",
-      "info2": "にのへ",
-      "word": "ninohe"
+      "info": "南古谷",
+      "info2": "みなみふるや",
+      "word": "minamihuruya"
     },
     {
-      "info": "いわて沼宮内",
-      "info2": "いわてぬまくない",
-      "word": "iwatenumakunai"
+      "info": "指扇",
+      "info2": "さしおうぎ",
+      "word": "sasiougi"
     },
     {
-      "info": "盛岡",
-      "info2": "もりおか",
-      "word": "morioka"
+      "info": "西大宮",
+      "info2": "にしおおみや",
+      "word": "nisioomiya"
     },
     {
-      "info": "新花巻",
-      "info2": "しんはなまき",
-      "word": "sinhanamaki"
-    },
-    {
-      "info": "北上",
-      "info2": "きたかみ",
-      "word": "kitakami"
-    },
-    {
-      "info": "水沢江刺",
-      "info2": "みずさわえさし",
-      "word": "mizusawaesasi"
-    },
-    {
-      "info": "一ノ関",
-      "info2": "いちのせき",
-      "word": "itinoseki"
-    },
-    {
-      "info": "くりこま高原",
-      "info2": "くりこまこうげん",
-      "word": "kurikomakougenn"
-    },
-    {
-      "info": "古川",
-      "info2": "ふるかわ",
-      "word": "hurukawa"
-    },
-    {
-      "info": "仙台",
-      "info2": "せんだい",
-      "word": "sendai"
-    },
-    {
-      "info": "白石蔵王",
-      "info2": "しろいしざおう",
-      "word": "siroisizaou"
-    },
-    {
-      "info": "福島",
-      "info2": "ふくしま",
-      "word": "hukusima"
-    },
-    {
-      "info": "郡山",
-      "info2": "こおりやま",
-      "word": "kooriyama"
-    },
-    {
-      "info": "新白河",
-      "info2": "しんしらかわ",
-      "word": "sinsirakawa"
-    },
-    {
-      "info": "那須塩原",
-      "info2": "なすしおばら",
-      "word": "nasusiobara"
-    },
-    {
-      "info": "宇都宮",
-      "info2": "うつのみや",
-      "word": "utunomiya"
-    },
-    {
-      "info": "小山",
-      "info2": "おやま",
-      "word": "oyama"
+      "info": "日進",
+      "info2": "にっしん",
+      "word": "nissinn"
     },
     {
       "info": "大宮",
       "info2": "おおみや",
       "word": "oomiya"
-    },
-    {
-      "info": "上野",
-      "info2": "うえの",
-      "word": "ueno"
-    },
-    {
-      "info": "東京",
-      "info2": "とうきょう",
-      "word": "toukyou"
     }
   ]
 }
