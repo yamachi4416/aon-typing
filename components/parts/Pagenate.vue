@@ -44,19 +44,15 @@ const editPage = computed({
 const lastPage = computed(() => Math.ceil(props.recordCount / props.pageSize));
 const pages = computed(() => [...Array(lastPage.value)].map((_, i) => i + 1));
 const dispPages = computed(() => {
-  const ret = [];
-  const start = Math.max(props.page - 1, 1);
-  const last = Math.min(props.page + 1, lastPage.value);
-  for (let i = start; i <= last; i++) {
-    ret.push(i);
+  const lp = lastPage.value;
+  const cp = props.page;
+  let wp = [cp - 1, cp, cp + 1];
+  if (cp <= 2) {
+    wp = [2, 3, 4];
+  } else if (lp - 1 <= cp) {
+    wp = [lp - 3, lp - 2, lp - 1];
   }
-  if (ret[0] !== 1) {
-    ret.unshift(1);
-  }
-  if (ret[ret.length - 1] !== lastPage.value) {
-    ret.push(lastPage.value);
-  }
-  return ret;
+  return new Set([1, ...wp, lp].filter(p => 1 <= p && p <= lp));
 });
 
 function selectPage(page: number) {
