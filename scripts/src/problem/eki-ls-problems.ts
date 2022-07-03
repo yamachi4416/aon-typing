@@ -6,6 +6,7 @@ import { defineCommand } from "../lib/util";
 type Data = {
   title: string;
   tags: string[];
+  createdAt: string;
   optional?: {
     cd: string[] | string;
   };
@@ -59,8 +60,8 @@ export default defineCommand({
     const lines = dataset
       .filter((info) => info.data.tags.includes("駅名"))
       .sort((a, b) => Number(a.id) - Number(b.id))
-      .map(({ id, file, data: { title, optional } }) =>
-        [id, title, String(optional?.cd ?? ""), file].join("\t")
+      .map(({ id, file, data: { title, createdAt, optional } }) =>
+        [id, title, String(optional?.cd ?? ""), createdAt, file].join("\t")
       );
 
     if (args.stdout) {
