@@ -19,9 +19,6 @@ import yargs from "yargs";
       [path.basename(script.name, path.extname(script.name))]: {
         outdir,
         entryPoints: [path.resolve(srcdir, script.name)],
-        bundle: true,
-        platform: "node",
-        external: ["yargs", "jsdom", "prettier"],
       },
     }),
     {}
@@ -45,12 +42,19 @@ import yargs from "yargs";
           : build.map((name) => builders[name]);
         await Promise.all(
           targets.map((builder) =>
-            esbuild.build(builder).then((result) =>
-              console.log({
-                entryPoints: builder.entryPoints,
-                ...result,
+            esbuild
+              .build({
+                bundle: true,
+                platform: "node",
+                external: ["yargs", "jsdom", "prettier"],
+                ...builder,
               })
-            )
+              .then((result) =>
+                console.log({
+                  entryPoints: builder.entryPoints,
+                  ...result,
+                })
+              )
           )
         );
       },
