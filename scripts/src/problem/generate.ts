@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import jaChars from "~/libs/TypingJapaneseChars";
+import prettier from "prettier";
 import { defineCommand } from "../lib/util";
 
 async function listJsonFiles(dir: string) {
@@ -8,6 +9,15 @@ async function listJsonFiles(dir: string) {
   return files
     .filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
     .map((entry) => path.resolve(dir, entry.name));
+}
+
+async function writeJson(file: string, data: any) {
+  return await fs.writeFile(
+    file,
+    prettier.format(JSON.stringify(data), {
+      parser: "json",
+    })
+  );
 }
 
 async function generateProblemData({
@@ -64,41 +74,33 @@ async function generateProblemData({
       });
 
       const dist = path.resolve(problemsDist, path.basename(p));
-      await fs.writeFile(dist, JSON.stringify(problem, null, 2));
-
+      await writeJson(dist, problem);
       problem.stat = await fs.stat(p);
 
       return problem;
     })
   );
 
-  await fs.writeFile(
-    problemsFile,
-    JSON.stringify(
-      {
-        problems: problems.map((p) => {
-          const problem = {
-            id: p.id,
-            title: p.title,
-            type: p.type,
-            words: p.words.length,
-            chars: p.words.reduce((s, w) => s + w.word.length, 0),
-            createdAt: p.createdAt,
-            updatedAt: p.updatedAt,
-            tags: p.tags || [],
-          };
+  await writeJson(problemsFile, {
+    problems: problems.map((p) => {
+      const problem = {
+        id: p.id,
+        title: p.title,
+        type: p.type,
+        words: p.words.length,
+        chars: p.words.reduce((s, w) => s + w.word.length, 0),
+        createdAt: p.createdAt,
+        updatedAt: p.updatedAt,
+        tags: p.tags || [],
+      };
 
-          problem.tags.forEach((m) => {
-            tags[m.name].problems.push(problem);
-          });
+      problem.tags.forEach((m) => {
+        tags[m.name].problems.push(problem);
+      });
 
-          return problem;
-        }),
-      },
-      null,
-      2
-    )
-  );
+      return problem;
+    }),
+  });
 
   await fs.rm(tagsDist, { recursive: true }).catch(() => {});
   await fs.mkdir(tagsDist, { recursive: true });
@@ -106,18 +108,11 @@ async function generateProblemData({
   const tagSummary = await Promise.all(
     Object.keys(tags).map(async (tagName) => {
       const tag = tags[tagName];
-      await fs.writeFile(
-        path.join(tagsDist, `${tag.id}.json`),
-        JSON.stringify(
-          {
-            id: tag.id,
-            name: tagName,
-            problems: tag.problems,
-          },
-          null,
-          2
-        )
-      );
+      await writeJson(path.join(tagsDist, `${tag.id}.json`), {
+        id: tag.id,
+        name: tagName,
+        problems: tag.problems,
+      });
       return {
         name: tagName,
         id: tag.id,
@@ -126,47 +121,39 @@ async function generateProblemData({
     })
   );
 
-  await fs.writeFile(
+  await writeJson(
     tagsFile,
-    JSON.stringify(
-      tagSummary
-        .sort((a, b) => (a.id < b.id ? -1 : 1))
-        .reduce(
-          (summary, { name, id, count }) => ({
-            ...summary,
-            [name]: { id, count },
-          }),
-          {}
-        ),
-      null,
-      2
-    )
+    tagSummary
+      .sort((a, b) => (a.id < b.id ? -1 : 1))
+      .reduce(
+        (summary, { name, id, count }) => ({
+          ...summary,
+          [name]: { id, count },
+        }),
+        {}
+      )
   );
 
-  await fs.writeFile(
+  await writeJson(
     newProblemsFile,
-    JSON.stringify(
-      problems
-        .sort(
-          (a, b) =>
-            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() ||
-            new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
-            b.stat.birthtimeMs - a.stat.birthtimeMs
-        )
-        .slice(0, 6)
-        .map((p) => ({
-          id: p.id,
-          title: p.title,
-          type: p.type,
-          words: p.words.length,
-          chars: p.words.reduce((s, w) => s + w.word.length, 0),
-          createdAt: p.createdAt,
-          updatedAt: p.updatedAt,
-          tags: p.tags || [],
-        })),
-      null,
-      2
-    )
+    problems
+      .sort(
+        (a, b) =>
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() ||
+          new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
+          b.stat.birthtimeMs - a.stat.birthtimeMs
+      )
+      .slice(0, 6)
+      .map((p) => ({
+        id: p.id,
+        title: p.title,
+        type: p.type,
+        words: p.words.length,
+        chars: p.words.reduce((s, w) => s + w.word.length, 0),
+        createdAt: p.createdAt,
+        updatedAt: p.updatedAt,
+        tags: p.tags || [],
+      }))
   );
 }
 
