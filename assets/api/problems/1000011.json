@@ -3,1277 +3,326 @@
   "title": "中学1年英単語",
   "type": "english",
   "tags": [
-    {
-      "id": "00001",
-      "name": "英語"
-    },
-    {
-      "id": "00002",
-      "name": "英単語"
-    },
-    {
-      "id": "00003",
-      "name": "中学1年"
-    }
+    { "id": "00001", "name": "英語" },
+    { "id": "00002", "name": "英単語" },
+    { "id": "00003", "name": "中学1年" }
   ],
   "createdAt": "2021-05-31",
   "updatedAt": "2021-05-31",
   "words": [
-    {
-      "info": "カバン",
-      "word": "bag"
-    },
-    {
-      "info": "鉛筆",
-      "word": "pencil"
-    },
-    {
-      "info": "ノートブック",
-      "word": "notebook"
-    },
-    {
-      "info": "机",
-      "word": "desk"
-    },
-    {
-      "info": "テーブル",
-      "word": "table"
-    },
-    {
-      "info": "宿題",
-      "word": "homework"
-    },
-    {
-      "info": "日記",
-      "word": "diary"
-    },
-    {
-      "info": "ピアノ",
-      "word": "piano"
-    },
-    {
-      "info": "手",
-      "word": "hand"
-    },
-    {
-      "info": "バラ",
-      "word": "rose"
-    },
-    {
-      "info": "いす",
-      "word": "chair"
-    },
-    {
-      "info": "バット",
-      "word": "bat"
-    },
-    {
-      "info": "魚",
-      "word": "fish"
-    },
-    {
-      "info": "犬",
-      "word": "dog"
-    },
-    {
-      "info": "腕時計",
-      "word": "watch"
-    },
-    {
-      "info": "ミット",
-      "word": "mitt"
-    },
-    {
-      "info": "牛乳",
-      "word": "milk"
-    },
-    {
-      "info": "花",
-      "word": "flower"
-    },
-    {
-      "info": "ドア",
-      "word": "door"
-    },
-    {
-      "info": "卵",
-      "word": "egg"
-    },
-    {
-      "info": "ボート",
-      "word": "boat"
-    },
-    {
-      "info": "オレンジ",
-      "word": "orange"
-    },
-    {
-      "info": "鳥",
-      "word": "bird"
-    },
-    {
-      "info": "羊",
-      "word": "sheep"
-    },
-    {
-      "info": "カップ",
-      "word": "cup"
-    },
-    {
-      "info": "バス",
-      "word": "bus"
-    },
-    {
-      "info": "りんご",
-      "word": "apple"
-    },
-    {
-      "info": "果物",
-      "word": "fruit"
-    },
-    {
-      "info": "自動車",
-      "word": "car"
-    },
-    {
-      "info": "ケーキ",
-      "word": "cake"
-    },
-    {
-      "info": "絵，写真",
-      "word": "picture"
-    },
-    {
-      "info": "猫",
-      "word": "cat"
-    },
-    {
-      "info": "切手",
-      "word": "stamp"
-    },
-    {
-      "info": "飛行機",
-      "word": "plane"
-    },
-    {
-      "info": "本",
-      "word": "book"
-    },
-    {
-      "info": "ラケット",
-      "word": "racket"
-    },
-    {
-      "info": "コップ，ガラス",
-      "word": "glass"
-    },
-    {
-      "info": "ベッド",
-      "word": "bed"
-    },
-    {
-      "info": "手紙",
-      "word": "letter"
-    },
-    {
-      "info": "テープ",
-      "word": "tape"
-    },
-    {
-      "info": "帽子",
-      "word": "cap"
-    },
-    {
-      "info": "郵便",
-      "word": "mail"
-    },
-    {
-      "info": "箱",
-      "word": "box"
-    },
-    {
-      "info": "人形",
-      "word": "doll"
-    },
-    {
-      "info": "木",
-      "word": "tree"
-    },
-    {
-      "info": "（ボール）ペン",
-      "word": "pen"
-    },
-    {
-      "info": "地図",
-      "word": "map"
-    },
-    {
-      "info": "うし",
-      "word": "cow"
-    },
-    {
-      "info": "ポット",
-      "word": "pot"
-    },
-    {
-      "info": "カメラ",
-      "word": "camera"
-    },
-    {
-      "info": "レモン",
-      "word": "lemon"
-    },
-    {
-      "info": "パン",
-      "word": "bread"
-    },
-    {
-      "info": "少女",
-      "word": "girl"
-    },
-    {
-      "info": "男の人、人",
-      "word": "man"
-    },
-    {
-      "info": "女性",
-      "word": "woman"
-    },
-    {
-      "info": "父",
-      "word": "father"
-    },
-    {
-      "info": "母",
-      "word": "mother"
-    },
-    {
-      "info": "兄弟",
-      "word": "brother"
-    },
-    {
-      "info": "姉妹",
-      "word": "sister"
-    },
-    {
-      "info": "医者",
-      "word": "doctor"
-    },
-    {
-      "info": "パイロット",
-      "word": "pilot"
-    },
-    {
-      "info": "料理人",
-      "word": "cook"
-    },
-    {
-      "info": "両親",
-      "word": "parents"
-    },
-    {
-      "info": "おじ",
-      "word": "uncle"
-    },
-    {
-      "info": "おば",
-      "word": "aunt"
-    },
-    {
-      "info": "少年",
-      "word": "boy"
-    },
-    {
-      "info": "息子",
-      "word": "son"
-    },
-    {
-      "info": "看護婦",
-      "word": "nurse"
-    },
-    {
-      "info": "友人",
-      "word": "friend"
-    },
-    {
-      "info": "学生",
-      "word": "student"
-    },
-    {
-      "info": "店員",
-      "word": "clerk"
-    },
-    {
-      "info": "家族",
-      "word": "family"
-    },
-    {
-      "info": "先生",
-      "word": "teacher"
-    },
-    {
-      "info": "選手，演奏者",
-      "word": "player"
-    },
-    {
-      "info": "歌手",
-      "word": "singer"
-    },
-    {
-      "info": "娘",
-      "word": "daughter"
-    },
-    {
-      "info": "市，都会",
-      "word": "city"
-    },
-    {
-      "info": "窓",
-      "word": "window"
-    },
-    {
-      "info": "教会",
-      "word": "church"
-    },
-    {
-      "info": "学校",
-      "word": "school"
-    },
-    {
-      "info": "中庭",
-      "word": "yard"
-    },
-    {
-      "info": "銀行，土手",
-      "word": "bank"
-    },
-    {
-      "info": "図書館",
-      "word": "library"
-    },
-    {
-      "info": "病院",
-      "word": "hospital"
-    },
-    {
-      "info": "ホテル",
-      "word": "hotel"
-    },
-    {
-      "info": "町、村",
-      "word": "village"
-    },
-    {
-      "info": "台所",
-      "word": "kitchen"
-    },
-    {
-      "info": "壁",
-      "word": "wall"
-    },
-    {
-      "info": "公園",
-      "word": "park"
-    },
-    {
-      "info": "国，いなか，地方",
-      "word": "country"
-    },
-    {
-      "info": "事務所",
-      "word": "office"
-    },
-    {
-      "info": "庭",
-      "word": "garden"
-    },
-    {
-      "info": "街、町",
-      "word": "town"
-    },
-    {
-      "info": "市民",
-      "word": "citizen"
-    },
-    {
-      "info": "床，階",
-      "word": "floor"
-    },
-    {
-      "info": "店",
-      "word": "store"
-    },
-    {
-      "info": "駅",
-      "word": "station"
-    },
-    {
-      "info": "家",
-      "word": "house"
-    },
-    {
-      "info": "野原，競技場",
-      "word": "field"
-    },
-    {
-      "info": "日本",
-      "word": "Japan"
-    },
-    {
-      "info": "門",
-      "word": "gate"
-    },
-    {
-      "info": "部屋",
-      "word": "room"
-    },
-    {
-      "info": "散歩",
-      "word": "walk"
-    },
-    {
-      "info": "仕事，作品",
-      "word": "work"
-    },
-    {
-      "info": "バスケットボール",
-      "word": "basketball"
-    },
-    {
-      "info": "野球",
-      "word": "baseball"
-    },
-    {
-      "info": "テニス",
-      "word": "tennis"
-    },
-    {
-      "info": "プレゼント",
-      "word": "present"
-    },
-    {
-      "info": "道，方法",
-      "word": "way"
-    },
-    {
-      "info": "機会",
-      "word": "chance"
-    },
-    {
-      "info": "こと・物",
-      "word": "thing"
-    },
-    {
-      "info": "名前",
-      "word": "name"
-    },
-    {
-      "info": "科学",
-      "word": "science"
-    },
-    {
-      "info": "科目，題目",
-      "word": "subject"
-    },
-    {
-      "info": "色",
-      "word": "color"
-    },
-    {
-      "info": "線，列",
-      "word": "line"
-    },
-    {
-      "info": "場所",
-      "word": "place"
-    },
-    {
-      "info": "好む",
-      "word": "like"
-    },
-    {
-      "info": "見る，",
-      "word": "look"
-    },
-    {
-      "info": "～に見える",
-      "word": "look"
-    },
-    {
-      "info": "読む",
-      "word": "read"
-    },
-    {
-      "info": "飲む",
-      "word": "drink"
-    },
-    {
-      "info": "歩く",
-      "word": "walk"
-    },
-    {
-      "info": "洗う",
-      "word": "wash"
-    },
-    {
-      "info": "走る",
-      "word": "run"
-    },
-    {
-      "info": "止める，",
-      "word": "stop"
-    },
-    {
-      "info": "止まる",
-      "word": "stop"
-    },
-    {
-      "info": "持っている",
-      "word": "have"
-    },
-    {
-      "info": "食べる",
-      "word": "have"
-    },
-    {
-      "info": "待つ",
-      "word": "wait"
-    },
-    {
-      "info": "集める",
-      "word": "collect"
-    },
-    {
-      "info": "送る",
-      "word": "send"
-    },
-    {
-      "info": "来る",
-      "word": "come"
-    },
-    {
-      "info": "欲しい",
-      "word": "want"
-    },
-    {
-      "info": "する",
-      "word": "do"
-    },
-    {
-      "info": "作る，～を～にする",
-      "word": "make"
-    },
-    {
-      "info": "乗る",
-      "word": "ride"
-    },
-    {
-      "info": "楽しむ",
-      "word": "enjoy"
-    },
-    {
-      "info": "遊ぶ",
-      "word": "play"
-    },
-    {
-      "info": "(スポーツを)をする",
-      "word": "play"
-    },
-    {
-      "info": "演奏する",
-      "word": "play"
-    },
-    {
-      "info": "歌う",
-      "word": "sing"
-    },
-    {
-      "info": "話す",
-      "word": "speak"
-    },
-    {
-      "info": "料理する",
-      "word": "cook"
-    },
-    {
-      "info": "泳ぐ",
-      "word": "swim"
-    },
-    {
-      "info": "書く，手紙を書く",
-      "word": "write"
-    },
-    {
-      "info": "捕まえる，",
-      "word": "catch"
-    },
-    {
-      "info": "(列車に)間に合う",
-      "word": "catch"
-    },
-    {
-      "info": "開ける",
-      "word": "open"
-    },
-    {
-      "info": "動く，",
-      "word": "move"
-    },
-    {
-      "info": "感動させる",
-      "word": "move"
-    },
-    {
-      "info": "助ける",
-      "word": "help"
-    },
-    {
-      "info": "買う",
-      "word": "buy"
-    },
-    {
-      "info": "去る，残す，置いて行く",
-      "word": "leave"
-    },
-    {
-      "info": "会う",
-      "word": "meet"
-    },
-    {
-      "info": "住む，生きる",
-      "word": "live"
-    },
-    {
-      "info": "働く",
-      "word": "work"
-    },
-    {
-      "info": "行く",
-      "word": "go"
-    },
-    {
-      "info": "知っている",
-      "word": "know"
-    },
-    {
-      "info": "勉強する",
-      "word": "study"
-    },
-    {
-      "info": "食べる",
-      "word": "eat"
-    },
-    {
-      "info": "学ぶ，覚える",
-      "word": "learn"
-    },
-    {
-      "info": "立つ",
-      "word": "stand"
-    },
-    {
-      "info": "おどる",
-      "word": "dance"
-    },
-    {
-      "info": "売る",
-      "word": "sell"
-    },
-    {
-      "info": "到着する",
-      "word": "arrive"
-    },
-    {
-      "info": "得る，着く，乗る",
-      "word": "get"
-    },
-    {
-      "info": "置く",
-      "word": "put"
-    },
-    {
-      "info": "滞在する",
-      "word": "stay"
-    },
-    {
-      "info": "試す",
-      "word": "try"
-    },
-    {
-      "info": "与える，(会などを)開く",
-      "word": "give"
-    },
-    {
-      "info": "使う",
-      "word": "use"
-    },
-    {
-      "info": "訪問する",
-      "word": "visit"
-    },
-    {
-      "info": "必要とする",
-      "word": "need"
-    },
-    {
-      "info": "幸福な",
-      "word": "happy"
-    },
-    {
-      "info": "楽しい",
-      "word": "happy"
-    },
-    {
-      "info": "忙しい",
-      "word": "busy"
-    },
-    {
-      "info": "ごめんなさい、残念な",
-      "word": "sorry"
-    },
-    {
-      "info": "正直な",
-      "word": "honest"
-    },
-    {
-      "info": "貧乏な，かわいそうな",
-      "word": "poor"
-    },
-    {
-      "info": "不十分な",
-      "word": "poor"
-    },
-    {
-      "info": "後で",
-      "word": "later"
-    },
-    {
-      "info": "すぐに",
-      "word": "soon"
-    },
-    {
-      "info": "昨日",
-      "word": "yesterday"
-    },
-    {
-      "info": "～時",
-      "word": "o’clock"
-    },
-    {
-      "info": "すでに",
-      "word": "already"
-    },
-    {
-      "info": "上へ",
-      "word": "up"
-    },
-    {
-      "info": "そこに",
-      "word": "there"
-    },
-    {
-      "info": "よく，じょうずに",
-      "word": "well"
-    },
-    {
-      "info": "そんなに",
-      "word": "so"
-    },
-    {
-      "info": "ゆっくりと",
-      "word": "slowly"
-    },
-    {
-      "info": "まだ",
-      "word": "yet"
-    },
-    {
-      "info": "(～でない)",
-      "word": "yet"
-    },
-    {
-      "info": "なぜ",
-      "word": "why"
-    },
-    {
-      "info": "一番良い",
-      "word": "best"
-    },
-    {
-      "info": "悪い",
-      "word": "bad"
-    },
-    {
-      "info": "きれいな",
-      "word": "clean"
-    },
-    {
-      "info": "速い",
-      "word": "fast"
-    },
-    {
-      "info": "大きい，広い",
-      "word": "large"
-    },
-    {
-      "info": "やさしい，気楽に",
-      "word": "easy"
-    },
-    {
-      "info": "背の高い",
-      "word": "tall"
-    },
-    {
-      "info": "いくつかの",
-      "word": "some"
-    },
-    {
-      "info": "早い",
-      "word": "early"
-    },
-    {
-      "info": "この",
-      "word": "this"
-    },
-    {
-      "info": "あれらの",
-      "word": "those"
-    },
-    {
-      "info": "温暖な",
-      "word": "warm"
-    },
-    {
-      "info": "涼しい",
-      "word": "cool"
-    },
-    {
-      "info": "新しい",
-      "word": "new"
-    },
-    {
-      "info": "短い，背が低い",
-      "word": "short"
-    },
-    {
-      "info": "小さい，幼い，ちょっとした",
-      "word": "little"
-    },
-    {
-      "info": "暗い，黒い",
-      "word": "dark"
-    },
-    {
-      "info": "年をとった，古い",
-      "word": "old"
-    },
-    {
-      "info": "注意深い",
-      "word": "careful"
-    },
-    {
-      "info": "年下の，",
-      "word": "junior"
-    },
-    {
-      "info": "下級の",
-      "word": "junior"
-    },
-    {
-      "info": "空腹の",
-      "word": "hungry"
-    },
-    {
-      "info": "病気の",
-      "word": "ill"
-    },
-    {
-      "info": "ふつう",
-      "word": "usually"
-    },
-    {
-      "info": "今日，現在",
-      "word": "today"
-    },
-    {
-      "info": "速く",
-      "word": "fast"
-    },
-    {
-      "info": "今",
-      "word": "now"
-    },
-    {
-      "info": "前",
-      "word": "ago"
-    },
-    {
-      "info": "どこに",
-      "word": "where"
-    },
-    {
-      "info": "家を(へ)",
-      "word": "home"
-    },
-    {
-      "info": "ずっと，たいへん",
-      "word": "much"
-    },
-    {
-      "info": "はい",
-      "word": "yes"
-    },
-    {
-      "info": "もまた",
-      "word": "also"
-    },
-    {
-      "info": "～でない",
-      "word": "not"
-    },
-    {
-      "info": "一緒に",
-      "word": "together"
-    },
-    {
-      "info": "病気で(の)",
-      "word": "sick"
-    },
-    {
-      "info": "親切な",
-      "word": "kind"
-    },
-    {
-      "info": "うれしい",
-      "word": "glad"
-    },
-    {
-      "info": "良い",
-      "word": "good"
-    },
-    {
-      "info": "若い",
-      "word": "young"
-    },
-    {
-      "info": "時々",
-      "word": "sometimes"
-    },
-    {
-      "info": "しばしば",
-      "word": "often"
-    },
-    {
-      "info": "早く",
-      "word": "early"
-    },
-    {
-      "info": "いつも",
-      "word": "always"
-    },
-    {
-      "info": "再び",
-      "word": "again"
-    },
-    {
-      "info": "遠くに，はるかに",
-      "word": "far"
-    },
-    {
-      "info": "ここに",
-      "word": "here"
-    },
-    {
-      "info": "非常に",
-      "word": "very"
-    },
-    {
-      "info": "どのくらい",
-      "word": "how"
-    },
-    {
-      "info": "～もまた，",
-      "word": "too"
-    },
-    {
-      "info": "～すぎる",
-      "word": "too"
-    },
-    {
-      "info": "いいえ",
-      "word": "no"
-    },
-    {
-      "info": "美しい",
-      "word": "beautiful"
-    },
-    {
-      "info": "次の，隣の",
-      "word": "next"
-    },
-    {
-      "info": "長い",
-      "word": "long"
-    },
-    {
-      "info": "金持ちの，",
-      "word": "rich"
-    },
-    {
-      "info": "豊かな",
-      "word": "rich"
-    },
-    {
-      "info": "できる，",
-      "word": "able"
-    },
-    {
-      "info": "有能な",
-      "word": "able"
-    },
-    {
-      "info": "暑い",
-      "word": "hot"
-    },
-    {
-      "info": "小さな",
-      "word": "small"
-    },
-    {
-      "info": "白い",
-      "word": "white"
-    },
-    {
-      "info": "黒い",
-      "word": "black"
-    },
-    {
-      "info": "ほんとうの",
-      "word": "`true"
-    },
-    {
-      "info": "多量の",
-      "word": "many"
-    },
-    {
-      "info": "毎～",
-      "word": "every"
-    },
-    {
-      "info": "多くの",
-      "word": "many"
-    },
-    {
-      "info": "冷たい，寒い",
-      "word": "cold"
-    },
-    {
-      "info": "有名な",
-      "word": "famous"
-    },
-    {
-      "info": "青い",
-      "word": "blue"
-    },
-    {
-      "info": "悲しい",
-      "word": "sad"
-    },
-    {
-      "info": "高い",
-      "word": "high"
-    },
-    {
-      "info": "遅い",
-      "word": "slow"
-    },
-    {
-      "info": "良い",
-      "word": "nice"
-    },
-    {
-      "info": "これらの",
-      "word": "these"
-    },
-    {
-      "info": "すべての",
-      "word": "all"
-    },
-    {
-      "info": "あの",
-      "word": "that"
-    },
-    {
-      "info": "赤い",
-      "word": "red"
-    },
-    {
-      "info": "緑の",
-      "word": "green"
-    },
-    {
-      "info": "強い，じょうぶな",
-      "word": "strong"
-    },
-    {
-      "info": "大きい",
-      "word": "big"
-    },
-    {
-      "info": "すばらしい，",
-      "word": "fine"
-    },
-    {
-      "info": "元気な，晴れた",
-      "word": "fine"
-    },
-    {
-      "info": "晩",
-      "word": "evening"
-    },
-    {
-      "info": "朝",
-      "word": "morning"
-    },
-    {
-      "info": "夜",
-      "word": "night"
-    },
-    {
-      "info": "正午",
-      "word": "noon"
-    },
-    {
-      "info": "明日",
-      "word": "tomorrow"
-    },
-    {
-      "info": "時，～回",
-      "word": "time"
-    },
-    {
-      "info": "午後",
-      "word": "afternoon"
-    },
-    {
-      "info": "食事",
-      "word": "meal"
-    },
-    {
-      "info": "朝食",
-      "word": "breakfast"
-    },
-    {
-      "info": "昼食",
-      "word": "lunch"
-    },
-    {
-      "info": "夕食",
-      "word": "dinner"
-    },
-    {
-      "info": "夕食",
-      "word": "supper"
-    },
-    {
-      "info": "季節",
-      "word": "season"
-    },
-    {
-      "info": "春",
-      "word": "spring"
-    },
-    {
-      "info": "夏",
-      "word": "summer"
-    },
-    {
-      "info": "秋",
-      "word": "autumn"
-    },
-    {
-      "info": "秋",
-      "word": "fall"
-    },
-    {
-      "info": "冬",
-      "word": "winter"
-    },
-    {
-      "info": "分",
-      "word": "minute"
-    },
-    {
-      "info": "ちょっとの間",
-      "word": "minute"
-    },
-    {
-      "info": "週",
-      "word": "week"
-    },
-    {
-      "info": "月",
-      "word": "month"
-    },
-    {
-      "info": "年",
-      "word": "year"
-    },
-    {
-      "info": "時間",
-      "word": "hour"
-    },
-    {
-      "info": "日",
-      "word": "day"
-    },
-    {
-      "info": "１月",
-      "word": "January"
-    },
-    {
-      "info": "２月",
-      "word": "February"
-    },
-    {
-      "info": "３月",
-      "word": "March"
-    },
-    {
-      "info": "４月",
-      "word": "April"
-    },
-    {
-      "info": "５月",
-      "word": "May"
-    },
-    {
-      "info": "６月",
-      "word": "June"
-    },
-    {
-      "info": "７月",
-      "word": "July"
-    },
-    {
-      "info": "８月",
-      "word": "August"
-    },
-    {
-      "info": "９月",
-      "word": "September"
-    },
-    {
-      "info": "１０月",
-      "word": "October"
-    },
-    {
-      "info": "１１月",
-      "word": "November"
-    },
-    {
-      "info": "１２月",
-      "word": "December"
-    }
+    { "info": "カバン", "word": "bag" },
+    { "info": "鉛筆", "word": "pencil" },
+    { "info": "ノートブック", "word": "notebook" },
+    { "info": "机", "word": "desk" },
+    { "info": "テーブル", "word": "table" },
+    { "info": "宿題", "word": "homework" },
+    { "info": "日記", "word": "diary" },
+    { "info": "ピアノ", "word": "piano" },
+    { "info": "手", "word": "hand" },
+    { "info": "バラ", "word": "rose" },
+    { "info": "いす", "word": "chair" },
+    { "info": "バット", "word": "bat" },
+    { "info": "魚", "word": "fish" },
+    { "info": "犬", "word": "dog" },
+    { "info": "腕時計", "word": "watch" },
+    { "info": "ミット", "word": "mitt" },
+    { "info": "牛乳", "word": "milk" },
+    { "info": "花", "word": "flower" },
+    { "info": "ドア", "word": "door" },
+    { "info": "卵", "word": "egg" },
+    { "info": "ボート", "word": "boat" },
+    { "info": "オレンジ", "word": "orange" },
+    { "info": "鳥", "word": "bird" },
+    { "info": "羊", "word": "sheep" },
+    { "info": "カップ", "word": "cup" },
+    { "info": "バス", "word": "bus" },
+    { "info": "りんご", "word": "apple" },
+    { "info": "果物", "word": "fruit" },
+    { "info": "自動車", "word": "car" },
+    { "info": "ケーキ", "word": "cake" },
+    { "info": "絵，写真", "word": "picture" },
+    { "info": "猫", "word": "cat" },
+    { "info": "切手", "word": "stamp" },
+    { "info": "飛行機", "word": "plane" },
+    { "info": "本", "word": "book" },
+    { "info": "ラケット", "word": "racket" },
+    { "info": "コップ，ガラス", "word": "glass" },
+    { "info": "ベッド", "word": "bed" },
+    { "info": "手紙", "word": "letter" },
+    { "info": "テープ", "word": "tape" },
+    { "info": "帽子", "word": "cap" },
+    { "info": "郵便", "word": "mail" },
+    { "info": "箱", "word": "box" },
+    { "info": "人形", "word": "doll" },
+    { "info": "木", "word": "tree" },
+    { "info": "（ボール）ペン", "word": "pen" },
+    { "info": "地図", "word": "map" },
+    { "info": "うし", "word": "cow" },
+    { "info": "ポット", "word": "pot" },
+    { "info": "カメラ", "word": "camera" },
+    { "info": "レモン", "word": "lemon" },
+    { "info": "パン", "word": "bread" },
+    { "info": "少女", "word": "girl" },
+    { "info": "男の人、人", "word": "man" },
+    { "info": "女性", "word": "woman" },
+    { "info": "父", "word": "father" },
+    { "info": "母", "word": "mother" },
+    { "info": "兄弟", "word": "brother" },
+    { "info": "姉妹", "word": "sister" },
+    { "info": "医者", "word": "doctor" },
+    { "info": "パイロット", "word": "pilot" },
+    { "info": "料理人", "word": "cook" },
+    { "info": "両親", "word": "parents" },
+    { "info": "おじ", "word": "uncle" },
+    { "info": "おば", "word": "aunt" },
+    { "info": "少年", "word": "boy" },
+    { "info": "息子", "word": "son" },
+    { "info": "看護婦", "word": "nurse" },
+    { "info": "友人", "word": "friend" },
+    { "info": "学生", "word": "student" },
+    { "info": "店員", "word": "clerk" },
+    { "info": "家族", "word": "family" },
+    { "info": "先生", "word": "teacher" },
+    { "info": "選手，演奏者", "word": "player" },
+    { "info": "歌手", "word": "singer" },
+    { "info": "娘", "word": "daughter" },
+    { "info": "市，都会", "word": "city" },
+    { "info": "窓", "word": "window" },
+    { "info": "教会", "word": "church" },
+    { "info": "学校", "word": "school" },
+    { "info": "中庭", "word": "yard" },
+    { "info": "銀行，土手", "word": "bank" },
+    { "info": "図書館", "word": "library" },
+    { "info": "病院", "word": "hospital" },
+    { "info": "ホテル", "word": "hotel" },
+    { "info": "町、村", "word": "village" },
+    { "info": "台所", "word": "kitchen" },
+    { "info": "壁", "word": "wall" },
+    { "info": "公園", "word": "park" },
+    { "info": "国，いなか，地方", "word": "country" },
+    { "info": "事務所", "word": "office" },
+    { "info": "庭", "word": "garden" },
+    { "info": "街、町", "word": "town" },
+    { "info": "市民", "word": "citizen" },
+    { "info": "床，階", "word": "floor" },
+    { "info": "店", "word": "store" },
+    { "info": "駅", "word": "station" },
+    { "info": "家", "word": "house" },
+    { "info": "野原，競技場", "word": "field" },
+    { "info": "日本", "word": "Japan" },
+    { "info": "門", "word": "gate" },
+    { "info": "部屋", "word": "room" },
+    { "info": "散歩", "word": "walk" },
+    { "info": "仕事，作品", "word": "work" },
+    { "info": "バスケットボール", "word": "basketball" },
+    { "info": "野球", "word": "baseball" },
+    { "info": "テニス", "word": "tennis" },
+    { "info": "プレゼント", "word": "present" },
+    { "info": "道，方法", "word": "way" },
+    { "info": "機会", "word": "chance" },
+    { "info": "こと・物", "word": "thing" },
+    { "info": "名前", "word": "name" },
+    { "info": "科学", "word": "science" },
+    { "info": "科目，題目", "word": "subject" },
+    { "info": "色", "word": "color" },
+    { "info": "線，列", "word": "line" },
+    { "info": "場所", "word": "place" },
+    { "info": "好む", "word": "like" },
+    { "info": "見る，", "word": "look" },
+    { "info": "～に見える", "word": "look" },
+    { "info": "読む", "word": "read" },
+    { "info": "飲む", "word": "drink" },
+    { "info": "歩く", "word": "walk" },
+    { "info": "洗う", "word": "wash" },
+    { "info": "走る", "word": "run" },
+    { "info": "止める，", "word": "stop" },
+    { "info": "止まる", "word": "stop" },
+    { "info": "持っている", "word": "have" },
+    { "info": "食べる", "word": "have" },
+    { "info": "待つ", "word": "wait" },
+    { "info": "集める", "word": "collect" },
+    { "info": "送る", "word": "send" },
+    { "info": "来る", "word": "come" },
+    { "info": "欲しい", "word": "want" },
+    { "info": "する", "word": "do" },
+    { "info": "作る，～を～にする", "word": "make" },
+    { "info": "乗る", "word": "ride" },
+    { "info": "楽しむ", "word": "enjoy" },
+    { "info": "遊ぶ", "word": "play" },
+    { "info": "(スポーツを)をする", "word": "play" },
+    { "info": "演奏する", "word": "play" },
+    { "info": "歌う", "word": "sing" },
+    { "info": "話す", "word": "speak" },
+    { "info": "料理する", "word": "cook" },
+    { "info": "泳ぐ", "word": "swim" },
+    { "info": "書く，手紙を書く", "word": "write" },
+    { "info": "捕まえる，", "word": "catch" },
+    { "info": "(列車に)間に合う", "word": "catch" },
+    { "info": "開ける", "word": "open" },
+    { "info": "動く，", "word": "move" },
+    { "info": "感動させる", "word": "move" },
+    { "info": "助ける", "word": "help" },
+    { "info": "買う", "word": "buy" },
+    { "info": "去る，残す，置いて行く", "word": "leave" },
+    { "info": "会う", "word": "meet" },
+    { "info": "住む，生きる", "word": "live" },
+    { "info": "働く", "word": "work" },
+    { "info": "行く", "word": "go" },
+    { "info": "知っている", "word": "know" },
+    { "info": "勉強する", "word": "study" },
+    { "info": "食べる", "word": "eat" },
+    { "info": "学ぶ，覚える", "word": "learn" },
+    { "info": "立つ", "word": "stand" },
+    { "info": "おどる", "word": "dance" },
+    { "info": "売る", "word": "sell" },
+    { "info": "到着する", "word": "arrive" },
+    { "info": "得る，着く，乗る", "word": "get" },
+    { "info": "置く", "word": "put" },
+    { "info": "滞在する", "word": "stay" },
+    { "info": "試す", "word": "try" },
+    { "info": "与える，(会などを)開く", "word": "give" },
+    { "info": "使う", "word": "use" },
+    { "info": "訪問する", "word": "visit" },
+    { "info": "必要とする", "word": "need" },
+    { "info": "幸福な", "word": "happy" },
+    { "info": "楽しい", "word": "happy" },
+    { "info": "忙しい", "word": "busy" },
+    { "info": "ごめんなさい、残念な", "word": "sorry" },
+    { "info": "正直な", "word": "honest" },
+    { "info": "貧乏な，かわいそうな", "word": "poor" },
+    { "info": "不十分な", "word": "poor" },
+    { "info": "後で", "word": "later" },
+    { "info": "すぐに", "word": "soon" },
+    { "info": "昨日", "word": "yesterday" },
+    { "info": "～時", "word": "o’clock" },
+    { "info": "すでに", "word": "already" },
+    { "info": "上へ", "word": "up" },
+    { "info": "そこに", "word": "there" },
+    { "info": "よく，じょうずに", "word": "well" },
+    { "info": "そんなに", "word": "so" },
+    { "info": "ゆっくりと", "word": "slowly" },
+    { "info": "まだ", "word": "yet" },
+    { "info": "(～でない)", "word": "yet" },
+    { "info": "なぜ", "word": "why" },
+    { "info": "一番良い", "word": "best" },
+    { "info": "悪い", "word": "bad" },
+    { "info": "きれいな", "word": "clean" },
+    { "info": "速い", "word": "fast" },
+    { "info": "大きい，広い", "word": "large" },
+    { "info": "やさしい，気楽に", "word": "easy" },
+    { "info": "背の高い", "word": "tall" },
+    { "info": "いくつかの", "word": "some" },
+    { "info": "早い", "word": "early" },
+    { "info": "この", "word": "this" },
+    { "info": "あれらの", "word": "those" },
+    { "info": "温暖な", "word": "warm" },
+    { "info": "涼しい", "word": "cool" },
+    { "info": "新しい", "word": "new" },
+    { "info": "短い，背が低い", "word": "short" },
+    { "info": "小さい，幼い，ちょっとした", "word": "little" },
+    { "info": "暗い，黒い", "word": "dark" },
+    { "info": "年をとった，古い", "word": "old" },
+    { "info": "注意深い", "word": "careful" },
+    { "info": "年下の，", "word": "junior" },
+    { "info": "下級の", "word": "junior" },
+    { "info": "空腹の", "word": "hungry" },
+    { "info": "病気の", "word": "ill" },
+    { "info": "ふつう", "word": "usually" },
+    { "info": "今日，現在", "word": "today" },
+    { "info": "速く", "word": "fast" },
+    { "info": "今", "word": "now" },
+    { "info": "前", "word": "ago" },
+    { "info": "どこに", "word": "where" },
+    { "info": "家を(へ)", "word": "home" },
+    { "info": "ずっと，たいへん", "word": "much" },
+    { "info": "はい", "word": "yes" },
+    { "info": "もまた", "word": "also" },
+    { "info": "～でない", "word": "not" },
+    { "info": "一緒に", "word": "together" },
+    { "info": "病気で(の)", "word": "sick" },
+    { "info": "親切な", "word": "kind" },
+    { "info": "うれしい", "word": "glad" },
+    { "info": "良い", "word": "good" },
+    { "info": "若い", "word": "young" },
+    { "info": "時々", "word": "sometimes" },
+    { "info": "しばしば", "word": "often" },
+    { "info": "早く", "word": "early" },
+    { "info": "いつも", "word": "always" },
+    { "info": "再び", "word": "again" },
+    { "info": "遠くに，はるかに", "word": "far" },
+    { "info": "ここに", "word": "here" },
+    { "info": "非常に", "word": "very" },
+    { "info": "どのくらい", "word": "how" },
+    { "info": "～もまた，", "word": "too" },
+    { "info": "～すぎる", "word": "too" },
+    { "info": "いいえ", "word": "no" },
+    { "info": "美しい", "word": "beautiful" },
+    { "info": "次の，隣の", "word": "next" },
+    { "info": "長い", "word": "long" },
+    { "info": "金持ちの，", "word": "rich" },
+    { "info": "豊かな", "word": "rich" },
+    { "info": "できる，", "word": "able" },
+    { "info": "有能な", "word": "able" },
+    { "info": "暑い", "word": "hot" },
+    { "info": "小さな", "word": "small" },
+    { "info": "白い", "word": "white" },
+    { "info": "黒い", "word": "black" },
+    { "info": "ほんとうの", "word": "`true" },
+    { "info": "多量の", "word": "many" },
+    { "info": "毎～", "word": "every" },
+    { "info": "多くの", "word": "many" },
+    { "info": "冷たい，寒い", "word": "cold" },
+    { "info": "有名な", "word": "famous" },
+    { "info": "青い", "word": "blue" },
+    { "info": "悲しい", "word": "sad" },
+    { "info": "高い", "word": "high" },
+    { "info": "遅い", "word": "slow" },
+    { "info": "良い", "word": "nice" },
+    { "info": "これらの", "word": "these" },
+    { "info": "すべての", "word": "all" },
+    { "info": "あの", "word": "that" },
+    { "info": "赤い", "word": "red" },
+    { "info": "緑の", "word": "green" },
+    { "info": "強い，じょうぶな", "word": "strong" },
+    { "info": "大きい", "word": "big" },
+    { "info": "すばらしい，", "word": "fine" },
+    { "info": "元気な，晴れた", "word": "fine" },
+    { "info": "晩", "word": "evening" },
+    { "info": "朝", "word": "morning" },
+    { "info": "夜", "word": "night" },
+    { "info": "正午", "word": "noon" },
+    { "info": "明日", "word": "tomorrow" },
+    { "info": "時，～回", "word": "time" },
+    { "info": "午後", "word": "afternoon" },
+    { "info": "食事", "word": "meal" },
+    { "info": "朝食", "word": "breakfast" },
+    { "info": "昼食", "word": "lunch" },
+    { "info": "夕食", "word": "dinner" },
+    { "info": "夕食", "word": "supper" },
+    { "info": "季節", "word": "season" },
+    { "info": "春", "word": "spring" },
+    { "info": "夏", "word": "summer" },
+    { "info": "秋", "word": "autumn" },
+    { "info": "秋", "word": "fall" },
+    { "info": "冬", "word": "winter" },
+    { "info": "分", "word": "minute" },
+    { "info": "ちょっとの間", "word": "minute" },
+    { "info": "週", "word": "week" },
+    { "info": "月", "word": "month" },
+    { "info": "年", "word": "year" },
+    { "info": "時間", "word": "hour" },
+    { "info": "日", "word": "day" },
+    { "info": "１月", "word": "January" },
+    { "info": "２月", "word": "February" },
+    { "info": "３月", "word": "March" },
+    { "info": "４月", "word": "April" },
+    { "info": "５月", "word": "May" },
+    { "info": "６月", "word": "June" },
+    { "info": "７月", "word": "July" },
+    { "info": "８月", "word": "August" },
+    { "info": "９月", "word": "September" },
+    { "info": "１０月", "word": "October" },
+    { "info": "１１月", "word": "November" },
+    { "info": "１２月", "word": "December" }
   ]
 }

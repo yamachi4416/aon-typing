@@ -3,219 +3,60 @@
   "title": "ＪＲ中央・総武線各駅停車の駅いちらん",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00007",
-      "name": "地理"
-    },
-    {
-      "id": "00019",
-      "name": "駅名"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
   ],
   "createdAt": "2022-07-03",
   "updatedAt": "2022-07-03",
-  "optional": {
-    "cd": "110"
-  },
+  "optional": { "cd": "110" },
   "words": [
-    {
-      "info": "三鷹",
-      "info2": "みたか",
-      "word": "mitaka"
-    },
-    {
-      "info": "吉祥寺",
-      "info2": "きちじょうじ",
-      "word": "kitijouji"
-    },
-    {
-      "info": "西荻窪",
-      "info2": "にしおぎくぼ",
-      "word": "nisiogikubo"
-    },
-    {
-      "info": "荻窪",
-      "info2": "おぎくぼ",
-      "word": "ogikubo"
-    },
-    {
-      "info": "阿佐ケ谷",
-      "info2": "あさがや",
-      "word": "asagaya"
-    },
-    {
-      "info": "高円寺",
-      "info2": "こうえんじ",
-      "word": "kouenji"
-    },
-    {
-      "info": "中野",
-      "info2": "なかの",
-      "word": "nakano"
-    },
-    {
-      "info": "東中野",
-      "info2": "ひがしなかの",
-      "word": "higasinakano"
-    },
-    {
-      "info": "大久保",
-      "info2": "おおくぼ",
-      "word": "ookubo"
-    },
-    {
-      "info": "新宿",
-      "info2": "しんじゅく",
-      "word": "sinjuku"
-    },
-    {
-      "info": "代々木",
-      "info2": "よよぎ",
-      "word": "yoyogi"
-    },
-    {
-      "info": "千駄ケ谷",
-      "info2": "せんだがや",
-      "word": "sendagaya"
-    },
-    {
-      "info": "信濃町",
-      "info2": "しなのまち",
-      "word": "sinanomati"
-    },
-    {
-      "info": "四ツ谷",
-      "info2": "よつや",
-      "word": "yotuya"
-    },
-    {
-      "info": "市ケ谷",
-      "info2": "いちがや",
-      "word": "itigaya"
-    },
-    {
-      "info": "飯田橋",
-      "info2": "いいだばし",
-      "word": "iidabasi"
-    },
-    {
-      "info": "水道橋",
-      "info2": "すいどうばし",
-      "word": "suidoubasi"
-    },
-    {
-      "info": "御茶ノ水",
-      "info2": "おちゃのみず",
-      "word": "otyanomizu"
-    },
-    {
-      "info": "秋葉原",
-      "info2": "あきはばら",
-      "word": "akihabara"
-    },
-    {
-      "info": "浅草橋",
-      "info2": "あさくさばし",
-      "word": "asakusabasi"
-    },
-    {
-      "info": "両国",
-      "info2": "りょうごく",
-      "word": "ryougoku"
-    },
-    {
-      "info": "錦糸町",
-      "info2": "きんしちょう",
-      "word": "kinsityou"
-    },
-    {
-      "info": "亀戸",
-      "info2": "かめいど",
-      "word": "kameido"
-    },
-    {
-      "info": "平井",
-      "info2": "ひらい",
-      "word": "hirai"
-    },
-    {
-      "info": "新小岩",
-      "info2": "しんこいわ",
-      "word": "sinkoiwa"
-    },
-    {
-      "info": "小岩",
-      "info2": "こいわ",
-      "word": "koiwa"
-    },
-    {
-      "info": "市川",
-      "info2": "いちかわ",
-      "word": "itikawa"
-    },
-    {
-      "info": "本八幡(総武線)",
-      "info2": "もとやわた",
-      "word": "motoyawata"
-    },
+    { "info": "三鷹", "info2": "みたか", "word": "mitaka" },
+    { "info": "吉祥寺", "info2": "きちじょうじ", "word": "kitijouji" },
+    { "info": "西荻窪", "info2": "にしおぎくぼ", "word": "nisiogikubo" },
+    { "info": "荻窪", "info2": "おぎくぼ", "word": "ogikubo" },
+    { "info": "阿佐ケ谷", "info2": "あさがや", "word": "asagaya" },
+    { "info": "高円寺", "info2": "こうえんじ", "word": "kouenji" },
+    { "info": "中野", "info2": "なかの", "word": "nakano" },
+    { "info": "東中野", "info2": "ひがしなかの", "word": "higasinakano" },
+    { "info": "大久保", "info2": "おおくぼ", "word": "ookubo" },
+    { "info": "新宿", "info2": "しんじゅく", "word": "sinjuku" },
+    { "info": "代々木", "info2": "よよぎ", "word": "yoyogi" },
+    { "info": "千駄ケ谷", "info2": "せんだがや", "word": "sendagaya" },
+    { "info": "信濃町", "info2": "しなのまち", "word": "sinanomati" },
+    { "info": "四ツ谷", "info2": "よつや", "word": "yotuya" },
+    { "info": "市ケ谷", "info2": "いちがや", "word": "itigaya" },
+    { "info": "飯田橋", "info2": "いいだばし", "word": "iidabasi" },
+    { "info": "水道橋", "info2": "すいどうばし", "word": "suidoubasi" },
+    { "info": "御茶ノ水", "info2": "おちゃのみず", "word": "otyanomizu" },
+    { "info": "秋葉原", "info2": "あきはばら", "word": "akihabara" },
+    { "info": "浅草橋", "info2": "あさくさばし", "word": "asakusabasi" },
+    { "info": "両国", "info2": "りょうごく", "word": "ryougoku" },
+    { "info": "錦糸町", "info2": "きんしちょう", "word": "kinsityou" },
+    { "info": "亀戸", "info2": "かめいど", "word": "kameido" },
+    { "info": "平井", "info2": "ひらい", "word": "hirai" },
+    { "info": "新小岩", "info2": "しんこいわ", "word": "sinkoiwa" },
+    { "info": "小岩", "info2": "こいわ", "word": "koiwa" },
+    { "info": "市川", "info2": "いちかわ", "word": "itikawa" },
+    { "info": "本八幡(総武線)", "info2": "もとやわた", "word": "motoyawata" },
     {
       "info": "下総中山",
       "info2": "しもうさなかやま",
       "word": "simousanakayama"
     },
-    {
-      "info": "西船橋",
-      "info2": "にしふなばし",
-      "word": "nisihunabasi"
-    },
-    {
-      "info": "船橋",
-      "info2": "ふなばし",
-      "word": "hunabasi"
-    },
-    {
-      "info": "東船橋",
-      "info2": "ひがしふなばし",
-      "word": "higasihunabasi"
-    },
-    {
-      "info": "津田沼",
-      "info2": "つだぬま",
-      "word": "tudanuma"
-    },
+    { "info": "西船橋", "info2": "にしふなばし", "word": "nisihunabasi" },
+    { "info": "船橋", "info2": "ふなばし", "word": "hunabasi" },
+    { "info": "東船橋", "info2": "ひがしふなばし", "word": "higasihunabasi" },
+    { "info": "津田沼", "info2": "つだぬま", "word": "tudanuma" },
     {
       "info": "幕張本郷",
       "info2": "まくはりほんごう",
       "word": "makuharihongou"
     },
-    {
-      "info": "幕張",
-      "info2": "まくはり",
-      "word": "makuhari"
-    },
-    {
-      "info": "新検見川",
-      "info2": "しんけみがわ",
-      "word": "sinkemigawa"
-    },
-    {
-      "info": "稲毛",
-      "info2": "いなげ",
-      "word": "inage"
-    },
-    {
-      "info": "西千葉",
-      "info2": "にしちば",
-      "word": "nisitiba"
-    },
-    {
-      "info": "千葉",
-      "info2": "ちば",
-      "word": "tiba"
-    }
+    { "info": "幕張", "info2": "まくはり", "word": "makuhari" },
+    { "info": "新検見川", "info2": "しんけみがわ", "word": "sinkemigawa" },
+    { "info": "稲毛", "info2": "いなげ", "word": "inage" },
+    { "info": "西千葉", "info2": "にしちば", "word": "nisitiba" },
+    { "info": "千葉", "info2": "ちば", "word": "tiba" }
   ]
 }

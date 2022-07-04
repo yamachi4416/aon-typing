@@ -3,14 +3,8 @@
   "title": "いぬの種類（中型犬）",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00011",
-      "name": "いきもの"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00011", "name": "いきもの" }
   ],
   "createdAt": "2021-09-26",
   "updatedAt": "2021-09-26",
@@ -40,11 +34,7 @@
       "info2": "いんぐりっしゅすぷりんがーすぱにえる",
       "word": "ingurissyusupuringa-supanieru"
     },
-    {
-      "info": "ウィペット",
-      "info2": "うぃぺっと",
-      "word": "wipetto"
-    },
+    { "info": "ウィペット", "info2": "うぃぺっと", "word": "wipetto" },
     {
       "info": "ウェルシュ・コーギー・カーディガン",
       "info2": "うぇるしゅ・こーぎー・かーでぃがん",
@@ -60,11 +50,7 @@
       "info2": "おーすとらりあんけるぴー",
       "word": "o-sutorariankerupi-"
     },
-    {
-      "info": "キースホンド",
-      "info2": "きーすほんど",
-      "word": "ki-suhondo"
-    },
+    { "info": "キースホンド", "info2": "きーすほんど", "word": "ki-suhondo" },
     {
       "info": "ケリーブルーテリア",
       "info2": "けりーぶるーてりあ",
@@ -75,11 +61,7 @@
       "info2": "こーいけるほんでぃえ",
       "word": "ko-ikeruhondhie"
     },
-    {
-      "info": "シャーペイ",
-      "info2": "しゃーぺい",
-      "word": "sya-pei"
-    },
+    { "info": "シャーペイ", "info2": "しゃーぺい", "word": "sya-pei" },
     {
       "info": "ジャーマンピンシャー",
       "info2": "じゃーまんぴんしゃー",
@@ -105,16 +87,8 @@
       "info2": "ばせっとはうんど",
       "word": "basettohaundo"
     },
-    {
-      "info": "バセンジー",
-      "info2": "ばせんじー",
-      "word": "basenji-"
-    },
-    {
-      "info": "ビーグル",
-      "info2": "びーぐる",
-      "word": "bi-guru"
-    },
+    { "info": "バセンジー", "info2": "ばせんじー", "word": "basenji-" },
+    { "info": "ビーグル", "info2": "びーぐる", "word": "bi-guru" },
     {
       "info": "フレンチブルドッグ",
       "info2": "ふれんちぶるどっぐ",
@@ -125,11 +99,7 @@
       "info2": "ぶりたにーすぱにえる",
       "word": "buritani-supanieru"
     },
-    {
-      "info": "ブルドッグ",
-      "info2": "ぶるどっぐ",
-      "word": "burudoggu"
-    },
+    { "info": "ブルドッグ", "info2": "ぶるどっぐ", "word": "burudoggu" },
     {
       "info": "プチバセットグリフォンバンデーン",
       "info2": "ぷちばせっとぐりふぉんばんでーん",
@@ -160,25 +130,13 @@
       "info2": "ほっかいどうけん",
       "word": "hokkaidoukenn"
     },
-    {
-      "info": "四国犬",
-      "info2": "しこくいぬ",
-      "word": "sikokuinu"
-    },
+    { "info": "四国犬", "info2": "しこくいぬ", "word": "sikokuinu" },
     {
       "info": "日本スピッツ",
       "info2": "にほんすぴっつ",
       "word": "nihonsupittu"
     },
-    {
-      "info": "甲斐犬",
-      "info2": "かいけん",
-      "word": "kaikenn"
-    },
-    {
-      "info": "紀州犬",
-      "info2": "きしゅうけん",
-      "word": "kisyuukenn"
-    }
+    { "info": "甲斐犬", "info2": "かいけん", "word": "kaikenn" },
+    { "info": "紀州犬", "info2": "きしゅうけん", "word": "kisyuukenn" }
   ]
 }

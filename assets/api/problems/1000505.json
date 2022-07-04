@@ -3,237 +3,72 @@
   "title": "ヨーロッパの国を英語で",
   "type": "english",
   "tags": [
-    {
-      "id": "00001",
-      "name": "英語"
-    },
-    {
-      "id": "00002",
-      "name": "英単語"
-    },
-    {
-      "id": "00007",
-      "name": "地理"
-    }
+    { "id": "00001", "name": "英語" },
+    { "id": "00002", "name": "英単語" },
+    { "id": "00007", "name": "地理" }
   ],
   "createdAt": "2021-05-31",
   "updatedAt": "2021-05-31",
   "words": [
-    {
-      "info": "アイスランド共和国",
-      "word": "Iceland"
-    },
-    {
-      "info": "アイルランド",
-      "word": "Ireland"
-    },
-    {
-      "info": "アゼルバイジャン共和国",
-      "word": "Azerbaijan"
-    },
-    {
-      "info": "アルバニア共和国",
-      "word": "Albania"
-    },
-    {
-      "info": "アルメニア共和国",
-      "word": "Armenia"
-    },
-    {
-      "info": "アンドラ公国",
-      "word": "Andorra"
-    },
-    {
-      "info": "イタリア共和国",
-      "word": "Italy"
-    },
-    {
-      "info": "ウクライナ共和国",
-      "word": "Ukraine"
-    },
-    {
-      "info": "ウズベキスタン",
-      "word": "Uzbekistan"
-    },
+    { "info": "アイスランド共和国", "word": "Iceland" },
+    { "info": "アイルランド", "word": "Ireland" },
+    { "info": "アゼルバイジャン共和国", "word": "Azerbaijan" },
+    { "info": "アルバニア共和国", "word": "Albania" },
+    { "info": "アルメニア共和国", "word": "Armenia" },
+    { "info": "アンドラ公国", "word": "Andorra" },
+    { "info": "イタリア共和国", "word": "Italy" },
+    { "info": "ウクライナ共和国", "word": "Ukraine" },
+    { "info": "ウズベキスタン", "word": "Uzbekistan" },
     {
       "info": "英国（グレートブリテン及び北アイルランド連合王国）",
       "word": "The United Kingdom of Great Britain and Northern Ireland"
     },
-    {
-      "info": "エストニア共和国",
-      "word": "Estonia"
-    },
-    {
-      "info": "オーストリア共和国",
-      "word": "Austria"
-    },
-    {
-      "info": "オランダ王国",
-      "word": "Netherlands"
-    },
-    {
-      "info": "カザフスタン共和国",
-      "word": "Kazakhstan"
-    },
-    {
-      "info": "キプロス共和国",
-      "word": "Cyprus"
-    },
-    {
-      "info": "ギリシャ共和国",
-      "word": "Greece"
-    },
-    {
-      "info": "キルギス",
-      "word": "Kyrgyzstan"
-    },
-    {
-      "info": "クロアチア共和国",
-      "word": "Croatia"
-    },
-    {
-      "info": "コソボ共和国",
-      "word": "Kosovo"
-    },
-    {
-      "info": "サンマリノ共和国",
-      "word": "San Marino"
-    },
-    {
-      "info": "ジョージア",
-      "word": "Georgia"
-    },
-    {
-      "info": "スイス連邦",
-      "word": "Switzerland"
-    },
-    {
-      "info": "スウェーデン王国",
-      "word": "Sweden"
-    },
-    {
-      "info": "スペイン王国",
-      "word": "Spain"
-    },
-    {
-      "info": "スロバキア共和国",
-      "word": "Slovakia"
-    },
-    {
-      "info": "スロベニア共和国",
-      "word": "Slovenia"
-    },
-    {
-      "info": "セルビア共和国",
-      "word": "Serbia"
-    },
-    {
-      "info": "タジキスタン共和国",
-      "word": "Tajikistan"
-    },
-    {
-      "info": "チェコ共和国",
-      "word": "Czech Republic"
-    },
-    {
-      "info": "デンマーク王国",
-      "word": "Denmark"
-    },
-    {
-      "info": "ドイツ連邦共和国",
-      "word": "Germany"
-    },
-    {
-      "info": "トルクメニスタン",
-      "word": "Turkmenistan"
-    },
-    {
-      "info": "ノルウェー王国",
-      "word": "Norway"
-    },
-    {
-      "info": "バチカン",
-      "word": "Vatican City"
-    },
-    {
-      "info": "ハンガリー",
-      "word": "Hungary"
-    },
-    {
-      "info": "フィンランド共和国",
-      "word": "Finland"
-    },
-    {
-      "info": "フランス共和国",
-      "word": "France"
-    },
-    {
-      "info": "ブルガリア共和国",
-      "word": "Bulgaria"
-    },
-    {
-      "info": "ベラルーシ共和国",
-      "word": "Belarus"
-    },
-    {
-      "info": "ベルギー王国",
-      "word": "Belgium"
-    },
-    {
-      "info": "ポーランド共和国",
-      "word": "Poland"
-    },
-    {
-      "info": "ボスニア・ヘルツェゴビナ",
-      "word": "Bosnia and Herzegovina"
-    },
-    {
-      "info": "ポルトガル共和国",
-      "word": "Portugal"
-    },
+    { "info": "エストニア共和国", "word": "Estonia" },
+    { "info": "オーストリア共和国", "word": "Austria" },
+    { "info": "オランダ王国", "word": "Netherlands" },
+    { "info": "カザフスタン共和国", "word": "Kazakhstan" },
+    { "info": "キプロス共和国", "word": "Cyprus" },
+    { "info": "ギリシャ共和国", "word": "Greece" },
+    { "info": "キルギス", "word": "Kyrgyzstan" },
+    { "info": "クロアチア共和国", "word": "Croatia" },
+    { "info": "コソボ共和国", "word": "Kosovo" },
+    { "info": "サンマリノ共和国", "word": "San Marino" },
+    { "info": "ジョージア", "word": "Georgia" },
+    { "info": "スイス連邦", "word": "Switzerland" },
+    { "info": "スウェーデン王国", "word": "Sweden" },
+    { "info": "スペイン王国", "word": "Spain" },
+    { "info": "スロバキア共和国", "word": "Slovakia" },
+    { "info": "スロベニア共和国", "word": "Slovenia" },
+    { "info": "セルビア共和国", "word": "Serbia" },
+    { "info": "タジキスタン共和国", "word": "Tajikistan" },
+    { "info": "チェコ共和国", "word": "Czech Republic" },
+    { "info": "デンマーク王国", "word": "Denmark" },
+    { "info": "ドイツ連邦共和国", "word": "Germany" },
+    { "info": "トルクメニスタン", "word": "Turkmenistan" },
+    { "info": "ノルウェー王国", "word": "Norway" },
+    { "info": "バチカン", "word": "Vatican City" },
+    { "info": "ハンガリー", "word": "Hungary" },
+    { "info": "フィンランド共和国", "word": "Finland" },
+    { "info": "フランス共和国", "word": "France" },
+    { "info": "ブルガリア共和国", "word": "Bulgaria" },
+    { "info": "ベラルーシ共和国", "word": "Belarus" },
+    { "info": "ベルギー王国", "word": "Belgium" },
+    { "info": "ポーランド共和国", "word": "Poland" },
+    { "info": "ボスニア・ヘルツェゴビナ", "word": "Bosnia and Herzegovina" },
+    { "info": "ポルトガル共和国", "word": "Portugal" },
     {
       "info": "マケドニア・旧ユーゴスラビア共和国",
       "word": "Former Yugoslav Republic of Macedonia"
     },
-    {
-      "info": "マルタ共和国",
-      "word": "Malta"
-    },
-    {
-      "info": "モナコ公国",
-      "word": "Monaco"
-    },
-    {
-      "info": "モルドバ共和国",
-      "word": "Moldova"
-    },
-    {
-      "info": "モンテネグロ",
-      "word": "Montenegro"
-    },
-    {
-      "info": "ラトビア共和国",
-      "word": "Latvia"
-    },
-    {
-      "info": "リヒテンシュタイン公国",
-      "word": "Liechtenstein"
-    },
-    {
-      "info": "リトアニア共和国",
-      "word": "Lithuania"
-    },
-    {
-      "info": "ルーマニア",
-      "word": "Romania"
-    },
-    {
-      "info": "ルクセンブルク大公国",
-      "word": "Luxembourg"
-    },
-    {
-      "info": "ロシア連邦",
-      "word": "Russia"
-    }
+    { "info": "マルタ共和国", "word": "Malta" },
+    { "info": "モナコ公国", "word": "Monaco" },
+    { "info": "モルドバ共和国", "word": "Moldova" },
+    { "info": "モンテネグロ", "word": "Montenegro" },
+    { "info": "ラトビア共和国", "word": "Latvia" },
+    { "info": "リヒテンシュタイン公国", "word": "Liechtenstein" },
+    { "info": "リトアニア共和国", "word": "Lithuania" },
+    { "info": "ルーマニア", "word": "Romania" },
+    { "info": "ルクセンブルク大公国", "word": "Luxembourg" },
+    { "info": "ロシア連邦", "word": "Russia" }
   ]
 }

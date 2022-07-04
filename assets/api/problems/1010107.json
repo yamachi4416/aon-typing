@@ -3,84 +3,33 @@
   "title": "ＪＲ九州新幹線の駅いちらん",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00007",
-      "name": "地理"
-    },
-    {
-      "id": "00019",
-      "name": "駅名"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
   ],
   "createdAt": "2022-02-06",
   "updatedAt": "2022-02-06",
-  "optional": {
-    "cd": "233"
-  },
+  "optional": { "cd": "233" },
   "words": [
     {
       "info": "鹿児島中央",
       "info2": "かごしまちゅうおう",
       "word": "kagosimatyuuou"
     },
-    {
-      "info": "川内",
-      "info2": "せんだい",
-      "word": "sendai"
-    },
-    {
-      "info": "出水",
-      "info2": "いずみ",
-      "word": "izumi"
-    },
-    {
-      "info": "新水俣",
-      "info2": "しんみなまた",
-      "word": "sinminamata"
-    },
-    {
-      "info": "新八代",
-      "info2": "しんやつしろ",
-      "word": "sinyatusiro"
-    },
-    {
-      "info": "熊本",
-      "info2": "くまもと",
-      "word": "kumamoto"
-    },
-    {
-      "info": "新玉名",
-      "info2": "しんたまな",
-      "word": "sintamana"
-    },
-    {
-      "info": "新大牟田",
-      "info2": "しんおおむた",
-      "word": "sinnoomuta"
-    },
+    { "info": "川内", "info2": "せんだい", "word": "sendai" },
+    { "info": "出水", "info2": "いずみ", "word": "izumi" },
+    { "info": "新水俣", "info2": "しんみなまた", "word": "sinminamata" },
+    { "info": "新八代", "info2": "しんやつしろ", "word": "sinyatusiro" },
+    { "info": "熊本", "info2": "くまもと", "word": "kumamoto" },
+    { "info": "新玉名", "info2": "しんたまな", "word": "sintamana" },
+    { "info": "新大牟田", "info2": "しんおおむた", "word": "sinnoomuta" },
     {
       "info": "筑後船小屋",
       "info2": "ちくごふなごや",
       "word": "tikugohunagoya"
     },
-    {
-      "info": "久留米",
-      "info2": "くるめ",
-      "word": "kurume"
-    },
-    {
-      "info": "新鳥栖",
-      "info2": "しんとす",
-      "word": "sintosu"
-    },
-    {
-      "info": "博多",
-      "info2": "はかた",
-      "word": "hakata"
-    }
+    { "info": "久留米", "info2": "くるめ", "word": "kurume" },
+    { "info": "新鳥栖", "info2": "しんとす", "word": "sintosu" },
+    { "info": "博多", "info2": "はかた", "word": "hakata" }
   ]
 }

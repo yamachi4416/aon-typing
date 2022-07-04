@@ -3,18 +3,9 @@
   "title": "現在進行形",
   "type": "english",
   "tags": [
-    {
-      "id": "00001",
-      "name": "英語"
-    },
-    {
-      "id": "00006",
-      "name": "英文法"
-    },
-    {
-      "id": "00003",
-      "name": "中学1年"
-    }
+    { "id": "00001", "name": "英語" },
+    { "id": "00006", "name": "英文法" },
+    { "id": "00003", "name": "中学1年" }
   ],
   "createdAt": "2021-07-25",
   "updatedAt": "2021-07-25",
@@ -55,18 +46,9 @@
       "info": "今駅に向かっていますか？",
       "word": "Are you heading to the station now?"
     },
-    {
-      "info": "その電車に乗っていますか？",
-      "word": "Are you on the train?"
-    },
-    {
-      "info": "何をしていますか？",
-      "word": "What are you doing?"
-    },
-    {
-      "info": "彼は何をしていますか？",
-      "word": "What is he doing?"
-    },
+    { "info": "その電車に乗っていますか？", "word": "Are you on the train?" },
+    { "info": "何をしていますか？", "word": "What are you doing?" },
+    { "info": "彼は何をしていますか？", "word": "What is he doing?" },
     {
       "info": "彼は今、何もしていません",
       "word": "He's not doing anything right now"

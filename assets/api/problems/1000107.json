@@ -3,18 +3,9 @@
   "title": "Canの用法 その1",
   "type": "english",
   "tags": [
-    {
-      "id": "00001",
-      "name": "英語"
-    },
-    {
-      "id": "00006",
-      "name": "英文法"
-    },
-    {
-      "id": "00003",
-      "name": "中学1年"
-    }
+    { "id": "00001", "name": "英語" },
+    { "id": "00006", "name": "英文法" },
+    { "id": "00003", "name": "中学1年" }
   ],
   "createdAt": "2021-08-11",
   "updatedAt": "2021-08-11",
@@ -31,10 +22,7 @@
       "info": "彼はホームランを打つことができます",
       "word": "He can hit a home run"
     },
-    {
-      "info": "私は英語を話すことができます",
-      "word": "I can speak English"
-    },
+    { "info": "私は英語を話すことができます", "word": "I can speak English" },
     {
       "info": "あなたは日本語を上手に話すことができます",
       "word": "You can speak Japanese well"

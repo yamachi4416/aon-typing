@@ -3,14 +3,8 @@
   "title": "いぬの種類（超小型犬）",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00011",
-      "name": "いきもの"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00011", "name": "いきもの" }
   ],
   "createdAt": "2021-09-26",
   "updatedAt": "2021-09-26",
@@ -30,31 +24,19 @@
       "info2": "たいにーぷーどる",
       "word": "taini-pu-doru"
     },
-    {
-      "info": "チワワ",
-      "info2": "ちわわ",
-      "word": "tiwawa"
-    },
+    { "info": "チワワ", "info2": "ちわわ", "word": "tiwawa" },
     {
       "info": "ティーカッププードル",
       "info2": "てぃーかっぷぷーどる",
       "word": "thi-kappupu-doru"
     },
-    {
-      "info": "トイプードル",
-      "info2": "といぷーどる",
-      "word": "toipu-doru"
-    },
+    { "info": "トイプードル", "info2": "といぷーどる", "word": "toipu-doru" },
     {
       "info": "トイマンチェスターテリア",
       "info2": "といまんちぇすたーてりあ",
       "word": "toimantyesuta-teria"
     },
-    {
-      "info": "パピヨン",
-      "info2": "ぱぴよん",
-      "word": "papiyonn"
-    },
+    { "info": "パピヨン", "info2": "ぱぴよん", "word": "papiyonn" },
     {
       "info": "ブリュッセルグリフォン",
       "info2": "ぶりゅっせるぐりふぉん",
@@ -70,21 +52,9 @@
       "info2": "べるじあんぐりふぉん",
       "word": "berujiangurifonn"
     },
-    {
-      "info": "ボロニーズ",
-      "info2": "ぼろにーず",
-      "word": "boroni-zu"
-    },
-    {
-      "info": "ポメラニアン",
-      "info2": "ぽめらにあん",
-      "word": "pomeraniann"
-    },
-    {
-      "info": "マルチーズ",
-      "info2": "まるちーず",
-      "word": "maruti-zu"
-    },
+    { "info": "ボロニーズ", "info2": "ぼろにーず", "word": "boroni-zu" },
+    { "info": "ポメラニアン", "info2": "ぽめらにあん", "word": "pomeraniann" },
+    { "info": "マルチーズ", "info2": "まるちーず", "word": "maruti-zu" },
     {
       "info": "ヨークシャーテリア",
       "info2": "よーくしゃーてりあ",
@@ -95,10 +65,6 @@
       "info2": "ろんぐこーとちわわ",
       "word": "ronguko-totiwawa"
     },
-    {
-      "info": "豆柴",
-      "info2": "まめしば",
-      "word": "mamesiba"
-    }
+    { "info": "豆柴", "info2": "まめしば", "word": "mamesiba" }
   ]
 }

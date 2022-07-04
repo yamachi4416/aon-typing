@@ -3,14 +3,8 @@
   "title": "ことわざ その2",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00021",
-      "name": "国語"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00021", "name": "国語" }
   ],
   "createdAt": "2021-09-14",
   "updatedAt": "2021-09-14",
@@ -25,16 +19,8 @@
       "info2": "うそからでたまこと",
       "word": "usokaradetamakoto"
     },
-    {
-      "info": "嘘八百",
-      "info2": "うそはっぴゃく",
-      "word": "usohappyaku"
-    },
-    {
-      "info": "嘘も方便",
-      "info2": "うそもほうべん",
-      "word": "usomohoubenn"
-    },
+    { "info": "嘘八百", "info2": "うそはっぴゃく", "word": "usohappyaku" },
+    { "info": "嘘も方便", "info2": "うそもほうべん", "word": "usomohoubenn" },
     {
       "info": "馬の耳に念仏",
       "info2": "うまのみみにねんぶつ",
@@ -60,11 +46,7 @@
       "info2": "えびでたいをつる",
       "word": "ebidetaiwoturu"
     },
-    {
-      "info": "鬼に金棒",
-      "info2": "おににかなぼう",
-      "word": "oninikanabou"
-    },
+    { "info": "鬼に金棒", "info2": "おににかなぼう", "word": "oninikanabou" },
     {
       "info": "女心と秋の空",
       "info2": "おんなごころとあきのそら",

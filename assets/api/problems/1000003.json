@@ -3,14 +3,8 @@
   "title": "基本練習 その3",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00020",
-      "name": "基本練習"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00020", "name": "基本練習" }
   ],
   "createdAt": "2021-06-13",
   "updatedAt": "2021-06-13",
@@ -25,70 +19,21 @@
       "info2": "ゃ ゅ ょ",
       "word": "lya lyu lyo"
     },
-    {
-      "info": "ちいさい「つ」",
-      "info2": "っ",
-      "word": "ltu"
-    },
-    {
-      "info2": "いぇ",
-      "word": "ye"
-    },
-    {
-      "info2": "うぁ うぃ うぇ うぉ",
-      "word": "wha wi we who"
-    },
-    {
-      "info2": "きゃ きゅ きょ",
-      "word": "kya kyu kyo"
-    },
-    {
-      "info2": "しゃ しゅ しぇ しょ",
-      "word": "sya syu sye syo"
-    },
-    {
-      "info2": "すぁ すぃ すぅ すぇ すぉ",
-      "word": "swa swi swu swe swo"
-    },
-    {
-      "info2": "ちゃ ちぃ ちゅ ちぇ ちょ",
-      "word": "tya tyi tyu tye tyo"
-    },
-    {
-      "info2": "てゃ てぃ てゅ てぇ てょ",
-      "word": "tha thi thu the tho"
-    },
-    {
-      "info2": "つぁ つぃ つぇ つぉ",
-      "word": "tsa tsi tse tso"
-    },
-    {
-      "info2": "とぁ とぃ とぅ とぇ とぉ",
-      "word": "twa twi twu twe two"
-    },
-    {
-      "info2": "にゃ にゅ にょ",
-      "word": "nya nyu nyo"
-    },
-    {
-      "info2": "ひゃ ひゅ ひょ",
-      "word": "hya hyu hyo"
-    },
-    {
-      "info2": "ふぁ ふぃ ふゅ ふぇ ふょ",
-      "word": "fa fi fyu fe fyo"
-    },
-    {
-      "info2": "みゃ みゅ みょ",
-      "word": "mya myu myo"
-    },
-    {
-      "info2": "うぁ うぃ うぇ うぉ",
-      "word": "wha wi we who"
-    },
-    {
-      "info2": "ヴァ ヴィ ヴ ヴェ ヴォ",
-      "word": "va vi vu ve vo"
-    }
+    { "info": "ちいさい「つ」", "info2": "っ", "word": "ltu" },
+    { "info2": "いぇ", "word": "ye" },
+    { "info2": "うぁ うぃ うぇ うぉ", "word": "wha wi we who" },
+    { "info2": "きゃ きゅ きょ", "word": "kya kyu kyo" },
+    { "info2": "しゃ しゅ しぇ しょ", "word": "sya syu sye syo" },
+    { "info2": "すぁ すぃ すぅ すぇ すぉ", "word": "swa swi swu swe swo" },
+    { "info2": "ちゃ ちぃ ちゅ ちぇ ちょ", "word": "tya tyi tyu tye tyo" },
+    { "info2": "てゃ てぃ てゅ てぇ てょ", "word": "tha thi thu the tho" },
+    { "info2": "つぁ つぃ つぇ つぉ", "word": "tsa tsi tse tso" },
+    { "info2": "とぁ とぃ とぅ とぇ とぉ", "word": "twa twi twu twe two" },
+    { "info2": "にゃ にゅ にょ", "word": "nya nyu nyo" },
+    { "info2": "ひゃ ひゅ ひょ", "word": "hya hyu hyo" },
+    { "info2": "ふぁ ふぃ ふゅ ふぇ ふょ", "word": "fa fi fyu fe fyo" },
+    { "info2": "みゃ みゅ みょ", "word": "mya myu myo" },
+    { "info2": "うぁ うぃ うぇ うぉ", "word": "wha wi we who" },
+    { "info2": "ヴァ ヴィ ヴ ヴェ ヴォ", "word": "va vi vu ve vo" }
   ]
 }

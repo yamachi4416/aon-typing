@@ -3,14 +3,8 @@
   "title": "あんたがたどこさ",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00014",
-      "name": "童謡"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00014", "name": "童謡" }
   ],
   "createdAt": "2021-05-31",
   "updatedAt": "2021-05-31",
@@ -20,31 +14,15 @@
       "info2": "あんたがた どこさ",
       "word": "antagata dokosa"
     },
-    {
-      "info": "肥後さ",
-      "info2": "ひごさ",
-      "word": "higosa"
-    },
-    {
-      "info": "肥後 どこさ",
-      "info2": "ひご どこさ",
-      "word": "higo dokosa"
-    },
-    {
-      "info": "熊本さ",
-      "info2": "くまもとさ",
-      "word": "kumamotosa"
-    },
+    { "info": "肥後さ", "info2": "ひごさ", "word": "higosa" },
+    { "info": "肥後 どこさ", "info2": "ひご どこさ", "word": "higo dokosa" },
+    { "info": "熊本さ", "info2": "くまもとさ", "word": "kumamotosa" },
     {
       "info": "熊本 どこさ",
       "info2": "くまもと どこさ",
       "word": "kumamoto dokosa"
     },
-    {
-      "info": "せんばさ",
-      "info2": "せんばさ",
-      "word": "senbasa"
-    },
+    { "info": "せんばさ", "info2": "せんばさ", "word": "senbasa" },
     {
       "info": "せんば山には",
       "info2": "せんばやまには",
@@ -55,36 +33,16 @@
       "info2": "たぬきがおってさ",
       "word": "tanukigaottesa"
     },
-    {
-      "info": "それを",
-      "info2": "それを",
-      "word": "sorewo"
-    },
-    {
-      "info": "猟師が",
-      "info2": "りょうしが",
-      "word": "ryousiga"
-    },
+    { "info": "それを", "info2": "それを", "word": "sorewo" },
+    { "info": "猟師が", "info2": "りょうしが", "word": "ryousiga" },
     {
       "info": "鉄砲でうってさ",
       "info2": "てっぽうでうってさ",
       "word": "teppoudeuttesa"
     },
-    {
-      "info": "煮てさ",
-      "info2": "にてさ",
-      "word": "nitesa"
-    },
-    {
-      "info": "焼いてさ",
-      "info2": "やいてさ",
-      "word": "yaitesa"
-    },
-    {
-      "info": "食ってさ",
-      "info2": "くってさ",
-      "word": "kuttesa"
-    },
+    { "info": "煮てさ", "info2": "にてさ", "word": "nitesa" },
+    { "info": "焼いてさ", "info2": "やいてさ", "word": "yaitesa" },
+    { "info": "食ってさ", "info2": "くってさ", "word": "kuttesa" },
     {
       "info": "それを木の葉で",
       "info2": "それをこのはで",

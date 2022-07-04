@@ -3,14 +3,8 @@
   "title": "いぬの種類（大型犬）",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00011",
-      "name": "いきもの"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00011", "name": "いきもの" }
   ],
   "createdAt": "2021-09-26",
   "updatedAt": "2021-09-26",
@@ -60,36 +54,20 @@
       "info2": "かーりーこーてっどれとりばー",
       "word": "ka-ri-ko-teddoretoriba-"
     },
-    {
-      "info": "グレートデン",
-      "info2": "ぐれーとでん",
-      "word": "gure-todenn"
-    },
+    { "info": "グレートデン", "info2": "ぐれーとでん", "word": "gure-todenn" },
     {
       "info": "グレートピレニーズ",
       "info2": "ぐれーとぴれにーず",
       "word": "gure-topireni-zu"
     },
-    {
-      "info": "コモンドール",
-      "info2": "こもんどーる",
-      "word": "komondo-ru"
-    },
+    { "info": "コモンドール", "info2": "こもんどーる", "word": "komondo-ru" },
     {
       "info": "ゴールデンレトリバー",
       "info2": "ごーるでんれとりばー",
       "word": "go-rudenretoriba-"
     },
-    {
-      "info": "サモエド",
-      "info2": "さもえど",
-      "word": "samoedo"
-    },
-    {
-      "info": "サルーキ",
-      "info2": "さるーき",
-      "word": "saru-ki"
-    },
+    { "info": "サモエド", "info2": "さもえど", "word": "samoedo" },
+    { "info": "サルーキ", "info2": "さるーき", "word": "saru-ki" },
     {
       "info": "シベリアンハスキー",
       "info2": "しべりあんはすきー",
@@ -115,26 +93,14 @@
       "info2": "せんとばーなーど",
       "word": "sentoba-na-do"
     },
-    {
-      "info": "ダルメシアン",
-      "info2": "だるめしあん",
-      "word": "darumesiann"
-    },
+    { "info": "ダルメシアン", "info2": "だるめしあん", "word": "darumesiann" },
     {
       "info": "チェサピークベイレトリバー",
       "info2": "ちぇさぴーくべいれとりばー",
       "word": "tyesapi-kubeiretoriba-"
     },
-    {
-      "info": "チャウチャウ",
-      "info2": "ちゃうちゃう",
-      "word": "tyautyau"
-    },
-    {
-      "info": "ドーベルマン",
-      "info2": "どーべるまん",
-      "word": "do-berumann"
-    },
+    { "info": "チャウチャウ", "info2": "ちゃうちゃう", "word": "tyautyau" },
+    { "info": "ドーベルマン", "info2": "どーべるまん", "word": "do-berumann" },
     {
       "info": "ニューファンドランド",
       "info2": "にゅーふぁんどらんど",
@@ -155,31 +121,15 @@
       "info2": "ふらっとこーてっどれとりばー",
       "word": "hurattoko-teddoretoriba-"
     },
-    {
-      "info": "ブリアード",
-      "info2": "ぶりあーど",
-      "word": "buria-do"
-    },
+    { "info": "ブリアード", "info2": "ぶりあーど", "word": "buria-do" },
     {
       "info": "ブービエ・デ・フランダース",
       "info2": "ぶーびえ・で・ふらんだーす",
       "word": "bu-bie/de/huranda-su"
     },
-    {
-      "info": "ボクサー",
-      "info2": "ぼくさー",
-      "word": "bokusa-"
-    },
-    {
-      "info": "ボルゾイ",
-      "info2": "ぼるぞい",
-      "word": "boruzoi"
-    },
-    {
-      "info": "ラフコリー",
-      "info2": "らふこりー",
-      "word": "rahukori-"
-    },
+    { "info": "ボクサー", "info2": "ぼくさー", "word": "bokusa-" },
+    { "info": "ボルゾイ", "info2": "ぼるぞい", "word": "boruzoi" },
+    { "info": "ラフコリー", "info2": "らふこりー", "word": "rahukori-" },
     {
       "info": "ラブラドールレトリバー",
       "info2": "らぶらどーるれとりばー",
@@ -195,20 +145,8 @@
       "info2": "ろっとわいらー",
       "word": "rottowaira-"
     },
-    {
-      "info": "ワイマラナー",
-      "info2": "わいまらなー",
-      "word": "waimarana-"
-    },
-    {
-      "info": "土佐犬",
-      "info2": "とさいぬ",
-      "word": "tosainu"
-    },
-    {
-      "info": "秋田犬",
-      "info2": "あきたいぬ",
-      "word": "akitainu"
-    }
+    { "info": "ワイマラナー", "info2": "わいまらなー", "word": "waimarana-" },
+    { "info": "土佐犬", "info2": "とさいぬ", "word": "tosainu" },
+    { "info": "秋田犬", "info2": "あきたいぬ", "word": "akitainu" }
   ]
 }

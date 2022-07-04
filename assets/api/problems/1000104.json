@@ -3,18 +3,9 @@
   "title": "一般動詞 その2",
   "type": "english",
   "tags": [
-    {
-      "id": "00001",
-      "name": "英語"
-    },
-    {
-      "id": "00006",
-      "name": "英文法"
-    },
-    {
-      "id": "00003",
-      "name": "中学1年"
-    }
+    { "id": "00001", "name": "英語" },
+    { "id": "00006", "name": "英文法" },
+    { "id": "00003", "name": "中学1年" }
   ],
   "createdAt": "2021-06-13",
   "updatedAt": "2021-06-13",
@@ -23,10 +14,7 @@
       "info": "彼は公園でサッカーをします",
       "word": "He plays soccer in the park"
     },
-    {
-      "info": "彼女はバイオリンを弾きます",
-      "word": "She plays the violin"
-    },
+    { "info": "彼女はバイオリンを弾きます", "word": "She plays the violin" },
     {
       "info": "彼女は音楽室でピアノを弾きます",
       "word": "She plays the piano in the music room"
@@ -47,10 +35,7 @@
       "info": "彼の父は彼とサッカーをします",
       "word": "His father plays soccer with him"
     },
-    {
-      "info": "彼は勉強をしません",
-      "word": "He does not study"
-    },
+    { "info": "彼は勉強をしません", "word": "He does not study" },
     {
       "info": "彼らはまったく勉強をしません",
       "word": "They don't study at all"

@@ -4,22 +4,10 @@
   "type": "japanese",
   "skip": false,
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00015",
-      "name": "青空文庫"
-    },
-    {
-      "id": "00016",
-      "name": "日本文学"
-    },
-    {
-      "id": "00018",
-      "name": "詩歌"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00015", "name": "青空文庫" },
+    { "id": "00016", "name": "日本文学" },
+    { "id": "00018", "name": "詩歌" }
   ],
   "createdAt": "2021-05-31",
   "updatedAt": "2021-05-31",
@@ -44,11 +32,7 @@
       "info2": "じやがいもに　しるくはつとは",
       "word": "jiyagaimoni sirukuhatutoha"
     },
-    {
-      "info": "ドウデスカ。",
-      "info2": "どうですか。",
-      "word": "doudesuka."
-    },
+    { "info": "ドウデスカ。", "info2": "どうですか。", "word": "doudesuka." },
     {
       "info": "ワタシハ　ジヤガイモ、",
       "info2": "わたしは　じやがいも、",
@@ -59,11 +43,7 @@
       "info2": "じやがいもに　ながいすてつき",
       "word": "jiyagaimoni nagaisutetuki"
     },
-    {
-      "info": "ドウデスカ。",
-      "info2": "どうですか。",
-      "word": "doudesuka."
-    },
+    { "info": "ドウデスカ。", "info2": "どうですか。", "word": "doudesuka." },
     {
       "info": "ワタシハ　ジヤガイモ、",
       "info2": "わたしは　じやがいも、",
@@ -74,11 +54,7 @@
       "info2": "じやがいもに　けいとのかたかけ",
       "word": "jiyagaimoni keitonokatakake"
     },
-    {
-      "info": "ドウデスカ。",
-      "info2": "どうですか。",
-      "word": "doudesuka."
-    },
+    { "info": "ドウデスカ。", "info2": "どうですか。", "word": "doudesuka." },
     {
       "info": "ワタシハ　ジヤガイモ、",
       "info2": "わたしは　じやがいも、",
@@ -89,11 +65,7 @@
       "info2": "じやがいもに　ともんのおくつは",
       "word": "jiyagaimoni tomonnnookutuha"
     },
-    {
-      "info": "ドウデスカ。",
-      "info2": "どうですか。",
-      "word": "doudesuka."
-    },
+    { "info": "ドウデスカ。", "info2": "どうですか。", "word": "doudesuka." },
     {
       "info": "ワタシハ　ジヤガイモ、",
       "info2": "わたしは　じやがいも、",
@@ -104,11 +76,7 @@
       "info2": "じやがいもが、まちをあるいても",
       "word": "jiyagaimoga,matiwoaruitemo"
     },
-    {
-      "info": "イイデスカ。",
-      "info2": "いいですか。",
-      "word": "iidesuka."
-    }
+    { "info": "イイデスカ。", "info2": "いいですか。", "word": "iidesuka." }
   ],
   "links": [
     {

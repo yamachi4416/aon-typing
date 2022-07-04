@@ -3,14 +3,8 @@
   "title": "ねこの種類",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00011",
-      "name": "いきもの"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00011", "name": "いきもの" }
   ],
   "createdAt": "2021-09-26",
   "updatedAt": "2021-09-26",
@@ -40,16 +34,8 @@
       "info2": "えじぷしゃんまう",
       "word": "ejipusyanmau"
     },
-    {
-      "info": "キンカロー",
-      "info2": "きんかろー",
-      "word": "kinkaro-"
-    },
-    {
-      "info": "サイベリアン",
-      "info2": "さいべりあん",
-      "word": "saiberiann"
-    },
+    { "info": "キンカロー", "info2": "きんかろー", "word": "kinkaro-" },
+    { "info": "サイベリアン", "info2": "さいべりあん", "word": "saiberiann" },
     {
       "info": "サバンナキャット",
       "info2": "さばんなきゃっと",
@@ -60,16 +46,8 @@
       "info2": "しゃるとりゅー",
       "word": "syarutoryu-"
     },
-    {
-      "info": "シンガプーラ",
-      "info2": "しんがぷーら",
-      "word": "singapu-ra"
-    },
-    {
-      "info": "ジェネッタ",
-      "info2": "じぇねった",
-      "word": "jenetta"
-    },
+    { "info": "シンガプーラ", "info2": "しんがぷーら", "word": "singapu-ra" },
+    { "info": "ジェネッタ", "info2": "じぇねった", "word": "jenetta" },
     {
       "info": "スコティッシュストレート",
       "info2": "すこてぃっしゅすとれーと",
@@ -80,86 +58,38 @@
       "info2": "すこてぃっしゅふぉーるど",
       "word": "sukothissyufo-rudo"
     },
-    {
-      "info": "スフィンクス",
-      "info2": "すふぃんくす",
-      "word": "sufinkusu"
-    },
+    { "info": "スフィンクス", "info2": "すふぃんくす", "word": "sufinkusu" },
     {
       "info": "セルカークレックス",
       "info2": "せるかーくれっくす",
       "word": "seruka-kurekkusu"
     },
-    {
-      "info": "ソマリ",
-      "info2": "そまり",
-      "word": "somari"
-    },
+    { "info": "ソマリ", "info2": "そまり", "word": "somari" },
     {
       "info": "チンチラペルシャ",
       "info2": "ちんちらぺるしゃ",
       "word": "tintiraperusya"
     },
-    {
-      "info": "トンキニーズ",
-      "info2": "とんきにーず",
-      "word": "tonkini-zu"
-    },
+    { "info": "トンキニーズ", "info2": "とんきにーず", "word": "tonkini-zu" },
     {
       "info": "ノルウェージャンフォレストキャット",
       "info2": "のるうぇーじゃんふぉれすときゃっと",
       "word": "noruwe-janforesutokyatto"
     },
-    {
-      "info": "ヒマラヤン",
-      "info2": "ひまらやん",
-      "word": "himarayann"
-    },
+    { "info": "ヒマラヤン", "info2": "ひまらやん", "word": "himarayann" },
     {
       "info": "ブリティッシュショートヘア",
       "info2": "ぶりてぃっしゅしょーとへあ",
       "word": "burithissyusyo-tohea"
     },
-    {
-      "info": "ベンガル",
-      "info2": "べんがる",
-      "word": "bengaru"
-    },
-    {
-      "info": "ペルシャ",
-      "info2": "ぺるしゃ",
-      "word": "perusya"
-    },
-    {
-      "info": "マンチカン",
-      "info2": "まんちかん",
-      "word": "mantikann"
-    },
-    {
-      "info": "ミヌエット",
-      "info2": "みぬえっと",
-      "word": "minuetto"
-    },
-    {
-      "info": "メインクーン",
-      "info2": "めいんくーん",
-      "word": "meinku-nn"
-    },
-    {
-      "info": "ラガマフィン",
-      "info2": "らがまふぃん",
-      "word": "ragamafinn"
-    },
-    {
-      "info": "ラグドール",
-      "info2": "らぐどーる",
-      "word": "ragudo-ru"
-    },
-    {
-      "info": "ラパーマ",
-      "info2": "らぱーま",
-      "word": "rapa-ma"
-    },
+    { "info": "ベンガル", "info2": "べんがる", "word": "bengaru" },
+    { "info": "ペルシャ", "info2": "ぺるしゃ", "word": "perusya" },
+    { "info": "マンチカン", "info2": "まんちかん", "word": "mantikann" },
+    { "info": "ミヌエット", "info2": "みぬえっと", "word": "minuetto" },
+    { "info": "メインクーン", "info2": "めいんくーん", "word": "meinku-nn" },
+    { "info": "ラガマフィン", "info2": "らがまふぃん", "word": "ragamafinn" },
+    { "info": "ラグドール", "info2": "らぐどーる", "word": "ragudo-ru" },
+    { "info": "ラパーマ", "info2": "らぱーま", "word": "rapa-ma" },
     {
       "info": "ロシアンブルー",
       "info2": "ろしあんぶるー",

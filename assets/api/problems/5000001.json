@@ -3,81 +3,24 @@
   "title": "旧暦で12ヵ月",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00021",
-      "name": "国語"
-    },
-    {
-      "id": "00003",
-      "name": "中学1年"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00021", "name": "国語" },
+    { "id": "00003", "name": "中学1年" }
   ],
   "createdAt": "2021-08-21",
   "updatedAt": "2021-08-21",
   "words": [
-    {
-      "info": "睦月（1月）",
-      "info2": "むつき",
-      "word": "mutuki"
-    },
-    {
-      "info": "如月（2月）",
-      "info2": "きさらぎ",
-      "word": "kisaragi"
-    },
-    {
-      "info": "弥生（3月）",
-      "info2": "やよい",
-      "word": "yayoi"
-    },
-    {
-      "info": "卯月（4月）",
-      "info2": "うづき",
-      "word": "uduki"
-    },
-    {
-      "info": "皐月（5月）",
-      "info2": "さつき",
-      "word": "satuki"
-    },
-    {
-      "info": "水無月（6月）",
-      "info2": "みなづき",
-      "word": "minaduki"
-    },
-    {
-      "info": "文月（7月）",
-      "info2": "ふみづき",
-      "word": "humiduki"
-    },
-    {
-      "info": "葉月（8月）",
-      "info2": "はづき",
-      "word": "haduki"
-    },
-    {
-      "info": "長月（9月）",
-      "info2": "ながつき",
-      "word": "nagatuki"
-    },
-    {
-      "info": "神無月（10月）",
-      "info2": "かんなづき",
-      "word": "kannnaduki"
-    },
-    {
-      "info": "霜月（11月）",
-      "info2": "しもつき",
-      "word": "simotuki"
-    },
-    {
-      "info": "師走（12月）",
-      "info2": "しわす",
-      "word": "siwasu"
-    }
+    { "info": "睦月（1月）", "info2": "むつき", "word": "mutuki" },
+    { "info": "如月（2月）", "info2": "きさらぎ", "word": "kisaragi" },
+    { "info": "弥生（3月）", "info2": "やよい", "word": "yayoi" },
+    { "info": "卯月（4月）", "info2": "うづき", "word": "uduki" },
+    { "info": "皐月（5月）", "info2": "さつき", "word": "satuki" },
+    { "info": "水無月（6月）", "info2": "みなづき", "word": "minaduki" },
+    { "info": "文月（7月）", "info2": "ふみづき", "word": "humiduki" },
+    { "info": "葉月（8月）", "info2": "はづき", "word": "haduki" },
+    { "info": "長月（9月）", "info2": "ながつき", "word": "nagatuki" },
+    { "info": "神無月（10月）", "info2": "かんなづき", "word": "kannnaduki" },
+    { "info": "霜月（11月）", "info2": "しもつき", "word": "simotuki" },
+    { "info": "師走（12月）", "info2": "しわす", "word": "siwasu" }
   ]
 }

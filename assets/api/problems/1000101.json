@@ -3,81 +3,27 @@
   "title": "Be動詞 その1",
   "type": "english",
   "tags": [
-    {
-      "id": "00001",
-      "name": "英語"
-    },
-    {
-      "id": "00006",
-      "name": "英文法"
-    },
-    {
-      "id": "00003",
-      "name": "中学1年"
-    }
+    { "id": "00001", "name": "英語" },
+    { "id": "00006", "name": "英文法" },
+    { "id": "00003", "name": "中学1年" }
   ],
   "createdAt": "2021-05-31",
   "updatedAt": "2021-05-31",
   "words": [
-    {
-      "info": "私は生徒です",
-      "word": "I am a student"
-    },
-    {
-      "info": "私は男の子です",
-      "word": "I am a boy"
-    },
-    {
-      "info": "あなたは私の友達です",
-      "word": "You are my friend"
-    },
-    {
-      "info": "あなたは女の子です",
-      "word": "You are a girl"
-    },
-    {
-      "info": "花子は今大阪にいます",
-      "word": "Hanako is in Osaka now"
-    },
-    {
-      "info": "私のペンは机の上にあります",
-      "word": "My pen is on the desk"
-    },
-    {
-      "info": "私は東京から来ました",
-      "word": "I'm from Tokyo"
-    },
-    {
-      "info": "私たちは大阪出身です",
-      "word": "We are from Osaka"
-    },
-    {
-      "info": "花子は東京出身です",
-      "word": "Hanako is from Tokyo"
-    },
-    {
-      "info": "私は花子です",
-      "word": "I'm Hanako"
-    },
-    {
-      "info": "あなたは私たちのお母さんです",
-      "word": "You are our mother"
-    },
-    {
-      "info": "これは私の家です",
-      "word": "This is my house"
-    },
-    {
-      "info": "私はとても幸せです",
-      "word": "I am very happy"
-    },
-    {
-      "info": "あなたはとても優しいです",
-      "word": "You are very kind"
-    },
-    {
-      "info": "あなたの車はかっこいいです",
-      "word": "Your car is cool"
-    }
+    { "info": "私は生徒です", "word": "I am a student" },
+    { "info": "私は男の子です", "word": "I am a boy" },
+    { "info": "あなたは私の友達です", "word": "You are my friend" },
+    { "info": "あなたは女の子です", "word": "You are a girl" },
+    { "info": "花子は今大阪にいます", "word": "Hanako is in Osaka now" },
+    { "info": "私のペンは机の上にあります", "word": "My pen is on the desk" },
+    { "info": "私は東京から来ました", "word": "I'm from Tokyo" },
+    { "info": "私たちは大阪出身です", "word": "We are from Osaka" },
+    { "info": "花子は東京出身です", "word": "Hanako is from Tokyo" },
+    { "info": "私は花子です", "word": "I'm Hanako" },
+    { "info": "あなたは私たちのお母さんです", "word": "You are our mother" },
+    { "info": "これは私の家です", "word": "This is my house" },
+    { "info": "私はとても幸せです", "word": "I am very happy" },
+    { "info": "あなたはとても優しいです", "word": "You are very kind" },
+    { "info": "あなたの車はかっこいいです", "word": "Your car is cool" }
   ]
 }

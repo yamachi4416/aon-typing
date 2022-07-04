@@ -3,81 +3,36 @@
   "title": "命令文",
   "type": "english",
   "tags": [
-    {
-      "id": "00001",
-      "name": "英語"
-    },
-    {
-      "id": "00006",
-      "name": "英文法"
-    },
-    {
-      "id": "00003",
-      "name": "中学1年"
-    }
+    { "id": "00001", "name": "英語" },
+    { "id": "00006", "name": "英文法" },
+    { "id": "00003", "name": "中学1年" }
   ],
   "createdAt": "2021-07-25",
   "updatedAt": "2021-07-25",
   "words": [
-    {
-      "info": "そのドアをあけて",
-      "word": "Open the door"
-    },
-    {
-      "info": "その公園に行って",
-      "word": "Go to the park"
-    },
-    {
-      "info": "お年寄りに親切にしなさい",
-      "word": "Be kind to the elderly"
-    },
+    { "info": "そのドアをあけて", "word": "Open the door" },
+    { "info": "その公園に行って", "word": "Go to the park" },
+    { "info": "お年寄りに親切にしなさい", "word": "Be kind to the elderly" },
     {
       "info": "勇気を持って挑戦して",
       "word": "Take on the challenge with courage"
     },
-    {
-      "info": "ここでサッカーをしないで",
-      "word": "Don't play soccer here"
-    },
-    {
-      "info": "私に優しくしないで",
-      "word": "Don't be kind to me"
-    },
-    {
-      "info": "うるさくしないで",
-      "word": "Don't be noisy"
-    },
+    { "info": "ここでサッカーをしないで", "word": "Don't play soccer here" },
+    { "info": "私に優しくしないで", "word": "Don't be kind to me" },
+    { "info": "うるさくしないで", "word": "Don't be noisy" },
     {
       "info": "そのイスに座ってお待ちください",
       "word": "Please sit on that chair and wait"
     },
-    {
-      "info": "一緒に勉強しましょう",
-      "word": "Let's study together"
-    },
-    {
-      "info": "静かにしましょう",
-      "word": "Let's be quiet"
-    },
-    {
-      "info": "静かにしなさい",
-      "word": "Be quiet"
-    },
-    {
-      "info": "静かにしてください",
-      "word": "Please be quiet"
-    },
-    {
-      "info": "ダンスしませんか",
-      "word": "Shall we dance"
-    },
+    { "info": "一緒に勉強しましょう", "word": "Let's study together" },
+    { "info": "静かにしましょう", "word": "Let's be quiet" },
+    { "info": "静かにしなさい", "word": "Be quiet" },
+    { "info": "静かにしてください", "word": "Please be quiet" },
+    { "info": "ダンスしませんか", "word": "Shall we dance" },
     {
       "info": "私と踊りませんか？",
       "word": "Would you like to dance with me?"
     },
-    {
-      "info": "元気を出してください",
-      "word": "Please cheer up"
-    }
+    { "info": "元気を出してください", "word": "Please cheer up" }
   ]
 }

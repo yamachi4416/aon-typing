@@ -3,139 +3,48 @@
   "title": "ＪＲ九頭竜線の駅いちらん",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00007",
-      "name": "地理"
-    },
-    {
-      "id": "00019",
-      "name": "駅名"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
   ],
   "createdAt": "2022-07-02",
   "updatedAt": "2022-07-02",
-  "optional": {
-    "cd": "157"
-  },
+  "optional": { "cd": "157" },
   "words": [
-    {
-      "info": "九頭竜湖",
-      "info2": "くずりゅうこ",
-      "word": "kuzuryuuko"
-    },
+    { "info": "九頭竜湖", "info2": "くずりゅうこ", "word": "kuzuryuuko" },
     {
       "info": "越前下山",
       "info2": "えちぜんしもやま",
       "word": "etizensimoyama"
     },
-    {
-      "info": "勝原",
-      "info2": "かどはら",
-      "word": "kadohara"
-    },
-    {
-      "info": "柿ケ島",
-      "info2": "かきがしま",
-      "word": "kakigasima"
-    },
-    {
-      "info": "下唯野",
-      "info2": "しもゆいの",
-      "word": "simoyuino"
-    },
-    {
-      "info": "越前富田",
-      "info2": "えちぜんとみだ",
-      "word": "etizentomida"
-    },
-    {
-      "info": "越前田野",
-      "info2": "えちぜんたの",
-      "word": "etizentano"
-    },
-    {
-      "info": "越前大野",
-      "info2": "えちぜんおおの",
-      "word": "etizennoono"
-    },
-    {
-      "info": "北大野",
-      "info2": "きたおおの",
-      "word": "kitaoono"
-    },
-    {
-      "info": "牛ケ原",
-      "info2": "うしがはら",
-      "word": "usigahara"
-    },
-    {
-      "info": "計石",
-      "info2": "はかりいし",
-      "word": "hakariisi"
-    },
+    { "info": "勝原", "info2": "かどはら", "word": "kadohara" },
+    { "info": "柿ケ島", "info2": "かきがしま", "word": "kakigasima" },
+    { "info": "下唯野", "info2": "しもゆいの", "word": "simoyuino" },
+    { "info": "越前富田", "info2": "えちぜんとみだ", "word": "etizentomida" },
+    { "info": "越前田野", "info2": "えちぜんたの", "word": "etizentano" },
+    { "info": "越前大野", "info2": "えちぜんおおの", "word": "etizennoono" },
+    { "info": "北大野", "info2": "きたおおの", "word": "kitaoono" },
+    { "info": "牛ケ原", "info2": "うしがはら", "word": "usigahara" },
+    { "info": "計石", "info2": "はかりいし", "word": "hakariisi" },
     {
       "info": "越前大宮",
       "info2": "えちぜんおおみや",
       "word": "etizennoomiya"
     },
-    {
-      "info": "越前薬師",
-      "info2": "えちぜんやくし",
-      "word": "etizenyakusi"
-    },
-    {
-      "info": "美山",
-      "info2": "みやま",
-      "word": "miyama"
-    },
-    {
-      "info": "小和清水",
-      "info2": "こわしょうず",
-      "word": "kowasyouzu"
-    },
-    {
-      "info": "市波",
-      "info2": "いちなみ",
-      "word": "itinami"
-    },
-    {
-      "info": "越前高田",
-      "info2": "えちぜんたかだ",
-      "word": "etizentakada"
-    },
-    {
-      "info": "一乗谷",
-      "info2": "いちじょうだに",
-      "word": "itijoudani"
-    },
-    {
-      "info": "越前東郷",
-      "info2": "えちぜんとうごう",
-      "word": "etizentougou"
-    },
-    {
-      "info": "足羽",
-      "info2": "あすわ",
-      "word": "asuwa"
-    },
-    {
-      "info": "六条",
-      "info2": "ろくじょう",
-      "word": "rokujou"
-    },
+    { "info": "越前薬師", "info2": "えちぜんやくし", "word": "etizenyakusi" },
+    { "info": "美山", "info2": "みやま", "word": "miyama" },
+    { "info": "小和清水", "info2": "こわしょうず", "word": "kowasyouzu" },
+    { "info": "市波", "info2": "いちなみ", "word": "itinami" },
+    { "info": "越前高田", "info2": "えちぜんたかだ", "word": "etizentakada" },
+    { "info": "一乗谷", "info2": "いちじょうだに", "word": "itijoudani" },
+    { "info": "越前東郷", "info2": "えちぜんとうごう", "word": "etizentougou" },
+    { "info": "足羽", "info2": "あすわ", "word": "asuwa" },
+    { "info": "六条", "info2": "ろくじょう", "word": "rokujou" },
     {
       "info": "越前花堂",
       "info2": "えちぜんはなんどう",
       "word": "etizenhanandou"
     },
-    {
-      "info": "福井",
-      "info2": "ふくい",
-      "word": "hukui"
-    }
+    { "info": "福井", "info2": "ふくい", "word": "hukui" }
   ]
 }

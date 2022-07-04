@@ -3,14 +3,8 @@
   "title": "ことわざ その4",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00021",
-      "name": "国語"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00021", "name": "国語" }
   ],
   "createdAt": "2021-09-14",
   "updatedAt": "2021-09-14",
@@ -30,11 +24,7 @@
       "info2": "すぎたるはなおおよばざるがごとし",
       "word": "sugitaruhanaooyobazarugagotosi"
     },
-    {
-      "info": "雀の涙",
-      "info2": "すずめのなみだ",
-      "word": "suzumenonamida"
-    },
+    { "info": "雀の涙", "info2": "すずめのなみだ", "word": "suzumenonamida" },
     {
       "info": "青天の霹靂",
       "info2": "せいてんのへきれき",
@@ -50,11 +40,7 @@
       "info2": "そなえあればうれいなし",
       "word": "sonaearebaureinasi"
     },
-    {
-      "info": "他山の石",
-      "info2": "たざんのいし",
-      "word": "tazannnoisi"
-    },
+    { "info": "他山の石", "info2": "たざんのいし", "word": "tazannnoisi" },
     {
       "info": "立つ鳥跡を濁さず",
       "info2": "たつとりあとをにごさず",
@@ -70,11 +56,7 @@
       "info2": "つみをにくんでひとをにくまず",
       "word": "tumiwonikundehitowonikumazu"
     },
-    {
-      "info": "鶴の一声",
-      "info2": "つるのひとこえ",
-      "word": "turunohitokoe"
-    },
+    { "info": "鶴の一声", "info2": "つるのひとこえ", "word": "turunohitokoe" },
     {
       "info": "鉄は熱いうちに打て",
       "info2": "てつはあついうちにうて",

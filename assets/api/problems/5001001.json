@@ -3,14 +3,8 @@
   "title": "ことわざ その1",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00021",
-      "name": "国語"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00021", "name": "国語" }
   ],
   "createdAt": "2021-09-14",
   "updatedAt": "2021-09-14",
@@ -70,16 +64,8 @@
       "info2": "いそがばまわれ",
       "word": "isogabamaware"
     },
-    {
-      "info": "一矢報いる",
-      "info2": "いっしむくいる",
-      "word": "issimukuiru"
-    },
-    {
-      "info": "犬の遠吠え",
-      "info2": "いぬのとおぼえ",
-      "word": "inunotooboe"
-    },
+    { "info": "一矢報いる", "info2": "いっしむくいる", "word": "issimukuiru" },
+    { "info": "犬の遠吠え", "info2": "いぬのとおぼえ", "word": "inunotooboe" },
     {
       "info": "犬も歩けば棒に当たる",
       "info2": "いぬもあるけばぼうにあたる",

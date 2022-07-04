@@ -3,81 +3,24 @@
   "title": "ＪＲ川越線の駅いちらん",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00007",
-      "name": "地理"
-    },
-    {
-      "id": "00019",
-      "name": "駅名"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
   ],
   "createdAt": "2022-07-03",
   "updatedAt": "2022-07-03",
-  "optional": {
-    "cd": [
-      "104"
-    ]
-  },
+  "optional": { "cd": ["104"] },
   "words": [
-    {
-      "info": "高麗川",
-      "info2": "こまがわ",
-      "word": "komagawa"
-    },
-    {
-      "info": "武蔵高萩",
-      "info2": "むさしたかはぎ",
-      "word": "musasitakahagi"
-    },
-    {
-      "info": "笠幡",
-      "info2": "かさはた",
-      "word": "kasahata"
-    },
-    {
-      "info": "的場",
-      "info2": "まとば",
-      "word": "matoba"
-    },
-    {
-      "info": "西川越",
-      "info2": "にしかわごえ",
-      "word": "nisikawagoe"
-    },
-    {
-      "info": "川越",
-      "info2": "かわごえ",
-      "word": "kawagoe"
-    },
-    {
-      "info": "南古谷",
-      "info2": "みなみふるや",
-      "word": "minamihuruya"
-    },
-    {
-      "info": "指扇",
-      "info2": "さしおうぎ",
-      "word": "sasiougi"
-    },
-    {
-      "info": "西大宮",
-      "info2": "にしおおみや",
-      "word": "nisioomiya"
-    },
-    {
-      "info": "日進",
-      "info2": "にっしん",
-      "word": "nissinn"
-    },
-    {
-      "info": "大宮",
-      "info2": "おおみや",
-      "word": "oomiya"
-    }
+    { "info": "高麗川", "info2": "こまがわ", "word": "komagawa" },
+    { "info": "武蔵高萩", "info2": "むさしたかはぎ", "word": "musasitakahagi" },
+    { "info": "笠幡", "info2": "かさはた", "word": "kasahata" },
+    { "info": "的場", "info2": "まとば", "word": "matoba" },
+    { "info": "西川越", "info2": "にしかわごえ", "word": "nisikawagoe" },
+    { "info": "川越", "info2": "かわごえ", "word": "kawagoe" },
+    { "info": "南古谷", "info2": "みなみふるや", "word": "minamihuruya" },
+    { "info": "指扇", "info2": "さしおうぎ", "word": "sasiougi" },
+    { "info": "西大宮", "info2": "にしおおみや", "word": "nisioomiya" },
+    { "info": "日進", "info2": "にっしん", "word": "nissinn" },
+    { "info": "大宮", "info2": "おおみや", "word": "oomiya" }
   ]
 }

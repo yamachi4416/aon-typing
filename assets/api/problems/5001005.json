@@ -3,14 +3,8 @@
   "title": "ことわざ その5",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00021",
-      "name": "国語"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00021", "name": "国語" }
   ],
   "createdAt": "2021-09-14",
   "updatedAt": "2021-09-14",
@@ -40,11 +34,7 @@
       "info2": "にんげんばんじさいおうがうま",
       "word": "ningenbanjisaiougauma"
     },
-    {
-      "info": "糠に釘",
-      "info2": "ぬかにくぎ",
-      "word": "nukanikugi"
-    },
+    { "info": "糠に釘", "info2": "ぬかにくぎ", "word": "nukanikugi" },
     {
       "info": "盗人猛々しい",
       "info2": "ぬすっとたけだけしい",
@@ -55,21 +45,9 @@
       "info2": "ねこにかつおぶし",
       "word": "nekonikatuobusi"
     },
-    {
-      "info": "猫に小判",
-      "info2": "ねこにこばん",
-      "word": "nekonikobann"
-    },
-    {
-      "info": "猫の額",
-      "info2": "ねこのひたい",
-      "word": "nekonohitai"
-    },
-    {
-      "info": "寝耳に水",
-      "info2": "ねみみにみず",
-      "word": "nemiminimizu"
-    },
+    { "info": "猫に小判", "info2": "ねこにこばん", "word": "nekonikobann" },
+    { "info": "猫の額", "info2": "ねこのひたい", "word": "nekonohitai" },
+    { "info": "寝耳に水", "info2": "ねみみにみず", "word": "nemiminimizu" },
     {
       "info": "暖簾に腕押し",
       "info2": "のれんにうでおし",

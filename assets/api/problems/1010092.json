@@ -3,94 +3,27 @@
   "title": "ＪＲ久留里線の駅いちらん",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00007",
-      "name": "地理"
-    },
-    {
-      "id": "00019",
-      "name": "駅名"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
   ],
   "createdAt": "2022-07-01",
   "updatedAt": "2022-07-01",
-  "optional": {
-    "cd": "92"
-  },
+  "optional": { "cd": "92" },
   "words": [
-    {
-      "info": "上総亀山",
-      "info2": "かずさかめやま",
-      "word": "kazusakameyama"
-    },
-    {
-      "info": "上総松丘",
-      "info2": "かずさまつおか",
-      "word": "kazusamatuoka"
-    },
-    {
-      "info": "平山",
-      "info2": "ひらやま",
-      "word": "hirayama"
-    },
-    {
-      "info": "久留里",
-      "info2": "くるり",
-      "word": "kururi"
-    },
-    {
-      "info": "俵田",
-      "info2": "たわらだ",
-      "word": "tawarada"
-    },
-    {
-      "info": "小櫃",
-      "info2": "おびつ",
-      "word": "obitu"
-    },
-    {
-      "info": "下郡",
-      "info2": "しもごおり",
-      "word": "simogoori"
-    },
-    {
-      "info": "馬来田",
-      "info2": "まくた",
-      "word": "makuta"
-    },
-    {
-      "info": "東横田",
-      "info2": "ひがしよこた",
-      "word": "higasiyokota"
-    },
-    {
-      "info": "横田",
-      "info2": "よこた",
-      "word": "yokota"
-    },
-    {
-      "info": "東清川",
-      "info2": "ひがしきよかわ",
-      "word": "higasikiyokawa"
-    },
-    {
-      "info": "上総清川",
-      "info2": "かずさきよかわ",
-      "word": "kazusakiyokawa"
-    },
-    {
-      "info": "祇園",
-      "info2": "ぎおん",
-      "word": "gionn"
-    },
-    {
-      "info": "木更津",
-      "info2": "きさらづ",
-      "word": "kisaradu"
-    }
+    { "info": "上総亀山", "info2": "かずさかめやま", "word": "kazusakameyama" },
+    { "info": "上総松丘", "info2": "かずさまつおか", "word": "kazusamatuoka" },
+    { "info": "平山", "info2": "ひらやま", "word": "hirayama" },
+    { "info": "久留里", "info2": "くるり", "word": "kururi" },
+    { "info": "俵田", "info2": "たわらだ", "word": "tawarada" },
+    { "info": "小櫃", "info2": "おびつ", "word": "obitu" },
+    { "info": "下郡", "info2": "しもごおり", "word": "simogoori" },
+    { "info": "馬来田", "info2": "まくた", "word": "makuta" },
+    { "info": "東横田", "info2": "ひがしよこた", "word": "higasiyokota" },
+    { "info": "横田", "info2": "よこた", "word": "yokota" },
+    { "info": "東清川", "info2": "ひがしきよかわ", "word": "higasikiyokawa" },
+    { "info": "上総清川", "info2": "かずさきよかわ", "word": "kazusakiyokawa" },
+    { "info": "祇園", "info2": "ぎおん", "word": "gionn" },
+    { "info": "木更津", "info2": "きさらづ", "word": "kisaradu" }
   ]
 }

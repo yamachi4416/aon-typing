@@ -3,181 +3,44 @@
   "title": "むずかしい漢字のさかな",
   "type": "japanese",
   "tags": [
-    {
-      "id": "00009",
-      "name": "日本語"
-    },
-    {
-      "id": "00010",
-      "name": "漢字"
-    },
-    {
-      "id": "00011",
-      "name": "いきもの"
-    }
+    { "id": "00009", "name": "日本語" },
+    { "id": "00010", "name": "漢字" },
+    { "id": "00011", "name": "いきもの" }
   ],
   "createdAt": "2021-05-31",
   "updatedAt": "2021-05-31",
   "words": [
-    {
-      "info": "氷魚",
-      "info2": "ひうお",
-      "word": "hiuo"
-    },
-    {
-      "info": "鰉",
-      "info2": "ひがい",
-      "word": "higai"
-    },
-    {
-      "info": "比売地",
-      "info2": "ひめじ",
-      "word": "himeji"
-    },
-    {
-      "info": "鮃",
-      "info2": "ひらめ",
-      "word": "hirame"
-    },
-    {
-      "info": "鰭",
-      "info2": "ひれ",
-      "word": "hire"
-    },
-    {
-      "info": "笛吹鯛",
-      "info2": "ふえふきだい",
-      "word": "huehukidai"
-    },
-    {
-      "info": "河豚",
-      "info2": "ふぐ",
-      "word": "hugu"
-    },
-    {
-      "info": "鮒",
-      "info2": "ふな",
-      "word": "huna"
-    },
-    {
-      "info": "鰤",
-      "info2": "ぶり",
-      "word": "buri"
-    },
-    {
-      "info": "倍良",
-      "info2": "べら",
-      "word": "bera"
-    },
-    {
-      "info": "魴鮄",
-      "info2": "ほうぼう",
-      "word": "houbou"
-    },
-    {
-      "info": "帆立",
-      "info2": "ほたて",
-      "word": "hotate"
-    },
-    {
-      "info": "北寄貝",
-      "info2": "ほっきがい",
-      "word": "hokkigai"
-    },
-    {
-      "info": "海鞘",
-      "info2": "ほや",
-      "word": "hoya"
-    },
-    {
-      "info": "鯔",
-      "info2": "ぼら",
-      "word": "bora"
-    },
-    {
-      "info": "鮪",
-      "info2": "まぐろ",
-      "word": "maguro"
-    },
-    {
-      "info": "鱒",
-      "info2": "ます",
-      "word": "masu"
-    },
-    {
-      "info": "馬刀貝",
-      "info2": "まてがい",
-      "word": "mategai"
-    },
-    {
-      "info": "鯧",
-      "info2": "まながつお",
-      "word": "managatuo"
-    },
-    {
-      "info": "海松貝",
-      "info2": "みるがい",
-      "word": "mirugai"
-    },
-    {
-      "info": "海松食",
-      "info2": "みるくい",
-      "word": "mirukui"
-    },
-    {
-      "info": "鯥",
-      "info2": "むつ",
-      "word": "mutu"
-    },
-    {
-      "info": "鯥五郎",
-      "info2": "むつごろう",
-      "word": "mutugorou"
-    },
-    {
-      "info": "目示奈",
-      "info2": "めじな",
-      "word": "mejina"
-    },
-    {
-      "info": "目抜",
-      "info2": "めぬけ",
-      "word": "menuke"
-    },
-    {
-      "info": "目張",
-      "info2": "めばる",
-      "word": "mebaru"
-    },
-    {
-      "info": "諸子",
-      "info2": "もろこ",
-      "word": "moroko"
-    },
-    {
-      "info": "山女",
-      "info2": "やまめ",
-      "word": "yamame"
-    },
-    {
-      "info": "槍烏賊",
-      "info2": "やりいか",
-      "word": "yariika"
-    },
-    {
-      "info": "公魚",
-      "info2": "わかさぎ",
-      "word": "wakasagi"
-    },
-    {
-      "info": "渡蟹",
-      "info2": "わたりがに",
-      "word": "watarigani"
-    },
-    {
-      "info": "藁素坊",
-      "info2": "わらすぼ",
-      "word": "warasubo"
-    }
+    { "info": "氷魚", "info2": "ひうお", "word": "hiuo" },
+    { "info": "鰉", "info2": "ひがい", "word": "higai" },
+    { "info": "比売地", "info2": "ひめじ", "word": "himeji" },
+    { "info": "鮃", "info2": "ひらめ", "word": "hirame" },
+    { "info": "鰭", "info2": "ひれ", "word": "hire" },
+    { "info": "笛吹鯛", "info2": "ふえふきだい", "word": "huehukidai" },
+    { "info": "河豚", "info2": "ふぐ", "word": "hugu" },
+    { "info": "鮒", "info2": "ふな", "word": "huna" },
+    { "info": "鰤", "info2": "ぶり", "word": "buri" },
+    { "info": "倍良", "info2": "べら", "word": "bera" },
+    { "info": "魴鮄", "info2": "ほうぼう", "word": "houbou" },
+    { "info": "帆立", "info2": "ほたて", "word": "hotate" },
+    { "info": "北寄貝", "info2": "ほっきがい", "word": "hokkigai" },
+    { "info": "海鞘", "info2": "ほや", "word": "hoya" },
+    { "info": "鯔", "info2": "ぼら", "word": "bora" },
+    { "info": "鮪", "info2": "まぐろ", "word": "maguro" },
+    { "info": "鱒", "info2": "ます", "word": "masu" },
+    { "info": "馬刀貝", "info2": "まてがい", "word": "mategai" },
+    { "info": "鯧", "info2": "まながつお", "word": "managatuo" },
+    { "info": "海松貝", "info2": "みるがい", "word": "mirugai" },
+    { "info": "海松食", "info2": "みるくい", "word": "mirukui" },
+    { "info": "鯥", "info2": "むつ", "word": "mutu" },
+    { "info": "鯥五郎", "info2": "むつごろう", "word": "mutugorou" },
+    { "info": "目示奈", "info2": "めじな", "word": "mejina" },
+    { "info": "目抜", "info2": "めぬけ", "word": "menuke" },
+    { "info": "目張", "info2": "めばる", "word": "mebaru" },
+    { "info": "諸子", "info2": "もろこ", "word": "moroko" },
+    { "info": "山女", "info2": "やまめ", "word": "yamame" },
+    { "info": "槍烏賊", "info2": "やりいか", "word": "yariika" },
+    { "info": "公魚", "info2": "わかさぎ", "word": "wakasagi" },
+    { "info": "渡蟹", "info2": "わたりがに", "word": "watarigani" },
+    { "info": "藁素坊", "info2": "わらすぼ", "word": "warasubo" }
   ]
 }
