@@ -1,39 +1,40 @@
 {
   "id": "1010111",
-  "title": "ＪＲ山形新幹線の駅いちらん",
+  "title": "ＪＲ青梅線の駅いちらん",
   "type": "japanese",
   "tags": [
     { "id": "00009", "name": "日本語" },
     { "id": "00007", "name": "地理" },
     { "id": "00019", "name": "駅名" }
   ],
-  "createdAt": "2022-02-06",
-  "updatedAt": "2022-02-06",
-  "optional": { "cd": "27" },
+  "createdAt": "2022-07-04",
+  "updatedAt": "2022-07-04",
+  "optional": { "cd": "111" },
   "words": [
-    { "info": "新庄", "info2": "しんじょう", "word": "sinjou" },
-    { "info": "大石田", "info2": "おおいしだ", "word": "ooisida" },
-    { "info": "村山", "info2": "むらやま", "word": "murayama" },
-    {
-      "info": "さくらんぼ東根",
-      "info2": "さくらんぼひがしね",
-      "word": "sakuranbohigasine"
-    },
-    { "info": "天童", "info2": "てんどう", "word": "tendou" },
-    { "info": "山形", "info2": "やまがた", "word": "yamagata" },
-    {
-      "info": "かみのやま温泉",
-      "info2": "かみのやまおんせん",
-      "word": "kaminoyamaonsenn"
-    },
-    { "info": "赤湯", "info2": "あかゆ", "word": "akayu" },
-    { "info": "高畠", "info2": "たかはた", "word": "takahata" },
-    { "info": "米沢", "info2": "よねざわ", "word": "yonezawa" },
-    { "info": "福島", "info2": "ふくしま", "word": "hukusima" },
-    { "info": "郡山", "info2": "こおりやま", "word": "kooriyama" },
-    { "info": "宇都宮", "info2": "うつのみや", "word": "utunomiya" },
-    { "info": "大宮", "info2": "おおみや", "word": "oomiya" },
-    { "info": "上野", "info2": "うえの", "word": "ueno" },
-    { "info": "東京", "info2": "とうきょう", "word": "toukyou" }
+    { "info": "奥多摩", "info2": "おくたま", "word": "okutama" },
+    { "info": "白丸", "info2": "しろまる", "word": "siromaru" },
+    { "info": "鳩ノ巣", "info2": "はとのす", "word": "hatonosu" },
+    { "info": "古里", "info2": "こり", "word": "kori" },
+    { "info": "川井", "info2": "かわい", "word": "kawai" },
+    { "info": "御嶽", "info2": "みたけ", "word": "mitake" },
+    { "info": "沢井", "info2": "さわい", "word": "sawai" },
+    { "info": "軍畑", "info2": "いくさばた", "word": "ikusabata" },
+    { "info": "二俣尾", "info2": "ふたまたお", "word": "hutamatao" },
+    { "info": "石神前", "info2": "いしがみまえ", "word": "isigamimae" },
+    { "info": "日向和田", "info2": "ひなたわだ", "word": "hinatawada" },
+    { "info": "宮ノ平", "info2": "みやのひら", "word": "miyanohira" },
+    { "info": "青梅", "info2": "おうめ", "word": "oume" },
+    { "info": "東青梅", "info2": "ひがしおうめ", "word": "higasioume" },
+    { "info": "河辺", "info2": "かべ", "word": "kabe" },
+    { "info": "小作", "info2": "おざく", "word": "ozaku" },
+    { "info": "羽村", "info2": "はむら", "word": "hamura" },
+    { "info": "福生", "info2": "ふっさ", "word": "hussa" },
+    { "info": "牛浜", "info2": "うしはま", "word": "usihama" },
+    { "info": "拝島", "info2": "はいじま", "word": "haijima" },
+    { "info": "昭島", "info2": "あきしま", "word": "akisima" },
+    { "info": "中神", "info2": "なかがみ", "word": "nakagami" },
+    { "info": "東中神", "info2": "ひがしなかがみ", "word": "higasinakagami" },
+    { "info": "西立川", "info2": "にしたちかわ", "word": "nisitatikawa" },
+    { "info": "立川", "info2": "たちかわ", "word": "tatikawa" }
   ]
 }
