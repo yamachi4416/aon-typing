@@ -39,11 +39,13 @@
 </template>
 
 <script setup lang="ts">
+import { onBeforeRouteLeave } from "vue-router";
+
 useHead({
   title: "問題いちらん",
 });
 
-const kwds = ref(convertKwds(useRoute().query.kwd));
+const kwds = ref([] as string[]);
 const problems = computed(() => {
   if (kwds.value?.length) {
     return (
@@ -57,23 +59,23 @@ const problems = computed(() => {
 
 onMounted(() => {
   kwds.value = convertKwds(useRoute().query.kwd);
+  const watchQuery = watch(
+    () => useRoute().query,
+    () => {
+      kwds.value = convertKwds(useRoute().query.kwd);
+    }
+  );
+  onBeforeRouteLeave(() => watchQuery());
 });
-
-watch(
-  () => useRoute().query,
-  () => {
-    kwds.value = convertKwds(useRoute().query.kwd);
-  }
-);
 
 function convertKwds(val: string | string[]) {
   const kwds = () => {
     if (!val) return [];
     return typeof val === "string" ? [val] : val;
   };
-  return kwds().flatMap((kwd) =>
-    kwd.split(/[\u{20}\u{3000}]/u).filter((v) => v)
-  );
+  return kwds()
+    .flatMap((kwd) => kwd.split(/[\u{20}\u{3000}]/u).filter((v) => v))
+    .filter((kwd) => kwd);
 }
 </script>
 
