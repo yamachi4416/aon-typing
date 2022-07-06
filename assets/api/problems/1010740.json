@@ -1,0 +1,28 @@
+{
+  "id": "1010740",
+  "title": "広島電鉄９号線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-06",
+  "updatedAt": "2022-07-06",
+  "optional": { "cd": "740" },
+  "words": [
+    { "info": "白島(広島電鉄線)", "info2": "はくしま", "word": "hakusima" },
+    {
+      "info": "家庭裁判所前",
+      "info2": "かていさいばんしょまえ",
+      "word": "kateisaibansyomae"
+    },
+    {
+      "info": "縮景園前",
+      "info2": "しゅっけいえんまえ",
+      "word": "syukkeienmae"
+    },
+    { "info": "女学院前", "info2": "じょがくいんまえ", "word": "jogakuinmae" },
+    { "info": "八丁堀", "info2": "はっちょうぼり", "word": "hattyoubori" }
+  ]
+}

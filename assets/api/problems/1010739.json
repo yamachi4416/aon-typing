@@ -1,0 +1,43 @@
+{
+  "id": "1010739",
+  "title": "広島電鉄８号線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-06",
+  "updatedAt": "2022-07-06",
+  "optional": { "cd": "739" },
+  "words": [
+    { "info": "江波", "info2": "えば", "word": "eba" },
+    { "info": "舟入南", "info2": "ふないりみなみ", "word": "hunairiminami" },
+    {
+      "info": "舟入川口町",
+      "info2": "ふないりかわぐちちょう",
+      "word": "hunairikawagutityou"
+    },
+    {
+      "info": "舟入幸町",
+      "info2": "ふないりさいわいちょう",
+      "word": "hunairisaiwaityou"
+    },
+    {
+      "info": "舟入本町",
+      "info2": "ふないりほんまち",
+      "word": "hunairihonmati"
+    },
+    { "info": "舟入町", "info2": "ふないりまち", "word": "hunairimati" },
+    { "info": "土橋", "info2": "どばし", "word": "dobasi" },
+    { "info": "十日市町", "info2": "とおかいちまち", "word": "tookaitimati" },
+    { "info": "寺町", "info2": "てらまち", "word": "teramati" },
+    { "info": "別院前", "info2": "べついんまえ", "word": "betuinmae" },
+    {
+      "info": "横川一丁目",
+      "info2": "よこがわいっちょうめ",
+      "word": "yokogawaittyoume"
+    },
+    { "info": "横川駅", "info2": "よこがわえき", "word": "yokogawaeki" }
+  ]
+}

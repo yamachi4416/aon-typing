@@ -1,0 +1,100 @@
+{
+  "id": "1010735",
+  "title": "広島電鉄３号線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-06",
+  "updatedAt": "2022-07-06",
+  "optional": { "cd": "735" },
+  "words": [
+    {
+      "info": "広島港・宇品",
+      "info2": "ひろしまこううじな",
+      "word": "hirosimakouujina"
+    },
+    { "info": "元宇品口", "info2": "もとうじなぐち", "word": "motoujinaguti" },
+    { "info": "海岸通", "info2": "かいがんどおり", "word": "kaigandoori" },
+    {
+      "info": "宇品五丁目",
+      "info2": "うじなごちょうめ",
+      "word": "ujinagotyoume"
+    },
+    {
+      "info": "宇品四丁目",
+      "info2": "うじなよんちょうめ",
+      "word": "ujinayontyoume"
+    },
+    {
+      "info": "宇品三丁目",
+      "info2": "うじなさんちょうめ",
+      "word": "ujinasantyoume"
+    },
+    {
+      "info": "宇品二丁目",
+      "info2": "うじなにちょうめ",
+      "word": "ujinanityoume"
+    },
+    {
+      "info": "県病院前",
+      "info2": "けんびょういんまえ",
+      "word": "kenbyouinmae"
+    },
+    {
+      "info": "広大附属学校前",
+      "info2": "ひろだいふぞくがっこうまえ",
+      "word": "hirodaihuzokugakkoumae"
+    },
+    {
+      "info": "皆実町六丁目",
+      "info2": "みなみまちろくちょうめ",
+      "word": "minamimatirokutyoume"
+    },
+    { "info": "御幸橋", "info2": "みゆきばし", "word": "miyukibasi" },
+    {
+      "info": "広電本社前",
+      "info2": "ひろでんほんしゃまえ",
+      "word": "hirodenhonsyamae"
+    },
+    {
+      "info": "日赤病院前",
+      "info2": "にっせきびょういんまえ",
+      "word": "nissekibyouinmae"
+    },
+    { "info": "鷹野橋", "info2": "たかのばし", "word": "takanobasi" },
+    { "info": "市役所前", "info2": "しやくしょまえ", "word": "siyakusyomae" },
+    { "info": "中電前", "info2": "ちゅうでんまえ", "word": "tyuudenmae" },
+    { "info": "袋町", "info2": "ふくろまち", "word": "hukuromati" },
+    { "info": "本通", "info2": "ほんどおり", "word": "hondoori" },
+    {
+      "info": "紙屋町西",
+      "info2": "かみやちょうにし",
+      "word": "kamiyatyounisi"
+    },
+    {
+      "info": "原爆ドーム前",
+      "info2": "げんばくどーむまえ",
+      "word": "genbakudo-mumae"
+    },
+    { "info": "本川町", "info2": "ほんかわちょう", "word": "honkawatyou" },
+    { "info": "十日市町", "info2": "とおかいちまち", "word": "tookaitimati" },
+    { "info": "土橋", "info2": "どばし", "word": "dobasi" },
+    { "info": "小網町", "info2": "こあみちょう", "word": "koamityou" },
+    { "info": "天満町", "info2": "てんまちょう", "word": "tenmatyou" },
+    { "info": "観音町", "info2": "かんおんまち", "word": "kannonmati" },
+    {
+      "info": "西観音町",
+      "info2": "にしかんおんまち",
+      "word": "nisikannonmati"
+    },
+    { "info": "福島町", "info2": "ふくしまちょう", "word": "hukusimatyou" },
+    {
+      "info": "広電西広島・己斐",
+      "info2": "ひろでんにしひろしまこい",
+      "word": "hirodennnisihirosimakoi"
+    }
+  ]
+}

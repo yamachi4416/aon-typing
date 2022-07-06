@@ -1,0 +1,50 @@
+{
+  "id": "1010738",
+  "title": "広島電鉄７号線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-06",
+  "updatedAt": "2022-07-06",
+  "optional": { "cd": "738" },
+  "words": [
+    {
+      "info": "広電本社前",
+      "info2": "ひろでんほんしゃまえ",
+      "word": "hirodenhonsyamae"
+    },
+    {
+      "info": "日赤病院前",
+      "info2": "にっせきびょういんまえ",
+      "word": "nissekibyouinmae"
+    },
+    { "info": "鷹野橋", "info2": "たかのばし", "word": "takanobasi" },
+    { "info": "市役所前", "info2": "しやくしょまえ", "word": "siyakusyomae" },
+    { "info": "中電前", "info2": "ちゅうでんまえ", "word": "tyuudenmae" },
+    { "info": "袋町", "info2": "ふくろまち", "word": "hukuromati" },
+    { "info": "本通", "info2": "ほんどおり", "word": "hondoori" },
+    {
+      "info": "紙屋町西",
+      "info2": "かみやちょうにし",
+      "word": "kamiyatyounisi"
+    },
+    {
+      "info": "原爆ドーム前",
+      "info2": "げんばくどーむまえ",
+      "word": "genbakudo-mumae"
+    },
+    { "info": "本川町", "info2": "ほんかわちょう", "word": "honkawatyou" },
+    { "info": "十日市町", "info2": "とおかいちまち", "word": "tookaitimati" },
+    { "info": "寺町", "info2": "てらまち", "word": "teramati" },
+    { "info": "別院前", "info2": "べついんまえ", "word": "betuinmae" },
+    {
+      "info": "横川一丁目",
+      "info2": "よこがわいっちょうめ",
+      "word": "yokogawaittyoume"
+    },
+    { "info": "横川駅", "info2": "よこがわえき", "word": "yokogawaeki" }
+  ]
+}

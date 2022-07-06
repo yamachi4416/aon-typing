@@ -1,0 +1,90 @@
+{
+  "id": "1010733",
+  "title": "広島電鉄１号線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-06",
+  "updatedAt": "2022-07-06",
+  "optional": { "cd": "733" },
+  "words": [
+    {
+      "info": "広島港・宇品",
+      "info2": "ひろしまこううじな",
+      "word": "hirosimakouujina"
+    },
+    { "info": "元宇品口", "info2": "もとうじなぐち", "word": "motoujinaguti" },
+    { "info": "海岸通", "info2": "かいがんどおり", "word": "kaigandoori" },
+    {
+      "info": "宇品五丁目",
+      "info2": "うじなごちょうめ",
+      "word": "ujinagotyoume"
+    },
+    {
+      "info": "宇品四丁目",
+      "info2": "うじなよんちょうめ",
+      "word": "ujinayontyoume"
+    },
+    {
+      "info": "宇品三丁目",
+      "info2": "うじなさんちょうめ",
+      "word": "ujinasantyoume"
+    },
+    {
+      "info": "宇品二丁目",
+      "info2": "うじなにちょうめ",
+      "word": "ujinanityoume"
+    },
+    {
+      "info": "県病院前",
+      "info2": "けんびょういんまえ",
+      "word": "kenbyouinmae"
+    },
+    {
+      "info": "広大附属学校前",
+      "info2": "ひろだいふぞくがっこうまえ",
+      "word": "hirodaihuzokugakkoumae"
+    },
+    {
+      "info": "皆実町六丁目",
+      "info2": "みなみまちろくちょうめ",
+      "word": "minamimatirokutyoume"
+    },
+    { "info": "御幸橋", "info2": "みゆきばし", "word": "miyukibasi" },
+    {
+      "info": "広電本社前",
+      "info2": "ひろでんほんしゃまえ",
+      "word": "hirodenhonsyamae"
+    },
+    {
+      "info": "日赤病院前",
+      "info2": "にっせきびょういんまえ",
+      "word": "nissekibyouinmae"
+    },
+    { "info": "鷹野橋", "info2": "たかのばし", "word": "takanobasi" },
+    { "info": "市役所前", "info2": "しやくしょまえ", "word": "siyakusyomae" },
+    { "info": "中電前", "info2": "ちゅうでんまえ", "word": "tyuudenmae" },
+    { "info": "袋町", "info2": "ふくろまち", "word": "hukuromati" },
+    { "info": "本通", "info2": "ほんどおり", "word": "hondoori" },
+    {
+      "info": "紙屋町東",
+      "info2": "かみやちょうひがし",
+      "word": "kamiyatyouhigasi"
+    },
+    { "info": "立町", "info2": "たてまち", "word": "tatemati" },
+    { "info": "八丁堀", "info2": "はっちょうぼり", "word": "hattyoubori" },
+    { "info": "胡町", "info2": "えびすちょう", "word": "ebisutyou" },
+    { "info": "銀山町", "info2": "かなやまちょう", "word": "kanayamatyou" },
+    { "info": "稲荷町", "info2": "いなりまち", "word": "inarimati" },
+    { "info": "的場町", "info2": "まとばちょう", "word": "matobatyou" },
+    {
+      "info": "猿猴橋町",
+      "info2": "えんこうばしちょう",
+      "word": "enkoubasityou"
+    },
+    { "info": "広島駅", "info2": "ひろしまえき", "word": "hirosimaeki" }
+  ]
+}
