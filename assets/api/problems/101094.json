@@ -1,0 +1,25 @@
+{
+  "id": "101094",
+  "title": "ＪＲ総武線快速の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-07",
+  "updatedAt": "2022-07-07",
+  "optional": { "cd": "94" },
+  "words": [
+    { "info": "千葉", "info2": "ちば", "word": "tiba" },
+    { "info": "稲毛", "info2": "いなげ", "word": "inage" },
+    { "info": "津田沼", "info2": "つだぬま", "word": "tudanuma" },
+    { "info": "船橋", "info2": "ふなばし", "word": "hunabasi" },
+    { "info": "市川", "info2": "いちかわ", "word": "itikawa" },
+    { "info": "新小岩", "info2": "しんこいわ", "word": "sinkoiwa" },
+    { "info": "錦糸町", "info2": "きんしちょう", "word": "kinsityou" },
+    { "info": "馬喰町", "info2": "ばくろちょう", "word": "bakurotyou" },
+    { "info": "新日本橋", "info2": "しんにほんばし", "word": "sinnnihonbasi" },
+    { "info": "東京", "info2": "とうきょう", "word": "toukyou" }
+  ]
+}
