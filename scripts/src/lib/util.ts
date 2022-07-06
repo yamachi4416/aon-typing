@@ -55,3 +55,22 @@ export async function httpFetch(url: string, options: HttpRequestOptions = {}) {
 export function defineCommand<T, R>(def: CommandModule<T, R>) {
   return def;
 }
+
+function formatDateValues(date?: Date) {
+  const d = date ?? new Date();
+  return {
+    yyyy: String(d.getFullYear()),
+    MM: String(d.getMonth() + 1).padStart(2, "0"),
+    dd: String(d.getDate()).padStart(2, "0"),
+    hh: String(d.getHours()).padStart(2, "0"),
+    mm: String(d.getMinutes()).padStart(2, "0"),
+    ss: String(d.getSeconds()).padStart(2, "0"),
+  };
+}
+
+export function fmtDate(
+  cb: (fmt: ReturnType<typeof formatDateValues>) => string,
+  date?: Date
+) {
+  return cb(formatDateValues(date));
+}

@@ -1,7 +1,8 @@
-import { defineCommand, httpFetch } from "../lib/util";
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import prettier from "prettier";
+import { defineCommand } from "../lib/util";
+import { fetchStations } from "./ekispert/api";
 
 type Data = {
   title: string;
@@ -19,29 +20,6 @@ type InfoData = {
   data: Data;
 };
 
-function joinWords(pages: Data["words"][]) {
-  let words = [...pages[0]];
-  for (let i = 1; i < pages.length; i++) {
-    const page = pages[i];
-    const pstart = page.shift();
-    const plast = page.pop();
-    const wstart = words[0];
-    const wlast = words[words.length - 1];
-    if (wstart.info === pstart.info) {
-      words.unshift(...page, plast);
-    } else if (wlast.info === plast.info) {
-      words.push(...page, plast);
-    } else if (wstart.info === plast.info) {
-      words = [pstart, ...page, ...words];
-    } else if (pstart.info === wlast.info) {
-      words = [...words, ...page, plast];
-    } else {
-      throw `mismatch stations [${wstart.info}...${wlast.info}] [${pstart.info}...${plast.info}]`;
-    }
-  }
-  return words;
-}
-
 async function loadInfoData({ file }: { file: string }) {
   const content = await readFile(file, { flag: "r" });
   return {
@@ -50,27 +28,6 @@ async function loadInfoData({ file }: { file: string }) {
     text: content.toString(),
     data: JSON.parse(content.toString()),
   } as InfoData;
-}
-
-async function fetchWords({
-  infoData,
-  key,
-}: {
-  infoData: InfoData;
-  key: string;
-}) {
-  const urlbase = `https://api.ekispert.jp/v1/json/station?key=${key}`;
-  const cds = String(infoData.data.optional.cd).split(",");
-  const fetchs = cds.map(async (cd) => {
-    const page = await httpFetch(`${urlbase}&operationLineCode=${cd}`);
-    const points = JSON.parse(page.data.toString()).ResultSet.Point as any[];
-    return points.map((p: any) => ({
-      info: p.Station.Name.replace(`(${p.Prefecture.Name})`, "") as string,
-      info2: p.Station.Yomi as string,
-    }));
-  });
-
-  return joinWords(await Promise.all(fetchs));
 }
 
 async function outProcess({
@@ -141,7 +98,10 @@ export default defineCommand({
       .map(async (file) => {
         const infoData = await loadInfoData({ file });
         if (infoData.data.tags.includes("駅名") && infoData.data.optional?.cd) {
-          infoData.data.words = await fetchWords({ infoData, key });
+          infoData.data.words = await fetchStations({
+            key,
+            operationLineCodes: String(infoData.data.optional.cd).split(","),
+          }).then(({ words }) => words);
           outProcess({ infoData, dryRun });
         }
       });
