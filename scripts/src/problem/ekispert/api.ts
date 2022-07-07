@@ -91,7 +91,7 @@ export async function fetchStation({
         ? data.ResultSet.Point
         : [data.ResultSet.Point];
       const words = points.map((p: any) => ({
-        info: p.Station.Name.replace(`(${p.Prefecture.Name})`, "") as string,
+        info: p.Station.Name.replace(/\(.+?\)$/, "") as string,
         info2: p.Station.Yomi as string,
       }));
       return { data, words };
