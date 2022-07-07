@@ -1,0 +1,106 @@
+{
+  "id": "1010309",
+  "title": "小田急小田原線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-08",
+  "updatedAt": "2022-07-08",
+  "optional": { "cd": "309" },
+  "words": [
+    { "info": "小田原", "info2": "おだわら", "word": "odawara" },
+    { "info": "足柄", "info2": "あしがら", "word": "asigara" },
+    { "info": "螢田", "info2": "ほたるだ", "word": "hotaruda" },
+    { "info": "富水", "info2": "とみず", "word": "tomizu" },
+    { "info": "栢山", "info2": "かやま", "word": "kayama" },
+    { "info": "開成", "info2": "かいせい", "word": "kaisei" },
+    { "info": "新松田", "info2": "しんまつだ", "word": "sinmatuda" },
+    { "info": "渋沢", "info2": "しぶさわ", "word": "sibusawa" },
+    { "info": "秦野", "info2": "はだの", "word": "hadano" },
+    {
+      "info": "東海大学前",
+      "info2": "とうかいだいがくまえ",
+      "word": "toukaidaigakumae"
+    },
+    {
+      "info": "鶴巻温泉",
+      "info2": "つるまきおんせん",
+      "word": "turumakionsenn"
+    },
+    { "info": "伊勢原", "info2": "いせはら", "word": "isehara" },
+    { "info": "愛甲石田", "info2": "あいこういしだ", "word": "aikouisida" },
+    { "info": "本厚木", "info2": "ほんあつぎ", "word": "honnatugi" },
+    { "info": "厚木", "info2": "あつぎ", "word": "atugi" },
+    { "info": "海老名", "info2": "えびな", "word": "ebina" },
+    { "info": "座間", "info2": "ざま", "word": "zama" },
+    { "info": "相武台前", "info2": "そうぶだいまえ", "word": "soubudaimae" },
+    {
+      "info": "小田急相模原",
+      "info2": "おだきゅうさがみはら",
+      "word": "odakyuusagamihara"
+    },
+    { "info": "相模大野", "info2": "さがみおおの", "word": "sagamioono" },
+    { "info": "町田", "info2": "まちだ", "word": "matida" },
+    {
+      "info": "玉川学園前",
+      "info2": "たまがわがくえんまえ",
+      "word": "tamagawagakuenmae"
+    },
+    { "info": "鶴川", "info2": "つるかわ", "word": "turukawa" },
+    { "info": "柿生", "info2": "かきお", "word": "kakio" },
+    { "info": "新百合ケ丘", "info2": "しんゆりがおか", "word": "sinyurigaoka" },
+    { "info": "百合ケ丘", "info2": "ゆりがおか", "word": "yurigaoka" },
+    {
+      "info": "読売ランド前",
+      "info2": "よみうりらんどまえ",
+      "word": "yomiurirandomae"
+    },
+    { "info": "生田", "info2": "いくた", "word": "ikuta" },
+    {
+      "info": "向ケ丘遊園",
+      "info2": "むこうがおかゆうえん",
+      "word": "mukougaokayuuenn"
+    },
+    { "info": "登戸", "info2": "のぼりと", "word": "noborito" },
+    {
+      "info": "和泉多摩川",
+      "info2": "いずみたまがわ",
+      "word": "izumitamagawa"
+    },
+    { "info": "狛江", "info2": "こまえ", "word": "komae" },
+    { "info": "喜多見", "info2": "きたみ", "word": "kitami" },
+    {
+      "info": "成城学園前",
+      "info2": "せいじょうがくえんまえ",
+      "word": "seijougakuenmae"
+    },
+    {
+      "info": "祖師ケ谷大蔵",
+      "info2": "そしがやおおくら",
+      "word": "sosigayaookura"
+    },
+    { "info": "千歳船橋", "info2": "ちとせふなばし", "word": "titosehunabasi" },
+    { "info": "経堂", "info2": "きょうどう", "word": "kyoudou" },
+    { "info": "豪徳寺", "info2": "ごうとくじ", "word": "goutokuji" },
+    { "info": "梅ケ丘", "info2": "うめがおか", "word": "umegaoka" },
+    {
+      "info": "世田谷代田",
+      "info2": "せたがやだいた",
+      "word": "setagayadaita"
+    },
+    { "info": "下北沢", "info2": "しもきたざわ", "word": "simokitazawa" },
+    { "info": "東北沢", "info2": "ひがしきたざわ", "word": "higasikitazawa" },
+    { "info": "代々木上原", "info2": "よよぎうえはら", "word": "yoyogiuehara" },
+    {
+      "info": "代々木八幡",
+      "info2": "よよぎはちまん",
+      "word": "yoyogihatimann"
+    },
+    { "info": "参宮橋", "info2": "さんぐうばし", "word": "sanguubasi" },
+    { "info": "南新宿", "info2": "みなみしんじゅく", "word": "minamisinjuku" },
+    { "info": "新宿", "info2": "しんじゅく", "word": "sinjuku" }
+  ]
+}

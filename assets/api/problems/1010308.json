@@ -1,0 +1,40 @@
+{
+  "id": "1010308",
+  "title": "京王井の頭線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-08",
+  "updatedAt": "2022-07-08",
+  "optional": { "cd": "308" },
+  "words": [
+    { "info": "吉祥寺", "info2": "きちじょうじ", "word": "kitijouji" },
+    {
+      "info": "井の頭公園",
+      "info2": "いのかしらこうえん",
+      "word": "inokasirakouenn"
+    },
+    { "info": "三鷹台", "info2": "みたかだい", "word": "mitakadai" },
+    { "info": "久我山", "info2": "くがやま", "word": "kugayama" },
+    { "info": "富士見ケ丘", "info2": "ふじみがおか", "word": "hujimigaoka" },
+    { "info": "高井戸", "info2": "たかいど", "word": "takaido" },
+    { "info": "浜田山", "info2": "はまだやま", "word": "hamadayama" },
+    { "info": "西永福", "info2": "にしえいふく", "word": "nisieihuku" },
+    { "info": "永福町", "info2": "えいふくちょう", "word": "eihukutyou" },
+    { "info": "明大前", "info2": "めいだいまえ", "word": "meidaimae" },
+    { "info": "東松原", "info2": "ひがしまつばら", "word": "higasimatubara" },
+    { "info": "新代田", "info2": "しんだいた", "word": "sindaita" },
+    { "info": "下北沢", "info2": "しもきたざわ", "word": "simokitazawa" },
+    { "info": "池ノ上", "info2": "いけのうえ", "word": "ikenoue" },
+    {
+      "info": "駒場東大前",
+      "info2": "こまばとうだいまえ",
+      "word": "komabatoudaimae"
+    },
+    { "info": "神泉", "info2": "しんせん", "word": "sinsenn" },
+    { "info": "渋谷", "info2": "しぶや", "word": "sibuya" }
+  ]
+}
