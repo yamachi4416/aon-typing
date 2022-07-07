@@ -1,0 +1,57 @@
+{
+  "id": "1010098",
+  "title": "ＪＲ武蔵野線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-07",
+  "updatedAt": "2022-07-07",
+  "optional": { "cd": "98" },
+  "words": [
+    { "info": "西船橋", "info2": "にしふなばし", "word": "nisihunabasi" },
+    {
+      "info": "船橋法典",
+      "info2": "ふなばしほうてん",
+      "word": "hunabasihoutenn"
+    },
+    { "info": "市川大野", "info2": "いちかわおおの", "word": "itikawaoono" },
+    { "info": "東松戸", "info2": "ひがしまつど", "word": "higasimatudo" },
+    { "info": "新八柱", "info2": "しんやはしら", "word": "sinyahasira" },
+    { "info": "新松戸", "info2": "しんまつど", "word": "sinmatudo" },
+    {
+      "info": "南流山",
+      "info2": "みなみながれやま",
+      "word": "minaminagareyama"
+    },
+    { "info": "三郷", "info2": "みさと", "word": "misato" },
+    { "info": "新三郷", "info2": "しんみさと", "word": "sinmisato" },
+    { "info": "吉川美南", "info2": "よしかわみなみ", "word": "yosikawaminami" },
+    { "info": "吉川", "info2": "よしかわ", "word": "yosikawa" },
+    {
+      "info": "越谷レイクタウン",
+      "info2": "こしがやれいくたうん",
+      "word": "kosigayareikutaunn"
+    },
+    { "info": "南越谷", "info2": "みなみこしがや", "word": "minamikosigaya" },
+    { "info": "東川口", "info2": "ひがしかわぐち", "word": "higasikawaguti" },
+    { "info": "東浦和", "info2": "ひがしうらわ", "word": "higasiurawa" },
+    { "info": "南浦和", "info2": "みなみうらわ", "word": "minamiurawa" },
+    { "info": "武蔵浦和", "info2": "むさしうらわ", "word": "musasiurawa" },
+    { "info": "西浦和", "info2": "にしうらわ", "word": "nisiurawa" },
+    { "info": "北朝霞", "info2": "きたあさか", "word": "kitaasaka" },
+    { "info": "新座", "info2": "にいざ", "word": "niiza" },
+    {
+      "info": "東所沢",
+      "info2": "ひがしところざわ",
+      "word": "higasitokorozawa"
+    },
+    { "info": "新秋津", "info2": "しんあきつ", "word": "sinnakitu" },
+    { "info": "新小平", "info2": "しんこだいら", "word": "sinkodaira" },
+    { "info": "西国分寺", "info2": "にしこくぶんじ", "word": "nisikokubunji" },
+    { "info": "北府中", "info2": "きたふちゅう", "word": "kitahutyuu" },
+    { "info": "府中本町", "info2": "ふちゅうほんまち", "word": "hutyuuhonmati" }
+  ]
+}

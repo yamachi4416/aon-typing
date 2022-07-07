@@ -1,0 +1,49 @@
+{
+  "id": "1010121",
+  "title": "ＪＲ南武線(川崎－立川)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-07",
+  "updatedAt": "2022-07-07",
+  "optional": { "cd": "121" },
+  "words": [
+    { "info": "立川", "info2": "たちかわ", "word": "tatikawa" },
+    { "info": "西国立", "info2": "にしくにたち", "word": "nisikunitati" },
+    { "info": "矢川", "info2": "やがわ", "word": "yagawa" },
+    { "info": "谷保", "info2": "やほ", "word": "yaho" },
+    { "info": "西府", "info2": "にしふ", "word": "nisihu" },
+    { "info": "分倍河原", "info2": "ぶばいがわら", "word": "bubaigawara" },
+    {
+      "info": "府中本町",
+      "info2": "ふちゅうほんまち",
+      "word": "hutyuuhonmati"
+    },
+    { "info": "南多摩", "info2": "みなみたま", "word": "minamitama" },
+    { "info": "稲城長沼", "info2": "いなぎながぬま", "word": "inaginaganuma" },
+    { "info": "矢野口", "info2": "やのくち", "word": "yanokuti" },
+    { "info": "稲田堤", "info2": "いなだづつみ", "word": "inadadutumi" },
+    { "info": "中野島", "info2": "なかのしま", "word": "nakanosima" },
+    { "info": "登戸", "info2": "のぼりと", "word": "noborito" },
+    { "info": "宿河原", "info2": "しゅくがわら", "word": "syukugawara" },
+    { "info": "久地", "info2": "くじ", "word": "kuji" },
+    { "info": "津田山", "info2": "つだやま", "word": "tudayama" },
+    {
+      "info": "武蔵溝ノ口",
+      "info2": "むさしみぞのくち",
+      "word": "musasimizonokuti"
+    },
+    { "info": "武蔵新城", "info2": "むさししんじょう", "word": "musasisinjou" },
+    { "info": "武蔵中原", "info2": "むさしなかはら", "word": "musasinakahara" },
+    { "info": "武蔵小杉", "info2": "むさしこすぎ", "word": "musasikosugi" },
+    { "info": "向河原", "info2": "むかいがわら", "word": "mukaigawara" },
+    { "info": "平間", "info2": "ひらま", "word": "hirama" },
+    { "info": "鹿島田", "info2": "かしまだ", "word": "kasimada" },
+    { "info": "矢向", "info2": "やこう", "word": "yakou" },
+    { "info": "尻手", "info2": "しって", "word": "sitte" },
+    { "info": "川崎", "info2": "かわさき", "word": "kawasaki" }
+  ]
+}

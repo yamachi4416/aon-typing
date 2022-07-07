@@ -1,0 +1,25 @@
+{
+  "id": "1010099",
+  "title": "ＪＲ常磐線快速の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-07",
+  "updatedAt": "2022-07-07",
+  "optional": { "cd": "99" },
+  "words": [
+    { "info": "取手", "info2": "とりで", "word": "toride" },
+    { "info": "天王台", "info2": "てんのうだい", "word": "tennnoudai" },
+    { "info": "我孫子", "info2": "あびこ", "word": "abiko" },
+    { "info": "柏", "info2": "かしわ", "word": "kasiwa" },
+    { "info": "松戸", "info2": "まつど", "word": "matudo" },
+    { "info": "北千住", "info2": "きたせんじゅ", "word": "kitasenju" },
+    { "info": "南千住", "info2": "みなみせんじゅ", "word": "minamisenju" },
+    { "info": "三河島", "info2": "みかわしま", "word": "mikawasima" },
+    { "info": "日暮里", "info2": "にっぽり", "word": "nippori" },
+    { "info": "上野", "info2": "うえの", "word": "ueno" }
+  ]
+}

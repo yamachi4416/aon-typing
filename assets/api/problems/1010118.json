@@ -1,0 +1,25 @@
+{
+  "id": "1010118",
+  "title": "ＪＲ鶴見線(鶴見－扇町)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-07",
+  "updatedAt": "2022-07-07",
+  "optional": { "cd": "118" },
+  "words": [
+    { "info": "扇町", "info2": "おうぎまち", "word": "ougimati" },
+    { "info": "昭和", "info2": "しょうわ", "word": "syouwa" },
+    { "info": "浜川崎", "info2": "はまかわさき", "word": "hamakawasaki" },
+    { "info": "武蔵白石", "info2": "むさししらいし", "word": "musasisiraisi" },
+    { "info": "安善", "info2": "あんぜん", "word": "anzenn" },
+    { "info": "浅野", "info2": "あさの", "word": "asano" },
+    { "info": "弁天橋", "info2": "べんてんばし", "word": "bentenbasi" },
+    { "info": "鶴見小野", "info2": "つるみおの", "word": "turumiono" },
+    { "info": "国道", "info2": "こくどう", "word": "kokudou" },
+    { "info": "鶴見", "info2": "つるみ", "word": "turumi" }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "1010100",
+  "title": "ＪＲ常磐線各駅停車の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-07",
+  "updatedAt": "2022-07-07",
+  "optional": { "cd": "100" },
+  "words": [
+    { "info": "取手", "info2": "とりで", "word": "toride" },
+    { "info": "天王台", "info2": "てんのうだい", "word": "tennnoudai" },
+    { "info": "我孫子", "info2": "あびこ", "word": "abiko" },
+    { "info": "北柏", "info2": "きたかしわ", "word": "kitakasiwa" },
+    { "info": "柏", "info2": "かしわ", "word": "kasiwa" },
+    { "info": "南柏", "info2": "みなみかしわ", "word": "minamikasiwa" },
+    { "info": "北小金", "info2": "きたこがね", "word": "kitakogane" },
+    { "info": "新松戸", "info2": "しんまつど", "word": "sinmatudo" },
+    { "info": "馬橋", "info2": "まばし", "word": "mabasi" },
+    { "info": "北松戸", "info2": "きたまつど", "word": "kitamatudo" },
+    { "info": "松戸", "info2": "まつど", "word": "matudo" },
+    { "info": "金町", "info2": "かなまち", "word": "kanamati" },
+    { "info": "亀有", "info2": "かめあり", "word": "kameari" },
+    { "info": "綾瀬", "info2": "あやせ", "word": "ayase" }
+  ]
+}

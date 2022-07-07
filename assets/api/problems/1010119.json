@@ -1,0 +1,18 @@
+{
+  "id": "1010119",
+  "title": "ＪＲ鶴見線(浅野－海芝浦)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-07",
+  "updatedAt": "2022-07-07",
+  "optional": { "cd": "119" },
+  "words": [
+    { "info": "海芝浦", "info2": "うみしばうら", "word": "umisibaura" },
+    { "info": "新芝浦", "info2": "しんしばうら", "word": "sinsibaura" },
+    { "info": "浅野", "info2": "あさの", "word": "asano" }
+  ]
+}
