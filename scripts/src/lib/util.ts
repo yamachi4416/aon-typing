@@ -1,5 +1,6 @@
 import http from "http";
 import https from "https";
+import { createInterface } from "node:readline";
 import type { CommandModule } from "yargs";
 
 interface HttpRequestOptions {
@@ -73,4 +74,17 @@ export function fmtDate(
   date?: Date
 ) {
   return cb(formatDateValues(date));
+}
+
+export function prompt(message: string) {
+  return new Promise<string>((resolve) => {
+    const readline = createInterface(process.stdin, process.stdout);
+    readline.question(
+      message,
+      (answer) => {
+        readline.close();
+        resolve(answer);
+      }
+    );
+  });
 }

@@ -1,4 +1,4 @@
-import { defineCommand, fmtDate } from "../lib/util";
+import { defineCommand, fmtDate, prompt } from "../lib/util";
 import path from "node:path";
 import fs from "node:fs";
 import { fetchOperationLine, fetchStations } from "./ekispert/api";
@@ -48,14 +48,22 @@ export default defineCommand({
         demandOption: false,
         requiresArg: false,
       })
+      .option("overwrite", {
+        alias: "f",
+        type: "boolean",
+        describe: "overwrite if exists",
+        demandOption: false,
+        requiresArg: false,
+      })
       .coerce("operation-line-code", (cds) => String(cds).split(",")),
   handler: async ({
     dataDir,
     operationLineCode: cds,
     dryRun,
     ekispertApiKey: key,
+    overwrite,
   }) => {
-    const id = `1010${cds[0].padStart(3, '0')}`;
+    const id = `1010${cds[0].padStart(3, "0")}`;
     const file = path.join(dataDir, `${id}.json`);
     const date = fmtDate(({ yyyy, MM, dd }) => `${yyyy}-${MM}-${dd}`);
 
@@ -94,9 +102,25 @@ export default defineCommand({
     });
 
     if (dryRun) {
-      console.log(data.title, file)
+      console.log(data.title, file);
       console.log(data);
     } else {
+      if (!overwrite) {
+        if (
+          await fs.promises
+            .access(file, fs.constants.F_OK)
+            .then(() => true)
+            .catch(() => false)
+        ) {
+          for (;;) {
+            const ans = await prompt(
+              `file "${file}" is exists.\noverwrite? [Y/n] > `
+            );
+            if (ans === "Y") break;
+            if (ans === "n" || ans === "N") return;
+          }
+        }
+      }
       await fs.promises.writeFile(file, json);
       console.log(data.title, file);
     }
