@@ -1,0 +1,36 @@
+{
+  "id": "1010009",
+  "title": "ＪＲ千歳線(苫小牧－札幌)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-09",
+  "updatedAt": "2022-07-09",
+  "optional": { "cd": "9" },
+  "words": [
+    { "info": "札幌", "info2": "さっぽろ", "word": "sapporo" },
+    { "info": "苗穂", "info2": "なえぼ", "word": "naebo" },
+    { "info": "白石", "info2": "しろいし", "word": "siroisi" },
+    { "info": "平和", "info2": "へいわ", "word": "heiwa" },
+    { "info": "新札幌", "info2": "しんさっぽろ", "word": "sinsapporo" },
+    { "info": "上野幌", "info2": "かみのっぽろ", "word": "kaminopporo" },
+    { "info": "北広島", "info2": "きたひろしま", "word": "kitahirosima" },
+    { "info": "島松", "info2": "しままつ", "word": "simamatu" },
+    { "info": "恵み野", "info2": "めぐみの", "word": "megumino" },
+    { "info": "恵庭", "info2": "えにわ", "word": "eniwa" },
+    {
+      "info": "サッポロビール庭園",
+      "info2": "さっぽろびーるていえん",
+      "word": "sapporobi-ruteienn"
+    },
+    { "info": "長都", "info2": "おさつ", "word": "osatu" },
+    { "info": "千歳", "info2": "ちとせ", "word": "titose" },
+    { "info": "南千歳", "info2": "みなみちとせ", "word": "minamititose" },
+    { "info": "植苗", "info2": "うえなえ", "word": "uenae" },
+    { "info": "沼ノ端", "info2": "ぬまのはた", "word": "numanohata" },
+    { "info": "苫小牧", "info2": "とまこまい", "word": "tomakomai" }
+  ]
+}

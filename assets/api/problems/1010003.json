@@ -1,0 +1,23 @@
+{
+  "id": "1010003",
+  "title": "ＪＲ函館本線(大沼－渡島砂原－森)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-08",
+  "updatedAt": "2022-07-08",
+  "optional": { "cd": "3" },
+  "words": [
+    { "info": "森", "info2": "もり", "word": "mori" },
+    { "info": "東森", "info2": "ひがしもり", "word": "higasimori" },
+    { "info": "尾白内", "info2": "おしろない", "word": "osironai" },
+    { "info": "掛澗", "info2": "かかりま", "word": "kakarima" },
+    { "info": "渡島砂原", "info2": "おしまさわら", "word": "osimasawara" },
+    { "info": "渡島沼尻", "info2": "おしまぬまじり", "word": "osimanumajiri" },
+    { "info": "鹿部", "info2": "しかべ", "word": "sikabe" },
+    { "info": "大沼", "info2": "おおぬま", "word": "oonuma" }
+  ]
+}

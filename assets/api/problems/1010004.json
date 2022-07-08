@@ -1,0 +1,33 @@
+{
+  "id": "1010004",
+  "title": "ＪＲ函館本線(長万部－小樽)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-08",
+  "updatedAt": "2022-07-08",
+  "optional": { "cd": "4" },
+  "words": [
+    { "info": "小樽", "info2": "おたる", "word": "otaru" },
+    { "info": "塩谷", "info2": "しおや", "word": "sioya" },
+    { "info": "蘭島", "info2": "らんしま", "word": "ransima" },
+    { "info": "余市", "info2": "よいち", "word": "yoiti" },
+    { "info": "仁木", "info2": "にき", "word": "niki" },
+    { "info": "然別", "info2": "しかりべつ", "word": "sikaribetu" },
+    { "info": "銀山", "info2": "ぎんざん", "word": "ginzann" },
+    { "info": "小沢", "info2": "こざわ", "word": "kozawa" },
+    { "info": "倶知安", "info2": "くっちゃん", "word": "kuttyann" },
+    { "info": "比羅夫", "info2": "ひらふ", "word": "hirahu" },
+    { "info": "ニセコ", "info2": "にせこ", "word": "niseko" },
+    { "info": "昆布", "info2": "こんぶ", "word": "konbu" },
+    { "info": "蘭越", "info2": "らんこし", "word": "rankosi" },
+    { "info": "目名", "info2": "めな", "word": "mena" },
+    { "info": "熱郛", "info2": "ねっぷ", "word": "neppu" },
+    { "info": "黒松内", "info2": "くろまつない", "word": "kuromatunai" },
+    { "info": "二股", "info2": "ふたまた", "word": "hutamata" },
+    { "info": "長万部", "info2": "おしゃまんべ", "word": "osyamanbe" }
+  ]
+}
