@@ -1,4 +1,5 @@
 {
   "volar.completion.preferredTagNameCase": "pascal",
-  "volar.completion.preferredAttrNameCase": "camel"
+  "volar.completion.preferredAttrNameCase": "camel",
+  "editor.tabSize": 2
 }
