@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { defineNuxtConfig } from "nuxt";
 import { createResolver } from "@nuxt/kit";
 import { NuxtPage } from "@nuxt/schema";
+import { default as qs } from "node:querystring";
 
 const resolver = createResolver(import.meta.url);
 
@@ -87,24 +88,15 @@ export default defineNuxtConfig({
 });
 
 function googleFont() {
+  const fontUrl = `https://fonts.googleapis.com/css2?${qs.encode({
+    family: ["Itim", "Noto Sans JP:wght@400"],
+    display: "swap",
+  })}`;
+
   return [
-    {
-      rel: "dns-prefetch",
-      href: "https://fonts.gstatic.com/",
-    },
-    {
-      rel: "preconnect",
-      href: "https://fonts.gstatic.com/",
-      crossorigin: "",
-    },
-    {
-      rel: "preload",
-      as: "style",
-      href: "https://fonts.googleapis.com/css2?family=Itim&family=Noto+Sans+JP:wght@400&display=swap",
-    },
-    {
-      rel: "stylesheet",
-      href: "https://fonts.googleapis.com/css2?family=Itim&family=Noto+Sans+JP:wght@400&display=swap",
-    },
+    { rel: "dns-prefetch", href: "https://fonts.gstatic.com/" },
+    { rel: "preconnect", href: "https://fonts.gstatic.com/", crossorigin: "" },
+    { rel: "preload", as: "style", href: fontUrl },
+    { rel: "stylesheet", href: fontUrl },
   ];
 }
