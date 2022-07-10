@@ -1,0 +1,49 @@
+{
+  "id": "1010081",
+  "title": "ＪＲ両毛線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-10",
+  "updatedAt": "2022-07-10",
+  "optional": { "cd": "81" },
+  "words": [
+    { "info": "高崎", "info2": "たかさき", "word": "takasaki" },
+    {
+      "info": "高崎問屋町",
+      "info2": "たかさきとんやまち",
+      "word": "takasakitonyamati"
+    },
+    { "info": "井野", "info2": "いの", "word": "ino" },
+    { "info": "新前橋", "info2": "しんまえばし", "word": "sinmaebasi" },
+    { "info": "前橋", "info2": "まえばし", "word": "maebasi" },
+    {
+      "info": "前橋大島",
+      "info2": "まえばしおおしま",
+      "word": "maebasioosima"
+    },
+    { "info": "駒形", "info2": "こまがた", "word": "komagata" },
+    { "info": "伊勢崎", "info2": "いせさき", "word": "isesaki" },
+    { "info": "国定", "info2": "くにさだ", "word": "kunisada" },
+    { "info": "岩宿", "info2": "いわじゅく", "word": "iwajuku" },
+    { "info": "桐生", "info2": "きりゅう", "word": "kiryuu" },
+    { "info": "小俣", "info2": "おまた", "word": "omata" },
+    { "info": "山前", "info2": "やままえ", "word": "yamamae" },
+    { "info": "足利", "info2": "あしかが", "word": "asikaga" },
+    {
+      "info": "あしかがフラワーパーク",
+      "info2": "あしかがふらわーぱーく",
+      "word": "asikagahurawa-pa-ku"
+    },
+    { "info": "富田", "info2": "とみた", "word": "tomita" },
+    { "info": "佐野", "info2": "さの", "word": "sano" },
+    { "info": "岩舟", "info2": "いわふね", "word": "iwahune" },
+    { "info": "大平下", "info2": "おおひらした", "word": "oohirasita" },
+    { "info": "栃木", "info2": "とちぎ", "word": "totigi" },
+    { "info": "思川", "info2": "おもいがわ", "word": "omoigawa" },
+    { "info": "小山", "info2": "おやま", "word": "oyama" }
+  ]
+}

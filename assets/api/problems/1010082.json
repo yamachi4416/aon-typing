@@ -1,0 +1,26 @@
+{
+  "id": "1010082",
+  "title": "ＪＲ鹿島線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-10",
+  "updatedAt": "2022-07-10",
+  "optional": { "cd": "82" },
+  "words": [
+    {
+      "info": "鹿島サッカースタジアム",
+      "info2": "かしまさっかーすたじあむ",
+      "word": "kasimasakka-sutajiamu"
+    },
+    { "info": "鹿島神宮", "info2": "かしまじんぐう", "word": "kasimajinguu" },
+    { "info": "延方", "info2": "のぶかた", "word": "nobukata" },
+    { "info": "潮来", "info2": "いたこ", "word": "itako" },
+    { "info": "十二橋", "info2": "じゅうにきょう", "word": "juunikyou" },
+    { "info": "香取", "info2": "かとり", "word": "katori" },
+    { "info": "佐原", "info2": "さわら", "word": "sawara" }
+  ]
+}

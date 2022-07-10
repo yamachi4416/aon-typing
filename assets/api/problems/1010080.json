@@ -1,0 +1,31 @@
+{
+  "id": "1010080",
+  "title": "ＪＲ水戸線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-10",
+  "updatedAt": "2022-07-10",
+  "optional": { "cd": "80" },
+  "words": [
+    { "info": "友部", "info2": "ともべ", "word": "tomobe" },
+    { "info": "宍戸", "info2": "ししど", "word": "sisido" },
+    { "info": "笠間", "info2": "かさま", "word": "kasama" },
+    { "info": "稲田", "info2": "いなだ", "word": "inada" },
+    { "info": "福原", "info2": "ふくはら", "word": "hukuhara" },
+    { "info": "羽黒", "info2": "はぐろ", "word": "haguro" },
+    { "info": "岩瀬", "info2": "いわせ", "word": "iwase" },
+    { "info": "大和", "info2": "やまと", "word": "yamato" },
+    { "info": "新治", "info2": "にいはり", "word": "niihari" },
+    { "info": "下館", "info2": "しもだて", "word": "simodate" },
+    { "info": "玉戸", "info2": "たまど", "word": "tamado" },
+    { "info": "川島", "info2": "かわしま", "word": "kawasima" },
+    { "info": "東結城", "info2": "ひがしゆうき", "word": "higasiyuuki" },
+    { "info": "結城", "info2": "ゆうき", "word": "yuuki" },
+    { "info": "小田林", "info2": "おたばやし", "word": "otabayasi" },
+    { "info": "小山", "info2": "おやま", "word": "oyama" }
+  ]
+}
