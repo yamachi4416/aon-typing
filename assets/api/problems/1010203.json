@@ -1,0 +1,33 @@
+{
+  "id": "1010203",
+  "title": "ＪＲ桃太郎線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-11",
+  "updatedAt": "2022-07-11",
+  "optional": { "cd": "203" },
+  "words": [
+    { "info": "総社", "info2": "そうじゃ", "word": "souja" },
+    { "info": "東総社", "info2": "ひがしそうじゃ", "word": "higasisouja" },
+    { "info": "服部", "info2": "はっとり", "word": "hattori" },
+    { "info": "足守", "info2": "あしもり", "word": "asimori" },
+    {
+      "info": "備中高松",
+      "info2": "びっちゅうたかまつ",
+      "word": "bittyuutakamatu"
+    },
+    { "info": "吉備津", "info2": "きびつ", "word": "kibitu" },
+    {
+      "info": "備前一宮",
+      "info2": "びぜんいちのみや",
+      "word": "bizennitinomiya"
+    },
+    { "info": "大安寺", "info2": "だいあんじ", "word": "daianji" },
+    { "info": "備前三門", "info2": "びぜんみかど", "word": "bizenmikado" },
+    { "info": "岡山", "info2": "おかやま", "word": "okayama" }
+  ]
+}
