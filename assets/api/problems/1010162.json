@@ -1,0 +1,45 @@
+{
+  "id": "1010162",
+  "title": "ＪＲ大和路線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-14",
+  "updatedAt": "2022-07-14",
+  "optional": { "cd": "162" },
+  "words": [
+    {
+      "info": "ＪＲ難波",
+      "info2": "じぇいあーるなんば",
+      "word": "jeia-runanba"
+    },
+    { "info": "今宮", "info2": "いまみや", "word": "imamiya" },
+    { "info": "新今宮", "info2": "しんいまみや", "word": "sinnimamiya" },
+    { "info": "天王寺", "info2": "てんのうじ", "word": "tennnouji" },
+    {
+      "info": "東部市場前",
+      "info2": "とうぶしじょうまえ",
+      "word": "toubusijoumae"
+    },
+    { "info": "平野", "info2": "ひらの", "word": "hirano" },
+    { "info": "加美", "info2": "かみ", "word": "kami" },
+    { "info": "久宝寺", "info2": "きゅうほうじ", "word": "kyuuhouji" },
+    { "info": "八尾", "info2": "やお", "word": "yao" },
+    { "info": "志紀", "info2": "しき", "word": "siki" },
+    { "info": "柏原", "info2": "かしわら", "word": "kasiwara" },
+    { "info": "高井田", "info2": "たかいだ", "word": "takaida" },
+    { "info": "河内堅上", "info2": "かわちかたかみ", "word": "kawatikatakami" },
+    { "info": "三郷", "info2": "さんごう", "word": "sangou" },
+    { "info": "王寺", "info2": "おうじ", "word": "ouji" },
+    { "info": "法隆寺", "info2": "ほうりゅうじ", "word": "houryuuji" },
+    { "info": "大和小泉", "info2": "やまとこいずみ", "word": "yamatokoizumi" },
+    { "info": "郡山", "info2": "こおりやま", "word": "kooriyama" },
+    { "info": "奈良", "info2": "なら", "word": "nara" },
+    { "info": "平城山", "info2": "ならやま", "word": "narayama" },
+    { "info": "木津", "info2": "きづ", "word": "kidu" },
+    { "info": "加茂", "info2": "かも", "word": "kamo" }
+  ]
+}

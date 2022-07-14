@@ -1,0 +1,48 @@
+{
+  "id": "1010163",
+  "title": "ＪＲ奈良線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-14",
+  "updatedAt": "2022-07-14",
+  "optional": { "cd": "163" },
+  "words": [
+    { "info": "奈良", "info2": "なら", "word": "nara" },
+    { "info": "平城山", "info2": "ならやま", "word": "narayama" },
+    { "info": "木津", "info2": "きづ", "word": "kidu" },
+    { "info": "上狛", "info2": "かみこま", "word": "kamikoma" },
+    { "info": "棚倉", "info2": "たなくら", "word": "tanakura" },
+    { "info": "玉水", "info2": "たまみず", "word": "tamamizu" },
+    { "info": "山城多賀", "info2": "やましろたが", "word": "yamasirotaga" },
+    {
+      "info": "山城青谷",
+      "info2": "やましろあおだに",
+      "word": "yamasiroaodani"
+    },
+    { "info": "長池", "info2": "ながいけ", "word": "nagaike" },
+    { "info": "城陽", "info2": "じょうよう", "word": "jouyou" },
+    { "info": "新田", "info2": "しんでん", "word": "sindenn" },
+    {
+      "info": "ＪＲ小倉",
+      "info2": "じぇいあーるおぐら",
+      "word": "jeia-ruogura"
+    },
+    { "info": "宇治", "info2": "うじ", "word": "uji" },
+    { "info": "黄檗", "info2": "おうばく", "word": "oubaku" },
+    { "info": "木幡", "info2": "こはた", "word": "kohata" },
+    { "info": "六地蔵", "info2": "ろくじぞう", "word": "rokujizou" },
+    { "info": "桃山", "info2": "ももやま", "word": "momoyama" },
+    {
+      "info": "ＪＲ藤森",
+      "info2": "じぇいあーるふじのもり",
+      "word": "jeia-ruhujinomori"
+    },
+    { "info": "稲荷", "info2": "いなり", "word": "inari" },
+    { "info": "東福寺", "info2": "とうふくじ", "word": "touhukuji" },
+    { "info": "京都", "info2": "きょうと", "word": "kyouto" }
+  ]
+}
