@@ -1,0 +1,23 @@
+{
+  "id": "1010179",
+  "title": "ＪＲゆめ咲線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-19",
+  "updatedAt": "2022-07-19",
+  "optional": { "cd": "179" },
+  "words": [
+    { "info": "桜島", "info2": "さくらじま", "word": "sakurajima" },
+    {
+      "info": "ユニバーサルシティ",
+      "info2": "ゆにばーさるしてぃ",
+      "word": "yuniba-sarusithi"
+    },
+    { "info": "安治川口", "info2": "あじかわぐち", "word": "ajikawaguti" },
+    { "info": "西九条", "info2": "にしくじょう", "word": "nisikujou" }
+  ]
+}

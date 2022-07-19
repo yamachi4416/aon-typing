@@ -1,0 +1,62 @@
+{
+  "id": "1010180",
+  "title": "ＪＲ神戸線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-07-19",
+  "updatedAt": "2022-07-19",
+  "optional": { "cd": "180" },
+  "words": [
+    { "info": "姫路", "info2": "ひめじ", "word": "himeji" },
+    { "info": "東姫路", "info2": "ひがしひめじ", "word": "higasihimeji" },
+    { "info": "御着", "info2": "ごちゃく", "word": "gotyaku" },
+    { "info": "ひめじ別所", "info2": "ひめじべっしょ", "word": "himejibessyo" },
+    { "info": "曽根", "info2": "そね", "word": "sone" },
+    { "info": "宝殿", "info2": "ほうでん", "word": "houdenn" },
+    { "info": "加古川", "info2": "かこがわ", "word": "kakogawa" },
+    { "info": "東加古川", "info2": "ひがしかこがわ", "word": "higasikakogawa" },
+    { "info": "土山", "info2": "つちやま", "word": "tutiyama" },
+    { "info": "魚住", "info2": "うおずみ", "word": "uozumi" },
+    { "info": "大久保", "info2": "おおくぼ", "word": "ookubo" },
+    { "info": "西明石", "info2": "にしあかし", "word": "nisiakasi" },
+    { "info": "明石", "info2": "あかし", "word": "akasi" },
+    { "info": "朝霧", "info2": "あさぎり", "word": "asagiri" },
+    { "info": "舞子", "info2": "まいこ", "word": "maiko" },
+    { "info": "垂水", "info2": "たるみ", "word": "tarumi" },
+    { "info": "塩屋", "info2": "しおや", "word": "sioya" },
+    { "info": "須磨", "info2": "すま", "word": "suma" },
+    {
+      "info": "須磨海浜公園",
+      "info2": "すまかいひんこうえん",
+      "word": "sumakaihinkouenn"
+    },
+    { "info": "鷹取", "info2": "たかとり", "word": "takatori" },
+    { "info": "新長田", "info2": "しんながた", "word": "sinnnagata" },
+    { "info": "兵庫", "info2": "ひょうご", "word": "hyougo" },
+    { "info": "神戸", "info2": "こうべ", "word": "koube" },
+    { "info": "元町", "info2": "もとまち", "word": "motomati" },
+    { "info": "三ノ宮", "info2": "さんのみや", "word": "sannnomiya" },
+    { "info": "灘", "info2": "なだ", "word": "nada" },
+    { "info": "摩耶", "info2": "まや", "word": "maya" },
+    { "info": "六甲道", "info2": "ろっこうみち", "word": "rokkoumiti" },
+    { "info": "住吉", "info2": "すみよし", "word": "sumiyosi" },
+    { "info": "摂津本山", "info2": "せっつもとやま", "word": "settumotoyama" },
+    { "info": "甲南山手", "info2": "こうなんやまて", "word": "kounanyamate" },
+    { "info": "芦屋", "info2": "あしや", "word": "asiya" },
+    {
+      "info": "さくら夙川",
+      "info2": "さくらしゅくがわ",
+      "word": "sakurasyukugawa"
+    },
+    { "info": "西宮", "info2": "にしのみや", "word": "nisinomiya" },
+    { "info": "甲子園口", "info2": "こうしえんぐち", "word": "kousienguti" },
+    { "info": "立花", "info2": "たちばな", "word": "tatibana" },
+    { "info": "尼崎", "info2": "あまがさき", "word": "amagasaki" },
+    { "info": "塚本", "info2": "つかもと", "word": "tukamoto" },
+    { "info": "大阪", "info2": "おおさか", "word": "oosaka" }
+  ]
+}
