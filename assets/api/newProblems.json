@@ -1,5 +1,19 @@
 [
   {
+    "id": "1010281",
+    "title": "西武池袋線(池袋－飯能)の駅いちらん",
+    "type": "japanese",
+    "words": 26,
+    "chars": 253,
+    "createdAt": "2022-08-11",
+    "updatedAt": "2022-08-11",
+    "tags": [
+      { "id": "00009", "name": "日本語" },
+      { "id": "00007", "name": "地理" },
+      { "id": "00019", "name": "駅名" }
+    ]
+  },
+  {
     "id": "1010464",
     "title": "会津鉄道会津線の駅いちらん",
     "type": "japanese",
@@ -61,20 +75,6 @@
     "type": "japanese",
     "words": 54,
     "chars": 376,
-    "createdAt": "2022-07-14",
-    "updatedAt": "2022-07-14",
-    "tags": [
-      { "id": "00009", "name": "日本語" },
-      { "id": "00007", "name": "地理" },
-      { "id": "00019", "name": "駅名" }
-    ]
-  },
-  {
-    "id": "1010163",
-    "title": "ＪＲ奈良線の駅いちらん",
-    "type": "japanese",
-    "words": 21,
-    "chars": 167,
     "createdAt": "2022-07-14",
     "updatedAt": "2022-07-14",
     "tags": [

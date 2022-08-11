@@ -1,0 +1,57 @@
+{
+  "id": "1010281",
+  "title": "西武池袋線(池袋－飯能)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-08-11",
+  "updatedAt": "2022-08-11",
+  "optional": { "cd": "281" },
+  "words": [
+    { "info": "飯能", "info2": "はんのう", "word": "hannnou" },
+    { "info": "元加治", "info2": "もとかじ", "word": "motokaji" },
+    { "info": "仏子", "info2": "ぶし", "word": "busi" },
+    { "info": "入間市", "info2": "いるまし", "word": "irumasi" },
+    {
+      "info": "稲荷山公園",
+      "info2": "いなりやまこうえん",
+      "word": "inariyamakouenn"
+    },
+    { "info": "武蔵藤沢", "info2": "むさしふじさわ", "word": "musasihujisawa" },
+    { "info": "狭山ケ丘", "info2": "さやまがおか", "word": "sayamagaoka" },
+    { "info": "小手指", "info2": "こてさし", "word": "kotesasi" },
+    { "info": "西所沢", "info2": "にしところざわ", "word": "nisitokorozawa" },
+    { "info": "所沢", "info2": "ところざわ", "word": "tokorozawa" },
+    { "info": "秋津", "info2": "あきつ", "word": "akitu" },
+    { "info": "清瀬", "info2": "きよせ", "word": "kiyose" },
+    { "info": "東久留米", "info2": "ひがしくるめ", "word": "higasikurume" },
+    { "info": "ひばりケ丘", "info2": "ひばりがおか", "word": "hibarigaoka" },
+    { "info": "保谷", "info2": "ほうや", "word": "houya" },
+    {
+      "info": "大泉学園",
+      "info2": "おおいずみがくえん",
+      "word": "ooizumigakuenn"
+    },
+    {
+      "info": "石神井公園",
+      "info2": "しゃくじいこうえん",
+      "word": "syakujiikouenn"
+    },
+    {
+      "info": "練馬高野台",
+      "info2": "ねりまたかのだい",
+      "word": "nerimatakanodai"
+    },
+    { "info": "富士見台", "info2": "ふじみだい", "word": "hujimidai" },
+    { "info": "中村橋", "info2": "なかむらばし", "word": "nakamurabasi" },
+    { "info": "練馬", "info2": "ねりま", "word": "nerima" },
+    { "info": "桜台", "info2": "さくらだい", "word": "sakuradai" },
+    { "info": "江古田", "info2": "えこだ", "word": "ekoda" },
+    { "info": "東長崎", "info2": "ひがしながさき", "word": "higasinagasaki" },
+    { "info": "椎名町", "info2": "しいなまち", "word": "siinamati" },
+    { "info": "池袋", "info2": "いけぶくろ", "word": "ikebukuro" }
+  ]
+}
