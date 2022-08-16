@@ -1,0 +1,59 @@
+{
+  "id": "1010088",
+  "title": "ＪＲ吾妻線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-08-16",
+  "updatedAt": "2022-08-16",
+  "optional": { "cd": "88" },
+  "words": [
+    { "info": "大前", "info2": "おおまえ", "word": "oomae" },
+    {
+      "info": "万座・鹿沢口",
+      "info2": "まんざかざわぐち",
+      "word": "manzakazawaguti"
+    },
+    { "info": "袋倉", "info2": "ふくろぐら", "word": "hukurogura" },
+    { "info": "羽根尾", "info2": "はねお", "word": "haneo" },
+    { "info": "群馬大津", "info2": "ぐんまおおつ", "word": "gunmaootu" },
+    {
+      "info": "長野原草津口",
+      "info2": "ながのはらくさつぐち",
+      "word": "naganoharakusatuguti"
+    },
+    {
+      "info": "川原湯温泉",
+      "info2": "かわらゆおんせん",
+      "word": "kawarayuonsenn"
+    },
+    { "info": "岩島", "info2": "いわしま", "word": "iwasima" },
+    { "info": "矢倉", "info2": "やぐら", "word": "yagura" },
+    { "info": "郷原", "info2": "ごうばら", "word": "goubara" },
+    { "info": "群馬原町", "info2": "ぐんまはらまち", "word": "gunmaharamati" },
+    { "info": "中之条", "info2": "なかのじょう", "word": "nakanojou" },
+    { "info": "市城", "info2": "いちしろ", "word": "itisiro" },
+    {
+      "info": "小野上温泉",
+      "info2": "おのがみおんせん",
+      "word": "onogamionsenn"
+    },
+    { "info": "小野上", "info2": "おのがみ", "word": "onogami" },
+    { "info": "祖母島", "info2": "うばしま", "word": "ubasima" },
+    { "info": "金島", "info2": "かなしま", "word": "kanasima" },
+    { "info": "渋川", "info2": "しぶかわ", "word": "sibukawa" },
+    { "info": "八木原", "info2": "やぎはら", "word": "yagihara" },
+    { "info": "群馬総社", "info2": "ぐんまそうじゃ", "word": "gunmasouja" },
+    { "info": "新前橋", "info2": "しんまえばし", "word": "sinmaebasi" },
+    { "info": "井野", "info2": "いの", "word": "ino" },
+    {
+      "info": "高崎問屋町",
+      "info2": "たかさきとんやまち",
+      "word": "takasakitonyamati"
+    },
+    { "info": "高崎", "info2": "たかさき", "word": "takasaki" }
+  ]
+}
