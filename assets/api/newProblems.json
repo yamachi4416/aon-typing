@@ -1,5 +1,19 @@
 [
   {
+    "id": "1010145",
+    "title": "ＪＲ高山本線(岐阜－猪谷)の駅いちらん",
+    "type": "japanese",
+    "words": 36,
+    "chars": 285,
+    "createdAt": "2022-08-18",
+    "updatedAt": "2022-08-18",
+    "tags": [
+      { "id": "00009", "name": "日本語" },
+      { "id": "00007", "name": "地理" },
+      { "id": "00019", "name": "駅名" }
+    ]
+  },
+  {
     "id": "1010088",
     "title": "ＪＲ吾妻線の駅いちらん",
     "type": "japanese",
@@ -61,20 +75,6 @@
     "type": "japanese",
     "words": 39,
     "chars": 317,
-    "createdAt": "2022-07-19",
-    "updatedAt": "2022-07-19",
-    "tags": [
-      { "id": "00009", "name": "日本語" },
-      { "id": "00007", "name": "地理" },
-      { "id": "00019", "name": "駅名" }
-    ]
-  },
-  {
-    "id": "1010179",
-    "title": "ＪＲゆめ咲線の駅いちらん",
-    "type": "japanese",
-    "words": 4,
-    "chars": 46,
     "createdAt": "2022-07-19",
     "updatedAt": "2022-07-19",
     "tags": [
