@@ -1,0 +1,25 @@
+{
+  "id": "1010151",
+  "title": "ＪＲ高山本線(猪谷－富山)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-08-19",
+  "updatedAt": "2022-08-19",
+  "optional": { "cd": "151" },
+  "words": [
+    { "info": "富山", "info2": "とやま", "word": "toyama" },
+    { "info": "西富山", "info2": "にしとやま", "word": "nisitoyama" },
+    { "info": "婦中鵜坂", "info2": "ふちゅううさか", "word": "hutyuuusaka" },
+    { "info": "速星", "info2": "はやほし", "word": "hayahosi" },
+    { "info": "千里", "info2": "ちさと", "word": "tisato" },
+    { "info": "越中八尾", "info2": "えっちゅうやつお", "word": "ettyuuyatuo" },
+    { "info": "東八尾", "info2": "ひがしやつお", "word": "higasiyatuo" },
+    { "info": "笹津", "info2": "ささづ", "word": "sasadu" },
+    { "info": "楡原", "info2": "にれはら", "word": "nirehara" },
+    { "info": "猪谷", "info2": "いのたに", "word": "inotani" }
+  ]
+}
