@@ -1,0 +1,52 @@
+{
+  "id": "1010557",
+  "title": "京都市営地下鉄東西線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-08-20",
+  "updatedAt": "2022-08-20",
+  "optional": { "cd": "557" },
+  "words": [
+    {
+      "info": "太秦天神川",
+      "info2": "うずまさてんじんがわ",
+      "word": "uzumasatenjingawa"
+    },
+    {
+      "info": "西大路御池",
+      "info2": "にしおおじおいけ",
+      "word": "nisioojioike"
+    },
+    { "info": "二条", "info2": "にじょう", "word": "nijou" },
+    {
+      "info": "二条城前",
+      "info2": "にじょうじょうまえ",
+      "word": "nijoujoumae"
+    },
+    { "info": "烏丸御池", "info2": "からすまおいけ", "word": "karasumaoike" },
+    {
+      "info": "京都市役所前",
+      "info2": "きょうとしやくしょまえ",
+      "word": "kyoutosiyakusyomae"
+    },
+    {
+      "info": "三条京阪",
+      "info2": "さんじょうけいはん",
+      "word": "sanjoukeihann"
+    },
+    { "info": "東山", "info2": "ひがしやま", "word": "higasiyama" },
+    { "info": "蹴上", "info2": "けあげ", "word": "keage" },
+    { "info": "御陵", "info2": "みささぎ", "word": "misasagi" },
+    { "info": "山科", "info2": "やましな", "word": "yamasina" },
+    { "info": "東野", "info2": "ひがしの", "word": "higasino" },
+    { "info": "椥辻", "info2": "なぎつじ", "word": "nagituji" },
+    { "info": "小野", "info2": "おの", "word": "ono" },
+    { "info": "醍醐", "info2": "だいご", "word": "daigo" },
+    { "info": "石田", "info2": "いしだ", "word": "isida" },
+    { "info": "六地蔵", "info2": "ろくじぞう", "word": "rokujizou" }
+  ]
+}
