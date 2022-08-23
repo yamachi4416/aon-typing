@@ -1,0 +1,22 @@
+{
+  "id": "1010171",
+  "title": "ＪＲ関西空港線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-08-23",
+  "updatedAt": "2022-08-23",
+  "optional": { "cd": "171" },
+  "words": [
+    { "info": "関西空港", "info2": "かんさいくうこう", "word": "kansaikuukou" },
+    {
+      "info": "りんくうタウン",
+      "info2": "りんくうたうん",
+      "word": "rinkuutaunn"
+    },
+    { "info": "日根野", "info2": "ひねの", "word": "hineno" }
+  ]
+}
