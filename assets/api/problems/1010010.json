@@ -1,0 +1,21 @@
+{
+  "id": "1010010",
+  "title": "ＪＲ千歳線(新千歳空港－南千歳)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-08-27",
+  "updatedAt": "2022-08-27",
+  "optional": { "cd": "10" },
+  "words": [
+    { "info": "南千歳", "info2": "みなみちとせ", "word": "minamititose" },
+    {
+      "info": "新千歳空港",
+      "info2": "しんちとせくうこう",
+      "word": "sintitosekuukou"
+    }
+  ]
+}
