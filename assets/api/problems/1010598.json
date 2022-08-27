@@ -1,0 +1,20 @@
+{
+  "id": "1010598",
+  "title": "紀州鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-08-27",
+  "updatedAt": "2022-08-27",
+  "optional": { "cd": "598" },
+  "words": [
+    { "info": "西御坊", "info2": "にしごぼう", "word": "nisigobou" },
+    { "info": "市役所前", "info2": "しやくしょまえ", "word": "siyakusyomae" },
+    { "info": "紀伊御坊", "info2": "きいごぼう", "word": "kiigobou" },
+    { "info": "学門", "info2": "がくもん", "word": "gakumonn" },
+    { "info": "御坊", "info2": "ごぼう", "word": "gobou" }
+  ]
+}
