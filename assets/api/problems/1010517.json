@@ -1,0 +1,45 @@
+{
+  "id": "1010517",
+  "title": "富士急行線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-08-27",
+  "updatedAt": "2022-08-27",
+  "optional": { "cd": "517" },
+  "words": [
+    { "info": "河口湖", "info2": "かわぐちこ", "word": "kawagutiko" },
+    {
+      "info": "富士急ハイランド",
+      "info2": "ふじきゅうはいらんど",
+      "word": "hujikyuuhairando"
+    },
+    { "info": "富士山", "info2": "ふじさん", "word": "hujisann" },
+    { "info": "月江寺", "info2": "げっこうじ", "word": "gekkouji" },
+    { "info": "下吉田", "info2": "しもよしだ", "word": "simoyosida" },
+    {
+      "info": "葭池温泉前",
+      "info2": "よしいけおんせんまえ",
+      "word": "yosiikeonsenmae"
+    },
+    { "info": "寿", "info2": "ことぶき", "word": "kotobuki" },
+    { "info": "三つ峠", "info2": "みつとうげ", "word": "mitutouge" },
+    { "info": "東桂", "info2": "ひがしかつら", "word": "higasikatura" },
+    { "info": "十日市場", "info2": "とおかいちば", "word": "tookaitiba" },
+    {
+      "info": "都留文科大学前",
+      "info2": "つるぶんかだいがくまえ",
+      "word": "turubunkadaigakumae"
+    },
+    { "info": "谷村町", "info2": "やむらまち", "word": "yamuramati" },
+    { "info": "都留市", "info2": "つるし", "word": "turusi" },
+    { "info": "赤坂", "info2": "あかさか", "word": "akasaka" },
+    { "info": "禾生", "info2": "かせい", "word": "kasei" },
+    { "info": "田野倉", "info2": "たのくら", "word": "tanokura" },
+    { "info": "上大月", "info2": "かみおおつき", "word": "kamiootuki" },
+    { "info": "大月", "info2": "おおつき", "word": "ootuki" }
+  ]
+}
