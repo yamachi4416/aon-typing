@@ -1,0 +1,23 @@
+{
+  "id": "1010011",
+  "title": "ＪＲ石勝線(南千歳－新得)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-08-28",
+  "updatedAt": "2022-08-28",
+  "optional": { "cd": "11" },
+  "words": [
+    { "info": "新得", "info2": "しんとく", "word": "sintoku" },
+    { "info": "トマム", "info2": "とまむ", "word": "tomamu" },
+    { "info": "占冠", "info2": "しむかっぷ", "word": "simukappu" },
+    { "info": "新夕張", "info2": "しんゆうばり", "word": "sinyuubari" },
+    { "info": "滝ノ上", "info2": "たきのうえ", "word": "takinoue" },
+    { "info": "川端", "info2": "かわばた", "word": "kawabata" },
+    { "info": "追分", "info2": "おいわけ", "word": "oiwake" },
+    { "info": "南千歳", "info2": "みなみちとせ", "word": "minamititose" }
+  ]
+}
