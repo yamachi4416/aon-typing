@@ -1,0 +1,55 @@
+{
+  "id": "1010258",
+  "title": "ＪＲ日南線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-08-28",
+  "updatedAt": "2022-08-28",
+  "optional": { "cd": "258" },
+  "words": [
+    { "info": "志布志", "info2": "しぶし", "word": "sibusi" },
+    { "info": "大隅夏井", "info2": "おおすみなつい", "word": "oosuminatui" },
+    {
+      "info": "福島高松",
+      "info2": "ふくしまたかまつ",
+      "word": "hukusimatakamatu"
+    },
+    {
+      "info": "福島今町",
+      "info2": "ふくしまいままち",
+      "word": "hukusimaimamati"
+    },
+    { "info": "串間", "info2": "くしま", "word": "kusima" },
+    {
+      "info": "日向北方",
+      "info2": "ひゅうがきたかた",
+      "word": "hyuugakitakata"
+    },
+    { "info": "日向大束", "info2": "ひゅうがおおつか", "word": "hyuugaootuka" },
+    { "info": "榎原", "info2": "よわら", "word": "yowara" },
+    { "info": "谷之口", "info2": "たにのくち", "word": "taninokuti" },
+    { "info": "南郷", "info2": "なんごう", "word": "nangou" },
+    { "info": "大堂津", "info2": "おおどうつ", "word": "oodoutu" },
+    { "info": "油津", "info2": "あぶらつ", "word": "aburatu" },
+    { "info": "日南", "info2": "にちなん", "word": "nitinann" },
+    { "info": "飫肥", "info2": "おび", "word": "obi" },
+    { "info": "内之田", "info2": "うちのだ", "word": "utinoda" },
+    { "info": "北郷", "info2": "きたごう", "word": "kitagou" },
+    { "info": "伊比井", "info2": "いびい", "word": "ibii" },
+    { "info": "小内海", "info2": "こうちうみ", "word": "koutiumi" },
+    { "info": "内海", "info2": "うちうみ", "word": "utiumi" },
+    { "info": "折生迫", "info2": "おりゅうざこ", "word": "oryuuzako" },
+    { "info": "青島", "info2": "あおしま", "word": "aosima" },
+    { "info": "子供の国", "info2": "こどものくに", "word": "kodomonokuni" },
+    { "info": "曽山寺", "info2": "そさんじ", "word": "sosanji" },
+    { "info": "運動公園", "info2": "うんどうこうえん", "word": "undoukouenn" },
+    { "info": "木花", "info2": "きばな", "word": "kibana" },
+    { "info": "南方", "info2": "みなみかた", "word": "minamikata" },
+    { "info": "田吉", "info2": "たよし", "word": "tayosi" },
+    { "info": "南宮崎", "info2": "みなみみやざき", "word": "minamimiyazaki" }
+  ]
+}
