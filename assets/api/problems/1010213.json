@@ -1,0 +1,43 @@
+{
+  "id": "1010213",
+  "title": "ＪＲ山口線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-08-28",
+  "updatedAt": "2022-08-28",
+  "optional": { "cd": "213" },
+  "words": [
+    { "info": "益田", "info2": "ますだ", "word": "masuda" },
+    { "info": "本俣賀", "info2": "ほんまたが", "word": "honmataga" },
+    { "info": "石見横田", "info2": "いわみよこた", "word": "iwamiyokota" },
+    { "info": "東青原", "info2": "ひがしあおはら", "word": "higasiaohara" },
+    { "info": "青原", "info2": "あおはら", "word": "aohara" },
+    { "info": "日原", "info2": "にちはら", "word": "nitihara" },
+    { "info": "青野山", "info2": "あおのやま", "word": "aonoyama" },
+    { "info": "津和野", "info2": "つわの", "word": "tuwano" },
+    { "info": "船平山", "info2": "ふなひらやま", "word": "hunahirayama" },
+    { "info": "徳佐", "info2": "とくさ", "word": "tokusa" },
+    { "info": "鍋倉", "info2": "なべくら", "word": "nabekura" },
+    { "info": "地福", "info2": "じふく", "word": "jihuku" },
+    { "info": "名草", "info2": "なぐさ", "word": "nagusa" },
+    { "info": "三谷", "info2": "みたに", "word": "mitani" },
+    { "info": "渡川", "info2": "わたりがわ", "word": "watarigawa" },
+    { "info": "長門峡", "info2": "ちょうもんきょう", "word": "tyoumonkyou" },
+    { "info": "篠目", "info2": "しのめ", "word": "sinome" },
+    { "info": "仁保", "info2": "にほ", "word": "niho" },
+    { "info": "宮野", "info2": "みやの", "word": "miyano" },
+    { "info": "上山口", "info2": "かみやまぐち", "word": "kamiyamaguti" },
+    { "info": "山口", "info2": "やまぐち", "word": "yamaguti" },
+    { "info": "湯田温泉", "info2": "ゆだおんせん", "word": "yudaonsenn" },
+    { "info": "矢原", "info2": "やばら", "word": "yabara" },
+    { "info": "大歳", "info2": "おおとし", "word": "ootosi" },
+    { "info": "仁保津", "info2": "にほづ", "word": "nihodu" },
+    { "info": "上郷", "info2": "かみごう", "word": "kamigou" },
+    { "info": "周防下郷", "info2": "すおうしもごう", "word": "suousimogou" },
+    { "info": "新山口", "info2": "しんやまぐち", "word": "sinyamaguti" }
+  ]
+}
