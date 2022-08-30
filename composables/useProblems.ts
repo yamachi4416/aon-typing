@@ -49,7 +49,9 @@ class UseProblems {
   }
 
   async retrieveTag({ id }: { id: string }) {
-    const { data: tag, error } = await useFetch(`/api/tags/${id}.json`);
+    const { data: tag, error } = await useFetch(`/api/tags/${id}.json`, {
+      key: `/api/tags/${id}.json`
+    });
     if (error.value instanceof Error) {
       throwError(error.value);
     }
@@ -57,7 +59,9 @@ class UseProblems {
   }
 
   async retrieveProblemDetail({ id }: { id: string }) {
-    const { data: detail, error } = await useFetch(`/api/problems/${id}.json`);
+    const { data: detail, error } = await useFetch(`/api/problems/${id}.json`, {
+      key: `/api/problems/${id}.json`
+    });
     if (error.value instanceof Error) {
       throwError(error.value);
     }
