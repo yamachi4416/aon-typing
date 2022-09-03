@@ -1,0 +1,45 @@
+{
+  "id": "1010763",
+  "title": "ＪＲ東北本線(仙台－一ノ関)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-09-03",
+  "updatedAt": "2022-09-03",
+  "optional": { "cd": "763" },
+  "words": [
+    { "info": "一ノ関", "info2": "いちのせき", "word": "itinoseki" },
+    { "info": "有壁", "info2": "ありかべ", "word": "arikabe" },
+    { "info": "清水原", "info2": "しみずはら", "word": "simizuhara" },
+    { "info": "花泉", "info2": "はないずみ", "word": "hanaizumi" },
+    { "info": "油島", "info2": "ゆしま", "word": "yusima" },
+    { "info": "石越", "info2": "いしこし", "word": "isikosi" },
+    { "info": "新田", "info2": "にった", "word": "nitta" },
+    { "info": "梅ケ沢", "info2": "うめがさわ", "word": "umegasawa" },
+    { "info": "瀬峰", "info2": "せみね", "word": "semine" },
+    { "info": "田尻", "info2": "たじり", "word": "tajiri" },
+    { "info": "小牛田", "info2": "こごた", "word": "kogota" },
+    { "info": "松山町", "info2": "まつやままち", "word": "matuyamamati" },
+    { "info": "鹿島台", "info2": "かしまだい", "word": "kasimadai" },
+    { "info": "品井沼", "info2": "しないぬま", "word": "sinainuma" },
+    { "info": "愛宕", "info2": "あたご", "word": "atago" },
+    { "info": "松島", "info2": "まつしま", "word": "matusima" },
+    { "info": "塩釜", "info2": "しおがま", "word": "siogama" },
+    {
+      "info": "国府多賀城",
+      "info2": "こくふたがじょう",
+      "word": "kokuhutagajou"
+    },
+    {
+      "info": "陸前山王",
+      "info2": "りくぜんさんのう",
+      "word": "rikuzensannnou"
+    },
+    { "info": "岩切", "info2": "いわきり", "word": "iwakiri" },
+    { "info": "東仙台", "info2": "ひがしせんだい", "word": "higasisendai" },
+    { "info": "仙台", "info2": "せんだい", "word": "sendai" }
+  ]
+}
