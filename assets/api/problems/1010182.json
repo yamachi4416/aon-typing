@@ -1,0 +1,42 @@
+{
+  "id": "1010182",
+  "title": "ＪＲ宝塚線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-09-06",
+  "updatedAt": "2022-09-06",
+  "optional": { "cd": "182" },
+  "words": [
+    { "info": "篠山口", "info2": "ささやまぐち", "word": "sasayamaguti" },
+    { "info": "南矢代", "info2": "みなみやしろ", "word": "minamiyasiro" },
+    { "info": "古市", "info2": "ふるいち", "word": "huruiti" },
+    { "info": "草野", "info2": "くさの", "word": "kusano" },
+    { "info": "藍本", "info2": "あいもと", "word": "aimoto" },
+    { "info": "相野", "info2": "あいの", "word": "aino" },
+    { "info": "広野", "info2": "ひろの", "word": "hirono" },
+    { "info": "新三田", "info2": "しんさんだ", "word": "sinsanda" },
+    { "info": "三田", "info2": "さんだ", "word": "sanda" },
+    { "info": "道場", "info2": "どうじょう", "word": "doujou" },
+    { "info": "武田尾", "info2": "たけだお", "word": "takedao" },
+    {
+      "info": "西宮名塩",
+      "info2": "にしのみやなじお",
+      "word": "nisinomiyanajio"
+    },
+    { "info": "生瀬", "info2": "なまぜ", "word": "namaze" },
+    { "info": "宝塚", "info2": "たからづか", "word": "takaraduka" },
+    { "info": "中山寺", "info2": "なかやまでら", "word": "nakayamadera" },
+    { "info": "川西池田", "info2": "かわにしいけだ", "word": "kawanisiikeda" },
+    { "info": "北伊丹", "info2": "きたいたみ", "word": "kitaitami" },
+    { "info": "伊丹", "info2": "いたみ", "word": "itami" },
+    { "info": "猪名寺", "info2": "いなでら", "word": "inadera" },
+    { "info": "塚口", "info2": "つかぐち", "word": "tukaguti" },
+    { "info": "尼崎", "info2": "あまがさき", "word": "amagasaki" },
+    { "info": "塚本", "info2": "つかもと", "word": "tukamoto" },
+    { "info": "大阪", "info2": "おおさか", "word": "oosaka" }
+  ]
+}
