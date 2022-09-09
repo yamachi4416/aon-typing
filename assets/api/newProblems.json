@@ -1,5 +1,19 @@
 [
   {
+    "id": "1010198",
+    "title": "ＪＲ山陽本線(姫路－三原)の駅いちらん",
+    "type": "japanese",
+    "words": 38,
+    "chars": 295,
+    "createdAt": "2022-09-09",
+    "updatedAt": "2022-09-09",
+    "tags": [
+      { "id": "00009", "name": "日本語" },
+      { "id": "00007", "name": "地理" },
+      { "id": "00019", "name": "駅名" }
+    ]
+  },
+  {
     "id": "1010182",
     "title": "ＪＲ宝塚線の駅いちらん",
     "type": "japanese",
@@ -61,20 +75,6 @@
     "type": "japanese",
     "words": 28,
     "chars": 240,
-    "createdAt": "2022-08-28",
-    "updatedAt": "2022-08-28",
-    "tags": [
-      { "id": "00009", "name": "日本語" },
-      { "id": "00007", "name": "地理" },
-      { "id": "00019", "name": "駅名" }
-    ]
-  },
-  {
-    "id": "1010011",
-    "title": "ＪＲ石勝線(南千歳－新得)の駅いちらん",
-    "type": "japanese",
-    "words": 8,
-    "chars": 66,
     "createdAt": "2022-08-28",
     "updatedAt": "2022-08-28",
     "tags": [
