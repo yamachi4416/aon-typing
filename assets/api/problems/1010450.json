@@ -1,0 +1,31 @@
+{
+  "id": "1010450",
+  "title": "津軽鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-09-14",
+  "updatedAt": "2022-09-14",
+  "optional": { "cd": "450" },
+  "words": [
+    { "info": "津軽中里", "info2": "つがるなかさと", "word": "tugarunakasato" },
+    { "info": "深郷田", "info2": "ふこうだ", "word": "hukouda" },
+    { "info": "大沢内", "info2": "おおざわない", "word": "oozawanai" },
+    { "info": "川倉", "info2": "かわくら", "word": "kawakura" },
+    { "info": "芦野公園", "info2": "あしのこうえん", "word": "asinokouenn" },
+    { "info": "金木", "info2": "かなぎ", "word": "kanagi" },
+    { "info": "嘉瀬", "info2": "かせ", "word": "kase" },
+    { "info": "毘沙門", "info2": "びしゃもん", "word": "bisyamonn" },
+    { "info": "津軽飯詰", "info2": "つがるいいづめ", "word": "tugaruiidume" },
+    { "info": "五農校前", "info2": "ごのうこうまえ", "word": "gonoukoumae" },
+    { "info": "十川", "info2": "とがわ", "word": "togawa" },
+    {
+      "info": "津軽五所川原",
+      "info2": "つがるごしょがわら",
+      "word": "tugarugosyogawara"
+    }
+  ]
+}
