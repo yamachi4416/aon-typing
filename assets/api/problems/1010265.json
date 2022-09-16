@@ -1,0 +1,25 @@
+{
+  "id": "1010265",
+  "title": "ＪＲ後藤寺線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-09-17",
+  "updatedAt": "2022-09-17",
+  "optional": { "cd": "265" },
+  "words": [
+    { "info": "新飯塚", "info2": "しんいいづか", "word": "sinniiduka" },
+    { "info": "上三緒", "info2": "かみみお", "word": "kamimio" },
+    { "info": "下鴨生", "info2": "しもかもお", "word": "simokamoo" },
+    {
+      "info": "筑前庄内",
+      "info2": "ちくぜんしょうない",
+      "word": "tikuzensyounai"
+    },
+    { "info": "船尾", "info2": "ふなお", "word": "hunao" },
+    { "info": "田川後藤寺", "info2": "たがわごとうじ", "word": "tagawagotouji" }
+  ]
+}
