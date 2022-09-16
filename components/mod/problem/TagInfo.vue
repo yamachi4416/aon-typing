@@ -20,8 +20,8 @@
         </div>
       </div>
     </div>
-    <template v-if="$slots.right" #right>
-      <slot name="right" />
+    <template #right>
+      <slot v-if="$slots.right" name="right" />
     </template>
   </PartsSection>
 </template>

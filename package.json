@@ -11,11 +11,11 @@
   },
   "devDependencies": {
     "@types/prettier": "^2.6.3",
-    "@types/yargs": "^17.0.10",
+    "@types/yargs": "^17.0.12",
     "jsdom": "^20.0.0",
-    "nuxt": "^3.0.0-rc.4",
+    "nuxt": "^3.0.0-rc.10",
     "prettier": "^2.7.1",
-    "sass": "^1.53.0"
+    "sass": "^1.54.9"
   },
   "dependencies": {
     "vue-gtag-next": "^1.14.0"

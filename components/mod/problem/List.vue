@@ -12,8 +12,8 @@
             class="problem-list-item-item"
             @tag="(tag) => $emit('tag', tag)"
           >
-            <template v-if="$slots.default" #footer>
-              <slot :problem="p" />
+            <template #footer>
+              <slot v-if="$slots.default" :problem="p" />
             </template>
           </ModProblemListItem>
         </PartsSection>
