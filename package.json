@@ -7,15 +7,25 @@
     "preview:dist": "node ./scripts/dist/preview-server.js -d ./dist",
     "generate": "nuxt generate",
     "generate:problem": "node ./scripts/dist/problem.js generate -i ./data/problems -o ./assets/api",
-    "build:scripts": "node scripts/build-scripts.mjs"
+    "build:scripts": "node scripts/build-scripts.mjs",
+    "lint": "eslint --ext .ts,.vue ."
   },
   "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
+    "@types/jsdom": "^20.0.0",
     "@types/prettier": "^2.6.3",
     "@types/yargs": "^17.0.12",
+    "eslint": "^8.23.1",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.1",
     "jsdom": "^20.0.0",
     "nuxt": "^3.0.0-rc.10",
     "prettier": "^2.7.1",
-    "sass": "^1.54.9"
+    "sass": "^1.54.9",
+    "typescript": "^4.8.3"
   },
   "dependencies": {
     "vue-gtag-next": "^1.14.0"

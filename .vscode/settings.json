@@ -1,5 +1,11 @@
 {
   "volar.completion.preferredTagNameCase": "pascal",
   "volar.completion.preferredAttrNameCase": "camel",
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
 }
