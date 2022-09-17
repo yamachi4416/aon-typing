@@ -18,7 +18,7 @@
             <div class="display-zone-info-left">
               <PartsTimeCircle
                 v-if="typing.timeLimit > 0"
-                :totalTime="typing.timeLimit"
+                :total-time="typing.timeLimit"
                 :time="typing.timeUse"
                 :text="
                   typing.timeLimit - typing.timeUse
@@ -42,7 +42,7 @@
                 width="100%"
                 class="display-words-info2"
                 :word="infoState"
-                :charMode="false"
+                :char-mode="false"
               />
               <ModKbdDisplayWords
                 width="100%"
@@ -58,12 +58,12 @@
           </div>
         </div>
         <div class="hands">
-          <ModKbdHandMap :handNumbers="leftHands" />
-          <ModKbdHandMap :handNumbers="rightHands" />
+          <ModKbdHandMap :hand-numbers="leftHands" />
+          <ModKbdHandMap :hand-numbers="rightHands" />
         </div>
         <div class="keyboard-zone">
           <ModKbdTypingKeyboard
-            :typeKey="typeKey"
+            :type-key="typeKey"
             :setting="setting"
             :keys="keys"
           />
@@ -74,60 +74,60 @@
 </template>
 
 <script setup lang="ts">
-import { JISKeys } from "~/libs/JISKeys";
-import { GameSetting, TypingGame } from "~~/libs/TypingGame";
-import { TypingGameWordData } from "~~/libs/TypingGameWordData";
-import { TypingGameWordInfoState } from "~~/libs/TypingGameWordStates";
-import { TypingProblemQuestioner } from "~~/libs/TypingProblemQuestioner";
+import { JISKeys } from '~/libs/JISKeys'
+import { GameSetting, TypingGame } from '~~/libs/TypingGame'
+import { TypingGameWordData } from '~~/libs/TypingGameWordData'
+import { TypingGameWordInfoState } from '~~/libs/TypingGameWordStates'
+import { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
 
 const props = defineProps<{
   typing: Readonly<TypingGame>;
-}>();
+}>()
 
-const keys = new JISKeys();
+const keys = new JISKeys()
 
 const problem = computed(
   () => props.typing.problem ?? ({} as TypingProblemQuestioner)
-);
-const setting = computed(() => problem.value.setting ?? ({} as GameSetting));
+)
+const setting = computed(() => problem.value.setting ?? ({} as GameSetting))
 const current = computed(
   () => props.typing.current ?? ({} as TypingGameWordData)
-);
+)
 const infoState = computed(
   () => current.value.infoState ?? ({} as TypingGameWordInfoState)
-);
+)
 
-const typeKey = computed(() => current.value.wordState?.current ?? "");
-const handNumber = computed(() => keys.getHandIdx(typeKey.value));
+const typeKey = computed(() => current.value.wordState?.current ?? '')
+const handNumber = computed(() => keys.getHandIdx(typeKey.value))
 
 const leftHands = computed(() => [
   handNumber.value,
-  keys.isShiftRightKey(typeKey.value) ? 1 : 0,
-]);
+  keys.isShiftRightKey(typeKey.value) ? 1 : 0
+])
 
 const rightHands = computed(() => [
   handNumber.value - 5,
-  keys.isShiftLeftKey(typeKey.value) ? 5 : 0,
-]);
+  keys.isShiftLeftKey(typeKey.value) ? 5 : 0
+])
 
 const infoClass = computed(() => {
-  const chars = infoState.value.info?.length || 0;
-  const n = [10, 20, 30, 40, 50, 100, 200, 300].find((c) => chars <= c) || 0;
-  const type = problem.value.type ?? "unknown";
-  return { [`chars-${n}`]: true, [type]: true };
-});
+  const chars = infoState.value.info?.length || 0
+  const n = [10, 20, 30, 40, 50, 100, 200, 300].find(c => chars <= c) || 0
+  const type = problem.value.type ?? 'unknown'
+  return { [`chars-${n}`]: true, [type]: true }
+})
 
-onBeforeUnmount(() => props.typing?.dispose());
+onBeforeUnmount(() => props.typing?.dispose())
 
-function cancel() {
-  props.typing.cancel();
+function cancel () {
+  props.typing.cancel()
 }
 
-function pauseToggle() {
+function pauseToggle () {
   if (props.typing.isRunning) {
-    props.typing.pause();
+    props.typing.pause()
   } else if (props.typing.isPausing) {
-    props.typing.resume();
+    props.typing.resume()
   }
 }
 </script>

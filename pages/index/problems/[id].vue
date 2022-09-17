@@ -21,12 +21,12 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute();
-const problemState = useProblems();
-const id = String(route.params.id);
-const detail = await problemState.retrieveProblemDetail({ id });
+const route = useRoute()
+const problemState = useProblems()
+const id = String(route.params.id)
+const detail = await problemState.retrieveProblemDetail({ id })
 
 useHead({
-  title: `問題 No.${id} ${detail.title}`,
-});
+  title: `問題 No.${id} ${detail.title}`
+})
 </script>

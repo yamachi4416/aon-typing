@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-    <div class="background-image"></div>
+    <div class="background-image" />
   </div>
 </template>
 

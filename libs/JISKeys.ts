@@ -1,4 +1,4 @@
-import { Keys } from "~/libs/Keys";
+import { Keys } from '~/libs/Keys'
 
 // prettier-ignore
 const normalKeys = [
@@ -65,54 +65,54 @@ const handMap: Record<string, number> = {
   ' ': 6
 }
 
-const shiftKeySet = new Set(shiftKeys);
-const shiftLeftKeySet = new Set(shiftLeftKeys);
-const shiftRightKeySet = new Set(shiftRightKeys);
+const shiftKeySet = new Set(shiftKeys)
+const shiftLeftKeySet = new Set(shiftLeftKeys)
+const shiftRightKeySet = new Set(shiftRightKeys)
 
 export class JISKeys extends Keys {
-  getLabelByIndex(idx: number, shift: boolean): string {
+  getLabelByIndex (idx: number, shift: boolean): string {
     switch (idx) {
       case 0:
-        return "";
+        return ''
       case 14:
-        return "back\nspace";
+        return 'back\nspace'
       case 15:
-        return "tab";
+        return 'tab'
       case 28:
-        return "enter";
+        return 'enter'
       case 29:
-        return "caps lock";
+        return 'caps lock'
       case 42:
-        return "shiftL";
+        return 'shiftL'
       case 54:
-        return "shiftR";
+        return 'shiftR'
       case 55:
-        return "space";
+        return 'space'
       default:
-        return this.getKeyByIndex(idx, shift);
+        return this.getKeyByIndex(idx, shift)
     }
   }
 
-  getKeyByIndex(idx: number, shift: boolean): string {
+  getKeyByIndex (idx: number, shift: boolean): string {
     if (shift) {
-      return shiftKeys[idx];
+      return shiftKeys[idx]
     }
-    return normalKeys[idx];
+    return normalKeys[idx]
   }
 
-  isShiftKey(key: string): boolean {
-    return shiftKeySet.has(key);
+  isShiftKey (key: string): boolean {
+    return shiftKeySet.has(key)
   }
 
-  isShiftLeftKey(key: string): boolean {
-    return shiftLeftKeySet.has(key);
+  isShiftLeftKey (key: string): boolean {
+    return shiftLeftKeySet.has(key)
   }
 
-  isShiftRightKey(key: string): boolean {
-    return shiftRightKeySet.has(key);
+  isShiftRightKey (key: string): boolean {
+    return shiftRightKeySet.has(key)
   }
 
-  getHandIdx(key: string): number {
-    return handMap[key] || 0;
+  getHandIdx (key: string): number {
+    return handMap[key] || 0
   }
 }

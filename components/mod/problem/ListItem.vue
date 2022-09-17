@@ -18,10 +18,7 @@
         </div>
         <div class="item-main-detail-tags buttons">
           <span v-for="(tag, i) in item.tags" :key="`tag-${item.id}-${i}`">
-            <button
-              class="item-main-detail-tags-item button"
-              @click="$emit('tag', tag)"
-            >
+            <button class="item-main-detail-tags-item button" @click="$emit('tag', tag)">
               {{ tag.name }}
             </button>
           </span>
@@ -35,15 +32,15 @@
 </template>
 
 <script setup lang="ts">
-import { ProblemItemTag, ProblemListItem } from "~/types/problems";
-
-defineEmits<{
-  (e: "tag", tag: ProblemItemTag);
-}>();
+import { ProblemItemTag, ProblemListItem } from '~/types/problems'
 
 defineProps<{
   item: ProblemListItem;
-}>();
+}>()
+
+defineEmits<{
+  (e: 'tag', tag: ProblemItemTag);
+}>()
 </script>
 
 <style lang="scss" scoped>
@@ -55,12 +52,14 @@ defineProps<{
 
   &-header {
     text-align: center;
-    & > h3 {
+
+    &>h3 {
       font-weight: normal;
       font-size: 1em;
       display: flex;
       flex-direction: column;
     }
+
     &-no {
       text-align: left;
       font-size: 0.8em;
@@ -68,6 +67,7 @@ defineProps<{
       top: 8px;
       left: 20px;
     }
+
     &-title {
       flex: 1;
     }
@@ -76,28 +76,35 @@ defineProps<{
   &-main {
     border-top: 1px solid #999;
     flex: 1;
+
     &-detail {
       padding: 5px;
+
       &-row {
         display: flex;
-        & > *:not(label) {
+
+        &>*:not(label) {
           flex: 1;
           text-align: right;
           padding: 5px 15px;
         }
-        & > label {
+
+        &>label {
           flex: 1;
           text-align: left;
           white-space: nowrap;
         }
       }
+
       &-tags {
         flex-wrap: wrap;
         justify-content: flex-start;
         padding: 10px 5px;
-        & > * {
+
+        &>* {
           padding-left: 0;
         }
+
         &-item {
           font-size: 0.8em;
           background: rgba(255, 153, 0, 1);

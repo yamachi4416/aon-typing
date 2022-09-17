@@ -1,5 +1,5 @@
 <template>
-  <div ref="modal" v-if="show" class="modal-panel hide">
+  <div v-if="show" ref="modal" class="modal-panel hide">
     <div class="contents">
       <slot />
     </div>
@@ -7,47 +7,47 @@
 </template>
 
 <script setup lang="ts">
-import { wait } from "~~/libs/Util";
+import { wait } from '~~/libs/Util'
 
-const pending = ref(false);
-const show = ref(false);
-const modal = ref<HTMLElement>();
+const pending = ref(false)
+const show = ref(false)
+const modal = ref<HTMLElement>()
 
 defineExpose({
-  get isOpen() {
-    return show.value;
+  get isOpen () {
+    return show.value
   },
-  get isPending() {
-    return pending.value;
+  get isPending () {
+    return pending.value
   },
-  async open(anim = true) {
-    if (show.value || pending.value) return;
-    pending.value = true;
-    show.value = true;
-    await nextTick();
-    modal.value.classList.remove("hide");
+  async open (anim = true) {
+    if (show.value || pending.value) return
+    pending.value = true
+    show.value = true
+    await nextTick()
+    modal.value.classList.remove('hide')
     if (anim) {
       if (modal.value) {
-        modal.value.classList.add("open");
-        await wait(300);
-        modal.value.classList.remove("open");
+        modal.value.classList.add('open')
+        await wait(300)
+        modal.value.classList.remove('open')
       }
     }
-    pending.value = false;
+    pending.value = false
   },
-  async close(anim = true) {
-    if (!show.value || pending.value) return;
-    pending.value = true;
+  async close (anim = true) {
+    if (!show.value || pending.value) return
+    pending.value = true
     if (anim && modal.value) {
-      modal.value.classList.add("close");
-      await wait(300);
-      modal.value.classList.remove("close");
+      modal.value.classList.add('close')
+      await wait(300)
+      modal.value.classList.remove('close')
     }
-    show.value = false;
-    await nextTick();
-    pending.value = false;
-  },
-});
+    show.value = false
+    await nextTick()
+    pending.value = false
+  }
+})
 </script>
 
 <style lang="scss" scoped>

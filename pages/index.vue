@@ -9,22 +9,22 @@
 <script setup lang="ts">
 useHead({
   bodyAttrs: {
-    class: "scroll-y",
-  },
-});
+    class: 'scroll-y'
+  }
+})
 
 onBeforeUpdate(() => {
-  useScrollWaiter().add();
-});
+  useScrollWaiter().add()
+})
 
 definePageMeta({
   pageTransition: {
     duration: 100,
-    onAfterEnter() {
-      useScrollWaiter().flush();
-    },
-  },
-});
+    onAfterEnter () {
+      useScrollWaiter().flush()
+    }
+  }
+})
 </script>
 
 <style scoped lang="scss">

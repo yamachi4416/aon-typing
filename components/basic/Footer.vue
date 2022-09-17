@@ -3,7 +3,9 @@
     <nav class="basic-footer-nav">
       <ul>
         <li v-for="(menu, i) in menus" :key="`footer-menu-${i}`">
-          <NuxtLink :to="menu.route">{{ menu.label }}</NuxtLink>
+          <NuxtLink :to="menu.route">
+            {{ menu.label }}
+          </NuxtLink>
         </li>
       </ul>
     </nav>
@@ -15,9 +17,9 @@
 
 <script setup lang="ts">
 const menus = [
-  { route: { name: "index-policy" }, label: "サイトポリシー" },
-  { route: { name: "index-contact" }, label: "お問い合わせ" },
-];
+  { route: { name: 'index-policy' }, label: 'サイトポリシー' },
+  { route: { name: 'index-contact' }, label: 'お問い合わせ' }
+]
 </script>
 
 <style lang="scss" scoped>

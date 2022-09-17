@@ -1,30 +1,30 @@
-function dispTime(time: number) {
-  const t = Math.floor(time / 10);
-  const m = Math.floor(t / 100 / 60);
-  const s = Math.floor((t / 100) % 60);
-  const ss = ("0" + (t % 100)).slice(-2);
+function dispTime (time: number) {
+  const t = Math.floor(time / 10)
+  const m = Math.floor(t / 100 / 60)
+  const s = Math.floor((t / 100) % 60)
+  const ss = ('0' + String(t % 100)).slice(-2)
   if (m > 0) {
-    return `${m} 分 ${s} 秒 ${ss}`;
+    return `${m} 分 ${s} 秒 ${ss}`
   }
-  return `${s} 秒 ${ss}`;
+  return `${s} 秒 ${ss}`
 }
 
-function percent(value: number, length = 1) {
+function percent (value: number, length = 1) {
   if (value == null) {
-    return "";
+    return ''
   }
-  const n = Number(value) * 100;
-  const m = Math.pow(10, length);
-  return Math.round(n * m) / m;
+  const n = Number(value) * 100
+  const m = Math.pow(10, length)
+  return Math.round(n * m) / m
 }
 
-export default defineNuxtPlugin((ctx) => {
+export default defineNuxtPlugin((_) => {
   return {
     provide: {
       filters: {
         dispTime,
-        percent,
-      },
-    },
-  };
-});
+        percent
+      }
+    }
+  }
+})

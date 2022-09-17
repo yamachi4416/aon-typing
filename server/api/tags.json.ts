@@ -1,6 +1,6 @@
-import { default as data } from "~/assets/api/tags.json";
-import { ProblemTagSummary } from "~~/types/problems";
+import data from '~/assets/api/tags.json'
+import { ProblemTagSummary } from '~~/types/problems'
 
-export default defineEventHandler((event) => {
-  return data as Record<string, ProblemTagSummary>;
-});
+export default defineEventHandler(() => {
+  return data as Record<string, ProblemTagSummary>
+})

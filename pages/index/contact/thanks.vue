@@ -11,14 +11,14 @@
 
 <script setup lang="ts">
 useHead({
-  title: "お問い合わせありがとうございます",
-  meta: [{ name: "robots", content: "noindex" }],
-});
+  title: 'お問い合わせありがとうございます',
+  meta: [{ name: 'robots', content: 'noindex' }]
+})
 
 onBeforeMount(() => {
-  console.log(useContact().contact);
+  console.log(useContact().contact)
   if (!useContact().contact?.confirm) {
-    useNavigator().backOrIndex();
+    useNavigator().backOrIndex()
   }
-});
+})
 </script>

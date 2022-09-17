@@ -19,27 +19,27 @@ const props = withDefaults(
     time?: number;
   }>(),
   {
-    time: 0,
+    time: 0
   }
-);
+)
 
 defineEmits<{
-  (e: "click");
-}>();
+  (e: 'click');
+}>()
 
 const minute = computed(() => {
-  const t = Math.floor(props.time / 1000);
-  const m = Math.floor(t / 60);
-  return String(m).padStart(2, "0");
-});
+  const t = Math.floor(props.time / 1000)
+  const m = Math.floor(t / 60)
+  return String(m).padStart(2, '0')
+})
 
 const second = computed(() => {
-  const t = Math.floor(props.time / 1000);
-  const s = Math.floor(t % 60);
-  return String(s).padStart(2, "0");
-});
+  const t = Math.floor(props.time / 1000)
+  const s = Math.floor(t % 60)
+  return String(s).padStart(2, '0')
+})
 
-const dispTime = computed(() => `${minute.value}:${second.value}`);
+const dispTime = computed(() => `${minute.value}:${second.value}`)
 </script>
 
 <style lang="scss" scoped>

@@ -1,5 +1,5 @@
-import { navigator } from "~/plugins/Navigator";
+import { navigator } from '~/plugins/Navigator'
 
-export function useNavigator() {
-  return readonly(navigator);
+export function useNavigator () {
+  return readonly(navigator)
 }

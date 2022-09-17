@@ -1,15 +1,13 @@
 <template>
   <div class="word-words">
     <div class="word-words-info">
-      <span class="word-words-info-left">{{ leftWord }}</span
-      ><span class="word-words-info-current">{{ currentWord }}</span
-      ><span class="word-words-info-right">{{ rightWord }}</span>
+      <span class="word-words-info-left">{{ leftWord }}</span><span class="word-words-info-current">{{ currentWord }}</span><span class="word-words-info-right">{{ rightWord }}</span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { TypingGameWordState } from "~/libs/TypingGameWordStates";
+import { TypingGameWordState } from '~/libs/TypingGameWordStates'
 
 const props = withDefaults(
   defineProps<{
@@ -18,30 +16,30 @@ const props = withDefaults(
   }>(),
   {
     word: () => null,
-    charMode: true,
+    charMode: true
   }
-);
+)
 
 const leftWord = computed(() => {
   if (!props.word) {
-    return "";
+    return ''
   }
-  return props.charMode ? props.word.left : props.word.leftWord;
-});
+  return props.charMode ? props.word.left : props.word.leftWord
+})
 
 const rightWord = computed(() => {
   if (!props.word) {
-    return "";
+    return ''
   }
-  return props.charMode ? props.word.right : props.word.rightWord;
-});
+  return props.charMode ? props.word.right : props.word.rightWord
+})
 
 const currentWord = computed(() => {
   if (!props.word) {
-    return "";
+    return ''
   }
-  return props.charMode ? props.word.current : props.word.currentWord;
-});
+  return props.charMode ? props.word.current : props.word.currentWord
+})
 </script>
 
 <style lang="scss" scoped>

@@ -15,7 +15,9 @@
         <nav class="basic-header-nav-sub-menu">
           <ul>
             <li v-for="(menu, i) in menus" :key="`menu-${i}`">
-              <NuxtLink :to="menu.route">{{ menu.label }}</NuxtLink>
+              <NuxtLink :to="menu.route">
+                {{ menu.label }}
+              </NuxtLink>
             </li>
           </ul>
         </nav>
@@ -25,69 +27,69 @@
 </template>
 
 <script setup lang="ts">
-import { typeJapaneseCharsMap } from "~/libs/TypingJapaneseChars";
-import { wait } from "~/libs/Util";
+import { typeJapaneseCharsMap } from '~/libs/TypingJapaneseChars'
+import { wait } from '~/libs/Util'
 
 const props = withDefaults(
   defineProps<{
     anim?: boolean;
   }>(),
   {
-    anim: true,
+    anim: true
   }
-);
+)
 
-const titleText = "あぉ～ん タイピング";
-const startAnim = ref(false);
-const titleChars = ref([] as string[]);
+const titleText = 'あぉ～ん タイピング'
+const startAnim = ref(false)
+const titleChars = ref([] as string[])
 const title = computed(() =>
-  props.anim ? titleChars.value.join("") : titleText
-);
+  props.anim ? titleChars.value.join('') : titleText
+)
 
-onMounted(() => typing(titleText));
+onMounted(() => typing(titleText))
 
-function typing(text: string) {
-  if (!props.anim) return Promise.resolve();
+function typing (text: string) {
+  if (!props.anim) return Promise.resolve()
   return new Promise((resolve) => {
-    const types = typeJapaneseCharsMap(text, null, true).map((v) => ({
+    const types = typeJapaneseCharsMap(text, null, true).map(v => ({
       jc: v.jc,
-      ec: v.ec.split(""),
-    }));
+      ec: v.ec.split('')
+    }))
 
-    const fins = [];
-    const bufs = [];
+    const fins = []
+    const bufs = []
     const type = async () => {
-      startAnim.value = true;
+      startAnim.value = true
 
-      const val = types.shift();
+      const val = types.shift()
       if (val) {
         if (val.ec.length > 1) {
-          types.unshift(val);
+          types.unshift(val)
         }
-        bufs.push(val.ec.shift());
-        titleChars.value = [...fins, ...bufs];
+        bufs.push(val.ec.shift())
+        titleChars.value = [...fins, ...bufs]
         if (val.ec.length === 0) {
-          bufs.splice(0);
-          fins.push(val.jc);
+          bufs.splice(0)
+          fins.push(val.jc)
         }
-        await wait(100);
-        requestAnimationFrame(type);
+        await wait(100)
+        requestAnimationFrame(type)
       } else {
-        titleChars.value = Array.from(text);
-        await wait(300);
-        requestAnimationFrame(resolve);
+        titleChars.value = Array.from(text)
+        await wait(300)
+        requestAnimationFrame(resolve)
       }
-    };
+    }
 
-    requestAnimationFrame(type);
-  });
+    requestAnimationFrame(type)
+  })
 }
 
 const menus = [
-  { route: { name: "game-menu" }, label: "プレイする" },
-  { route: { name: "index-problems" }, label: "問題いちらん" },
-  { route: { name: "index-about" }, label: "サイト説明" },
-];
+  { route: { name: 'game-menu' }, label: 'プレイする' },
+  { route: { name: 'index-problems' }, label: '問題いちらん' },
+  { route: { name: 'index-about' }, label: 'サイト説明' }
+]
 </script>
 
 <style lang="scss" scoped>

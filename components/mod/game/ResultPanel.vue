@@ -1,6 +1,8 @@
 <template>
-  <PartsModalContent v-if="result" class="panel" :showClose="false">
-    <template #title>タイピング結果</template>
+  <PartsModalContent v-if="result" class="panel" :show-close="false">
+    <template #title>
+      タイピング結果
+    </template>
     <div class="info-main">
       <div class="info-main-left">
         <div class="table">
@@ -86,19 +88,19 @@
 </template>
 
 <script setup lang="ts">
-import { TypingGameInfo } from "~/libs/TypingGameInfo";
-import { TypingProblemQuestioner } from "~/libs/TypingProblemQuestioner";
+import { TypingGameInfo } from '~/libs/TypingGameInfo'
+import { TypingProblemQuestioner } from '~/libs/TypingProblemQuestioner'
 
 defineProps<{
   result: TypingGameInfo;
   problem: TypingProblemQuestioner;
-}>();
+}>()
 
 defineEmits<{
-  (e: "retry");
-  (e: "next");
-  (e: "menu");
-}>();
+  (e: 'retry');
+  (e: 'next');
+  (e: 'menu');
+}>()
 </script>
 
 <style lang="scss" scoped>

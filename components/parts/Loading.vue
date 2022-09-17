@@ -23,12 +23,12 @@
 </template>
 
 <script setup lang="ts">
-const anims = ref<SVGAnimateElement[]>();
+const anims = ref<SVGAnimateElement[]>()
 
 onMounted(async () => {
-  await nextTick();
-  await Promise.all(Array.from(anims.value).map((a) => a.beginElement()));
-});
+  await nextTick()
+  await Promise.all(Array.from(anims.value).map(a => a.beginElement()))
+})
 </script>
 
 <style lang="scss" scoped>

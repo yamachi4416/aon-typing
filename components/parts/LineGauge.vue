@@ -21,17 +21,17 @@ const props = withDefaults(
   {
     used: 0,
     width: 1000,
-    height: 5,
+    height: 5
   }
-);
+)
 
 const usedWidth = computed(() => {
   if (props.limit) {
-    return Math.round((props.used / props.limit) * props.width);
+    return Math.round((props.used / props.limit) * props.width)
   } else {
-    return 0;
+    return 0
   }
-});
+})
 </script>
 
 <style lang="scss" scoped>

@@ -18,9 +18,9 @@ withDefaults(
   {
     anim: true,
     showHeader: true,
-    showFooter: true,
+    showFooter: true
   }
-);
+)
 </script>
 
 <style lang="scss" scoped>

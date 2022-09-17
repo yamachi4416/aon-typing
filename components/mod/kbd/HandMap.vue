@@ -22,12 +22,12 @@ const props = withDefaults(
     handNumbers?: number[];
   }>(),
   {
-    handNumbers: () => [],
+    handNumbers: () => []
   }
-);
+)
 
-function hi(k: number) {
-  return props.handNumbers?.some((v, i) => v === k) ?? false;
+function hi (k: number) {
+  return props.handNumbers?.some((v, _i) => v === k) ?? false
 }
 </script>
 

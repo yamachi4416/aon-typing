@@ -21,30 +21,30 @@
 </template>
 
 <script setup lang="ts">
-import CloseCircle from "~/components/parts/CloseCircle.vue";
+import CloseCircle from '~/components/parts/CloseCircle.vue'
 
 withDefaults(
   defineProps<{
     showClose?: boolean;
   }>(),
   {
-    showClose: true,
+    showClose: true
   }
-);
+)
 
 defineEmits<{
-  (e: "close");
-}>();
+  (e: 'close');
+}>()
 
-const content = ref<HTMLElement>();
+const content = ref<HTMLElement>()
 
-function scroll(options: ScrollToOptions) {
-  content.value?.scroll(options);
+function scroll (options: ScrollToOptions) {
+  content.value?.scroll(options)
 }
 
 defineExpose({
-  scroll,
-});
+  scroll
+})
 </script>
 
 <style lang="scss" scoped>

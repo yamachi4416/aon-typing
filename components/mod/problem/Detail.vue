@@ -6,7 +6,9 @@
           <div class="detail-info-id">
             <span>No.{{ detail.id }}</span>
           </div>
-          <h2 class="detail-info-title">{{ detail.title }}</h2>
+          <h2 class="detail-info-title">
+            {{ detail.title }}
+          </h2>
           <div class="detail-info-info">
             <dl>
               <dt>タグ</dt>
@@ -34,9 +36,10 @@
                     v-for="(link, i) in detail.links"
                     :key="`detail-link-${i}`"
                   >
-                    <a :href="link.link" target="_blank"
-                      >{{ link.site }}：{{ link.name }}</a
-                    >
+                    <a
+                      :href="link.link"
+                      target="_blank"
+                    >{{ link.site }}：{{ link.name }}</a>
                   </li>
                 </ul>
               </dd>
@@ -62,9 +65,15 @@
         >
           <PartsSection class="details-item-inner">
             <div class="detail-card">
-              <div class="detail-card-no">No.{{ i + 1 }}</div>
-              <div class="detail-card-info">{{ w.info || w.info2 }}</div>
-              <div class="detail-card-word">{{ w.word }}</div>
+              <div class="detail-card-no">
+                No.{{ i + 1 }}
+              </div>
+              <div class="detail-card-info">
+                {{ w.info || w.info2 }}
+              </div>
+              <div class="detail-card-word">
+                {{ w.word }}
+              </div>
             </div>
           </PartsSection>
         </li>
@@ -74,14 +83,14 @@
 </template>
 
 <script setup lang="ts">
-import { ProblemDetail, ProblemItemTag } from "~/types/problems";
+import { ProblemDetail, ProblemItemTag } from '~/types/problems'
 defineProps<{
   detail: ProblemDetail;
-}>();
+}>()
 
 defineEmits<{
-  (e: "tag", tag: ProblemItemTag);
-}>();
+  (e: 'tag', tag: ProblemItemTag);
+}>()
 </script>
 
 <style lang="scss" scoped>

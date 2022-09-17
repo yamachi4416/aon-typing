@@ -1,22 +1,24 @@
-import { RouterConfig } from "@nuxt/schema";
-import { useScrollWaiter } from "~~/composables/useScrollWaiter";
+import { RouterConfig } from '@nuxt/schema'
+import { useScrollWaiter } from '~~/composables/useScrollWaiter'
 
-export default <RouterConfig>{
-  async scrollBehavior(to, from, savedPosition) {
+const routerConfig: RouterConfig = {
+  async scrollBehavior (to, from, savedPosition) {
     if (to?.name === from?.name && to?.params !== from?.params) {
-      useScrollWaiter().flush();
+      useScrollWaiter().flush()
     }
 
-    const noScroll = await useScrollWaiter().wait();
+    const noScroll = await useScrollWaiter().wait()
 
     if (noScroll) {
-      return false;
+      return false
     }
 
     if (savedPosition) {
-      return savedPosition;
+      return savedPosition
     } else {
-      return { left: 0, top: 0 };
+      return { left: 0, top: 0 }
     }
-  },
-};
+  }
+}
+
+export default routerConfig

@@ -4,6 +4,6 @@
 
 <script setup lang="ts">
 definePageMeta({
-  pageTransition: false,
-});
+  pageTransition: false
+})
 </script>

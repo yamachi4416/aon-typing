@@ -24,95 +24,95 @@
 </template>
 
 <script setup lang="ts">
-import ModalPanel from "~/components/parts/ModalPanel.vue";
-import { TypingGame } from "~/libs/TypingGame";
-import { TypingProblemQuestioner } from "~/libs/TypingProblemQuestioner";
-import { countDown } from "~/libs/Util";
+import ModalPanel from '~/components/parts/ModalPanel.vue'
+import { TypingGame } from '~/libs/TypingGame'
+import { TypingProblemQuestioner } from '~/libs/TypingProblemQuestioner'
+import { countDown } from '~/libs/Util'
 
 const state = reactive({
   typing: new TypingGame(),
   result: null,
   countDown: 0,
   problem: null as TypingProblemQuestioner,
-  isCountDownShow: true,
-});
+  isCountDownShow: true
+})
 
-const id = useRoute().query.id as string;
-const modalGameResult = ref<InstanceType<typeof ModalPanel>>();
+const id = useRoute().query.id as string
+const modalGameResult = ref<InstanceType<typeof ModalPanel>>()
 
 onBeforeMount(() => {
   if (!id) {
-    useRouter().replace({ name: "game-menu" });
+    useRouter().replace({ name: 'game-menu' })
   }
-});
+})
 
 onBeforeUnmount(() => {
-  state.typing?.dispose();
-});
+  state.typing?.dispose()
+})
 
 onMounted(async () => {
-  const problem = await useProblems().lazyProblemDetail({ id });
+  const problem = await useProblems().lazyProblemDetail({ id })
   if (!problem?.id) {
-    useRouter().replace({ name: "game-menu" });
+    useRouter().replace({ name: 'game-menu' })
   } else {
-    useProblems().setting.problemId = id;
+    useProblems().setting.problemId = id
     state.problem = new TypingProblemQuestioner({
       problem,
-      setting: useProblems().setting,
-    });
-    startTyping();
+      setting: useProblems().setting
+    })
+    startTyping()
   }
-});
+})
 
-async function startTyping() {
-  stopTyping();
-  state.typing.init({});
+async function startTyping () {
+  stopTyping()
+  state.typing.init({})
 
-  state.countDown = 3;
-  state.isCountDownShow = true;
+  state.countDown = 3
+  state.isCountDownShow = true
   await countDown(state.countDown, (c: number) => {
-    state.countDown = c;
+    state.countDown = c
     if (c === 0) {
-      state.isCountDownShow = false;
+      state.isCountDownShow = false
     }
-  });
+  })
 
   state.result = await state.typing.start({
     problem: state.problem,
-    setting: useProblems().setting,
-  });
+    setting: useProblems().setting
+  })
 
-  await modalGameResult.value.open();
+  await modalGameResult.value.open()
 }
 
-function stopTyping() {
-  state.result = null;
-  state.countDown = 0;
-  state.isCountDownShow = false;
-  return state.typing.cancel();
+function stopTyping () {
+  state.result = null
+  state.countDown = 0
+  state.isCountDownShow = false
+  return state.typing.cancel()
 }
 
-async function retry() {
-  state.problem.reset();
-  await modalGameResult.value.close();
-  await startTyping();
+async function retry () {
+  state.problem.reset()
+  await modalGameResult.value.close()
+  await startTyping()
 }
 
-async function menu() {
-  state.problem.reset();
-  await modalGameResult.value.close();
-  await useNavigator().backOrGameMenu();
+async function menu () {
+  state.problem.reset()
+  await modalGameResult.value.close()
+  await useNavigator().backOrGameMenu()
 }
 
-async function next() {
-  state.problem.continue();
-  await modalGameResult.value.close();
-  await startTyping();
+async function next () {
+  state.problem.continue()
+  await modalGameResult.value.close()
+  await startTyping()
 }
 
 useHead({
-  title: `タイピング No.${id}`,
-});
+  title: `タイピング No.${id}`
+})
 </script>
 
 <style lang="scss" scoped>

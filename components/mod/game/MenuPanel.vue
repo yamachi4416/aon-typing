@@ -1,10 +1,12 @@
 <template>
   <PartsModalContent
     class="typing-menu-panel"
-    :showClose="false"
+    :show-close="false"
     @close="emit('close')"
   >
-    <template #title>タイピングメニュー</template>
+    <template #title>
+      タイピングメニュー
+    </template>
     <div class="typing-menu-panel-content">
       <div class="typing-menu-panel-content-row">
         <label>制限時間</label>
@@ -135,52 +137,52 @@
 </template>
 
 <script setup lang="ts">
-import { helpAnimals } from "~/libs/TypingGameInfo";
+import { helpAnimals } from '~/libs/TypingGameInfo'
 
 const emit = defineEmits<{
-  (e: "openProblemSelect");
-  (e: "start");
-  (e: "cancel");
-  (e: "close");
-}>();
+  (e: 'openProblemSelect');
+  (e: 'start');
+  (e: 'cancel');
+  (e: 'close');
+}>()
 
-const problemState = useProblems();
-const setting = computed(() => problemState.setting);
+const problemState = useProblems()
+const setting = computed(() => problemState.setting)
 const problem = computed(() => {
-  const id = setting.value.problemId;
-  return problemState.problems.find((p) => p.id === id);
-});
+  const id = setting.value.problemId
+  return problemState.problems.find(p => p.id === id)
+})
 
 const HelpAnimals = [
   {
-    name: "オフ",
-    speed: 0,
+    name: 'オフ',
+    speed: 0
   },
   ...helpAnimals().map(({ start, end, name }) => {
-    const avg = Math.round(start + (end - start) / 2);
+    const avg = Math.round(start + (end - start) / 2)
     return {
       name,
-      speed: Math.round(60000 / avg),
-    };
-  }),
-];
+      speed: Math.round(60000 / avg)
+    }
+  })
+]
 
-const goalCharCounts = [0, 100, 250, 450, 700, 1000];
+const goalCharCounts = [0, 100, 250, 450, 700, 1000]
 
-function openProblemSelect() {
-  emit("openProblemSelect");
+function openProblemSelect () {
+  emit('openProblemSelect')
 }
 
-function randomProblemSelect() {
-  const problems = problemState.problems ?? [];
-  const length = problems.length;
+function randomProblemSelect () {
+  const problems = problemState.problems ?? []
+  const length = problems.length
   if (length > 0) {
-    const idx = Math.floor(Math.random() * length);
-    const problemId = problems[idx].id;
+    const idx = Math.floor(Math.random() * length)
+    const problemId = problems[idx].id
     if (setting.value.problemId !== problemId) {
-      setting.value.problemId = problemId;
+      setting.value.problemId = problemId
     } else if (length > 1) {
-      randomProblemSelect();
+      randomProblemSelect()
     }
   }
 }

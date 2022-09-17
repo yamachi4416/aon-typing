@@ -24,39 +24,39 @@ const props = withDefaults(
     recordCount: number;
   }>(),
   {
-    pageSize: 30,
+    pageSize: 30
   }
-);
+)
 
 const emit = defineEmits<{
-  (e: "select", page: number);
-}>();
+  (e: 'select', page: number);
+}>()
 
 const editPage = computed({
-  get() {
-    return props.page;
+  get () {
+    return props.page
   },
-  set(value) {
-    selectPage(value);
-  },
-});
-
-const lastPage = computed(() => Math.ceil(props.recordCount / props.pageSize));
-const pages = computed(() => [...Array(lastPage.value)].map((_, i) => i + 1));
-const dispPages = computed(() => {
-  const lp = lastPage.value;
-  const cp = props.page;
-  let wp = [cp - 1, cp, cp + 1];
-  if (cp <= 2) {
-    wp = [2, 3, 4];
-  } else if (lp - 1 <= cp) {
-    wp = [lp - 3, lp - 2, lp - 1];
+  set (value) {
+    selectPage(value)
   }
-  return new Set([1, ...wp, lp].filter(p => 1 <= p && p <= lp));
-});
+})
 
-function selectPage(page: number) {
-  emit("select", page);
+const lastPage = computed(() => Math.ceil(props.recordCount / props.pageSize))
+const pages = computed(() => [...Array(lastPage.value)].map((_, i) => i + 1))
+const dispPages = computed(() => {
+  const lp = lastPage.value
+  const cp = props.page
+  let wp = [cp - 1, cp, cp + 1]
+  if (cp <= 2) {
+    wp = [2, 3, 4]
+  } else if (lp - 1 <= cp) {
+    wp = [lp - 3, lp - 2, lp - 1]
+  }
+  return new Set([1, ...wp, lp].filter(p => p >= 1 && p <= lp))
+})
+
+function selectPage (page: number) {
+  emit('select', page)
 }
 </script>
 

@@ -24,33 +24,33 @@
 </template>
 
 <script setup lang="ts">
-const tags = ref(queryTags());
+const tags = ref(queryTags())
 
 onMounted(() => {
-  tags.value = queryTags();
-});
+  tags.value = queryTags()
+})
 
 const tag = await useProblems().retrieveTag({
-  id: String(useRoute().params.id),
-});
+  id: String(useRoute().params.id)
+})
 
 const problems = computed(() =>
   useProblems().problemTagFilter({
     problems: tag.problems,
     tagId: tag.id,
-    qtags: tags.value,
+    qtags: tags.value
   })
-);
+)
 
 useHead({
-  title: `問題 タグ：${tag.name}`,
-});
+  title: `問題 タグ：${tag.name}`
+})
 
-function queryTags() {
-  return (useRoute().query.tags as string)?.split(",") ?? [];
+function queryTags () {
+  return (useRoute().query.tags as string)?.split(',') ?? []
 }
 
-function changeTags(stags: string[]) {
-  tags.value = stags;
+function changeTags (stags: string[]) {
+  tags.value = stags
 }
 </script>

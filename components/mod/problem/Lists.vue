@@ -18,16 +18,16 @@
     </ModProblemList>
     <PartsPagenate
       :page="page"
-      :pageSize="props.pageSize"
-      :recordCount="pages.count"
+      :page-size="props.pageSize"
+      :record-count="pages.count"
       @select="select"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ProblemItemTag, ProblemListItem } from "~~/types/problems";
-import { pagenate } from "~/libs/Util";
+import { ProblemItemTag, ProblemListItem } from '~~/types/problems'
+import { pagenate } from '~/libs/Util'
 
 const props = withDefaults(
   defineProps<{
@@ -36,44 +36,44 @@ const props = withDefaults(
   }>(),
   {
     problems: () => [],
-    pageSize: 30,
+    pageSize: 30
   }
-);
+)
 
 const emit = defineEmits<{
-  (e: "tag", tag: ProblemItemTag);
-  (e: "detail", p: ProblemListItem);
-  (e: "play", p: ProblemListItem);
-}>();
+  (e: 'tag', tag: ProblemItemTag);
+  (e: 'detail', p: ProblemListItem);
+  (e: 'play', p: ProblemListItem);
+}>()
 
-const route = useRoute();
-const router = useRouter();
+const route = useRoute()
+const router = useRouter()
 
-const path = ref(route.path);
-const page = ref(Number(route.query.page || 1));
+const path = ref(route.path)
+const page = ref(Number(route.query.page || 1))
 const pages = computed(
   () =>
     pagenate({
       items: props.problems,
       page: page.value,
-      pageSize: props.pageSize,
+      pageSize: props.pageSize
     })
-);
+)
 
 watch(
   () => route.query.page,
   (to, from) => {
     if (path.value === route.path && to !== from) {
-      const nextPage = Number(to) || 1;
+      const nextPage = Number(to) || 1
       if (page.value !== nextPage) {
-        page.value = nextPage;
+        page.value = nextPage
       }
     }
   }
-);
+)
 
-function select(p: number) {
-  router.push({ query: { ...route.query, page: String(p) } });
+function select (p: number) {
+  router.push({ query: { ...route.query, page: String(p) } })
 }
 </script>
 

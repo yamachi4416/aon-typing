@@ -95,9 +95,9 @@
 </template>
 
 <script setup lang="ts">
-import { Keys } from "~/libs/Keys";
-import { JISKeys } from "~/libs/JISKeys";
-import KbdKey from "~/components/mod/kbd/JISKeyboardKey.vue";
+import { Keys } from '~/libs/Keys'
+import { JISKeys } from '~/libs/JISKeys'
+import KbdKey from '~/components/mod/kbd/JISKeyboardKey.vue'
 
 const props = withDefaults(
   defineProps<{
@@ -108,60 +108,60 @@ const props = withDefaults(
   {
     typeKey: null,
     setting: () => ({}),
-    keys: () => new JISKeys(),
+    keys: () => new JISKeys()
   }
-);
+)
 
-const shiftKey = ref(false);
-const shift = computed(() => props.keys.isShiftKey(props.typeKey));
+const shiftKey = ref(false)
+const shift = computed(() => props.keys.isShiftKey(props.typeKey))
 const lines = [
   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
   [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
   [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
-  [43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54],
-];
+  [43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54]
+]
 
-function key(n: number) {
-  return props.keys.getLabelByIndex(n, shift.value);
+function key (n: number) {
+  return props.keys.getLabelByIndex(n, shift.value)
 }
 
-function hi(n: number) {
+function hi (n: number) {
   if (!props.typeKey) {
-    return false;
+    return false
   }
 
   switch (n) {
     case 42:
-      return props.keys.isShiftRightKey(props.typeKey);
+      return props.keys.isShiftRightKey(props.typeKey)
     case 54:
-      return props.keys.isShiftLeftKey(props.typeKey);
+      return props.keys.isShiftLeftKey(props.typeKey)
     default:
-      return props.typeKey === props.keys.getKeyByIndex(n, shift.value);
+      return props.typeKey === props.keys.getKeyByIndex(n, shift.value)
   }
 }
 
-function keydown(k: { text: string; index: number }, start: boolean) {
+function keydown (k: { text: string; index: number }, start: boolean) {
   if (props.setting.autoMode) {
-    return;
+    return
   }
 
-  if (k.text === "shiftL" || k.text === "shiftR") {
-    shiftKey.value = start;
-    return;
+  if (k.text === 'shiftL' || k.text === 'shiftR') {
+    shiftKey.value = start
+    return
   }
 
   if (start) {
-    let char = null;
-    if (k.text === "space") {
-      char = " ";
-    } else if (k.text === "enter") {
-      char = "\n";
+    let char = null
+    if (k.text === 'space') {
+      char = ' '
+    } else if (k.text === 'enter') {
+      char = '\n'
     } else {
-      char = props.keys.getKeyByIndex(k.index, shiftKey.value);
+      char = props.keys.getKeyByIndex(k.index, shiftKey.value)
     }
-    const detail = { char };
-    const event = new CustomEvent("c:typing", { detail });
-    window.dispatchEvent(event);
+    const detail = { char }
+    const event = new CustomEvent('c:typing', { detail })
+    window.dispatchEvent(event)
   }
 }
 </script>

@@ -1,8 +1,12 @@
 <template>
   <PartsSection>
     <div class="tag-info">
-      <div class="tag-info-id">No.{{ tag.id }}</div>
-      <h2 class="tag-info-title">タグ：{{ tag.name }}</h2>
+      <div class="tag-info-id">
+        No.{{ tag.id }}
+      </div>
+      <h2 class="tag-info-title">
+        タグ：{{ tag.name }}
+      </h2>
       <div class="tag-info-taglist buttons">
         <span v-for="t in tags" :key="`tag-${t.id}`">
           <button
@@ -27,9 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { TagInfo } from "~/types/problems";
-
-const route = useRoute();
+import { TagInfo } from '~/types/problems'
 
 const props = withDefaults(
   defineProps<{
@@ -38,51 +40,51 @@ const props = withDefaults(
   }>(),
   {
     tag: () => ({} as TagInfo),
-    qtags: () => [],
+    qtags: () => []
   }
-);
+)
 
 const emit = defineEmits<{
-  (e: "tag", tags: string[]);
-}>();
+  (e: 'tag', tags: string[]);
+}>()
 
-const tags = ref(getTags());
+const tags = ref(getTags())
 
-function getTags() {
-  const mp = new Set<string>();
+function getTags () {
+  const mp = new Set<string>()
   return (
     props.tag.problems
-      ?.flatMap((p) => p.tags)
+      ?.flatMap(p => p.tags)
       .filter((tag) => {
         if (tag.id === props.tag.id || mp.has(tag.id)) {
-          return false;
+          return false
         }
-        mp.add(tag.id);
-        return true;
+        mp.add(tag.id)
+        return true
       })
-      .map((tag) => ({
+      .map(tag => ({
         ...tag,
-        selected: false,
+        selected: false
       })) ?? []
-  );
+  )
 }
 
-function selectTag(tag: { selected: boolean }) {
-  tag.selected = !tag.selected;
-  const stags = tags.value.filter((t) => t.selected).map((t) => t.id);
-  useNavigator().replaceQuery({ tags: stags.join(",") });
-  emit("tag", stags);
+function selectTag (tag: { selected: boolean }) {
+  tag.selected = !tag.selected
+  const stags = tags.value.filter(t => t.selected).map(t => t.id)
+  useNavigator().replaceQuery({ tags: stags.join(',') })
+  emit('tag', stags)
 }
 
 watch(
   () => props.qtags,
   (value) => {
-    const stags = new Set(value ?? []);
+    const stags = new Set(value ?? [])
     tags.value.forEach((tag) => {
-      tag.selected = stags.has(tag.id);
-    });
+      tag.selected = stags.has(tag.id)
+    })
   }
-);
+)
 </script>
 
 <style lang="scss" scoped>

@@ -9,20 +9,20 @@
 
 <script setup lang="ts">
 onBeforeMount(() => {
-  setVH();
-  window.addEventListener("resize", setVH);
-});
+  setVH()
+  window.addEventListener('resize', setVH)
+})
 
 onBeforeUnmount(() => {
-  window.removeEventListener("resize", setVH);
-});
+  window.removeEventListener('resize', setVH)
+})
 
-function setVH() {
+function setVH () {
   if (document.body.style.setProperty) {
-    const vh = window.innerHeight;
-    document.body.style.setProperty("--maxvh", `${vh}px`);
+    const vh = window.innerHeight
+    document.body.style.setProperty('--maxvh', `${vh}px`)
   }
 }
 
-await useProblems().retrieveItems();
+await useProblems().retrieveItems()
 </script>

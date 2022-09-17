@@ -12,9 +12,9 @@ withDefaults(
     count?: number;
   }>(),
   {
-    count: 0,
+    count: 0
   }
-);
+)
 </script>
 
 <style lang="scss" scoped>

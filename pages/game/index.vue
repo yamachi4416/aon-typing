@@ -4,8 +4,8 @@
 
 <script setup lang="ts">
 onMounted(() => {
-  if (useRoute().name.toString() !== "game-menu") {
-    useRouter().replace({ name: "game-menu" });
+  if (useRoute().name.toString() !== 'game-menu') {
+    useRouter().replace({ name: 'game-menu' })
   }
-});
+})
 </script>

@@ -8,8 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import { Keys } from "~~/libs/Keys";
-import Keyboard from "~/components/mod/kbd/JISKeyboard.vue";
+import { Keys } from '~~/libs/Keys'
+import Keyboard from '~/components/mod/kbd/JISKeyboard.vue'
 
 withDefaults(
   defineProps<{
@@ -19,8 +19,9 @@ withDefaults(
   }>(),
   {
     typeKey: null,
+    setting: () => ({})
   }
-);
+)
 </script>
 
 <style lang="scss">

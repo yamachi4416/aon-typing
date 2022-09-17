@@ -1,17 +1,9 @@
 <template>
   <div>
     <ol class="problem-list row">
-      <li
-        v-for="p in problems"
-        :key="`problem-${p.id}`"
-        class="problem-list-item col-s-12 col-m-6 col-4"
-      >
+      <li v-for="p in problems" :key="`problem-${p.id}`" class="problem-list-item col-s-12 col-m-6 col-4">
         <PartsSection class="problem-list-item-inner">
-          <ModProblemListItem
-            :item="p"
-            class="problem-list-item-item"
-            @tag="(tag) => $emit('tag', tag)"
-          >
+          <ModProblemListItem :item="p" class="problem-list-item-item" @tag="(tag) => $emit('tag', tag)">
             <template #footer>
               <slot v-if="$slots.default" :problem="p" />
             </template>
@@ -23,20 +15,20 @@
 </template>
 
 <script setup lang="ts">
-import { ProblemItemTag, ProblemListItem } from "~~/types/problems";
+import { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 
 withDefaults(
   defineProps<{
     problems: ProblemListItem[];
   }>(),
   {
-    problems: () => [],
+    problems: () => []
   }
-);
+)
 
 defineEmits<{
-  (e: "tag", tag: ProblemItemTag);
-}>();
+  (e: 'tag', tag: ProblemItemTag);
+}>()
 </script>
 
 <style lang="scss" scoped>
@@ -55,6 +47,7 @@ defineEmits<{
       &:nth-of-type(3n + 1) {
         justify-content: flex-start;
       }
+
       &:nth-of-type(3n) {
         justify-content: flex-end;
       }
@@ -64,6 +57,7 @@ defineEmits<{
       &:nth-of-type(2n + 1) {
         justify-content: flex-start;
       }
+
       &:nth-of-type(2n) {
         justify-content: flex-end;
       }

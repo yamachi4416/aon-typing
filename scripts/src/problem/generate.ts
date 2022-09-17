@@ -1,85 +1,85 @@
-import fs from "node:fs/promises";
-import path from "node:path";
-import jaChars from "~/libs/TypingJapaneseChars";
-import prettier from "prettier";
-import { defineCommand } from "../lib/util";
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import * as prettier from 'prettier'
+import { defineCommand } from '../lib/util'
+import { typeJapaneseChars } from '~/libs/TypingJapaneseChars'
 
-async function listJsonFiles(dir: string) {
-  const files = await fs.readdir(dir, { withFileTypes: true });
+async function listJsonFiles (dir: string) {
+  const files = await fs.readdir(dir, { withFileTypes: true })
   return files
-    .filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
-    .map((entry) => path.resolve(dir, entry.name));
+    .filter(entry => entry.isFile() && entry.name.endsWith('.json'))
+    .map(entry => path.resolve(dir, entry.name))
 }
 
-async function writeJson(file: string, data: any) {
+async function writeJson (file: string, data: any) {
   return await fs.writeFile(
     file,
     prettier.format(JSON.stringify(data), {
-      parser: "json",
+      parser: 'json'
     })
-  );
+  )
 }
 
-async function generateProblemData({
+async function generateProblemData ({
   dataDir,
-  apiDir,
+  apiDir
 }: {
-  dataDir: string;
-  apiDir: string;
+  dataDir: string
+  apiDir: string
 }) {
-  const problemsDist = path.resolve(apiDir, "problems");
-  const problemsFile = path.join(apiDir, "problems.json");
-  const newProblemsFile = path.join(apiDir, "newProblems.json");
-  const tagsFile = path.join(apiDir, "tags.json");
-  const tagsDist = path.resolve(apiDir, "tags");
+  const problemsDist = path.resolve(apiDir, 'problems')
+  const problemsFile = path.join(apiDir, 'problems.json')
+  const newProblemsFile = path.join(apiDir, 'newProblems.json')
+  const tagsFile = path.join(apiDir, 'tags.json')
+  const tagsDist = path.resolve(apiDir, 'tags')
 
-  await fs.rm(problemsDist, { recursive: true }).catch(() => {});
-  await fs.mkdir(problemsDist, { recursive: true });
+  await fs.rm(problemsDist, { recursive: true }).catch(() => {})
+  await fs.mkdir(problemsDist, { recursive: true })
 
   const tags = await fs
-    .readFile(tagsFile, { flag: "r" })
-    .then((buf) => JSON.parse(buf.toString()))
-    .catch(() => ({}));
+    .readFile(tagsFile, { flag: 'r' })
+    .then(buf => JSON.parse(buf.toString()))
+    .catch(() => ({}))
 
-  let tagId = Object.values(tags).length + 1;
+  let tagId = Object.values(tags).length + 1
   Object.values(tags).forEach((m: any) => {
-    m.problems = [];
-  });
+    m.problems = []
+  })
 
   const problems = await Promise.all(
     (
       await listJsonFiles(dataDir)
     ).map(async (p) => {
-      const dataObj = JSON.parse((await fs.readFile(p)).toString());
+      const dataObj = JSON.parse((await fs.readFile(p)).toString())
       const problem = {
-        id: path.basename(p, ".json"),
-        ...dataObj,
-      };
+        id: path.basename(p, '.json'),
+        ...dataObj
+      }
 
-      if (problem.type === "japanese") {
+      if (problem.type === 'japanese') {
         for (const word of problem.words) {
-          word.word = jaChars.typeJapaneseChars(word.info2);
+          word.word = typeJapaneseChars(word.info2)
         }
       }
 
       problem.tags = problem.tags.map((name) => {
         if (!tags[name]) {
           tags[name] = {
-            id: ("" + tagId++).padStart(5, "0"),
-            problems: [],
-          };
+            id: String(tagId++).padStart(5, '0'),
+            problems: []
+          }
         }
 
-        return { id: tags[name].id, name };
-      });
+        return { id: tags[name].id, name }
+      })
 
-      const dist = path.resolve(problemsDist, path.basename(p));
-      await writeJson(dist, problem);
-      problem.stat = await fs.stat(p);
+      const dist = path.resolve(problemsDist, path.basename(p))
+      await writeJson(dist, problem)
+      problem.stat = await fs.stat(p)
 
-      return problem;
+      return problem
     })
-  );
+  )
 
   await writeJson(problemsFile, {
     problems: problems.map((p) => {
@@ -88,38 +88,38 @@ async function generateProblemData({
         title: p.title,
         type: p.type,
         words: p.words.length,
-        chars: p.words.reduce((s, w) => s + w.word.length, 0),
+        chars: p.words.reduce((s: number, w: { word: string }) => s + w.word.length, 0),
         createdAt: p.createdAt,
         updatedAt: p.updatedAt,
-        tags: p.tags || [],
-      };
+        tags: p.tags || []
+      }
 
       problem.tags.forEach((m) => {
-        tags[m.name].problems.push(problem);
-      });
+        tags[m.name].problems.push(problem)
+      })
 
-      return problem;
-    }),
-  });
+      return problem
+    })
+  })
 
-  await fs.rm(tagsDist, { recursive: true }).catch(() => {});
-  await fs.mkdir(tagsDist, { recursive: true });
+  await fs.rm(tagsDist, { recursive: true }).catch(() => {})
+  await fs.mkdir(tagsDist, { recursive: true })
 
   const tagSummary = await Promise.all(
     Object.keys(tags).map(async (tagName) => {
-      const tag = tags[tagName];
-      await writeJson(path.join(tagsDist, `${tag.id}.json`), {
+      const tag = tags[tagName]
+      await writeJson(path.join(tagsDist, `${tag.id as string}.json`), {
         id: tag.id,
         name: tagName,
-        problems: tag.problems,
-      });
+        problems: tag.problems
+      })
       return {
         name: tagName,
         id: tag.id,
-        count: tag.problems.length,
-      };
+        count: tag.problems.length
+      }
     })
-  );
+  )
 
   await writeJson(
     tagsFile,
@@ -128,11 +128,11 @@ async function generateProblemData({
       .reduce(
         (summary, { name, id, count }) => ({
           ...summary,
-          [name]: { id, count },
+          [name]: { id, count }
         }),
         {}
       )
-  );
+  )
 
   await writeJson(
     newProblemsFile,
@@ -144,43 +144,43 @@ async function generateProblemData({
           b.stat.birthtimeMs - a.stat.birthtimeMs
       )
       .slice(0, 6)
-      .map((p) => ({
+      .map(p => ({
         id: p.id,
         title: p.title,
         type: p.type,
         words: p.words.length,
-        chars: p.words.reduce((s, w) => s + w.word.length, 0),
+        chars: p.words.reduce((s: number, w: { word: string }) => s + w.word.length, 0),
         createdAt: p.createdAt,
         updatedAt: p.updatedAt,
-        tags: p.tags || [],
+        tags: p.tags || []
       }))
-  );
+  )
 }
 
 export default defineCommand({
-  command: "generate",
-  describe: "typing problem json sets",
-  builder(yargs) {
+  command: 'generate',
+  describe: 'typing problem json sets',
+  builder (yargs) {
     return yargs
-      .options("data-dir", {
-        alias: "i",
-        type: "string",
-        description: "input data directory",
+      .options('data-dir', {
+        alias: 'i',
+        type: 'string',
+        description: 'input data directory',
         demandOption: true,
-        requiresArg: true,
+        requiresArg: true
       })
-      .options("api-dir", {
-        alias: "o",
-        type: "string",
-        description: "output directory",
+      .options('api-dir', {
+        alias: 'o',
+        type: 'string',
+        description: 'output directory',
         demandOption: true,
-        requiresArg: true,
-      });
+        requiresArg: true
+      })
   },
-  async handler({ dataDir, apiDir }) {
+  async handler ({ dataDir, apiDir }) {
     await generateProblemData({
       dataDir,
-      apiDir,
-    });
-  },
-});
+      apiDir
+    })
+  }
+})
