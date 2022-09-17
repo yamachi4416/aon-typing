@@ -15,6 +15,13 @@ interface TypingEventDetail {
 
 type TypingEvent = CustomEvent<TypingEventDetail>
 
+function isNumber (num: any): num is number {
+  if (num == null) {
+    return false
+  }
+  return typeof num === 'number' && !isNaN(num)
+}
+
 export class GameSetting {
   timeLimit: number = 0
   autoMode: number = 0
@@ -376,13 +383,13 @@ class TimerEntry {
 
   private * ticker () {
     while (true) {
-      if (typeof this.tick === 'number') {
+      if (isNumber(this.tick)) {
         this.time += this.tick
         yield this.tick
         delete this.tick
       }
       const next = this.interval()
-      if (typeof next === 'number') {
+      if (isNumber(this.time) && isNumber(next)) {
         yield Math.max((this.time += next) - Date.now(), 0)
       } else {
         return
@@ -397,14 +404,14 @@ class TimerEntry {
     const fn = () => {
       handler()
       const next = tick.next().value
-      if (typeof next === 'number') {
+      if (isNumber(next)) {
         this.id = window.setTimeout(fn, next)
       }
     }
 
     this.time = Date.now()
     const next = tick.next().value
-    if (typeof next === 'number') {
+    if (isNumber(next)) {
       this.uid = window.setTimeout(fn, next)
       this.id = this.uid
     } else {
@@ -416,7 +423,7 @@ class TimerEntry {
 
   stop () {
     if (this.id) {
-      this.tick = Math.max(this.time - Date.now(), 0)
+      this.tick = Math.max(this.time - Date.now(), 0) || 0
       window.clearTimeout(this.id)
     }
     this.id = undefined
