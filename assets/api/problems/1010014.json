@@ -1,0 +1,20 @@
+{
+  "id": "1010014",
+  "title": "ＪＲ室蘭本線(東室蘭－室蘭)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-09-17",
+  "updatedAt": "2022-09-17",
+  "optional": { "cd": "14" },
+  "words": [
+    { "info": "室蘭", "info2": "むろらん", "word": "murorann" },
+    { "info": "母恋", "info2": "ぼこい", "word": "bokoi" },
+    { "info": "御崎", "info2": "みさき", "word": "misaki" },
+    { "info": "輪西", "info2": "わにし", "word": "wanisi" },
+    { "info": "東室蘭", "info2": "ひがしむろらん", "word": "higasimurorann" }
+  ]
+}
