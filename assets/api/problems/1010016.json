@@ -1,0 +1,27 @@
+{
+  "id": "1010016",
+  "title": "ＪＲ留萌本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-09-18",
+  "updatedAt": "2022-09-18",
+  "optional": { "cd": "16" },
+  "words": [
+    { "info": "留萌", "info2": "るもい", "word": "rumoi" },
+    { "info": "大和田", "info2": "おおわだ", "word": "oowada" },
+    { "info": "藤山", "info2": "ふじやま", "word": "hujiyama" },
+    { "info": "幌糠", "info2": "ほろぬか", "word": "horonuka" },
+    { "info": "峠下", "info2": "とうげした", "word": "tougesita" },
+    { "info": "恵比島", "info2": "えびしま", "word": "ebisima" },
+    { "info": "真布", "info2": "まっぷ", "word": "mappu" },
+    { "info": "石狩沼田", "info2": "いしかりぬまた", "word": "isikarinumata" },
+    { "info": "北秩父別", "info2": "きたちっぷべつ", "word": "kitatippubetu" },
+    { "info": "秩父別", "info2": "ちっぷべつ", "word": "tippubetu" },
+    { "info": "北一已", "info2": "きたいちやん", "word": "kitaitiyann" },
+    { "info": "深川", "info2": "ふかがわ", "word": "hukagawa" }
+  ]
+}
