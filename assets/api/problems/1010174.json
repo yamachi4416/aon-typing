@@ -1,0 +1,38 @@
+{
+  "id": "1010174",
+  "title": "ＪＲ大阪環状線内回りの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-09-23",
+  "updatedAt": "2022-09-23",
+  "optional": { "cd": "174" },
+  "words": [
+    { "info": "天満", "info2": "てんま", "word": "tenma" },
+    { "info": "桜ノ宮", "info2": "さくらのみや", "word": "sakuranomiya" },
+    { "info": "京橋", "info2": "きょうばし", "word": "kyoubasi" },
+    {
+      "info": "大阪城公園",
+      "info2": "おおさかじょうこうえん",
+      "word": "oosakajoukouenn"
+    },
+    { "info": "森ノ宮", "info2": "もりのみや", "word": "morinomiya" },
+    { "info": "玉造", "info2": "たまつくり", "word": "tamatukuri" },
+    { "info": "鶴橋", "info2": "つるはし", "word": "turuhasi" },
+    { "info": "桃谷", "info2": "ももだに", "word": "momodani" },
+    { "info": "寺田町", "info2": "てらだちょう", "word": "teradatyou" },
+    { "info": "天王寺", "info2": "てんのうじ", "word": "tennnouji" },
+    { "info": "新今宮", "info2": "しんいまみや", "word": "sinnimamiya" },
+    { "info": "今宮", "info2": "いまみや", "word": "imamiya" },
+    { "info": "芦原橋", "info2": "あしはらばし", "word": "asiharabasi" },
+    { "info": "大正", "info2": "たいしょう", "word": "taisyou" },
+    { "info": "弁天町", "info2": "べんてんちょう", "word": "bententyou" },
+    { "info": "西九条", "info2": "にしくじょう", "word": "nisikujou" },
+    { "info": "野田", "info2": "のだ", "word": "noda" },
+    { "info": "福島", "info2": "ふくしま", "word": "hukusima" },
+    { "info": "大阪", "info2": "おおさか", "word": "oosaka" }
+  ]
+}
