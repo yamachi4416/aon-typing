@@ -1,0 +1,62 @@
+{
+  "id": "1010191",
+  "title": "ＪＲ山陰本線(益田－下関)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-09-24",
+  "updatedAt": "2022-09-24",
+  "optional": { "cd": "191" },
+  "words": [
+    { "info": "下関", "info2": "しものせき", "word": "simonoseki" },
+    { "info": "幡生", "info2": "はたぶ", "word": "hatabu" },
+    { "info": "綾羅木", "info2": "あやらぎ", "word": "ayaragi" },
+    {
+      "info": "梶栗郷台地",
+      "info2": "かじくりごうだいち",
+      "word": "kajikurigoudaiti"
+    },
+    { "info": "安岡", "info2": "やすおか", "word": "yasuoka" },
+    { "info": "福江", "info2": "ふくえ", "word": "hukue" },
+    { "info": "吉見", "info2": "よしみ", "word": "yosimi" },
+    { "info": "梅ケ峠", "info2": "うめがとう", "word": "umegatou" },
+    { "info": "黒井村", "info2": "くろいむら", "word": "kuroimura" },
+    {
+      "info": "川棚温泉",
+      "info2": "かわたなおんせん",
+      "word": "kawatanaonsenn"
+    },
+    { "info": "小串", "info2": "こぐし", "word": "kogusi" },
+    { "info": "湯玉", "info2": "ゆたま", "word": "yutama" },
+    { "info": "宇賀本郷", "info2": "うかほんごう", "word": "ukahongou" },
+    { "info": "長門二見", "info2": "ながとふたみ", "word": "nagatohutami" },
+    { "info": "滝部", "info2": "たきべ", "word": "takibe" },
+    { "info": "特牛", "info2": "こっとい", "word": "kottoi" },
+    { "info": "阿川", "info2": "あがわ", "word": "agawa" },
+    { "info": "長門粟野", "info2": "ながとあわの", "word": "nagatoawano" },
+    { "info": "伊上", "info2": "いがみ", "word": "igami" },
+    { "info": "人丸", "info2": "ひとまる", "word": "hitomaru" },
+    { "info": "長門古市", "info2": "ながとふるいち", "word": "nagatohuruiti" },
+    { "info": "黄波戸", "info2": "きわど", "word": "kiwado" },
+    { "info": "長門市", "info2": "ながとし", "word": "nagatosi" },
+    { "info": "長門三隅", "info2": "ながとみすみ", "word": "nagatomisumi" },
+    { "info": "飯井", "info2": "いい", "word": "ii" },
+    { "info": "三見", "info2": "さんみ", "word": "sanmi" },
+    { "info": "玉江", "info2": "たまえ", "word": "tamae" },
+    { "info": "萩", "info2": "はぎ", "word": "hagi" },
+    { "info": "東萩", "info2": "ひがしはぎ", "word": "higasihagi" },
+    { "info": "越ケ浜", "info2": "こしがはま", "word": "kosigahama" },
+    { "info": "長門大井", "info2": "ながとおおい", "word": "nagatoooi" },
+    { "info": "奈古", "info2": "なご", "word": "nago" },
+    { "info": "木与", "info2": "きよ", "word": "kiyo" },
+    { "info": "宇田郷", "info2": "うたごう", "word": "utagou" },
+    { "info": "須佐", "info2": "すさ", "word": "susa" },
+    { "info": "江崎", "info2": "えさき", "word": "esaki" },
+    { "info": "飯浦", "info2": "いいのうら", "word": "iinoura" },
+    { "info": "戸田小浜", "info2": "とだこはま", "word": "todakohama" },
+    { "info": "益田", "info2": "ますだ", "word": "masuda" }
+  ]
+}
