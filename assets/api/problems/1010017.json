@@ -1,0 +1,37 @@
+{
+  "id": "1010017",
+  "title": "ＪＲ富良野線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-09-29",
+  "updatedAt": "2022-09-29",
+  "optional": { "cd": "17" },
+  "words": [
+    { "info": "富良野", "info2": "ふらの", "word": "hurano" },
+    { "info": "学田", "info2": "がくでん", "word": "gakudenn" },
+    { "info": "鹿討", "info2": "しかうち", "word": "sikauti" },
+    { "info": "中富良野", "info2": "なかふらの", "word": "nakahurano" },
+    {
+      "info": "ラベンダー畑",
+      "info2": "らべんだーばたけ",
+      "word": "rabenda-batake"
+    },
+    { "info": "西中", "info2": "にしなか", "word": "nisinaka" },
+    { "info": "上富良野", "info2": "かみふらの", "word": "kamihurano" },
+    { "info": "美馬牛", "info2": "びばうし", "word": "bibausi" },
+    { "info": "美瑛", "info2": "びえい", "word": "biei" },
+    { "info": "北美瑛", "info2": "きたびえい", "word": "kitabiei" },
+    { "info": "千代ケ岡", "info2": "ちよがおか", "word": "tiyogaoka" },
+    { "info": "西聖和", "info2": "にしせいわ", "word": "nisiseiwa" },
+    { "info": "西神楽", "info2": "にしかぐら", "word": "nisikagura" },
+    { "info": "西瑞穂", "info2": "にしみずほ", "word": "nisimizuho" },
+    { "info": "西御料", "info2": "にしごりょう", "word": "nisigoryou" },
+    { "info": "緑が丘", "info2": "みどりがおか", "word": "midorigaoka" },
+    { "info": "神楽岡", "info2": "かぐらおか", "word": "kaguraoka" },
+    { "info": "旭川", "info2": "あさひかわ", "word": "asahikawa" }
+  ]
+}
