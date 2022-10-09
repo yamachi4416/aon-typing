@@ -1,0 +1,35 @@
+{
+  "id": "1010208",
+  "title": "ＪＲ境線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-09",
+  "updatedAt": "2022-10-09",
+  "optional": { "cd": "208" },
+  "words": [
+    { "info": "境港", "info2": "さかいみなと", "word": "sakaiminato" },
+    { "info": "馬場崎町", "info2": "ばばさきちょう", "word": "babasakityou" },
+    { "info": "上道", "info2": "あがりみち", "word": "agarimiti" },
+    { "info": "余子", "info2": "あまりこ", "word": "amariko" },
+    { "info": "高松町", "info2": "たかまつちょう", "word": "takamatutyou" },
+    { "info": "中浜", "info2": "なかはま", "word": "nakahama" },
+    { "info": "米子空港", "info2": "よなごくうこう", "word": "yonagokuukou" },
+    { "info": "大篠津町", "info2": "おおしのづちょう", "word": "oosinodutyou" },
+    { "info": "和田浜", "info2": "わだはま", "word": "wadahama" },
+    { "info": "弓ケ浜", "info2": "ゆみがはま", "word": "yumigahama" },
+    { "info": "河崎口", "info2": "かわさきぐち", "word": "kawasakiguti" },
+    {
+      "info": "三本松口",
+      "info2": "さんぼんまつぐち",
+      "word": "sanbonmatuguti"
+    },
+    { "info": "後藤", "info2": "ごとう", "word": "gotou" },
+    { "info": "富士見町", "info2": "ふじみちょう", "word": "hujimityou" },
+    { "info": "博労町", "info2": "ばくろうまち", "word": "bakuroumati" },
+    { "info": "米子", "info2": "よなご", "word": "yonago" }
+  ]
+}

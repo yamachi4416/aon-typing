@@ -1,0 +1,50 @@
+{
+  "id": "1010209",
+  "title": "ＪＲ呉線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-09",
+  "updatedAt": "2022-10-09",
+  "optional": { "cd": "209" },
+  "words": [
+    { "info": "広島", "info2": "ひろしま", "word": "hirosima" },
+    { "info": "天神川", "info2": "てんじんがわ", "word": "tenjingawa" },
+    { "info": "向洋", "info2": "むかいなだ", "word": "mukainada" },
+    { "info": "海田市", "info2": "かいたいち", "word": "kaitaiti" },
+    { "info": "矢野", "info2": "やの", "word": "yano" },
+    { "info": "坂", "info2": "さか", "word": "saka" },
+    { "info": "水尻", "info2": "みずしり", "word": "mizusiri" },
+    { "info": "小屋浦", "info2": "こやうら", "word": "koyaura" },
+    {
+      "info": "呉ポートピア",
+      "info2": "くれぽーとぴあ",
+      "word": "kurepo-topia"
+    },
+    { "info": "天応", "info2": "てんのう", "word": "tennnou" },
+    { "info": "かるが浜", "info2": "かるがはま", "word": "karugahama" },
+    { "info": "吉浦", "info2": "よしうら", "word": "yosiura" },
+    { "info": "川原石", "info2": "かわらいし", "word": "kawaraisi" },
+    { "info": "呉", "info2": "くれ", "word": "kure" },
+    { "info": "安芸阿賀", "info2": "あきあが", "word": "akiaga" },
+    { "info": "新広", "info2": "しんひろ", "word": "sinhiro" },
+    { "info": "広", "info2": "ひろ", "word": "hiro" },
+    { "info": "仁方", "info2": "にがた", "word": "nigata" },
+    { "info": "安芸川尻", "info2": "あきかわじり", "word": "akikawajiri" },
+    { "info": "安登", "info2": "あと", "word": "ato" },
+    { "info": "安浦", "info2": "やすうら", "word": "yasuura" },
+    { "info": "風早", "info2": "かざはや", "word": "kazahaya" },
+    { "info": "安芸津", "info2": "あきつ", "word": "akitu" },
+    { "info": "吉名", "info2": "よしな", "word": "yosina" },
+    { "info": "竹原", "info2": "たけはら", "word": "takehara" },
+    { "info": "大乗", "info2": "おおのり", "word": "oonori" },
+    { "info": "安芸長浜", "info2": "あきながはま", "word": "akinagahama" },
+    { "info": "忠海", "info2": "ただのうみ", "word": "tadanoumi" },
+    { "info": "安芸幸崎", "info2": "あきさいざき", "word": "akisaizaki" },
+    { "info": "須波", "info2": "すなみ", "word": "sunami" },
+    { "info": "三原", "info2": "みはら", "word": "mihara" }
+  ]
+}
