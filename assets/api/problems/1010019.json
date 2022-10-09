@@ -1,0 +1,33 @@
+{
+  "id": "1010019",
+  "title": "ＪＲ花咲線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-09",
+  "updatedAt": "2022-10-09",
+  "optional": { "cd": "19" },
+  "words": [
+    { "info": "根室", "info2": "ねむろ", "word": "nemuro" },
+    { "info": "東根室", "info2": "ひがしねむろ", "word": "higasinemuro" },
+    { "info": "西和田", "info2": "にしわだ", "word": "nisiwada" },
+    { "info": "昆布盛", "info2": "こんぶもり", "word": "konbumori" },
+    { "info": "落石", "info2": "おちいし", "word": "otiisi" },
+    { "info": "別当賀", "info2": "べっとが", "word": "bettoga" },
+    { "info": "厚床", "info2": "あっとこ", "word": "attoko" },
+    { "info": "姉別", "info2": "あねべつ", "word": "anebetu" },
+    { "info": "浜中", "info2": "はまなか", "word": "hamanaka" },
+    { "info": "茶内", "info2": "ちゃない", "word": "tyanai" },
+    { "info": "厚岸", "info2": "あっけし", "word": "akkesi" },
+    { "info": "門静", "info2": "もんしず", "word": "monsizu" },
+    { "info": "尾幌", "info2": "おぼろ", "word": "oboro" },
+    { "info": "上尾幌", "info2": "かみおぼろ", "word": "kamioboro" },
+    { "info": "別保", "info2": "べっぽ", "word": "beppo" },
+    { "info": "武佐", "info2": "むさ", "word": "musa" },
+    { "info": "東釧路", "info2": "ひがしくしろ", "word": "higasikusiro" },
+    { "info": "釧路", "info2": "くしろ", "word": "kusiro" }
+  ]
+}
