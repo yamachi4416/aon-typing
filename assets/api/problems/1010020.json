@@ -1,0 +1,63 @@
+{
+  "id": "1010020",
+  "title": "ＪＲ宗谷本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-10",
+  "updatedAt": "2022-10-10",
+  "optional": { "cd": "20" },
+  "words": [
+    { "info": "稚内", "info2": "わっかない", "word": "wakkanai" },
+    { "info": "南稚内", "info2": "みなみわっかない", "word": "minamiwakkanai" },
+    { "info": "抜海", "info2": "ばっかい", "word": "bakkai" },
+    { "info": "勇知", "info2": "ゆうち", "word": "yuuti" },
+    { "info": "兜沼", "info2": "かぶとぬま", "word": "kabutonuma" },
+    { "info": "豊富", "info2": "とよとみ", "word": "toyotomi" },
+    { "info": "下沼", "info2": "しもぬま", "word": "simonuma" },
+    { "info": "幌延", "info2": "ほろのべ", "word": "horonobe" },
+    { "info": "南幌延", "info2": "みなみほろのべ", "word": "minamihoronobe" },
+    { "info": "雄信内", "info2": "おのっぷない", "word": "onoppunai" },
+    { "info": "糠南", "info2": "ぬかなん", "word": "nukanann" },
+    { "info": "問寒別", "info2": "といかんべつ", "word": "toikanbetu" },
+    { "info": "天塩中川", "info2": "てしおなかがわ", "word": "tesionakagawa" },
+    { "info": "佐久", "info2": "さく", "word": "saku" },
+    { "info": "筬島", "info2": "おさしま", "word": "osasima" },
+    { "info": "音威子府", "info2": "おといねっぷ", "word": "otoineppu" },
+    { "info": "咲来", "info2": "さっくる", "word": "sakkuru" },
+    {
+      "info": "天塩川温泉",
+      "info2": "てしおがわおんせん",
+      "word": "tesiogawaonsenn"
+    },
+    { "info": "恩根内", "info2": "おんねない", "word": "onnnenai" },
+    { "info": "初野", "info2": "はつの", "word": "hatuno" },
+    { "info": "美深", "info2": "びふか", "word": "bihuka" },
+    { "info": "智北", "info2": "ちほく", "word": "tihoku" },
+    { "info": "智恵文", "info2": "ちえぶん", "word": "tiebunn" },
+    { "info": "日進", "info2": "にっしん", "word": "nissinn" },
+    { "info": "名寄", "info2": "なよろ", "word": "nayoro" },
+    { "info": "名寄高校", "info2": "なよろこうこう", "word": "nayorokoukou" },
+    { "info": "風連", "info2": "ふうれん", "word": "huurenn" },
+    { "info": "瑞穂", "info2": "みずほ", "word": "mizuho" },
+    { "info": "多寄", "info2": "たよろ", "word": "tayoro" },
+    { "info": "士別", "info2": "しべつ", "word": "sibetu" },
+    { "info": "剣淵", "info2": "けんぶち", "word": "kenbuti" },
+    { "info": "和寒", "info2": "わっさむ", "word": "wassamu" },
+    { "info": "塩狩", "info2": "しおかり", "word": "siokari" },
+    { "info": "蘭留", "info2": "らんる", "word": "ranru" },
+    { "info": "比布", "info2": "ぴっぷ", "word": "pippu" },
+    { "info": "北永山", "info2": "きたながやま", "word": "kitanagayama" },
+    { "info": "永山", "info2": "ながやま", "word": "nagayama" },
+    { "info": "新旭川", "info2": "しんあさひかわ", "word": "sinnasahikawa" },
+    {
+      "info": "旭川四条",
+      "info2": "あさひかわよじょう",
+      "word": "asahikawayojou"
+    },
+    { "info": "旭川", "info2": "あさひかわ", "word": "asahikawa" }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "1010022",
+  "title": "ＪＲ釧網本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-10",
+  "updatedAt": "2022-10-10",
+  "optional": { "cd": "22" },
+  "words": [
+    { "info": "釧路", "info2": "くしろ", "word": "kusiro" },
+    { "info": "東釧路", "info2": "ひがしくしろ", "word": "higasikusiro" },
+    { "info": "遠矢", "info2": "とおや", "word": "tooya" },
+    { "info": "釧路湿原", "info2": "くしろしつげん", "word": "kusirositugenn" },
+    { "info": "細岡", "info2": "ほそおか", "word": "hosooka" },
+    { "info": "塘路", "info2": "とうろ", "word": "touro" },
+    { "info": "茅沼", "info2": "かやぬま", "word": "kayanuma" },
+    { "info": "標茶", "info2": "しべちゃ", "word": "sibetya" },
+    { "info": "磯分内", "info2": "いそぶんない", "word": "isobunnnai" },
+    { "info": "南弟子屈", "info2": "みなみてしかが", "word": "minamitesikaga" },
+    { "info": "摩周", "info2": "ましゅう", "word": "masyuu" },
+    { "info": "美留和", "info2": "びるわ", "word": "biruwa" },
+    { "info": "川湯温泉", "info2": "かわゆおんせん", "word": "kawayuonsenn" },
+    { "info": "緑", "info2": "みどり", "word": "midori" },
+    { "info": "札弦", "info2": "さっつる", "word": "satturu" },
+    { "info": "清里町", "info2": "きよさとちょう", "word": "kiyosatotyou" },
+    { "info": "中斜里", "info2": "なかしゃり", "word": "nakasyari" },
+    { "info": "知床斜里", "info2": "しれとこしゃり", "word": "siretokosyari" },
+    { "info": "止別", "info2": "やむべつ", "word": "yamubetu" },
+    { "info": "浜小清水", "info2": "はまこしみず", "word": "hamakosimizu" },
+    { "info": "原生花園", "info2": "げんせいかえん", "word": "genseikaenn" },
+    { "info": "北浜", "info2": "きたはま", "word": "kitahama" },
+    { "info": "藻琴", "info2": "もこと", "word": "mokoto" },
+    { "info": "鱒浦", "info2": "ますうら", "word": "masuura" },
+    { "info": "桂台", "info2": "かつらだい", "word": "katuradai" },
+    { "info": "網走", "info2": "あばしり", "word": "abasiri" }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "1010021",
+  "title": "ＪＲ石北本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-10",
+  "updatedAt": "2022-10-10",
+  "optional": { "cd": "21" },
+  "words": [
+    { "info": "網走", "info2": "あばしり", "word": "abasiri" },
+    { "info": "呼人", "info2": "よびと", "word": "yobito" },
+    { "info": "女満別", "info2": "めまんべつ", "word": "memanbetu" },
+    { "info": "西女満別", "info2": "にしめまんべつ", "word": "nisimemanbetu" },
+    { "info": "美幌", "info2": "びほろ", "word": "bihoro" },
+    { "info": "緋牛内", "info2": "ひうしない", "word": "hiusinai" },
+    { "info": "端野", "info2": "たんの", "word": "tannno" },
+    { "info": "愛し野", "info2": "いとしの", "word": "itosino" },
+    { "info": "柏陽", "info2": "はくよう", "word": "hakuyou" },
+    { "info": "北見", "info2": "きたみ", "word": "kitami" },
+    { "info": "西北見", "info2": "にしきたみ", "word": "nisikitami" },
+    { "info": "東相内", "info2": "ひがしあいのない", "word": "higasiainonai" },
+    { "info": "相内", "info2": "あいのない", "word": "ainonai" },
+    { "info": "留辺蘂", "info2": "るべしべ", "word": "rubesibe" },
+    { "info": "西留辺蘂", "info2": "にしるべしべ", "word": "nisirubesibe" },
+    { "info": "生田原", "info2": "いくたはら", "word": "ikutahara" },
+    { "info": "安国", "info2": "やすくに", "word": "yasukuni" },
+    { "info": "遠軽", "info2": "えんがる", "word": "engaru" },
+    { "info": "瀬戸瀬", "info2": "せとせ", "word": "setose" },
+    { "info": "丸瀬布", "info2": "まるせっぷ", "word": "maruseppu" },
+    { "info": "白滝", "info2": "しらたき", "word": "sirataki" },
+    { "info": "上川", "info2": "かみかわ", "word": "kamikawa" },
+    { "info": "安足間", "info2": "あんたろま", "word": "antaroma" },
+    { "info": "愛山", "info2": "あいざん", "word": "aizann" },
+    { "info": "中愛別", "info2": "なかあいべつ", "word": "nakaaibetu" },
+    { "info": "愛別", "info2": "あいべつ", "word": "aibetu" },
+    { "info": "伊香牛", "info2": "いかうし", "word": "ikausi" },
+    { "info": "当麻", "info2": "とうま", "word": "touma" },
+    { "info": "桜岡", "info2": "さくらおか", "word": "sakuraoka" },
+    {
+      "info": "東旭川",
+      "info2": "ひがしあさひかわ",
+      "word": "higasiasahikawa"
+    },
+    { "info": "南永山", "info2": "みなみながやま", "word": "minaminagayama" },
+    { "info": "新旭川", "info2": "しんあさひかわ", "word": "sinnasahikawa" },
+    {
+      "info": "旭川四条",
+      "info2": "あさひかわよじょう",
+      "word": "asahikawayojou"
+    },
+    { "info": "旭川", "info2": "あさひかわ", "word": "asahikawa" }
+  ]
+}
