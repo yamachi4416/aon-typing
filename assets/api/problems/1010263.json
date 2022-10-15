@@ -1,0 +1,21 @@
+{
+  "id": "1010263",
+  "title": "ＪＲ若松線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-15",
+  "updatedAt": "2022-10-15",
+  "optional": { "cd": "263" },
+  "words": [
+    { "info": "折尾", "info2": "おりお", "word": "orio" },
+    { "info": "本城", "info2": "ほんじょう", "word": "honjou" },
+    { "info": "二島", "info2": "ふたじま", "word": "hutajima" },
+    { "info": "奥洞海", "info2": "おくどうかい", "word": "okudoukai" },
+    { "info": "藤ノ木", "info2": "ふじのき", "word": "hujinoki" },
+    { "info": "若松", "info2": "わかまつ", "word": "wakamatu" }
+  ]
+}
