@@ -1,0 +1,35 @@
+{
+  "id": "1010183",
+  "title": "ＪＲ嵯峨野線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-17",
+  "updatedAt": "2022-10-17",
+  "optional": { "cd": "183" },
+  "words": [
+    { "info": "園部", "info2": "そのべ", "word": "sonobe" },
+    { "info": "吉富", "info2": "よしとみ", "word": "yositomi" },
+    { "info": "八木", "info2": "やぎ", "word": "yagi" },
+    { "info": "千代川", "info2": "ちよかわ", "word": "tiyokawa" },
+    { "info": "並河", "info2": "なみかわ", "word": "namikawa" },
+    { "info": "亀岡", "info2": "かめおか", "word": "kameoka" },
+    { "info": "馬堀", "info2": "うまほり", "word": "umahori" },
+    { "info": "保津峡", "info2": "ほづきょう", "word": "hodukyou" },
+    { "info": "嵯峨嵐山", "info2": "さがあらしやま", "word": "sagaarasiyama" },
+    { "info": "太秦", "info2": "うずまさ", "word": "uzumasa" },
+    { "info": "花園", "info2": "はなぞの", "word": "hanazono" },
+    { "info": "円町", "info2": "えんまち", "word": "enmati" },
+    { "info": "二条", "info2": "にじょう", "word": "nijou" },
+    { "info": "丹波口", "info2": "たんばぐち", "word": "tanbaguti" },
+    {
+      "info": "梅小路京都西",
+      "info2": "うめこうじきょうとにし",
+      "word": "umekoujikyoutonisi"
+    },
+    { "info": "京都", "info2": "きょうと", "word": "kyouto" }
+  ]
+}
