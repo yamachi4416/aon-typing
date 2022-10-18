@@ -1,0 +1,67 @@
+{
+  "id": "1010087",
+  "title": "ＪＲ上越線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-18",
+  "updatedAt": "2022-10-18",
+  "optional": { "cd": "87" },
+  "words": [
+    { "info": "長岡", "info2": "ながおか", "word": "nagaoka" },
+    { "info": "宮内", "info2": "みやうち", "word": "miyauti" },
+    { "info": "越後滝谷", "info2": "えちごたきや", "word": "etigotakiya" },
+    { "info": "小千谷", "info2": "おぢや", "word": "odiya" },
+    { "info": "越後川口", "info2": "えちごかわぐち", "word": "etigokawaguti" },
+    { "info": "北堀之内", "info2": "きたほりのうち", "word": "kitahorinouti" },
+    {
+      "info": "越後堀之内",
+      "info2": "えちごほりのうち",
+      "word": "etigohorinouti"
+    },
+    { "info": "小出", "info2": "こいで", "word": "koide" },
+    { "info": "八色", "info2": "やいろ", "word": "yairo" },
+    { "info": "浦佐", "info2": "うらさ", "word": "urasa" },
+    { "info": "五日町", "info2": "いつかまち", "word": "itukamati" },
+    { "info": "六日町", "info2": "むいかまち", "word": "muikamati" },
+    { "info": "塩沢", "info2": "しおざわ", "word": "siozawa" },
+    {
+      "info": "上越国際スキー場前",
+      "info2": "じょうえつこくさいすきーじょうまえ",
+      "word": "jouetukokusaisuki-joumae"
+    },
+    { "info": "大沢", "info2": "おおさわ", "word": "oosawa" },
+    { "info": "石打", "info2": "いしうち", "word": "isiuti" },
+    { "info": "越後湯沢", "info2": "えちごゆざわ", "word": "etigoyuzawa" },
+    {
+      "info": "岩原スキー場前",
+      "info2": "いわっぱらすきーじょうまえ",
+      "word": "iwapparasuki-joumae"
+    },
+    { "info": "越後中里", "info2": "えちごなかざと", "word": "etigonakazato" },
+    { "info": "土樽", "info2": "つちたる", "word": "tutitaru" },
+    { "info": "土合", "info2": "どあい", "word": "doai" },
+    { "info": "湯檜曽", "info2": "ゆびそ", "word": "yubiso" },
+    { "info": "水上", "info2": "みなかみ", "word": "minakami" },
+    { "info": "上牧", "info2": "かみもく", "word": "kamimoku" },
+    { "info": "後閑", "info2": "ごかん", "word": "gokann" },
+    { "info": "沼田", "info2": "ぬまた", "word": "numata" },
+    { "info": "岩本", "info2": "いわもと", "word": "iwamoto" },
+    { "info": "津久田", "info2": "つくだ", "word": "tukuda" },
+    { "info": "敷島", "info2": "しきしま", "word": "sikisima" },
+    { "info": "渋川", "info2": "しぶかわ", "word": "sibukawa" },
+    { "info": "八木原", "info2": "やぎはら", "word": "yagihara" },
+    { "info": "群馬総社", "info2": "ぐんまそうじゃ", "word": "gunmasouja" },
+    { "info": "新前橋", "info2": "しんまえばし", "word": "sinmaebasi" },
+    { "info": "井野", "info2": "いの", "word": "ino" },
+    {
+      "info": "高崎問屋町",
+      "info2": "たかさきとんやまち",
+      "word": "takasakitonyamati"
+    },
+    { "info": "高崎", "info2": "たかさき", "word": "takasaki" }
+  ]
+}
