@@ -1,0 +1,17 @@
+{
+  "id": "1010096",
+  "title": "ＪＲ京葉線(西船橋－南船橋)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-20",
+  "updatedAt": "2022-10-20",
+  "optional": { "cd": "96" },
+  "words": [
+    { "info": "南船橋", "info2": "みなみふなばし", "word": "minamihunabasi" },
+    { "info": "西船橋", "info2": "にしふなばし", "word": "nisihunabasi" }
+  ]
+}

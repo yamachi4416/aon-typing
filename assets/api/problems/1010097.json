@@ -1,0 +1,21 @@
+{
+  "id": "1010097",
+  "title": "ＪＲ京葉線(西船橋－市川塩浜)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-20",
+  "updatedAt": "2022-10-20",
+  "optional": { "cd": "97" },
+  "words": [
+    {
+      "info": "市川塩浜",
+      "info2": "いちかわしおはま",
+      "word": "itikawasiohama"
+    },
+    { "info": "西船橋", "info2": "にしふなばし", "word": "nisihunabasi" }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "1010095",
+  "title": "ＪＲ京葉線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-20",
+  "updatedAt": "2022-10-20",
+  "optional": { "cd": "95" },
+  "words": [
+    { "info": "蘇我", "info2": "そが", "word": "soga" },
+    { "info": "千葉みなと", "info2": "ちばみなと", "word": "tibaminato" },
+    { "info": "稲毛海岸", "info2": "いなげかいがん", "word": "inagekaigann" },
+    { "info": "検見川浜", "info2": "けみがわはま", "word": "kemigawahama" },
+    {
+      "info": "海浜幕張",
+      "info2": "かいひんまくはり",
+      "word": "kaihinmakuhari"
+    },
+    { "info": "新習志野", "info2": "しんならしの", "word": "sinnnarasino" },
+    { "info": "南船橋", "info2": "みなみふなばし", "word": "minamihunabasi" },
+    {
+      "info": "二俣新町",
+      "info2": "ふたまたしんまち",
+      "word": "hutamatasinmati"
+    },
+    {
+      "info": "市川塩浜",
+      "info2": "いちかわしおはま",
+      "word": "itikawasiohama"
+    },
+    { "info": "新浦安", "info2": "しんうらやす", "word": "sinnurayasu" },
+    { "info": "舞浜", "info2": "まいはま", "word": "maihama" },
+    {
+      "info": "葛西臨海公園",
+      "info2": "かさいりんかいこうえん",
+      "word": "kasairinkaikouenn"
+    },
+    { "info": "新木場", "info2": "しんきば", "word": "sinkiba" },
+    { "info": "潮見", "info2": "しおみ", "word": "siomi" },
+    { "info": "越中島", "info2": "えっちゅうじま", "word": "ettyuujima" },
+    { "info": "八丁堀", "info2": "はっちょうぼり", "word": "hattyoubori" },
+    { "info": "東京", "info2": "とうきょう", "word": "toukyou" }
+  ]
+}
