@@ -4,8 +4,8 @@
       <li v-for="p in problems" :key="`problem-${p.id}`" class="problem-list-item col-s-12 col-m-6 col-4">
         <PartsSection class="problem-list-item-inner">
           <ModProblemListItem :item="p" class="problem-list-item-item" @tag="(tag) => $emit('tag', tag)">
-            <template #footer>
-              <slot v-if="$slots.default" :problem="p" />
+            <template #footer v-if="$slots.default">
+              <slot :problem="p" />
             </template>
           </ModProblemListItem>
         </PartsSection>

@@ -52,8 +52,8 @@
           </div>
         </div>
       </div>
-      <template #right>
-        <slot v-if="$slots.right" name="right" />
+      <template #right v-if="$slots.right">
+        <slot name="right" />
       </template>
     </PartsSection>
     <div>

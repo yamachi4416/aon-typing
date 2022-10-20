@@ -10,7 +10,8 @@ useHead({
   titleTemplate: (title: string) => {
     const pageTitle = title ? `${title} | ` : ''
     return `${pageTitle}あぉ～ん タイピング`
-  }
+  },
+  meta: []
 })
 </script>
 
