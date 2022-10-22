@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs'
 import qs from 'node:querystring'
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt/config'
 import { createResolver } from '@nuxt/kit'
 import { NuxtPage } from '@nuxt/schema'
 
@@ -98,5 +98,5 @@ function googleFont () {
     { rel: 'preconnect', href: 'https://fonts.gstatic.com/', crossorigin: '' },
     { rel: 'preload', as: 'style', href: fontUrl },
     { rel: 'stylesheet', href: fontUrl }
-  ]
+  ] as ReturnType<typeof defineNuxtConfig>['app']['head']['link']
 }

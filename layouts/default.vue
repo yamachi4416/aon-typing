@@ -5,16 +5,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-useHead({
-  titleTemplate: (title: string) => {
-    const pageTitle = title ? `${title} | ` : ''
-    return `${pageTitle}あぉ～ん タイピング`
-  },
-  meta: []
-})
-</script>
-
 <style lang="scss" scoped>
 .layout {
   height: 100%;

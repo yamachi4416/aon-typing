@@ -85,6 +85,7 @@ const title = computed(() => {
 
 useHead({
   title: title.value,
+  titleTemplate: title => `${title} | あぉ～ん タイピング`,
   meta: [{ name: 'robots', content: 'noindex' }],
   bodyAttrs: {
     class: 'scroll-y'

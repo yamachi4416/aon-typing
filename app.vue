@@ -17,6 +17,10 @@ onBeforeUnmount(() => {
   window.removeEventListener('resize', setVH)
 })
 
+useHead({
+  titleTemplate: title => `${title ? `${title} | ` : ''}あぉ～ん タイピング`
+})
+
 function setVH () {
   if (document.body.style.setProperty) {
     const vh = window.innerHeight
