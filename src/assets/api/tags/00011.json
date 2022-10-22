@@ -8,8 +8,6 @@
       "type": "japanese",
       "words": 32,
       "chars": 195,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00010", "name": "漢字" },
@@ -22,8 +20,6 @@
       "type": "japanese",
       "words": 30,
       "chars": 363,
-      "createdAt": "2021-09-26",
-      "updatedAt": "2021-09-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00011", "name": "いきもの" }
@@ -35,8 +31,6 @@
       "type": "japanese",
       "words": 17,
       "chars": 226,
-      "createdAt": "2021-09-26",
-      "updatedAt": "2021-09-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00011", "name": "いきもの" }
@@ -48,8 +42,6 @@
       "type": "japanese",
       "words": 30,
       "chars": 411,
-      "createdAt": "2021-09-26",
-      "updatedAt": "2021-09-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00011", "name": "いきもの" }
@@ -61,8 +53,6 @@
       "type": "japanese",
       "words": 33,
       "chars": 543,
-      "createdAt": "2021-09-26",
-      "updatedAt": "2021-09-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00011", "name": "いきもの" }
@@ -74,8 +64,6 @@
       "type": "japanese",
       "words": 39,
       "chars": 550,
-      "createdAt": "2021-09-26",
-      "updatedAt": "2021-09-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00011", "name": "いきもの" }

@@ -12,8 +12,6 @@ export interface ProblemListItem {
   chars: number
   type: ProblemType
   tags: ProblemItemTag[]
-  createdAt: string
-  updatedAt: string
 }
 
 export interface ProblemTagSummary {

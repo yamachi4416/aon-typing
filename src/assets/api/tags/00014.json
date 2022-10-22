@@ -8,8 +8,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 248,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -21,8 +19,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 211,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -34,8 +30,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 208,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -47,8 +41,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 392,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -60,8 +52,6 @@
       "type": "japanese",
       "words": 10,
       "chars": 216,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -73,8 +63,6 @@
       "type": "japanese",
       "words": 11,
       "chars": 167,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -86,8 +74,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 138,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }

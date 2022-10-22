@@ -8,8 +8,6 @@
       "type": "japanese",
       "words": 10,
       "chars": 123,
-      "createdAt": "2021-06-13",
-      "updatedAt": "2021-06-13",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00020", "name": "基本練習" }
@@ -21,8 +19,6 @@
       "type": "japanese",
       "words": 11,
       "chars": 172,
-      "createdAt": "2021-06-13",
-      "updatedAt": "2021-06-13",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00020", "name": "基本練習" }
@@ -34,8 +30,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 236,
-      "createdAt": "2021-06-13",
-      "updatedAt": "2021-06-13",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00020", "name": "基本練習" }
@@ -47,8 +41,6 @@
       "type": "japanese",
       "words": 47,
       "chars": 475,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" }
@@ -60,8 +52,6 @@
       "type": "japanese",
       "words": 22,
       "chars": 177,
-      "createdAt": "2022-08-27",
-      "updatedAt": "2022-08-27",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -74,8 +64,6 @@
       "type": "japanese",
       "words": 23,
       "chars": 192,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" }
@@ -87,8 +75,6 @@
       "type": "japanese",
       "words": 8,
       "chars": 66,
-      "createdAt": "2022-07-08",
-      "updatedAt": "2022-07-08",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -101,8 +87,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 118,
-      "createdAt": "2022-07-08",
-      "updatedAt": "2022-07-08",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -115,8 +99,6 @@
       "type": "japanese",
       "words": 41,
       "chars": 310,
-      "createdAt": "2022-07-08",
-      "updatedAt": "2022-07-08",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -129,8 +111,6 @@
       "type": "japanese",
       "words": 15,
       "chars": 143,
-      "createdAt": "2022-07-09",
-      "updatedAt": "2022-07-09",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -143,8 +123,6 @@
       "type": "japanese",
       "words": 17,
       "chars": 143,
-      "createdAt": "2022-07-09",
-      "updatedAt": "2022-07-09",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -157,8 +135,6 @@
       "type": "japanese",
       "words": 2,
       "chars": 27,
-      "createdAt": "2022-08-27",
-      "updatedAt": "2022-08-27",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -171,8 +147,6 @@
       "type": "japanese",
       "words": 8,
       "chars": 66,
-      "createdAt": "2022-08-28",
-      "updatedAt": "2022-08-28",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -185,8 +159,6 @@
       "type": "japanese",
       "words": 43,
       "chars": 318,
-      "createdAt": "2022-09-17",
-      "updatedAt": "2022-09-17",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -199,8 +171,6 @@
       "type": "japanese",
       "words": 5,
       "chars": 39,
-      "createdAt": "2022-09-17",
-      "updatedAt": "2022-09-17",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -213,8 +183,6 @@
       "type": "japanese",
       "words": 5,
       "chars": 40,
-      "createdAt": "2022-09-18",
-      "updatedAt": "2022-09-18",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -227,8 +195,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 102,
-      "createdAt": "2022-09-18",
-      "updatedAt": "2022-09-18",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -241,8 +207,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 159,
-      "createdAt": "2022-09-29",
-      "updatedAt": "2022-09-29",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -255,8 +219,6 @@
       "type": "japanese",
       "words": 41,
       "chars": 325,
-      "createdAt": "2022-09-29",
-      "updatedAt": "2022-09-29",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -269,8 +231,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 129,
-      "createdAt": "2022-10-09",
-      "updatedAt": "2022-10-09",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -283,8 +243,6 @@
       "type": "japanese",
       "words": 40,
       "chars": 333,
-      "createdAt": "2022-10-10",
-      "updatedAt": "2022-10-10",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -297,8 +255,6 @@
       "type": "japanese",
       "words": 34,
       "chars": 294,
-      "createdAt": "2022-10-10",
-      "updatedAt": "2022-10-10",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -311,8 +267,6 @@
       "type": "japanese",
       "words": 26,
       "chars": 227,
-      "createdAt": "2022-10-10",
-      "updatedAt": "2022-10-10",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -325,8 +279,6 @@
       "type": "japanese",
       "words": 26,
       "chars": 250,
-      "createdAt": "2021-06-13",
-      "updatedAt": "2021-06-13",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -339,8 +291,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 100,
-      "createdAt": "2022-02-06",
-      "updatedAt": "2022-02-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -353,8 +303,6 @@
       "type": "japanese",
       "words": 2,
       "chars": 22,
-      "createdAt": "2022-10-13",
-      "updatedAt": "2022-10-13",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -367,8 +315,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 156,
-      "createdAt": "2022-02-06",
-      "updatedAt": "2022-02-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -381,8 +327,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 132,
-      "createdAt": "2022-02-06",
-      "updatedAt": "2022-02-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -395,8 +339,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 134,
-      "createdAt": "2022-02-06",
-      "updatedAt": "2022-02-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -409,8 +351,6 @@
       "type": "japanese",
       "words": 33,
       "chars": 248,
-      "createdAt": "2022-06-10",
-      "updatedAt": "2022-07-04",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -423,8 +363,6 @@
       "type": "japanese",
       "words": 5,
       "chars": 34,
-      "createdAt": "2022-09-15",
-      "updatedAt": "2022-09-15",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -437,8 +375,6 @@
       "type": "japanese",
       "words": 8,
       "chars": 69,
-      "createdAt": "2022-09-15",
-      "updatedAt": "2022-09-15",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -451,8 +387,6 @@
       "type": "japanese",
       "words": 7,
       "chars": 55,
-      "createdAt": "2022-07-01",
-      "updatedAt": "2022-07-01",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -465,8 +399,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 107,
-      "createdAt": "2022-07-10",
-      "updatedAt": "2022-07-10",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -479,8 +411,6 @@
       "type": "japanese",
       "words": 22,
       "chars": 178,
-      "createdAt": "2022-07-10",
-      "updatedAt": "2022-07-10",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -493,8 +423,6 @@
       "type": "japanese",
       "words": 7,
       "chars": 67,
-      "createdAt": "2022-07-10",
-      "updatedAt": "2022-07-10",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -507,8 +435,6 @@
       "type": "japanese",
       "words": 36,
       "chars": 320,
-      "createdAt": "2022-10-18",
-      "updatedAt": "2022-10-18",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -521,8 +447,6 @@
       "type": "japanese",
       "words": 24,
       "chars": 226,
-      "createdAt": "2022-08-16",
-      "updatedAt": "2022-08-16",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -535,8 +459,6 @@
       "type": "japanese",
       "words": 14,
       "chars": 128,
-      "createdAt": "2022-07-01",
-      "updatedAt": "2022-07-01",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -549,8 +471,6 @@
       "type": "japanese",
       "words": 42,
       "chars": 335,
-      "createdAt": "2022-07-07",
-      "updatedAt": "2022-07-07",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -563,8 +483,6 @@
       "type": "japanese",
       "words": 10,
       "chars": 79,
-      "createdAt": "2022-07-07",
-      "updatedAt": "2022-07-07",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -577,8 +495,6 @@
       "type": "japanese",
       "words": 17,
       "chars": 182,
-      "createdAt": "2022-10-20",
-      "updatedAt": "2022-10-20",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -591,8 +507,6 @@
       "type": "japanese",
       "words": 2,
       "chars": 26,
-      "createdAt": "2022-10-20",
-      "updatedAt": "2022-10-20",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -605,8 +519,6 @@
       "type": "japanese",
       "words": 2,
       "chars": 26,
-      "createdAt": "2022-10-20",
-      "updatedAt": "2022-10-20",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -619,8 +531,6 @@
       "type": "japanese",
       "words": 26,
       "chars": 296,
-      "createdAt": "2022-07-07",
-      "updatedAt": "2022-07-07",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -633,8 +543,6 @@
       "type": "japanese",
       "words": 10,
       "chars": 74,
-      "createdAt": "2022-07-07",
-      "updatedAt": "2022-07-07",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -647,8 +555,6 @@
       "type": "japanese",
       "words": 14,
       "chars": 110,
-      "createdAt": "2022-07-07",
-      "updatedAt": "2022-07-07",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -661,8 +567,6 @@
       "type": "japanese",
       "words": 24,
       "chars": 172,
-      "createdAt": "2022-06-10",
-      "updatedAt": "2022-07-04",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -675,8 +579,6 @@
       "type": "japanese",
       "words": 9,
       "chars": 83,
-      "createdAt": "2022-07-04",
-      "updatedAt": "2022-07-04",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -689,8 +591,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 119,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -703,8 +603,6 @@
       "type": "japanese",
       "words": 11,
       "chars": 97,
-      "createdAt": "2022-07-03",
-      "updatedAt": "2022-07-03",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -717,8 +615,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 121,
-      "createdAt": "2022-07-05",
-      "updatedAt": "2022-07-05",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -731,8 +627,6 @@
       "type": "japanese",
       "words": 19,
       "chars": 152,
-      "createdAt": "2021-08-21",
-      "updatedAt": "2021-08-21",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -745,8 +639,6 @@
       "type": "japanese",
       "words": 69,
       "chars": 563,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -759,8 +651,6 @@
       "type": "japanese",
       "words": 6,
       "chars": 43,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -773,8 +663,6 @@
       "type": "japanese",
       "words": 24,
       "chars": 198,
-      "createdAt": "2021-08-21",
-      "updatedAt": "2021-08-21",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -787,8 +675,6 @@
       "type": "japanese",
       "words": 39,
       "chars": 330,
-      "createdAt": "2022-07-03",
-      "updatedAt": "2022-07-03",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -801,8 +687,6 @@
       "type": "japanese",
       "words": 25,
       "chars": 188,
-      "createdAt": "2022-07-04",
-      "updatedAt": "2022-07-04",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -815,8 +699,6 @@
       "type": "japanese",
       "words": 7,
       "chars": 71,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -829,8 +711,6 @@
       "type": "japanese",
       "words": 30,
       "chars": 236,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2022-07-04",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -843,8 +723,6 @@
       "type": "japanese",
       "words": 30,
       "chars": 236,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2022-07-04",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -857,8 +735,6 @@
       "type": "japanese",
       "words": 36,
       "chars": 304,
-      "createdAt": "2022-06-10",
-      "updatedAt": "2022-06-10",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -871,8 +747,6 @@
       "type": "japanese",
       "words": 19,
       "chars": 155,
-      "createdAt": "2022-07-01",
-      "updatedAt": "2022-07-01",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -885,8 +759,6 @@
       "type": "japanese",
       "words": 21,
       "chars": 153,
-      "createdAt": "2022-07-07",
-      "updatedAt": "2022-07-07",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -899,8 +771,6 @@
       "type": "japanese",
       "words": 10,
       "chars": 82,
-      "createdAt": "2022-07-07",
-      "updatedAt": "2022-07-07",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -913,8 +783,6 @@
       "type": "japanese",
       "words": 3,
       "chars": 25,
-      "createdAt": "2022-07-07",
-      "updatedAt": "2022-07-07",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -927,8 +795,6 @@
       "type": "japanese",
       "words": 26,
       "chars": 240,
-      "createdAt": "2022-07-07",
-      "updatedAt": "2022-07-07",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -941,8 +807,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 97,
-      "createdAt": "2022-07-01",
-      "updatedAt": "2022-07-01",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -955,8 +819,6 @@
       "type": "japanese",
       "words": 35,
       "chars": 282,
-      "createdAt": "2021-06-13",
-      "updatedAt": "2021-06-13",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -969,8 +831,6 @@
       "type": "japanese",
       "words": 40,
       "chars": 297,
-      "createdAt": "2022-10-14",
-      "updatedAt": "2022-10-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -983,8 +843,6 @@
       "type": "japanese",
       "words": 41,
       "chars": 277,
-      "createdAt": "2022-09-11",
-      "updatedAt": "2022-09-11",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -997,8 +855,6 @@
       "type": "japanese",
       "words": 36,
       "chars": 285,
-      "createdAt": "2022-08-18",
-      "updatedAt": "2022-08-18",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1011,8 +867,6 @@
       "type": "japanese",
       "words": 10,
       "chars": 84,
-      "createdAt": "2022-08-19",
-      "updatedAt": "2022-08-19",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1025,8 +879,6 @@
       "type": "japanese",
       "words": 43,
       "chars": 320,
-      "createdAt": "2022-08-21",
-      "updatedAt": "2022-08-21",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1039,8 +891,6 @@
       "type": "japanese",
       "words": 8,
       "chars": 64,
-      "createdAt": "2022-07-11",
-      "updatedAt": "2022-07-11",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1053,8 +903,6 @@
       "type": "japanese",
       "words": 23,
       "chars": 223,
-      "createdAt": "2022-07-02",
-      "updatedAt": "2022-07-02",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1067,8 +915,6 @@
       "type": "japanese",
       "words": 22,
       "chars": 174,
-      "createdAt": "2022-07-14",
-      "updatedAt": "2022-07-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1081,8 +927,6 @@
       "type": "japanese",
       "words": 11,
       "chars": 68,
-      "createdAt": "2022-07-02",
-      "updatedAt": "2022-07-02",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1095,8 +939,6 @@
       "type": "japanese",
       "words": 22,
       "chars": 168,
-      "createdAt": "2022-07-14",
-      "updatedAt": "2022-07-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1109,8 +951,6 @@
       "type": "japanese",
       "words": 21,
       "chars": 167,
-      "createdAt": "2022-07-14",
-      "updatedAt": "2022-07-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1123,8 +963,6 @@
       "type": "japanese",
       "words": 54,
       "chars": 376,
-      "createdAt": "2022-07-14",
-      "updatedAt": "2022-07-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1137,8 +975,6 @@
       "type": "japanese",
       "words": 3,
       "chars": 29,
-      "createdAt": "2022-08-23",
-      "updatedAt": "2022-08-23",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1151,8 +987,6 @@
       "type": "japanese",
       "words": 19,
       "chars": 168,
-      "createdAt": "2022-09-23",
-      "updatedAt": "2022-09-23",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1165,8 +999,6 @@
       "type": "japanese",
       "words": 19,
       "chars": 168,
-      "createdAt": "2022-09-23",
-      "updatedAt": "2022-09-23",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1179,8 +1011,6 @@
       "type": "japanese",
       "words": 17,
       "chars": 148,
-      "createdAt": "2022-08-21",
-      "updatedAt": "2022-08-21",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1193,8 +1023,6 @@
       "type": "japanese",
       "words": 4,
       "chars": 46,
-      "createdAt": "2022-07-19",
-      "updatedAt": "2022-07-19",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1207,8 +1035,6 @@
       "type": "japanese",
       "words": 39,
       "chars": 317,
-      "createdAt": "2022-07-19",
-      "updatedAt": "2022-07-19",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1221,8 +1047,6 @@
       "type": "japanese",
       "words": 30,
       "chars": 244,
-      "createdAt": "2022-10-17",
-      "updatedAt": "2022-10-17",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1235,8 +1059,6 @@
       "type": "japanese",
       "words": 23,
       "chars": 187,
-      "createdAt": "2022-09-06",
-      "updatedAt": "2022-09-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1249,8 +1071,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 128,
-      "createdAt": "2022-10-17",
-      "updatedAt": "2022-10-17",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1263,8 +1083,6 @@
       "type": "japanese",
       "words": 41,
       "chars": 284,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1277,8 +1095,6 @@
       "type": "japanese",
       "words": 68,
       "chars": 474,
-      "createdAt": "2022-09-24",
-      "updatedAt": "2022-09-24",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1291,8 +1107,6 @@
       "type": "japanese",
       "words": 39,
       "chars": 292,
-      "createdAt": "2022-09-24",
-      "updatedAt": "2022-09-24",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1305,8 +1119,6 @@
       "type": "japanese",
       "words": 2,
       "chars": 15,
-      "createdAt": "2022-09-24",
-      "updatedAt": "2022-09-24",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1319,8 +1131,6 @@
       "type": "japanese",
       "words": 38,
       "chars": 295,
-      "createdAt": "2022-09-09",
-      "updatedAt": "2022-09-09",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1333,8 +1143,6 @@
       "type": "japanese",
       "words": 31,
       "chars": 245,
-      "createdAt": "2022-09-23",
-      "updatedAt": "2022-09-23",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1347,8 +1155,6 @@
       "type": "japanese",
       "words": 36,
       "chars": 243,
-      "createdAt": "2022-09-23",
-      "updatedAt": "2022-09-23",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1361,8 +1167,6 @@
       "type": "japanese",
       "words": 38,
       "chars": 258,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00010", "name": "漢字" },
@@ -1375,8 +1179,6 @@
       "type": "japanese",
       "words": 32,
       "chars": 195,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00010", "name": "漢字" },
@@ -1389,8 +1191,6 @@
       "type": "japanese",
       "words": 10,
       "chars": 91,
-      "createdAt": "2022-07-11",
-      "updatedAt": "2022-07-11",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1403,8 +1203,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 159,
-      "createdAt": "2022-10-09",
-      "updatedAt": "2022-10-09",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1417,8 +1215,6 @@
       "type": "japanese",
       "words": 31,
       "chars": 226,
-      "createdAt": "2022-10-09",
-      "updatedAt": "2022-10-09",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1431,8 +1227,6 @@
       "type": "japanese",
       "words": 28,
       "chars": 224,
-      "createdAt": "2022-08-28",
-      "updatedAt": "2022-08-28",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1445,8 +1239,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 133,
-      "createdAt": "2022-10-22",
-      "updatedAt": "2022-10-22",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1459,8 +1251,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 107,
-      "createdAt": "2022-02-06",
-      "updatedAt": "2022-02-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1473,8 +1263,6 @@
       "type": "japanese",
       "words": 28,
       "chars": 240,
-      "createdAt": "2022-08-28",
-      "updatedAt": "2022-08-28",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1487,8 +1275,6 @@
       "type": "japanese",
       "words": 6,
       "chars": 43,
-      "createdAt": "2022-10-15",
-      "updatedAt": "2022-10-15",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1501,8 +1287,6 @@
       "type": "japanese",
       "words": 5,
       "chars": 48,
-      "createdAt": "2022-10-15",
-      "updatedAt": "2022-10-15",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1515,8 +1299,6 @@
       "type": "japanese",
       "words": 6,
       "chars": 58,
-      "createdAt": "2022-09-17",
-      "updatedAt": "2022-09-17",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1529,8 +1311,6 @@
       "type": "japanese",
       "words": 26,
       "chars": 253,
-      "createdAt": "2022-08-11",
-      "updatedAt": "2022-08-11",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1543,8 +1323,6 @@
       "type": "japanese",
       "words": 17,
       "chars": 167,
-      "createdAt": "2022-07-08",
-      "updatedAt": "2022-07-08",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1557,8 +1335,6 @@
       "type": "japanese",
       "words": 47,
       "chars": 458,
-      "createdAt": "2022-07-08",
-      "updatedAt": "2022-07-08",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1571,8 +1347,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 114,
-      "createdAt": "2022-09-14",
-      "updatedAt": "2022-09-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1585,8 +1359,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 118,
-      "createdAt": "2022-07-26",
-      "updatedAt": "2022-07-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1599,8 +1371,6 @@
       "type": "japanese",
       "words": 21,
       "chars": 267,
-      "createdAt": "2022-07-26",
-      "updatedAt": "2022-07-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1613,8 +1383,6 @@
       "type": "japanese",
       "words": 30,
       "chars": 363,
-      "createdAt": "2021-09-26",
-      "updatedAt": "2021-09-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00011", "name": "いきもの" }
@@ -1626,8 +1394,6 @@
       "type": "japanese",
       "words": 17,
       "chars": 226,
-      "createdAt": "2021-09-26",
-      "updatedAt": "2021-09-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00011", "name": "いきもの" }
@@ -1639,8 +1405,6 @@
       "type": "japanese",
       "words": 30,
       "chars": 411,
-      "createdAt": "2021-09-26",
-      "updatedAt": "2021-09-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00011", "name": "いきもの" }
@@ -1652,8 +1416,6 @@
       "type": "japanese",
       "words": 33,
       "chars": 543,
-      "createdAt": "2021-09-26",
-      "updatedAt": "2021-09-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00011", "name": "いきもの" }
@@ -1665,8 +1427,6 @@
       "type": "japanese",
       "words": 39,
       "chars": 550,
-      "createdAt": "2021-09-26",
-      "updatedAt": "2021-09-26",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00011", "name": "いきもの" }
@@ -1678,8 +1438,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 177,
-      "createdAt": "2022-08-27",
-      "updatedAt": "2022-08-27",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1692,8 +1450,6 @@
       "type": "japanese",
       "words": 15,
       "chars": 123,
-      "createdAt": "2022-08-20",
-      "updatedAt": "2022-08-20",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1706,8 +1462,6 @@
       "type": "japanese",
       "words": 17,
       "chars": 157,
-      "createdAt": "2022-08-20",
-      "updatedAt": "2022-08-20",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1720,8 +1474,6 @@
       "type": "japanese",
       "words": 5,
       "chars": 42,
-      "createdAt": "2022-08-27",
-      "updatedAt": "2022-08-27",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1734,8 +1486,6 @@
       "type": "japanese",
       "words": 27,
       "chars": 339,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1748,8 +1498,6 @@
       "type": "japanese",
       "words": 40,
       "chars": 508,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1762,8 +1510,6 @@
       "type": "japanese",
       "words": 29,
       "chars": 375,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1776,8 +1522,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 257,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1790,8 +1534,6 @@
       "type": "japanese",
       "words": 20,
       "chars": 234,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1804,8 +1546,6 @@
       "type": "japanese",
       "words": 15,
       "chars": 178,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1818,8 +1558,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 139,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1832,8 +1570,6 @@
       "type": "japanese",
       "words": 5,
       "chars": 59,
-      "createdAt": "2022-07-06",
-      "updatedAt": "2022-07-06",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1846,8 +1582,6 @@
       "type": "japanese",
       "words": 22,
       "chars": 182,
-      "createdAt": "2022-09-03",
-      "updatedAt": "2022-09-03",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1860,8 +1594,6 @@
       "type": "japanese",
       "words": 42,
       "chars": 323,
-      "createdAt": "2022-09-03",
-      "updatedAt": "2022-09-03",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1874,8 +1606,6 @@
       "type": "japanese",
       "words": 78,
       "chars": 1086,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00010", "name": "漢字" },
@@ -1889,8 +1619,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 84,
-      "createdAt": "2021-08-21",
-      "updatedAt": "2021-08-21",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00021", "name": "国語" },
@@ -1903,8 +1631,6 @@
       "type": "japanese",
       "words": 15,
       "chars": 260,
-      "createdAt": "2021-09-14",
-      "updatedAt": "2021-09-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00021", "name": "国語" }
@@ -1916,8 +1642,6 @@
       "type": "japanese",
       "words": 14,
       "chars": 254,
-      "createdAt": "2021-09-14",
-      "updatedAt": "2021-09-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00021", "name": "国語" }
@@ -1929,8 +1653,6 @@
       "type": "japanese",
       "words": 13,
       "chars": 267,
-      "createdAt": "2021-09-14",
-      "updatedAt": "2021-09-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00021", "name": "国語" }
@@ -1942,8 +1664,6 @@
       "type": "japanese",
       "words": 15,
       "chars": 277,
-      "createdAt": "2021-09-14",
-      "updatedAt": "2021-09-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00021", "name": "国語" }
@@ -1955,8 +1675,6 @@
       "type": "japanese",
       "words": 15,
       "chars": 273,
-      "createdAt": "2021-09-14",
-      "updatedAt": "2021-09-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00021", "name": "国語" }
@@ -1968,8 +1686,6 @@
       "type": "japanese",
       "words": 15,
       "chars": 258,
-      "createdAt": "2021-09-14",
-      "updatedAt": "2021-09-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00021", "name": "国語" }
@@ -1981,8 +1697,6 @@
       "type": "japanese",
       "words": 13,
       "chars": 286,
-      "createdAt": "2021-09-14",
-      "updatedAt": "2021-09-14",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00021", "name": "国語" }
@@ -1994,8 +1708,6 @@
       "type": "japanese",
       "words": 11,
       "chars": 460,
-      "createdAt": "2021-09-04",
-      "updatedAt": "2021-09-04",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00012", "name": "社会" },
@@ -2008,8 +1720,6 @@
       "type": "japanese",
       "words": 11,
       "chars": 448,
-      "createdAt": "2021-09-04",
-      "updatedAt": "2021-09-04",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00012", "name": "社会" },
@@ -2022,8 +1732,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 248,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -2035,8 +1743,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 211,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -2048,8 +1754,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 208,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -2061,8 +1765,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 392,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -2074,8 +1776,6 @@
       "type": "japanese",
       "words": 10,
       "chars": 216,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -2087,8 +1787,6 @@
       "type": "japanese",
       "words": 11,
       "chars": 167,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -2100,8 +1798,6 @@
       "type": "japanese",
       "words": 12,
       "chars": 138,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -2113,8 +1809,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 1271,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2128,8 +1822,6 @@
       "type": "japanese",
       "words": 40,
       "chars": 3365,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2143,8 +1835,6 @@
       "type": "japanese",
       "words": 69,
       "chars": 5046,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2158,8 +1848,6 @@
       "type": "japanese",
       "words": 25,
       "chars": 1733,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2173,8 +1861,6 @@
       "type": "japanese",
       "words": 20,
       "chars": 1356,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2188,8 +1874,6 @@
       "type": "japanese",
       "words": 17,
       "chars": 164,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2203,8 +1887,6 @@
       "type": "japanese",
       "words": 17,
       "chars": 306,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2218,8 +1900,6 @@
       "type": "japanese",
       "words": 36,
       "chars": 1417,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2233,8 +1913,6 @@
       "type": "japanese",
       "words": 29,
       "chars": 1626,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2248,8 +1926,6 @@
       "type": "japanese",
       "words": 11,
       "chars": 152,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2263,8 +1939,6 @@
       "type": "japanese",
       "words": 34,
       "chars": 2374,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2278,8 +1952,6 @@
       "type": "japanese",
       "words": 10,
       "chars": 231,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2293,8 +1965,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 284,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2308,8 +1978,6 @@
       "type": "japanese",
       "words": 9,
       "chars": 163,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2323,8 +1991,6 @@
       "type": "japanese",
       "words": 15,
       "chars": 311,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2338,8 +2004,6 @@
       "type": "japanese",
       "words": 9,
       "chars": 186,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2353,8 +2017,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 154,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2368,8 +2030,6 @@
       "type": "japanese",
       "words": 43,
       "chars": 2941,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2383,8 +2043,6 @@
       "type": "japanese",
       "words": 50,
       "chars": 3972,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2398,8 +2056,6 @@
       "type": "japanese",
       "words": 16,
       "chars": 1110,
-      "createdAt": "2022-06-29",
-      "updatedAt": "2022-06-29",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },
@@ -2413,8 +2069,6 @@
       "type": "japanese",
       "words": 15,
       "chars": 908,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00015", "name": "青空文庫" },

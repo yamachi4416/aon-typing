@@ -89,8 +89,6 @@ async function generateProblemData ({
         type: p.type,
         words: p.words.length,
         chars: p.words.reduce((s: number, w: { word: string }) => s + w.word.length, 0),
-        createdAt: p.createdAt,
-        updatedAt: p.updatedAt,
         tags: p.tags || []
       }
 

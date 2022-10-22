@@ -8,8 +8,6 @@
       "type": "english",
       "words": 34,
       "chars": 242,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00001", "name": "英語" },
         { "id": "00002", "name": "英単語" },
@@ -22,8 +20,6 @@
       "type": "japanese",
       "words": 38,
       "chars": 258,
-      "createdAt": "2021-05-31",
-      "updatedAt": "2021-05-31",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00010", "name": "漢字" },

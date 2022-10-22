@@ -8,8 +8,6 @@
       "type": "japanese",
       "words": 10,
       "chars": 123,
-      "createdAt": "2021-06-13",
-      "updatedAt": "2021-06-13",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00020", "name": "基本練習" }
@@ -21,8 +19,6 @@
       "type": "japanese",
       "words": 11,
       "chars": 172,
-      "createdAt": "2021-06-13",
-      "updatedAt": "2021-06-13",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00020", "name": "基本練習" }
@@ -34,8 +30,6 @@
       "type": "japanese",
       "words": 18,
       "chars": 236,
-      "createdAt": "2021-06-13",
-      "updatedAt": "2021-06-13",
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00020", "name": "基本練習" }
