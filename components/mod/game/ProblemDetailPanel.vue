@@ -8,7 +8,7 @@
       <span>
         <button class="button" @click.self="$emit('back')">もどる</button>
       </span>
-      <span>
+      <span v-if="showSelect">
         <button class="button" @click.self="$emit('select', detail)">
           選択する
         </button>
@@ -30,6 +30,7 @@ defineEmits<{
   (e: 'close');
 }>()
 
+const showSelect = ref(true)
 const problem = ref({} as ProblemListItem)
 const problemDetail = ref(null as ProblemDetail)
 const detail = computed(() => {
@@ -46,11 +47,22 @@ const detail = computed(() => {
   return { ...problem.value, words } as ProblemDetail
 })
 
+async function setProblem (item: ProblemListItem) {
+  problem.value = item
+  problemDetail.value = null
+  problemDetail.value = await useProblems().lazyProblemDetail(item)
+}
+
 defineExpose({
-  async setId (item: ProblemListItem) {
-    problem.value = item
-    problemDetail.value = null
-    problemDetail.value = await useProblems().lazyProblemDetail(item)
+  setDetail ({
+    problem,
+    selectable
+  } : {
+    problem: ProblemListItem,
+    selectable: boolean
+  }) {
+    showSelect.value = selectable
+    setProblem(problem)
   }
 })
 </script>

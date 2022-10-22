@@ -102,7 +102,7 @@
             </div>
             <div>
               <label>タイトル</label>
-              <div>{{ problem?.title }}</div>
+              <div><a @click="emit('detail', problem)">{{ problem?.title }}</a></div>
             </div>
             <div>
               <label>問題数</label>
@@ -138,12 +138,14 @@
 
 <script setup lang="ts">
 import { helpAnimals } from '~/libs/TypingGameInfo'
+import { ProblemListItem } from '~~/types/problems'
 
 const emit = defineEmits<{
   (e: 'openProblemSelect');
   (e: 'start');
   (e: 'cancel');
   (e: 'close');
+  (e: 'detail', problem: ProblemListItem);
 }>()
 
 const problemState = useProblems()
@@ -236,6 +238,15 @@ function randomProblemSelect () {
       font-size: 0.9em;
       label {
         width: 1px;
+      }
+      a {
+        cursor: pointer;
+        color: inherit;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          color: #999;
+        }
       }
     }
   }

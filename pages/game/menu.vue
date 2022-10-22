@@ -4,6 +4,7 @@
       :show-close="false"
       @start="startTyping"
       @cancel="cancel"
+      @detail="openProblemDetail"
       @openProblemSelect="modalProblemList.open()"
     />
   </ModalPanel>
@@ -11,7 +12,7 @@
     <ModGameProblemListPanel
       @close="modalProblemList.close()"
       @select="selcet"
-      @detail="openProblemDetail"
+      @detail="openProblemSelectDetail"
     />
   </ModalPanel>
   <ModalPanel ref="modalProblemDetail">
@@ -78,12 +79,20 @@ async function startTyping () {
   })
 }
 
+async function openProblemSelectDetail (problem: ProblemListItem) {
+  await openProblemDetailShow(problem, true)
+}
+
 async function openProblemDetail (problem: ProblemListItem) {
+  await openProblemDetailShow(problem, false)
+}
+
+async function openProblemDetailShow (problem: ProblemListItem, selectable: boolean) {
   if (hasPendingModal.value) return
   const tasks = []
   tasks.push(modalProblemDetail.value.open())
   await nextTick()
-  tasks.push(problemDetailPanel.value.setId(problem))
+  tasks.push(problemDetailPanel.value.setDetail({ problem, selectable }))
   await Promise.all(tasks)
 }
 
