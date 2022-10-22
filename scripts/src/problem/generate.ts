@@ -3,6 +3,9 @@ import path from 'node:path'
 import * as prettier from 'prettier'
 import { defineCommand } from '../lib/util'
 import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
+import { ProblemDetail, ProblemListItem, ProblemTagSummary, TagInfo } from '~~/types/problems'
+
+type ProblemDetailData = Omit<ProblemDetail, 'tags'> & { tags: string[] }
 
 async function listJsonFiles (dir: string) {
   const files = await fs.readdir(dir, { withFileTypes: true })
@@ -50,10 +53,11 @@ async function generateProblemData ({
     (
       await listJsonFiles(dataDir)
     ).map(async (p) => {
-      const dataObj = JSON.parse((await fs.readFile(p)).toString())
-      const problem = {
+      const dataObj: ProblemDetailData = JSON.parse((await fs.readFile(p)).toString())
+      const problem: ProblemDetail = {
         id: path.basename(p, '.json'),
-        ...dataObj
+        ...dataObj,
+        tags: []
       }
 
       if (problem.type === 'japanese') {
@@ -62,7 +66,7 @@ async function generateProblemData ({
         }
       }
 
-      problem.tags = problem.tags.map((name) => {
+      problem.tags = dataObj.tags.map((name) => {
         if (!tags[name]) {
           tags[name] = {
             id: String(tagId++).padStart(5, '0'),
@@ -75,15 +79,17 @@ async function generateProblemData ({
 
       const dist = path.resolve(problemsDist, path.basename(p))
       await writeJson(dist, problem)
-      problem.stat = await fs.stat(p)
 
-      return problem
+      return {
+        ...problem,
+        birthtime: (await fs.stat(p)).birthtimeMs
+      }
     })
   )
 
   await writeJson(problemsFile, {
     problems: problems.map((p) => {
-      const problem = {
+      const problem: ProblemListItem = {
         id: p.id,
         title: p.title,
         type: p.type,
@@ -103,14 +109,17 @@ async function generateProblemData ({
   await fs.rm(tagsDist, { recursive: true }).catch(() => {})
   await fs.mkdir(tagsDist, { recursive: true })
 
-  const tagSummary = await Promise.all(
+  const tagSummary: ProblemTagSummary[] = await Promise.all(
     Object.keys(tags).map(async (tagName) => {
       const tag = tags[tagName]
-      await writeJson(path.join(tagsDist, `${tag.id as string}.json`), {
+      const tagInfo: TagInfo = {
         id: tag.id,
         name: tagName,
         problems: tag.problems
-      })
+      }
+
+      await writeJson(path.join(tagsDist, `${tag.id as string}.json`), tagInfo)
+
       return {
         name: tagName,
         id: tag.id,
@@ -139,7 +148,7 @@ async function generateProblemData ({
         (a, b) =>
           new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() ||
           new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
-          b.stat.birthtimeMs - a.stat.birthtimeMs
+          b.birthtime - a.birthtime
       )
       .slice(0, 6)
       .map(p => ({

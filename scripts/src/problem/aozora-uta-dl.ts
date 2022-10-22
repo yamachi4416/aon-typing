@@ -4,7 +4,7 @@ import { TextDecoder } from 'node:util'
 import { JSDOM } from 'jsdom'
 import { defineCommand, httpFetch } from '../lib/util'
 import { kana2Hira } from '~~/libs/TypingJapaneseChars'
-import { ProblemDetailWord } from '~/types/problems'
+import { ProblemDetailWord } from '~~/types/problems'
 
 const normalizeMap = {
   一: '１',
@@ -156,8 +156,8 @@ function splitWords (words: ProblemDetailWord[], regex: RegExp, max: number) {
       w = { info, info2 }
       ret.push(w)
     } else {
-      w.info += info
-      w.info2 += info2
+      w.info = `${w.info}${info}`
+      w.info2 = `${w.info2}${info2}`
     }
   }
 
