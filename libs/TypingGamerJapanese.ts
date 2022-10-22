@@ -3,8 +3,8 @@ import {
   typeCharsFindJapaneseChars,
   typeCharsToJapaneseChars,
   typeJapaneseChars
-} from '~/libs/TypingJapaneseChars'
-import { TypingGameWordData } from '~/libs/TypingGameWordData'
+} from './TypingJapaneseChars'
+import { TypingGameWordData } from './TypingGameWordData'
 
 export class TypingGamerJapanese {
   init (word: TypingGameWordData) {

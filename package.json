@@ -6,7 +6,7 @@
     "preview": "nuxt preview",
     "preview:dist": "node ./scripts/dist/preview-server.js -d ./dist",
     "generate": "nuxt generate",
-    "generate:problem": "node ./scripts/dist/problem.js generate -i ./data/problems -o ./assets/api",
+    "generate:problem": "node ./scripts/dist/problem.js generate -i ./data/problems -o ./src/assets/api",
     "build:scripts": "node scripts/build-scripts.mjs",
     "lint": "eslint --ext .ts,.vue ."
   },

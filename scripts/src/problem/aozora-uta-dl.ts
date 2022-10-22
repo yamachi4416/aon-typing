@@ -3,7 +3,7 @@ import path from 'node:path'
 import { TextDecoder } from 'node:util'
 import { JSDOM } from 'jsdom'
 import { defineCommand, httpFetch } from '../lib/util'
-import { kana2Hira } from '~/libs/TypingJapaneseChars'
+import { kana2Hira } from '~~/libs/TypingJapaneseChars'
 import { ProblemDetailWord } from '~/types/problems'
 
 const normalizeMap = {

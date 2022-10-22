@@ -1,4 +1,4 @@
-import { Keys } from '~/libs/Keys'
+import { Keys } from '~~/libs/Keys'
 
 // prettier-ignore
 const normalKeys = [

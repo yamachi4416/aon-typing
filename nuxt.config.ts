@@ -8,11 +8,11 @@ const resolver = createResolver(import.meta.url)
 
 export const routes = (() => {
   const { problems } = JSON.parse(
-    String(readFileSync('./assets/api/problems.json'))
+    String(readFileSync('./src/assets/api/problems.json'))
   ) as { problems: Array<{ id: string }> }
 
   const tags: Array<{ id: string }> = Object.values(
-    JSON.parse(String(readFileSync('./assets/api/tags.json')))
+    JSON.parse(String(readFileSync('./src/assets/api/tags.json')))
   )
 
   return () => [
@@ -40,6 +40,7 @@ export default defineNuxtConfig({
   components: true,
   css: ['~/assets/css/main.scss'],
   ssr: true,
+  srcDir: 'src',
   target: 'static',
 
   app: {
@@ -81,7 +82,7 @@ export default defineNuxtConfig({
       pages.push({
         name: '404',
         path: '/404.html',
-        file: resolver.resolve('error.vue')
+        file: resolver.resolve('src/error.vue')
       })
     }
   }

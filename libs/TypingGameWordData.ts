@@ -1,8 +1,8 @@
-import { ProblemDetailWord } from '~/types/problems'
 import {
   TypingGameWordState,
   TypingGameWordInfoState
-} from '~/libs/TypingGameWordStates'
+} from './TypingGameWordStates'
+import { ProblemDetailWord } from '~~/types/problems'
 
 export class TypingGameWordData {
   index: number

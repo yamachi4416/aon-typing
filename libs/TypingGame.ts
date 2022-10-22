@@ -1,9 +1,9 @@
 import { TypingGameWordData } from './TypingGameWordData'
 import { TypingProblemQuestioner } from './TypingProblemQuestioner'
-import { keyCodeToChar } from '~/libs/Keys'
-import { TypingGameInfo } from '~/libs/TypingGameInfo'
-import { TypingGamerEnglish } from '~/libs/TypingGamerEnglish'
-import { TypingGamerJapanese } from '~/libs/TypingGamerJapanese'
+import { keyCodeToChar } from './Keys'
+import { TypingGameInfo } from './TypingGameInfo'
+import { TypingGamerEnglish } from './TypingGamerEnglish'
+import { TypingGamerJapanese } from './TypingGamerJapanese'
 
 type TypingGamer = TypingGamerEnglish | TypingGamerJapanese
 

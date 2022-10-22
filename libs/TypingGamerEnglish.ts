@@ -1,4 +1,4 @@
-import { TypingGameWordData } from '~/libs/TypingGameWordData'
+import { TypingGameWordData } from './TypingGameWordData'
 
 export class TypingGamerEnglish {
   init (word: TypingGameWordData) {

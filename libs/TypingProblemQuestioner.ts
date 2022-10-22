@@ -1,5 +1,5 @@
-import { TypingGameWordData } from '~/libs/TypingGameWordData'
-import { ProblemDetail } from '~/types/problems'
+import { TypingGameWordData } from './TypingGameWordData'
+import { ProblemDetail } from '~~/types/problems'
 
 const shuffle = (array: any[]) => {
   for (let i = array.length - 1; i > 0; i--) {

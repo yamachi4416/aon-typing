@@ -2,7 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import * as prettier from 'prettier'
 import { defineCommand } from '../lib/util'
-import { typeJapaneseChars } from '~/libs/TypingJapaneseChars'
+import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
 
 async function listJsonFiles (dir: string) {
   const files = await fs.readdir(dir, { withFileTypes: true })
