@@ -2,10 +2,8 @@ import { TypingGameWordData } from './TypingGameWordData'
 import { TypingProblemQuestioner } from './TypingProblemQuestioner'
 import { keyCodeToChar } from './Keys'
 import { TypingGameInfo } from './TypingGameInfo'
-import { TypingGamerEnglish } from './TypingGamerEnglish'
-import { TypingGamerJapanese } from './TypingGamerJapanese'
-
-type TypingGamer = TypingGamerEnglish | TypingGamerJapanese
+import { TypingGamer, useTypingGamer } from './TypingGamer'
+import { isNumber } from './Util'
 
 interface TypingEventDetail {
   keyCode?: number
@@ -14,13 +12,6 @@ interface TypingEventDetail {
 }
 
 type TypingEvent = CustomEvent<TypingEventDetail>
-
-function isNumber (num: any): num is number {
-  if (num == null) {
-    return false
-  }
-  return typeof num === 'number' && !isNaN(num)
-}
 
 export class GameSetting {
   timeLimit: number = 0
@@ -221,14 +212,9 @@ export class TypingGame {
 
     const { words, type } = problem ?? {}
     const { timeLimit, autoMode } = setting
-    this.init({ problem, setting })
+    const gamer = useTypingGamer(type)
 
-    let gamer = null as TypingGamer
-    if (type === 'english') {
-      gamer = new TypingGamerEnglish()
-    } else if (type === 'japanese') {
-      gamer = new TypingGamerJapanese()
-    }
+    this.init({ problem, setting })
 
     return await new Promise((resolve) => {
       const keydown = autoMode ? () => {} : this._keydown()

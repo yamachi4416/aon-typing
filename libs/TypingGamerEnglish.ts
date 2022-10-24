@@ -1,6 +1,7 @@
 import { TypingGameWordData } from './TypingGameWordData'
+import type { TypingGamer } from './TypingGamer'
 
-export class TypingGamerEnglish {
+export class TypingGamerEnglish implements TypingGamer {
   init (word: TypingGameWordData) {
     if (!word.wordState.current) {
       word.wordState.next(1)

@@ -16,7 +16,13 @@ export class TypingProblemQuestioner {
   endWords: TypingGameWordData[]
   setting: any
 
-  constructor ({ problem, setting }: { problem: ProblemDetail, setting: any }) {
+  constructor ({
+    problem,
+    setting
+  }: {
+    problem: ProblemDetail
+    setting: any
+  }) {
     this.init({ problem, setting })
   }
 
@@ -43,7 +49,13 @@ export class TypingProblemQuestioner {
     return this.words[0]
   }
 
-  init ({ problem, setting }: { problem: ProblemDetail, setting: any }) {
+  init ({
+    problem,
+    setting
+  }: {
+    problem: ProblemDetail
+    setting: any
+  }) {
     this.problem = problem
     this.words = problem.words.map((w, i) => new TypingGameWordData(i, w))
     this.endWords = []

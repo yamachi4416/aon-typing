@@ -1,3 +1,10 @@
+export function isNumber (num: any): num is number {
+  if (num == null) {
+    return false
+  }
+  return typeof num === 'number' && !isNaN(num)
+}
+
 export async function countDown (count: number, tick: (count: number) => void) {
   return await new Promise((resolve) => {
     const id = setInterval(() => {
@@ -27,7 +34,9 @@ export function pagenate<T> ({
   page: number
   pageSize: number
 }) {
-  if (!items || items.length === 0) { return { items: [], pages: 0, count: 0 } }
+  if (!items || items.length === 0) {
+    return { items: [], pages: 0, count: 0 }
+  }
   const lastPage = Math.ceil(items.length / pageSize)
   const pages = Math.min(page, lastPage)
   const start = (pages - 1) * pageSize

@@ -5,8 +5,9 @@ import {
   typeJapaneseChars
 } from './TypingJapaneseChars'
 import { TypingGameWordData } from './TypingGameWordData'
+import type { TypingGamer } from './TypingGamer'
 
-export class TypingGamerJapanese {
+export class TypingGamerJapanese implements TypingGamer {
   init (word: TypingGameWordData) {
     if (!word.wordState.current) {
       const { jc, ec } = typeCharsToJapaneseChars(
@@ -72,5 +73,3 @@ export class TypingGamerJapanese {
     return false
   }
 }
-
-export default TypingGamerJapanese
