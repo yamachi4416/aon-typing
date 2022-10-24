@@ -1,0 +1,34 @@
+{
+  "id": "1010146",
+  "title": "ＪＲ山陽新幹線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-24",
+  "updatedAt": "2022-10-24",
+  "optional": { "cd": "146" },
+  "words": [
+    { "info": "博多", "info2": "はかた", "word": "hakata" },
+    { "info": "小倉", "info2": "こくら", "word": "kokura" },
+    { "info": "新下関", "info2": "しんしものせき", "word": "sinsimonoseki" },
+    { "info": "厚狭", "info2": "あさ", "word": "asa" },
+    { "info": "新山口", "info2": "しんやまぐち", "word": "sinyamaguti" },
+    { "info": "徳山", "info2": "とくやま", "word": "tokuyama" },
+    { "info": "新岩国", "info2": "しんいわくに", "word": "sinniwakuni" },
+    { "info": "広島", "info2": "ひろしま", "word": "hirosima" },
+    { "info": "東広島", "info2": "ひがしひろしま", "word": "higasihirosima" },
+    { "info": "三原", "info2": "みはら", "word": "mihara" },
+    { "info": "新尾道", "info2": "しんおのみち", "word": "sinnonomiti" },
+    { "info": "福山", "info2": "ふくやま", "word": "hukuyama" },
+    { "info": "新倉敷", "info2": "しんくらしき", "word": "sinkurasiki" },
+    { "info": "岡山", "info2": "おかやま", "word": "okayama" },
+    { "info": "相生", "info2": "あいおい", "word": "aioi" },
+    { "info": "姫路", "info2": "ひめじ", "word": "himeji" },
+    { "info": "西明石", "info2": "にしあかし", "word": "nisiakasi" },
+    { "info": "新神戸", "info2": "しんこうべ", "word": "sinkoube" },
+    { "info": "新大阪", "info2": "しんおおさか", "word": "sinnoosaka" }
+  ]
+}
