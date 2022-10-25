@@ -91,11 +91,11 @@ function removeTag(tag: ProblemItemTag) {
 .taglist {
   position: sticky;
   top: 0;
-  background-color: #fff;
   z-index: 2;
-  font-size: 0.8rem;
   justify-content: flex-start;
   padding: 10px;
+  font-size: 0.8rem;
+  background-color: #fff;
   border-bottom: 1px solid #999;
 }
 </style>

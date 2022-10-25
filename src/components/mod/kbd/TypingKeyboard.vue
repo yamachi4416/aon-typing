@@ -31,15 +31,15 @@ withDefaults(
 
     path,
     rect {
-      stroke-width: 1;
+      fill: rgb(255 255 255 / 20%);
       stroke: #333;
-      fill: rgba(255, 255, 255, 0.2);
+      stroke-width: 1;
     }
 
     &[highlight='true'] {
       path,
       rect {
-        fill: rgb(255, 208, 138);
+        fill: rgb(255 208 138);
       }
     }
 

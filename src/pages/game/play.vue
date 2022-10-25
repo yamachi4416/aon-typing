@@ -117,33 +117,34 @@ useHead({
 
 <style lang="scss" scoped>
 .game-typing-page-content {
-  width: 100%;
-  height: var(--maxvh, 100vh);
   display: flex;
   align-items: center;
+  width: 100%;
+  height: var(--maxvh, 100vh);
 
   &-main {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 100%;
     max-width: 1350px;
+    height: 100%;
     max-height: 100%;
-    margin: 0 auto;
     padding: 10px;
+    margin: 0 auto;
 
     &-keyboard {
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-      max-height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height: 100%;
+
       &-svg {
         width: auto;
-        height: auto;
         max-width: 100%;
+        height: auto;
         max-height: 100vh;
         max-height: calc(100vh - 20px);
       }

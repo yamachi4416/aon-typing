@@ -133,6 +133,7 @@ useHead({
   &-body {
     align-items: center;
     justify-content: space-around;
+
     dl {
       padding-left: 10px;
     }
@@ -143,9 +144,10 @@ useHead({
   &-body {
     align-items: flex-start;
     justify-content: space-around;
+
     .sm-table-between {
-      padding-left: 10px;
       padding-right: 10px;
+      padding-left: 10px;
     }
   }
 }

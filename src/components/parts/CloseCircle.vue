@@ -31,9 +31,9 @@
 .close-button {
   width: 100%;
   height: 100%;
-  border: 2px solid #333;
-  background: transparent;
-  border-radius: 50%;
   cursor: pointer;
+  background: transparent;
+  border: 2px solid #333;
+  border-radius: 50%;
 }
 </style>

@@ -50,29 +50,29 @@ const currentWord = computed(() => {
   font-size: 1.2em;
 
   &-info {
-    width: 100%;
     display: flex;
+    width: 100%;
     white-space: nowrap;
 
     &-left {
-      color: #666;
-      flex: 1;
-      min-width: calc(50% - 0.5em);
       display: flex;
+      flex: 1;
       justify-content: flex-end;
+      min-width: calc(50% - 0.5em);
+      color: #666;
       white-space: pre;
     }
 
     &-current {
-      color: rgb(255, 153, 0);
+      color: rgb(255 153 0);
       white-space: pre;
     }
 
     &-right {
-      color: #333;
-      flex: 1;
       display: flex;
+      flex: 1;
       justify-content: flex-start;
+      color: #333;
       white-space: pre;
     }
   }

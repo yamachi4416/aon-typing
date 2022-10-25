@@ -45,10 +45,10 @@ const dispTime = computed(() => `${minute.value}:${second.value}`)
 <style lang="scss" scoped>
 .time-clock {
   text {
-    cursor: pointer;
     font-family: monospace;
     font-size: 1.3em;
     white-space: pre;
+    cursor: pointer;
   }
 }
 </style>

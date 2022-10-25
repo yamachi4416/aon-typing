@@ -134,29 +134,28 @@ function pauseToggle() {
 
 <style lang="scss" scoped>
 .typing-game-panel {
-  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.4);
+  background: rgb(255 255 255 / 60%);
   border: 2px solid #333;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.6);
-  // backdrop-filter: blur(20px);
+  box-shadow: 3px 3px 9px rgb(0 0 0 / 40%);
 
   .line-gauge {
     transform: translate(-1px, -1px);
   }
 
   .typing-game {
+    width: 100%;
     height: 100%;
     max-height: 100%;
-    width: 100%;
     overflow: hidden;
 
     .wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 15px;
-      height: 100%;
       width: 100%;
+      height: 100%;
+      padding: 15px;
     }
 
     .display-zone {
@@ -174,6 +173,7 @@ function pauseToggle() {
         &-right {
           display: flex;
           justify-content: flex-end;
+
           .close-circle {
             width: 35px;
             height: 35px;
@@ -183,24 +183,24 @@ function pauseToggle() {
         }
 
         &-center {
-          flex: 1;
           display: flex;
+          flex: 1;
           flex-direction: column;
-          overflow: hidden;
           min-height: 100px;
+          overflow: hidden;
 
           & > * {
             width: 100%;
           }
 
           .display-words-info {
-            flex: 1;
-            font-size: 1em;
-            color: #666;
             display: flex;
+            flex: 1;
             align-items: center;
             justify-content: center;
+            font-size: 1em;
             line-height: 1.2;
+            color: #666;
 
             &-text {
               white-space: pre-wrap;
@@ -213,42 +213,55 @@ function pauseToggle() {
 
             &.chars-10 {
               font-size: 1.5em;
+
               &.english {
                 font-size: 1.6em;
               }
             }
+
             &.chars-20 {
               font-size: 1.4em;
+
               &.english {
                 font-size: 1.5em;
               }
             }
+
             &.chars-30 {
               font-size: 1.3em;
+
               &.english {
                 font-size: 1.4em;
               }
             }
+
             &.chars-40 {
               font-size: 1.2em;
+
               &.english {
                 font-size: 1.3em;
               }
             }
+
             &.chars-50 {
               font-size: 1.1em;
+
               &.english {
                 font-size: 1.2em;
               }
             }
+
             &.chars-200 {
               font-size: 0.9em;
+
               &.english {
                 font-size: 1em;
               }
             }
+
             &.chars-300 {
               font-size: 0.8em;
+
               &.english {
                 font-size: 0.9em;
               }
@@ -280,8 +293,8 @@ function pauseToggle() {
     .words-count {
       display: flex;
       margin: 0;
-      color: #666;
       font-size: 14px;
+      color: #666;
       white-space: nowrap;
 
       &-types-count {
@@ -295,11 +308,12 @@ function pauseToggle() {
     }
 
     .hands {
-      height: 15px;
-      width: 90%;
       display: flex;
       row-gap: 20px;
       column-gap: 20px;
+      width: 90%;
+      height: 15px;
+
       & > * {
         width: 100%;
       }

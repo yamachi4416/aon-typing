@@ -85,8 +85,10 @@ function convertKwds(val: string | string[]) {
     &-kwd {
       word-break: break-all;
     }
+
     .actions {
       padding-top: 5px;
+
       .buttons {
         display: flex;
         justify-content: flex-start;

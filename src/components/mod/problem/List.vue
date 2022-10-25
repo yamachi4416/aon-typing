@@ -40,7 +40,7 @@ defineEmits<{
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars.scss';
+@import '~/assets/css/vars';
 
 .problem-list {
   &-item {

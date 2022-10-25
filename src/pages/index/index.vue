@@ -150,21 +150,22 @@ function changeKwds() {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars.scss';
+@import '~/assets/css/vars';
 
 .index-page {
   &-tags {
     &-list {
       justify-content: flex-start;
       padding: 10px;
+
       &-item {
-        text-decoration: none;
+        display: block;
         padding: 5px 10px;
-        background: rgba(255, 153, 0, 1);
         color: #fff;
+        text-decoration: none;
+        background: rgb(255 153 0 / 100%);
         border: none;
         border-radius: 15px;
-        display: block;
 
         .tag-item {
           display: flex;
@@ -172,24 +173,25 @@ function changeKwds() {
 
           &-count {
             margin-left: 5px;
+
             &-number {
-              background: #fff;
-              color: #ff9900;
               display: inline-flex;
-              line-height: 1;
-              border-radius: 15px;
               padding: 0 8px;
+              line-height: 1;
+              color: #f90;
+              background: #fff;
+              border-radius: 15px;
             }
           }
 
           &::before {
-            content: '';
             display: block;
             width: 8px;
             height: 8px;
-            border-radius: 100%;
-            background: #fff;
             margin-right: 5px;
+            content: '';
+            background: #fff;
+            border-radius: 100%;
           }
         }
       }
@@ -204,6 +206,7 @@ function changeKwds() {
 
       &-search {
         flex: 1;
+
         &-keyword {
           padding-right: 3px;
         }
@@ -216,14 +219,16 @@ function changeKwds() {
     @include __media_s {
       padding: 5px 7px;
     }
+
     &-inner {
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 0;
+      background: rgb(255 255 255 / 90%);
       border-radius: 20px;
+      box-shadow: rgb(0 0 0 / 15%) 0 1px 3px 0;
+
       & > h2 {
-        color: #666;
         padding: 20px;
         padding-bottom: 5px;
+        color: #666;
       }
     }
   }
@@ -231,29 +236,30 @@ function changeKwds() {
   &-others {
     .others-contents {
       &-list {
-        list-style: none;
-        padding: 15px 10px;
         display: flex;
+        padding: 15px 10px;
+        list-style: none;
+
         &-item {
           a {
             display: flex;
             align-items: center;
-            font-size: 1em;
             padding: 5px 15px;
-            border: 1.5px solid #ff9900;
-            border-radius: 20px;
+            font-size: 1em;
+            color: #f90;
             text-decoration: none;
-            color: #ff9900;
             background: #fff;
+            border: 1.5px solid #f90;
+            border-radius: 20px;
 
             &::before {
-              content: '';
               display: block;
               width: 8px;
               height: 8px;
-              border-radius: 100%;
-              background: #ff9900;
               margin-right: 8px;
+              content: '';
+              background: #f90;
+              border-radius: 100%;
             }
           }
         }

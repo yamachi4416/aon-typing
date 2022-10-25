@@ -44,7 +44,12 @@ const detail = computed(() => {
       word: 'ab cd ef gh ij',
     })
   }
-  return { ...problem.value, words } as ProblemDetail
+  return {
+    ...problem.value,
+    words,
+    createdAt: null,
+    updatedAt: null,
+  } as ProblemDetail
 })
 
 async function setProblem(item: ProblemListItem) {

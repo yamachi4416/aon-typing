@@ -52,35 +52,36 @@ defineExpose({
 
 <style lang="scss" scoped>
 .modal-panel {
-  z-index: 99;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100%;
-  padding: 10px;
-  overflow: auto;
+  z-index: 99;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0);
+  width: 100vw;
+  height: 100%;
+  padding: 10px;
+  overflow: auto;
+  background: rgb(255 255 255 / 0%);
 
   .contents {
-    max-height: 100%;
-    width: 100%;
-    height: 100%;
-    max-width: 1000px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    max-height: 100%;
+
     &::after,
     &::before {
-      content: ' ';
       display: block;
       flex: 1;
       width: 100%;
+      content: ' ';
     }
   }
 
@@ -88,6 +89,7 @@ defineExpose({
     0% {
       transform: translateY(-100%);
     }
+
     100% {
       transform: translateY(0);
     }

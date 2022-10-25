@@ -134,15 +134,16 @@ function touchend() {
 .keyboard-key {
   .keyboard-text {
     display: flex;
-    margin: 0;
-    height: 100%;
-    line-height: 1;
-    white-space: pre;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
     font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    white-space: pre;
     border-radius: 5px;
+
     &.normal {
       font-size: 22px;
       line-height: 2;

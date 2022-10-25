@@ -15,13 +15,13 @@
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars.scss';
+@import '~/assets/css/vars';
 
 .parts-section {
-  padding: 10px;
   position: relative;
-  display: flex;
   z-index: 0;
+  display: flex;
+  padding: 10px;
   page-break-inside: avoid;
 
   &:hover {
@@ -29,69 +29,67 @@
   }
 
   &-main {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 0;
-    border-radius: 20px;
     position: relative;
+    flex: 1;
+    padding: 20px;
     color: #444;
+    background: rgb(255 255 255 / 90%);
+    border-radius: 20px;
+    box-shadow: rgb(0 0 0 / 15%) 0 1px 3px 0;
 
-    & {
-      :where(h1, h2, h3) {
-        color: #666;
-      }
+    :where(h1, h2, h3) {
+      color: #666;
+    }
 
-      :where(p) {
-        padding: 10px;
-        line-height: 1.8;
-      }
+    :where(p) {
+      padding: 10px;
+      line-height: 1.8;
     }
   }
 
   &-right,
   &-left {
+    z-index: 2;
     display: flex;
+    flex-direction: column;
     width: 20%;
     max-width: 150px;
     overflow: hidden;
-    z-index: 2;
-    flex-direction: column;
 
     & > * {
       width: 100%;
     }
 
     .fuki {
-      flex: 1;
-      display: block;
-      overflow: hidden;
       position: relative;
+      display: block;
+      flex: 1;
       min-height: 45px;
+      overflow: hidden;
 
       &::before {
-        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -20px;
         display: block;
         width: 30px;
         height: 30px;
-        position: absolute;
-        transform: rotate(60deg) skew(-20deg, -20deg) translateZ(-1px);
-        box-shadow: rgba(0, 0, 0, 0.15) 1px 0px 1px 0;
+        content: '';
         background: linear-gradient(
           -135deg,
-          rgba(255, 255, 255, 0.9) 51%,
+          rgb(255 255 255 / 90%) 51%,
           transparent 51%
         );
-        left: -20px;
-        bottom: 0;
+        box-shadow: rgb(0 0 0 / 15%) 1px 0 1px 0;
+        transform: rotate(60deg) skew(-20deg, -20deg) translateZ(-1px);
       }
     }
 
     & :where(img) {
       z-index: 1;
       width: 100%;
-      height: auto;
       min-width: 90px;
+      height: auto;
       min-height: 90px;
     }
   }
@@ -101,7 +99,8 @@
   }
 
   @include __media_s {
-    padding: 5px 7px 5px 7px;
+    padding: 5px 7px;
+
     &-right,
     &-left {
       display: none;

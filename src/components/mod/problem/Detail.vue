@@ -91,14 +91,14 @@ defineEmits<{
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars.scss';
+@import '~/assets/css/vars';
 
 .problem-detail-page {
   .detail-header {
     display: flex;
     flex-direction: column;
-    height: 100%;
     justify-content: space-between;
+    height: 100%;
 
     .detail-info {
       &-id,
@@ -124,15 +124,16 @@ defineEmits<{
           }
 
           & > dt {
-            padding: 5px 0px;
+            max-width: 5em;
+            padding: 5px 0;
             color: #666;
             white-space: nowrap;
-            max-width: 5em;
           }
+
           & > dd {
+            flex: 1;
             padding: 5px;
             color: #666;
-            flex: 1;
           }
         }
       }
@@ -142,14 +143,16 @@ defineEmits<{
           display: flex;
           flex-wrap: wrap;
           justify-content: flex-start;
+
           & > * {
             padding-left: 0;
           }
+
           &-item {
-            font-size: 0.85em;
-            background: rgba(255, 153, 0, 1);
-            color: #fff;
             padding: 0 1em;
+            font-size: 0.85em;
+            color: #fff;
+            background: rgb(255 153 0 / 100%);
             border: none;
           }
         }
@@ -158,6 +161,7 @@ defineEmits<{
 
     .detail-actions {
       padding-top: 5px;
+
       .buttons {
         display: flex;
         justify-content: flex-start;
@@ -167,8 +171,8 @@ defineEmits<{
 
   .details {
     display: flex;
-    list-style-type: none;
     flex-wrap: wrap;
+    list-style-type: none;
 
     &-item {
       display: flex;

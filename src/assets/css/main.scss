@@ -1,11 +1,11 @@
-@use "sass:math";
-@import "./vars.scss";
+@use 'sass:math';
+@import './vars';
 
 * {
-  font-family: "Itim", "Noto Sans JP", cursive;
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  font-family: Itim, 'Noto Sans JP', cursive;
 }
 
 @media print {
@@ -16,13 +16,13 @@
 
 html,
 body {
-  margin: 0;
   padding: 0;
-  -webkit-print-color-adjust: exact;
+  margin: 0;
   font-size: 16px;
+  -webkit-print-color-adjust: exact;
   @media print {
-    font-size: 10px;
     height: 100%;
+    font-size: 10px;
   }
 }
 
@@ -32,13 +32,14 @@ body {
   }
 }
 
+/* stylelint-disable-next-line selector-id-pattern */
 body,
 #__nuxt,
 #__layout {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   min-height: var(--maxvh, 100vh);
-  position: relative;
   @media print {
     height: 100%;
     min-height: unset !important;
@@ -47,25 +48,26 @@ body,
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  flex-wrap: wrap;
+
   & > * {
     padding: 3px;
   }
 }
 
 .button {
-  appearance: none;
-  cursor: pointer;
-  border: 1px solid #999;
-  background: #eee;
-  border-radius: 10px;
   padding: 0 1.5em;
   font-size: 0.9em;
-  white-space: nowrap;
   line-height: 2;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #eee;
+  border: 1px solid #999;
+  border-radius: 10px;
+  appearance: none;
 
   &.big {
     line-height: 2.5;
@@ -81,21 +83,40 @@ body,
     }
 
     &[selected] {
-      background: rgb(255, 208, 138);
+      background: rgb(255 208 138);
+    }
+  }
+}
+
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+
+  & > * {
+    display: table-row;
+
+    & > * {
+      display: table-cell;
+      padding: 8px 15px;
+      vertical-align: middle;
     }
   }
 }
 
 .form-group {
+  flex: 1;
   align-items: center;
   padding: 5px;
-  flex: 1;
+
   & > * {
     padding: 5px;
+
     &:not(label) {
       flex: 1;
     }
   }
+
   input,
   textarea {
     appearance: none;
@@ -121,51 +142,37 @@ body,
 
     &:focus,
     &:active {
+      border-color: rgb(255 153 0 / 100%);
       outline: 0;
-      border-color: rgba(255, 153, 0, 1);
-      box-shadow: 0 0 0 0.2rem rgba(255, 153, 0, 0.6);
+      box-shadow: 0 0 0 0.2rem rgb(255 153 0 / 60%);
     }
   }
 
   &.placeholder {
     position: relative;
-    input {
-      z-index: 1;
-      background: transparent;
-      &:not(:placeholder-shown) + label {
-        display: none;
-      }
-    }
 
     label {
-      display: block;
       position: absolute;
       top: 0;
       left: 0;
-      padding: 10px;
-      height: 100%;
+      display: block;
       width: 100%;
-      pointer-events: none;
-      color: #aaa;
-      white-space: nowrap;
+      height: 100%;
+      padding: 10px;
       overflow: hidden;
+      color: #aaa;
       text-overflow: ellipsis;
+      white-space: nowrap;
+      pointer-events: none;
     }
-  }
-}
 
-.table {
-  display: table;
-  width: 100%;
-  border-collapse: collapse;
+    input {
+      z-index: 1;
+      background: transparent;
 
-  & > * {
-    display: table-row;
-
-    & > * {
-      display: table-cell;
-      padding: 8px 15px;
-      vertical-align: middle;
+      &:not(:placeholder-shown) + label {
+        display: none;
+      }
     }
   }
 }
@@ -175,31 +182,31 @@ body,
   border-collapse: collapse;
 
   th {
+    padding: 2px 20px;
     font-weight: normal;
     text-align: left;
-    padding: 2px 20px;
   }
 
   td {
-    text-align: right;
     padding: 2px 20px;
+    text-align: right;
   }
 
   thead {
     th {
+      padding: 5px 10px;
       text-align: center;
       border-bottom: 1px solid #ccc;
-      padding: 5px 10px;
     }
   }
 }
 
 .row {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
   @for $i from 1 to 13 {
     & > .col-#{$i} {
@@ -212,13 +219,13 @@ body,
 
     @include __media_s {
       & > .col-s-#{$i},
-      & > .col-s-#{$i}[class^="col-"] {
+      & > .col-s-#{$i}[class^='col-'] {
         width: math.div(100%, 12) * $i;
         max-width: math.div(100%, 12) * $i;
       }
 
       & > .col-s-#{$i}-5,
-      & > .col-s-#{$i}-5[class^="col-"] {
+      & > .col-s-#{$i}-5[class^='col-'] {
         width: math.div(100%, 12) * $i + math.div(100%, 24);
         max-width: math.div(100%, 12) * $i + math.div(100%, 24);
       }
@@ -226,13 +233,13 @@ body,
 
     @include __media_m {
       & > .col-m-#{$i},
-      & > .col-m-#{$i}[class^="col-"] {
+      & > .col-m-#{$i}[class^='col-'] {
         width: math.div(100%, 12) * $i;
         max-width: math.div(100%, 12) * $i;
       }
 
       & > .col-m-#{$i}-5,
-      & > .col-m-#{$i}-5[class^="col-"] {
+      & > .col-m-#{$i}-5[class^='col-'] {
         width: math.div(100%, 12) * $i + math.div(100%, 24);
         max-width: math.div(100%, 12) * $i + math.div(100%, 24);
       }
@@ -240,13 +247,13 @@ body,
 
     @include __media_sm {
       & > .col-sm-#{$i},
-      & > .col-sm-#{$i}[class^="col-"] {
+      & > .col-sm-#{$i}[class^='col-'] {
         width: math.div(100%, 12) * $i;
         max-width: math.div(100%, 12) * $i;
       }
 
       & > .col-sm-#{$i}-5,
-      & > .col-sm-#{$i}-5[class^="col-"] {
+      & > .col-sm-#{$i}-5[class^='col-'] {
         width: math.div(100%, 12) * $i + math.div(100%, 24);
         max-width: math.div(100%, 12) * $i + math.div(100%, 24);
       }
@@ -254,13 +261,13 @@ body,
 
     @include __media_ml {
       & > .col-ml-#{$i},
-      & > .col-ml-#{$i}[class^="col-"] {
+      & > .col-ml-#{$i}[class^='col-'] {
         width: math.div(100%, 12) * $i;
         max-width: math.div(100%, 12) * $i;
       }
 
       & > .col-ml-#{$i}-5,
-      & > .col-ml-#{$i}-5[class^="col-"] {
+      & > .col-ml-#{$i}-5[class^='col-'] {
         width: math.div(100%, 12) * $i + math.div(100%, 24);
         max-width: math.div(100%, 12) * $i + math.div(100%, 24);
       }

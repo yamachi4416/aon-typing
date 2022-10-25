@@ -107,29 +107,36 @@ async function submit() {
 .contact-page {
   max-width: 900px;
   margin: auto;
+
   &-global-error-message {
     .error-message {
       color: #ff3434;
     }
   }
+
   &-section {
     display: block;
   }
+
   .form-group {
     align-items: flex-start;
+
     #message {
       height: 10em;
       resize: vertical;
     }
+
     .error-message {
       padding-top: 3px;
-      color: #ff3434;
       font-size: 0.9em;
+      color: #ff3434;
     }
   }
+
   .buttons {
-    padding-top: 10px;
     justify-content: center;
+    padding-top: 10px;
+
     .button {
       width: 300px;
       max-width: 50%;

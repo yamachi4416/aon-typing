@@ -219,11 +219,13 @@ function randomProblemSelect() {
     }
 
     .buttons {
-      justify-content: flex-start;
       flex-wrap: nowrap;
+      justify-content: flex-start;
+
       & > * {
         padding-left: 0;
       }
+
       .button {
         padding: 0 10px;
       }
@@ -234,15 +236,19 @@ function randomProblemSelect() {
     & > label {
       vertical-align: top;
     }
+
     .problem-detail {
       font-size: 0.9em;
+
       label {
         width: 1px;
       }
+
       a {
-        cursor: pointer;
         color: inherit;
         text-decoration: none;
+        cursor: pointer;
+
         &:hover,
         &:focus {
           color: #999;

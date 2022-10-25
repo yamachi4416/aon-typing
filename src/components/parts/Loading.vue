@@ -34,20 +34,21 @@ onMounted(async () => {
 <style lang="scss" scoped>
 .loading {
   position: fixed;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
   z-index: 999;
-  background: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 100%;
+  background: rgb(255 255 255 / 0%);
   opacity: 1;
 
   &-svg {
     position: absolute;
-    left: calc(50% - 100px);
     bottom: calc(50% - 100px);
+    left: calc(50% - 100px);
+
     circle {
-      fill: rgba(253, 207, 0, 0.1);
+      fill: rgb(253 207 0 / 10%);
     }
   }
 

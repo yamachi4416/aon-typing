@@ -37,7 +37,7 @@ function hi(k: number) {
     fill: #eee;
 
     &[highlight='true'] {
-      fill: rgb(255, 208, 138);
+      fill: rgb(255 208 138);
     }
   }
 }

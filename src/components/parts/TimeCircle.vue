@@ -111,7 +111,7 @@ function donut(
   }
 
   &-used {
-    fill: rgb(255, 153, 0);
+    fill: rgb(255 153 0);
   }
 
   &-center {

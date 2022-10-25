@@ -84,13 +84,13 @@ watch(
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars.scss';
+@import '~/assets/css/vars';
 
 .tag-info {
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-between;
+  height: 100%;
 
   &-type,
   &-id {
@@ -107,18 +107,20 @@ watch(
     }
 
     &-item {
-      border: none;
       padding: 0 1em;
       color: #666;
+      border: none;
+
       &[selected] {
         color: #fff;
-        background: #ff9900;
+        background: #f90;
       }
     }
   }
 
   .tags-actions {
     padding-top: 10px;
+
     .buttons {
       display: flex;
       justify-content: flex-start;

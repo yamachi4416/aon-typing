@@ -77,7 +77,7 @@ function select(p: number) {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars.scss';
+@import '~/assets/css/vars';
 
 .problem-list {
   &-item {
@@ -92,6 +92,7 @@ function select(p: number) {
       &:nth-of-type(3n + 1) {
         justify-content: flex-start;
       }
+
       &:nth-of-type(3n) {
         justify-content: flex-end;
       }
@@ -101,6 +102,7 @@ function select(p: number) {
       &:nth-of-type(2n + 1) {
         justify-content: flex-start;
       }
+
       &:nth-of-type(2n) {
         justify-content: flex-end;
       }

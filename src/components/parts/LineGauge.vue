@@ -37,7 +37,7 @@ const usedWidth = computed(() => {
 <style lang="scss" scoped>
 .line-guage {
   &-used {
-    fill: rgba(255, 208, 138, 0.8);
+    fill: rgb(255 208 138 / 80%);
   }
 }
 </style>

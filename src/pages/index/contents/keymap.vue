@@ -165,12 +165,12 @@ function print() {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars.scss';
+@import '~/assets/css/vars';
 
 .index-contents-keymap-page {
   max-width: 100%;
-  overflow-x: auto;
   padding: 3px;
+  overflow-x: auto;
 
   .keymaps {
     padding: 6px;
@@ -183,9 +183,11 @@ function print() {
     &-title {
       font-size: 1.1em;
     }
+
     &-body {
       .detail-actions {
         padding-top: 5px;
+
         .buttons {
           display: flex;
           justify-content: flex-start;
@@ -200,11 +202,11 @@ function print() {
 
 .chars {
   display: flex;
-  flex-wrap: wrap;
   flex-flow: row;
-  border-bottom: 1px solid #ccc;
+  flex-wrap: wrap;
+  background: rgb(255 255 255 / 80%);
   border-right: 1px solid #ccc;
-  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #ccc;
   page-break-inside: avoid;
 
   &:first-of-type {
@@ -215,17 +217,17 @@ function print() {
     display: flex;
     padding: 10px;
     font-size: 1em;
+    color: #ff9100;
     border-right: 1px solid #ccc;
     border-left: 1px solid #ccc;
-    color: #ff9100;
   }
 
   &-section {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+    width: 100%;
     padding: 6px;
 
     &-items {
@@ -239,26 +241,28 @@ function print() {
       }
 
       &-item {
+        display: flex;
         width: 20%;
         padding: 2px;
-        display: flex;
+
         &.empty {
           visibility: hidden;
         }
 
         @include __media_s {
           width: 33%;
+
           &.empty {
             display: none;
           }
         }
 
         &-inner {
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          background: rgba(255, 255, 255, 0.6);
           width: 100%;
           height: 100%;
+          background: rgb(255 255 255 / 60%);
+          border: 1px solid #ccc;
+          border-radius: 5px;
 
           &-jc,
           &-ec {
@@ -278,12 +282,15 @@ function print() {
 
   @media print {
     page-break-inside: avoid;
+
     &-title {
       font-size: 0.9em;
     }
+
     &-section {
-      font-size: 9px !important;
       padding: 3px;
+      font-size: 9px !important;
+
       &-items {
         @media print and (max-width: 600px) {
           width: calc(100% / 2);

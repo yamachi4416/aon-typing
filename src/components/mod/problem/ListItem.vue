@@ -50,25 +50,25 @@ defineEmits<{
 .item {
   display: flex;
   flex-direction: column;
-  color: #666;
   height: 100%;
+  color: #666;
 
   &-header {
     text-align: center;
 
     & > h3 {
-      font-weight: normal;
-      font-size: 1em;
       display: flex;
       flex-direction: column;
+      font-size: 1em;
+      font-weight: normal;
     }
 
     &-no {
-      text-align: left;
-      font-size: 0.8em;
       position: absolute;
       top: 8px;
       left: 20px;
+      font-size: 0.8em;
+      text-align: left;
     }
 
     &-title {
@@ -77,27 +77,11 @@ defineEmits<{
   }
 
   &-main {
-    border-top: 1px solid #999;
     flex: 1;
+    border-top: 1px solid #999;
 
     &-detail {
       padding: 5px;
-
-      &-row {
-        display: flex;
-
-        & > *:not(label) {
-          flex: 1;
-          text-align: right;
-          padding: 5px 15px;
-        }
-
-        & > label {
-          flex: 1;
-          text-align: left;
-          white-space: nowrap;
-        }
-      }
 
       &-tags {
         flex-wrap: wrap;
@@ -109,11 +93,27 @@ defineEmits<{
         }
 
         &-item {
-          font-size: 0.8em;
-          background: rgba(255, 153, 0, 1);
-          color: #fff;
           padding: 0 8px;
+          font-size: 0.8em;
+          color: #fff;
+          background: rgb(255 153 0 / 100%);
           border: none;
+        }
+      }
+
+      &-row {
+        display: flex;
+
+        & > *:not(label) {
+          flex: 1;
+          padding: 5px 15px;
+          text-align: right;
+        }
+
+        & > label {
+          flex: 1;
+          text-align: left;
+          white-space: nowrap;
         }
       }
     }
