@@ -24,12 +24,12 @@ const menus = [
 
 <style lang="scss" scoped>
 .basic-footer {
-  height: 100px;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100px;
   padding-top: 10px;
+  background: rgb(255 255 255 / 80%);
 
   @media print {
     display: none;
@@ -42,15 +42,17 @@ const menus = [
   &-nav {
     & > ul {
       display: flex;
-      list-style: none;
       justify-content: center;
+      list-style: none;
 
       & > li {
         padding: 0 10px;
+
         a {
-          cursor: pointer;
           color: #666;
           text-decoration: none;
+          cursor: pointer;
+
           &:hover,
           &:focus {
             color: #999;
@@ -61,11 +63,11 @@ const menus = [
   }
 
   &-copy {
-    color: #666;
-    width: 100%;
-    text-align: center;
     flex: 1;
+    width: 100%;
     padding-top: 10px;
+    color: #666;
+    text-align: center;
   }
 }
 </style>

@@ -24,7 +24,7 @@ withDefaults(
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars.scss';
+@import '~/assets/css/vars';
 
 .basic-page {
   min-height: 100vh;
@@ -33,10 +33,10 @@ withDefaults(
   }
 
   &-main {
-    padding: 10px;
     max-width: 1000px;
-    margin: 0 auto;
     min-height: calc(100vh - 200px);
+    padding: 10px;
+    margin: 0 auto;
     @include __media_s {
       padding: 5px 0;
     }

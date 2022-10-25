@@ -96,48 +96,50 @@ const menus = [
 .basic-header {
   position: sticky;
   top: 0;
-  width: 100%;
-  height: 100px;
   z-index: 99;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px 0;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 100px;
   padding: 10px;
+  background: rgb(255 255 255 / 95%);
+  box-shadow: rgb(0 0 0 / 15%) 0 1px 3px 0;
   @media print {
-    height: unset;
     position: relative;
+    height: unset;
     padding-top: 25px;
   }
 
   &-nav {
-    height: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
-    max-width: 1000px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
     @media print {
       max-width: unset;
     }
+
     &-main {
-      flex: 1;
       display: flex;
+      flex: 1;
       align-items: center;
 
       h1 {
-        color: rgba(255, 145, 0, 1);
+        display: flex;
+        align-items: center;
         height: 100%;
         font-size: 1.5em;
         line-height: 1;
-        display: flex;
-        align-items: center;
+        color: rgb(255 145 0 / 100%);
 
         a {
-          cursor: pointer;
           color: inherit;
           text-decoration: none;
+          cursor: pointer;
+
           &.title-no-anim {
             opacity: 0;
           }
@@ -146,6 +148,7 @@ const menus = [
             &.title-anim {
               display: none;
             }
+
             &.title-no-anim {
               opacity: 1;
             }
@@ -158,6 +161,7 @@ const menus = [
       @media print {
         display: none;
       }
+
       &-menu {
         width: 100%;
         max-width: 1000px;
@@ -166,19 +170,19 @@ const menus = [
         ul {
           display: flex;
           justify-content: space-around;
-          list-style: none;
-          padding: 0 10px;
           width: 100%;
+          padding: 0 10px;
+          list-style: none;
 
           & > li {
             flex: 1;
             text-align: center;
 
             a {
-              cursor: pointer;
               color: #666;
               text-decoration: none;
               white-space: nowrap;
+              cursor: pointer;
 
               &:hover,
               &:focus {
