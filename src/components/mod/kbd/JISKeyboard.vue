@@ -101,15 +101,15 @@ import KbdKey from '~/components/mod/kbd/JISKeyboardKey.vue'
 
 const props = withDefaults(
   defineProps<{
-    typeKey?: string;
-    setting?: any;
-    keys?: Keys;
+    typeKey?: string
+    setting?: any
+    keys?: Keys
   }>(),
   {
     typeKey: null,
     setting: () => ({}),
-    keys: () => new JISKeys()
-  }
+    keys: () => new JISKeys(),
+  },
 )
 
 const shiftKey = ref(false)
@@ -118,14 +118,14 @@ const lines = [
   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
   [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
   [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
-  [43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54]
+  [43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54],
 ]
 
-function key (n: number) {
+function key(n: number) {
   return props.keys.getLabelByIndex(n, shift.value)
 }
 
-function hi (n: number) {
+function hi(n: number) {
   if (!props.typeKey) {
     return false
   }
@@ -140,7 +140,7 @@ function hi (n: number) {
   }
 }
 
-function keydown (k: { text: string; index: number }, start: boolean) {
+function keydown(k: { text: string; index: number }, start: boolean) {
   if (props.setting.autoMode) {
     return
   }

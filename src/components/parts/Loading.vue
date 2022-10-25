@@ -27,7 +27,7 @@ const anims = ref<SVGAnimateElement[]>()
 
 onMounted(async () => {
   await nextTick()
-  await Promise.all(Array.from(anims.value).map(a => a.beginElement()))
+  await Promise.all(Array.from(anims.value).map((a) => a.beginElement()))
 })
 </script>
 

@@ -1,17 +1,17 @@
 class HttpError extends Error {
   statusCode: number
-  constructor (statusCode: number) {
+  constructor(statusCode: number) {
     super()
     this.statusCode = statusCode
   }
 }
 
-function notFound () {
+function notFound() {
   throwError(new HttpError(404))
 }
 
-export default function useErrors () {
+export default function useErrors() {
   return {
-    notFound
+    notFound,
   }
 }

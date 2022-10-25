@@ -20,7 +20,7 @@ export class GameSetting {
   goalCharCount: number = 0
   problemId: string = ''
 
-  clear () {
+  clear() {
     this.timeLimit = 0
     this.autoMode = 0
     this.randomMode = false
@@ -47,13 +47,13 @@ export class TypingGame {
 
   private _stop: () => void = null
 
-  constructor () {
+  constructor() {
     this.eventManager = new EventManager()
     this.timerManager = new TimerManager()
     this._initData()
   }
 
-  private _initData () {
+  private _initData() {
     this.problem = null
     this.tick = 0
     this.pausing = false
@@ -67,9 +67,9 @@ export class TypingGame {
     this.totalTypeMiss = 0
   }
 
-  init ({
+  init({
     problem = null,
-    setting = null
+    setting = null,
   }: {
     problem?: TypingProblemQuestioner
     setting?: GameSetting
@@ -82,15 +82,15 @@ export class TypingGame {
     this._stop = null
   }
 
-  get current () {
+  get current() {
     return this.problem?.current
   }
 
-  get totalCharCount () {
+  get totalCharCount() {
     return this.problem?.totalCharCount
   }
 
-  private _typing ({ gamer }: { gamer: TypingGamer }): EventListener {
+  private _typing({ gamer }: { gamer: TypingGamer }): EventListener {
     gamer.init(this.current)
 
     return (event: TypingEvent) => {
@@ -99,8 +99,7 @@ export class TypingGame {
       }
 
       const detail = event.detail
-      const char =
-        detail.char || keyCodeToChar(detail.keyCode, detail.shiftKey)
+      const char = detail.char || keyCodeToChar(detail.keyCode, detail.shiftKey)
       const word = this.current
 
       if (char) {
@@ -133,7 +132,7 @@ export class TypingGame {
     }
   }
 
-  private _keydown (): EventListener {
+  private _keydown(): EventListener {
     return (e: KeyboardEvent) => {
       e.preventDefault()
       const { keyCode, shiftKey } = e
@@ -143,7 +142,7 @@ export class TypingGame {
     }
   }
 
-  private visibleChange () {
+  private visibleChange() {
     if (document.hidden) {
       this.timerManager.pause()
     } else {
@@ -151,7 +150,7 @@ export class TypingGame {
     }
   }
 
-  private addTickTimer (timeLimit: number) {
+  private addTickTimer(timeLimit: number) {
     return this.timerManager.create({
       handler: () => {
         if (timeLimit > 0 && this.timeUse >= timeLimit) {
@@ -161,13 +160,13 @@ export class TypingGame {
           this.timeUse += 10
         }
       },
-      interval: 10
+      interval: 10,
     })
   }
 
-  private addAutoTyping ({
+  private addAutoTyping({
     words,
-    autoMode
+    autoMode,
   }: {
     words: TypingGameWordData[]
     autoMode: number
@@ -176,9 +175,7 @@ export class TypingGame {
       return
     }
 
-    const xs = Array.from(
-      words.reduce((a, w) => a + w.wordState.remaining, '')
-    )
+    const xs = Array.from(words.reduce((a, w) => a + w.wordState.remaining, ''))
 
     const timer = this.timerManager.create({
       handler: () => {
@@ -195,15 +192,15 @@ export class TypingGame {
           timer?.stop()
         }
       },
-      interval: autoMode
+      interval: autoMode,
     })
 
     return timer
   }
 
-  async start ({
+  async start({
     problem,
-    setting
+    setting,
   }: {
     problem: TypingProblemQuestioner
     setting: GameSetting
@@ -239,7 +236,7 @@ export class TypingGame {
       this.eventManager.add(
         'visibilitychange',
         this.visibleChange.bind(this),
-        document
+        document,
       )
 
       this.addTickTimer(timeLimit)
@@ -249,7 +246,7 @@ export class TypingGame {
     })
   }
 
-  cancel () {
+  cancel() {
     if (this._stop) {
       this.canceled = true
       this._stop()
@@ -259,7 +256,7 @@ export class TypingGame {
     return this.info()
   }
 
-  pause () {
+  pause() {
     if (this.isRunning) {
       this.pausing = true
       this.timerManager.pause()
@@ -268,7 +265,7 @@ export class TypingGame {
     return false
   }
 
-  resume () {
+  resume() {
     if (this.isPausing) {
       this.pausing = false
       this.timerManager.resume()
@@ -277,19 +274,19 @@ export class TypingGame {
     return false
   }
 
-  get isPausing () {
+  get isPausing() {
     return this.running && this.pausing
   }
 
-  get isRunning () {
+  get isRunning() {
     return this.running && !this.pausing
   }
 
-  info () {
+  info() {
     return new TypingGameInfo(this)
   }
 
-  dispose () {
+  dispose() {
     this.eventManager.clear()
     this.timerManager.clear()
   }
@@ -303,10 +300,10 @@ class EventManager {
     active: boolean
   }> = []
 
-  add (
+  add(
     eventName: string,
     handler: EventListener,
-    target?: Document | Element | Window
+    target?: Document | Element | Window,
   ) {
     target = target || window
     target.addEventListener(eventName, handler)
@@ -314,14 +311,14 @@ class EventManager {
       eventName,
       handler,
       target,
-      active: true
+      active: true,
     })
   }
 
-  remove (
+  remove(
     eventName: string,
     handler: EventListener,
-    target?: Document | Element | Window
+    target?: Document | Element | Window,
   ) {
     target = target || window
 
@@ -333,14 +330,14 @@ class EventManager {
       return !it.active
     })
 
-    this.listeners = this.listeners.filter(it => it.active)
+    this.listeners = this.listeners.filter((it) => it.active)
 
     targets.forEach((it) => {
       it.target.removeEventListener(it.eventName, it.handler)
     })
   }
 
-  clear () {
+  clear() {
     const targets = [...this.listeners]
     this.listeners = []
     targets.forEach((it) => {
@@ -358,7 +355,7 @@ class TimerEntry {
   private readonly handler: () => void
   private readonly interval: () => number
 
-  constructor (handler: () => void, interval: (() => number) | number) {
+  constructor(handler: () => void, interval: (() => number) | number) {
     if (typeof interval === 'function') {
       this.interval = interval
     } else {
@@ -367,7 +364,7 @@ class TimerEntry {
     this.handler = handler
   }
 
-  private * ticker () {
+  private *ticker() {
     while (true) {
       if (isNumber(this.tick)) {
         this.time += this.tick
@@ -383,7 +380,7 @@ class TimerEntry {
     }
   }
 
-  start () {
+  start() {
     const handler = this.handler
     const tick = this.ticker()
 
@@ -407,7 +404,7 @@ class TimerEntry {
     return this.uid
   }
 
-  stop () {
+  stop() {
     if (this.id) {
       this.tick = Math.max(this.time - Date.now(), 0) || 0
       window.clearTimeout(this.id)
@@ -420,9 +417,9 @@ class TimerEntry {
 class TimerManager {
   private timers: TimerEntry[] = []
 
-  create ({
+  create({
     handler,
-    interval
+    interval,
   }: {
     handler: () => void
     interval: (() => number) | number
@@ -432,20 +429,20 @@ class TimerManager {
     return timer
   }
 
-  start () {
-    this.timers.forEach(timer => timer.start())
+  start() {
+    this.timers.forEach((timer) => timer.start())
   }
 
-  pause () {
-    this.timers.forEach(timer => timer.stop())
+  pause() {
+    this.timers.forEach((timer) => timer.stop())
   }
 
-  resume () {
+  resume() {
     this.start()
   }
 
-  clear () {
-    this.timers.forEach(timer => timer.stop())
+  clear() {
+    this.timers.forEach((timer) => timer.stop())
     this.timers = []
   }
 }

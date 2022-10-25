@@ -21,47 +21,47 @@ interface InfoData {
 export default defineCommand({
   command: 'eki-ls',
   describe: 'eki list info',
-  builder: argv =>
+  builder: (argv) =>
     argv
       .option('data-dir', {
         alias: 'i',
         type: 'string',
         describe: 'input data directory',
         demandOption: true,
-        requiresArg: true
+        requiresArg: true,
       })
       .option('stdout', {
         alias: 's',
         type: 'boolean',
         describe: 'output stdout',
-        default: false
+        default: false,
       }),
-  async handler (args) {
+  async handler(args) {
     const dir = path.resolve(args.dataDir)
-    const files = await readdir(dir, { withFileTypes: true }).then(items =>
+    const files = await readdir(dir, { withFileTypes: true }).then((items) =>
       items
-        .filter(item => item.isFile())
-        .map(item => path.join(dir, item.name))
+        .filter((item) => item.isFile())
+        .map((item) => path.join(dir, item.name)),
     )
 
     const dataset = await Promise.all(
-      files.map(async file =>
-        await readFile(file, { flag: 'r' }).then(
-          (b): InfoData =>
-            ({
+      files.map(
+        async (file) =>
+          await readFile(file, { flag: 'r' }).then(
+            (b): InfoData => ({
               id: path.basename(file, path.extname(file)),
               file,
-              data: JSON.parse(b.toString())
-            })
-        )
-      )
+              data: JSON.parse(b.toString()),
+            }),
+          ),
+      ),
     )
 
     const lines = dataset
-      .filter(info => info.data.tags.includes('駅名'))
+      .filter((info) => info.data.tags.includes('駅名'))
       .sort((a, b) => Number(a.id) - Number(b.id))
       .map(({ id, file, data: { title, createdAt, optional } }) =>
-        [id, title, String(optional?.cd ?? ''), createdAt, file].join('\t')
+        [id, title, String(optional?.cd ?? ''), createdAt, file].join('\t'),
       )
 
     if (args.stdout) {
@@ -72,5 +72,5 @@ export default defineCommand({
       await writeFile(outfile, lines.join('\n'))
       console.log(`write: ${outfile}`)
     }
-  }
+  },
 })

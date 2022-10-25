@@ -18,7 +18,10 @@
         </div>
         <div class="item-main-detail-tags buttons">
           <span v-for="(tag, i) in item.tags" :key="`tag-${item.id}-${i}`">
-            <button class="item-main-detail-tags-item button" @click="$emit('tag', tag)">
+            <button
+              class="item-main-detail-tags-item button"
+              @click="$emit('tag', tag)"
+            >
               {{ tag.name }}
             </button>
           </span>
@@ -35,11 +38,11 @@
 import { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 
 defineProps<{
-  item: ProblemListItem;
+  item: ProblemListItem
 }>()
 
 defineEmits<{
-  (e: 'tag', tag: ProblemItemTag);
+  (e: 'tag', tag: ProblemItemTag)
 }>()
 </script>
 
@@ -53,7 +56,7 @@ defineEmits<{
   &-header {
     text-align: center;
 
-    &>h3 {
+    & > h3 {
       font-weight: normal;
       font-size: 1em;
       display: flex;
@@ -83,13 +86,13 @@ defineEmits<{
       &-row {
         display: flex;
 
-        &>*:not(label) {
+        & > *:not(label) {
           flex: 1;
           text-align: right;
           padding: 5px 15px;
         }
 
-        &>label {
+        & > label {
           flex: 1;
           text-align: left;
           white-space: nowrap;
@@ -101,7 +104,7 @@ defineEmits<{
         justify-content: flex-start;
         padding: 10px 5px;
 
-        &>* {
+        & > * {
           padding-left: 0;
         }
 

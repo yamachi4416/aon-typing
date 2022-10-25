@@ -13,55 +13,55 @@ interface Data {
   optional?: {
     cd: string[] | string
   }
-  words: Array<{ info: string, info2: string }>
+  words: Array<{ info: string; info2: string }>
 }
 
 export default defineCommand({
   command: 'eki-word-dl',
   describe: 'eki word data download from api',
-  builder: argv =>
+  builder: (argv) =>
     argv
       .option('data-dir', {
         alias: 'i',
         type: 'string',
         describe: 'input data directory',
         demandOption: true,
-        requiresArg: true
+        requiresArg: true,
       })
       .option('ekispert-api-key', {
         alias: 'k',
         type: 'string',
         describe: 'api key',
         demandOption: true,
-        requiresArg: true
+        requiresArg: true,
       })
       .option('operation-line-code', {
         alias: 'c',
         type: 'array',
         describe: 'operation Line Codes',
         demandOption: true,
-        requiresArg: true
+        requiresArg: true,
       })
       .option('dry-run', {
         type: 'boolean',
         describe: 'dry run show stdout',
         demandOption: false,
-        requiresArg: false
+        requiresArg: false,
       })
       .option('overwrite', {
         alias: 'f',
         type: 'boolean',
         describe: 'overwrite if exists',
         demandOption: false,
-        requiresArg: false
+        requiresArg: false,
       })
-      .coerce('operation-line-code', cds => String(cds).split(',')),
+      .coerce('operation-line-code', (cds) => String(cds).split(',')),
   handler: async ({
     dataDir,
     operationLineCode: cds,
     dryRun,
     ekispertApiKey: key,
-    overwrite
+    overwrite,
   }) => {
     const id = `1010${cds[0].padStart(3, '0')}`
     const file = path.join(dataDir, `${id}.json`)
@@ -69,36 +69,38 @@ export default defineCommand({
 
     const data = await fs.promises
       .readFile(file)
-      .then(buf => JSON.parse(buf.toString()) as Data)
+      .then((buf) => JSON.parse(buf.toString()) as Data)
       .catch(
-        (): Data =>
-          ({
-            title: '',
-            type: 'japanese',
-            tags: ['日本語', '地理', '駅名'],
-            createdAt: date,
-            updatedAt: date,
-            optional: { cd: cds.length === 1 ? cds[0] : cds },
-            words: [{ info: '', info2: '' }]
-          })
+        (): Data => ({
+          title: '',
+          type: 'japanese',
+          tags: ['日本語', '地理', '駅名'],
+          createdAt: date,
+          updatedAt: date,
+          optional: { cd: cds.length === 1 ? cds[0] : cds },
+          words: [{ info: '', info2: '' }],
+        }),
       )
 
     if (!data.title) {
       const titles = await Promise.all(
-        cds.map(async code =>
-          await fetchOperationLine({ key, code }).then(op => op.Line[0]?.Name)
-        )
+        cds.map(
+          async (code) =>
+            await fetchOperationLine({ key, code }).then(
+              (op) => op.Line[0]?.Name,
+            ),
+        ),
       )
       data.title = `${titles[0]}の駅いちらん`
     }
 
     data.words = await fetchStations({
       key,
-      operationLineCodes: cds
+      operationLineCodes: cds,
     }).then(({ words }) => words)
 
     const json = prettier.format(JSON.stringify(data), {
-      parser: 'json'
+      parser: 'json',
     })
 
     if (dryRun) {
@@ -114,15 +116,19 @@ export default defineCommand({
         ) {
           for (;;) {
             const ans = await prompt(
-              `file "${file}" is exists.\noverwrite? [Y/n] > `
+              `file "${file}" is exists.\noverwrite? [Y/n] > `,
             )
-            if (ans === 'Y') { break }
-            if (ans === 'n' || ans === 'N') { return }
+            if (ans === 'Y') {
+              break
+            }
+            if (ans === 'n' || ans === 'N') {
+              return
+            }
           }
         }
       }
       await fs.promises.writeFile(file, json)
       console.log(data.title, file)
     }
-  }
+  },
 })

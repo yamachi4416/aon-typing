@@ -27,7 +27,7 @@
               placeholder=" "
               @keyup.enter="searchEnterProblems"
               @change="changeKwds"
-            >
+            />
             <label for="search-keyword">検索キーワード</label>
           </div>
           <div class="buttons">
@@ -89,10 +89,7 @@
       <nav class="others-contents">
         <ul class="others-contents-list">
           <li class="others-contents-list-item">
-            <NuxtLink
-              :to="{ name: 'index-contents-keymap' }"
-              class="button"
-            >
+            <NuxtLink :to="{ name: 'index-contents-keymap' }" class="button">
               ローマ字タイピング入力表
             </NuxtLink>
           </li>
@@ -107,14 +104,14 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'トップページ'
+  title: 'トップページ',
 })
 
 const newProblems = computed(() => useProblems().newProblems)
 const tagSummary = computed(() => useProblems().tagSummary)
 
 const state = reactive({
-  kwd: ''
+  kwd: '',
 })
 
 const enableSearch = computed(() => !!normalizedKwd(state.kwd))
@@ -123,28 +120,28 @@ onMounted(() => {
   state.kwd = normalizedKwd((useRoute().query.kwd as string) ?? '')
 })
 
-function normalizedKwd (val: string) {
+function normalizedKwd(val: string) {
   const kwd = val ? Array.from(val).slice(0, 100).join('') : ''
   return kwd.trim()
 }
 
-async function searchProblems () {
+async function searchProblems() {
   if (enableSearch.value) {
     await useRouter().push({
       name: 'index-problems',
-      query: { kwd: normalizedKwd(state.kwd) }
+      query: { kwd: normalizedKwd(state.kwd) },
     })
   }
 }
 
-async function searchEnterProblems () {
+async function searchEnterProblems() {
   if (enableSearch.value) {
     changeKwds()
     await searchProblems()
   }
 }
 
-function changeKwds () {
+function changeKwds() {
   const kwd = normalizedKwd(state.kwd)
   if (kwd !== (useRoute().query.kwd ?? '')) {
     useNavigator().replaceQuery({ kwd })
@@ -153,7 +150,7 @@ function changeKwds () {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/css/vars.scss";
+@import '~/assets/css/vars.scss';
 
 .index-page {
   &-tags {
@@ -186,7 +183,7 @@ function changeKwds () {
           }
 
           &::before {
-            content: "";
+            content: '';
             display: block;
             width: 8px;
             height: 8px;
@@ -250,7 +247,7 @@ function changeKwds () {
             background: #fff;
 
             &::before {
-              content: "";
+              content: '';
               display: block;
               width: 8px;
               height: 8px;

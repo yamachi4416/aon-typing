@@ -12,7 +12,7 @@
 <script setup lang="ts">
 useHead({
   title: 'お問い合わせありがとうございます',
-  meta: [{ name: 'robots', content: 'noindex' }]
+  meta: [{ name: 'robots', content: 'noindex' }],
 })
 
 onBeforeMount(() => {

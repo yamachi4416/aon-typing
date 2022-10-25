@@ -32,28 +32,28 @@ import { wait } from '~~/libs/Util'
 
 const props = withDefaults(
   defineProps<{
-    anim?: boolean;
+    anim?: boolean
   }>(),
   {
-    anim: true
-  }
+    anim: true,
+  },
 )
 
 const titleText = 'あぉ～ん タイピング'
 const startAnim = ref(false)
 const titleChars = ref([] as string[])
 const title = computed(() =>
-  props.anim ? titleChars.value.join('') : titleText
+  props.anim ? titleChars.value.join('') : titleText,
 )
 
 onMounted(() => typing(titleText))
 
-function typing (text: string) {
+function typing(text: string) {
   if (!props.anim) return Promise.resolve()
   return new Promise((resolve) => {
-    const types = typeJapaneseCharsMap(text, null, true).map(v => ({
+    const types = typeJapaneseCharsMap(text, null, true).map((v) => ({
       jc: v.jc,
-      ec: v.ec.split('')
+      ec: v.ec.split(''),
     }))
 
     const fins = []
@@ -88,7 +88,7 @@ function typing (text: string) {
 const menus = [
   { route: { name: 'game-menu' }, label: 'プレイする' },
   { route: { name: 'index-problems' }, label: '問題いちらん' },
-  { route: { name: 'index-about' }, label: 'サイト説明' }
+  { route: { name: 'index-about' }, label: 'サイト説明' },
 ]
 </script>
 

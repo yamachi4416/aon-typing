@@ -25,20 +25,20 @@
 
 <script setup lang="ts">
 defineEmits<{
-  (e: 'click');
+  (e: 'click')
 }>()
 
 const props = withDefaults(
   defineProps<{
-    totalTime?: number;
-    time?: number;
-    text?: number | string;
+    totalTime?: number
+    time?: number
+    text?: number | string
   }>(),
   {
     totalTime: 60,
     time: 0,
-    text: null
-  }
+    text: null,
+  },
 )
 
 const dispText = computed(() => String(props.text || props.time))
@@ -55,7 +55,7 @@ const usedPath = computed(() => {
   return donut({ r: 30, cr: 20, mv: 0, fx: 10 }, { deg1, deg2 })
 })
 
-function donut100 ({ r, cr, mv }: { r: number; cr: number; mv: number }) {
+function donut100({ r, cr, mv }: { r: number; cr: number; mv: number }) {
   return [
     `M0,${-cr - mv}`,
     `A${cr},${cr} 0 0 1 0,${cr + mv}`,
@@ -63,13 +63,13 @@ function donut100 ({ r, cr, mv }: { r: number; cr: number; mv: number }) {
     `M0,${-r - mv}`,
     `A${r},${r} 0 0 0 0,${r + mv}`,
     `A${r},${r} 0 1 0 0,${-r - mv}`,
-    'Z'
+    'Z',
   ].join(' ')
 }
 
-function donut (
+function donut(
   { r, cr, mv, fx }: { r: number; cr: number; mv: number; fx: number },
-  { deg1, deg2 }: { deg1: number; deg2: number }
+  { deg1, deg2 }: { deg1: number; deg2: number },
 ) {
   const round = (i: number) =>
     Math.round(i * Math.pow(10, fx)) / Math.pow(10, fx)
@@ -99,7 +99,7 @@ function donut (
     `A${r1},${r1} 0 ${f} 1 ${x2},${y2}`,
     `L${x3},${y3}`,
     `A${r0},${r0} 0 ${f} 0 ${x0},${y0}`,
-    'Z'
+    'Z',
   ].join(' ')
 }
 </script>

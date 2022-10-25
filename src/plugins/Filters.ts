@@ -1,4 +1,4 @@
-function dispTime (time: number) {
+function dispTime(time: number) {
   const t = Math.floor(time / 10)
   const m = Math.floor(t / 100 / 60)
   const s = Math.floor((t / 100) % 60)
@@ -9,7 +9,7 @@ function dispTime (time: number) {
   return `${s} 秒 ${ss}`
 }
 
-function percent (value: number, length = 1) {
+function percent(value: number, length = 1) {
   if (value == null) {
     return ''
   }
@@ -23,8 +23,8 @@ export default defineNuxtPlugin((_) => {
     provide: {
       filters: {
         dispTime,
-        percent
-      }
-    }
+        percent,
+      },
+    },
   }
 })

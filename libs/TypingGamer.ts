@@ -7,7 +7,7 @@ export interface TypingGamer {
   expect: (char: string, word: TypingGameWordData) => boolean
 }
 
-export function useTypingGamer (type: string): TypingGamer | undefined {
+export function useTypingGamer(type: string): TypingGamer | undefined {
   if (type === 'english') {
     return new TypingGamerEnglish()
   } else if (type === 'japanese') {

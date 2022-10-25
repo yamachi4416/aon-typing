@@ -2,24 +2,24 @@ import {
   allowDoubleN,
   typeCharsFindJapaneseChars,
   typeCharsToJapaneseChars,
-  typeJapaneseChars
+  typeJapaneseChars,
 } from './TypingJapaneseChars'
 import { TypingGameWordData } from './TypingGameWordData'
 import type { TypingGamer } from './TypingGamer'
 
 export class TypingGamerJapanese implements TypingGamer {
-  init (word: TypingGameWordData) {
+  init(word: TypingGameWordData) {
     if (!word.wordState.current) {
       const { jc, ec } = typeCharsToJapaneseChars(
         word.wordState.word,
-        word.infoState.word
+        word.infoState.word,
       )
       word.infoState.push(jc.length)
       word.wordState.push(ec.length)
     }
   }
 
-  expect (char: string, word: TypingGameWordData) {
+  expect(char: string, word: TypingGameWordData) {
     const expected = word.wordState.current
 
     if (expected === char) {
@@ -32,7 +32,7 @@ export class TypingGamerJapanese implements TypingGamer {
         if (word.wordState.rightWord) {
           const { jc, ec } = typeCharsToJapaneseChars(
             word.wordState.rightWord,
-            word.infoState.rightWord
+            word.infoState.rightWord,
           )
           word.infoState.push(jc.length)
           word.wordState.push(ec.length)
@@ -49,7 +49,7 @@ export class TypingGamerJapanese implements TypingGamer {
 
     const { jc, ec } = typeCharsFindJapaneseChars(
       word.wordState.buffer + char,
-      word.infoState.currentWord
+      word.infoState.currentWord,
     )
 
     if (jc) {
@@ -59,7 +59,7 @@ export class TypingGamerJapanese implements TypingGamer {
         word.infoState.pushRight(njc)
         word.wordState.currentWord = ec
         word.wordState.pushRight(
-          typeJapaneseChars(word.infoState.rightWord, njc.length)
+          typeJapaneseChars(word.infoState.rightWord, njc.length),
         )
         return this.expect(char, word)
       } else if (jc.length === word.infoState.currentWord.length) {

@@ -4,28 +4,28 @@
       <PartsSection v-if="desc === 'offline'">
         <h2>{{ title }}</h2>
         <p>
-          インターネットに接続できません。<br>
+          インターネットに接続できません。<br />
           ネットワークの状態を確認してください。
         </p>
       </PartsSection>
       <PartsSection v-else-if="desc === 'notfound'">
         <h2>{{ title }}</h2>
         <p>
-          お探しのページは見つかりませんでした。<br>
+          お探しのページは見つかりませんでした。<br />
           既に削除されているか、URLが間違っている可能性があります。
         </p>
       </PartsSection>
       <PartsSection v-else-if="desc === 'mainte'">
         <h2>{{ title }}</h2>
         <p>
-          ただいまメンテナンス中です。<br>
+          ただいまメンテナンス中です。<br />
           しばらくしてからアクセスください。
         </p>
       </PartsSection>
       <PartsSection v-else>
         <h2>{{ title }}</h2>
         <p>
-          申し訳ありません。<br>
+          申し訳ありません。<br />
           予期しないエラーが発生しました。
           <span>{{ error?.message }}</span>
         </p>
@@ -79,16 +79,16 @@ const title = computed(() => {
     offline: 'オフラインです',
     notfound: 'ページが見つかりません',
     mainte: 'メンテナンス中です',
-    error: 'エラーが発生しました'
+    error: 'エラーが発生しました',
   }[desc.value]
 })
 
 useHead({
   title: title.value,
-  titleTemplate: title => `${title} | あぉ～ん タイピング`,
+  titleTemplate: (title) => `${title} | あぉ～ん タイピング`,
   meta: [{ name: 'robots', content: 'noindex' }],
   bodyAttrs: {
-    class: 'scroll-y'
-  }
+    class: 'scroll-y',
+  },
 })
 </script>

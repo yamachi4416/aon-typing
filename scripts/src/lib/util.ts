@@ -14,7 +14,7 @@ interface HttpResponse {
   response: http.IncomingMessage
 }
 
-export async function httpFetch (url: string, options: HttpRequestOptions = {}) {
+export async function httpFetch(url: string, options: HttpRequestOptions = {}) {
   return await new Promise<HttpResponse>((resolve, reject) => {
     const h = url.startsWith('https') ? https : http
 
@@ -26,7 +26,7 @@ export async function httpFetch (url: string, options: HttpRequestOptions = {}) 
       res.on('end', () => {
         resolve({ data: Buffer.concat(buffers), response: res })
       })
-      res.on('error', error => reject(error))
+      res.on('error', (error) => reject(error))
     })
 
     if (options.headers) {
@@ -38,7 +38,7 @@ export async function httpFetch (url: string, options: HttpRequestOptions = {}) 
     if (!req.getHeader('user-agent')) {
       req.setHeader(
         'user-agent',
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 Edg/90.0.818.62'
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 Edg/90.0.818.62',
       )
     }
 
@@ -53,11 +53,11 @@ export async function httpFetch (url: string, options: HttpRequestOptions = {}) 
   })
 }
 
-export function defineCommand<T, R> (def: CommandModule<T, R>) {
+export function defineCommand<T, R>(def: CommandModule<T, R>) {
   return def
 }
 
-function formatDateValues (date?: Date) {
+function formatDateValues(date?: Date) {
   const d = date ?? new Date()
   return {
     yyyy: String(d.getFullYear()),
@@ -65,26 +65,23 @@ function formatDateValues (date?: Date) {
     dd: String(d.getDate()).padStart(2, '0'),
     hh: String(d.getHours()).padStart(2, '0'),
     mm: String(d.getMinutes()).padStart(2, '0'),
-    ss: String(d.getSeconds()).padStart(2, '0')
+    ss: String(d.getSeconds()).padStart(2, '0'),
   }
 }
 
-export function fmtDate (
+export function fmtDate(
   cb: (fmt: ReturnType<typeof formatDateValues>) => string,
-  date?: Date
+  date?: Date,
 ) {
   return cb(formatDateValues(date))
 }
 
-export async function prompt (message: string) {
+export async function prompt(message: string) {
   return await new Promise<string>((resolve) => {
     const readline = createInterface(process.stdin, process.stdout)
-    readline.question(
-      message,
-      (answer) => {
-        readline.close()
-        resolve(answer)
-      }
-    )
+    readline.question(message, (answer) => {
+      readline.close()
+      resolve(answer)
+    })
   })
 }

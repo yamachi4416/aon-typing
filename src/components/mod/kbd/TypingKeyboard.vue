@@ -13,14 +13,14 @@ import Keyboard from '~/components/mod/kbd/JISKeyboard.vue'
 
 withDefaults(
   defineProps<{
-    typeKey?: string;
-    setting?: any;
-    keys: Keys;
+    typeKey?: string
+    setting?: any
+    keys: Keys
   }>(),
   {
     typeKey: null,
-    setting: () => ({})
-  }
+    setting: () => ({}),
+  },
 )
 </script>
 
@@ -36,7 +36,7 @@ withDefaults(
       fill: rgba(255, 255, 255, 0.2);
     }
 
-    &[highlight="true"] {
+    &[highlight='true'] {
       path,
       rect {
         fill: rgb(255, 208, 138);

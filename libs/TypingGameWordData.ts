@@ -1,6 +1,6 @@
 import {
   TypingGameWordState,
-  TypingGameWordInfoState
+  TypingGameWordInfoState,
 } from './TypingGameWordStates'
 import { ProblemDetailWord } from '~~/types/problems'
 
@@ -14,13 +14,13 @@ export class TypingGameWordData {
   wordState: TypingGameWordState
   infoState: TypingGameWordInfoState
 
-  constructor (i: number, data?: ProblemDetailWord) {
+  constructor(i: number, data?: ProblemDetailWord) {
     Object.assign(this._init(i), data)
     this.wordState = new TypingGameWordState(data.word)
     this.infoState = new TypingGameWordInfoState(data.info, data.info2)
   }
 
-  _init (i: number) {
+  _init(i: number) {
     this.index = i
     this.startTime = 0
     this.endTime = 0
@@ -29,15 +29,15 @@ export class TypingGameWordData {
     return this
   }
 
-  continue (i: number) {
+  continue(i: number) {
     this._init(i)
   }
 
-  get mistake () {
+  get mistake() {
     return this.misses.length
   }
 
-  get success () {
+  get success() {
     return this.wordState.finished
   }
 }

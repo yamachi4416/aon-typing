@@ -70,7 +70,7 @@ const shiftLeftKeySet = new Set(shiftLeftKeys)
 const shiftRightKeySet = new Set(shiftRightKeys)
 
 export class JISKeys extends Keys {
-  getLabelByIndex (idx: number, shift: boolean): string {
+  getLabelByIndex(idx: number, shift: boolean): string {
     switch (idx) {
       case 0:
         return ''
@@ -93,26 +93,26 @@ export class JISKeys extends Keys {
     }
   }
 
-  getKeyByIndex (idx: number, shift: boolean): string {
+  getKeyByIndex(idx: number, shift: boolean): string {
     if (shift) {
       return shiftKeys[idx]
     }
     return normalKeys[idx]
   }
 
-  isShiftKey (key: string): boolean {
+  isShiftKey(key: string): boolean {
     return shiftKeySet.has(key)
   }
 
-  isShiftLeftKey (key: string): boolean {
+  isShiftLeftKey(key: string): boolean {
     return shiftLeftKeySet.has(key)
   }
 
-  isShiftRightKey (key: string): boolean {
+  isShiftRightKey(key: string): boolean {
     return shiftRightKeySet.has(key)
   }
 
-  getHandIdx (key: string): number {
+  getHandIdx(key: string): number {
     return handMap[key] || 0
   }
 }

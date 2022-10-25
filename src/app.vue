@@ -18,10 +18,10 @@ onBeforeUnmount(() => {
 })
 
 useHead({
-  titleTemplate: title => `${title ? `${title} | ` : ''}あぉ～ん タイピング`
+  titleTemplate: (title) => `${title ? `${title} | ` : ''}あぉ～ん タイピング`,
 })
 
-function setVH () {
+function setVH() {
   if (document.body.style.setProperty) {
     const vh = window.innerHeight
     document.body.style.setProperty('--maxvh', `${vh}px`)

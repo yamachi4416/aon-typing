@@ -16,46 +16,34 @@ export class TypingProblemQuestioner {
   endWords: TypingGameWordData[]
   setting: any
 
-  constructor ({
-    problem,
-    setting
-  }: {
-    problem: ProblemDetail
-    setting: any
-  }) {
+  constructor({ problem, setting }: { problem: ProblemDetail; setting: any }) {
     this.init({ problem, setting })
   }
 
-  get id () {
+  get id() {
     return this.problem?.id
   }
 
-  get type () {
+  get type() {
     return this.problem?.type
   }
 
-  get hasNext () {
+  get hasNext() {
     return this.words.length > 0
   }
 
-  get totalCharCount () {
+  get totalCharCount() {
     return (
       this.words.reduce((a, w) => a + w.wordState.words.length, 0) +
       this.endWords.reduce((a, w) => a + w.wordState.words.length, 0)
     )
   }
 
-  get current () {
+  get current() {
     return this.words[0]
   }
 
-  init ({
-    problem,
-    setting
-  }: {
-    problem: ProblemDetail
-    setting: any
-  }) {
+  init({ problem, setting }: { problem: ProblemDetail; setting: any }) {
     this.problem = problem
     this.words = problem.words.map((w, i) => new TypingGameWordData(i, w))
     this.endWords = []
@@ -66,15 +54,15 @@ export class TypingProblemQuestioner {
     }
   }
 
-  nextWord () {
+  nextWord() {
     this.endWords.push(this.words.shift())
   }
 
-  reset () {
+  reset() {
     this.init(this)
   }
 
-  continue () {
+  continue() {
     this.endWords.splice(0)
     this.words.forEach((w, i) => w.continue(i))
   }

@@ -1,11 +1,11 @@
-export function isNumber (num: any): num is number {
+export function isNumber(num: any): num is number {
   if (num == null) {
     return false
   }
   return typeof num === 'number' && !isNaN(num)
 }
 
-export async function countDown (count: number, tick: (count: number) => void) {
+export async function countDown(count: number, tick: (count: number) => void) {
   return await new Promise((resolve) => {
     const id = setInterval(() => {
       tick(--count)
@@ -17,7 +17,7 @@ export async function countDown (count: number, tick: (count: number) => void) {
   })
 }
 
-export async function wait (time: number) {
+export async function wait(time: number) {
   return await new Promise<void>((resolve) => {
     setTimeout(() => {
       resolve()
@@ -25,10 +25,10 @@ export async function wait (time: number) {
   })
 }
 
-export function pagenate<T> ({
+export function pagenate<T>({
   items,
   page,
-  pageSize
+  pageSize,
 }: {
   items: ArrayLike<T>
   page: number
@@ -44,6 +44,6 @@ export function pagenate<T> ({
   return {
     items: Array.prototype.slice.call(items, start, end),
     pages: lastPage,
-    count: items.length
+    count: items.length,
   }
 }

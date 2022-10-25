@@ -3,11 +3,11 @@ import { useScrollWaiter } from '~/composables/useScrollWaiter'
 class Navigator {
   path: string
 
-  get enable () {
+  get enable() {
     return !!this.path
   }
 
-  replaceQuery (query: Record<string, string | string[]>, keep: boolean = true) {
+  replaceQuery(query: Record<string, string | string[]>, keep: boolean = true) {
     const router = useRouter()
     const repQuery = keep ? { ...useRoute().query, ...query } : { ...query }
     Object.keys(repQuery).forEach((key) => {
@@ -20,40 +20,40 @@ class Navigator {
     router.options.history.replace(to.fullPath)
   }
 
-  async indexProblemDetail ({ id }: { id: string }) {
+  async indexProblemDetail({ id }: { id: string }) {
     await useRouter().push({
       name: 'index-problems-id',
-      params: { id }
+      params: { id },
     })
   }
 
-  async indexTagDetail ({ id }: { id: string }) {
+  async indexTagDetail({ id }: { id: string }) {
     await useRouter().push({
       name: 'index-problems-tags-id',
-      params: { id }
+      params: { id },
     })
   }
 
-  async gameTagDetail ({ id }: { id: string }) {
+  async gameTagDetail({ id }: { id: string }) {
     await useRouter().push({
       name: 'game-menu-problems-tags-id',
-      params: { id }
+      params: { id },
     })
   }
 
-  async gameProblemDetail ({ id }: { id: string }) {
+  async gameProblemDetail({ id }: { id: string }) {
     await useRouter().push({
       name: 'game-menu-problems-id',
-      params: { id }
+      params: { id },
     })
   }
 
-  async gameMenu ({ id }: { id: string }) {
+  async gameMenu({ id }: { id: string }) {
     useProblems().setting.problemId = id
     await useRouter().push({ name: 'game-menu' })
   }
 
-  async backOrIndex () {
+  async backOrIndex() {
     if (this.enable) {
       if (this.path.startsWith('/game')) {
         await useRouter().push({ name: 'index' })
@@ -65,7 +65,7 @@ class Navigator {
     }
   }
 
-  async backOrGameMenu () {
+  async backOrGameMenu() {
     if (this.enable) {
       useRouter().back()
     } else {
@@ -86,7 +86,7 @@ export default defineNuxtPlugin((_) => {
   return {
     provide: {
       navigator: readonly(navigator),
-      scrollWaiter: useScrollWaiter()
-    }
+      scrollWaiter: useScrollWaiter(),
+    },
   }
 })

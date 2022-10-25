@@ -19,14 +19,14 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    handNumbers?: number[];
+    handNumbers?: number[]
   }>(),
   {
-    handNumbers: () => []
-  }
+    handNumbers: () => [],
+  },
 )
 
-function hi (k: number) {
+function hi(k: number) {
   return props.handNumbers?.some((v, _i) => v === k) ?? false
 }
 </script>
@@ -36,7 +36,7 @@ function hi (k: number) {
   rect {
     fill: #eee;
 
-    &[highlight="true"] {
+    &[highlight='true'] {
       fill: rgb(255, 208, 138);
     }
   }

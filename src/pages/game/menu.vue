@@ -31,10 +31,10 @@ import ModalPanel from '~/components/parts/ModalPanel.vue'
 import ProblemDetailPanel from '~/components/mod/game/ProblemDetailPanel.vue'
 import { ProblemListItem } from '~~/types/problems'
 
-type Modal = InstanceType<typeof ModalPanel>;
+type Modal = InstanceType<typeof ModalPanel>
 
 useHead({
-  title: 'タイピングメニュー'
+  title: 'タイピングメニュー',
 })
 
 const modalMenu = ref<Modal>()
@@ -47,11 +47,11 @@ const problemDetailPanel = ref<InstanceType<typeof ProblemDetailPanel>>()
 onMounted(() => modalMenu.value.open())
 
 const hasPendingModal = computed(
-  () => (modals.filter(modal => modal.value.isPending)?.length ?? 0) > 0
+  () => (modals.filter((modal) => modal.value.isPending)?.length ?? 0) > 0,
 )
 
 const openModal = computed(
-  () => modals.reverse().find(modal => modal.value.isOpen)?.value
+  () => modals.reverse().find((modal) => modal.value.isOpen)?.value,
 )
 
 onBeforeRouteLeave(async (_to, _from, next) => {
@@ -71,23 +71,26 @@ onBeforeRouteLeave(async (_to, _from, next) => {
   return true
 })
 
-async function startTyping () {
+async function startTyping() {
   if (hasPendingModal.value) return
   await useRouter().push({
     name: 'game-play',
-    query: { id: useProblems().setting.problemId }
+    query: { id: useProblems().setting.problemId },
   })
 }
 
-async function openProblemSelectDetail (problem: ProblemListItem) {
+async function openProblemSelectDetail(problem: ProblemListItem) {
   await openProblemDetailShow(problem, true)
 }
 
-async function openProblemDetail (problem: ProblemListItem) {
+async function openProblemDetail(problem: ProblemListItem) {
   await openProblemDetailShow(problem, false)
 }
 
-async function openProblemDetailShow (problem: ProblemListItem, selectable: boolean) {
+async function openProblemDetailShow(
+  problem: ProblemListItem,
+  selectable: boolean,
+) {
   if (hasPendingModal.value) return
   const tasks = []
   tasks.push(modalProblemDetail.value.open())
@@ -96,7 +99,7 @@ async function openProblemDetailShow (problem: ProblemListItem, selectable: bool
   await Promise.all(tasks)
 }
 
-function selcet ({ id }: { id: string }) {
+function selcet({ id }: { id: string }) {
   if (hasPendingModal.value) return
   useProblems().setting.problemId = id
   let anim = true
@@ -108,7 +111,7 @@ function selcet ({ id }: { id: string }) {
   }
 }
 
-function cancel () {
+function cancel() {
   useNavigator().backOrIndex()
 }
 </script>

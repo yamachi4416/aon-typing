@@ -14,34 +14,32 @@
             <small>（ハンドルネーム）</small>
           </label>
           <span class="form-group-input">
-            <input id="name" v-model="contact.name" @change="change">
+            <input id="name" v-model="contact.name" @change="change" />
             <span v-show="contact.errors.name" class="error-message">{{
               contact.errors.name
             }}</span>
           </span>
         </div>
         <div class="form-group row">
-          <label
-            class="form-group-label col-3 col-sm-12"
-            for="email"
-          >メールアドレス</label>
+          <label class="form-group-label col-3 col-sm-12" for="email"
+            >メールアドレス</label
+          >
           <span class="form-group-input">
             <input
               id="email"
               v-model="contact.email"
               type="email"
               @change="change"
-            >
+            />
             <span v-show="errors.email" class="error-message">{{
               errors.email
             }}</span>
           </span>
         </div>
         <div class="form-group row">
-          <label
-            class="form-group-label col-3 col-sm-12"
-            for="message"
-          >お問い合わせ内容</label>
+          <label class="form-group-label col-3 col-sm-12" for="message"
+            >お問い合わせ内容</label
+          >
           <span class="form-group-input">
             <textarea id="message" v-model="contact.message" />
             <span v-show="contact.errors.message" class="error-message">{{
@@ -66,18 +64,18 @@
 <script setup lang="ts">
 useHead({
   title: 'お問い合わせ',
-  meta: [{ name: 'robots', content: 'noindex' }]
+  meta: [{ name: 'robots', content: 'noindex' }],
 })
 
 const contact = shallowReactive(useContact().init().contact)
 const errors = ref(contact.errors)
 const gError = ref('')
 
-function change () {
+function change() {
   errors.value = contact.errors
 }
 
-async function submit () {
+async function submit() {
   if (contact.hasErrors) return
   try {
     gError.value = ''
@@ -85,9 +83,9 @@ async function submit () {
     await fetch(useRuntimeConfig().public.contactUrl, {
       method: 'post',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: contact.toJSON()
+      body: contact.toJSON(),
     }).then((res) => {
       if (!res.ok) {
         throw res.statusText

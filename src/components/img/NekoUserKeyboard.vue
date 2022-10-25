@@ -4,5 +4,5 @@
     width="296"
     height="296"
     alt="タイピングねこ"
-  >
+  />
 </template>

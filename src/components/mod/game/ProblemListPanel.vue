@@ -5,9 +5,7 @@
     :show-close="true"
     @close="$emit('close')"
   >
-    <template #title>
-      タイピング問題の選択
-    </template>
+    <template #title> タイピング問題の選択 </template>
     <div v-show="tags.size > 0" class="taglist buttons">
       <span v-for="t in tags.values()" :key="`tag-${t.id}`">
         <button class="taglist-item button" @click.self="removeTag(t)">
@@ -48,10 +46,10 @@ import { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 import { pagenate } from '~~/libs/Util'
 
 defineEmits<{
-  (e: 'select', item: ProblemListItem);
-  (e: 'detail', item: ProblemListItem);
-  (e: 'tag', item: ProblemItemTag);
-  (e: 'close');
+  (e: 'select', item: ProblemListItem)
+  (e: 'detail', item: ProblemListItem)
+  (e: 'tag', item: ProblemItemTag)
+  (e: 'close')
 }>()
 
 const pageSize = 30
@@ -61,28 +59,28 @@ const tags = ref(new Map<string, ProblemItemTag>())
 const pages = computed(() =>
   pagenate({
     items: useProblems().problemTagFilter({
-      qtags: [...tags.value.keys()]
+      qtags: [...tags.value.keys()],
     }),
     page: page.value,
-    pageSize
-  })
+    pageSize,
+  }),
 )
 
 const content = ref<InstanceType<typeof ModalContentVue>>()
 
-async function selcet (p: number) {
+async function selcet(p: number) {
   page.value = p
   await nextTick()
   content.value.scroll({ top: 0 })
 }
 
-function addTag (tag: ProblemItemTag) {
+function addTag(tag: ProblemItemTag) {
   if (!tags.value.has(tag.id)) {
     tags.value.set(tag.id, tag)
   }
 }
 
-function removeTag (tag: ProblemItemTag) {
+function removeTag(tag: ProblemItemTag) {
   if (tags.value.has(tag.id)) {
     tags.value.delete(tag.id)
   }

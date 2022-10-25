@@ -14,13 +14,13 @@ const show = ref(false)
 const modal = ref<HTMLElement>()
 
 defineExpose({
-  get isOpen () {
+  get isOpen() {
     return show.value
   },
-  get isPending () {
+  get isPending() {
     return pending.value
   },
-  async open (anim = true) {
+  async open(anim = true) {
     if (show.value || pending.value) return
     pending.value = true
     show.value = true
@@ -35,7 +35,7 @@ defineExpose({
     }
     pending.value = false
   },
-  async close (anim = true) {
+  async close(anim = true) {
     if (!show.value || pending.value) return
     pending.value = true
     if (anim && modal.value) {
@@ -46,7 +46,7 @@ defineExpose({
     show.value = false
     await nextTick()
     pending.value = false
-  }
+  },
 })
 </script>
 
@@ -77,7 +77,7 @@ defineExpose({
     align-items: center;
     &::after,
     &::before {
-      content: " ";
+      content: ' ';
       display: block;
       flex: 1;
       width: 100%;

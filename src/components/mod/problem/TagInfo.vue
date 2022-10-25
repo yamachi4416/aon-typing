@@ -1,12 +1,8 @@
 <template>
   <PartsSection>
     <div class="tag-info">
-      <div class="tag-info-id">
-        No.{{ tag.id }}
-      </div>
-      <h2 class="tag-info-title">
-        タグ：{{ tag.name }}
-      </h2>
+      <div class="tag-info-id">No.{{ tag.id }}</div>
+      <h2 class="tag-info-title">タグ：{{ tag.name }}</h2>
       <div class="tag-info-taglist buttons">
         <span v-for="t in tags" :key="`tag-${t.id}`">
           <button
@@ -35,26 +31,26 @@ import { TagInfo } from '~~/types/problems'
 
 const props = withDefaults(
   defineProps<{
-    tag: TagInfo;
-    qtags?: string[];
+    tag: TagInfo
+    qtags?: string[]
   }>(),
   {
     tag: () => ({} as TagInfo),
-    qtags: () => []
-  }
+    qtags: () => [],
+  },
 )
 
 const emit = defineEmits<{
-  (e: 'tag', tags: string[]);
+  (e: 'tag', tags: string[])
 }>()
 
 const tags = ref(getTags())
 
-function getTags () {
+function getTags() {
   const mp = new Set<string>()
   return (
     props.tag.problems
-      ?.flatMap(p => p.tags)
+      ?.flatMap((p) => p.tags)
       .filter((tag) => {
         if (tag.id === props.tag.id || mp.has(tag.id)) {
           return false
@@ -62,16 +58,16 @@ function getTags () {
         mp.add(tag.id)
         return true
       })
-      .map(tag => ({
+      .map((tag) => ({
         ...tag,
-        selected: false
+        selected: false,
       })) ?? []
   )
 }
 
-function selectTag (tag: { selected: boolean }) {
+function selectTag(tag: { selected: boolean }) {
   tag.selected = !tag.selected
-  const stags = tags.value.filter(t => t.selected).map(t => t.id)
+  const stags = tags.value.filter((t) => t.selected).map((t) => t.id)
   useNavigator().replaceQuery({ tags: stags.join(',') })
   emit('tag', stags)
 }
@@ -83,12 +79,12 @@ watch(
     tags.value.forEach((tag) => {
       tag.selected = stags.has(tag.id)
     })
-  }
+  },
 )
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/css/vars.scss";
+@import '~/assets/css/vars.scss';
 
 .tag-info {
   display: flex;

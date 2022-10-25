@@ -3,29 +3,34 @@ import path from 'node:path'
 import * as prettier from 'prettier'
 import { defineCommand } from '../lib/util'
 import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
-import { ProblemDetail, ProblemListItem, ProblemTagSummary, TagInfo } from '~~/types/problems'
+import {
+  ProblemDetail,
+  ProblemListItem,
+  ProblemTagSummary,
+  TagInfo,
+} from '~~/types/problems'
 
 type ProblemDetailData = Omit<ProblemDetail, 'tags'> & { tags: string[] }
 
-async function listJsonFiles (dir: string) {
+async function listJsonFiles(dir: string) {
   const files = await fs.readdir(dir, { withFileTypes: true })
   return files
-    .filter(entry => entry.isFile() && entry.name.endsWith('.json'))
-    .map(entry => path.resolve(dir, entry.name))
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
+    .map((entry) => path.resolve(dir, entry.name))
 }
 
-async function writeJson (file: string, data: any) {
+async function writeJson(file: string, data: any) {
   return await fs.writeFile(
     file,
     prettier.format(JSON.stringify(data), {
-      parser: 'json'
-    })
+      parser: 'json',
+    }),
   )
 }
 
-async function generateProblemData ({
+async function generateProblemData({
   dataDir,
-  apiDir
+  apiDir,
 }: {
   dataDir: string
   apiDir: string
@@ -41,7 +46,7 @@ async function generateProblemData ({
 
   const tags = await fs
     .readFile(tagsFile, { flag: 'r' })
-    .then(buf => JSON.parse(buf.toString()))
+    .then((buf) => JSON.parse(buf.toString()))
     .catch(() => ({}))
 
   let tagId = Object.values(tags).length + 1
@@ -53,11 +58,13 @@ async function generateProblemData ({
     (
       await listJsonFiles(dataDir)
     ).map(async (p) => {
-      const dataObj: ProblemDetailData = JSON.parse((await fs.readFile(p)).toString())
+      const dataObj: ProblemDetailData = JSON.parse(
+        (await fs.readFile(p)).toString(),
+      )
       const problem: ProblemDetail = {
         id: path.basename(p, '.json'),
         ...dataObj,
-        tags: []
+        tags: [],
       }
 
       if (problem.type === 'japanese') {
@@ -70,7 +77,7 @@ async function generateProblemData ({
         if (!tags[name]) {
           tags[name] = {
             id: String(tagId++).padStart(5, '0'),
-            problems: []
+            problems: [],
           }
         }
 
@@ -82,9 +89,9 @@ async function generateProblemData ({
 
       return {
         ...problem,
-        birthtime: (await fs.stat(p)).birthtimeMs
+        birthtime: (await fs.stat(p)).birthtimeMs,
       }
-    })
+    }),
   )
 
   await writeJson(problemsFile, {
@@ -94,8 +101,11 @@ async function generateProblemData ({
         title: p.title,
         type: p.type,
         words: p.words.length,
-        chars: p.words.reduce((s: number, w: { word: string }) => s + w.word.length, 0),
-        tags: p.tags || []
+        chars: p.words.reduce(
+          (s: number, w: { word: string }) => s + w.word.length,
+          0,
+        ),
+        tags: p.tags || [],
       }
 
       problem.tags.forEach((m) => {
@@ -103,7 +113,7 @@ async function generateProblemData ({
       })
 
       return problem
-    })
+    }),
   })
 
   await fs.rm(tagsDist, { recursive: true }).catch(() => {})
@@ -115,7 +125,7 @@ async function generateProblemData ({
       const tagInfo: TagInfo = {
         id: tag.id,
         name: tagName,
-        problems: tag.problems
+        problems: tag.problems,
       }
 
       await writeJson(path.join(tagsDist, `${tag.id as string}.json`), tagInfo)
@@ -123,9 +133,9 @@ async function generateProblemData ({
       return {
         name: tagName,
         id: tag.id,
-        count: tag.problems.length
+        count: tag.problems.length,
       }
-    })
+    }),
   )
 
   await writeJson(
@@ -135,10 +145,10 @@ async function generateProblemData ({
       .reduce(
         (summary, { name, id, count }) => ({
           ...summary,
-          [name]: { id, count }
+          [name]: { id, count },
         }),
-        {}
-      )
+        {},
+      ),
   )
 
   await writeJson(
@@ -148,46 +158,49 @@ async function generateProblemData ({
         (a, b) =>
           new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() ||
           new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
-          b.birthtime - a.birthtime
+          b.birthtime - a.birthtime,
       )
       .slice(0, 6)
-      .map(p => ({
+      .map((p) => ({
         id: p.id,
         title: p.title,
         type: p.type,
         words: p.words.length,
-        chars: p.words.reduce((s: number, w: { word: string }) => s + w.word.length, 0),
+        chars: p.words.reduce(
+          (s: number, w: { word: string }) => s + w.word.length,
+          0,
+        ),
         createdAt: p.createdAt,
         updatedAt: p.updatedAt,
-        tags: p.tags || []
-      }))
+        tags: p.tags || [],
+      })),
   )
 }
 
 export default defineCommand({
   command: 'generate',
   describe: 'typing problem json sets',
-  builder (yargs) {
+  builder(yargs) {
     return yargs
       .options('data-dir', {
         alias: 'i',
         type: 'string',
         description: 'input data directory',
         demandOption: true,
-        requiresArg: true
+        requiresArg: true,
       })
       .options('api-dir', {
         alias: 'o',
         type: 'string',
         description: 'output directory',
         demandOption: true,
-        requiresArg: true
+        requiresArg: true,
       })
   },
-  async handler ({ dataDir, apiDir }) {
+  async handler({ dataDir, apiDir }) {
     await generateProblemData({
       dataDir,
-      apiDir
+      apiDir,
     })
-  }
+  },
 })

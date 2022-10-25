@@ -25,30 +25,30 @@ import CloseCircle from '~/components/parts/CloseCircle.vue'
 
 withDefaults(
   defineProps<{
-    showClose?: boolean;
+    showClose?: boolean
   }>(),
   {
-    showClose: true
-  }
+    showClose: true,
+  },
 )
 
 defineEmits<{
-  (e: 'close');
+  (e: 'close')
 }>()
 
 const content = ref<HTMLElement>()
 
-function scroll (options: ScrollToOptions) {
+function scroll(options: ScrollToOptions) {
   content.value?.scroll(options)
 }
 
 defineExpose({
-  scroll
+  scroll,
 })
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/css/vars.scss";
+@import '~/assets/css/vars.scss';
 
 .modal-content {
   display: flex;

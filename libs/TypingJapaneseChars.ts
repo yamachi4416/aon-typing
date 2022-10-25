@@ -84,7 +84,7 @@ export const Kana2HiraMap = {
   ン: 'ん',
   ヴ: 'ヴ',
   ヵ: 'か',
-  ヶ: 'が'
+  ヶ: 'が',
 }
 
 export const Hira2KanaMap = Object.keys(Kana2HiraMap).reduce((a, h) => {
@@ -281,7 +281,7 @@ export const JapaneseToTypeCharList1 = [
   ['ヴィ', 'vi'],
   ['ヴ', 'vu'],
   ['ヴェ', 've'],
-  ['ヴォ', 'vo']
+  ['ヴォ', 'vo'],
 ]
 
 export const JapaneseToTypeCharList2 = [
@@ -329,25 +329,25 @@ export const JapaneseToTypeCharList2 = [
   ['『', '['],
   ['』', ']'],
   ['《', '['],
-  ['》', ']']
+  ['》', ']'],
 ]
 
 const JapaneseToTypeCharList = [
   ...JapaneseToTypeCharList1,
   ...JapaneseToTypeCharList1.slice(0, JapaneseToTypeCharList1.length - 1)
     .map((v) => {
-      const cs = v[1].split(',').filter(c => !'aiueon'.includes(c[0]))
-      return (cs.length > 0)
-        ? [`っ${v[0]}`, cs.map(s => s[0] + s).join(',')]
+      const cs = v[1].split(',').filter((c) => !'aiueon'.includes(c[0]))
+      return cs.length > 0
+        ? [`っ${v[0]}`, cs.map((s) => s[0] + s).join(',')]
         : null
     })
-    .filter(v => v),
-  ...JapaneseToTypeCharList2
+    .filter((v) => v),
+  ...JapaneseToTypeCharList2,
 ]
 
 const TypeCharToJapaneseMap = JapaneseToTypeCharList.reduce(
-  (a, v) => a.concat(v[1].split(',').map(s => ({ key: s, val: v[0] }))),
-  [{ key: ',', val: '、' }]
+  (a, v) => a.concat(v[1].split(',').map((s) => ({ key: s, val: v[0] }))),
+  [{ key: ',', val: '、' }],
 )
   .sort((a, b) => {
     if (a.val.length === b.val.length) {
@@ -358,36 +358,36 @@ const TypeCharToJapaneseMap = JapaneseToTypeCharList.reduce(
   .reduce(
     (a, v) => ({
       ...a,
-      [v.key]: v.val
+      [v.key]: v.val,
     }),
-    {}
+    {},
   )
 
 const TypeCharMap = JapaneseToTypeCharList.reduce(
   (a, v) => {
     return { ...a, [v[0]]: v[1].split(',') }
   },
-  { '、': ',' }
+  { '、': ',' },
 )
 
-export function kana2Hira (text: string) {
+export function kana2Hira(text: string) {
   return Array.from(text || '')
-    .map(s => Kana2HiraMap[s] || s)
+    .map((s) => Kana2HiraMap[s] || s)
     .join('')
 }
 
-export function hira2Kana (text: string) {
+export function hira2Kana(text: string) {
   return Array.from(text || '')
-    .map(s => Hira2KanaMap[s] || s)
+    .map((s) => Hira2KanaMap[s] || s)
     .join('')
 }
 
-export function typeJapaneseCharsMap (
+export function typeJapaneseCharsMap(
   text: string,
   length: number = undefined,
-  useKana = false
+  useKana = false,
 ) {
-  const maps = [] as Array<{ jc?: string, ec?: string }>
+  const maps = [] as Array<{ jc?: string; ec?: string }>
   const charMap = TypeCharMap
   const chars = Array.from(text || '')
 
@@ -430,13 +430,13 @@ export function typeJapaneseCharsMap (
   return maps
 }
 
-export function typeJapaneseChars (text: string, length: number = undefined) {
+export function typeJapaneseChars(text: string, length: number = undefined) {
   return typeJapaneseCharsMap(text, length)
-    .map(v => v.ec)
+    .map((v) => v.ec)
     .join('')
 }
 
-export function typeCharsToJapaneseChars (typeChars: string, jpChars: string) {
+export function typeCharsToJapaneseChars(typeChars: string, jpChars: string) {
   const c1 = typeChars[0]
   const c2 = c1 + (typeChars[1] || '')
   const c3 = c2 + (typeChars[2] || '')
@@ -459,7 +459,7 @@ export function typeCharsToJapaneseChars (typeChars: string, jpChars: string) {
   return { jc: null, ec: null }
 }
 
-export function typeCharsFindJapaneseChars (typeChars: string, jpChars: string) {
+export function typeCharsFindJapaneseChars(typeChars: string, jpChars: string) {
   for (const key of Object.keys(TypeCharToJapaneseMap)) {
     if (key.startsWith(typeChars)) {
       const val = TypeCharToJapaneseMap[key]
@@ -471,10 +471,10 @@ export function typeCharsFindJapaneseChars (typeChars: string, jpChars: string) 
   return { jc: null, ec: null }
 }
 
-export function allowDoubleN (
+export function allowDoubleN(
   typeChar: string,
   typeChars: string,
-  jpChars: string
+  jpChars: string,
 ) {
   if (typeChar === 'n') {
     if (jpChars.endsWith('ん')) {
@@ -487,7 +487,7 @@ export function allowDoubleN (
   return false
 }
 
-export function japaneseToTypeCharList () {
+export function japaneseToTypeCharList() {
   return JapaneseToTypeCharList1.slice(0)
 }
 
@@ -499,5 +499,5 @@ export default {
   typeCharsToJapaneseChars,
   typeCharsFindJapaneseChars,
   allowDoubleN,
-  japaneseToTypeCharList
+  japaneseToTypeCharList,
 }

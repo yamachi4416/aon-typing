@@ -11,20 +11,20 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    anim?: boolean;
-    showHeader?: boolean;
-    showFooter?: boolean;
+    anim?: boolean
+    showHeader?: boolean
+    showFooter?: boolean
   }>(),
   {
     anim: true,
     showHeader: true,
-    showFooter: true
-  }
+    showFooter: true,
+  },
 )
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/css/vars.scss";
+@import '~/assets/css/vars.scss';
 
 .basic-page {
   min-height: 100vh;

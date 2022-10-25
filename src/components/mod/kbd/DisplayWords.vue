@@ -1,7 +1,9 @@
 <template>
   <div class="word-words">
     <div class="word-words-info">
-      <span class="word-words-info-left">{{ leftWord }}</span><span class="word-words-info-current">{{ currentWord }}</span><span class="word-words-info-right">{{ rightWord }}</span>
+      <span class="word-words-info-left">{{ leftWord }}</span
+      ><span class="word-words-info-current">{{ currentWord }}</span
+      ><span class="word-words-info-right">{{ rightWord }}</span>
     </div>
   </div>
 </template>
@@ -11,13 +13,13 @@ import { TypingGameWordState } from '~~/libs/TypingGameWordStates'
 
 const props = withDefaults(
   defineProps<{
-    word?: TypingGameWordState;
-    charMode?: boolean;
+    word?: TypingGameWordState
+    charMode?: boolean
   }>(),
   {
     word: () => null,
-    charMode: true
-  }
+    charMode: true,
+  },
 )
 
 const leftWord = computed(() => {

@@ -2,7 +2,7 @@ import { RouterConfig } from '@nuxt/schema'
 import { useScrollWaiter } from '~/composables/useScrollWaiter'
 
 const routerConfig: RouterConfig = {
-  async scrollBehavior (to, from, savedPosition) {
+  async scrollBehavior(to, from, savedPosition) {
     if (to?.name === from?.name && to?.params !== from?.params) {
       useScrollWaiter().flush()
     }
@@ -18,7 +18,7 @@ const routerConfig: RouterConfig = {
     } else {
       return { left: 0, top: 0 }
     }
-  }
+  },
 }
 
 export default routerConfig

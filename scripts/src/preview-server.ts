@@ -10,24 +10,24 @@ interface Hanlder {
   handle: (
     url: UrlWithStringQuery,
     req: IncomingMessage,
-    res: ServerResponse
+    res: ServerResponse,
   ) => Promise<void>
 }
 
-function defineHandler (handler: Hanlder) {
+function defineHandler(handler: Hanlder) {
   return handler
 }
 
-function contactHandler () {
+function contactHandler() {
   return defineHandler({
-    match (url, req) {
+    match(url, req) {
       return (
         req.method.toLowerCase() === 'post' &&
         url.pathname === '/api/contact' &&
         /^application\/json/i.test(req.headers['content-type'])
       )
     },
-    async handle (_, req, res) {
+    async handle(_, req, res) {
       const buffers = []
       for await (const buffer of req) {
         buffers.push(buffer)
@@ -36,23 +36,23 @@ function contactHandler () {
       const data = Buffer.concat(buffers).toJSON()
       console.log(data)
 
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      await new Promise((resolve) => setTimeout(resolve, 1000))
       res.statusCode = 200
       res.end()
-    }
+    },
   })
 }
 
-function sendFileHandler (dist: string) {
+function sendFileHandler(dist: string) {
   const root = path.normalize(path.resolve(dist))
 
   return defineHandler({
-    match (_, req) {
+    match(_, req) {
       return req.method.toLowerCase() === 'get'
     },
-    async handle (url, _, res) {
+    async handle(url, _, res) {
       const file = path.normalize(
-        path.resolve(dist, ...normalize(url.pathname).split('/'))
+        path.resolve(dist, ...normalize(url.pathname).split('/')),
       )
 
       if (!file.startsWith(root)) {
@@ -78,10 +78,10 @@ function sendFileHandler (dist: string) {
 
       res.flushHeaders()
       stream.pipe(res)
-    }
+    },
   })
 
-  function normalize (pathname: string) {
+  function normalize(pathname: string) {
     if (pathname.endsWith('/')) {
       return `${pathname}index.html`
     } else if (!/\.[^./]+$/.test(pathname)) {
@@ -90,7 +90,7 @@ function sendFileHandler (dist: string) {
     return pathname
   }
 
-  function mimetype (filename: string) {
+  function mimetype(filename: string) {
     return (
       {
         '.js': 'text/javascript',
@@ -107,14 +107,14 @@ function sendFileHandler (dist: string) {
         '.webp': 'image/webp',
         '.gif': 'image/gif',
         '.svg': 'image/svg+xml',
-        '.pdf': 'application/pdf'
+        '.pdf': 'application/pdf',
       }[path.extname(filename)?.toLocaleLowerCase() ?? ''] ??
       'application/octet-stream'
     )
   }
 }
 
-function logging (req: IncomingMessage, res: ServerResponse) {
+function logging(req: IncomingMessage, res: ServerResponse) {
   res.once('close', () => {
     try {
       const date = new Date().toISOString()
@@ -131,21 +131,21 @@ function logging (req: IncomingMessage, res: ServerResponse) {
   console.log(`${date} : ${req.method} ${req.url}`)
 }
 
-function builder (yargs: yargs.Argv) {
+function builder(yargs: yargs.Argv) {
   return yargs
     .options('dir', {
       alias: 'd',
       type: 'string',
       description: 'static file root directory',
       default: '.',
-      requiresArg: true
+      requiresArg: true,
     })
     .options('host', {
       alias: 'H',
       type: 'string',
       description: 'listen host default',
       default: 'localhost',
-      requiresArg: true
+      requiresArg: true,
     })
     .options('port', {
       alias: 'p',
@@ -153,13 +153,13 @@ function builder (yargs: yargs.Argv) {
       description:
         "listen host default. that in directory of specify by '--dir'",
       default: 3000,
-      requiresArg: true
+      requiresArg: true,
     })
     .options('404', {
       alias: '404',
       type: 'string',
       description: '404 error html file',
-      requiresArg: true
+      requiresArg: true,
     })
 }
 
@@ -167,14 +167,14 @@ type MainArgs = ReturnType<typeof builder> extends yargs.Argv<infer T>
   ? T
   : never
 
-async function handler (args: MainArgs) {
+async function handler(args: MainArgs) {
   const handlers = [contactHandler(), sendFileHandler(args.dir)]
 
   const server = createServer((req, res) => {
     try {
       logging(req, res)
       const url = urlParse(req.url)
-      const handler = handlers.find(handler => handler.match(url, req))
+      const handler = handlers.find((handler) => handler.match(url, req))
       if (handler) {
         void handler.handle(url, req, res)
       }
@@ -193,7 +193,7 @@ async function handler (args: MainArgs) {
 ${'-'.repeat(50)}
 Server Listen On  : ${args.host}:${args.port}
 Static Files Root : ${args.dir}
-${'-'.repeat(50)}`.trimStart()
+${'-'.repeat(50)}`.trimStart(),
         )
       })
       .on('close', () => {
@@ -206,10 +206,10 @@ const problem = defineCommand({
   command: 'preview',
   describe: 'generate preview server',
   builder,
-  handler
+  handler,
 })
 
-export function main () {
+export function main() {
   void yargs
     .locale('en')
     .help()

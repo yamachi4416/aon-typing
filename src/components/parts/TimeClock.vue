@@ -16,15 +16,15 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    time?: number;
+    time?: number
   }>(),
   {
-    time: 0
-  }
+    time: 0,
+  },
 )
 
 defineEmits<{
-  (e: 'click');
+  (e: 'click')
 }>()
 
 const minute = computed(() => {

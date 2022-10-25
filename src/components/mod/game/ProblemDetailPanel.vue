@@ -21,13 +21,13 @@
 import {
   ProblemDetail,
   ProblemDetailWord,
-  ProblemListItem
+  ProblemListItem,
 } from '~~/types/problems'
 
 defineEmits<{
-  (e: 'select', detail: ProblemDetail);
-  (e: 'back');
-  (e: 'close');
+  (e: 'select', detail: ProblemDetail)
+  (e: 'back')
+  (e: 'close')
 }>()
 
 const showSelect = ref(true)
@@ -41,28 +41,28 @@ const detail = computed(() => {
   for (let i = 0, l = problem.value.words; i < l; i++) {
     words.push({
       info: '〇'.repeat(10),
-      word: 'ab cd ef gh ij'
+      word: 'ab cd ef gh ij',
     })
   }
   return { ...problem.value, words } as ProblemDetail
 })
 
-async function setProblem (item: ProblemListItem) {
+async function setProblem(item: ProblemListItem) {
   problem.value = item
   problemDetail.value = null
   problemDetail.value = await useProblems().lazyProblemDetail(item)
 }
 
 defineExpose({
-  setDetail ({
+  setDetail({
     problem,
-    selectable
-  } : {
-    problem: ProblemListItem,
+    selectable,
+  }: {
+    problem: ProblemListItem
     selectable: boolean
   }) {
     showSelect.value = selectable
     setProblem(problem)
-  }
+  },
 })
 </script>

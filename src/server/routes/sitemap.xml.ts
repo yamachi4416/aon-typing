@@ -6,8 +6,8 @@ export default defineEventHandler(({ res }) => {
   const config = useRuntimeConfig()
   const baseUrl = config.public.baseUrl
   const urlset = [...new Set(['/', ...routes()])]
-    .filter(route => !/\.\w+$/.test(route))
-    .map(route => `${baseUrl}${route}`)
+    .filter((route) => !/\.\w+$/.test(route))
+    .map((route) => `${baseUrl}${route}`)
     .sort()
 
   return `
@@ -15,11 +15,11 @@ export default defineEventHandler(({ res }) => {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urlset
-  .map(url =>
+  .map((url) =>
     `
   <url>
     <loc>${url}</loc>
-  </url>`.replace(/^\n/, '')
+  </url>`.replace(/^\n/, ''),
   )
   .join('\n')}
 </urlset>`.trim()

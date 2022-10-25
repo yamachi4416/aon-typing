@@ -13,16 +13,16 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    limit: number;
-    used?: number;
-    width?: number;
-    height?: number;
+    limit: number
+    used?: number
+    width?: number
+    height?: number
   }>(),
   {
     used: 0,
     width: 1000,
-    height: 5
-  }
+    height: 5,
+  },
 )
 
 const usedWidth = computed(() => {

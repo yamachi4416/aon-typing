@@ -8,7 +8,7 @@ export const rankList = () => {
     { id: 4, start: 158, end: 208, name: 'うし' },
     { id: 5, start: 209, end: 259, name: 'うま' },
     { id: 6, start: 260, end: 299, name: 'チーター' },
-    { id: 7, start: 300, end: null, name: 'あぉ～ん' }
+    { id: 7, start: 300, end: null, name: 'あぉ～ん' },
   ]
 }
 
@@ -21,7 +21,7 @@ export class TypingGameInfo {
   totalTypeCorrect: number
   endWords: TypingGameWordData[]
 
-  constructor (game) {
+  constructor(game) {
     this.tick = game.tick
     this.totalTypeCount = game.totalTypeCount
     this.totalTypeMiss = game.totalTypeMiss
@@ -35,29 +35,27 @@ export class TypingGameInfo {
     }
   }
 
-  get time () {
+  get time() {
     return this.tick
   }
 
-  get missCount () {
+  get missCount() {
     return this.totalTypeMiss
   }
 
-  get correctRate () {
-    return this.totalTypeCount
-      ? this.totalTypeCorrect / this.totalTypeCount
-      : 0
+  get correctRate() {
+    return this.totalTypeCount ? this.totalTypeCorrect / this.totalTypeCount : 0
   }
 
-  get wordPerMin () {
+  get wordPerMin() {
     return Math.round((this.totalTypeCount / this.time) * 60000)
   }
 
-  get score () {
+  get score() {
     return Math.round(this.wordPerMin * Math.pow(this.correctRate, 3))
   }
 
-  get missKeys () {
+  get missKeys() {
     const sums = this.endWords
       .reduce((a, w) => a.concat(w.misses), [])
       .reduce((a, w) => {
@@ -66,11 +64,11 @@ export class TypingGameInfo {
       }, {})
 
     return Object.keys(sums)
-      .map(w => ({ w, c: sums[w] }))
+      .map((w) => ({ w, c: sums[w] }))
       .sort((a, b) => a.c - b.c)
   }
 
-  get rank () {
+  get rank() {
     const s = this.score || 0
     return rankList().find((r) => {
       return r.start <= s && s <= (r.end || Infinity)

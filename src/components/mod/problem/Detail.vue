@@ -36,10 +36,9 @@
                     v-for="(link, i) in detail.links"
                     :key="`detail-link-${i}`"
                   >
-                    <a
-                      :href="link.link"
-                      target="_blank"
-                    >{{ link.site }}：{{ link.name }}</a>
+                    <a :href="link.link" target="_blank"
+                      >{{ link.site }}：{{ link.name }}</a
+                    >
                   </li>
                 </ul>
               </dd>
@@ -65,9 +64,7 @@
         >
           <PartsSection class="details-item-inner">
             <div class="detail-card">
-              <div class="detail-card-no">
-                No.{{ i + 1 }}
-              </div>
+              <div class="detail-card-no">No.{{ i + 1 }}</div>
               <div class="detail-card-info">
                 {{ w.info || w.info2 }}
               </div>
@@ -85,16 +82,16 @@
 <script setup lang="ts">
 import { ProblemDetail, ProblemItemTag } from '~~/types/problems'
 defineProps<{
-  detail: ProblemDetail;
+  detail: ProblemDetail
 }>()
 
 defineEmits<{
-  (e: 'tag', tag: ProblemItemTag);
+  (e: 'tag', tag: ProblemItemTag)
 }>()
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/css/vars.scss";
+@import '~/assets/css/vars.scss';
 
 .problem-detail-page {
   .detail-header {

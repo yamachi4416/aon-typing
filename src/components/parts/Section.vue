@@ -15,7 +15,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "~/assets/css/vars.scss";
+@import '~/assets/css/vars.scss';
 
 .parts-section {
   padding: 10px;
@@ -70,7 +70,7 @@
       min-height: 45px;
 
       &::before {
-        content: "";
+        content: '';
         display: block;
         width: 30px;
         height: 30px;

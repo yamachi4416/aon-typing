@@ -1,4 +1,4 @@
-export function keyCodeToChar (code: number, shift = false) {
+export function keyCodeToChar(code: number, shift = false) {
   if (code === 9) {
     return '\t'
   }
@@ -16,7 +16,7 @@ export function keyCodeToChar (code: number, shift = false) {
       if (code === 48) {
         return ''
       }
-      return "!\"#$%&'()"[code - 49]
+      return '!"#$%&\'()'[code - 49]
     }
     return '0123456789'[code - 48]
   }
@@ -57,14 +57,14 @@ export function keyCodeToChar (code: number, shift = false) {
 }
 
 export abstract class Keys {
-  abstract getLabelByIndex (idx: number, shift: boolean): string
-  abstract getKeyByIndex (idx: number, shift: boolean): string
-  abstract isShiftKey (key: string): boolean
-  abstract isShiftRightKey (key: string): boolean
-  abstract isShiftLeftKey (key: string): boolean
-  abstract getHandIdx (key: string): number
+  abstract getLabelByIndex(idx: number, shift: boolean): string
+  abstract getKeyByIndex(idx: number, shift: boolean): string
+  abstract isShiftKey(key: string): boolean
+  abstract isShiftRightKey(key: string): boolean
+  abstract isShiftLeftKey(key: string): boolean
+  abstract getHandIdx(key: string): number
 
-  isTypeKeyByIndex (idx: number, typeKey: string, shift = false) {
+  isTypeKeyByIndex(idx: number, typeKey: string, shift = false) {
     const label = this.getLabelByIndex(idx, shift)
     switch (label) {
       case 'shiftL':
@@ -79,5 +79,5 @@ export abstract class Keys {
 
 export default {
   keyCodeToChar,
-  Keys
+  Keys,
 }

@@ -9,8 +9,8 @@
 <script setup lang="ts">
 useHead({
   bodyAttrs: {
-    class: 'scroll-y'
-  }
+    class: 'scroll-y',
+  },
 })
 
 onBeforeUpdate(() => {
@@ -20,10 +20,10 @@ onBeforeUpdate(() => {
 definePageMeta({
   pageTransition: {
     duration: 100,
-    onAfterEnter () {
+    onAfterEnter() {
       useScrollWaiter().flush()
-    }
-  }
+    },
+  },
 })
 </script>
 

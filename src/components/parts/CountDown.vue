@@ -9,11 +9,11 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    count?: number;
+    count?: number
   }>(),
   {
-    count: 0
-  }
+    count: 0,
+  },
 )
 </script>
 

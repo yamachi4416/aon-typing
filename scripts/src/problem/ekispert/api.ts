@@ -47,12 +47,12 @@ export interface OperationLineApiResult {
 }
 
 type FetchStationResult = ReturnType<typeof fetchStation> extends Promise<
-infer T
+  infer T
 >
   ? T
   : any
 
-function joinWords (pages: Array<FetchStationResult['words']>) {
+function joinWords(pages: Array<FetchStationResult['words']>) {
   let words = [...pages[0]]
   for (let i = 1; i < pages.length; i++) {
     const page = pages[i]
@@ -69,21 +69,23 @@ function joinWords (pages: Array<FetchStationResult['words']>) {
     } else if (pstart.info === wlast.info) {
       words = [...words, ...page, plast]
     } else {
-      throw new Error(`mismatch stations [${wstart.info}...${wlast.info}] [${pstart.info}...${plast.info}]`)
+      throw new Error(
+        `mismatch stations [${wstart.info}...${wlast.info}] [${pstart.info}...${plast.info}]`,
+      )
     }
   }
   return words
 }
 
-export async function fetchStation ({
+export async function fetchStation({
   key,
-  operationLineCode
+  operationLineCode,
 }: {
   key: string
   operationLineCode: string
 }) {
   return await httpFetch(
-    `https://api.ekispert.jp/v1/json/station?key=${key}&operationLineCode=${operationLineCode}`
+    `https://api.ekispert.jp/v1/json/station?key=${key}&operationLineCode=${operationLineCode}`,
   )
     .then(({ data }) => JSON.parse(data.toString()) as StationApiResult)
     .then((data) => {
@@ -92,40 +94,40 @@ export async function fetchStation ({
         : [data.ResultSet.Point]
       const words = points.map((p: any) => ({
         info: p.Station.Name.replace(/\(.+?\)$/, '') as string,
-        info2: p.Station.Yomi as string
+        info2: p.Station.Yomi as string,
       }))
       return { data, words }
     })
 }
 
-export async function fetchStations ({
+export async function fetchStations({
   key,
-  operationLineCodes
+  operationLineCodes,
 }: {
   key: string
   operationLineCodes: string[]
 }) {
-  const fetchs = operationLineCodes.map(async operationLineCode =>
-    await fetchStation({ key, operationLineCode })
+  const fetchs = operationLineCodes.map(
+    async (operationLineCode) => await fetchStation({ key, operationLineCode }),
   )
 
   const data = await Promise.all(fetchs)
 
   return {
     data,
-    words: joinWords(data.map(({ words }) => words))
+    words: joinWords(data.map(({ words }) => words)),
   }
 }
 
-export async function fetchOperationLine ({
+export async function fetchOperationLine({
   key,
-  code
+  code,
 }: {
   key: string
   code: string
 }) {
   return await httpFetch(
-    `https://api.ekispert.jp/v1/json/operationLine?key=${key}&code=${code}`
+    `https://api.ekispert.jp/v1/json/operationLine?key=${key}&code=${code}`,
   )
     .then(({ data }) => JSON.parse(data.toString()) as OperationLineApiResult)
     .then((data) => {

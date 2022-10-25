@@ -19,26 +19,26 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    page: number;
-    pageSize?: number;
-    recordCount: number;
+    page: number
+    pageSize?: number
+    recordCount: number
   }>(),
   {
-    pageSize: 30
-  }
+    pageSize: 30,
+  },
 )
 
 const emit = defineEmits<{
-  (e: 'select', page: number);
+  (e: 'select', page: number)
 }>()
 
 const editPage = computed({
-  get () {
+  get() {
     return props.page
   },
-  set (value) {
+  set(value) {
     selectPage(value)
-  }
+  },
 })
 
 const lastPage = computed(() => Math.ceil(props.recordCount / props.pageSize))
@@ -52,10 +52,10 @@ const dispPages = computed(() => {
   } else if (lp - 1 <= cp) {
     wp = [lp - 3, lp - 2, lp - 1]
   }
-  return new Set([1, ...wp, lp].filter(p => p >= 1 && p <= lp))
+  return new Set([1, ...wp, lp].filter((p) => p >= 1 && p <= lp))
 })
 
-function selectPage (page: number) {
+function selectPage(page: number) {
   emit('select', page)
 }
 </script>

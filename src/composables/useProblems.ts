@@ -1,7 +1,7 @@
 import {
   ProblemDetail,
   ProblemListItem,
-  ProblemTagSummary
+  ProblemTagSummary,
 } from '~~/types/problems'
 
 import { GameSetting } from '~~/libs/TypingGame'
@@ -12,23 +12,23 @@ class UseProblems {
   private _tagSummary: ProblemTagSummary[] = []
   private readonly _setting = shallowReactive(new GameSetting())
 
-  get setting () {
+  get setting() {
     return this._setting
   }
 
-  get problems () {
+  get problems() {
     return [...this._problems]
   }
 
-  get newProblems () {
+  get newProblems() {
     return [...this._newProblems]
   }
 
-  get tagSummary () {
+  get tagSummary() {
     return [...this._tagSummary]
   }
 
-  async retrieveItems () {
+  async retrieveItems() {
     await Promise.all([
       useFetch('/api/problems.json').then(({ data }) => {
         this._problems = data.value.problems
@@ -39,15 +39,15 @@ class UseProblems {
       useFetch('/api/tags.json').then(({ data }) => {
         this._tagSummary = Object.entries(data.value).map(([name, tag]) => ({
           ...tag,
-          name
+          name,
         }))
-      })
+      }),
     ])
   }
 
-  async retrieveTag ({ id }: { id: string }) {
+  async retrieveTag({ id }: { id: string }) {
     const { data: tag, error } = await useFetch(`/api/tags/${id}.json`, {
-      key: `/api/tags/${id}.json`
+      key: `/api/tags/${id}.json`,
     })
     if (error.value instanceof Error) {
       throwError(error.value)
@@ -55,9 +55,9 @@ class UseProblems {
     return tag.value
   }
 
-  async retrieveProblemDetail ({ id }: { id: string }) {
+  async retrieveProblemDetail({ id }: { id: string }) {
     const { data: detail, error } = await useFetch(`/api/problems/${id}.json`, {
-      key: `/api/problems/${id}.json`
+      key: `/api/problems/${id}.json`,
     })
     if (error.value instanceof Error) {
       throwError(error.value)
@@ -65,16 +65,16 @@ class UseProblems {
     return detail.value as ProblemDetail
   }
 
-  async lazyProblemDetail ({ id }: { id: string }) {
+  async lazyProblemDetail({ id }: { id: string }) {
     return (await fetch(`/api/problems/${id}.json`, {
-      method: 'get'
-    }).then(async res => await res.json())) as ProblemDetail
+      method: 'get',
+    }).then(async (res) => await res.json())) as ProblemDetail
   }
 
-  problemTagFilter ({
+  problemTagFilter({
     problems,
     tagId,
-    qtags = []
+    qtags = [],
   }: {
     problems?: ProblemListItem[]
     tagId?: string
@@ -85,8 +85,8 @@ class UseProblems {
     } else {
       const ids = tagId ? [tagId, ...qtags] : qtags
       return (problems ?? this.problems).filter((p) => {
-        const tids = new Set(p.tags.map(tag => tag.id))
-        return ids.every(id => tids.has(id))
+        const tids = new Set(p.tags.map((tag) => tag.id))
+        return ids.every((id) => tids.has(id))
       })
     }
   }
@@ -94,6 +94,6 @@ class UseProblems {
 
 const useProblemState = new UseProblems()
 
-export function useProblems () {
+export function useProblems() {
   return useProblemState
 }

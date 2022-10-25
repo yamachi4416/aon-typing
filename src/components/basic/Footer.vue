@@ -18,7 +18,7 @@
 <script setup lang="ts">
 const menus = [
   { route: { name: 'index-policy' }, label: 'サイトポリシー' },
-  { route: { name: 'index-contact' }, label: 'お問い合わせ' }
+  { route: { name: 'index-contact' }, label: 'お問い合わせ' },
 ]
 </script>
 

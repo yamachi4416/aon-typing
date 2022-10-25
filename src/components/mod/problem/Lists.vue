@@ -31,19 +31,19 @@ import { pagenate } from '~~/libs/Util'
 
 const props = withDefaults(
   defineProps<{
-    problems: ProblemListItem[];
-    pageSize?: number;
+    problems: ProblemListItem[]
+    pageSize?: number
   }>(),
   {
     problems: () => [],
-    pageSize: 30
-  }
+    pageSize: 30,
+  },
 )
 
 const emit = defineEmits<{
-  (e: 'tag', tag: ProblemItemTag);
-  (e: 'detail', p: ProblemListItem);
-  (e: 'play', p: ProblemListItem);
+  (e: 'tag', tag: ProblemItemTag)
+  (e: 'detail', p: ProblemListItem)
+  (e: 'play', p: ProblemListItem)
 }>()
 
 const route = useRoute()
@@ -51,13 +51,12 @@ const router = useRouter()
 
 const path = ref(route.path)
 const page = ref(Number(route.query.page || 1))
-const pages = computed(
-  () =>
-    pagenate({
-      items: props.problems,
-      page: page.value,
-      pageSize: props.pageSize
-    })
+const pages = computed(() =>
+  pagenate({
+    items: props.problems,
+    page: page.value,
+    pageSize: props.pageSize,
+  }),
 )
 
 watch(
@@ -69,16 +68,16 @@ watch(
         page.value = nextPage
       }
     }
-  }
+  },
 )
 
-function select (p: number) {
+function select(p: number) {
   router.push({ query: { ...route.query, page: String(p) } })
 }
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/css/vars.scss";
+@import '~/assets/css/vars.scss';
 
 .problem-list {
   &-item {

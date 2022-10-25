@@ -81,20 +81,20 @@ import { TypingGameWordInfoState } from '~~/libs/TypingGameWordStates'
 import { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
 
 const props = defineProps<{
-  typing: Readonly<TypingGame>;
+  typing: Readonly<TypingGame>
 }>()
 
 const keys = new JISKeys()
 
 const problem = computed(
-  () => props.typing.problem ?? ({} as TypingProblemQuestioner)
+  () => props.typing.problem ?? ({} as TypingProblemQuestioner),
 )
 const setting = computed(() => problem.value.setting ?? ({} as GameSetting))
 const current = computed(
-  () => props.typing.current ?? ({} as TypingGameWordData)
+  () => props.typing.current ?? ({} as TypingGameWordData),
 )
 const infoState = computed(
-  () => current.value.infoState ?? ({} as TypingGameWordInfoState)
+  () => current.value.infoState ?? ({} as TypingGameWordInfoState),
 )
 
 const typeKey = computed(() => current.value.wordState?.current ?? '')
@@ -102,28 +102,28 @@ const handNumber = computed(() => keys.getHandIdx(typeKey.value))
 
 const leftHands = computed(() => [
   handNumber.value,
-  keys.isShiftRightKey(typeKey.value) ? 1 : 0
+  keys.isShiftRightKey(typeKey.value) ? 1 : 0,
 ])
 
 const rightHands = computed(() => [
   handNumber.value - 5,
-  keys.isShiftLeftKey(typeKey.value) ? 5 : 0
+  keys.isShiftLeftKey(typeKey.value) ? 5 : 0,
 ])
 
 const infoClass = computed(() => {
   const chars = infoState.value.info?.length || 0
-  const n = [10, 20, 30, 40, 50, 100, 200, 300].find(c => chars <= c) || 0
+  const n = [10, 20, 30, 40, 50, 100, 200, 300].find((c) => chars <= c) || 0
   const type = problem.value.type ?? 'unknown'
   return { [`chars-${n}`]: true, [type]: true }
 })
 
 onBeforeUnmount(() => props.typing?.dispose())
 
-function cancel () {
+function cancel() {
   props.typing.cancel()
 }
 
-function pauseToggle () {
+function pauseToggle() {
   if (props.typing.isRunning) {
     props.typing.pause()
   } else if (props.typing.isPausing) {

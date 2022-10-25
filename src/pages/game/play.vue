@@ -34,7 +34,7 @@ const state = reactive({
   result: null,
   countDown: 0,
   problem: null as TypingProblemQuestioner,
-  isCountDownShow: true
+  isCountDownShow: true,
 })
 
 const id = useRoute().query.id as string
@@ -58,13 +58,13 @@ onMounted(async () => {
     useProblems().setting.problemId = id
     state.problem = new TypingProblemQuestioner({
       problem,
-      setting: useProblems().setting
+      setting: useProblems().setting,
     })
     startTyping()
   }
 })
 
-async function startTyping () {
+async function startTyping() {
   stopTyping()
   state.typing.init({})
 
@@ -79,39 +79,39 @@ async function startTyping () {
 
   state.result = await state.typing.start({
     problem: state.problem,
-    setting: useProblems().setting
+    setting: useProblems().setting,
   })
 
   await modalGameResult.value.open()
 }
 
-function stopTyping () {
+function stopTyping() {
   state.result = null
   state.countDown = 0
   state.isCountDownShow = false
   return state.typing.cancel()
 }
 
-async function retry () {
+async function retry() {
   state.problem.reset()
   await modalGameResult.value.close()
   await startTyping()
 }
 
-async function menu () {
+async function menu() {
   state.problem.reset()
   await modalGameResult.value.close()
   await useNavigator().backOrGameMenu()
 }
 
-async function next () {
+async function next() {
   state.problem.continue()
   await modalGameResult.value.close()
   await startTyping()
 }
 
 useHead({
-  title: `タイピング No.${id}`
+  title: `タイピング No.${id}`,
 })
 </script>
 

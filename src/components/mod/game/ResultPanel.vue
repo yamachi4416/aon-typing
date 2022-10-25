@@ -1,8 +1,6 @@
 <template>
   <PartsModalContent v-if="result" class="panel" :show-close="false">
-    <template #title>
-      タイピング結果
-    </template>
+    <template #title>タイピング結果</template>
     <div class="info-main">
       <div class="info-main-left">
         <div class="table">
@@ -92,22 +90,22 @@ import { TypingGameInfo } from '~~/libs/TypingGameInfo'
 import { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
 
 defineProps<{
-  result: TypingGameInfo;
-  problem: TypingProblemQuestioner;
+  result: TypingGameInfo
+  problem: TypingProblemQuestioner
 }>()
 
 defineEmits<{
-  (e: 'retry');
-  (e: 'next');
-  (e: 'menu');
+  (e: 'retry')
+  (e: 'next')
+  (e: 'menu')
 }>()
 </script>
 
 <style lang="scss" scoped>
 .panel {
   width: unset;
-  height: unset;
   max-width: 100%;
+  height: unset;
 
   .info-main {
     display: flex;
@@ -151,22 +149,23 @@ defineEmits<{
 
         &-chars {
           display: flex;
-          align-items: center;
           flex-wrap: wrap;
+          align-items: center;
 
           &-item {
             padding: 3px;
+
             &-char {
               display: flex;
               align-items: center;
               justify-content: center;
-              border-radius: 50%;
               width: 30px;
               height: 30px;
-              white-space: pre;
               padding: 5px;
-              background: #333;
               color: #fff;
+              white-space: pre;
+              background: #333;
+              border-radius: 50%;
             }
           }
         }

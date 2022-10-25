@@ -4,23 +4,23 @@ class ScrollQueue {
   private _noScroll: boolean = false
   private readonly _waiting = computed(() => !(this.promise.value == null))
 
-  get waiting () {
+  get waiting() {
     return this._waiting.value
   }
 
-  noScroll () {
+  noScroll() {
     this.add()
     this._noScroll = true
   }
 
-  add () {
+  add() {
     this.flush()
     this.promise.value = new Promise((resolve) => {
       this.resolve = resolve
     })
   }
 
-  flush () {
+  flush() {
     if (typeof this.resolve === 'function') {
       this.resolve()
     }
@@ -28,7 +28,7 @@ class ScrollQueue {
     this.promise.value = null
   }
 
-  async wait () {
+  async wait() {
     const ret = this._noScroll
     this._noScroll = false
     if (this.promise.value != null) {
@@ -40,6 +40,6 @@ class ScrollQueue {
 
 const scrollWaiter = new ScrollQueue()
 
-export function useScrollWaiter () {
+export function useScrollWaiter() {
   return scrollWaiter
 }

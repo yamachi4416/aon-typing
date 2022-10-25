@@ -4,9 +4,7 @@
     :show-close="false"
     @close="emit('close')"
   >
-    <template #title>
-      タイピングメニュー
-    </template>
+    <template #title> タイピングメニュー </template>
     <div class="typing-menu-panel-content">
       <div class="typing-menu-panel-content-row">
         <label>制限時間</label>
@@ -33,7 +31,7 @@
                 :selected="i === setting.goalCharCount || null"
                 @click="setting.goalCharCount = i"
               >
-                {{ i || "なし" }}
+                {{ i || 'なし' }}
               </button>
             </span>
           </div>
@@ -102,7 +100,9 @@
             </div>
             <div>
               <label>タイトル</label>
-              <div><a @click="emit('detail', problem)">{{ problem?.title }}</a></div>
+              <div>
+                <a @click="emit('detail', problem)">{{ problem?.title }}</a>
+              </div>
             </div>
             <div>
               <label>問題数</label>
@@ -141,41 +141,41 @@ import { helpAnimals } from '~~/libs/TypingGameInfo'
 import { ProblemListItem } from '~~/types/problems'
 
 const emit = defineEmits<{
-  (e: 'openProblemSelect');
-  (e: 'start');
-  (e: 'cancel');
-  (e: 'close');
-  (e: 'detail', problem: ProblemListItem);
+  (e: 'openProblemSelect')
+  (e: 'start')
+  (e: 'cancel')
+  (e: 'close')
+  (e: 'detail', problem: ProblemListItem)
 }>()
 
 const problemState = useProblems()
 const setting = computed(() => problemState.setting)
 const problem = computed(() => {
   const id = setting.value.problemId
-  return problemState.problems.find(p => p.id === id)
+  return problemState.problems.find((p) => p.id === id)
 })
 
 const HelpAnimals = [
   {
     name: 'オフ',
-    speed: 0
+    speed: 0,
   },
   ...helpAnimals().map(({ start, end, name }) => {
     const avg = Math.round(start + (end - start) / 2)
     return {
       name,
-      speed: Math.round(60000 / avg)
+      speed: Math.round(60000 / avg),
     }
-  })
+  }),
 ]
 
 const goalCharCounts = [0, 100, 250, 450, 700, 1000]
 
-function openProblemSelect () {
+function openProblemSelect() {
   emit('openProblemSelect')
 }
 
-function randomProblemSelect () {
+function randomProblemSelect() {
   const problems = problemState.problems ?? []
   const length = problems.length
   if (length > 0) {
