@@ -1,0 +1,18 @@
+{
+  "id": "1010138",
+  "title": "ＪＲ東海道本線(大垣－美濃赤坂)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-25",
+  "updatedAt": "2022-10-25",
+  "optional": { "cd": "138" },
+  "words": [
+    { "info": "美濃赤坂", "info2": "みのあかさか", "word": "minoakasaka" },
+    { "info": "荒尾", "info2": "あらお", "word": "arao" },
+    { "info": "大垣", "info2": "おおがき", "word": "oogaki" }
+  ]
+}
