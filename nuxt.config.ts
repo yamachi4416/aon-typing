@@ -38,7 +38,7 @@ export const routes = (() => {
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   components: true,
-  css: ['~/assets/css/main.scss'],
+  // css: ['~/assets/css/main.scss'],
   ssr: true,
   srcDir: 'src',
   target: 'static',
@@ -72,6 +72,8 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    dev: false,
+    minify: true,
     prerender: {
       routes: [...routes(), '/404.html'],
     },

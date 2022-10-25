@@ -5,6 +5,10 @@
   </div>
 </template>
 
+<style lang="scss">
+@import '~/assets/css/main';
+</style>
+
 <style lang="scss" scoped>
 .layout {
   height: 100%;
