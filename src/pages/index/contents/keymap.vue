@@ -203,7 +203,6 @@ function print() {
 .chars {
   display: flex;
   flex-flow: row;
-  flex-wrap: wrap;
   background: rgb(255 255 255 / 80%);
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
