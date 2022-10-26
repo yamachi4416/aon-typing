@@ -1,0 +1,38 @@
+{
+  "id": "1010159",
+  "title": "ＪＲ琵琶湖線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-27",
+  "updatedAt": "2022-10-27",
+  "optional": { "cd": "159" },
+  "words": [
+    { "info": "京都", "info2": "きょうと", "word": "kyouto" },
+    { "info": "山科", "info2": "やましな", "word": "yamasina" },
+    { "info": "大津", "info2": "おおつ", "word": "ootu" },
+    { "info": "膳所", "info2": "ぜぜ", "word": "zeze" },
+    { "info": "石山", "info2": "いしやま", "word": "isiyama" },
+    { "info": "瀬田", "info2": "せた", "word": "seta" },
+    { "info": "南草津", "info2": "みなみくさつ", "word": "minamikusatu" },
+    { "info": "草津", "info2": "くさつ", "word": "kusatu" },
+    { "info": "栗東", "info2": "りっとう", "word": "rittou" },
+    { "info": "守山", "info2": "もりやま", "word": "moriyama" },
+    { "info": "野洲", "info2": "やす", "word": "yasu" },
+    { "info": "篠原", "info2": "しのはら", "word": "sinohara" },
+    { "info": "近江八幡", "info2": "おうみはちまん", "word": "oumihatimann" },
+    { "info": "安土", "info2": "あづち", "word": "aduti" },
+    { "info": "能登川", "info2": "のとがわ", "word": "notogawa" },
+    { "info": "稲枝", "info2": "いなえ", "word": "inae" },
+    { "info": "河瀬", "info2": "かわせ", "word": "kawase" },
+    { "info": "南彦根", "info2": "みなみひこね", "word": "minamihikone" },
+    { "info": "彦根", "info2": "ひこね", "word": "hikone" },
+    { "info": "米原", "info2": "まいばら", "word": "maibara" },
+    { "info": "坂田", "info2": "さかた", "word": "sakata" },
+    { "info": "田村", "info2": "たむら", "word": "tamura" },
+    { "info": "長浜", "info2": "ながはま", "word": "nagahama" }
+  ]
+}
