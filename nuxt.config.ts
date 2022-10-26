@@ -16,6 +16,7 @@ export const routes = (() => {
   )
 
   return () => [
+    '/robots.txt',
     '/sitemap.xml',
     '/problems',
     '/game',
