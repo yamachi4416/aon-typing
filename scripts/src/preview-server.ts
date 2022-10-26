@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises'
+import { createGzip } from 'node:zlib'
 import { createServer, IncomingMessage, ServerResponse } from 'node:http'
 import path from 'node:path'
 import { parse as urlParse, UrlWithStringQuery } from 'node:url'
@@ -50,7 +51,7 @@ function sendFileHandler(dist: string) {
     match(_, req) {
       return req.method.toLowerCase() === 'get'
     },
-    async handle(url, _, res) {
+    async handle(url, req, res) {
       const file = path.normalize(
         path.resolve(dist, ...normalize(url.pathname).split('/')),
       )
@@ -69,15 +70,20 @@ function sendFileHandler(dist: string) {
         return
       }
 
-      res.statusCode = 200
-      res.setHeader('Content-Length', stat.size)
-      res.setHeader('Content-Type', mimetype(file))
-
       const fd = await fs.open(file, 'r')
       const stream = fd.createReadStream({ autoClose: true })
 
-      res.flushHeaders()
-      stream.pipe(res)
+      res.statusCode = 200
+      res.setHeader('Content-Type', mimetype(file))
+
+      if (req.headers['accept-encoding']?.includes('gzip')) {
+        res.setHeader('Content-Encoding', 'gzip')
+        res.flushHeaders()
+        stream.pipe(createGzip()).pipe(res)
+      } else {
+        res.flushHeaders()
+        stream.pipe(res)
+      }
     },
   })
 
@@ -93,21 +99,22 @@ function sendFileHandler(dist: string) {
   function mimetype(filename: string) {
     return (
       {
-        '.js': 'text/javascript',
-        '.mjs': 'text/javascript',
-        '.json': 'application/json',
         '.css': 'text/css',
+        '.gif': 'image/gif',
         '.htm': 'text/html',
         '.html': 'text/html',
-        '.xml': 'text/xml',
-        '.png': 'image/png',
+        '.ico': 'image/vnd.microsoft.icon',
         '.jpeg': 'image/jpeg',
         '.jpg': 'image/jpeg',
-        '.ico': 'image/vnd.microsoft.icon',
-        '.webp': 'image/webp',
-        '.gif': 'image/gif',
-        '.svg': 'image/svg+xml',
+        '.js': 'text/javascript',
+        '.json': 'application/json',
+        '.mjs': 'text/javascript',
         '.pdf': 'application/pdf',
+        '.png': 'image/png',
+        '.svg': 'image/svg+xml',
+        '.txt': 'text/plain',
+        '.webp': 'image/webp',
+        '.xml': 'text/xml',
       }[path.extname(filename)?.toLocaleLowerCase() ?? ''] ??
       'application/octet-stream'
     )
