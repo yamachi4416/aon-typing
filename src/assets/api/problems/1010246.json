@@ -1,0 +1,24 @@
+{
+  "id": "1010246",
+  "title": "ＪＲ長崎本線(喜々津－長与－浦上)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-28",
+  "updatedAt": "2022-10-28",
+  "optional": { "cd": "246" },
+  "words": [
+    { "info": "浦上", "info2": "うらかみ", "word": "urakami" },
+    { "info": "西浦上", "info2": "にしうらかみ", "word": "nisiurakami" },
+    { "info": "道ノ尾", "info2": "みちのお", "word": "mitinoo" },
+    { "info": "高田", "info2": "こうだ", "word": "kouda" },
+    { "info": "長与", "info2": "ながよ", "word": "nagayo" },
+    { "info": "本川内", "info2": "ほんかわち", "word": "honkawati" },
+    { "info": "大草", "info2": "おおくさ", "word": "ookusa" },
+    { "info": "東園", "info2": "ひがしその", "word": "higasisono" },
+    { "info": "喜々津", "info2": "ききつ", "word": "kikitu" }
+  ]
+}
