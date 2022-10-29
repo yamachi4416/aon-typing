@@ -29,6 +29,8 @@ import { TypingGame } from '~~/libs/TypingGame'
 import { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
 import { countDown } from '~~/libs/Util'
 
+let abort: AbortController
+
 const state = reactive({
   typing: new TypingGame(),
   result: null,
@@ -47,7 +49,7 @@ onBeforeMount(() => {
 })
 
 onBeforeUnmount(() => {
-  state.typing?.dispose()
+  abort?.abort()
 })
 
 onMounted(async () => {
@@ -68,6 +70,12 @@ async function startTyping() {
   stopTyping()
   state.typing.init({})
 
+  abort?.abort()
+  abort = new AbortController()
+  abort.signal.addEventListener('abort', function () {
+    state.typing?.dispose()
+  })
+
   state.countDown = 3
   state.isCountDownShow = true
   await countDown(state.countDown, (c: number) => {
@@ -75,7 +83,11 @@ async function startTyping() {
     if (c === 0) {
       state.isCountDownShow = false
     }
-  })
+  }, { abort })
+
+  if (abort.signal.aborted) {
+    return
+  }
 
   state.result = await state.typing.start({
     problem: state.problem,

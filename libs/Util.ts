@@ -5,9 +5,21 @@ export function isNumber(num: any): num is number {
   return typeof num === 'number' && !isNaN(num)
 }
 
-export async function countDown(count: number, tick: (count: number) => void) {
+export async function countDown(
+  count: number,
+  tick: (count: number) => void,
+  options: { abort?: AbortController } = {},
+) {
+  let id: ReturnType<typeof setInterval>
+
+  if (options.abort) {
+    options.abort.signal?.addEventListener('abort', function () {
+      clearTimeout(id)
+    })
+  }
+
   return await new Promise((resolve) => {
-    const id = setInterval(() => {
+    id = setInterval(() => {
       tick(--count)
       if (count <= 0) {
         clearInterval(id)
