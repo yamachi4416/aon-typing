@@ -1,0 +1,49 @@
+{
+  "id": "1010083",
+  "title": "ＪＲ成田線(千葉－銚子)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-29",
+  "updatedAt": "2022-10-29",
+  "optional": { "cd": "83" },
+  "words": [
+    { "info": "銚子", "info2": "ちょうし", "word": "tyousi" },
+    { "info": "松岸", "info2": "まつぎし", "word": "matugisi" },
+    { "info": "椎柴", "info2": "しいしば", "word": "siisiba" },
+    {
+      "info": "下総豊里",
+      "info2": "しもうさとよさと",
+      "word": "simousatoyosato"
+    },
+    {
+      "info": "下総橘",
+      "info2": "しもうさたちばな",
+      "word": "simousatatibana"
+    },
+    { "info": "笹川", "info2": "ささがわ", "word": "sasagawa" },
+    { "info": "小見川", "info2": "おみがわ", "word": "omigawa" },
+    { "info": "水郷", "info2": "すいごう", "word": "suigou" },
+    { "info": "香取", "info2": "かとり", "word": "katori" },
+    { "info": "佐原", "info2": "さわら", "word": "sawara" },
+    { "info": "大戸", "info2": "おおと", "word": "ooto" },
+    {
+      "info": "下総神崎",
+      "info2": "しもうさこうざき",
+      "word": "simousakouzaki"
+    },
+    { "info": "滑河", "info2": "なめがわ", "word": "namegawa" },
+    { "info": "久住", "info2": "くずみ", "word": "kuzumi" },
+    { "info": "成田", "info2": "なりた", "word": "narita" },
+    { "info": "酒々井", "info2": "しすい", "word": "sisui" },
+    { "info": "佐倉", "info2": "さくら", "word": "sakura" },
+    { "info": "物井", "info2": "ものい", "word": "monoi" },
+    { "info": "四街道", "info2": "よつかいどう", "word": "yotukaidou" },
+    { "info": "都賀", "info2": "つが", "word": "tuga" },
+    { "info": "東千葉", "info2": "ひがしちば", "word": "higasitiba" },
+    { "info": "千葉", "info2": "ちば", "word": "tiba" }
+  ]
+}
