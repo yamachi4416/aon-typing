@@ -40,7 +40,11 @@ const error = computed(() => {
   if (err) {
     return { ...err, statusCode: undefined }
   }
-  return { statusCode: 404, message: undefined }
+  return {
+    statusCode: 404,
+    statusMessage: 'Page Not Found',
+    message: undefined,
+  }
 })
 
 onBeforeMount(() => {
@@ -61,11 +65,15 @@ const offline = computed(() => {
 })
 
 const desc = computed(() => {
-  const message = error.value?.message || ''
+  const message = error.value?.message || error.value?.statusMessage || ''
   const code = error.value?.statusCode
   if (offline.value) {
     return 'offline'
-  } else if (/^404 Not Found/.test(message) || code === 404 || code === 405) {
+  } else if (
+    /^(404|Page) Not Found/i.test(message) ||
+    code === 404 ||
+    code === 405
+  ) {
     return 'notfound'
   } else if (code === 502) {
     return 'mainte'
