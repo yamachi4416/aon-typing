@@ -78,12 +78,16 @@ async function startTyping() {
 
   state.countDown = 3
   state.isCountDownShow = true
-  await countDown(state.countDown, (c: number) => {
-    state.countDown = c
-    if (c === 0) {
-      state.isCountDownShow = false
-    }
-  }, { abort })
+  await countDown(
+    state.countDown,
+    (c: number) => {
+      state.countDown = c
+      if (c === 0) {
+        state.isCountDownShow = false
+      }
+    },
+    { abort },
+  )
 
   if (abort.signal.aborted) {
     return
