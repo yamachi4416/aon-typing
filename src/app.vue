@@ -9,6 +9,7 @@
 </template>
 
 <script setup lang="ts">
+import { healthcheck } from '~~/libs/Util'
 const error = ref<Error | null>(null)
 
 onBeforeMount(() => {
@@ -30,13 +31,15 @@ useHead({
 
 onErrorCaptured((err) => {
   if (process.client) {
-    if (!window.navigator.onLine) {
-      window.location.reload()
-      return
-    }
-    clearError().then(() => {
-      useScrollWaiter().flush()
-      error.value = err
+    healthcheck().then(ok => {
+      if (!ok) {
+        window.location.reload()
+      } else {
+        clearError().then(() => {
+          useScrollWaiter().flush()
+          error.value = err
+        })
+      }
     })
   } else {
     throw err

@@ -13,7 +13,7 @@ export async function countDown(
   let id: ReturnType<typeof setInterval>
 
   if (options.abort) {
-    options.abort.signal?.addEventListener('abort', function () {
+    options.abort.signal?.addEventListener('abort', function() {
       clearTimeout(id)
     })
   }
@@ -57,5 +57,15 @@ export function pagenate<T>({
     items: Array.prototype.slice.call(items, start, end),
     pages: lastPage,
     count: items.length,
+  }
+}
+
+export async function healthcheck() {
+  try {
+    const time = new Date().getTime()
+    const res = await fetch(`/favicon.ico?$t=${time}`)
+    return res.status >= 200 && res.status < 300
+  } catch (err) {
+    return false
   }
 }
