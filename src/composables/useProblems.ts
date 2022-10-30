@@ -30,13 +30,16 @@ class UseProblems {
 
   async retrieveItems() {
     await Promise.all([
-      useFetch('/api/problems.json').then(({ data }) => {
+      useFetch('/api/problems.json').then(({ data, error }) => {
+        handleFetchError(error.value)
         this._problems = data.value.problems
       }),
-      useFetch('/api/problems/news.json').then(({ data }) => {
+      useFetch('/api/problems/news.json').then(({ data, error }) => {
+        handleFetchError(error.value)
         this._newProblems = data.value
       }),
-      useFetch('/api/tags.json').then(({ data }) => {
+      useFetch('/api/tags.json').then(({ data, error }) => {
+        handleFetchError(error.value)
         this._tagSummary = Object.entries(data.value).map(([name, tag]) => ({
           ...tag,
           name,
@@ -49,9 +52,7 @@ class UseProblems {
     const { data: tag, error } = await useFetch(`/api/tags/${id}.json`, {
       key: `/api/tags/${id}.json`,
     })
-    if (error.value instanceof Error) {
-      throwError(error.value)
-    }
+    handleFetchError(error.value)
     return tag.value
   }
 
@@ -59,16 +60,16 @@ class UseProblems {
     const { data: detail, error } = await useFetch(`/api/problems/${id}.json`, {
       key: `/api/problems/${id}.json`,
     })
-    if (error.value instanceof Error) {
-      throwError(error.value)
-    }
+    handleFetchError(error.value)
     return detail.value as ProblemDetail
   }
 
   async lazyProblemDetail({ id }: { id: string }) {
-    return (await fetch(`/api/problems/${id}.json`, {
-      method: 'get',
-    }).then(async (res) => await res.json())) as ProblemDetail
+    const { data, error } = await useFetch(`/api/problems/${id}.json`, {
+      key: `/api/problems/${id}.json`,
+    })
+    handleFetchError(error.value)
+    return data.value as ProblemDetail
   }
 
   problemTagFilter({
@@ -90,6 +91,13 @@ class UseProblems {
       })
     }
   }
+}
+
+function handleFetchError(error: any) {
+  if (!(error instanceof Error)) {
+    return
+  }
+  throw createError({ ...error, fatal: true })
 }
 
 const useProblemState = new UseProblems()
