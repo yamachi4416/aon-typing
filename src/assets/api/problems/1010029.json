@@ -1,0 +1,72 @@
+{
+  "id": "1010029",
+  "title": "ＪＲ五能線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-10-31",
+  "updatedAt": "2022-10-31",
+  "optional": { "cd": "29" },
+  "words": [
+    { "info": "弘前", "info2": "ひろさき", "word": "hirosaki" },
+    { "info": "撫牛子", "info2": "ないじょうし", "word": "naijousi" },
+    { "info": "川部", "info2": "かわべ", "word": "kawabe" },
+    { "info": "藤崎", "info2": "ふじさき", "word": "hujisaki" },
+    { "info": "林崎", "info2": "はやしざき", "word": "hayasizaki" },
+    { "info": "板柳", "info2": "いたやなぎ", "word": "itayanagi" },
+    { "info": "鶴泊", "info2": "つるどまり", "word": "turudomari" },
+    { "info": "陸奥鶴田", "info2": "むつつるだ", "word": "mututuruda" },
+    { "info": "五所川原", "info2": "ごしょがわら", "word": "gosyogawara" },
+    { "info": "木造", "info2": "きづくり", "word": "kidukuri" },
+    { "info": "中田", "info2": "なかた", "word": "nakata" },
+    { "info": "陸奥森田", "info2": "むつもりた", "word": "mutumorita" },
+    { "info": "越水", "info2": "こしみず", "word": "kosimizu" },
+    { "info": "鳴沢", "info2": "なるさわ", "word": "narusawa" },
+    { "info": "鰺ケ沢", "info2": "あじがさわ", "word": "ajigasawa" },
+    { "info": "陸奥赤石", "info2": "むつあかいし", "word": "mutuakaisi" },
+    { "info": "陸奥柳田", "info2": "むつやなぎた", "word": "mutuyanagita" },
+    { "info": "北金ケ沢", "info2": "きたかねがさわ", "word": "kitakanegasawa" },
+    { "info": "千畳敷", "info2": "せんじょうじき", "word": "senjoujiki" },
+    { "info": "大戸瀬", "info2": "おおどせ", "word": "oodose" },
+    { "info": "風合瀬", "info2": "かそせ", "word": "kasose" },
+    { "info": "驫木", "info2": "とどろき", "word": "todoroki" },
+    { "info": "追良瀬", "info2": "おいらせ", "word": "oirase" },
+    { "info": "広戸", "info2": "ひろと", "word": "hiroto" },
+    { "info": "深浦", "info2": "ふかうら", "word": "hukaura" },
+    { "info": "横磯", "info2": "よこいそ", "word": "yokoiso" },
+    { "info": "艫作", "info2": "へなし", "word": "henasi" },
+    {
+      "info": "ウェスパ椿山",
+      "info2": "うぇすぱつばきやま",
+      "word": "wesupatubakiyama"
+    },
+    { "info": "陸奥沢辺", "info2": "むつさわべ", "word": "mutusawabe" },
+    { "info": "陸奥岩崎", "info2": "むついわさき", "word": "mutuiwasaki" },
+    { "info": "十二湖", "info2": "じゅうにこ", "word": "juuniko" },
+    { "info": "松神", "info2": "まつかみ", "word": "matukami" },
+    {
+      "info": "白神岳登山口",
+      "info2": "しらかみだけとざんぐち",
+      "word": "sirakamidaketozanguti"
+    },
+    { "info": "大間越", "info2": "おおまごし", "word": "oomagosi" },
+    { "info": "岩館", "info2": "いわだて", "word": "iwadate" },
+    {
+      "info": "あきた白神",
+      "info2": "あきたしらかみ",
+      "word": "akitasirakami"
+    },
+    { "info": "滝ノ間", "info2": "たきのま", "word": "takinoma" },
+    { "info": "八森", "info2": "はちもり", "word": "hatimori" },
+    { "info": "東八森", "info2": "ひがしはちもり", "word": "higasihatimori" },
+    { "info": "沢目", "info2": "さわめ", "word": "sawame" },
+    { "info": "鳥形", "info2": "とりがた", "word": "torigata" },
+    { "info": "北能代", "info2": "きたのしろ", "word": "kitanosiro" },
+    { "info": "向能代", "info2": "むかいのしろ", "word": "mukainosiro" },
+    { "info": "能代", "info2": "のしろ", "word": "nosiro" },
+    { "info": "東能代", "info2": "ひがしのしろ", "word": "higasinosiro" }
+  ]
+}
