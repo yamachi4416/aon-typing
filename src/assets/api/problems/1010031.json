@@ -1,0 +1,26 @@
+{
+  "id": "1010031",
+  "title": "ＪＲ大湊線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-01",
+  "updatedAt": "2022-11-01",
+  "optional": { "cd": "31" },
+  "words": [
+    { "info": "大湊", "info2": "おおみなと", "word": "oominato" },
+    { "info": "下北", "info2": "しもきた", "word": "simokita" },
+    { "info": "赤川", "info2": "あかがわ", "word": "akagawa" },
+    { "info": "金谷沢", "info2": "かなやさわ", "word": "kanayasawa" },
+    { "info": "近川", "info2": "ちかがわ", "word": "tikagawa" },
+    { "info": "有畑", "info2": "ありはた", "word": "arihata" },
+    { "info": "陸奥横浜", "info2": "むつよこはま", "word": "mutuyokohama" },
+    { "info": "吹越", "info2": "ふっこし", "word": "hukkosi" },
+    { "info": "有戸", "info2": "ありと", "word": "arito" },
+    { "info": "北野辺地", "info2": "きたのへじ", "word": "kitanoheji" },
+    { "info": "野辺地", "info2": "のへじ", "word": "noheji" }
+  ]
+}
