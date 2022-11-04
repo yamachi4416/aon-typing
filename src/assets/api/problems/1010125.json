@@ -1,0 +1,33 @@
+{
+  "id": "1010125",
+  "title": "ＪＲ相模線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-04",
+  "updatedAt": "2022-11-04",
+  "optional": { "cd": "125" },
+  "words": [
+    { "info": "橋本", "info2": "はしもと", "word": "hasimoto" },
+    { "info": "南橋本", "info2": "みなみはしもと", "word": "minamihasimoto" },
+    { "info": "上溝", "info2": "かみみぞ", "word": "kamimizo" },
+    { "info": "番田", "info2": "ばんだ", "word": "banda" },
+    { "info": "原当麻", "info2": "はらたいま", "word": "harataima" },
+    { "info": "下溝", "info2": "しもみぞ", "word": "simomizo" },
+    { "info": "相武台下", "info2": "そうぶだいした", "word": "soubudaisita" },
+    { "info": "入谷", "info2": "いりや", "word": "iriya" },
+    { "info": "海老名", "info2": "えびな", "word": "ebina" },
+    { "info": "厚木", "info2": "あつぎ", "word": "atugi" },
+    { "info": "社家", "info2": "しゃけ", "word": "syake" },
+    { "info": "門沢橋", "info2": "かどさわばし", "word": "kadosawabasi" },
+    { "info": "倉見", "info2": "くらみ", "word": "kurami" },
+    { "info": "宮山", "info2": "みややま", "word": "miyayama" },
+    { "info": "寒川", "info2": "さむかわ", "word": "samukawa" },
+    { "info": "香川", "info2": "かがわ", "word": "kagawa" },
+    { "info": "北茅ケ崎", "info2": "きたちがさき", "word": "kitatigasaki" },
+    { "info": "茅ケ崎", "info2": "ちがさき", "word": "tigasaki" }
+  ]
+}
