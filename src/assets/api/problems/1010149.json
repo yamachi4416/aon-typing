@@ -1,0 +1,27 @@
+{
+  "id": "1010149",
+  "title": "ＪＲ関西本線(亀山－加茂)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-05",
+  "updatedAt": "2022-11-05",
+  "optional": { "cd": "149" },
+  "words": [
+    { "info": "加茂", "info2": "かも", "word": "kamo" },
+    { "info": "笠置", "info2": "かさぎ", "word": "kasagi" },
+    { "info": "大河原", "info2": "おおかわら", "word": "ookawara" },
+    { "info": "月ケ瀬口", "info2": "つきがせぐち", "word": "tukigaseguti" },
+    { "info": "島ケ原", "info2": "しまがはら", "word": "simagahara" },
+    { "info": "伊賀上野", "info2": "いがうえの", "word": "igaueno" },
+    { "info": "佐那具", "info2": "さなぐ", "word": "sanagu" },
+    { "info": "新堂", "info2": "しんどう", "word": "sindou" },
+    { "info": "柘植", "info2": "つげ", "word": "tuge" },
+    { "info": "加太", "info2": "かぶと", "word": "kabuto" },
+    { "info": "関", "info2": "せき", "word": "seki" },
+    { "info": "亀山", "info2": "かめやま", "word": "kameyama" }
+  ]
+}
