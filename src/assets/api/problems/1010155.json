@@ -1,0 +1,35 @@
+{
+  "id": "1010155",
+  "title": "ＪＲ七尾線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-05",
+  "updatedAt": "2022-11-05",
+  "optional": { "cd": "155" },
+  "words": [
+    { "info": "和倉温泉", "info2": "わくらおんせん", "word": "wakuraonsenn" },
+    { "info": "七尾", "info2": "ななお", "word": "nanao" },
+    { "info": "徳田", "info2": "とくだ", "word": "tokuda" },
+    { "info": "能登二宮", "info2": "のとにのみや", "word": "notoninomiya" },
+    { "info": "良川", "info2": "よしかわ", "word": "yosikawa" },
+    { "info": "能登部", "info2": "のとべ", "word": "notobe" },
+    { "info": "金丸", "info2": "かねまる", "word": "kanemaru" },
+    { "info": "千路", "info2": "ちじ", "word": "tiji" },
+    { "info": "羽咋", "info2": "はくい", "word": "hakui" },
+    { "info": "南羽咋", "info2": "みなみはくい", "word": "minamihakui" },
+    { "info": "敷浪", "info2": "しきなみ", "word": "sikinami" },
+    { "info": "宝達", "info2": "ほうだつ", "word": "houdatu" },
+    { "info": "免田", "info2": "めんでん", "word": "mendenn" },
+    { "info": "高松", "info2": "たかまつ", "word": "takamatu" },
+    { "info": "横山", "info2": "よこやま", "word": "yokoyama" },
+    { "info": "宇野気", "info2": "うのけ", "word": "unoke" },
+    { "info": "能瀬", "info2": "のせ", "word": "nose" },
+    { "info": "本津幡", "info2": "ほんつばた", "word": "hontubata" },
+    { "info": "中津幡", "info2": "なかつばた", "word": "nakatubata" },
+    { "info": "津幡", "info2": "つばた", "word": "tubata" }
+  ]
+}

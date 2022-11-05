@@ -1,0 +1,29 @@
+{
+  "id": "1010154",
+  "title": "ＪＲ城端線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-05",
+  "updatedAt": "2022-11-05",
+  "optional": { "cd": "154" },
+  "words": [
+    { "info": "城端", "info2": "じょうはな", "word": "jouhana" },
+    { "info": "越中山田", "info2": "えっちゅうやまだ", "word": "ettyuuyamada" },
+    { "info": "福光", "info2": "ふくみつ", "word": "hukumitu" },
+    { "info": "東石黒", "info2": "ひがしいしぐろ", "word": "higasiisiguro" },
+    { "info": "福野", "info2": "ふくの", "word": "hukuno" },
+    { "info": "高儀", "info2": "たかぎ", "word": "takagi" },
+    { "info": "東野尻", "info2": "ひがしのじり", "word": "higasinojiri" },
+    { "info": "砺波", "info2": "となみ", "word": "tonami" },
+    { "info": "油田", "info2": "あぶらでん", "word": "aburadenn" },
+    { "info": "戸出", "info2": "といで", "word": "toide" },
+    { "info": "林", "info2": "はやし", "word": "hayasi" },
+    { "info": "二塚", "info2": "ふたつか", "word": "hutatuka" },
+    { "info": "新高岡", "info2": "しんたかおか", "word": "sintakaoka" },
+    { "info": "高岡", "info2": "たかおか", "word": "takaoka" }
+  ]
+}
