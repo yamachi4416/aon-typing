@@ -1,4 +1,5 @@
-import { TypingGameWordData } from './TypingGameWordData'
+import type { TypingGame } from './TypingGame'
+import type { TypingGameWordData } from './TypingGameWordData'
 
 export const rankList = () => {
   return [
@@ -21,7 +22,7 @@ export class TypingGameInfo {
   totalTypeCorrect: number
   endWords: TypingGameWordData[]
 
-  constructor(game) {
+  constructor(game: TypingGame) {
     this.tick = game.tick
     this.totalTypeCount = game.totalTypeCount
     this.totalTypeMiss = game.totalTypeMiss
@@ -57,8 +58,8 @@ export class TypingGameInfo {
 
   get missKeys() {
     const sums = this.endWords
-      .reduce((a, w) => a.concat(w.misses), [])
-      .reduce((a, w) => {
+      .reduce<string[]>((a, w) => a.concat(w.misses), [])
+      .reduce<Record<string, number>>((a, w) => {
         a[w] = Number(a[w] || 0) + 1
         return a
       }, {})
@@ -71,7 +72,7 @@ export class TypingGameInfo {
   get rank() {
     const s = this.score || 0
     return rankList().find((r) => {
-      return r.start <= s && s <= (r.end || Infinity)
+      return r.start <= s && s <= (r.end ?? Infinity)
     })
   }
 }

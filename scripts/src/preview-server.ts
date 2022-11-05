@@ -23,9 +23,9 @@ function contactHandler() {
   return defineHandler({
     match(url, req) {
       return (
-        req.method.toLowerCase() === 'post' &&
+        req.method?.toLowerCase() === 'post' &&
         url.pathname === '/api/contact' &&
-        /^application\/json/i.test(req.headers['content-type'])
+        /^application\/json/i.test(req.headers?.['content-type'] ?? '')
       )
     },
     async handle(_, req, res) {
@@ -49,11 +49,11 @@ function sendFileHandler(dist: string) {
 
   return defineHandler({
     match(_, req) {
-      return req.method.toLowerCase() === 'get'
+      return req.method?.toLowerCase() === 'get'
     },
     async handle(url, req, res) {
       let file = path.normalize(
-        path.resolve(dist, ...normalize(url.pathname).split('/')),
+        path.resolve(dist, ...normalize(url.pathname ?? '').split('/')),
       )
 
       if (!file.startsWith(root)) {
@@ -183,7 +183,7 @@ async function handler(args: MainArgs) {
   const server = createServer((req, res) => {
     try {
       logging(req, res)
-      const url = urlParse(req.url)
+      const url = urlParse(req.url ?? '')
       const handler = handlers.find((handler) => handler.match(url, req))
       if (handler) {
         void handler.handle(url, req, res)

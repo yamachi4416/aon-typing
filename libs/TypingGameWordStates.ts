@@ -5,12 +5,12 @@ export class TypingGameWordState {
   _currentWords: string[]
   _rightWords: string[]
 
-  constructor(word: string) {
-    this.word = word || ''
+  constructor(word?: string) {
+    this.word = word ?? ''
     this._leftWords = []
     this._buffer = []
     this._currentWords = []
-    this._rightWords = Array.from(word || '')
+    this._rightWords = Array.from(word ?? '')
   }
 
   get buffer() {
@@ -116,9 +116,9 @@ export class TypingGameWordState {
 }
 
 export class TypingGameWordInfoState extends TypingGameWordState {
-  info: string
-  constructor(info: string, word: string) {
-    super(word || '')
+  info?: string
+  constructor(info?: string, word?: string) {
+    super(word ?? '')
     this.info = info
   }
 }

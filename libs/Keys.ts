@@ -1,4 +1,8 @@
-export function keyCodeToChar(code: number, shift = false) {
+export function keyCodeToChar(code?: number, shift = false) {
+  if (code == null) {
+    return ''
+  }
+
   if (code === 9) {
     return '\t'
   }

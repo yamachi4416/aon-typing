@@ -8,18 +8,20 @@ import { TypingGameWordData } from './TypingGameWordData'
 import type { TypingGamer } from './TypingGamer'
 
 export class TypingGamerJapanese implements TypingGamer {
-  init(word: TypingGameWordData) {
-    if (!word.wordState.current) {
+  init(word?: TypingGameWordData) {
+    if (!word?.wordState.current && word) {
       const { jc, ec } = typeCharsToJapaneseChars(
         word.wordState.word,
         word.infoState.word,
       )
-      word.infoState.push(jc.length)
-      word.wordState.push(ec.length)
+      word.infoState.push(jc?.length)
+      word.wordState.push(ec?.length)
     }
   }
 
-  expect(char: string, word: TypingGameWordData) {
+  expect(char: string, word?: TypingGameWordData): boolean {
+    if (!word) return true
+
     const expected = word.wordState.current
 
     if (expected === char) {
@@ -34,8 +36,8 @@ export class TypingGamerJapanese implements TypingGamer {
             word.wordState.rightWord,
             word.infoState.rightWord,
           )
-          word.infoState.push(jc.length)
-          word.wordState.push(ec.length)
+          word.infoState.push(jc?.length)
+          word.wordState.push(ec?.length)
         }
       }
 

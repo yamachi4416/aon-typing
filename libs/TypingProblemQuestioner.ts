@@ -11,9 +11,9 @@ const shuffle = (array: any[]) => {
 }
 
 export class TypingProblemQuestioner {
-  problem: ProblemDetail
-  words: TypingGameWordData[]
-  endWords: TypingGameWordData[]
+  problem?: ProblemDetail
+  words: TypingGameWordData[] = []
+  endWords: TypingGameWordData[] = []
   setting: any
 
   constructor({ problem, setting }: { problem: ProblemDetail; setting: any }) {
@@ -43,9 +43,10 @@ export class TypingProblemQuestioner {
     return this.words[0]
   }
 
-  init({ problem, setting }: { problem: ProblemDetail; setting: any }) {
+  init({ problem, setting }: { problem?: ProblemDetail; setting: any }) {
     this.problem = problem
-    this.words = problem.words.map((w, i) => new TypingGameWordData(i, w))
+    this.words =
+      problem?.words.map((w, i) => new TypingGameWordData(i, w)) ?? []
     this.endWords = []
     this.setting = setting
 
@@ -55,11 +56,14 @@ export class TypingProblemQuestioner {
   }
 
   nextWord() {
-    this.endWords.push(this.words.shift())
+    const word = this.words.shift()
+    if (word) {
+      this.endWords.push(word)
+    }
   }
 
   reset() {
-    this.init(this)
+    this.init({ problem: this.problem, setting: this.setting })
   }
 
   continue() {

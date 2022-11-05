@@ -3,11 +3,11 @@ import { TypingGamerJapanese } from './TypingGamerJapanese'
 import { TypingGameWordData } from './TypingGameWordData'
 
 export interface TypingGamer {
-  init: (word: TypingGameWordData) => void
-  expect: (char: string, word: TypingGameWordData) => boolean
+  init: (word?: TypingGameWordData) => void
+  expect: (char: string, word?: TypingGameWordData) => boolean
 }
 
-export function useTypingGamer(type: string): TypingGamer | undefined {
+export function useTypingGamer(type?: string): TypingGamer | undefined {
   if (type === 'english') {
     return new TypingGamerEnglish()
   } else if (type === 'japanese') {

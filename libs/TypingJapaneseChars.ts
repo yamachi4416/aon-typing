@@ -1,4 +1,4 @@
-export const Kana2HiraMap = {
+export const Kana2HiraMap: Record<string, string> = {
   ァ: 'ぁ',
   ア: 'あ',
   ィ: 'ぃ',
@@ -87,7 +87,9 @@ export const Kana2HiraMap = {
   ヶ: 'が',
 }
 
-export const Hira2KanaMap = Object.keys(Kana2HiraMap).reduce((a, h) => {
+export const Hira2KanaMap = Object.keys(Kana2HiraMap).reduce<
+  Record<string, string>
+>((a, h) => {
   if (!a[Kana2HiraMap[h]]) {
     a[Kana2HiraMap[h]] = h
   }
@@ -343,32 +345,33 @@ const JapaneseToTypeCharList = [
     })
     .filter((v) => v),
   ...JapaneseToTypeCharList2,
-]
+] as string[][]
 
-const TypeCharToJapaneseMap = JapaneseToTypeCharList.reduce(
-  (a, v) => a.concat(v[1].split(',').map((s) => ({ key: s, val: v[0] }))),
-  [{ key: ',', val: '、' }],
-)
-  .sort((a, b) => {
-    if (a.val.length === b.val.length) {
-      return a.val === b.val ? 0 : a.val > b.val ? -1 : 1
-    }
-    return b.val.length - a.val.length
-  })
-  .reduce(
-    (a, v) => ({
-      ...a,
-      [v.key]: v.val,
-    }),
-    {},
+const TypeCharToJapaneseMap: Record<string, string> =
+  JapaneseToTypeCharList.reduce(
+    (a, v) => a.concat(v[1].split(',').map((s) => ({ key: s, val: v[0] }))),
+    [{ key: ',', val: '、' }],
   )
+    .sort((a, b) => {
+      if (a.val.length === b.val.length) {
+        return a.val === b.val ? 0 : a.val > b.val ? -1 : 1
+      }
+      return b.val.length - a.val.length
+    })
+    .reduce(
+      (a, v) => ({
+        ...a,
+        [v.key]: v.val,
+      }),
+      {},
+    )
 
 const TypeCharMap = JapaneseToTypeCharList.reduce(
   (a, v) => {
     return { ...a, [v[0]]: v[1].split(',') }
   },
   { '、': ',' },
-)
+) as Record<string, string>
 
 export function kana2Hira(text: string) {
   return Array.from(text || '')
@@ -382,16 +385,22 @@ export function hira2Kana(text: string) {
     .join('')
 }
 
+type ToHiraFunction = (opts: { c1: string; c2: string; c3: string }) => {
+  d1: string
+  d2: string
+  d3: string
+}
+
 export function typeJapaneseCharsMap(
-  text: string,
-  length: number = undefined,
+  text?: string,
+  length?: number,
   useKana = false,
 ) {
   const maps = [] as Array<{ jc?: string; ec?: string }>
   const charMap = TypeCharMap
-  const chars = Array.from(text || '')
+  const chars = Array.from(text ?? '')
 
-  const toHira = useKana
+  const toHira: ToHiraFunction = useKana
     ? ({ c1, c2, c3 }) => {
         const d1 = kana2Hira(c1)
         const d2 = kana2Hira(c2)
@@ -400,7 +409,7 @@ export function typeJapaneseCharsMap(
       }
     : ({ c1, c2, c3 }) => ({ d1: c1, d2: c2, d3: c3 })
 
-  length = length || text.length
+  length = length ?? text?.length ?? 0
   for (let i = 0; i < length; i++) {
     const c1 = chars[i]
     const c2 = c1 + (chars[i + 1] || '')
@@ -430,7 +439,7 @@ export function typeJapaneseCharsMap(
   return maps
 }
 
-export function typeJapaneseChars(text: string, length: number = undefined) {
+export function typeJapaneseChars(text?: string, length?: number) {
   return typeJapaneseCharsMap(text, length)
     .map((v) => v.ec)
     .join('')
@@ -456,6 +465,7 @@ export function typeCharsToJapaneseChars(typeChars: string, jpChars: string) {
       return { jc, ec: c }
     }
   }
+
   return { jc: null, ec: null }
 }
 

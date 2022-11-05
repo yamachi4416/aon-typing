@@ -30,7 +30,7 @@ export class GameSetting {
 }
 
 export class TypingGame {
-  problem: TypingProblemQuestioner = null
+  problem?: TypingProblemQuestioner
   tick = 0
   pausing = false
   canceled = false
@@ -45,7 +45,7 @@ export class TypingGame {
   private readonly eventManager: EventManager
   private readonly timerManager: TimerManager
 
-  private _stop: () => void = null
+  private _stop?: () => void
 
   constructor() {
     this.eventManager = new EventManager()
@@ -54,7 +54,7 @@ export class TypingGame {
   }
 
   private _initData() {
-    this.problem = null
+    this.problem = undefined
     this.tick = 0
     this.pausing = false
     this.canceled = false
@@ -68,18 +68,18 @@ export class TypingGame {
   }
 
   init({
-    problem = null,
-    setting = null,
+    problem,
+    setting,
   }: {
     problem?: TypingProblemQuestioner
     setting?: GameSetting
   }) {
     this._initData()
     this.problem = problem
-    this.timeLimit = setting?.timeLimit || 0
+    this.timeLimit = setting?.timeLimit ?? 0
     this.timeUse = 0
-    this.goalCharCount = setting?.goalCharCount || 0
-    this._stop = null
+    this.goalCharCount = setting?.goalCharCount ?? 0
+    this._stop = undefined
   }
 
   get current() {
@@ -90,7 +90,7 @@ export class TypingGame {
     return this.problem?.totalCharCount
   }
 
-  private _typing({ gamer }: { gamer: TypingGamer }): EventListener {
+  private _typing({ gamer }: { gamer: TypingGamer }) {
     gamer.init(this.current)
 
     return (event: TypingEvent) => {
@@ -99,7 +99,7 @@ export class TypingGame {
       }
 
       const detail = event.detail
-      const char = detail.char || keyCodeToChar(detail.keyCode, detail.shiftKey)
+      const char = detail.char ?? keyCodeToChar(detail.keyCode, detail.shiftKey)
       const word = this.current
 
       if (char) {
@@ -117,7 +117,7 @@ export class TypingGame {
           }
         }
 
-        if (word.success) {
+        if (word?.success) {
           word.endTime = this.tick
           this.problem?.nextWord()
 
@@ -132,7 +132,7 @@ export class TypingGame {
     }
   }
 
-  private _keydown(): EventListener {
+  private _keydown() {
     return (e: KeyboardEvent) => {
       e.preventDefault()
       const { keyCode, shiftKey } = e
@@ -204,12 +204,16 @@ export class TypingGame {
   }: {
     problem: TypingProblemQuestioner
     setting: GameSetting
-  }): Promise<TypingGameInfo> {
+  }): Promise<TypingGameInfo | undefined> {
     this.cancel()
 
     const { words, type } = problem ?? {}
     const { timeLimit, autoMode } = setting
     const gamer = useTypingGamer(type)
+
+    if (!gamer) {
+      return undefined
+    }
 
     this.init({ problem, setting })
 
@@ -218,7 +222,7 @@ export class TypingGame {
       const typing = this._typing({ gamer })
 
       this._stop = () => {
-        this._stop = null
+        this._stop = undefined
         this.running = false
 
         if (this.current && !this.current.endTime) {
@@ -231,8 +235,8 @@ export class TypingGame {
         resolve(this.info())
       }
 
-      this.eventManager.add('keydown', keydown)
-      this.eventManager.add('c:typing', typing)
+      this.eventManager.add('keydown', keydown as EventListener)
+      this.eventManager.add('c:typing', typing as EventListener)
       this.eventManager.add(
         'visibilitychange',
         this.visibleChange.bind(this),
@@ -305,7 +309,7 @@ class EventManager {
     handler: EventListener,
     target?: Document | Element | Window,
   ) {
-    target = target || window
+    target = target ?? window
     target.addEventListener(eventName, handler)
     this.listeners.push({
       eventName,
@@ -320,7 +324,7 @@ class EventManager {
     handler: EventListener,
     target?: Document | Element | Window,
   ) {
-    target = target || window
+    target = target ?? window
 
     const targets = this.listeners.filter((it) => {
       it.active =
@@ -347,10 +351,10 @@ class EventManager {
 }
 
 class TimerEntry {
-  private uid: number
-  private id: number
-  private time: number
-  private tick: number
+  private uid?: number
+  private id?: number
+  private time?: number
+  private tick?: number
 
   private readonly handler: () => void
   private readonly interval: () => number
@@ -367,7 +371,9 @@ class TimerEntry {
   private *ticker() {
     while (true) {
       if (isNumber(this.tick)) {
-        this.time += this.tick
+        if (isNumber(this.time)) {
+          this.time += this.tick
+        }
         yield this.tick
         delete this.tick
       }
@@ -406,7 +412,7 @@ class TimerEntry {
 
   stop() {
     if (this.id) {
-      this.tick = Math.max(this.time - Date.now(), 0) || 0
+      this.tick = Math.max((this.time ?? 0) - Date.now(), 0) || 0
       window.clearTimeout(this.id)
     }
     this.id = undefined
