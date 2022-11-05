@@ -1,8 +1,7 @@
 <template>
   <div>
     <NuxtLayout>
-      <ModError v-if="error" :error="error" />
-      <NuxtPage v-else />
+      <NuxtPage />
     </NuxtLayout>
     <PartsLoading v-if="$scrollWaiter.waiting" />
   </div>
@@ -10,7 +9,6 @@
 
 <script setup lang="ts">
 import { healthcheck } from '~~/libs/Util'
-const error = ref<Error | null>(null)
 
 onBeforeMount(() => {
   setVH()
@@ -19,10 +17,6 @@ onBeforeMount(() => {
 
 onBeforeUnmount(() => {
   window.removeEventListener('resize', setVH)
-})
-
-onBeforeUpdate(() => {
-  error.value = null
 })
 
 useHead({
@@ -34,16 +28,10 @@ onErrorCaptured((err) => {
     healthcheck().then((ok) => {
       if (!ok) {
         window.location.reload()
-      } else {
-        clearError().then(() => {
-          useScrollWaiter().flush()
-          error.value = err
-        })
       }
     })
-  } else {
-    throw err
   }
+  throw err
 })
 
 function setVH() {

@@ -52,7 +52,7 @@ function sendFileHandler(dist: string) {
       return req.method.toLowerCase() === 'get'
     },
     async handle(url, req, res) {
-      const file = path.normalize(
+      let file = path.normalize(
         path.resolve(dist, ...normalize(url.pathname).split('/')),
       )
 
@@ -65,9 +65,12 @@ function sendFileHandler(dist: string) {
       const stat = await fs.stat(file).catch(() => null)
 
       if (stat == null) {
-        res.statusCode = 404
-        res.end()
-        return
+        file = path.normalize(path.resolve(dist, '404.html'))
+        if ((await fs.stat(file).catch(() => null)) == null) {
+          res.statusCode = 404
+          res.end()
+          return
+        }
       }
 
       const fd = await fs.open(file, 'r')

@@ -31,16 +31,15 @@ class UseProblems {
   async retrieveItems() {
     await Promise.all([
       useFetch('/api/problems.json').then(({ data, error }) => {
-        handleFetchError(error.value)
-        this._problems = data.value.problems
+        this._problems = justOrThrow(data.value, error.value).problems
       }),
       useFetch('/api/problems/news.json').then(({ data, error }) => {
-        handleFetchError(error.value)
-        this._newProblems = data.value
+        this._newProblems = justOrThrow(data.value, error.value)
       }),
       useFetch('/api/tags.json').then(({ data, error }) => {
-        handleFetchError(error.value)
-        this._tagSummary = Object.entries(data.value).map(([name, tag]) => ({
+        this._tagSummary = Object.entries(
+          justOrThrow(data.value, error.value),
+        ).map(([name, tag]) => ({
           ...tag,
           name,
         }))
@@ -49,27 +48,24 @@ class UseProblems {
   }
 
   async retrieveTag({ id }: { id: string }) {
-    const { data: tag, error } = await useFetch(`/api/tags/${id}.json`, {
+    const { data, error } = await useFetch(`/api/tags/${id}.json`, {
       key: `/api/tags/${id}.json`,
     })
-    handleFetchError(error.value)
-    return tag.value
+    return justOrThrow(data.value, error.value)
   }
 
   async retrieveProblemDetail({ id }: { id: string }) {
-    const { data: detail, error } = await useFetch(`/api/problems/${id}.json`, {
+    const { data, error } = await useFetch(`/api/problems/${id}.json`, {
       key: `/api/problems/${id}.json`,
     })
-    handleFetchError(error.value)
-    return detail.value as ProblemDetail
+    return justOrThrow(data.value, error.value) as ProblemDetail
   }
 
   async lazyProblemDetail({ id }: { id: string }) {
     const { data, error } = await useFetch(`/api/problems/${id}.json`, {
       key: `/api/problems/${id}.json`,
     })
-    handleFetchError(error.value)
-    return data.value as ProblemDetail
+    return justOrThrow(data.value, error.value) as ProblemDetail
   }
 
   problemTagFilter({
@@ -93,11 +89,20 @@ class UseProblems {
   }
 }
 
-function handleFetchError(error: any) {
-  if (!(error instanceof Error)) {
-    return
+function justOrThrow<T = any>(data: T, error: any) {
+  if (!data || typeof data === 'string') {
+    throw createError({
+      statusCode: 404,
+      statusMessage: 'Page Not Found',
+      fatal: true,
+    })
   }
-  throw createError({ ...error, fatal: true })
+
+  if (error instanceof Error) {
+    throw createError({ ...error, fatal: true })
+  }
+
+  return data
 }
 
 const useProblemState = new UseProblems()
