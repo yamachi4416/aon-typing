@@ -21,9 +21,7 @@ class ScrollQueue {
   }
 
   flush() {
-    if (typeof this.resolve === 'function') {
-      this.resolve()
-    }
+    this.resolve?.()
     this.resolve = null
     this.promise.value = null
   }

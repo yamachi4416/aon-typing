@@ -1,7 +1,7 @@
 import { useScrollWaiter } from '~/composables/useScrollWaiter'
 
 class Navigator {
-  path: string
+  path?: string
 
   get enable() {
     return !!this.path
