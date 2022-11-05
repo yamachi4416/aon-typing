@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeRouteUpdate } from 'vue-router';
+import { onBeforeRouteUpdate } from 'vue-router'
 
 useHead({
   bodyAttrs: {
@@ -25,11 +25,10 @@ onBeforeUpdate(() => {
 
 definePageMeta({
   pageTransition: {
-    duration: 10,
+    duration: 50,
     onAfterEnter() {
       useScrollWaiter().flush()
     },
   },
 })
 </script>
-
