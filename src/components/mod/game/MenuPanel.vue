@@ -96,7 +96,7 @@
           <div class="table problem-detail">
             <div>
               <label>タイプ</label>
-              <div>{{ problem?.type }}</div>
+              <div>{{ problemType }}</div>
             </div>
             <div>
               <label>タイトル</label>
@@ -155,6 +155,15 @@ const problem = computed(() => {
   return problemState.problems.find((p) => p.id === id)
 })
 
+const problemType = computed(() => {
+  return (
+    {
+      japanese: '日本語',
+      english: '英語',
+    }[problem.value?.type] ?? ''
+  )
+})
+
 const HelpAnimals = [
   {
     name: 'オフ',
@@ -197,6 +206,7 @@ function randomProblemSelect() {
   height: unset;
 
   &-content {
+    width: fit-content;
     padding: 5px 0;
 
     &-row {
