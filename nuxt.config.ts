@@ -39,10 +39,9 @@ export const routes = (() => {
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   components: true,
-  // css: ['~/assets/css/main.scss'],
+  css: ['~/assets/css/main.scss'],
   ssr: true,
   srcDir: 'src',
-  target: 'static',
 
   app: {
     head: {
@@ -101,5 +100,5 @@ function googleFont() {
     { rel: 'preconnect', href: 'https://fonts.gstatic.com/', crossorigin: '' },
     { rel: 'preload', as: 'style', href: fontUrl },
     { rel: 'stylesheet', href: fontUrl },
-  ] as ReturnType<typeof defineNuxtConfig>['app']['head']['link']
+  ] as any[]
 }
