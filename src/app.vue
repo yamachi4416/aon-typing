@@ -31,7 +31,7 @@ useHead({
 
 onErrorCaptured((err) => {
   if (process.client) {
-    healthcheck().then(ok => {
+    healthcheck().then((ok) => {
       if (!ok) {
         window.location.reload()
       } else {

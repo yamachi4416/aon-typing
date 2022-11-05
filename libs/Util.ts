@@ -13,7 +13,7 @@ export async function countDown(
   let id: ReturnType<typeof setInterval>
 
   if (options.abort) {
-    options.abort.signal?.addEventListener('abort', function() {
+    options.abort.signal?.addEventListener('abort', function () {
       clearTimeout(id)
     })
   }
