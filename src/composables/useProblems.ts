@@ -1,3 +1,5 @@
+import type { Ref } from '@vue/reactivity'
+
 import {
   ProblemDetail,
   ProblemListItem,
@@ -31,18 +33,18 @@ class UseProblems {
   async retrieveItems() {
     await Promise.all([
       useFetch('/api/problems.json').then(({ data, error }) => {
-        this._problems = justOrThrow(data.value, error.value).problems
+        this._problems = justOrThrowValue(data, error).problems
       }),
       useFetch('/api/problems/news.json').then(({ data, error }) => {
-        this._newProblems = justOrThrow(data.value, error.value)
+        this._newProblems = justOrThrowValue(data, error)
       }),
       useFetch('/api/tags.json').then(({ data, error }) => {
-        this._tagSummary = Object.entries(
-          justOrThrow(data.value, error.value),
-        ).map(([name, tag]) => ({
-          ...tag,
-          name,
-        }))
+        this._tagSummary = Object.entries(justOrThrowValue(data, error)).map(
+          ([name, tag]) => ({
+            ...tag,
+            name,
+          }),
+        )
       }),
     ])
   }
@@ -51,21 +53,26 @@ class UseProblems {
     const { data, error } = await useFetch(`/api/tags/${id}.json`, {
       key: `/api/tags/${id}.json`,
     })
-    return justOrThrow(data.value, error.value)
+    return justOrThrowValue(data, error)
   }
 
   async retrieveProblemDetail({ id }: { id: string }) {
     const { data, error } = await useFetch(`/api/problems/${id}.json`, {
       key: `/api/problems/${id}.json`,
     })
-    return justOrThrow(data.value, error.value) as ProblemDetail
+    return justOrThrowValue(data, error) as ProblemDetail
   }
 
   async lazyProblemDetail({ id }: { id: string }) {
     const { data, error } = await useFetch(`/api/problems/${id}.json`, {
       key: `/api/problems/${id}.json`,
     })
-    return justOrThrow(data.value, error.value) as ProblemDetail
+    return justOrThrowValue(data, error) as ProblemDetail
+  }
+
+  async allNewProblems() {
+    const { data, error } = await useFetch('/api/problems/news/all.json')
+    return justOrThrowValue(data, error)
   }
 
   problemTagFilter({
@@ -89,8 +96,11 @@ class UseProblems {
   }
 }
 
-function justOrThrow<T = any>(data: T, error: any) {
-  if (!data || typeof data === 'string') {
+function justOrThrow<T = any>(
+  data: Ref<T>,
+  error: Ref<any>,
+): Ref<NonNullable<T>> {
+  if (data.value == null || typeof data.value === 'string') {
     throw createError({
       statusCode: 404,
       statusMessage: 'Page Not Found',
@@ -98,11 +108,18 @@ function justOrThrow<T = any>(data: T, error: any) {
     })
   }
 
-  if (error instanceof Error) {
-    throw createError({ ...error, fatal: true })
+  if (error.value instanceof Error) {
+    throw createError({ ...error.value, fatal: true })
   }
 
-  return data
+  return data as Ref<NonNullable<T>>
+}
+
+function justOrThrowValue<T = any>(
+  data: Ref<T>,
+  error: Ref<any>,
+): NonNullable<T> {
+  return justOrThrow(data, error).value
 }
 
 const useProblemState = new UseProblems()

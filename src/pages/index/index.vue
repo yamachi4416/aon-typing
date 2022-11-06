@@ -58,6 +58,11 @@
             @detail="$navigator.indexProblemDetail"
             @play="$navigator.gameMenu"
           />
+          <div class="index-page-newProblems-more">
+            <NuxtLink :to="{ name: 'index-problems-news' }">
+              新着の問題をもっと見る
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </section>
@@ -229,6 +234,26 @@ function changeKwds() {
         padding: 20px;
         padding-bottom: 5px;
         color: #666;
+      }
+    }
+
+    &-more {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 20px 20px;
+
+      @include __media_s {
+        padding: 10px 20px 15px;
+      }
+
+      a {
+        color: #666;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          color: rgb(255 145 0 / 100%);
+        }
       }
     }
   }

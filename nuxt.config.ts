@@ -19,6 +19,7 @@ export const routes = (() => {
     '/robots.txt',
     '/sitemap.xml',
     '/problems',
+    '/problems/news',
     '/game',
     '/game/play',
     '/game/menu',
@@ -30,6 +31,7 @@ export const routes = (() => {
     ...tags.map((tag) => `/problems/tags/${tag.id}`),
     '/api/problems.json',
     '/api/problems/news.json',
+    '/api/problems/news/all.json',
     '/api/tags.json',
     ...problems.map((problem) => `/api/problems/${problem.id}.json`),
     ...tags.map((tag) => `/api/tags/${tag.id}.json`),
@@ -66,8 +68,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       gtagId: process.env.APP_G_TAGID,
-      baseUrl: process.env.APP_BASE_URL || 'http://localhost:3000',
-      contactUrl: process.env.APP_CONTACT_URL || '/api/contact',
+      baseUrl: process.env.APP_BASE_URL ?? 'http://localhost:3000',
+      contactUrl: process.env.APP_CONTACT_URL ?? '/api/contact',
     },
   },
 

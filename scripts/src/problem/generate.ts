@@ -161,7 +161,6 @@ async function generateProblemData({
           new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
           b.birthtime - a.birthtime,
       )
-      .slice(0, 6)
       .map((p) => ({
         id: p.id,
         title: p.title,
