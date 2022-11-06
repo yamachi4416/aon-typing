@@ -25,6 +25,7 @@
 
 <script setup lang="ts">
 import ModalPanel from '~/components/parts/ModalPanel.vue'
+import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
 import { TypingGame } from '~~/libs/TypingGame'
 import { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
 import { countDown } from '~~/libs/Util'
@@ -33,9 +34,9 @@ let abort: AbortController
 
 const state = reactive({
   typing: new TypingGame(),
-  result: null,
+  result: undefined as TypingGameInfo | undefined,
   countDown: 0,
-  problem: null as TypingProblemQuestioner,
+  problem: undefined as TypingProblemQuestioner | undefined,
   isCountDownShow: true,
 })
 
@@ -70,6 +71,10 @@ async function startTyping() {
   stopTyping()
   state.typing.init({})
 
+  if (!state.problem) {
+    return
+  }
+
   abort?.abort()
   abort = new AbortController()
   abort.signal.addEventListener('abort', function () {
@@ -98,31 +103,31 @@ async function startTyping() {
     setting: useProblems().setting,
   })
 
-  await modalGameResult.value.open()
+  await modalGameResult.value?.open()
 }
 
 function stopTyping() {
-  state.result = null
+  state.result = undefined
   state.countDown = 0
   state.isCountDownShow = false
   return state.typing.cancel()
 }
 
 async function retry() {
-  state.problem.reset()
-  await modalGameResult.value.close()
+  state.problem?.reset()
+  await modalGameResult.value?.close()
   await startTyping()
 }
 
 async function menu() {
-  state.problem.reset()
-  await modalGameResult.value.close()
+  state.problem?.reset()
+  await modalGameResult.value?.close()
   await useNavigator().backOrGameMenu()
 }
 
 async function next() {
-  state.problem.continue()
-  await modalGameResult.value.close()
+  state.problem?.continue()
+  await modalGameResult.value?.close()
   await startTyping()
 }
 

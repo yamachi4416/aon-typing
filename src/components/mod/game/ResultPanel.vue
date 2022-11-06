@@ -74,7 +74,7 @@
         <span>
           <button
             class="button"
-            :disabled="!problem.hasNext"
+            :disabled="!problem?.hasNext"
             @click="$emit('next')"
           >
             つづきをする
@@ -86,12 +86,12 @@
 </template>
 
 <script setup lang="ts">
-import { TypingGameInfo } from '~~/libs/TypingGameInfo'
-import { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
+import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
+import type { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
 
 defineProps<{
-  result: TypingGameInfo
-  problem: TypingProblemQuestioner
+  result: TypingGameInfo | undefined
+  problem: TypingProblemQuestioner | undefined
 }>()
 
 defineEmits<{

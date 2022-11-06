@@ -55,7 +55,7 @@ class Navigator {
 
   async backOrIndex() {
     if (this.enable) {
-      if (this.path.startsWith('/game')) {
+      if (this.path?.startsWith('/game')) {
         await useRouter().push({ name: 'index' })
       } else {
         useRouter().back()

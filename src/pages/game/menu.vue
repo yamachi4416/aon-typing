@@ -5,12 +5,12 @@
       @start="startTyping"
       @cancel="cancel"
       @detail="openProblemDetail"
-      @openProblemSelect="modalProblemList.open()"
+      @openProblemSelect="modalProblemList?.open()"
     />
   </ModalPanel>
   <ModalPanel ref="modalProblemList">
     <ModGameProblemListPanel
-      @close="modalProblemList.close()"
+      @close="modalProblemList?.close()"
       @select="selcet"
       @detail="openProblemSelectDetail"
     />
@@ -18,8 +18,8 @@
   <ModalPanel ref="modalProblemDetail">
     <ProblemDetailPanel
       ref="problemDetailPanel"
-      @close="modalProblemDetail.close()"
-      @back="modalProblemDetail.close()"
+      @close="modalProblemDetail?.close()"
+      @back="modalProblemDetail?.close()"
       @select="selcet"
     />
   </ModalPanel>
@@ -44,14 +44,14 @@ const modals = [modalProblemList, modalProblemDetail]
 
 const problemDetailPanel = ref<InstanceType<typeof ProblemDetailPanel>>()
 
-onMounted(() => modalMenu.value.open())
+onMounted(() => modalMenu.value?.open())
 
 const hasPendingModal = computed(
-  () => (modals.filter((modal) => modal.value.isPending)?.length ?? 0) > 0,
+  () => (modals.filter((modal) => modal.value?.isPending)?.length ?? 0) > 0,
 )
 
 const openModal = computed(
-  () => modals.reverse().find((modal) => modal.value.isOpen)?.value,
+  () => modals.reverse().find((modal) => modal.value?.isOpen)?.value,
 )
 
 onBeforeRouteLeave(async (_to, _from, next) => {
@@ -66,7 +66,7 @@ onBeforeRouteLeave(async (_to, _from, next) => {
     return false
   }
 
-  await modalMenu.value.close()
+  await modalMenu.value?.close()
   next()
   return true
 })
@@ -93,9 +93,9 @@ async function openProblemDetailShow(
 ) {
   if (hasPendingModal.value) return
   const tasks = []
-  tasks.push(modalProblemDetail.value.open())
+  tasks.push(modalProblemDetail.value?.open())
   await nextTick()
-  tasks.push(problemDetailPanel.value.setDetail({ problem, selectable }))
+  tasks.push(problemDetailPanel.value?.setDetail({ problem, selectable }))
   await Promise.all(tasks)
 }
 
@@ -104,7 +104,7 @@ function selcet({ id }: { id: string }) {
   useProblems().setting.problemId = id
   let anim = true
   for (const modal of modals.reverse()) {
-    if (modal.value.isOpen) {
+    if (modal.value?.isOpen) {
       modal.value.close(anim)
       anim = false
     }
