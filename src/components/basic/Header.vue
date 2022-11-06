@@ -51,22 +51,27 @@ onMounted(() => typing(titleText))
 function typing(text: string) {
   if (!props.anim) return Promise.resolve()
   return new Promise((resolve) => {
-    const types = typeJapaneseCharsMap(text, null, true).map((v) => ({
+    const types = typeJapaneseCharsMap(text, undefined, true).map((v) => ({
       jc: v.jc,
-      ec: v.ec.split(''),
+      ec: v.ec?.split(''),
     }))
 
-    const fins = []
-    const bufs = []
+    const fins: string[] = []
+    const bufs: string[] = []
     const type = async () => {
       startAnim.value = true
 
       const val = types.shift()
-      if (val) {
+      if (val && val.ec && val.jc) {
         if (val.ec.length > 1) {
           types.unshift(val)
         }
-        bufs.push(val.ec.shift())
+
+        const buf = val.ec.shift()
+        if (buf) {
+          bufs.push(buf)
+        }
+
         titleChars.value = [...fins, ...bufs]
         if (val.ec.length === 0) {
           bufs.splice(0)

@@ -18,7 +18,7 @@ withDefaults(
     keys: Keys
   }>(),
   {
-    typeKey: null,
+    typeKey: undefined,
     setting: () => ({}),
   },
 )

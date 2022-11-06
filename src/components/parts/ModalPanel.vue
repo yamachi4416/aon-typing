@@ -25,7 +25,7 @@ defineExpose({
     pending.value = true
     show.value = true
     await nextTick()
-    modal.value.classList.remove('hide')
+    modal.value?.classList.remove('hide')
     if (anim) {
       if (modal.value) {
         modal.value.classList.add('open')

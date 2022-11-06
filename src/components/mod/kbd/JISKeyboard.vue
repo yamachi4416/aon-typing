@@ -106,14 +106,14 @@ const props = withDefaults(
     keys?: Keys
   }>(),
   {
-    typeKey: null,
+    typeKey: undefined,
     setting: () => ({}),
     keys: () => new JISKeys(),
   },
 )
 
 const shiftKey = ref(false)
-const shift = computed(() => props.keys.isShiftKey(props.typeKey))
+const shift = computed(() => props.keys?.isShiftKey(props.typeKey))
 const lines = [
   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
   [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],

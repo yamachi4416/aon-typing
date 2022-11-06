@@ -4,5 +4,6 @@
     width="296"
     height="296"
     alt="タイピングねこ"
+    loading="lazy"
   />
 </template>

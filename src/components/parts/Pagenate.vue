@@ -29,7 +29,7 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{
-  (e: 'select', page: number)
+  (e: 'select', page: number): any
 }>()
 
 const editPage = computed({

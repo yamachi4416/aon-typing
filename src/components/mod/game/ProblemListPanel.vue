@@ -46,10 +46,10 @@ import { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 import { pagenate } from '~~/libs/Util'
 
 defineEmits<{
-  (e: 'select', item: ProblemListItem)
-  (e: 'detail', item: ProblemListItem)
-  (e: 'tag', item: ProblemItemTag)
-  (e: 'close')
+  (e: 'select', item: ProblemListItem): any
+  (e: 'detail', item: ProblemListItem): any
+  (e: 'tag', item: ProblemItemTag): any
+  (e: 'close'): any
 }>()
 
 const pageSize = 30
@@ -71,7 +71,7 @@ const content = ref<InstanceType<typeof ModalContentVue>>()
 async function selcet(p: number) {
   page.value = p
   await nextTick()
-  content.value.scroll({ top: 0 })
+  content.value?.scroll({ top: 0 })
 }
 
 function addTag(tag: ProblemItemTag) {

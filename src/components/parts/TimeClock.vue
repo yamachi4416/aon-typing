@@ -24,7 +24,7 @@ const props = withDefaults(
 )
 
 defineEmits<{
-  (e: 'click')
+  (e: 'click'): any
 }>()
 
 const minute = computed(() => {

@@ -7,7 +7,7 @@
           <div>
             <label>ランク</label>
             <div class="rank">
-              {{ result.rank.name }}
+              {{ result.rank?.name }}
             </div>
           </div>
           <div>
@@ -95,9 +95,9 @@ defineProps<{
 }>()
 
 defineEmits<{
-  (e: 'retry')
-  (e: 'next')
-  (e: 'menu')
+  (e: 'retry'): any
+  (e: 'next'): any
+  (e: 'menu'): any
 }>()
 </script>
 

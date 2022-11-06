@@ -42,7 +42,7 @@ defineProps<{
 }>()
 
 defineEmits<{
-  (e: 'tag', tag: ProblemItemTag)
+  (e: 'tag', tag: ProblemItemTag): any
 }>()
 </script>
 

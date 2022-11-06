@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 defineEmits<{
-  (e: 'click')
+  (e: 'click'): any
 }>()
 
 const props = withDefaults(
@@ -37,7 +37,7 @@ const props = withDefaults(
   {
     totalTime: 60,
     time: 0,
-    text: null,
+    text: undefined,
   },
 )
 

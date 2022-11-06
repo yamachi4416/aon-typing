@@ -83,14 +83,14 @@ const props = withDefaults(
     highlight?: boolean
   }>(),
   {
-    index: null,
+    index: undefined,
     text: '',
     highlight: false,
   },
 )
 
 const emit = defineEmits<{
-  (e: 'click', key: { index: number; text: string }, start: boolean)
+  (e: 'click', key: { index: number; text: string }, start: boolean): any
 }>()
 
 const clicked = ref(false)

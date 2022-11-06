@@ -25,14 +25,14 @@ import {
 } from '~~/types/problems'
 
 defineEmits<{
-  (e: 'select', detail: ProblemDetail)
-  (e: 'back')
-  (e: 'close')
+  (e: 'select', detail: ProblemDetail): any
+  (e: 'back'): any
+  (e: 'close'): any
 }>()
 
 const showSelect = ref(true)
 const problem = ref({} as ProblemListItem)
-const problemDetail = ref(null as ProblemDetail)
+const problemDetail = ref<ProblemDetail | null>(null)
 const detail = computed(() => {
   if (problemDetail.value) {
     return problemDetail.value
@@ -47,8 +47,8 @@ const detail = computed(() => {
   return {
     ...problem.value,
     words,
-    createdAt: null,
-    updatedAt: null,
+    createdAt: null as never,
+    updatedAt: null as never,
   } as ProblemDetail
 })
 

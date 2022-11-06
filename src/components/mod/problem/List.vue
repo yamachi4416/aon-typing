@@ -10,7 +10,7 @@
           <ModProblemListItem
             :item="p"
             class="problem-list-item-item"
-            @tag="(tag) => $emit('tag', tag)"
+            @tag="(tag: ProblemItemTag) => $emit('tag', tag)"
           >
             <template v-if="$slots.default" #footer>
               <slot :problem="p" />
@@ -35,7 +35,7 @@ withDefaults(
 )
 
 defineEmits<{
-  (e: 'tag', tag: ProblemItemTag)
+  (e: 'tag', tag: ProblemItemTag): any
 }>()
 </script>
 

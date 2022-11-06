@@ -66,6 +66,10 @@ const title = computed(() => {
     return null
   }
 
+  if (!desc.value) {
+    return null
+  }
+
   return {
     offline: 'オフラインです',
     notfound: 'ページが見つかりません',

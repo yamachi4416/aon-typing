@@ -33,7 +33,7 @@ withDefaults(
 )
 
 defineEmits<{
-  (e: 'close')
+  (e: 'close'): any
 }>()
 
 const content = ref<HTMLElement>()

@@ -17,7 +17,7 @@ const props = withDefaults(
     charMode?: boolean
   }>(),
   {
-    word: () => null,
+    word: undefined,
     charMode: true,
   },
 )

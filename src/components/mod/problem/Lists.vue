@@ -1,6 +1,9 @@
 <template>
   <div>
-    <ModProblemList :problems="pages.items" @tag="(tag) => emit('tag', tag)">
+    <ModProblemList
+      :problems="pages.items"
+      @tag="(tag: ProblemItemTag) => emit('tag', tag)"
+    >
       <template #default="{ problem }">
         <div class="buttons">
           <span>
@@ -41,9 +44,9 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{
-  (e: 'tag', tag: ProblemItemTag)
-  (e: 'detail', p: ProblemListItem)
-  (e: 'play', p: ProblemListItem)
+  (e: 'tag', tag: ProblemItemTag): any
+  (e: 'detail', p: ProblemListItem): any
+  (e: 'play', p: ProblemListItem): any
 }>()
 
 const route = useRoute()

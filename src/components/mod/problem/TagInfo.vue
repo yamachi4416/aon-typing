@@ -41,7 +41,7 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{
-  (e: 'tag', tags: string[])
+  (e: 'tag', tags: string[]): any
 }>()
 
 const tags = ref(getTags())
