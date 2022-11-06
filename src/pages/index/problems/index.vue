@@ -40,6 +40,7 @@
 
 <script setup lang="ts">
 import { onBeforeRouteLeave } from 'vue-router'
+import type { LocationQueryValue } from 'vue-router'
 
 useHead({
   title: '問題いちらん',
@@ -59,22 +60,22 @@ const problems = computed(() => {
 
 onMounted(() => {
   kwds.value = convertKwds(useRoute().query.kwd)
-  const watchQuery = watch(
+  const unwatchQuery = watch(
     () => useRoute().query,
     () => {
       kwds.value = convertKwds(useRoute().query.kwd)
     },
   )
-  onBeforeRouteLeave(() => watchQuery())
+  onBeforeRouteLeave(() => unwatchQuery())
 })
 
-function convertKwds(val: string | string[]) {
+function convertKwds(val: LocationQueryValue | LocationQueryValue[]) {
   const kwds = () => {
     if (!val) return []
     return typeof val === 'string' ? [val] : val
   }
   return kwds()
-    .flatMap((kwd) => kwd.split(/[\u{20}\u{3000}]/u).filter((v) => v))
+    .flatMap((kwd) => kwd?.split(/[\u{20}\u{3000}]/u).filter((v) => v) ?? [])
     .filter((kwd) => kwd)
 }
 </script>

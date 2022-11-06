@@ -34,7 +34,7 @@
             <span>
               <button
                 class="button big"
-                :disabled="!enableSearch || null"
+                :disabled="!enableSearch"
                 @click="searchProblems"
               >
                 検索する

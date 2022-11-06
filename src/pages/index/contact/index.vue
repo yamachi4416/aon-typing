@@ -50,7 +50,7 @@
         <div class="buttons">
           <button
             class="button big"
-            :disabled="contact.hasErrors || null"
+            :disabled="contact.hasErrors"
             @click="submit"
           >
             送信する
