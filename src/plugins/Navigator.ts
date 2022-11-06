@@ -7,6 +7,11 @@ class Navigator {
     return !!this.path
   }
 
+  staticPath(filename: string): string {
+    const path = useRoute().path.replace(/\/$/, '').replace(/^\//, '')
+    return `/static/${path}/${filename}`
+  }
+
   replaceQuery(query: Record<string, string | string[]>, keep: boolean = true) {
     const router = useRouter()
     const repQuery = keep ? { ...useRoute().query, ...query } : { ...query }

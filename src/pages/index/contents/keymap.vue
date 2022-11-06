@@ -6,7 +6,13 @@
         <p>
           ローマ字でのタイピングの入力の組み合わせをまとめた表です。<br />
           入力方法がわからない文字をさがすときや入力方法をおぼえたいときなどにどうぞ。<br />
-          印刷してご利用される場合はタテB5サイズがおすすめです。
+          印刷してご利用される場合はタテB5サイズがおすすめです。<br />
+          PDFファイルのダウンロードは<a
+            :href="$navigator.staticPath('keymap.pdf')"
+            download="ローマ字タイピング入力表.pdf"
+            target="_blank"
+            >こちら</a
+          >からどうぞ。
         </p>
         <div class="detail-actions">
           <div class="buttons">
