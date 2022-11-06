@@ -16,8 +16,11 @@ export class TypingGameWordData {
 
   constructor(i: number, data?: ProblemDetailWord) {
     Object.assign(this._init(i), data)
-    this.wordState = new TypingGameWordState(data?.word)
-    this.infoState = new TypingGameWordInfoState(data?.info, data?.info2)
+    this.wordState = new TypingGameWordState(data?.word ?? '')
+    this.infoState = new TypingGameWordInfoState(
+      data?.info ?? '',
+      data?.info2 ?? '',
+    )
   }
 
   _init(i: number) {

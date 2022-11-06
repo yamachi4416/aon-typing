@@ -63,6 +63,10 @@ export default defineCommand({
     ekispertApiKey: key,
     overwrite,
   }) => {
+    if (!cds) {
+      throw new Error('operationLineCode must not be null.')
+    }
+
     const id = `1010${cds[0].padStart(3, '0')}`
     const file = path.join(dataDir, `${id}.json`)
     const date = fmtDate(({ yyyy, MM, dd }) => `${yyyy}-${MM}-${dd}`)

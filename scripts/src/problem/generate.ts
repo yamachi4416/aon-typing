@@ -61,8 +61,9 @@ async function generateProblemData({
       const dataObj: ProblemDetailData = JSON.parse(
         (await fs.readFile(p)).toString(),
       )
+
       const problem: ProblemDetail = {
-        id: path.basename(p, '.json'),
+        ...{ id: path.basename(p, '.json') },
         ...dataObj,
         tags: [],
       }
@@ -101,8 +102,8 @@ async function generateProblemData({
         title: p.title,
         type: p.type,
         words: p.words.length,
-        chars: p.words.reduce(
-          (s: number, w: { word: string }) => s + w.word.length,
+        chars: p.words.reduce<number>(
+          (s, w: { word: string }) => s + w.word.length,
           0,
         ),
         tags: p.tags || [],
@@ -142,7 +143,7 @@ async function generateProblemData({
     tagsFile,
     tagSummary
       .sort((a, b) => (a.id < b.id ? -1 : 1))
-      .reduce(
+      .reduce<Record<string, { id: string; count: number }>>(
         (summary, { name, id, count }) => ({
           ...summary,
           [name]: { id, count },

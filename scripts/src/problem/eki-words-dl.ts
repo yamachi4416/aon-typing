@@ -36,7 +36,7 @@ async function outProcess({
   dryRun,
 }: {
   infoData: InfoData
-  dryRun: boolean
+  dryRun?: boolean
 }) {
   const { id, file, text, data } = infoData
   const json = prettier.format(JSON.stringify(data), {

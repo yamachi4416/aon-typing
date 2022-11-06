@@ -5,12 +5,12 @@ export class TypingGameWordState {
   _currentWords: string[]
   _rightWords: string[]
 
-  constructor(word?: string) {
-    this.word = word ?? ''
+  constructor(word: string) {
+    this.word = word
     this._leftWords = []
     this._buffer = []
     this._currentWords = []
-    this._rightWords = Array.from(word ?? '')
+    this._rightWords = Array.from(word)
   }
 
   get buffer() {
@@ -68,8 +68,8 @@ export class TypingGameWordState {
     return this.current + this.right
   }
 
-  push(n = 1) {
-    const v = this._rightWords.splice(0, n)
+  push(n?: number) {
+    const v = this._rightWords.splice(0, n ?? 1)
     if (v.length > 0) {
       this._currentWords.push(...v)
     }
@@ -87,8 +87,8 @@ export class TypingGameWordState {
     }
   }
 
-  shift(n = 1) {
-    const v = this._currentWords.splice(0, n)
+  shift(n?: number) {
+    const v = this._currentWords.splice(0, n ?? 1)
     if (v.length > 0) {
       this._buffer.push(...v)
     }
@@ -101,8 +101,9 @@ export class TypingGameWordState {
     }
   }
 
-  next(n = 1) {
-    for (let i = 0; i < n; i++) {
+  next(n?: number) {
+    const l = n ?? 1
+    for (let i = 0; i < l; i++) {
       const c = this._currentWords.shift()
       if (c) {
         this._leftWords.push(c)
@@ -116,9 +117,9 @@ export class TypingGameWordState {
 }
 
 export class TypingGameWordInfoState extends TypingGameWordState {
-  info?: string
-  constructor(info?: string, word?: string) {
-    super(word ?? '')
+  info: string
+  constructor(info: string, word: string) {
+    super(word)
     this.info = info
   }
 }

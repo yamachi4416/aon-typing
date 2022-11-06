@@ -16,7 +16,7 @@ export interface ProblemListItem {
 
 export interface ProblemTagSummary {
   id: string
-  name?: string
+  name: string
   count: number
 }
 
@@ -35,7 +35,7 @@ export interface ProblemDetailLink {
 export interface ProblemDetailWord {
   info?: string
   info2?: string
-  word?: string
+  word: string
 }
 
 export interface ProblemDetail {

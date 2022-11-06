@@ -9,7 +9,8 @@ import type { TypingGamer } from './TypingGamer'
 
 export class TypingGamerJapanese implements TypingGamer {
   init(word?: TypingGameWordData) {
-    if (!word?.wordState.current && word) {
+    if (!word) return
+    if (!word.wordState.current) {
       const { jc, ec } = typeCharsToJapaneseChars(
         word.wordState.word,
         word.infoState.word,

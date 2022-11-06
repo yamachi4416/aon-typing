@@ -4,17 +4,16 @@ import { TextDecoder } from 'node:util'
 import { JSDOM } from 'jsdom'
 import { defineCommand, httpFetch } from '../lib/util'
 import { kana2Hira } from '~~/libs/TypingJapaneseChars'
-import { ProblemDetailWord } from '~~/types/problems'
 
-const normalizeMap = {
+const normalizeMap: Record<string, string> = {
   一: '１',
   二: '２',
   三: '３',
   '…': '...',
 }
 
-function normalizeKana(text: string) {
-  const hira = kana2Hira(text || '') || ''
+function normalizeKana(text?: string) {
+  const hira = kana2Hira(text ?? '') ?? ''
   return Array.from(hira)
     .map((s) => normalizeMap[s] || s)
     .join('')
@@ -44,12 +43,12 @@ async function fetchCard(cardUrl: string) {
     )
     for (let i = 0; i < tds.length; i++) {
       const c = tds[i].textContent
-      if (c.startsWith('作品名：')) {
-        info.title = tds[++i]?.textContent?.trim()
-      } else if (c.startsWith('作品名読み：')) {
-        info.titleKana = normalizeKana(tds[++i]?.textContent?.trim())
-      } else if (c.startsWith('著者名：')) {
-        info.author = tds[++i]?.textContent?.trim()
+      if (c?.startsWith('作品名：')) {
+        info.title = tds[++i]?.textContent?.trim() ?? ''
+      } else if (c?.startsWith('作品名読み：')) {
+        info.titleKana = normalizeKana(tds[++i]?.textContent?.trim()) ?? ''
+      } else if (c?.startsWith('著者名：')) {
+        info.author = tds[++i]?.textContent?.trim() ?? ''
       }
     }
   })()
@@ -59,7 +58,7 @@ async function fetchCard(cardUrl: string) {
     )
     for (let i = 0; i < tds.length; i++) {
       const c = tds[i].textContent
-      if (c.startsWith('作家名読み：')) {
+      if (c?.startsWith('作家名読み：')) {
         info.authorKana = normalizeKana(tds[++i]?.textContent?.trim())
       }
     }
@@ -84,14 +83,14 @@ async function fetchDocument(url: string) {
   const mainText = document.querySelector('.main_text')
   const words = [{ info: '', info2: '' }]
 
-  Array.from(mainText.childNodes.values()).forEach((node: Element) => {
+  Array.from(mainText?.childNodes.values() ?? []).forEach((node: ChildNode) => {
     if (node.nodeName === 'BR') {
       words.push({ info: '', info2: '' })
       return
     }
 
     const word = words[words.length - 1]
-    if (node.nodeName === 'RUBY') {
+    if (node instanceof Element && node.nodeName === 'RUBY') {
       const rb = Array.from(node.getElementsByTagName('rb'))
         .map((r) => r.textContent)
         .join('')
@@ -101,7 +100,7 @@ async function fetchDocument(url: string) {
       word.info += rb
       word.info2 += normalizeKana(rt)
     } else if (node) {
-      if (node.classList?.contains('notes')) {
+      if (node instanceof Element && node.classList?.contains('notes')) {
         return
       }
       const text = node.textContent?.trimStart()
@@ -113,39 +112,46 @@ async function fetchDocument(url: string) {
   })
 
   const ret = {
-    id: undefined as string,
+    id: undefined as never as string,
     title: document.querySelector('.title')?.textContent,
     author: document.querySelector('.author')?.textContent,
     words: words.filter((word) => word.info),
-    links: undefined as Array<Record<string, string>>,
+    links: undefined as never as Array<Record<string, string>>,
   }
 
   return ret
 }
 
-function splitWords(words: ProblemDetailWord[], regex: RegExp, max: number) {
+function splitWords(
+  words: Array<{ info: string; info2: string }>,
+  regex: RegExp,
+  max: number,
+) {
   const ret = []
 
-  const nwords = words.reduce<ProblemDetailWord[]>((a, word) => {
-    if (word.info.length <= max) {
-      a.push(word)
-    } else {
-      const i1 = word.info.split(regex)
-      const i2 = word.info2.split(regex)
-      if (i1.length !== i2.length || i1.length === 1) {
+  const nwords = words.reduce<Array<{ info: string; info2: string }>>(
+    (a, word) => {
+      if (word.info.length <= max) {
         a.push(word)
       } else {
-        a.push(
-          ...i1.map((v, i) => ({
-            info: v,
-            info2: i2[i],
-          })),
-        )
+        const i1 = word.info.split(regex)
+        const i2 = word.info2.split(regex)
+        if (i1.length !== i2.length || i1.length === 1) {
+          a.push(word)
+        } else {
+          a.push(
+            ...i1.map((v, i) => ({
+              info: v,
+              info2: i2[i],
+            })),
+          )
+        }
       }
-    }
 
-    return a
-  }, [])
+      return a
+    },
+    [],
+  )
 
   let w = { info: '', info2: '' }
   ret.push(w)
@@ -214,7 +220,7 @@ async function aozoraDL(args: { url: string; dist: string; word: number }) {
 
   if (distDir) {
     const stat = await fs.stat(distDir)
-    if (stat.isDirectory) {
+    if (!stat.isDirectory()) {
       console.error(`${distDir} is not directory.`)
       return
     }
@@ -255,10 +261,12 @@ export default defineCommand({
         default: 40,
         requiresArg: true,
       }),
-  handler: async ({ aororaUtaUrl, wordCount, dataDir }) =>
+  handler: async ({ aororaUtaUrl, wordCount, dataDir }) => {
+    if (!dataDir) throw new Error('dataDir is required.')
     await aozoraDL({
       url: aororaUtaUrl,
       word: wordCount,
       dist: dataDir,
-    }),
+    })
+  },
 })
