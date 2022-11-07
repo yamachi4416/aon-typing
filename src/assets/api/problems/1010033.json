@@ -1,0 +1,51 @@
+{
+  "id": "1010033",
+  "title": "ＪＲ八戸線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-07",
+  "updatedAt": "2022-11-07",
+  "optional": { "cd": "33" },
+  "words": [
+    { "info": "久慈", "info2": "くじ", "word": "kuji" },
+    {
+      "info": "陸中夏井",
+      "info2": "りくちゅうなつい",
+      "word": "rikutyuunatui"
+    },
+    { "info": "侍浜", "info2": "さむらいはま", "word": "samuraihama" },
+    {
+      "info": "陸中中野",
+      "info2": "りくちゅうなかの",
+      "word": "rikutyuunakano"
+    },
+    { "info": "有家", "info2": "うげ", "word": "uge" },
+    { "info": "陸中八木", "info2": "りくちゅうやぎ", "word": "rikutyuuyagi" },
+    { "info": "宿戸", "info2": "しゅくのへ", "word": "syukunohe" },
+    { "info": "玉川", "info2": "たまがわ", "word": "tamagawa" },
+    { "info": "種市", "info2": "たねいち", "word": "taneiti" },
+    { "info": "平内", "info2": "ひらない", "word": "hiranai" },
+    { "info": "角の浜", "info2": "かどのはま", "word": "kadonohama" },
+    { "info": "階上", "info2": "はしかみ", "word": "hasikami" },
+    { "info": "大蛇", "info2": "おおじゃ", "word": "ooja" },
+    { "info": "金浜", "info2": "かねはま", "word": "kanehama" },
+    { "info": "大久喜", "info2": "おおくき", "word": "ookuki" },
+    {
+      "info": "種差海岸",
+      "info2": "たねさしかいがん",
+      "word": "tanesasikaigann"
+    },
+    { "info": "陸奥白浜", "info2": "むつしらはま", "word": "mutusirahama" },
+    { "info": "鮫", "info2": "さめ", "word": "same" },
+    { "info": "白銀", "info2": "しろがね", "word": "sirogane" },
+    { "info": "陸奥湊", "info2": "むつみなと", "word": "mutuminato" },
+    { "info": "小中野", "info2": "こなかの", "word": "konakano" },
+    { "info": "本八戸", "info2": "ほんはちのへ", "word": "honhatinohe" },
+    { "info": "長苗代", "info2": "ながなわしろ", "word": "naganawasiro" },
+    { "info": "八戸", "info2": "はちのへ", "word": "hatinohe" }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "1010036",
+  "title": "ＪＲ男鹿線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-07",
+  "updatedAt": "2022-11-07",
+  "optional": { "cd": "36" },
+  "words": [
+    { "info": "男鹿", "info2": "おが", "word": "oga" },
+    { "info": "羽立", "info2": "はだち", "word": "hadati" },
+    { "info": "脇本", "info2": "わきもと", "word": "wakimoto" },
+    { "info": "船越", "info2": "ふなこし", "word": "hunakosi" },
+    { "info": "天王", "info2": "てんのう", "word": "tennnou" },
+    { "info": "二田", "info2": "ふただ", "word": "hutada" },
+    { "info": "上二田", "info2": "かみふただ", "word": "kamihutada" },
+    { "info": "出戸浜", "info2": "でとはま", "word": "detohama" },
+    { "info": "追分", "info2": "おいわけ", "word": "oiwake" },
+    { "info": "上飯島", "info2": "かみいいじま", "word": "kamiiijima" },
+    { "info": "土崎", "info2": "つちざき", "word": "tutizaki" },
+    {
+      "info": "泉外旭川",
+      "info2": "いずみそとあさひかわ",
+      "word": "izumisotoasahikawa"
+    },
+    { "info": "秋田", "info2": "あきた", "word": "akita" }
+  ]
+}
