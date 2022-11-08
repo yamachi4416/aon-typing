@@ -1,0 +1,56 @@
+{
+  "id": "1010038",
+  "title": "ＪＲ花輪線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-09",
+  "updatedAt": "2022-11-09",
+  "optional": { "cd": "38" },
+  "words": [
+    { "info": "大館", "info2": "おおだて", "word": "oodate" },
+    { "info": "東大館", "info2": "ひがしおおだて", "word": "higasioodate" },
+    { "info": "扇田", "info2": "おうぎた", "word": "ougita" },
+    { "info": "大滝温泉", "info2": "おおたきおんせん", "word": "ootakionsenn" },
+    { "info": "十二所", "info2": "じゅうにしょ", "word": "juunisyo" },
+    { "info": "沢尻", "info2": "さわじり", "word": "sawajiri" },
+    { "info": "土深井", "info2": "どぶかい", "word": "dobukai" },
+    { "info": "末広", "info2": "すえひろ", "word": "suehiro" },
+    { "info": "十和田南", "info2": "とわだみなみ", "word": "towadaminami" },
+    { "info": "柴平", "info2": "しばひら", "word": "sibahira" },
+    { "info": "鹿角花輪", "info2": "かづのはなわ", "word": "kadunohanawa" },
+    {
+      "info": "陸中大里",
+      "info2": "りくちゅうおおさと",
+      "word": "rikutyuuoosato"
+    },
+    { "info": "八幡平", "info2": "はちまんたい", "word": "hatimantai" },
+    { "info": "湯瀬温泉", "info2": "ゆぜおんせん", "word": "yuzeonsenn" },
+    { "info": "兄畑", "info2": "あにはた", "word": "anihata" },
+    { "info": "田山", "info2": "たやま", "word": "tayama" },
+    { "info": "横間", "info2": "よこま", "word": "yokoma" },
+    { "info": "荒屋新町", "info2": "あらやしんまち", "word": "arayasinmati" },
+    { "info": "小屋の畑", "info2": "こやのはた", "word": "koyanohata" },
+    { "info": "赤坂田", "info2": "あかさかた", "word": "akasakata" },
+    { "info": "安比高原", "info2": "あっぴこうげん", "word": "appikougenn" },
+    {
+      "info": "松尾八幡平",
+      "info2": "まつおはちまんたい",
+      "word": "matuohatimantai"
+    },
+    { "info": "北森", "info2": "きたもり", "word": "kitamori" },
+    { "info": "平館", "info2": "たいらだて", "word": "tairadate" },
+    { "info": "大更", "info2": "おおぶけ", "word": "oobuke" },
+    { "info": "東大更", "info2": "ひがしおおぶけ", "word": "higasioobuke" },
+    { "info": "好摩", "info2": "こうま", "word": "kouma" },
+    { "info": "渋民", "info2": "しぶたみ", "word": "sibutami" },
+    { "info": "滝沢", "info2": "たきざわ", "word": "takizawa" },
+    { "info": "巣子", "info2": "すご", "word": "sugo" },
+    { "info": "厨川", "info2": "くりやがわ", "word": "kuriyagawa" },
+    { "info": "青山", "info2": "あおやま", "word": "aoyama" },
+    { "info": "盛岡", "info2": "もりおか", "word": "morioka" }
+  ]
+}
