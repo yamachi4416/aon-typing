@@ -1,0 +1,32 @@
+{
+  "id": "1010041",
+  "title": "ＪＲ田沢湖線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-09",
+  "updatedAt": "2022-11-09",
+  "optional": { "cd": "41" },
+  "words": [
+    { "info": "大曲", "info2": "おおまがり", "word": "oomagari" },
+    { "info": "北大曲", "info2": "きたおおまがり", "word": "kitaoomagari" },
+    { "info": "羽後四ツ屋", "info2": "うごよつや", "word": "ugoyotuya" },
+    { "info": "鑓見内", "info2": "やりみない", "word": "yariminai" },
+    { "info": "羽後長野", "info2": "うごながの", "word": "ugonagano" },
+    { "info": "鶯野", "info2": "うぐいすの", "word": "uguisuno" },
+    { "info": "角館", "info2": "かくのだて", "word": "kakunodate" },
+    { "info": "生田", "info2": "しょうでん", "word": "syoudenn" },
+    { "info": "神代", "info2": "じんだい", "word": "jindai" },
+    { "info": "刺巻", "info2": "さしまき", "word": "sasimaki" },
+    { "info": "田沢湖", "info2": "たざわこ", "word": "tazawako" },
+    { "info": "赤渕", "info2": "あかぶち", "word": "akabuti" },
+    { "info": "春木場", "info2": "はるきば", "word": "harukiba" },
+    { "info": "雫石", "info2": "しずくいし", "word": "sizukuisi" },
+    { "info": "小岩井", "info2": "こいわい", "word": "koiwai" },
+    { "info": "大釜", "info2": "おおかま", "word": "ookama" },
+    { "info": "盛岡", "info2": "もりおか", "word": "morioka" }
+  ]
+}
