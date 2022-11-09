@@ -32,3 +32,11 @@ definePageMeta({
   },
 })
 </script>
+
+<style scoped lang="scss">
+.main {
+  :where(.v-enter-active) {
+    display: none;
+  }
+}
+</style>
