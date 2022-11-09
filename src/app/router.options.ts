@@ -13,6 +13,8 @@ const routerConfig: RouterConfig = {
       return false
     }
 
+    await nextTick()
+
     if (savedPosition) {
       return savedPosition
     } else {
