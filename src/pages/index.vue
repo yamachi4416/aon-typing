@@ -25,7 +25,7 @@ onBeforeUpdate(() => {
 
 definePageMeta({
   pageTransition: {
-    duration: 50,
+    duration: 1,
     onAfterEnter() {
       useScrollWaiter().flush()
     },
@@ -36,7 +36,7 @@ definePageMeta({
 <style scoped lang="scss">
 .main {
   :where(.v-enter-active) {
-    display: none;
+    opacity: 0;
   }
 }
 </style>

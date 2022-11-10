@@ -1,8 +1,8 @@
 class ScrollQueue {
   private resolve: ((value?: any) => void) | null = null
-  private promise = ref(null as Promise<any>)
+  private promise = ref<null | Promise<any>>(null)
   private _noScroll: boolean = false
-  private readonly _waiting = computed(() => !(this.promise.value == null))
+  private readonly _waiting = computed(() => this.promise.value != null)
 
   get waiting() {
     return this._waiting.value
