@@ -47,15 +47,15 @@
         <div class="col-sm-12 col-6">
           <dl>
             <dt>１分あたりのタイプ数</dt>
-            <dl>
+            <dd>
               <p>
                 総タイプ数 ÷ 入力時間<small>（ミリ秒）</small> × 60,000<small
                   >ミリ秒</small
                 >
               </p>
-            </dl>
+            </dd>
             <dt>正確タイプ率</dt>
-            <dl><p>正確にタイプしたタイプ数 ÷ 総タイプ数</p></dl>
+            <dd><p>正確にタイプしたタイプ数 ÷ 総タイプ数</p></dd>
           </dl>
         </div>
       </div>
