@@ -1,0 +1,40 @@
+{
+  "id": "1010227",
+  "title": "ＪＲ徳島線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-12",
+  "updatedAt": "2022-11-12",
+  "optional": { "cd": "227" },
+  "words": [
+    { "info": "阿波池田", "info2": "あわいけだ", "word": "awaikeda" },
+    { "info": "佃", "info2": "つくだ", "word": "tukuda" },
+    { "info": "辻", "info2": "つじ", "word": "tuji" },
+    { "info": "阿波加茂", "info2": "あわかも", "word": "awakamo" },
+    { "info": "三加茂", "info2": "みかも", "word": "mikamo" },
+    { "info": "江口", "info2": "えぐち", "word": "eguti" },
+    { "info": "阿波半田", "info2": "あわはんだ", "word": "awahanda" },
+    { "info": "貞光", "info2": "さだみつ", "word": "sadamitu" },
+    { "info": "小島", "info2": "おしま", "word": "osima" },
+    { "info": "穴吹", "info2": "あなぶき", "word": "anabuki" },
+    { "info": "川田", "info2": "かわた", "word": "kawata" },
+    { "info": "阿波山川", "info2": "あわやまかわ", "word": "awayamakawa" },
+    { "info": "山瀬", "info2": "やませ", "word": "yamase" },
+    { "info": "学", "info2": "がく", "word": "gaku" },
+    { "info": "阿波川島", "info2": "あわかわしま", "word": "awakawasima" },
+    { "info": "西麻植", "info2": "にしおえ", "word": "nisioe" },
+    { "info": "鴨島", "info2": "かもじま", "word": "kamojima" },
+    { "info": "麻植塚", "info2": "おえづか", "word": "oeduka" },
+    { "info": "牛島", "info2": "うしのしま", "word": "usinosima" },
+    { "info": "下浦", "info2": "しもうら", "word": "simoura" },
+    { "info": "石井", "info2": "いしい", "word": "isii" },
+    { "info": "府中", "info2": "こう", "word": "kou" },
+    { "info": "鮎喰", "info2": "あくい", "word": "akui" },
+    { "info": "蔵本", "info2": "くらもと", "word": "kuramoto" },
+    { "info": "佐古", "info2": "さこ", "word": "sako" }
+  ]
+}

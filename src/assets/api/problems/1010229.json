@@ -1,0 +1,22 @@
+{
+  "id": "1010229",
+  "title": "ＪＲ鳴門線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-12",
+  "updatedAt": "2022-11-12",
+  "optional": { "cd": "229" },
+  "words": [
+    { "info": "鳴門", "info2": "なると", "word": "naruto" },
+    { "info": "撫養", "info2": "むや", "word": "muya" },
+    { "info": "金比羅前", "info2": "こんぴらまえ", "word": "konpiramae" },
+    { "info": "教会前", "info2": "きょうかいまえ", "word": "kyoukaimae" },
+    { "info": "立道", "info2": "たつみち", "word": "tatumiti" },
+    { "info": "阿波大谷", "info2": "あわおおたに", "word": "awaootani" },
+    { "info": "池谷", "info2": "いけのたに", "word": "ikenotani" }
+  ]
+}
