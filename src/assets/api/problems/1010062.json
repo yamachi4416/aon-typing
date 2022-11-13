@@ -1,0 +1,39 @@
+{
+  "id": "1010062",
+  "title": "ＪＲ東北本線(一ノ関－盛岡)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-13",
+  "updatedAt": "2022-11-13",
+  "optional": { "cd": "62" },
+  "words": [
+    { "info": "盛岡", "info2": "もりおか", "word": "morioka" },
+    { "info": "仙北町", "info2": "せんぼくちょう", "word": "senbokutyou" },
+    { "info": "岩手飯岡", "info2": "いわていいおか", "word": "iwateiioka" },
+    { "info": "矢幅", "info2": "やはば", "word": "yahaba" },
+    { "info": "古館", "info2": "ふるだて", "word": "hurudate" },
+    { "info": "紫波中央", "info2": "しわちゅうおう", "word": "siwatyuuou" },
+    { "info": "日詰", "info2": "ひづめ", "word": "hidume" },
+    { "info": "石鳥谷", "info2": "いしどりや", "word": "isidoriya" },
+    {
+      "info": "花巻空港",
+      "info2": "はなまきくうこう",
+      "word": "hanamakikuukou"
+    },
+    { "info": "花巻", "info2": "はなまき", "word": "hanamaki" },
+    { "info": "村崎野", "info2": "むらさきの", "word": "murasakino" },
+    { "info": "北上", "info2": "きたかみ", "word": "kitakami" },
+    { "info": "六原", "info2": "ろくはら", "word": "rokuhara" },
+    { "info": "金ケ崎", "info2": "かねがさき", "word": "kanegasaki" },
+    { "info": "水沢", "info2": "みずさわ", "word": "mizusawa" },
+    { "info": "陸中折居", "info2": "りくちゅうおりい", "word": "rikutyuuorii" },
+    { "info": "前沢", "info2": "まえさわ", "word": "maesawa" },
+    { "info": "平泉", "info2": "ひらいずみ", "word": "hiraizumi" },
+    { "info": "山ノ目", "info2": "やまのめ", "word": "yamanome" },
+    { "info": "一ノ関", "info2": "いちのせき", "word": "itinoseki" }
+  ]
+}
