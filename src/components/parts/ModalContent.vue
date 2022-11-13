@@ -55,18 +55,21 @@ defineExpose({
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 1000px;
   max-width: calc(100vw - 20px);
-  height: 100%;
   max-height: 100%;
   padding: 0 5px;
-  overflow-y: hidden;
-  font-size: 1.1rem;
-  color: #333;
-  background: rgb(255 255 255 / 100%);
   border: 2px solid #333;
   border-radius: 8px;
   box-shadow: 3px 3px 9px rgb(0 0 0 / 40%);
+
+  :where(&) {
+    width: 1000px;
+    height: 100%;
+    overflow-y: hidden;
+    font-size: 1.1rem;
+    color: #333;
+    background: rgb(255 255 255 / 100%);
+  }
 
   &-header,
   &-main,
@@ -78,6 +81,7 @@ defineExpose({
   &-main {
     flex: 1;
     overflow-y: auto;
+
     @include __media_s {
       padding: 0 0 5px;
     }
