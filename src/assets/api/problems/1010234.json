@@ -1,0 +1,17 @@
+{
+  "id": "1010234",
+  "title": "ＪＲ山陽本線(下関－門司)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-15",
+  "updatedAt": "2022-11-15",
+  "optional": { "cd": "234" },
+  "words": [
+    { "info": "門司", "info2": "もじ", "word": "moji" },
+    { "info": "下関", "info2": "しものせき", "word": "simonoseki" }
+  ]
+}
