@@ -1,0 +1,21 @@
+{
+  "id": "1010186",
+  "title": "ＪＲ舞鶴線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-15",
+  "updatedAt": "2022-11-15",
+  "optional": { "cd": "186" },
+  "words": [
+    { "info": "東舞鶴", "info2": "ひがしまいづる", "word": "higasimaiduru" },
+    { "info": "西舞鶴", "info2": "にしまいづる", "word": "nisimaiduru" },
+    { "info": "真倉", "info2": "まぐら", "word": "magura" },
+    { "info": "梅迫", "info2": "うめざこ", "word": "umezako" },
+    { "info": "淵垣", "info2": "ふちがき", "word": "hutigaki" },
+    { "info": "綾部", "info2": "あやべ", "word": "ayabe" }
+  ]
+}
