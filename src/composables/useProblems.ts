@@ -31,23 +31,17 @@ class UseProblems {
   }
 
   async fetchProblems() {
-    const { data, error } = await useFetch('/api/problems.json', {
-      initialCache: false,
-    })
+    const { data, error } = await useFetch('/api/problems.json')
     this._problems = justOrThrowValue(data, error).problems
   }
 
   async fetchTopNewsProblems() {
-    const { data, error } = await useFetch('/api/problems/news.json', {
-      initialCache: false,
-    })
+    const { data, error } = await useFetch('/api/problems/news.json')
     this._newProblems = justOrThrowValue(data, error)
   }
 
   async fetchTagSummary() {
-    const { data, error } = await useFetch('/api/tags.json', {
-      initialCache: false,
-    })
+    const { data, error } = await useFetch('/api/tags.json')
     this._tagSummary = Object.entries(justOrThrowValue(data, error)).map(
       ([name, tag]) => ({
         ...tag,
@@ -59,7 +53,6 @@ class UseProblems {
   async retrieveTag({ id }: { id: string }) {
     const { data, error } = await useFetch(`/api/tags/${id}.json`, {
       key: `/api/tags/${id}.json`,
-      initialCache: false,
     })
     return justOrThrowValue(data, error)
   }
@@ -72,9 +65,7 @@ class UseProblems {
   }
 
   async retrieveAllNewProblems() {
-    const { data, error } = await useFetch('/api/problems/news/all.json', {
-      initialCache: false,
-    })
+    const { data, error } = await useFetch('/api/problems/news/all.json')
     return justOrThrowValue(data, error)
   }
 
