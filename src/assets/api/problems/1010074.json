@@ -1,0 +1,59 @@
+{
+  "id": "1010074",
+  "title": "ＪＲ越後線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-16",
+  "updatedAt": "2022-11-16",
+  "optional": { "cd": "74" },
+  "words": [
+    { "info": "新潟", "info2": "にいがた", "word": "niigata" },
+    { "info": "白山", "info2": "はくさん", "word": "hakusann" },
+    { "info": "関屋", "info2": "せきや", "word": "sekiya" },
+    { "info": "青山", "info2": "あおやま", "word": "aoyama" },
+    { "info": "小針", "info2": "こばり", "word": "kobari" },
+    { "info": "寺尾", "info2": "てらお", "word": "terao" },
+    {
+      "info": "新潟大学前",
+      "info2": "にいがただいがくまえ",
+      "word": "niigatadaigakumae"
+    },
+    { "info": "内野", "info2": "うちの", "word": "utino" },
+    {
+      "info": "内野西が丘",
+      "info2": "うちのにしがおか",
+      "word": "utinonisigaoka"
+    },
+    { "info": "越後赤塚", "info2": "えちごあかつか", "word": "etigoakatuka" },
+    { "info": "越後曽根", "info2": "えちごそね", "word": "etigosone" },
+    { "info": "巻", "info2": "まき", "word": "maki" },
+    { "info": "岩室", "info2": "いわむろ", "word": "iwamuro" },
+    { "info": "北吉田", "info2": "きたよしだ", "word": "kitayosida" },
+    { "info": "吉田", "info2": "よしだ", "word": "yosida" },
+    { "info": "南吉田", "info2": "みなみよしだ", "word": "minamiyosida" },
+    { "info": "粟生津", "info2": "あおうづ", "word": "aoudu" },
+    { "info": "分水", "info2": "ぶんすい", "word": "bunsui" },
+    { "info": "寺泊", "info2": "てらどまり", "word": "teradomari" },
+    { "info": "桐原", "info2": "きりはら", "word": "kirihara" },
+    { "info": "小島谷", "info2": "おじまや", "word": "ojimaya" },
+    { "info": "妙法寺", "info2": "みょうほうじ", "word": "myouhouji" },
+    { "info": "出雲崎", "info2": "いずもざき", "word": "izumozaki" },
+    { "info": "小木ノ城", "info2": "おぎのじょう", "word": "oginojou" },
+    { "info": "石地", "info2": "いしじ", "word": "isiji" },
+    { "info": "礼拝", "info2": "らいはい", "word": "raihai" },
+    { "info": "西山", "info2": "にしやま", "word": "nisiyama" },
+    { "info": "刈羽", "info2": "かりわ", "word": "kariwa" },
+    { "info": "荒浜", "info2": "あらはま", "word": "arahama" },
+    { "info": "西中通", "info2": "にしなかどおり", "word": "nisinakadoori" },
+    {
+      "info": "東柏崎",
+      "info2": "ひがしかしわざき",
+      "word": "higasikasiwazaki"
+    },
+    { "info": "柏崎", "info2": "かしわざき", "word": "kasiwazaki" }
+  ]
+}
