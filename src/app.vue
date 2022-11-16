@@ -40,6 +40,4 @@ function setVH() {
     document.body.style.setProperty('--maxvh', `${vh}px`)
   }
 }
-
-await useProblems().retrieveItems()
 </script>

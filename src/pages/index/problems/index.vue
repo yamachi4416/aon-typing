@@ -46,6 +46,8 @@ useHead({
   title: '問題いちらん',
 })
 
+await useProblems().fetchProblems()
+
 const kwds = ref([] as string[])
 const problems = computed(() => {
   if (kwds.value?.length) {

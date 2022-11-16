@@ -21,10 +21,8 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute()
-const problemState = useProblems()
-const id = String(route.params.id)
-const detail = await problemState.retrieveProblemDetail({ id })
+const id = String(useRoute().params.id)
+const detail = await useProblems().retrieveProblemDetail({ id })
 
 useHead({
   title: `問題 No.${id} ${detail.title}`,

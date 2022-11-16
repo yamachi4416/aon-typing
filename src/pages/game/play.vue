@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
 })
 
 onMounted(async () => {
-  const problem = await useProblems().lazyProblemDetail({ id })
+  const problem = await useProblems().retrieveProblemDetail({ id })
   if (!problem?.id) {
     useRouter().replace({ name: 'game-menu' })
   } else {

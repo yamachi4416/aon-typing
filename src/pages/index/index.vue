@@ -112,6 +112,11 @@ useHead({
   title: 'トップページ',
 })
 
+await Promise.all([
+  useProblems().fetchTopNewsProblems(),
+  useProblems().fetchTagSummary(),
+])
+
 const newProblems = computed(() => useProblems().newProblems)
 const tagSummary = computed(() => useProblems().tagSummary)
 
@@ -221,6 +226,7 @@ function changeKwds() {
 
   &-newProblems {
     padding: 10px;
+
     @include __media_s {
       padding: 5px 7px;
     }

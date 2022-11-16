@@ -30,28 +30,36 @@ class UseProblems {
     return [...this._tagSummary]
   }
 
-  async retrieveItems() {
-    await Promise.all([
-      useFetch('/api/problems.json').then(({ data, error }) => {
-        this._problems = justOrThrowValue(data, error).problems
+  async fetchProblems() {
+    const { data, error } = await useFetch('/api/problems.json', {
+      initialCache: false,
+    })
+    this._problems = justOrThrowValue(data, error).problems
+  }
+
+  async fetchTopNewsProblems() {
+    const { data, error } = await useFetch('/api/problems/news.json', {
+      initialCache: false,
+    })
+    this._newProblems = justOrThrowValue(data, error)
+  }
+
+  async fetchTagSummary() {
+    const { data, error } = await useFetch('/api/tags.json', {
+      initialCache: false,
+    })
+    this._tagSummary = Object.entries(justOrThrowValue(data, error)).map(
+      ([name, tag]) => ({
+        ...tag,
+        name,
       }),
-      useFetch('/api/problems/news.json').then(({ data, error }) => {
-        this._newProblems = justOrThrowValue(data, error)
-      }),
-      useFetch('/api/tags.json').then(({ data, error }) => {
-        this._tagSummary = Object.entries(justOrThrowValue(data, error)).map(
-          ([name, tag]) => ({
-            ...tag,
-            name,
-          }),
-        )
-      }),
-    ])
+    )
   }
 
   async retrieveTag({ id }: { id: string }) {
     const { data, error } = await useFetch(`/api/tags/${id}.json`, {
       key: `/api/tags/${id}.json`,
+      initialCache: false,
     })
     return justOrThrowValue(data, error)
   }
@@ -63,15 +71,10 @@ class UseProblems {
     return justOrThrowValue(data, error) as ProblemDetail
   }
 
-  async lazyProblemDetail({ id }: { id: string }) {
-    const { data, error } = await useFetch(`/api/problems/${id}.json`, {
-      key: `/api/problems/${id}.json`,
+  async retrieveAllNewProblems() {
+    const { data, error } = await useFetch('/api/problems/news/all.json', {
+      initialCache: false,
     })
-    return justOrThrowValue(data, error) as ProblemDetail
-  }
-
-  async allNewProblems() {
-    const { data, error } = await useFetch('/api/problems/news/all.json')
     return justOrThrowValue(data, error)
   }
 

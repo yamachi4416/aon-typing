@@ -14,5 +14,5 @@ useHead({
   title: '問題いちらん（新着順）',
 })
 
-const problems = await useProblems().allNewProblems()
+const problems = await useProblems().retrieveAllNewProblems()
 </script>

@@ -141,27 +141,28 @@ import { helpAnimals } from '~~/libs/TypingGameInfo'
 import { ProblemListItem } from '~~/types/problems'
 
 const emit = defineEmits<{
-  (e: 'openProblemSelect')
-  (e: 'start')
-  (e: 'cancel')
-  (e: 'close')
-  (e: 'detail', problem: ProblemListItem)
+  (e: 'openProblemSelect'): any
+  (e: 'start'): any
+  (e: 'cancel'): any
+  (e: 'close'): any
+  (e: 'detail', problem?: ProblemListItem): any
 }>()
 
-const problemState = useProblems()
-const setting = computed(() => problemState.setting)
+const setting = computed(() => useProblems().setting)
 const problem = computed(() => {
   const id = setting.value.problemId
-  return problemState.problems.find((p) => p.id === id)
+  return useProblems().problems.find((p) => p.id === id)
 })
 
 const problemType = computed(() => {
-  return (
-    {
-      japanese: '日本語',
-      english: '英語',
-    }[problem.value?.type] ?? ''
-  )
+  switch (problem.value?.type ?? '') {
+    case 'japanese':
+      return '日本語'
+    case 'english':
+      return '英語'
+    default:
+      return ''
+  }
 })
 
 const HelpAnimals = [
@@ -170,7 +171,7 @@ const HelpAnimals = [
     speed: 0,
   },
   ...helpAnimals().map(({ start, end, name }) => {
-    const avg = Math.round(start + (end - start) / 2)
+    const avg = Math.round(start + ((end ?? 0) - start) / 2)
     return {
       name,
       speed: Math.round(60000 / avg),
@@ -185,7 +186,7 @@ function openProblemSelect() {
 }
 
 function randomProblemSelect() {
-  const problems = problemState.problems ?? []
+  const problems = useProblems().problems ?? []
   const length = problems.length
   if (length > 0) {
     const idx = Math.floor(Math.random() * length)

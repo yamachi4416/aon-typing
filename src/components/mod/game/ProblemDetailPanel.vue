@@ -55,7 +55,7 @@ const detail = computed(() => {
 async function setProblem(item: ProblemListItem) {
   problem.value = item
   problemDetail.value = null
-  problemDetail.value = await useProblems().lazyProblemDetail(item)
+  problemDetail.value = await useProblems().retrieveProblemDetail(item)
 }
 
 defineExpose({
