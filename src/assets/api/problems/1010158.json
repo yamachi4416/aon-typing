@@ -1,0 +1,39 @@
+{
+  "id": "1010158",
+  "title": "ＪＲ小浜線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-17",
+  "updatedAt": "2022-11-17",
+  "optional": { "cd": "158" },
+  "words": [
+    { "info": "敦賀", "info2": "つるが", "word": "turuga" },
+    { "info": "西敦賀", "info2": "にしつるが", "word": "nisituruga" },
+    { "info": "粟野", "info2": "あわの", "word": "awano" },
+    { "info": "東美浜", "info2": "ひがしみはま", "word": "higasimihama" },
+    { "info": "美浜", "info2": "みはま", "word": "mihama" },
+    { "info": "気山", "info2": "きやま", "word": "kiyama" },
+    { "info": "三方", "info2": "みかた", "word": "mikata" },
+    { "info": "藤井", "info2": "ふじい", "word": "hujii" },
+    { "info": "十村", "info2": "とむら", "word": "tomura" },
+    { "info": "大鳥羽", "info2": "おおとば", "word": "ootoba" },
+    { "info": "若狭有田", "info2": "わかさありた", "word": "wakasaarita" },
+    { "info": "上中", "info2": "かみなか", "word": "kaminaka" },
+    { "info": "新平野", "info2": "しんひらの", "word": "sinhirano" },
+    { "info": "東小浜", "info2": "ひがしおばま", "word": "higasiobama" },
+    { "info": "小浜", "info2": "おばま", "word": "obama" },
+    { "info": "勢浜", "info2": "せいはま", "word": "seihama" },
+    { "info": "加斗", "info2": "かと", "word": "kato" },
+    { "info": "若狭本郷", "info2": "わかさほんごう", "word": "wakasahongou" },
+    { "info": "若狭和田", "info2": "わかさわだ", "word": "wakasawada" },
+    { "info": "若狭高浜", "info2": "わかさたかはま", "word": "wakasatakahama" },
+    { "info": "三松", "info2": "みつまつ", "word": "mitumatu" },
+    { "info": "青郷", "info2": "あおのごう", "word": "aonogou" },
+    { "info": "松尾寺", "info2": "まつのおでら", "word": "matunoodera" },
+    { "info": "東舞鶴", "info2": "ひがしまいづる", "word": "higasimaiduru" }
+  ]
+}
