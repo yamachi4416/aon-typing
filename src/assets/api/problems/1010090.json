@@ -1,0 +1,50 @@
+{
+  "id": "1010090",
+  "title": "ＪＲ外房線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-19",
+  "updatedAt": "2022-11-19",
+  "optional": { "cd": "90" },
+  "words": [
+    { "info": "安房鴨川", "info2": "あわかもがわ", "word": "awakamogawa" },
+    { "info": "安房天津", "info2": "あわあまつ", "word": "awaamatu" },
+    { "info": "安房小湊", "info2": "あわこみなと", "word": "awakominato" },
+    {
+      "info": "行川アイランド",
+      "info2": "なめがわあいらんど",
+      "word": "namegawaairando"
+    },
+    { "info": "上総興津", "info2": "かずさおきつ", "word": "kazusaokitu" },
+    { "info": "鵜原", "info2": "うばら", "word": "ubara" },
+    { "info": "勝浦", "info2": "かつうら", "word": "katuura" },
+    { "info": "御宿", "info2": "おんじゅく", "word": "onjuku" },
+    { "info": "浪花", "info2": "なみはな", "word": "namihana" },
+    { "info": "大原", "info2": "おおはら", "word": "oohara" },
+    { "info": "三門", "info2": "みかど", "word": "mikado" },
+    { "info": "長者町", "info2": "ちょうじゃまち", "word": "tyoujamati" },
+    { "info": "太東", "info2": "たいとう", "word": "taitou" },
+    { "info": "東浪見", "info2": "とらみ", "word": "torami" },
+    {
+      "info": "上総一ノ宮",
+      "info2": "かずさいちのみや",
+      "word": "kazusaitinomiya"
+    },
+    { "info": "八積", "info2": "やつみ", "word": "yatumi" },
+    { "info": "茂原", "info2": "もばら", "word": "mobara" },
+    { "info": "新茂原", "info2": "しんもばら", "word": "sinmobara" },
+    { "info": "本納", "info2": "ほんのう", "word": "honnnou" },
+    { "info": "永田", "info2": "ながた", "word": "nagata" },
+    { "info": "大網", "info2": "おおあみ", "word": "ooami" },
+    { "info": "土気", "info2": "とけ", "word": "toke" },
+    { "info": "誉田", "info2": "ほんだ", "word": "honda" },
+    { "info": "鎌取", "info2": "かまとり", "word": "kamatori" },
+    { "info": "蘇我", "info2": "そが", "word": "soga" },
+    { "info": "本千葉", "info2": "ほんちば", "word": "hontiba" },
+    { "info": "千葉", "info2": "ちば", "word": "tiba" }
+  ]
+}
