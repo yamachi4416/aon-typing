@@ -15,9 +15,10 @@ useHead({
   meta: [{ name: 'robots', content: 'noindex' }],
 })
 
+const { posted } = useContactPosted()
+
 onBeforeMount(() => {
-  console.log(useContact().contact)
-  if (!useContact().contact?.confirm) {
+  if (!posted.value) {
     useNavigator().backOrIndex()
   }
 })

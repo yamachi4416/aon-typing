@@ -14,45 +14,36 @@
             <small>（ハンドルネーム）</small>
           </label>
           <span class="form-group-input">
-            <input id="name" v-model="contact.name" @change="change" />
-            <span v-show="contact.errors.name" class="error-message">{{
-              contact.errors.name
+            <input id="name" v-model="name" @change="validate" />
+            <span v-show="errors.name" class="error-message">{{
+              errors.name
             }}</span>
           </span>
         </div>
         <div class="form-group row">
-          <label class="form-group-label col-3 col-sm-12" for="email"
-            >メールアドレス</label
-          >
+          <label class="form-group-label col-3 col-sm-12" for="email">
+            <span>メールアドレス</span>
+          </label>
           <span class="form-group-input">
-            <input
-              id="email"
-              v-model="contact.email"
-              type="email"
-              @change="change"
-            />
+            <input id="email" v-model="email" type="email" @change="validate" />
             <span v-show="errors.email" class="error-message">{{
               errors.email
             }}</span>
           </span>
         </div>
         <div class="form-group row">
-          <label class="form-group-label col-3 col-sm-12" for="message"
-            >お問い合わせ内容</label
-          >
+          <label class="form-group-label col-3 col-sm-12" for="message">
+            <span>お問い合わせ内容</span>
+          </label>
           <span class="form-group-input">
-            <textarea id="message" v-model="contact.message" />
-            <span v-show="contact.errors.message" class="error-message">{{
-              contact.errors.message
+            <textarea id="message" v-model="message" @change="validate" />
+            <span v-show="errors.message" class="error-message">{{
+              errors.message
             }}</span>
           </span>
         </div>
         <div class="buttons">
-          <button
-            class="button big"
-            :disabled="contact.hasErrors"
-            @click="submit"
-          >
+          <button class="button big" :disabled="hasErrors" @click="submit">
             送信する
           </button>
         </div>
@@ -67,16 +58,15 @@ useHead({
   meta: [{ name: 'robots', content: 'noindex' }],
 })
 
-const contact = shallowReactive(useContact().init().contact)
-const errors = ref(contact.errors)
 const gError = ref('')
+const { name, email, message, errors, hasErrors, validate, toJson } =
+  useContact()
+const { posted } = useContactPosted()
 
-function change() {
-  errors.value = contact.errors
-}
+posted.value = false
 
 async function submit() {
-  if (contact.hasErrors) return
+  if (!validate()) return
   try {
     gError.value = ''
     useScrollWaiter().add()
@@ -85,12 +75,12 @@ async function submit() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: contact.toJSON(),
+      body: toJson(),
     }).then((res) => {
       if (!res.ok) {
-        throw res.statusText
+        throw createError({ statusCode: res.status, message: res.statusText })
       }
-      contact.confirm = true
+      posted.value = true
       useRouter().replace({ name: 'index-contact-thanks' })
     })
     useScrollWaiter().flush()

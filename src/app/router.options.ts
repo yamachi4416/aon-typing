@@ -7,9 +7,9 @@ const routerConfig: RouterConfig = {
       useScrollWaiter().flush()
     }
 
-    const noScroll = await useScrollWaiter().wait()
+    const isScroll = await useScrollWaiter().wait()
 
-    if (noScroll) {
+    if (!isScroll) {
       return false
     }
 

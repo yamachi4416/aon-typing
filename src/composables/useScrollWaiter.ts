@@ -1,43 +1,51 @@
-class ScrollQueue {
-  private resolve: ((value?: any) => void) | null = null
-  private promise = ref<null | Promise<any>>(null)
-  private _noScroll: boolean = false
-  private readonly _waiting = computed(() => this.promise.value != null)
+import { ref, computed } from 'vue'
 
-  get waiting() {
-    return this._waiting.value
+function scrollWaiter() {
+  const resolver = ref<((value?: any) => void) | null>(null)
+  const waiter = ref<Promise<any> | null>(null)
+  const isScroll = ref(false)
+  const waiting = computed(() => waiter.value != null)
+
+  function flush() {
+    resolver.value?.()
+    resolver.value = null
+    waiter.value = null
   }
 
-  noScroll() {
-    this.add()
-    this._noScroll = true
-  }
-
-  add() {
-    this.flush()
-    this.promise.value = new Promise((resolve) => {
-      this.resolve = resolve
+  function add() {
+    flush()
+    waiter.value = new Promise((resolve) => {
+      resolver.value = resolve
     })
   }
 
-  flush() {
-    this.resolve?.()
-    this.resolve = null
-    this.promise.value = null
+  function noScroll() {
+    add()
+    isScroll.value = false
   }
 
-  async wait() {
-    const ret = this._noScroll
-    this._noScroll = false
-    if (this.promise.value != null) {
-      return await this.promise.value?.then(() => ret)
+  async function wait() {
+    const shouldScroll = isScroll.value
+    isScroll.value = true
+    if (waiter.value != null) {
+      return await waiter.value.then(() => shouldScroll)
     }
-    return await Promise.resolve(ret)
+    return await Promise.resolve(shouldScroll)
+  }
+
+  return {
+    waiting,
+    noScroll,
+    add,
+    flush,
+    wait,
   }
 }
 
-const scrollWaiter = new ScrollQueue()
+const _scrollWaiter = scrollWaiter()
+
+export type ScrollWaiter = typeof _scrollWaiter
 
 export function useScrollWaiter() {
-  return scrollWaiter
+  return _scrollWaiter
 }

@@ -3,12 +3,14 @@
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-    <PartsLoading v-if="$scrollWaiter.waiting" />
+    <PartsLoading v-if="waiting" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { healthcheck } from '~~/libs/Util'
+
+const { waiting } = useScrollWaiter()
 
 onBeforeMount(() => {
   setVH()
