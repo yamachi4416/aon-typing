@@ -1,0 +1,37 @@
+{
+  "id": "1010236",
+  "title": "ＪＲ鹿児島本線(川内－鹿児島)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-19",
+  "updatedAt": "2022-11-19",
+  "optional": { "cd": "236" },
+  "words": [
+    { "info": "鹿児島", "info2": "かごしま", "word": "kagosima" },
+    {
+      "info": "鹿児島中央",
+      "info2": "かごしまちゅうおう",
+      "word": "kagosimatyuuou"
+    },
+    { "info": "広木", "info2": "ひろき", "word": "hiroki" },
+    { "info": "上伊集院", "info2": "かみいじゅういん", "word": "kamiijuuinn" },
+    { "info": "薩摩松元", "info2": "さつままつもと", "word": "satumamatumoto" },
+    { "info": "伊集院", "info2": "いじゅういん", "word": "ijuuinn" },
+    { "info": "東市来", "info2": "ひがしいちき", "word": "higasiitiki" },
+    { "info": "湯之元", "info2": "ゆのもと", "word": "yunomoto" },
+    { "info": "市来", "info2": "いちき", "word": "itiki" },
+    {
+      "info": "神村学園前",
+      "info2": "かみむらがくえんまえ",
+      "word": "kamimuragakuenmae"
+    },
+    { "info": "串木野", "info2": "くしきの", "word": "kusikino" },
+    { "info": "木場茶屋", "info2": "こばんちゃや", "word": "kobantyaya" },
+    { "info": "隈之城", "info2": "くまのじょう", "word": "kumanojou" },
+    { "info": "川内", "info2": "せんだい", "word": "sendai" }
+  ]
+}
