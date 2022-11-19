@@ -31,20 +31,20 @@ withDefaults(
 
     path,
     rect {
-      fill: rgb(255 255 255 / 20%);
-      stroke: #333;
+      fill: var(--background-30);
+      stroke: var(--color-3);
       stroke-width: 1;
     }
 
     &[highlight='true'] {
       path,
       rect {
-        fill: rgb(255 208 138);
+        fill: var(--keyboard-highlight);
       }
     }
 
     .keyboard-text {
-      color: #333;
+      color: var(--color-3);
     }
   }
 }

@@ -59,12 +59,12 @@ const currentWord = computed(() => {
       flex: 1;
       justify-content: flex-end;
       min-width: calc(50% - 0.5em);
-      color: #666;
+      color: var(--color-6);
       white-space: pre;
     }
 
     &-current {
-      color: rgb(255 153 0);
+      color: var(--color-p);
       white-space: pre;
     }
 
@@ -72,7 +72,7 @@ const currentWord = computed(() => {
       display: flex;
       flex: 1;
       justify-content: flex-start;
-      color: #333;
+      color: var(--color-3);
       white-space: pre;
     }
   }

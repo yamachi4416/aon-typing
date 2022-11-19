@@ -29,7 +29,7 @@ withDefaults(
   width: 100vw;
   height: 100vh;
   height: var(--maxvh, 100vh);
-  background: rgb(255 255 255 / 100%);
+  background: var(--color-f);
 }
 
 .count-down .count {
@@ -43,6 +43,6 @@ withDefaults(
   font-size: 100px;
   font-size: 35vmin;
   font-weight: bold;
-  color: rgb(64 125 255);
+  color: var(--countdown-color);
 }
 </style>

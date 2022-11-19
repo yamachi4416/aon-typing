@@ -134,10 +134,10 @@ function pauseToggle() {
 
 <style lang="scss" scoped>
 .typing-game-panel {
-  background: rgb(255 255 255 / 60%);
-  border: 2px solid #333;
+  background: var(--background-60);
+  border: 2px solid var(--color-3);
   border-radius: 10px;
-  box-shadow: 3px 3px 9px rgb(0 0 0 / 40%);
+  box-shadow: var(--shadow-color-lg) 3px 3px 9px;
 
   .line-gauge {
     transform: translate(-1px, -1px);
@@ -200,7 +200,7 @@ function pauseToggle() {
             justify-content: center;
             font-size: 1em;
             line-height: 1.2;
-            color: #666;
+            color: var(--color-6);
 
             &-text {
               white-space: pre-wrap;
@@ -294,7 +294,7 @@ function pauseToggle() {
       display: flex;
       margin: 0;
       font-size: 14px;
-      color: #666;
+      color: var(--color-6);
       white-space: nowrap;
 
       &-types-count {

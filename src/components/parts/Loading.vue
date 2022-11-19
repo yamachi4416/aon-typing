@@ -41,7 +41,7 @@ onMounted(async () => {
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: rgb(255 255 255 / 0%);
+  background: transparent;
   opacity: 1;
 
   &-svg {
@@ -50,7 +50,7 @@ onMounted(async () => {
     left: calc(50% - 100px);
 
     circle {
-      fill: rgb(253 207 0 / 10%);
+      fill: var(--loading-color);
     }
   }
 

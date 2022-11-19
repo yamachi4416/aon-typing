@@ -174,9 +174,9 @@ await Promise.all([
       &-item {
         display: block;
         padding: 5px 10px;
-        color: #fff;
+        color: var(--color-f);
         text-decoration: none;
-        background: rgb(255 153 0 / 100%);
+        background: var(--color-p);
         border: none;
         border-radius: 15px;
 
@@ -200,7 +200,7 @@ await Promise.all([
             height: 8px;
             margin-right: 5px;
             content: '';
-            background: #fff;
+            background: var(--color-f);
             border-radius: 100%;
           }
         }
@@ -232,14 +232,14 @@ await Promise.all([
     }
 
     &-inner {
-      background: rgb(255 255 255 / 90%);
+      background: var(--background-90);
       border-radius: 20px;
-      box-shadow: rgb(0 0 0 / 15%) 0 1px 3px 0;
+      box-shadow: var(--shadow-color-md) 0 1px 3px 0;
 
       & > h2 {
         padding: 20px;
         padding-bottom: 5px;
-        color: #666;
+        color: var(--color-6);
       }
     }
 
@@ -253,12 +253,12 @@ await Promise.all([
       }
 
       a {
-        color: #666;
+        color: var(--color-6);
         text-decoration: none;
         cursor: pointer;
 
         &:hover {
-          color: rgb(255 145 0 / 100%);
+          color: var(--color-9);
         }
       }
     }
@@ -277,10 +277,10 @@ await Promise.all([
             align-items: center;
             padding: 5px 15px;
             font-size: 1em;
-            color: #f90;
+            color: var(--color-p);
             text-decoration: none;
-            background: #fff;
-            border: 1.5px solid #f90;
+            background: var(--color-f);
+            border: 1.5px solid var(--color-p);
             border-radius: 20px;
 
             &::before {
@@ -289,7 +289,7 @@ await Promise.all([
               height: 8px;
               margin-right: 8px;
               content: '';
-              background: #f90;
+              background: var(--color-p);
               border-radius: 100%;
             }
           }

@@ -71,7 +71,7 @@
         <div class="chars-section">
           <p>
             小さい「ッ」のあとに続くキーが「A」「I」「U」「E」「O」「N」以外の場合は、あとに続くキーを2回打って「ッ」を入力できます。
-            たとえば「ヤッター」は「YA<span style="color: #ff9100">TT</span
+            たとえば「ヤッター」は「YA<span class="chars-section-bold">TT</span
             >A-」で入力できます。
           </p>
         </div>
@@ -209,22 +209,22 @@ function print() {
 .chars {
   display: flex;
   flex-flow: row;
-  background: rgb(255 255 255 / 80%);
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  background: var(--background-90);
+  border-right: 1px solid var(--color-c);
+  border-bottom: 1px solid var(--color-c);
   page-break-inside: avoid;
 
   &:first-of-type {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--color-c);
   }
 
   &-title {
     display: flex;
     padding: 10px;
     font-size: 1em;
-    color: #ff9100;
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc;
+    color: var(--color-p);
+    border-right: 1px solid var(--color-c);
+    border-left: 1px solid var(--color-c);
   }
 
   &-section {
@@ -234,6 +234,10 @@ function print() {
     justify-content: flex-start;
     width: 100%;
     padding: 6px;
+
+    &-bold {
+      color: var(--color-p);
+    }
 
     &-items {
       display: flex;
@@ -265,8 +269,8 @@ function print() {
         &-inner {
           width: 100%;
           height: 100%;
-          background: rgb(255 255 255 / 60%);
-          border: 1px solid #ccc;
+          background: var(--background-60);
+          border: 1px solid var(--color-c);
           border-radius: 5px;
 
           &-jc,
@@ -278,7 +282,7 @@ function print() {
           }
 
           &-jc {
-            color: #666;
+            color: var(--color-6);
           }
         }
       }

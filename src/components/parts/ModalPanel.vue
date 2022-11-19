@@ -64,7 +64,7 @@ defineExpose({
   height: 100%;
   padding: 10px;
   overflow: auto;
-  background: rgb(255 255 255 / 0%);
+  background: transparent;
 
   .contents {
     display: flex;

@@ -37,7 +37,7 @@ const usedWidth = computed(() => {
 <style lang="scss" scoped>
 .line-guage {
   &-used {
-    fill: rgb(255 208 138 / 80%);
+    fill: var(--keyboard-highlight);
   }
 }
 </style>

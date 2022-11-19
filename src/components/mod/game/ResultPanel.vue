@@ -162,9 +162,9 @@ defineEmits<{
               width: 30px;
               height: 30px;
               padding: 5px;
-              color: #fff;
+              color: var(--color-f);
               white-space: pre;
-              background: #333;
+              background: var(--color-3);
               border-radius: 50%;
             }
           }

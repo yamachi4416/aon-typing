@@ -32,13 +32,13 @@
     position: relative;
     flex: 1;
     padding: 20px;
-    color: #444;
-    background: rgb(255 255 255 / 90%);
+    color: var(--color-3);
+    background: var(--background-90);
     border-radius: 20px;
-    box-shadow: rgb(0 0 0 / 15%) 0 1px 3px 0;
+    box-shadow: var(--shadow-color-md) 0 1px 3px 0;
 
     :where(h1, h2, h3) {
-      color: #666;
+      color: var(--color-6);
     }
 
     :where(p) {
@@ -77,10 +77,10 @@
         content: '';
         background: linear-gradient(
           -135deg,
-          rgb(255 255 255 / 90%) 51%,
+          var(--background-90) 51%,
           transparent 51%
         );
-        box-shadow: rgb(0 0 0 / 15%) 1px 0 1px 0;
+        box-shadow: var(--shadow-color-md) 1px 0 1px 0;
         transform: rotate(60deg) skew(-20deg, -20deg) translateZ(-1px);
       }
     }

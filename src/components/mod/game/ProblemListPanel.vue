@@ -98,7 +98,7 @@ function removeTag(tag: ProblemItemTag) {
   justify-content: flex-start;
   padding: 10px;
   font-size: 0.8rem;
-  background-color: #fff;
-  border-bottom: 1px solid #999;
+  background-color: var(--color-f);
+  border-bottom: 1px solid var(--color-9);
 }
 </style>

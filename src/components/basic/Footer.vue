@@ -29,7 +29,7 @@ const menus = [
   width: 100%;
   height: 100px;
   padding-top: 10px;
-  background: rgb(255 255 255 / 80%);
+  background: var(--page-footer-background);
 
   @media print {
     display: none;
@@ -49,13 +49,13 @@ const menus = [
         padding: 0 10px;
 
         a {
-          color: #666;
+          color: var(--color-6);
           text-decoration: none;
           cursor: pointer;
 
           &:hover,
           &:focus {
-            color: #999;
+            color: var(--color-9);
           }
         }
       }
@@ -66,7 +66,7 @@ const menus = [
     flex: 1;
     width: 100%;
     padding-top: 10px;
-    color: #666;
+    color: var(--color-6);
     text-align: center;
   }
 }

@@ -126,14 +126,14 @@ defineEmits<{
           & > dt {
             max-width: 5em;
             padding: 5px 0;
-            color: #666;
+            color: var(--color-6);
             white-space: nowrap;
           }
 
           & > dd {
             flex: 1;
             padding: 5px;
-            color: #666;
+            color: var(--color-6);
           }
         }
       }
@@ -151,8 +151,8 @@ defineEmits<{
           &-item {
             padding: 0 1em;
             font-size: 0.85em;
-            color: #fff;
-            background: rgb(255 153 0 / 100%);
+            color: var(--color-f);
+            background: var(--color-p);
             border: none;
           }
         }
@@ -185,7 +185,7 @@ defineEmits<{
     .detail-card {
       display: flex;
       flex-direction: column;
-      color: #666;
+      color: var(--color-6);
 
       &-word {
         word-break: break-all;

@@ -107,11 +107,11 @@ function donut(
 <style lang="scss" scoped>
 .time-circle {
   &-total {
-    fill: #e5e5e5;
+    fill: var(--color-e);
   }
 
   &-used {
-    fill: rgb(255 153 0);
+    fill: var(--color-p);
   }
 
   &-center {
@@ -121,7 +121,7 @@ function donut(
 
   &-number {
     pointer-events: none;
-    fill: #333;
+    fill: var(--color-3);
   }
 }
 </style>

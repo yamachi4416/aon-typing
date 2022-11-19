@@ -262,7 +262,7 @@ function randomProblemSelect() {
 
         &:hover,
         &:focus {
-          color: #999;
+          color: var(--color-9);
         }
       }
     }

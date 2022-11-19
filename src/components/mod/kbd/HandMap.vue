@@ -34,10 +34,10 @@ function hi(k: number) {
 <style lang="scss" scoped>
 .hands {
   rect {
-    fill: #eee;
+    fill: var(--color-e);
 
     &[highlight='true'] {
-      fill: rgb(255 208 138);
+      fill: var(--keyboard-highlight);
     }
   }
 }

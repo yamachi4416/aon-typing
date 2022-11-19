@@ -100,7 +100,7 @@ async function submit() {
 
   &-global-error-message {
     .error-message {
-      color: #ff3434;
+      color: var(--input-error-message);
     }
   }
 
@@ -119,7 +119,7 @@ async function submit() {
     .error-message {
       padding-top: 3px;
       font-size: 0.9em;
-      color: #ff3434;
+      color: var(--input-error-message);
     }
   }
 

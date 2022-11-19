@@ -108,12 +108,12 @@ watch(
 
     &-item {
       padding: 0 1em;
-      color: #666;
+      color: var(--color-6);
       border: none;
 
       &[selected] {
-        color: #fff;
-        background: #f90;
+        color: var(--color-f);
+        background: var(--color-p);
       }
     }
   }

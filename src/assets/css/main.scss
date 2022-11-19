@@ -1,6 +1,41 @@
 @use 'sass:math';
 @import './vars';
 
+:root {
+  --color-3: #333;
+  --color-6: #666;
+  --color-9: #999;
+  --color-a: #aaa;
+  --color-c: #ccc;
+  --color-e: #eee;
+  --color-f: #fff;
+  --color-p: #f90;
+
+  --background-30: rgb(255 255 255 / 30%);
+  --background-60: rgb(255 255 255 / 60%);
+  --background-90: rgb(255 255 255 / 90%);
+  --background-NN: rgb(255 255 255);
+
+  --shadow-color-md: rgb(0 0 0 / 15%);
+  --shadow-color-lg: rgb(0 0 0 / 40%);
+
+  --page-background-color: rgb(5 117 35);
+  --page-background-image-color: var(--background-NN);
+  --page-background-image: url('/assets/img/back01.png');
+
+  --page-header-background: var(--background-90);
+  --page-footer-background: var(--background-90);
+
+  --input-error-message: rgb(255 52 52);
+  --input-selected: rgb(255 208 138);
+  --input-active-outine: rgb(255 153 0 / 60%);
+
+  --keyboard-highlight: var(--input-selected);
+
+  --loading-color: rgb(253 207 0 / 10%);
+  --countdown-color: rgb(64 125 255);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -64,8 +99,8 @@ body,
   line-height: 2;
   white-space: nowrap;
   cursor: pointer;
-  background: #eee;
-  border: 1px solid #999;
+  background: var(--color-e);
+  border: 1px solid var(--color-9);
   border-radius: 10px;
   appearance: none;
 
@@ -74,16 +109,16 @@ body,
   }
 
   &:disabled {
-    border-color: #888;
+    border-color: var(--color-9);
   }
 
   &:not(:disabled) {
     &:hover {
-      box-shadow: 1px 1px 1px #666;
+      box-shadow: 1px 1px 1px var(--color-6);
     }
 
     &[selected] {
-      background: rgb(255 208 138);
+      background: var(--input-selected);
     }
   }
 }
@@ -127,24 +162,24 @@ body,
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #333;
-    background: #fff;
+    color: var(--color-3);
+    background: var(--color-f);
     background-clip: padding-box;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-c);
     border-radius: 0.6rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     backface-visibility: hidden;
 
     &:disabled,
     &[disabled] {
-      background-color: #eee;
+      background-color: var(--color-e);
     }
 
     &:focus,
     &:active {
-      border-color: rgb(255 153 0 / 100%);
+      border-color: var(--color-p);
       outline: 0;
-      box-shadow: 0 0 0 0.2rem rgb(255 153 0 / 60%);
+      box-shadow: 0 0 0 0.2rem var(--input-active-outine);
     }
   }
 
@@ -160,7 +195,7 @@ body,
       height: 100%;
       padding: 10px;
       overflow: hidden;
-      color: #aaa;
+      color: var(--color-a);
       text-overflow: ellipsis;
       white-space: nowrap;
       pointer-events: none;
@@ -196,7 +231,7 @@ body,
     th {
       padding: 5px 10px;
       text-align: center;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid var(--color-c);
     }
   }
 }

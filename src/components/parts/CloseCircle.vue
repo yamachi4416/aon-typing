@@ -33,7 +33,7 @@
   height: 100%;
   cursor: pointer;
   background: transparent;
-  border: 2px solid #333;
+  border: 2px solid var(--color-3);
   border-radius: 50%;
 }
 </style>

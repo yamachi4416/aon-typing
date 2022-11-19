@@ -51,7 +51,7 @@ defineEmits<{
   display: flex;
   flex-direction: column;
   height: 100%;
-  color: #666;
+  color: var(--color-6);
 
   &-header {
     text-align: center;
@@ -78,7 +78,7 @@ defineEmits<{
 
   &-main {
     flex: 1;
-    border-top: 1px solid #999;
+    border-top: 1px solid var(--color-9);
 
     &-detail {
       padding: 5px;
@@ -95,8 +95,8 @@ defineEmits<{
         &-item {
           padding: 0 8px;
           font-size: 0.8em;
-          color: #fff;
-          background: rgb(255 153 0 / 100%);
+          color: var(--color-f);
+          background: var(--color-p);
           border: none;
         }
       }

@@ -58,17 +58,17 @@ defineExpose({
   max-width: calc(100vw - 20px);
   max-height: 100%;
   padding: 0 5px;
-  border: 2px solid #333;
+  border: 2px solid var(--color-3);
   border-radius: 8px;
-  box-shadow: 3px 3px 9px rgb(0 0 0 / 40%);
+  box-shadow: var(--shadow-color-lg) 3px 3px 9px;
 
   :where(&) {
     width: 1000px;
     height: 100%;
     overflow-y: hidden;
     font-size: 1.1rem;
-    color: #333;
-    background: rgb(255 255 255 / 100%);
+    color: var(--color-3);
+    background: var(--color-f);
   }
 
   &-header,
@@ -95,7 +95,7 @@ defineExpose({
     justify-content: center;
     padding-top: 8px;
     padding-bottom: 2px;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid var(--color-9);
 
     &-left {
       flex: 1;
@@ -124,7 +124,7 @@ defineExpose({
   &-footer {
     padding-top: 8px;
     padding-bottom: 8px;
-    border-top: 1px solid #999;
+    border-top: 1px solid var(--color-9);
   }
 }
 </style>

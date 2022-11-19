@@ -107,8 +107,8 @@ const menus = [
   width: 100%;
   height: 100px;
   padding: 10px;
-  background: rgb(255 255 255 / 95%);
-  box-shadow: rgb(0 0 0 / 15%) 0 1px 3px 0;
+  background: var(--page-header-background);
+  box-shadow: var(--shadow-color-md) 0 1px 3px 0;
   @media print {
     position: relative;
     height: unset;
@@ -138,7 +138,7 @@ const menus = [
         height: 100%;
         font-size: 1.5em;
         line-height: 1;
-        color: rgb(255 145 0 / 100%);
+        color: var(--color-p);
 
         a {
           color: inherit;
@@ -184,14 +184,14 @@ const menus = [
             text-align: center;
 
             a {
-              color: #666;
+              color: var(--color-6);
               text-decoration: none;
               white-space: nowrap;
               cursor: pointer;
 
               &:hover,
               &:focus {
-                color: #999;
+                color: var(--color-9);
               }
             }
           }
