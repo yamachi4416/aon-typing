@@ -6,4 +6,6 @@
 definePageMeta({
   pageTransition: false,
 })
+
+await useProblems().fetchProblems()
 </script>

@@ -8,6 +8,4 @@ onMounted(() => {
     useRouter().replace({ name: 'game-menu' })
   }
 })
-
-await useProblems().fetchProblems()
 </script>

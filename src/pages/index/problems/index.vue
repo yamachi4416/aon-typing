@@ -46,6 +46,8 @@ useHead({
   title: '問題いちらん',
 })
 
+await useProblems().fetchProblems()
+
 const kwds = ref([] as string[])
 const problems = computed(() => {
   if (kwds.value?.length) {
@@ -78,8 +80,6 @@ function convertKwds(val: LocationQueryValue | LocationQueryValue[]) {
     .flatMap((kwd) => kwd?.split(/[\u{20}\u{3000}]/u).filter((v) => v) ?? [])
     .filter((kwd) => kwd)
 }
-
-await useProblems().fetchProblems()
 </script>
 
 <style lang="scss" scoped>
