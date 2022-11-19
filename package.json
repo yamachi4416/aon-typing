@@ -9,7 +9,7 @@
     "generate:problem": "node ./scripts/dist/problem.js generate -i ./data/problems -o ./src/assets/api",
     "build:scripts": "node scripts/build-scripts.mjs",
     "lint": "npm run lint:scripts && npm run lint:styles",
-    "lint:scripts": "eslint {src,libs,scripts}/**/*.{ts,vue}",
+    "lint:scripts": "eslint .",
     "lint:styles": "stylelint src/**/*.{scss,vue}",
     "format:check": "prettier {src,libs,scripts}/**/*.{scss,vue,ts} -c"
   },
