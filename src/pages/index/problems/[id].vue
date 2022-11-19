@@ -25,6 +25,6 @@ const id = String(useRoute().params.id)
 const detail = await useProblems().retrieveProblemDetail({ id })
 
 useHead({
-  title: `問題 No.${id} ${detail.title}`,
+  title: `問題 No.${id} ${detail.value.title}`,
 })
 </script>
