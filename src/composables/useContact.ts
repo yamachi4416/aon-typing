@@ -1,5 +1,3 @@
-import { ref, computed } from 'vue'
-
 const posted = ref(false)
 
 export function useContactPosted() {

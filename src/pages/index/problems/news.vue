@@ -1,7 +1,7 @@
 <template>
   <div class="problem-news-page">
     <ModProblemLists
-      :problems="problems"
+      :problems="allNewProblems"
       @tag="$navigator.indexTagDetail"
       @detail="$navigator.indexProblemDetail"
       @play="$navigator.gameMenu"
@@ -10,9 +10,11 @@
 </template>
 
 <script setup lang="ts">
+const { allNewProblems, fetchAllNewProblems } = useProblems()
+
 useHead({
   title: '問題いちらん（新着順）',
 })
 
-const problems = await useProblems().retrieveAllNewProblems()
+await fetchAllNewProblems()
 </script>

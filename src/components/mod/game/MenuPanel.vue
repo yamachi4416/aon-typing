@@ -148,10 +148,11 @@ const emit = defineEmits<{
   (e: 'detail', problem?: ProblemListItem): any
 }>()
 
-const setting = computed(() => useProblems().setting)
+const { setting, problems } = useProblems()
+
 const problem = computed(() => {
-  const id = setting.value.problemId
-  return useProblems().problems.find((p) => p.id === id)
+  const id = setting.problemId
+  return problems.value.find((p) => p.id === id)
 })
 
 const problemType = computed(() => {
@@ -186,13 +187,12 @@ function openProblemSelect() {
 }
 
 function randomProblemSelect() {
-  const problems = useProblems().problems ?? []
-  const length = problems.length
+  const length = problems.value.length
   if (length > 0) {
     const idx = Math.floor(Math.random() * length)
-    const problemId = problems[idx].id
-    if (setting.value.problemId !== problemId) {
-      setting.value.problemId = problemId
+    const problemId = problems.value[idx].id
+    if (setting.problemId !== problemId) {
+      setting.problemId = problemId
     } else if (length > 1) {
       randomProblemSelect()
     }

@@ -55,7 +55,8 @@ const detail = computed(() => {
 async function setProblem(item: ProblemListItem) {
   problem.value = item
   problemDetail.value = null
-  problemDetail.value = await useProblems().retrieveProblemDetail(item)
+  const fetchedDetail = await useProblems().retrieveProblemDetail(item)
+  problemDetail.value = fetchedDetail.value
 }
 
 defineExpose({

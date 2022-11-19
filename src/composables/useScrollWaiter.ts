@@ -1,5 +1,3 @@
-import { ref, computed } from 'vue'
-
 function scrollWaiter() {
   const resolver = ref<((value?: any) => void) | null>(null)
   const waiter = ref<Promise<any> | null>(null)

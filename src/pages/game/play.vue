@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
 })
 
 onMounted(async () => {
-  const problem = await useProblems().retrieveProblemDetail({ id })
+  const problem = unref(await useProblems().retrieveProblemDetail({ id }))
   if (!problem?.id) {
     useRouter().replace({ name: 'game-menu' })
   } else {

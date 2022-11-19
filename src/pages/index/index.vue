@@ -112,13 +112,7 @@ useHead({
   title: 'トップページ',
 })
 
-await Promise.all([
-  useProblems().fetchTopNewsProblems(),
-  useProblems().fetchTagSummary(),
-])
-
-const newProblems = computed(() => useProblems().newProblems)
-const tagSummary = computed(() => useProblems().tagSummary)
+const { newProblems, tagSummary } = useProblems()
 
 const state = reactive({
   kwd: '',
@@ -157,6 +151,11 @@ function changeKwds() {
     useNavigator().replaceQuery({ kwd })
   }
 }
+
+await Promise.all([
+  useProblems().fetchTopNewsProblems(),
+  useProblems().fetchTags(),
+])
 </script>
 
 <style lang="scss" scoped>

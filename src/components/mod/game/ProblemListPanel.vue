@@ -52,15 +52,18 @@ defineEmits<{
   (e: 'close'): any
 }>()
 
+const { problems, filterTagProblems } = useProblems()
 const pageSize = 30
 const page = ref(1)
 
 const tags = ref(new Map<string, ProblemItemTag>())
+const filterProblems = filterTagProblems({
+  problems,
+  tags: computed(() => tags.value.keys()),
+})
 const pages = computed(() =>
   pagenate({
-    items: useProblems().problemTagFilter({
-      qtags: [...tags.value.keys()],
-    }),
+    items: filterProblems.value,
     page: page.value,
     pageSize,
   }),

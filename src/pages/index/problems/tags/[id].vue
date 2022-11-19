@@ -24,23 +24,19 @@
 </template>
 
 <script setup lang="ts">
+const { retrieveTag, filterTagProblems } = useProblems()
+
+const tag = await retrieveTag({ id: String(useRoute().params.id) })
 const tags = ref(queryTags())
+const problems = filterTagProblems({
+  problems: computed(() => tag.value?.problems ?? []),
+  tagId: computed(() => tag.value.id),
+  tags,
+})
 
 onMounted(() => {
   tags.value = queryTags()
 })
-
-const tag = await useProblems().retrieveTag({
-  id: String(useRoute().params.id),
-})
-
-const problems = computed(() =>
-  useProblems().problemTagFilter({
-    problems: tag.problems,
-    tagId: tag.id,
-    qtags: tags.value,
-  }),
-)
 
 useHead({
   title: `問題 タグ：${tag.name}`,
