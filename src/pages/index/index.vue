@@ -78,7 +78,11 @@
             <span class="tag-item">
               <span class="tag-item-name">{{ tag.name }}</span>
               <span class="tag-item-count">
-                <span class="tag-item-count-number">{{ tag.count }}</span>
+                <span class="tag-item-count-number">
+                  <span>(</span>
+                  <span>{{ tag.count }}</span>
+                  <span>)</span>
+                </span>
               </span>
             </span>
           </NuxtLink>
@@ -182,14 +186,11 @@ await Promise.all([
 
           &-count {
             margin-left: 5px;
+            font-size: 0.9em;
 
             &-number {
               display: inline-flex;
-              padding: 0 8px;
-              line-height: 1;
-              color: #f90;
-              background: #fff;
-              border-radius: 15px;
+              column-gap: 2px;
             }
           }
 
