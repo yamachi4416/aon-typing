@@ -35,5 +35,9 @@
   background: transparent;
   border: 2px solid var(--color-3);
   border-radius: 50%;
+
+  line {
+    color: var(--color-3);
+  }
 }
 </style>

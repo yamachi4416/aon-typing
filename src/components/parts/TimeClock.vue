@@ -49,6 +49,7 @@ const dispTime = computed(() => `${minute.value}:${second.value}`)
     font-size: 1.3em;
     white-space: pre;
     cursor: pointer;
+    fill: var(--color-3);
   }
 }
 </style>

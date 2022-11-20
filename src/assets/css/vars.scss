@@ -27,3 +27,61 @@
     @content;
   }
 }
+
+@mixin __theme_light_cssvars {
+  --color-3: #333;
+  --color-6: #666;
+  --color-9: #999;
+  --color-a: #aaa;
+  --color-c: #ccc;
+  --color-e: #eee;
+  --color-f: #fff;
+  --color-p: #f90;
+  --color-l: rgb(64 125 255);
+  --background-30: rgb(255 255 255 / 30%);
+  --background-60: rgb(255 255 255 / 60%);
+  --background-90: rgb(255 255 255 / 90%);
+  --background-00: rgb(255 255 255);
+  --shadow-color-md: rgb(0 0 0 / 15%);
+  --shadow-color-lg: rgb(0 0 0 / 40%);
+  --page-background-color: rgb(5 117 35);
+  --page-background-image-color: var(--background-00);
+  --page-background-image: url('/assets/img/back01.png');
+  --page-header-background: var(--background-90);
+  --page-footer-background: var(--background-90);
+  --input-error-message: rgb(255 52 52);
+  --input-selected: rgb(255 208 138);
+  --input-active-outine: rgb(255 153 0 / 60%);
+  --keyboard-highlight: var(--input-selected);
+  --loading-color: rgb(253 207 0 / 10%);
+  --countdown-color: var(--color-l);
+}
+
+@mixin __theme_dark_cssvars {
+  --color-3: #fff;
+  --color-6: #ccc;
+  --color-9: #999;
+  --color-a: #999;
+  --color-c: #999;
+  --color-e: #666;
+  --color-f: #333;
+  --color-p: #f90;
+  --color-l: rgb(64 125 255);
+  --background-30: rgb(0 0 0 / 0%);
+  --background-60: rgb(0 0 0 / 60%);
+  --background-90: rgb(0 0 0 / 70%);
+  --background-00: rgb(0 0 0);
+  --shadow-color-md: rgb(150 150 150 / 60%);
+  --shadow-color-lg: rgb(150 150 150 / 90%);
+  --page-background-color: rgb(0 42 28);
+  --page-background-image-color: var(--background-00);
+  --page-background-image: url('/assets/img/back01-dark.png');
+  --page-header-background: var(--background-90);
+  --page-footer-background: var(--background-90);
+  --input-error-message: rgb(255 52 52);
+  --input-selected: rgb(255 153 0);
+  --input-active-outine: rgb(255 153 0 / 40%);
+  --keyboard-highlight: var(--input-selected);
+  --loading-color: rgb(255 153 0 / 40%);
+  --countdown-color: var(--color-l);
+}

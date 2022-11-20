@@ -234,6 +234,7 @@ function print() {
     justify-content: flex-start;
     width: 100%;
     padding: 6px;
+    color: var(--color-6);
 
     &-bold {
       color: var(--color-p);
@@ -279,10 +280,6 @@ function print() {
             align-items: center;
             justify-content: center;
             font-size: 0.9em;
-          }
-
-          &-jc {
-            color: var(--color-6);
           }
         }
       }

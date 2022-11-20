@@ -2,38 +2,7 @@
 @import './vars';
 
 :root {
-  --color-3: #333;
-  --color-6: #666;
-  --color-9: #999;
-  --color-a: #aaa;
-  --color-c: #ccc;
-  --color-e: #eee;
-  --color-f: #fff;
-  --color-p: #f90;
-
-  --background-30: rgb(255 255 255 / 30%);
-  --background-60: rgb(255 255 255 / 60%);
-  --background-90: rgb(255 255 255 / 90%);
-  --background-NN: rgb(255 255 255);
-
-  --shadow-color-md: rgb(0 0 0 / 15%);
-  --shadow-color-lg: rgb(0 0 0 / 40%);
-
-  --page-background-color: rgb(5 117 35);
-  --page-background-image-color: var(--background-NN);
-  --page-background-image: url('/assets/img/back01.png');
-
-  --page-header-background: var(--background-90);
-  --page-footer-background: var(--background-90);
-
-  --input-error-message: rgb(255 52 52);
-  --input-selected: rgb(255 208 138);
-  --input-active-outine: rgb(255 153 0 / 60%);
-
-  --keyboard-highlight: var(--input-selected);
-
-  --loading-color: rgb(253 207 0 / 10%);
-  --countdown-color: rgb(64 125 255);
+  @include __theme_light_cssvars;
 }
 
 * {
@@ -67,6 +36,10 @@ body {
   }
 }
 
+a {
+  color: var(--color-l);
+}
+
 /* stylelint-disable-next-line selector-id-pattern */
 body,
 #__nuxt,
@@ -78,6 +51,12 @@ body,
   @media print {
     height: 100%;
     min-height: unset !important;
+  }
+}
+
+@media screen {
+  body.dark {
+    @include __theme_dark_cssvars;
   }
 }
 
@@ -97,6 +76,7 @@ body,
   padding: 0 1.5em;
   font-size: 0.9em;
   line-height: 2;
+  color: var(--color-3);
   white-space: nowrap;
   cursor: pointer;
   background: var(--color-e);
@@ -109,6 +89,7 @@ body,
   }
 
   &:disabled {
+    color: var(--color-a);
     border-color: var(--color-9);
   }
 
