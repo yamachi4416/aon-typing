@@ -1,0 +1,55 @@
+{
+  "id": "1010042",
+  "title": "ＪＲ山田線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-20",
+  "updatedAt": "2022-11-20",
+  "optional": { "cd": "42" },
+  "words": [
+    { "info": "釜石", "info2": "かまいし", "word": "kamaisi" },
+    { "info": "両石", "info2": "りょういし", "word": "ryouisi" },
+    { "info": "鵜住居", "info2": "うのすまい", "word": "unosumai" },
+    { "info": "大槌", "info2": "おおつち", "word": "ootuti" },
+    { "info": "吉里吉里", "info2": "きりきり", "word": "kirikiri" },
+    {
+      "info": "浪板海岸",
+      "info2": "なみいたかいがん",
+      "word": "namiitakaigann"
+    },
+    { "info": "岩手船越", "info2": "いわてふなこし", "word": "iwatehunakosi" },
+    { "info": "織笠", "info2": "おりかさ", "word": "orikasa" },
+    {
+      "info": "陸中山田",
+      "info2": "りくちゅうやまだ",
+      "word": "rikutyuuyamada"
+    },
+    { "info": "豊間根", "info2": "とよまね", "word": "toyomane" },
+    { "info": "津軽石", "info2": "つがるいし", "word": "tugaruisi" },
+    { "info": "磯鶏", "info2": "そけい", "word": "sokei" },
+    { "info": "宮古", "info2": "みやこ", "word": "miyako" },
+    { "info": "千徳", "info2": "せんとく", "word": "sentoku" },
+    { "info": "花原市", "info2": "けばらいち", "word": "kebaraiti" },
+    { "info": "蟇目", "info2": "ひきめ", "word": "hikime" },
+    { "info": "茂市", "info2": "もいち", "word": "moiti" },
+    { "info": "腹帯", "info2": "はらたい", "word": "haratai" },
+    {
+      "info": "陸中川井",
+      "info2": "りくちゅうかわい",
+      "word": "rikutyuukawai"
+    },
+    { "info": "箱石", "info2": "はこいし", "word": "hakoisi" },
+    { "info": "川内", "info2": "かわうち", "word": "kawauti" },
+    { "info": "平津戸", "info2": "ひらつと", "word": "hiratuto" },
+    { "info": "松草", "info2": "まつくさ", "word": "matukusa" },
+    { "info": "区界", "info2": "くざかい", "word": "kuzakai" },
+    { "info": "上米内", "info2": "かみよない", "word": "kamiyonai" },
+    { "info": "山岸", "info2": "やまぎし", "word": "yamagisi" },
+    { "info": "上盛岡", "info2": "かみもりおか", "word": "kamimorioka" },
+    { "info": "盛岡", "info2": "もりおか", "word": "morioka" }
+  ]
+}

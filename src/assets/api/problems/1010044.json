@@ -1,0 +1,47 @@
+{
+  "id": "1010044",
+  "title": "ＪＲ釜石線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-20",
+  "updatedAt": "2022-11-20",
+  "optional": { "cd": "44" },
+  "words": [
+    { "info": "釜石", "info2": "かまいし", "word": "kamaisi" },
+    { "info": "小佐野", "info2": "こさの", "word": "kosano" },
+    { "info": "松倉", "info2": "まつくら", "word": "matukura" },
+    { "info": "洞泉", "info2": "どうせん", "word": "dousenn" },
+    {
+      "info": "陸中大橋",
+      "info2": "りくちゅうおおはし",
+      "word": "rikutyuuoohasi"
+    },
+    { "info": "上有住", "info2": "かみありす", "word": "kamiarisu" },
+    { "info": "足ケ瀬", "info2": "あしがせ", "word": "asigase" },
+    { "info": "平倉", "info2": "ひらくら", "word": "hirakura" },
+    { "info": "岩手上郷", "info2": "いわてかみごう", "word": "iwatekamigou" },
+    { "info": "青笹", "info2": "あおざさ", "word": "aozasa" },
+    { "info": "遠野", "info2": "とおの", "word": "toono" },
+    { "info": "綾織", "info2": "あやおり", "word": "ayaori" },
+    {
+      "info": "岩手二日町",
+      "info2": "いわてふつかまち",
+      "word": "iwatehutukamati"
+    },
+    { "info": "荒谷前", "info2": "あらやまえ", "word": "arayamae" },
+    { "info": "鱒沢", "info2": "ますざわ", "word": "masuzawa" },
+    { "info": "柏木平", "info2": "かしわぎだいら", "word": "kasiwagidaira" },
+    { "info": "宮守", "info2": "みやもり", "word": "miyamori" },
+    { "info": "岩根橋", "info2": "いわねばし", "word": "iwanebasi" },
+    { "info": "晴山", "info2": "はるやま", "word": "haruyama" },
+    { "info": "土沢", "info2": "つちざわ", "word": "tutizawa" },
+    { "info": "小山田", "info2": "おやまだ", "word": "oyamada" },
+    { "info": "新花巻", "info2": "しんはなまき", "word": "sinhanamaki" },
+    { "info": "似内", "info2": "にたない", "word": "nitanai" },
+    { "info": "花巻", "info2": "はなまき", "word": "hanamaki" }
+  ]
+}
