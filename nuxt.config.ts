@@ -2,7 +2,6 @@ import { readFileSync } from 'node:fs'
 import qs from 'node:querystring'
 import { defineNuxtConfig } from 'nuxt/config'
 import { createResolver } from '@nuxt/kit'
-import { NuxtPage } from '@nuxt/schema'
 
 const resolver = createResolver(import.meta.url)
 
@@ -62,6 +61,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         ...googleFont(),
       ],
+      script: [
+        { src: '/static/js/index.js' },
+      ],
     },
   },
 
@@ -81,7 +83,7 @@ export default defineNuxtConfig({
   },
 
   hooks: {
-    'pages:extend'(pages: NuxtPage[]) {
+    'pages:extend'(pages) {
       pages.push({
         name: '404',
         path: '/404.html',

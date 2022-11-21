@@ -18,6 +18,14 @@
   }
 }
 
+@media screen {
+  html {
+    &.dark {
+      @include __theme_dark_cssvars;
+    }
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -51,12 +59,6 @@ body,
   @media print {
     height: 100%;
     min-height: unset !important;
-  }
-}
-
-@media screen {
-  body.dark {
-    @include __theme_dark_cssvars;
   }
 }
 

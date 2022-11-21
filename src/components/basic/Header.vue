@@ -10,6 +10,10 @@
             }}</span>
           </NuxtLink>
         </h1>
+        <div class="basic-header-nav-main-theme">
+          <a @click.prevent="changeTheme('light')">light</a> /
+          <a @click.prevent="changeTheme('dark')">dark</a>
+        </div>
       </div>
       <div class="basic-header-nav-sub">
         <nav class="basic-header-nav-sub-menu">
@@ -45,6 +49,7 @@ const titleChars = ref([] as string[])
 const title = computed(() =>
   props.anim ? titleChars.value.join('') : titleText,
 )
+const { changeTheme } = useTheme()
 
 onMounted(() => typing(titleText))
 
@@ -109,6 +114,7 @@ const menus = [
   padding: 10px;
   background: var(--page-header-background);
   box-shadow: var(--shadow-color-md) 0 1px 3px 0;
+
   @media print {
     position: relative;
     height: unset;
@@ -123,6 +129,7 @@ const menus = [
     height: 100%;
     padding-right: 10px;
     padding-left: 10px;
+
     @media print {
       max-width: unset;
     }
@@ -131,6 +138,7 @@ const menus = [
       display: flex;
       flex: 1;
       align-items: center;
+      justify-content: space-between;
 
       h1 {
         display: flex;
@@ -157,6 +165,21 @@ const menus = [
             &.title-no-anim {
               opacity: 1;
             }
+          }
+        }
+      }
+
+      &-theme {
+        color: var(--color-3);
+
+        a {
+          text-decoration: none;
+          color: var(--color-6);
+          cursor: pointer;
+
+          &:hover,
+          &:focus {
+            color: var(--color-9);
           }
         }
       }
