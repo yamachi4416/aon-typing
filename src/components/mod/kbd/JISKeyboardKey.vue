@@ -90,7 +90,7 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{
-  (e: 'click', key: { index: number; text: string }, start: boolean): any
+  (e: 'click', key: { index?: number; text?: string }, start: boolean): any
 }>()
 
 const clicked = ref(false)

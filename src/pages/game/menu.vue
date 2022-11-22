@@ -84,8 +84,10 @@ async function openProblemSelectDetail(problem: ProblemListItem) {
   await openProblemDetailShow(problem, true)
 }
 
-async function openProblemDetail(problem: ProblemListItem) {
-  await openProblemDetailShow(problem, false)
+async function openProblemDetail(problem?: ProblemListItem) {
+  if (problem) {
+    await openProblemDetailShow(problem, false)
+  }
 }
 
 async function openProblemDetailShow(

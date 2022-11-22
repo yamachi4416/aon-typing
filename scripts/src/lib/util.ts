@@ -19,7 +19,7 @@ export async function httpFetch(url: string, options: HttpRequestOptions = {}) {
     const h = url.startsWith('https') ? https : http
 
     const req = h.request(url, (res) => {
-      const buffers = []
+      const buffers = [] as any[]
       res.on('data', (buffer) => {
         buffers.push(buffer)
       })
@@ -31,7 +31,7 @@ export async function httpFetch(url: string, options: HttpRequestOptions = {}) {
 
     if (options.headers) {
       Object.entries(options.headers).forEach(([key, val]) => {
-        req.setHeader(key, val)
+        req.setHeader(key, val ?? '')
       })
     }
 

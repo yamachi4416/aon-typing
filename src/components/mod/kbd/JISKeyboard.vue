@@ -113,7 +113,9 @@ const props = withDefaults(
 )
 
 const shiftKey = ref(false)
-const shift = computed(() => props.keys?.isShiftKey(props.typeKey))
+const shift = computed(
+  () => props.typeKey != null && props.keys?.isShiftKey(props.typeKey),
+)
 const lines = [
   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
   [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
@@ -140,7 +142,7 @@ function hi(n: number) {
   }
 }
 
-function keydown(k: { text: string; index: number }, start: boolean) {
+function keydown(k: { text?: string; index?: number }, start: boolean) {
   if (props.setting.autoMode) {
     return
   }
@@ -156,7 +158,7 @@ function keydown(k: { text: string; index: number }, start: boolean) {
       char = ' '
     } else if (k.text === 'enter') {
       char = '\n'
-    } else {
+    } else if (k.index != null) {
       char = props.keys.getKeyByIndex(k.index, shiftKey.value)
     }
     const detail = { char }

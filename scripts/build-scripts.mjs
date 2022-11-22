@@ -45,6 +45,7 @@ import yargs from 'yargs'
             esbuild
               .build({
                 bundle: true,
+                minify: true,
                 platform: 'node',
                 external: ['yargs', 'jsdom', 'prettier'],
                 ...builder,
