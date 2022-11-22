@@ -39,7 +39,7 @@ onMounted(() => {
 })
 
 useHead({
-  title: `問題 タグ：${tag.name}`,
+  title: `問題 タグ：${tag.value.name}`,
 })
 
 function queryTags() {
