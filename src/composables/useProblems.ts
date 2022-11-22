@@ -111,6 +111,12 @@ function useProblemState() {
     return justOrThrow(state) as Ref<ProblemDetail>
   }
 
+  function findProblemItem({ id }: { id: string }) {
+    if (id) {
+      return problems.value.find(({ id: pid }) => pid === id)
+    }
+  }
+
   function filterTagProblems({
     problems,
     tagId = ref(''),
@@ -148,6 +154,7 @@ function useProblemState() {
     fetchTags,
     retrieveTag,
     retrieveProblemDetail,
+    findProblemItem,
     filterTagProblems,
   }
 }

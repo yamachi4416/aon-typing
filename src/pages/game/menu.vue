@@ -42,9 +42,8 @@ const modalProblemList = ref<Modal>()
 const modalProblemDetail = ref<Modal>()
 const modals = [modalProblemList, modalProblemDetail]
 
+const { setting } = useProblems()
 const problemDetailPanel = ref<InstanceType<typeof ProblemDetailPanel>>()
-
-onMounted(() => modalMenu.value?.open())
 
 const hasPendingModal = computed(
   () => (modals.filter((modal) => modal.value?.isPending)?.length ?? 0) > 0,
@@ -53,6 +52,8 @@ const hasPendingModal = computed(
 const openModal = computed(
   () => modals.reverse().find((modal) => modal.value?.isOpen)?.value,
 )
+
+onMounted(() => modalMenu.value?.open())
 
 onBeforeRouteLeave(async (_to, _from, next) => {
   if (hasPendingModal.value) {
@@ -75,7 +76,7 @@ async function startTyping() {
   if (hasPendingModal.value) return
   await useRouter().push({
     name: 'game-play',
-    query: { id: useProblems().setting.problemId },
+    query: { id: setting.problemId },
   })
 }
 
@@ -101,7 +102,7 @@ async function openProblemDetailShow(
 
 function selcet({ id }: { id: string }) {
   if (hasPendingModal.value) return
-  useProblems().setting.problemId = id
+  setting.problemId = id
   let anim = true
   for (const modal of modals.reverse()) {
     if (modal.value?.isOpen) {

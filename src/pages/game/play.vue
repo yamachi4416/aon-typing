@@ -42,9 +42,10 @@ const state = reactive({
 
 const id = useRoute().query.id as string
 const modalGameResult = ref<InstanceType<typeof ModalPanel>>()
+const { setting, retrieveProblemDetail, findProblemItem } = useProblems()
 
 onBeforeMount(() => {
-  if (!id) {
+  if (!findProblemItem({ id })) {
     useRouter().replace({ name: 'game-menu' })
   }
 })
@@ -54,17 +55,24 @@ onBeforeUnmount(() => {
 })
 
 onMounted(async () => {
-  const problem = unref(await useProblems().retrieveProblemDetail({ id }))
-  if (!problem?.id) {
+  if (!findProblemItem({ id })) {
     useRouter().replace({ name: 'game-menu' })
-  } else {
-    useProblems().setting.problemId = id
-    state.problem = new TypingProblemQuestioner({
-      problem,
-      setting: useProblems().setting,
-    })
-    startTyping()
+    return
   }
+
+  setting.problemId = id
+  const problem = unref(await retrieveProblemDetail({ id }).catch((e) => null))
+
+  if (!problem) {
+    useRouter().replace({ name: 'game-menu' })
+    return
+  }
+
+  state.problem = new TypingProblemQuestioner({
+    problem,
+    setting,
+  })
+  startTyping()
 })
 
 async function startTyping() {
@@ -100,7 +108,7 @@ async function startTyping() {
 
   state.result = await state.typing.start({
     problem: state.problem,
-    setting: useProblems().setting,
+    setting,
   })
 
   await modalGameResult.value?.open()
@@ -132,7 +140,7 @@ async function next() {
 }
 
 useHead({
-  title: `タイピング No.${id}`,
+  title: id ? `タイピング No.${id}` : 'タイピング',
 })
 </script>
 
