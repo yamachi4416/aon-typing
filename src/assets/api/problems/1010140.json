@@ -1,0 +1,37 @@
+{
+  "id": "1010140",
+  "title": "ＪＲ関西本線(名古屋－亀山)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-23",
+  "updatedAt": "2022-11-23",
+  "optional": { "cd": "140" },
+  "words": [
+    { "info": "亀山", "info2": "かめやま", "word": "kameyama" },
+    { "info": "井田川", "info2": "いだがわ", "word": "idagawa" },
+    { "info": "加佐登", "info2": "かさど", "word": "kasado" },
+    { "info": "河曲", "info2": "かわの", "word": "kawano" },
+    { "info": "河原田", "info2": "かわらだ", "word": "kawarada" },
+    {
+      "info": "南四日市",
+      "info2": "みなみよっかいち",
+      "word": "minamiyokkaiti"
+    },
+    { "info": "四日市", "info2": "よっかいち", "word": "yokkaiti" },
+    { "info": "富田浜", "info2": "とみだはま", "word": "tomidahama" },
+    { "info": "富田", "info2": "とみだ", "word": "tomida" },
+    { "info": "朝日", "info2": "あさひ", "word": "asahi" },
+    { "info": "桑名", "info2": "くわな", "word": "kuwana" },
+    { "info": "長島", "info2": "ながしま", "word": "nagasima" },
+    { "info": "弥富", "info2": "やとみ", "word": "yatomi" },
+    { "info": "永和", "info2": "えいわ", "word": "eiwa" },
+    { "info": "蟹江", "info2": "かにえ", "word": "kanie" },
+    { "info": "春田", "info2": "はるた", "word": "haruta" },
+    { "info": "八田", "info2": "はった", "word": "hatta" },
+    { "info": "名古屋", "info2": "なごや", "word": "nagoya" }
+  ]
+}
