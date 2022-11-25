@@ -1,0 +1,34 @@
+{
+  "id": "1010046",
+  "title": "ＪＲ北上線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-11-26",
+  "updatedAt": "2022-11-26",
+  "optional": { "cd": "46" },
+  "words": [
+    { "info": "横手", "info2": "よこて", "word": "yokote" },
+    { "info": "相野々", "info2": "あいのの", "word": "ainono" },
+    { "info": "小松川", "info2": "こまつかわ", "word": "komatukawa" },
+    { "info": "黒沢", "info2": "くろさわ", "word": "kurosawa" },
+    { "info": "ゆだ高原", "info2": "ゆだこうげん", "word": "yudakougenn" },
+    { "info": "ほっとゆだ", "info2": "ほっとゆだ", "word": "hottoyuda" },
+    {
+      "info": "ゆだ錦秋湖",
+      "info2": "ゆだきんしゅうこ",
+      "word": "yudakinsyuuko"
+    },
+    { "info": "和賀仙人", "info2": "わかせんにん", "word": "wakasennninn" },
+    { "info": "岩沢", "info2": "いわさわ", "word": "iwasawa" },
+    { "info": "横川目", "info2": "よこかわめ", "word": "yokokawame" },
+    { "info": "立川目", "info2": "たてかわめ", "word": "tatekawame" },
+    { "info": "藤根", "info2": "ふじね", "word": "hujine" },
+    { "info": "江釣子", "info2": "えづりこ", "word": "eduriko" },
+    { "info": "柳原", "info2": "やなぎはら", "word": "yanagihara" },
+    { "info": "北上", "info2": "きたかみ", "word": "kitakami" }
+  ]
+}
