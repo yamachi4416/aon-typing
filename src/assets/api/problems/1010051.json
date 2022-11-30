@@ -1,0 +1,58 @@
+{
+  "id": "1010051",
+  "title": "ＪＲ陸羽東線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-01",
+  "updatedAt": "2022-12-01",
+  "optional": { "cd": "51" },
+  "words": [
+    { "info": "新庄", "info2": "しんじょう", "word": "sinjou" },
+    { "info": "南新庄", "info2": "みなみしんじょう", "word": "minamisinjou" },
+    { "info": "長沢", "info2": "ながさわ", "word": "nagasawa" },
+    { "info": "東長沢", "info2": "ひがしながさわ", "word": "higasinagasawa" },
+    { "info": "瀬見温泉", "info2": "せみおんせん", "word": "semionsenn" },
+    { "info": "鵜杉", "info2": "うすぎ", "word": "usugi" },
+    { "info": "大堀", "info2": "おおほり", "word": "oohori" },
+    { "info": "最上", "info2": "もがみ", "word": "mogami" },
+    { "info": "立小路", "info2": "たちこうじ", "word": "tatikouji" },
+    {
+      "info": "赤倉温泉",
+      "info2": "あかくらおんせん",
+      "word": "akakuraonsenn"
+    },
+    { "info": "堺田", "info2": "さかいだ", "word": "sakaida" },
+    {
+      "info": "中山平温泉",
+      "info2": "なかやまだいらおんせん",
+      "word": "nakayamadairaonsenn"
+    },
+    { "info": "鳴子温泉", "info2": "なるこおんせん", "word": "narukoonsenn" },
+    {
+      "info": "鳴子御殿湯",
+      "info2": "なるこごてんゆ",
+      "word": "narukogotenyu"
+    },
+    {
+      "info": "川渡温泉",
+      "info2": "かわたびおんせん",
+      "word": "kawatabionsenn"
+    },
+    { "info": "池月", "info2": "いけづき", "word": "ikeduki" },
+    { "info": "上野目", "info2": "かみのめ", "word": "kaminome" },
+    { "info": "有備館", "info2": "ゆうびかん", "word": "yuubikann" },
+    { "info": "岩出山", "info2": "いわでやま", "word": "iwadeyama" },
+    { "info": "西大崎", "info2": "にしおおさき", "word": "nisioosaki" },
+    { "info": "東大崎", "info2": "ひがしおおさき", "word": "higasioosaki" },
+    { "info": "西古川", "info2": "にしふるかわ", "word": "nisihurukawa" },
+    { "info": "塚目", "info2": "つかのめ", "word": "tukanome" },
+    { "info": "古川", "info2": "ふるかわ", "word": "hurukawa" },
+    { "info": "陸前谷地", "info2": "りくぜんやち", "word": "rikuzenyati" },
+    { "info": "北浦", "info2": "きたうら", "word": "kitaura" },
+    { "info": "小牛田", "info2": "こごた", "word": "kogota" }
+  ]
+}

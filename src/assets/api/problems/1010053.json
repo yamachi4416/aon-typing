@@ -1,0 +1,25 @@
+{
+  "id": "1010053",
+  "title": "ＪＲ陸羽西線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-01",
+  "updatedAt": "2022-12-01",
+  "optional": { "cd": "53" },
+  "words": [
+    { "info": "余目", "info2": "あまるめ", "word": "amarume" },
+    { "info": "南野", "info2": "みなみの", "word": "minamino" },
+    { "info": "狩川", "info2": "かりかわ", "word": "karikawa" },
+    { "info": "清川", "info2": "きよかわ", "word": "kiyokawa" },
+    { "info": "高屋", "info2": "たかや", "word": "takaya" },
+    { "info": "古口", "info2": "ふるくち", "word": "hurukuti" },
+    { "info": "津谷", "info2": "つや", "word": "tuya" },
+    { "info": "羽前前波", "info2": "うぜんぜんなみ", "word": "uzenzennnami" },
+    { "info": "升形", "info2": "ますかた", "word": "masukata" },
+    { "info": "新庄", "info2": "しんじょう", "word": "sinjou" }
+  ]
+}
