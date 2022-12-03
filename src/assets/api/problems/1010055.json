@@ -1,0 +1,75 @@
+{
+  "id": "1010055",
+  "title": "ＪＲ仙石線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-04",
+  "updatedAt": "2022-12-04",
+  "optional": { "cd": "55" },
+  "words": [
+    { "info": "石巻", "info2": "いしのまき", "word": "isinomaki" },
+    {
+      "info": "陸前山下",
+      "info2": "りくぜんやました",
+      "word": "rikuzenyamasita"
+    },
+    { "info": "蛇田", "info2": "へびた", "word": "hebita" },
+    {
+      "info": "石巻あゆみ野",
+      "info2": "いしのまきあゆみの",
+      "word": "isinomakiayumino"
+    },
+    { "info": "陸前赤井", "info2": "りくぜんあかい", "word": "rikuzennakai" },
+    { "info": "東矢本", "info2": "ひがしやもと", "word": "higasiyamoto" },
+    { "info": "矢本", "info2": "やもと", "word": "yamoto" },
+    { "info": "鹿妻", "info2": "かづま", "word": "kaduma" },
+    { "info": "陸前小野", "info2": "りくぜんおの", "word": "rikuzennono" },
+    { "info": "野蒜", "info2": "のびる", "word": "nobiru" },
+    { "info": "東名", "info2": "とうな", "word": "touna" },
+    {
+      "info": "陸前大塚",
+      "info2": "りくぜんおおつか",
+      "word": "rikuzennootuka"
+    },
+    {
+      "info": "陸前富山",
+      "info2": "りくぜんとみやま",
+      "word": "rikuzentomiyama"
+    },
+    { "info": "手樽", "info2": "てたる", "word": "tetaru" },
+    { "info": "高城町", "info2": "たかぎまち", "word": "takagimati" },
+    {
+      "info": "松島海岸",
+      "info2": "まつしまかいがん",
+      "word": "matusimakaigann"
+    },
+    { "info": "陸前浜田", "info2": "りくぜんはまだ", "word": "rikuzenhamada" },
+    { "info": "東塩釜", "info2": "ひがししおがま", "word": "higasisiogama" },
+    { "info": "本塩釜", "info2": "ほんしおがま", "word": "honsiogama" },
+    { "info": "西塩釜", "info2": "にししおがま", "word": "nisisiogama" },
+    { "info": "下馬", "info2": "げば", "word": "geba" },
+    { "info": "多賀城", "info2": "たがじょう", "word": "tagajou" },
+    { "info": "中野栄", "info2": "なかのさかえ", "word": "nakanosakae" },
+    {
+      "info": "陸前高砂",
+      "info2": "りくぜんたかさご",
+      "word": "rikuzentakasago"
+    },
+    { "info": "福田町", "info2": "ふくだまち", "word": "hukudamati" },
+    { "info": "小鶴新田", "info2": "こづるしんでん", "word": "kodurusindenn" },
+    { "info": "苦竹", "info2": "にがたけ", "word": "nigatake" },
+    {
+      "info": "陸前原ノ町",
+      "info2": "りくぜんはらのまち",
+      "word": "rikuzenharanomati"
+    },
+    { "info": "宮城野原", "info2": "みやぎのはら", "word": "miyaginohara" },
+    { "info": "榴ケ岡", "info2": "つつじがおか", "word": "tutujigaoka" },
+    { "info": "仙台", "info2": "せんだい", "word": "sendai" },
+    { "info": "あおば通", "info2": "あおばどおり", "word": "aobadoori" }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "1010056",
+  "title": "ＪＲ仙山線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-04",
+  "updatedAt": "2022-12-04",
+  "optional": { "cd": "56" },
+  "words": [
+    { "info": "山形", "info2": "やまがた", "word": "yamagata" },
+    { "info": "北山形", "info2": "きたやまがた", "word": "kitayamagata" },
+    { "info": "羽前千歳", "info2": "うぜんちとせ", "word": "uzentitose" },
+    { "info": "楯山", "info2": "たてやま", "word": "tateyama" },
+    { "info": "高瀬", "info2": "たかせ", "word": "takase" },
+    { "info": "山寺", "info2": "やまでら", "word": "yamadera" },
+    {
+      "info": "面白山高原",
+      "info2": "おもしろやまこうげん",
+      "word": "omosiroyamakougenn"
+    },
+    { "info": "奥新川", "info2": "おくにっかわ", "word": "okunikkawa" },
+    { "info": "作並", "info2": "さくなみ", "word": "sakunami" },
+    { "info": "熊ケ根", "info2": "くまがね", "word": "kumagane" },
+    {
+      "info": "陸前白沢",
+      "info2": "りくぜんしらさわ",
+      "word": "rikuzensirasawa"
+    },
+    { "info": "愛子", "info2": "あやし", "word": "ayasi" },
+    {
+      "info": "陸前落合",
+      "info2": "りくぜんおちあい",
+      "word": "rikuzennotiai"
+    },
+    { "info": "葛岡", "info2": "くずおか", "word": "kuzuoka" },
+    { "info": "国見", "info2": "くにみ", "word": "kunimi" },
+    {
+      "info": "東北福祉大前",
+      "info2": "とうほくふくしだいまえ",
+      "word": "touhokuhukusidaimae"
+    },
+    { "info": "北山", "info2": "きたやま", "word": "kitayama" },
+    { "info": "北仙台", "info2": "きたせんだい", "word": "kitasendai" },
+    { "info": "東照宮", "info2": "とうしょうぐう", "word": "tousyouguu" },
+    { "info": "仙台", "info2": "せんだい", "word": "sendai" }
+  ]
+}
