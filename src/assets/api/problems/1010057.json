@@ -1,0 +1,27 @@
+{
+  "id": "1010057",
+  "title": "ＪＲ左沢線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-07",
+  "updatedAt": "2022-12-07",
+  "optional": { "cd": "57" },
+  "words": [
+    { "info": "左沢", "info2": "あてらざわ", "word": "aterazawa" },
+    { "info": "柴橋", "info2": "しばはし", "word": "sibahasi" },
+    { "info": "羽前高松", "info2": "うぜんたかまつ", "word": "uzentakamatu" },
+    { "info": "西寒河江", "info2": "にしさがえ", "word": "nisisagae" },
+    { "info": "寒河江", "info2": "さがえ", "word": "sagae" },
+    { "info": "南寒河江", "info2": "みなみさがえ", "word": "minamisagae" },
+    { "info": "羽前長崎", "info2": "うぜんながさき", "word": "uzennnagasaki" },
+    { "info": "羽前金沢", "info2": "うぜんかねざわ", "word": "uzenkanezawa" },
+    { "info": "羽前山辺", "info2": "うぜんやまべ", "word": "uzenyamabe" },
+    { "info": "東金井", "info2": "ひがしかない", "word": "higasikanai" },
+    { "info": "北山形", "info2": "きたやまがた", "word": "kitayamagata" },
+    { "info": "山形", "info2": "やまがた", "word": "yamagata" }
+  ]
+}
