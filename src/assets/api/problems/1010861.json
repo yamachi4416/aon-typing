@@ -1,0 +1,24 @@
+{
+  "id": "1010861",
+  "title": "ＪＲ西九州新幹線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-11",
+  "updatedAt": "2022-12-11",
+  "optional": { "cd": "861" },
+  "words": [
+    { "info": "長崎", "info2": "ながさき", "word": "nagasaki" },
+    { "info": "諫早", "info2": "いさはや", "word": "isahaya" },
+    { "info": "新大村", "info2": "しんおおむら", "word": "sinnoomura" },
+    {
+      "info": "嬉野温泉",
+      "info2": "うれしのおんせん",
+      "word": "uresinoonsenn"
+    },
+    { "info": "武雄温泉", "info2": "たけおおんせん", "word": "takeoonsenn" }
+  ]
+}
