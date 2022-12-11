@@ -56,11 +56,15 @@ function joinWords(pages: Array<FetchStationResult['words']>) {
   let words = [...pages[0]]
   for (let i = 1; i < pages.length; i++) {
     const page = pages[i]
-    const pstart = page.shift()!
-    const plast = page.pop()!
+    const pstart = page.shift()
+    const plast = page.pop()
     const wstart = words[0]
     const wlast = words[words.length - 1]
-    if (wstart.info === pstart.info) {
+    if (!pstart || !plast) {
+      throw new Error(
+        `illegal page state ${pstart ? 'plast' : 'pstart'}`,
+      )
+    } if (wstart.info === pstart.info) {
       words.unshift(...page, plast)
     } else if (wlast.info === plast.info) {
       words.push(...page, plast)

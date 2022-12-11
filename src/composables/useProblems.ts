@@ -1,4 +1,4 @@
-import type { Ref } from '@vue/reactivity'
+import type { Ref } from 'vue'
 
 import { ProblemDetail, ProblemListItem } from '~~/types/problems'
 

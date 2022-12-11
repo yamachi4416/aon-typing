@@ -12,7 +12,7 @@ class Navigator {
     return `/static/${path}/${filename}`
   }
 
-  replaceQuery(query: Record<string, string | string[]>, keep: boolean = true) {
+  replaceQuery(query: Record<string, string | string[]>, keep = true) {
     const router = useRouter()
     const repQuery = keep ? { ...useRoute().query, ...query } : { ...query }
     Object.keys(repQuery).forEach((key) => {

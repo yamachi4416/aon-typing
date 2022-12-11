@@ -14,11 +14,11 @@ interface TypingEventDetail {
 type TypingEvent = CustomEvent<TypingEventDetail>
 
 export class GameSetting {
-  timeLimit: number = 0
-  autoMode: number = 0
-  randomMode: boolean = false
-  goalCharCount: number = 0
-  problemId: string = ''
+  timeLimit = 0
+  autoMode = 0
+  randomMode = false
+  goalCharCount = 0
+  problemId = ''
 
   clear() {
     this.timeLimit = 0

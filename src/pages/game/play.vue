@@ -61,7 +61,7 @@ onMounted(async () => {
   }
 
   setting.problemId = id
-  const problem = unref(await retrieveProblemDetail({ id }).catch((e) => null))
+  const problem = unref(await retrieveProblemDetail({ id }).catch(() => null))
 
   if (!problem) {
     useRouter().replace({ name: 'game-menu' })

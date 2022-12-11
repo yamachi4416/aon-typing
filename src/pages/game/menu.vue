@@ -5,7 +5,7 @@
       @start="startTyping"
       @cancel="cancel"
       @detail="openProblemDetail"
-      @openProblemSelect="modalProblemList?.open()"
+      @open-problem-select="modalProblemList?.open()"
     />
   </ModalPanel>
   <ModalPanel ref="modalProblemList">
