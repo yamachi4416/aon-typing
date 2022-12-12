@@ -6,13 +6,13 @@
           <NuxtLink :to="{ name: 'index' }">
             <span v-if="startAnim" class="title-anim">{{ title }}</span>
             <span v-show="!startAnim" class="title-no-anim">{{
-            titleText
+              titleText
             }}</span>
           </NuxtLink>
         </h1>
         <div class="basic-header-nav-main-theme">
-          <a @click.prevent="changeTheme('light')">light</a> /
-          <a @click.prevent="changeTheme('dark')">dark</a>
+          <a href="#" @click.prevent="changeTheme('light')">light</a> /
+          <a href="#" @click.prevent="changeTheme('dark')">dark</a>
         </div>
       </div>
       <div class="basic-header-nav-sub">
@@ -207,7 +207,7 @@ const menus = [
           padding: 0 10px;
           list-style: none;
 
-          &>li {
+          & > li {
             flex: 1;
             text-align: center;
 
