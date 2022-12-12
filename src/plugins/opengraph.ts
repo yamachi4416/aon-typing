@@ -9,7 +9,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       const route = useRoute()
       const head = injectHead()
 
-      head.hooks.hook('ssr:render', ({ tags }) => {
+      head?.hooks?.hook('ssr:render', ({ tags }) => {
         const addTags = [
           {
             tag: 'meta',
