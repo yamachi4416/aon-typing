@@ -1,0 +1,44 @@
+{
+  "id": "1010261",
+  "title": "ＪＲ吉都線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-15",
+  "updatedAt": "2022-12-15",
+  "optional": { "cd": "261" },
+  "words": [
+    { "info": "都城", "info2": "みやこのじょう", "word": "miyakonojou" },
+    {
+      "info": "日向庄内",
+      "info2": "ひゅうがしょうない",
+      "word": "hyuugasyounai"
+    },
+    { "info": "谷頭", "info2": "たにがしら", "word": "tanigasira" },
+    { "info": "万ケ塚", "info2": "まんがつか", "word": "mangatuka" },
+    { "info": "東高崎", "info2": "ひがしたかさき", "word": "higasitakasaki" },
+    {
+      "info": "高崎新田",
+      "info2": "たかさきしんでん",
+      "word": "takasakisindenn"
+    },
+    { "info": "日向前田", "info2": "ひゅうがまえだ", "word": "hyuugamaeda" },
+    { "info": "高原", "info2": "たかはる", "word": "takaharu" },
+    { "info": "広原", "info2": "ひろわら", "word": "hirowara" },
+    { "info": "小林", "info2": "こばやし", "word": "kobayasi" },
+    { "info": "西小林", "info2": "にしこばやし", "word": "nisikobayasi" },
+    { "info": "えびの飯野", "info2": "えびのいいの", "word": "ebinoiino" },
+    { "info": "えびの上江", "info2": "えびのうわえ", "word": "ebinouwae" },
+    { "info": "えびの", "info2": "えびの", "word": "ebino" },
+    {
+      "info": "京町温泉",
+      "info2": "きょうまちおんせん",
+      "word": "kyoumationsenn"
+    },
+    { "info": "鶴丸", "info2": "つるまる", "word": "turumaru" },
+    { "info": "吉松", "info2": "よしまつ", "word": "yosimatu" }
+  ]
+}
