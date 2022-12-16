@@ -1,0 +1,29 @@
+{
+  "id": "1010250",
+  "title": "ＪＲ佐世保線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-16",
+  "updatedAt": "2022-12-16",
+  "optional": { "cd": "250" },
+  "words": [
+    { "info": "佐世保", "info2": "させぼ", "word": "sasebo" },
+    { "info": "日宇", "info2": "ひう", "word": "hiu" },
+    { "info": "大塔", "info2": "だいとう", "word": "daitou" },
+    { "info": "早岐", "info2": "はいき", "word": "haiki" },
+    { "info": "三河内", "info2": "みかわち", "word": "mikawati" },
+    { "info": "有田", "info2": "ありた", "word": "arita" },
+    { "info": "上有田", "info2": "かみありた", "word": "kamiarita" },
+    { "info": "三間坂", "info2": "みまさか", "word": "mimasaka" },
+    { "info": "永尾", "info2": "ながお", "word": "nagao" },
+    { "info": "武雄温泉", "info2": "たけおおんせん", "word": "takeoonsenn" },
+    { "info": "高橋", "info2": "たかはし", "word": "takahasi" },
+    { "info": "北方", "info2": "きたがた", "word": "kitagata" },
+    { "info": "大町", "info2": "おおまち", "word": "oomati" },
+    { "info": "江北", "info2": "こうほく", "word": "kouhoku" }
+  ]
+}

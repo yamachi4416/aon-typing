@@ -1,0 +1,21 @@
+{
+  "id": "1010259",
+  "title": "ＪＲ宮崎空港線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-16",
+  "updatedAt": "2022-12-16",
+  "optional": { "cd": "259" },
+  "words": [
+    {
+      "info": "宮崎空港",
+      "info2": "みやざきくうこう",
+      "word": "miyazakikuukou"
+    },
+    { "info": "田吉", "info2": "たよし", "word": "tayosi" }
+  ]
+}
