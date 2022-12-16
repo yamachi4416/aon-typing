@@ -64,5 +64,12 @@ function selectPage(page: number) {
 .pagenate {
   padding-top: 5px;
   padding-bottom: 8px;
+
+  .button {
+    width: 3.8em;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
 }
 </style>
