@@ -64,8 +64,8 @@
   --color-a: #999;
   --color-c: #999;
   --color-e: #666;
-  --color-f: #333;
-  --color-p: #f90;
+  --color-f: #000;
+  --color-p: #a63;
   --color-l: rgb(64 125 255);
   --background-30: rgb(0 0 0 / 0%);
   --background-60: rgb(0 0 0 / 60%);
@@ -79,9 +79,13 @@
   --page-header-background: var(--background-90);
   --page-footer-background: var(--background-90);
   --input-error-message: rgb(255 52 52);
-  --input-selected: rgb(255 153 0);
-  --input-active-outine: rgb(255 153 0 / 40%);
+  --input-selected: rgb(170 103 51);
+  --input-active-outine: rgb(170 103 51 / 40%);
   --keyboard-highlight: var(--input-selected);
-  --loading-color: rgb(255 153 0 / 40%);
+  --loading-color: rgb(170 103 51 / 40%);
   --countdown-color: var(--color-l);
+
+  :where(img) {
+    filter: brightness(0.6);
+  }
 }
