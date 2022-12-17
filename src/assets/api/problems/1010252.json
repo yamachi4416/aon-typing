@@ -1,0 +1,60 @@
+{
+  "id": "1010252",
+  "title": "ＪＲ久大本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-17",
+  "updatedAt": "2022-12-17",
+  "optional": { "cd": "252" },
+  "words": [
+    { "info": "大分", "info2": "おおいた", "word": "ooita" },
+    { "info": "古国府", "info2": "ふるごう", "word": "hurugou" },
+    { "info": "南大分", "info2": "みなみおおいた", "word": "minamiooita" },
+    { "info": "賀来", "info2": "かく", "word": "kaku" },
+    { "info": "豊後国分", "info2": "ぶんごこくぶ", "word": "bungokokubu" },
+    { "info": "向之原", "info2": "むかいのはる", "word": "mukainoharu" },
+    { "info": "鬼瀬", "info2": "おにがせ", "word": "onigase" },
+    { "info": "小野屋", "info2": "おのや", "word": "onoya" },
+    { "info": "天神山", "info2": "てんじんやま", "word": "tenjinyama" },
+    { "info": "庄内", "info2": "しょうない", "word": "syounai" },
+    { "info": "湯平", "info2": "ゆのひら", "word": "yunohira" },
+    { "info": "南由布", "info2": "みなみゆふ", "word": "minamiyuhu" },
+    { "info": "由布院", "info2": "ゆふいん", "word": "yuhuinn" },
+    { "info": "野矢", "info2": "のや", "word": "noya" },
+    { "info": "豊後中村", "info2": "ぶんごなかむら", "word": "bungonakamura" },
+    { "info": "引治", "info2": "ひきじ", "word": "hikiji" },
+    { "info": "恵良", "info2": "えら", "word": "era" },
+    { "info": "豊後森", "info2": "ぶんごもり", "word": "bungomori" },
+    { "info": "北山田", "info2": "きたやまだ", "word": "kitayamada" },
+    { "info": "杉河内", "info2": "すぎかわち", "word": "sugikawati" },
+    { "info": "天ケ瀬", "info2": "あまがせ", "word": "amagase" },
+    { "info": "豊後中川", "info2": "ぶんごなかがわ", "word": "bungonakagawa" },
+    { "info": "豊後三芳", "info2": "ぶんごみよし", "word": "bungomiyosi" },
+    { "info": "日田", "info2": "ひた", "word": "hita" },
+    { "info": "光岡", "info2": "てるおか", "word": "teruoka" },
+    { "info": "夜明", "info2": "よあけ", "word": "yoake" },
+    { "info": "筑後大石", "info2": "ちくごおおいし", "word": "tikugoooisi" },
+    { "info": "うきは", "info2": "うきは", "word": "ukiha" },
+    { "info": "筑後吉井", "info2": "ちくごよしい", "word": "tikugoyosii" },
+    { "info": "田主丸", "info2": "たぬしまる", "word": "tanusimaru" },
+    { "info": "筑後草野", "info2": "ちくごくさの", "word": "tikugokusano" },
+    { "info": "善導寺", "info2": "ぜんどうじ", "word": "zendouji" },
+    { "info": "御井", "info2": "みい", "word": "mii" },
+    {
+      "info": "久留米大学前",
+      "info2": "くるめだいがくまえ",
+      "word": "kurumedaigakumae"
+    },
+    { "info": "南久留米", "info2": "みなみくるめ", "word": "minamikurume" },
+    {
+      "info": "久留米高校前",
+      "info2": "くるめこうこうまえ",
+      "word": "kurumekoukoumae"
+    },
+    { "info": "久留米", "info2": "くるめ", "word": "kurume" }
+  ]
+}

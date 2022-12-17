@@ -1,0 +1,38 @@
+{
+  "id": "1010251",
+  "title": "ＪＲ大村線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-17",
+  "updatedAt": "2022-12-17",
+  "optional": { "cd": "251" },
+  "words": [
+    { "info": "諫早", "info2": "いさはや", "word": "isahaya" },
+    { "info": "岩松", "info2": "いわまつ", "word": "iwamatu" },
+    { "info": "大村", "info2": "おおむら", "word": "oomura" },
+    { "info": "諏訪", "info2": "すわ", "word": "suwa" },
+    { "info": "新大村", "info2": "しんおおむら", "word": "sinnoomura" },
+    { "info": "竹松", "info2": "たけまつ", "word": "takematu" },
+    {
+      "info": "大村車両基地",
+      "info2": "おおむらしゃりょうきち",
+      "word": "oomurasyaryoukiti"
+    },
+    { "info": "松原", "info2": "まつばら", "word": "matubara" },
+    { "info": "千綿", "info2": "ちわた", "word": "tiwata" },
+    { "info": "彼杵", "info2": "そのぎ", "word": "sonogi" },
+    { "info": "川棚", "info2": "かわたな", "word": "kawatana" },
+    { "info": "小串郷", "info2": "おぐしごう", "word": "ogusigou" },
+    { "info": "南風崎", "info2": "はえのさき", "word": "haenosaki" },
+    {
+      "info": "ハウステンボス",
+      "info2": "はうすてんぼす",
+      "word": "hausutenbosu"
+    },
+    { "info": "早岐", "info2": "はいき", "word": "haiki" }
+  ]
+}
