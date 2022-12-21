@@ -1,0 +1,29 @@
+{
+  "id": "1010166",
+  "title": "ＪＲ万葉まほろば線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-21",
+  "updatedAt": "2022-12-21",
+  "optional": { "cd": "166" },
+  "words": [
+    { "info": "高田", "info2": "たかだ", "word": "takada" },
+    { "info": "金橋", "info2": "かなはし", "word": "kanahasi" },
+    { "info": "畝傍", "info2": "うねび", "word": "unebi" },
+    { "info": "香久山", "info2": "かぐやま", "word": "kaguyama" },
+    { "info": "桜井", "info2": "さくらい", "word": "sakurai" },
+    { "info": "三輪", "info2": "みわ", "word": "miwa" },
+    { "info": "巻向", "info2": "まきむく", "word": "makimuku" },
+    { "info": "柳本", "info2": "やなぎもと", "word": "yanagimoto" },
+    { "info": "長柄", "info2": "ながら", "word": "nagara" },
+    { "info": "天理", "info2": "てんり", "word": "tenri" },
+    { "info": "櫟本", "info2": "いちのもと", "word": "itinomoto" },
+    { "info": "帯解", "info2": "おびとけ", "word": "obitoke" },
+    { "info": "京終", "info2": "きょうばて", "word": "kyoubate" },
+    { "info": "奈良", "info2": "なら", "word": "nara" }
+  ]
+}

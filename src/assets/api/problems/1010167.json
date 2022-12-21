@@ -1,0 +1,57 @@
+{
+  "id": "1010167",
+  "title": "ＪＲおおさか東線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-21",
+  "updatedAt": "2022-12-21",
+  "optional": { "cd": "167" },
+  "words": [
+    { "info": "久宝寺", "info2": "きゅうほうじ", "word": "kyuuhouji" },
+    { "info": "新加美", "info2": "しんかみ", "word": "sinkami" },
+    {
+      "info": "衣摺加美北",
+      "info2": "きずりかみきた",
+      "word": "kizurikamikita"
+    },
+    {
+      "info": "ＪＲ長瀬",
+      "info2": "じぇいあーるながせ",
+      "word": "jeia-runagase"
+    },
+    {
+      "info": "ＪＲ俊徳道",
+      "info2": "じぇいあーるしゅんとくみち",
+      "word": "jeia-rusyuntokumiti"
+    },
+    {
+      "info": "ＪＲ河内永和",
+      "info2": "じぇいあーるかわちえいわ",
+      "word": "jeia-rukawatieiwa"
+    },
+    {
+      "info": "高井田中央",
+      "info2": "たかいだちゅうおう",
+      "word": "takaidatyuuou"
+    },
+    { "info": "放出", "info2": "はなてん", "word": "hanatenn" },
+    { "info": "鴫野", "info2": "しぎの", "word": "sigino" },
+    { "info": "ＪＲ野江", "info2": "じぇいあーるのえ", "word": "jeia-runoe" },
+    {
+      "info": "城北公園通",
+      "info2": "しろきたこうえんどおり",
+      "word": "sirokitakouendoori"
+    },
+    {
+      "info": "ＪＲ淡路",
+      "info2": "じぇいあーるあわじ",
+      "word": "jeia-ruawaji"
+    },
+    { "info": "南吹田", "info2": "みなみすいた", "word": "minamisuita" },
+    { "info": "新大阪", "info2": "しんおおさか", "word": "sinnoosaka" }
+  ]
+}
