@@ -1,0 +1,52 @@
+{
+  "id": "1010257",
+  "title": "ＪＲ日田彦山線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-22",
+  "updatedAt": "2022-12-22",
+  "optional": { "cd": "257" },
+  "words": [
+    { "info": "日田", "info2": "ひた", "word": "hita" },
+    { "info": "光岡", "info2": "てるおか", "word": "teruoka" },
+    { "info": "夜明", "info2": "よあけ", "word": "yoake" },
+    { "info": "今山", "info2": "いまやま", "word": "imayama" },
+    { "info": "大鶴", "info2": "おおつる", "word": "ooturu" },
+    { "info": "宝珠山", "info2": "ほうしゅやま", "word": "housyuyama" },
+    { "info": "大行司", "info2": "だいぎょうじ", "word": "daigyouji" },
+    { "info": "筑前岩屋", "info2": "ちくぜんいわや", "word": "tikuzenniwaya" },
+    { "info": "彦山", "info2": "ひこさん", "word": "hikosann" },
+    { "info": "豊前桝田", "info2": "ぶぜんますだ", "word": "buzenmasuda" },
+    {
+      "info": "歓遊舎ひこさん",
+      "info2": "かんゆうしゃひこさん",
+      "word": "kanyuusyahikosann"
+    },
+    { "info": "添田", "info2": "そえだ", "word": "soeda" },
+    { "info": "西添田", "info2": "にしそえだ", "word": "nisisoeda" },
+    { "info": "豊前川崎", "info2": "ぶぜんかわさき", "word": "buzenkawasaki" },
+    { "info": "池尻", "info2": "いけじり", "word": "ikejiri" },
+    {
+      "info": "田川後藤寺",
+      "info2": "たがわごとうじ",
+      "word": "tagawagotouji"
+    },
+    { "info": "田川伊田", "info2": "たがわいた", "word": "tagawaita" },
+    { "info": "一本松", "info2": "いっぽんまつ", "word": "ipponmatu" },
+    { "info": "香春", "info2": "かわら", "word": "kawara" },
+    { "info": "採銅所", "info2": "さいどうしょ", "word": "saidousyo" },
+    { "info": "呼野", "info2": "よぶの", "word": "yobuno" },
+    { "info": "石原町", "info2": "いしはらまち", "word": "isiharamati" },
+    { "info": "志井", "info2": "しい", "word": "sii" },
+    { "info": "志井公園", "info2": "しいこうえん", "word": "siikouenn" },
+    { "info": "石田", "info2": "いしだ", "word": "isida" },
+    { "info": "城野", "info2": "じょうの", "word": "jouno" },
+    { "info": "南小倉", "info2": "みなみこくら", "word": "minamikokura" },
+    { "info": "西小倉", "info2": "にしこくら", "word": "nisikokura" },
+    { "info": "小倉", "info2": "こくら", "word": "kokura" }
+  ]
+}
