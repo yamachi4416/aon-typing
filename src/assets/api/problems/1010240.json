@@ -1,0 +1,48 @@
+{
+  "id": "1010240",
+  "title": "ＪＲ福北ゆたか線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-24",
+  "updatedAt": "2022-12-24",
+  "optional": { "cd": "240" },
+  "words": [
+    { "info": "博多", "info2": "はかた", "word": "hakata" },
+    { "info": "吉塚", "info2": "よしづか", "word": "yosiduka" },
+    { "info": "柚須", "info2": "ゆす", "word": "yusu" },
+    { "info": "原町", "info2": "はるまち", "word": "harumati" },
+    { "info": "長者原", "info2": "ちょうじゃばる", "word": "tyoujabaru" },
+    { "info": "門松", "info2": "かどまつ", "word": "kadomatu" },
+    { "info": "篠栗", "info2": "ささぐり", "word": "sasaguri" },
+    { "info": "筑前山手", "info2": "ちくぜんやまて", "word": "tikuzenyamate" },
+    {
+      "info": "城戸南蔵院前",
+      "info2": "きどなんぞういんまえ",
+      "word": "kidonanzouinmae"
+    },
+    { "info": "九郎原", "info2": "くろうばる", "word": "kuroubaru" },
+    { "info": "筑前大分", "info2": "ちくぜんだいぶ", "word": "tikuzendaibu" },
+    { "info": "桂川", "info2": "けいせん", "word": "keisenn" },
+    { "info": "天道", "info2": "てんとう", "word": "tentou" },
+    { "info": "飯塚", "info2": "いいづか", "word": "iiduka" },
+    { "info": "新飯塚", "info2": "しんいいづか", "word": "sinniiduka" },
+    { "info": "浦田", "info2": "うらた", "word": "urata" },
+    { "info": "鯰田", "info2": "なまずた", "word": "namazuta" },
+    { "info": "小竹", "info2": "こたけ", "word": "kotake" },
+    { "info": "勝野", "info2": "かつの", "word": "katuno" },
+    { "info": "直方", "info2": "のおがた", "word": "noogata" },
+    { "info": "新入", "info2": "しんにゅう", "word": "sinnnyuu" },
+    { "info": "筑前植木", "info2": "ちくぜんうえき", "word": "tikuzennueki" },
+    { "info": "鞍手", "info2": "くらて", "word": "kurate" },
+    { "info": "筑前垣生", "info2": "ちくぜんはぶ", "word": "tikuzenhabu" },
+    { "info": "中間", "info2": "なかま", "word": "nakama" },
+    { "info": "東水巻", "info2": "ひがしみずまき", "word": "higasimizumaki" },
+    { "info": "折尾", "info2": "おりお", "word": "orio" },
+    { "info": "陣原", "info2": "じんのはる", "word": "jinnnoharu" },
+    { "info": "黒崎", "info2": "くろさき", "word": "kurosaki" }
+  ]
+}
