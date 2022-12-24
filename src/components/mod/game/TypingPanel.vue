@@ -1,6 +1,7 @@
 <template>
   <svg
     class="typing-game-panel"
+    :flash-typing-mistake="mistakeFlash"
     viewBox="0 0 1000 470"
     width="1000"
     height="470"
@@ -85,6 +86,22 @@ const props = defineProps<{
 }>()
 
 const keys = new JISKeys()
+const mistakeFlash = ref(props.typing?.currentMistake ?? false)
+
+watch(
+  () => props.typing?.totalTypeCount ?? 0,
+  (value, oldValue) => {
+    if (!props.typing) {
+      return
+    }
+    mistakeFlash.value = props.typing.currentMistake
+    setTimeout(() => {
+      if (value === props.typing?.totalTypeCount) {
+        mistakeFlash.value = false
+      }
+    }, 120)
+  },
+)
 
 const problem = computed(
   () => props.typing.problem ?? ({} as TypingProblemQuestioner),
@@ -134,6 +151,11 @@ function pauseToggle() {
 
 <style lang="scss" scoped>
 .typing-game-panel {
+  &[flash-typing-mistake='true'] {
+    --color-p: var(--input-error-message);
+    --keyboard-highlight: var(--input-error-message);
+  }
+
   background: var(--background-60);
   border: 2px solid var(--color-3);
   border-radius: 10px;

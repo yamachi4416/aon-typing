@@ -13,6 +13,12 @@ interface TypingEventDetail {
 
 type TypingEvent = CustomEvent<TypingEventDetail>
 
+declare global {
+  interface WindowEventMap {
+    'c:typing': TypingEvent
+  }
+}
+
 export class GameSetting {
   timeLimit = 0
   autoMode = 0
@@ -41,6 +47,7 @@ export class TypingGame {
   totalTypeCount = 0
   totalTypeCorrect = 0
   totalTypeMiss = 0
+  currentMistake = false
 
   private readonly eventManager: EventManager
   private readonly timerManager: TimerManager
@@ -65,6 +72,7 @@ export class TypingGame {
     this.totalTypeCount = 0
     this.totalTypeCorrect = 0
     this.totalTypeMiss = 0
+    this.currentMistake = false
   }
 
   init({
@@ -103,11 +111,14 @@ export class TypingGame {
       const word = this.current
 
       if (char) {
-        this.totalTypeCount++
+        this.totalTypeCount += 1
+
         if (gamer.expect(char, word)) {
-          this.totalTypeCorrect++
+          this.currentMistake = false
+          this.totalTypeCorrect += 1
         } else {
-          this.totalTypeMiss++
+          this.currentMistake = true
+          this.totalTypeMiss += 1
         }
 
         if (this.goalCharCount > 0) {
