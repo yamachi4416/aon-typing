@@ -1,0 +1,73 @@
+{
+  "id": "1010205",
+  "title": "ＪＲ芸備線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-24",
+  "updatedAt": "2022-12-24",
+  "optional": { "cd": "205" },
+  "words": [
+    { "info": "広島", "info2": "ひろしま", "word": "hirosima" },
+    { "info": "矢賀", "info2": "やが", "word": "yaga" },
+    { "info": "戸坂", "info2": "へさか", "word": "hesaka" },
+    { "info": "安芸矢口", "info2": "あきやぐち", "word": "akiyaguti" },
+    { "info": "玖村", "info2": "くむら", "word": "kumura" },
+    { "info": "下深川", "info2": "しもふかわ", "word": "simohukawa" },
+    { "info": "中深川", "info2": "なかふかわ", "word": "nakahukawa" },
+    { "info": "上深川", "info2": "かみふかわ", "word": "kamihukawa" },
+    { "info": "狩留家", "info2": "かるが", "word": "karuga" },
+    { "info": "白木山", "info2": "しらきやま", "word": "sirakiyama" },
+    { "info": "中三田", "info2": "なかみた", "word": "nakamita" },
+    { "info": "上三田", "info2": "かみみた", "word": "kamimita" },
+    { "info": "志和口", "info2": "しわぐち", "word": "siwaguti" },
+    { "info": "井原市", "info2": "いばらいち", "word": "ibaraiti" },
+    { "info": "向原", "info2": "むかいはら", "word": "mukaihara" },
+    { "info": "吉田口", "info2": "よしだぐち", "word": "yosidaguti" },
+    { "info": "甲立", "info2": "こうたち", "word": "koutati" },
+    { "info": "上川立", "info2": "かみかわたち", "word": "kamikawatati" },
+    { "info": "志和地", "info2": "しわち", "word": "siwati" },
+    { "info": "西三次", "info2": "にしみよし", "word": "nisimiyosi" },
+    { "info": "三次", "info2": "みよし", "word": "miyosi" },
+    { "info": "八次", "info2": "やつぎ", "word": "yatugi" },
+    { "info": "神杉", "info2": "かみすぎ", "word": "kamisugi" },
+    { "info": "塩町", "info2": "しおまち", "word": "siomati" },
+    { "info": "下和知", "info2": "しもわち", "word": "simowati" },
+    { "info": "山ノ内", "info2": "やまのうち", "word": "yamanouti" },
+    { "info": "七塚", "info2": "ななつか", "word": "nanatuka" },
+    {
+      "info": "備後三日市",
+      "info2": "びんごみっかいち",
+      "word": "bingomikkaiti"
+    },
+    {
+      "info": "備後庄原",
+      "info2": "びんごしょうばら",
+      "word": "bingosyoubara"
+    },
+    { "info": "高", "info2": "たか", "word": "taka" },
+    { "info": "平子", "info2": "ひらこ", "word": "hirako" },
+    { "info": "備後西城", "info2": "びんごさいじょう", "word": "bingosaijou" },
+    { "info": "比婆山", "info2": "ひばやま", "word": "hibayama" },
+    { "info": "備後落合", "info2": "びんごおちあい", "word": "bingootiai" },
+    { "info": "道後山", "info2": "どうごやま", "word": "dougoyama" },
+    { "info": "小奴可", "info2": "おぬか", "word": "onuka" },
+    { "info": "内名", "info2": "うちな", "word": "utina" },
+    { "info": "備後八幡", "info2": "びんごやわた", "word": "bingoyawata" },
+    { "info": "東城", "info2": "とうじょう", "word": "toujou" },
+    { "info": "野馳", "info2": "のち", "word": "noti" },
+    { "info": "矢神", "info2": "やがみ", "word": "yagami" },
+    { "info": "市岡", "info2": "いちおか", "word": "itioka" },
+    { "info": "坂根", "info2": "さかね", "word": "sakane" },
+    {
+      "info": "備中神代",
+      "info2": "びっちゅうこうじろ",
+      "word": "bittyuukoujiro"
+    },
+    { "info": "布原", "info2": "ぬのはら", "word": "nunohara" },
+    { "info": "新見", "info2": "にいみ", "word": "niimi" }
+  ]
+}

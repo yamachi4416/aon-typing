@@ -1,0 +1,69 @@
+{
+  "id": "1010204",
+  "title": "ＪＲ伯備線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-24",
+  "updatedAt": "2022-12-24",
+  "optional": { "cd": "204" },
+  "words": [
+    { "info": "米子", "info2": "よなご", "word": "yonago" },
+    {
+      "info": "東山公園",
+      "info2": "ひがしやまこうえん",
+      "word": "higasiyamakouenn"
+    },
+    { "info": "伯耆大山", "info2": "ほうきだいせん", "word": "houkidaisenn" },
+    { "info": "岸本", "info2": "きしもと", "word": "kisimoto" },
+    { "info": "伯耆溝口", "info2": "ほうきみぞぐち", "word": "houkimizoguti" },
+    { "info": "江尾", "info2": "えび", "word": "ebi" },
+    { "info": "武庫", "info2": "むこ", "word": "muko" },
+    { "info": "根雨", "info2": "ねう", "word": "neu" },
+    { "info": "黒坂", "info2": "くろさか", "word": "kurosaka" },
+    { "info": "上菅", "info2": "かみすげ", "word": "kamisuge" },
+    { "info": "生山", "info2": "しょうやま", "word": "syouyama" },
+    { "info": "上石見", "info2": "かみいわみ", "word": "kamiiwami" },
+    { "info": "新郷", "info2": "にいざと", "word": "niizato" },
+    { "info": "足立", "info2": "あしだち", "word": "asidati" },
+    {
+      "info": "備中神代",
+      "info2": "びっちゅうこうじろ",
+      "word": "bittyuukoujiro"
+    },
+    { "info": "布原", "info2": "ぬのはら", "word": "nunohara" },
+    { "info": "新見", "info2": "にいみ", "word": "niimi" },
+    { "info": "石蟹", "info2": "いしが", "word": "isiga" },
+    { "info": "井倉", "info2": "いくら", "word": "ikura" },
+    { "info": "方谷", "info2": "ほうこく", "word": "houkoku" },
+    {
+      "info": "備中川面",
+      "info2": "びっちゅうかわも",
+      "word": "bittyuukawamo"
+    },
+    { "info": "木野山", "info2": "きのやま", "word": "kinoyama" },
+    {
+      "info": "備中高梁",
+      "info2": "びっちゅうたかはし",
+      "word": "bittyuutakahasi"
+    },
+    {
+      "info": "備中広瀬",
+      "info2": "びっちゅうひろせ",
+      "word": "bittyuuhirose"
+    },
+    { "info": "美袋", "info2": "みなぎ", "word": "minagi" },
+    { "info": "日羽", "info2": "ひわ", "word": "hiwa" },
+    { "info": "豪渓", "info2": "ごうけい", "word": "goukei" },
+    { "info": "総社", "info2": "そうじゃ", "word": "souja" },
+    { "info": "清音", "info2": "きよね", "word": "kiyone" },
+    { "info": "倉敷", "info2": "くらしき", "word": "kurasiki" },
+    { "info": "中庄", "info2": "なかしょう", "word": "nakasyou" },
+    { "info": "庭瀬", "info2": "にわせ", "word": "niwase" },
+    { "info": "北長瀬", "info2": "きたながせ", "word": "kitanagase" },
+    { "info": "岡山", "info2": "おかやま", "word": "okayama" }
+  ]
+}
