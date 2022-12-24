@@ -2,7 +2,7 @@
   <header class="basic-header">
     <nav class="basic-header-nav">
       <div class="basic-header-nav-main">
-        <h1>
+        <h1 class="basic-header-nav-main-title">
           <NuxtLink :to="{ name: 'index' }">
             <span v-if="startAnim" class="title-anim">{{ title }}</span>
             <span v-show="!startAnim" class="title-no-anim">{{
@@ -135,13 +135,24 @@ const menus = [
       max-width: unset;
     }
 
+    a {
+      color: var(--color-6);
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: var(--color-9);
+      }
+    }
+
     &-main {
       display: flex;
       flex: 1;
       align-items: center;
       justify-content: space-between;
 
-      h1 {
+      & &-title {
         display: flex;
         align-items: center;
         height: 100%;
@@ -151,38 +162,16 @@ const menus = [
 
         a {
           color: inherit;
-          text-decoration: none;
-          cursor: pointer;
 
-          &.title-no-anim {
-            opacity: 0;
-          }
-
-          @media print {
-            &.title-anim {
-              display: none;
-            }
-
-            &.title-no-anim {
-              opacity: 1;
-            }
+          &:hover,
+          &:focus {
+            color: inherit;
           }
         }
       }
 
-      &-theme {
+      & &-theme {
         color: var(--color-3);
-
-        a {
-          text-decoration: none;
-          color: var(--color-6);
-          cursor: pointer;
-
-          &:hover,
-          &:focus {
-            color: var(--color-9);
-          }
-        }
 
         @media print {
           display: none;
@@ -195,7 +184,7 @@ const menus = [
         display: none;
       }
 
-      &-menu {
+      & &-menu {
         width: 100%;
         max-width: 1000px;
         margin: 0 auto;
@@ -210,18 +199,7 @@ const menus = [
           & > li {
             flex: 1;
             text-align: center;
-
-            a {
-              color: var(--color-6);
-              text-decoration: none;
-              white-space: nowrap;
-              cursor: pointer;
-
-              &:hover,
-              &:focus {
-                color: var(--color-9);
-              }
-            }
+            white-space: nowrap;
           }
         }
       }

@@ -67,8 +67,8 @@ function selectPage(page: number) {
 
   .button {
     width: 3.8em;
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
     text-align: center;
   }
 }
