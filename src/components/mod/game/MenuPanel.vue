@@ -4,7 +4,7 @@
     :show-close="false"
     @close="emit('close')"
   >
-    <template #title> タイピングメニュー </template>
+    <template #title>タイピングメニュー</template>
     <div class="typing-menu-panel-content">
       <div class="typing-menu-panel-content-row">
         <label>制限時間</label>
@@ -54,26 +54,16 @@
         </div>
       </div>
       <div class="typing-menu-panel-content-row">
-        <label>シャッフル</label>
+        <label>出題する順番</label>
         <div>
           <div class="buttons">
-            <span>
+            <span v-for="(label, order) in problemOrders" :key="order">
               <button
                 class="button"
-                :selected="!setting.randomMode || null"
-                @click="setting.randomMode = false"
-              >
-                オフ
-              </button>
-            </span>
-            <span>
-              <button
-                class="button"
-                :selected="setting.randomMode || null"
-                @click="setting.randomMode = true"
-              >
-                オン
-              </button>
+                :selected="setting.problemOrder === order || null"
+                @click="setting.problemOrder = order"
+                v-text="label"
+              />
             </span>
           </div>
         </div>
@@ -182,6 +172,12 @@ const HelpAnimals = [
 
 const goalCharCounts = [0, 100, 250, 450, 700, 1000]
 
+const problemOrders = {
+  first: '前から',
+  last: '後から',
+  random: 'ランダム',
+} as Record<typeof setting['problemOrder'], string>
+
 function openProblemSelect() {
   emit('openProblemSelect')
 }
@@ -202,7 +198,7 @@ function randomProblemSelect() {
 
 <style lang="scss" scoped>
 .typing-menu-panel {
-  width: unset;
+  width: 500px;
   max-width: 100%;
   height: unset;
 

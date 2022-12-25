@@ -5,13 +5,13 @@ import { TypingGameInfo } from './TypingGameInfo'
 import { TypingGamer, useTypingGamer } from './TypingGamer'
 import { isNumber } from './Util'
 
-interface TypingEventDetail {
+type ProblemOrder = 'first' | 'last' | 'random'
+
+type TypingEvent = CustomEvent<{
   keyCode?: number
   shiftKey?: boolean
   char?: string
-}
-
-type TypingEvent = CustomEvent<TypingEventDetail>
+}>
 
 declare global {
   interface WindowEventMap {
@@ -22,14 +22,14 @@ declare global {
 export class GameSetting {
   timeLimit = 0
   autoMode = 0
-  randomMode = false
+  problemOrder: ProblemOrder = 'first'
   goalCharCount = 0
   problemId = ''
 
   clear() {
     this.timeLimit = 0
     this.autoMode = 0
-    this.randomMode = false
+    this.problemOrder = 'first'
     this.goalCharCount = 0
     this.problemId = ''
   }
