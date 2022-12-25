@@ -1,0 +1,60 @@
+{
+  "id": "1010254",
+  "title": "ＪＲ豊肥本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-26",
+  "updatedAt": "2022-12-26",
+  "optional": { "cd": "254" },
+  "words": [
+    { "info": "大分", "info2": "おおいた", "word": "ooita" },
+    { "info": "滝尾", "info2": "たきお", "word": "takio" },
+    { "info": "敷戸", "info2": "しきど", "word": "sikido" },
+    {
+      "info": "大分大学前",
+      "info2": "おおいただいがくまえ",
+      "word": "ooitadaigakumae"
+    },
+    { "info": "中判田", "info2": "なかはんだ", "word": "nakahanda" },
+    { "info": "竹中", "info2": "たけなか", "word": "takenaka" },
+    { "info": "犬飼", "info2": "いぬかい", "word": "inukai" },
+    { "info": "菅尾", "info2": "すがお", "word": "sugao" },
+    { "info": "三重町", "info2": "みえまち", "word": "miemati" },
+    { "info": "豊後清川", "info2": "ぶんごきよかわ", "word": "bungokiyokawa" },
+    { "info": "緒方", "info2": "おがた", "word": "ogata" },
+    { "info": "朝地", "info2": "あさじ", "word": "asaji" },
+    { "info": "豊後竹田", "info2": "ぶんごたけた", "word": "bungotaketa" },
+    { "info": "玉来", "info2": "たまらい", "word": "tamarai" },
+    { "info": "豊後荻", "info2": "ぶんごおぎ", "word": "bungoogi" },
+    { "info": "滝水", "info2": "たきみず", "word": "takimizu" },
+    { "info": "波野", "info2": "なみの", "word": "namino" },
+    { "info": "宮地", "info2": "みやじ", "word": "miyaji" },
+    { "info": "いこいの村", "info2": "いこいのむら", "word": "ikoinomura" },
+    { "info": "阿蘇", "info2": "あそ", "word": "aso" },
+    { "info": "内牧", "info2": "うちのまき", "word": "utinomaki" },
+    { "info": "市ノ川", "info2": "いちのかわ", "word": "itinokawa" },
+    { "info": "赤水", "info2": "あかみず", "word": "akamizu" },
+    { "info": "立野", "info2": "たての", "word": "tateno" },
+    { "info": "瀬田", "info2": "せた", "word": "seta" },
+    { "info": "肥後大津", "info2": "ひごおおづ", "word": "higooodu" },
+    { "info": "原水", "info2": "はらみず", "word": "haramizu" },
+    { "info": "三里木", "info2": "さんりぎ", "word": "sanrigi" },
+    { "info": "光の森", "info2": "ひかりのもり", "word": "hikarinomori" },
+    { "info": "武蔵塚", "info2": "むさしづか", "word": "musasiduka" },
+    { "info": "竜田口", "info2": "たつたぐち", "word": "tatutaguti" },
+    {
+      "info": "東海学園前",
+      "info2": "とうかいがくえんまえ",
+      "word": "toukaigakuenmae"
+    },
+    { "info": "水前寺", "info2": "すいぜんじ", "word": "suizenji" },
+    { "info": "新水前寺", "info2": "しんすいぜんじ", "word": "sinsuizenji" },
+    { "info": "南熊本", "info2": "みなみくまもと", "word": "minamikumamoto" },
+    { "info": "平成", "info2": "へいせい", "word": "heisei" },
+    { "info": "熊本", "info2": "くまもと", "word": "kumamoto" }
+  ]
+}
