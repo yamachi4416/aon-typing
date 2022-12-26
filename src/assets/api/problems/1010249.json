@@ -1,0 +1,29 @@
+{
+  "id": "1010249",
+  "title": "ＪＲ筑肥線(西唐津－伊万里)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-26",
+  "updatedAt": "2022-12-26",
+  "optional": { "cd": "249" },
+  "words": [
+    { "info": "伊万里", "info2": "いまり", "word": "imari" },
+    { "info": "上伊万里", "info2": "かみいまり", "word": "kamiimari" },
+    { "info": "金石原", "info2": "かないしはら", "word": "kanaisihara" },
+    { "info": "桃川", "info2": "もものかわ", "word": "momonokawa" },
+    { "info": "肥前長野", "info2": "ひぜんながの", "word": "hizennnagano" },
+    { "info": "大川野", "info2": "おおかわの", "word": "ookawano" },
+    { "info": "駒鳴", "info2": "こまなき", "word": "komanaki" },
+    { "info": "佐里", "info2": "さり", "word": "sari" },
+    { "info": "西相知", "info2": "にしおうち", "word": "nisiouti" },
+    { "info": "肥前久保", "info2": "ひぜんくぼ", "word": "hizenkubo" },
+    { "info": "山本", "info2": "やまもと", "word": "yamamoto" },
+    { "info": "鬼塚", "info2": "おにづか", "word": "oniduka" },
+    { "info": "唐津", "info2": "からつ", "word": "karatu" },
+    { "info": "西唐津", "info2": "にしからつ", "word": "nisikaratu" }
+  ]
+}

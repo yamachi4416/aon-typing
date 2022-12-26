@@ -1,0 +1,48 @@
+{
+  "id": "1010248",
+  "title": "ＪＲ筑肥線(姪浜－西唐津)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-26",
+  "updatedAt": "2022-12-26",
+  "optional": { "cd": "248" },
+  "words": [
+    { "info": "西唐津", "info2": "にしからつ", "word": "nisikaratu" },
+    { "info": "唐津", "info2": "からつ", "word": "karatu" },
+    { "info": "和多田", "info2": "わただ", "word": "watada" },
+    { "info": "東唐津", "info2": "ひがしからつ", "word": "higasikaratu" },
+    { "info": "虹ノ松原", "info2": "にじのまつばら", "word": "nijinomatubara" },
+    { "info": "浜崎", "info2": "はまさき", "word": "hamasaki" },
+    { "info": "鹿家", "info2": "しかか", "word": "sikaka" },
+    { "info": "福吉", "info2": "ふくよし", "word": "hukuyosi" },
+    { "info": "大入", "info2": "だいにゅう", "word": "dainyuu" },
+    { "info": "筑前深江", "info2": "ちくぜんふかえ", "word": "tikuzenhukae" },
+    { "info": "一貴山", "info2": "いきさん", "word": "ikisann" },
+    { "info": "加布里", "info2": "かふり", "word": "kahuri" },
+    { "info": "美咲が丘", "info2": "みさきがおか", "word": "misakigaoka" },
+    {
+      "info": "筑前前原",
+      "info2": "ちくぜんまえばる",
+      "word": "tikuzenmaebaru"
+    },
+    {
+      "info": "糸島高校前",
+      "info2": "いとしまこうこうまえ",
+      "word": "itosimakoukoumae"
+    },
+    { "info": "波多江", "info2": "はたえ", "word": "hatae" },
+    { "info": "周船寺", "info2": "すせんじ", "word": "susenji" },
+    {
+      "info": "九大学研都市",
+      "info2": "きゅうだいがっけんとし",
+      "word": "kyuudaigakkentosi"
+    },
+    { "info": "今宿", "info2": "いまじゅく", "word": "imajuku" },
+    { "info": "下山門", "info2": "しもやまと", "word": "simoyamato" },
+    { "info": "姪浜", "info2": "めいのはま", "word": "meinohama" }
+  ]
+}
