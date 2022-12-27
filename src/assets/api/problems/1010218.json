@@ -1,0 +1,17 @@
+{
+  "id": "1010218",
+  "title": "ＪＲ博多南線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-27",
+  "updatedAt": "2022-12-27",
+  "optional": { "cd": "218" },
+  "words": [
+    { "info": "博多南", "info2": "はかたみなみ", "word": "hakataminami" },
+    { "info": "博多", "info2": "はかた", "word": "hakata" }
+  ]
+}

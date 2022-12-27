@@ -1,0 +1,27 @@
+{
+  "id": "1010217",
+  "title": "ＪＲ美祢線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-27",
+  "updatedAt": "2022-12-27",
+  "optional": { "cd": "217" },
+  "words": [
+    { "info": "長門市", "info2": "ながとし", "word": "nagatosi" },
+    { "info": "板持", "info2": "いたもち", "word": "itamoti" },
+    { "info": "長門湯本", "info2": "ながとゆもと", "word": "nagatoyumoto" },
+    { "info": "渋木", "info2": "しぶき", "word": "sibuki" },
+    { "info": "於福", "info2": "おふく", "word": "ohuku" },
+    { "info": "重安", "info2": "しげやす", "word": "sigeyasu" },
+    { "info": "美祢", "info2": "みね", "word": "mine" },
+    { "info": "南大嶺", "info2": "みなみおおみね", "word": "minamioomine" },
+    { "info": "四郎ケ原", "info2": "しろうがはら", "word": "sirougahara" },
+    { "info": "厚保", "info2": "あつ", "word": "atu" },
+    { "info": "湯ノ峠", "info2": "ゆのとう", "word": "yunotou" },
+    { "info": "厚狭", "info2": "あさ", "word": "asa" }
+  ]
+}
