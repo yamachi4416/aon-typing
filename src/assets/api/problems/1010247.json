@@ -1,0 +1,31 @@
+{
+  "id": "1010247",
+  "title": "ＪＲ唐津線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-30",
+  "updatedAt": "2022-12-30",
+  "optional": { "cd": "247" },
+  "words": [
+    { "info": "西唐津", "info2": "にしからつ", "word": "nisikaratu" },
+    { "info": "唐津", "info2": "からつ", "word": "karatu" },
+    { "info": "鬼塚", "info2": "おにづか", "word": "oniduka" },
+    { "info": "山本", "info2": "やまもと", "word": "yamamoto" },
+    { "info": "本牟田部", "info2": "ほんむたべ", "word": "honmutabe" },
+    { "info": "相知", "info2": "おうち", "word": "outi" },
+    { "info": "岩屋", "info2": "いわや", "word": "iwaya" },
+    { "info": "厳木", "info2": "きゅうらぎ", "word": "kyuuragi" },
+    { "info": "多久", "info2": "たく", "word": "taku" },
+    { "info": "中多久", "info2": "なかたく", "word": "nakataku" },
+    { "info": "東多久", "info2": "ひがしたく", "word": "higasitaku" },
+    { "info": "小城", "info2": "おぎ", "word": "ogi" },
+    { "info": "久保田", "info2": "くぼた", "word": "kubota" },
+    { "info": "バルーンさが", "info2": "ばるーんさが", "word": "baru-nsaga" },
+    { "info": "鍋島", "info2": "なべしま", "word": "nabesima" },
+    { "info": "佐賀", "info2": "さが", "word": "saga" }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "1010244",
+  "title": "ＪＲ指宿枕崎線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-30",
+  "updatedAt": "2022-12-30",
+  "optional": { "cd": "244" },
+  "words": [
+    { "info": "枕崎", "info2": "まくらざき", "word": "makurazaki" },
+    { "info": "薩摩板敷", "info2": "さつまいたしき", "word": "satumaitasiki" },
+    { "info": "白沢", "info2": "しらさわ", "word": "sirasawa" },
+    { "info": "薩摩塩屋", "info2": "さつましおや", "word": "satumasioya" },
+    { "info": "松ケ浦", "info2": "まつがうら", "word": "matugaura" },
+    { "info": "頴娃大川", "info2": "えいおおかわ", "word": "eiookawa" },
+    { "info": "水成川", "info2": "みずなりかわ", "word": "mizunarikawa" },
+    { "info": "石垣", "info2": "いしかき", "word": "isikaki" },
+    { "info": "御領", "info2": "ごりょう", "word": "goryou" },
+    { "info": "西頴娃", "info2": "にしえい", "word": "nisiei" },
+    { "info": "頴娃", "info2": "えい", "word": "ei" },
+    { "info": "入野", "info2": "いりの", "word": "irino" },
+    { "info": "開聞", "info2": "かいもん", "word": "kaimonn" },
+    { "info": "東開聞", "info2": "ひがしかいもん", "word": "higasikaimonn" },
+    { "info": "薩摩川尻", "info2": "さつまかわしり", "word": "satumakawasiri" },
+    { "info": "西大山", "info2": "にしおおやま", "word": "nisiooyama" },
+    { "info": "大山", "info2": "おおやま", "word": "ooyama" },
+    { "info": "山川", "info2": "やまかわ", "word": "yamakawa" },
+    { "info": "指宿", "info2": "いぶすき", "word": "ibusuki" },
+    { "info": "二月田", "info2": "にがつでん", "word": "nigatudenn" },
+    { "info": "宮ケ浜", "info2": "みやがはま", "word": "miyagahama" },
+    {
+      "info": "薩摩今和泉",
+      "info2": "さつまいまいずみ",
+      "word": "satumaimaizumi"
+    },
+    { "info": "生見", "info2": "ぬくみ", "word": "nukumi" },
+    { "info": "前之浜", "info2": "まえのはま", "word": "maenohama" },
+    { "info": "喜入", "info2": "きいれ", "word": "kiire" },
+    { "info": "中名", "info2": "なかみょう", "word": "nakamyou" },
+    { "info": "瀬々串", "info2": "せせくし", "word": "sesekusi" },
+    { "info": "平川", "info2": "ひらかわ", "word": "hirakawa" },
+    { "info": "五位野", "info2": "ごいの", "word": "goino" },
+    { "info": "坂之上", "info2": "さかのうえ", "word": "sakanoue" },
+    { "info": "慈眼寺", "info2": "じげんじ", "word": "jigenji" },
+    { "info": "谷山", "info2": "たにやま", "word": "taniyama" },
+    { "info": "宇宿", "info2": "うすき", "word": "usuki" },
+    { "info": "南鹿児島", "info2": "みなみかごしま", "word": "minamikagosima" },
+    { "info": "郡元", "info2": "こおりもと", "word": "koorimoto" },
+    {
+      "info": "鹿児島中央",
+      "info2": "かごしまちゅうおう",
+      "word": "kagosimatyuuou"
+    }
+  ]
+}
