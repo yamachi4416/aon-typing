@@ -1,0 +1,38 @@
+{
+  "id": "1010128",
+  "title": "ＪＲ御殿場線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2022-12-31",
+  "updatedAt": "2022-12-31",
+  "optional": { "cd": "128" },
+  "words": [
+    { "info": "沼津", "info2": "ぬまづ", "word": "numadu" },
+    { "info": "大岡", "info2": "おおおか", "word": "oooka" },
+    { "info": "下土狩", "info2": "しもとがり", "word": "simotogari" },
+    {
+      "info": "長泉なめり",
+      "info2": "ながいずみなめり",
+      "word": "nagaizuminameri"
+    },
+    { "info": "裾野", "info2": "すその", "word": "susono" },
+    { "info": "岩波", "info2": "いわなみ", "word": "iwanami" },
+    { "info": "富士岡", "info2": "ふじおか", "word": "hujioka" },
+    { "info": "南御殿場", "info2": "みなみごてんば", "word": "minamigotenba" },
+    { "info": "御殿場", "info2": "ごてんば", "word": "gotenba" },
+    { "info": "足柄", "info2": "あしがら", "word": "asigara" },
+    { "info": "駿河小山", "info2": "するがおやま", "word": "surugaoyama" },
+    { "info": "谷峨", "info2": "やが", "word": "yaga" },
+    { "info": "山北", "info2": "やまきた", "word": "yamakita" },
+    { "info": "東山北", "info2": "ひがしやまきた", "word": "higasiyamakita" },
+    { "info": "松田", "info2": "まつだ", "word": "matuda" },
+    { "info": "相模金子", "info2": "さがみかねこ", "word": "sagamikaneko" },
+    { "info": "上大井", "info2": "かみおおい", "word": "kamiooi" },
+    { "info": "下曽我", "info2": "しもそが", "word": "simosoga" },
+    { "info": "国府津", "info2": "こうづ", "word": "koudu" }
+  ]
+}
