@@ -1,0 +1,51 @@
+{
+  "id": "1010242",
+  "title": "ＪＲ肥薩線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-04",
+  "updatedAt": "2023-01-04",
+  "optional": { "cd": "242" },
+  "words": [
+    { "info": "隼人", "info2": "はやと", "word": "hayato" },
+    { "info": "日当山", "info2": "ひなたやま", "word": "hinatayama" },
+    { "info": "表木山", "info2": "ひょうきやま", "word": "hyoukiyama" },
+    { "info": "中福良", "info2": "なかふくら", "word": "nakahukura" },
+    { "info": "嘉例川", "info2": "かれいがわ", "word": "kareigawa" },
+    {
+      "info": "霧島温泉",
+      "info2": "きりしまおんせん",
+      "word": "kirisimaonsenn"
+    },
+    { "info": "植村", "info2": "うえむら", "word": "uemura" },
+    {
+      "info": "大隅横川",
+      "info2": "おおすみよこがわ",
+      "word": "oosumiyokogawa"
+    },
+    { "info": "栗野", "info2": "くりの", "word": "kurino" },
+    { "info": "吉松", "info2": "よしまつ", "word": "yosimatu" },
+    { "info": "真幸", "info2": "まさき", "word": "masaki" },
+    { "info": "矢岳", "info2": "やたけ", "word": "yatake" },
+    { "info": "大畑", "info2": "おこば", "word": "okoba" },
+    { "info": "人吉", "info2": "ひとよし", "word": "hitoyosi" },
+    { "info": "西人吉", "info2": "にしひとよし", "word": "nisihitoyosi" },
+    { "info": "渡", "info2": "わたり", "word": "watari" },
+    { "info": "那良口", "info2": "ならぐち", "word": "naraguti" },
+    { "info": "一勝地", "info2": "いっしょうち", "word": "issyouti" },
+    { "info": "球泉洞", "info2": "きゅうせんどう", "word": "kyuusendou" },
+    { "info": "白石", "info2": "しろいし", "word": "siroisi" },
+    { "info": "吉尾", "info2": "よしお", "word": "yosio" },
+    { "info": "海路", "info2": "かいじ", "word": "kaiji" },
+    { "info": "瀬戸石", "info2": "せといし", "word": "setoisi" },
+    { "info": "鎌瀬", "info2": "かませ", "word": "kamase" },
+    { "info": "葉木", "info2": "はき", "word": "haki" },
+    { "info": "坂本", "info2": "さかもと", "word": "sakamoto" },
+    { "info": "段", "info2": "だん", "word": "dann" },
+    { "info": "八代", "info2": "やつしろ", "word": "yatusiro" }
+  ]
+}
