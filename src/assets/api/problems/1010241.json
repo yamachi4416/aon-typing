@@ -1,0 +1,28 @@
+{
+  "id": "1010241",
+  "title": "ＪＲ三角線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-05",
+  "updatedAt": "2023-01-05",
+  "optional": { "cd": "241" },
+  "words": [
+    { "info": "三角", "info2": "みすみ", "word": "misumi" },
+    { "info": "波多浦", "info2": "はたうら", "word": "hataura" },
+    { "info": "石打ダム", "info2": "いしうちだむ", "word": "isiutidamu" },
+    { "info": "赤瀬", "info2": "あかせ", "word": "akase" },
+    { "info": "網田", "info2": "おうだ", "word": "ouda" },
+    { "info": "肥後長浜", "info2": "ひごながはま", "word": "higonagahama" },
+    { "info": "住吉", "info2": "すみよし", "word": "sumiyosi" },
+    { "info": "緑川", "info2": "みどりかわ", "word": "midorikawa" },
+    { "info": "宇土", "info2": "うと", "word": "uto" },
+    { "info": "富合", "info2": "とみあい", "word": "tomiai" },
+    { "info": "川尻", "info2": "かわしり", "word": "kawasiri" },
+    { "info": "西熊本", "info2": "にしくまもと", "word": "nisikumamoto" },
+    { "info": "熊本", "info2": "くまもと", "word": "kumamoto" }
+  ]
+}
