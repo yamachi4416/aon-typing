@@ -1,0 +1,31 @@
+{
+  "id": "1010237",
+  "title": "ＪＲ香椎線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-06",
+  "updatedAt": "2023-01-06",
+  "optional": { "cd": "237" },
+  "words": [
+    { "info": "宇美", "info2": "うみ", "word": "umi" },
+    { "info": "新原", "info2": "しんばる", "word": "sinbaru" },
+    { "info": "須恵中央", "info2": "すえちゅうおう", "word": "suetyuuou" },
+    { "info": "須恵", "info2": "すえ", "word": "sue" },
+    { "info": "酒殿", "info2": "さかど", "word": "sakado" },
+    { "info": "長者原", "info2": "ちょうじゃばる", "word": "tyoujabaru" },
+    { "info": "伊賀", "info2": "いが", "word": "iga" },
+    { "info": "土井", "info2": "どい", "word": "doi" },
+    { "info": "舞松原", "info2": "まいまつばら", "word": "maimatubara" },
+    { "info": "香椎神宮", "info2": "かしいじんぐう", "word": "kasiijinguu" },
+    { "info": "香椎", "info2": "かしい", "word": "kasii" },
+    { "info": "和白", "info2": "わじろ", "word": "wajiro" },
+    { "info": "奈多", "info2": "なた", "word": "nata" },
+    { "info": "雁ノ巣", "info2": "がんのす", "word": "gannnosu" },
+    { "info": "海ノ中道", "info2": "うみのなかみち", "word": "uminonakamiti" },
+    { "info": "西戸崎", "info2": "さいとざき", "word": "saitozaki" }
+  ]
+}
