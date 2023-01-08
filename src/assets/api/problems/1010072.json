@@ -1,0 +1,21 @@
+{
+  "id": "1010072",
+  "title": "ＪＲ水郡線(上菅谷－常陸太田)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-08",
+  "updatedAt": "2023-01-08",
+  "optional": { "cd": "72" },
+  "words": [
+    { "info": "常陸太田", "info2": "ひたちおおた", "word": "hitatioota" },
+    { "info": "谷河原", "info2": "やがわら", "word": "yagawara" },
+    { "info": "河合", "info2": "かわい", "word": "kawai" },
+    { "info": "額田", "info2": "ぬかだ", "word": "nukada" },
+    { "info": "南酒出", "info2": "みなみさかいで", "word": "minamisakaide" },
+    { "info": "上菅谷", "info2": "かみすがや", "word": "kamisugaya" }
+  ]
+}
