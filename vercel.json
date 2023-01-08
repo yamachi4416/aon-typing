@@ -1,10 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nuxtjs",
-  "redirects": [
-    {
-      "source": "/game/menu/problems/tags/:id",
-      "destination": "/problems/tags/:id"
-    }
-  ]
+  "framework": "nuxtjs"
 }
