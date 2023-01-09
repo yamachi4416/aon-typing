@@ -1,0 +1,56 @@
+{
+  "id": "1010232",
+  "title": "ＪＲ高徳線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-10",
+  "updatedAt": "2023-01-10",
+  "optional": { "cd": "232" },
+  "words": [
+    { "info": "徳島", "info2": "とくしま", "word": "tokusima" },
+    { "info": "佐古", "info2": "さこ", "word": "sako" },
+    { "info": "吉成", "info2": "よしなり", "word": "yosinari" },
+    { "info": "勝瑞", "info2": "しょうずい", "word": "syouzui" },
+    { "info": "池谷", "info2": "いけのたに", "word": "ikenotani" },
+    { "info": "板東", "info2": "ばんどう", "word": "bandou" },
+    { "info": "阿波川端", "info2": "あわかわばた", "word": "awakawabata" },
+    { "info": "板野", "info2": "いたの", "word": "itano" },
+    { "info": "阿波大宮", "info2": "あわおおみや", "word": "awaoomiya" },
+    { "info": "讃岐相生", "info2": "さぬきあいおい", "word": "sanukiaioi" },
+    { "info": "引田", "info2": "ひけた", "word": "hiketa" },
+    { "info": "讃岐白鳥", "info2": "さぬきしろとり", "word": "sanukisirotori" },
+    { "info": "三本松", "info2": "さんぼんまつ", "word": "sanbonmatu" },
+    { "info": "丹生", "info2": "にぶ", "word": "nibu" },
+    { "info": "鶴羽", "info2": "つるわ", "word": "turuwa" },
+    { "info": "讃岐津田", "info2": "さぬきつだ", "word": "sanukituda" },
+    { "info": "神前", "info2": "かんざき", "word": "kanzaki" },
+    { "info": "造田", "info2": "ぞうだ", "word": "zouda" },
+    {
+      "info": "オレンジタウン",
+      "info2": "おれんじたうん",
+      "word": "orenjitaunn"
+    },
+    { "info": "志度", "info2": "しど", "word": "sido" },
+    { "info": "讃岐牟礼", "info2": "さぬきむれ", "word": "sanukimure" },
+    { "info": "八栗口", "info2": "やくりぐち", "word": "yakuriguti" },
+    {
+      "info": "古高松南",
+      "info2": "ふるたかまつみなみ",
+      "word": "hurutakamatuminami"
+    },
+    { "info": "屋島", "info2": "やしま", "word": "yasima" },
+    { "info": "木太町", "info2": "きたちょう", "word": "kitatyou" },
+    { "info": "栗林", "info2": "りつりん", "word": "riturinn" },
+    {
+      "info": "栗林公園北口",
+      "info2": "りつりんこうえんきたぐち",
+      "word": "riturinkouenkitaguti"
+    },
+    { "info": "昭和町", "info2": "しょうわちょう", "word": "syouwatyou" },
+    { "info": "高松", "info2": "たかまつ", "word": "takamatu" }
+  ]
+}
