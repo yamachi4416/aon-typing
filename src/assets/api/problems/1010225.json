@@ -1,0 +1,49 @@
+{
+  "id": "1010225",
+  "title": "ＪＲ牟岐線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-14",
+  "updatedAt": "2023-01-14",
+  "optional": { "cd": "225" },
+  "words": [
+    { "info": "海部", "info2": "かいふ", "word": "kaihu" },
+    { "info": "阿波海南", "info2": "あわかいなん", "word": "awakainann" },
+    { "info": "浅川", "info2": "あさかわ", "word": "asakawa" },
+    { "info": "鯖瀬", "info2": "さばせ", "word": "sabase" },
+    { "info": "牟岐", "info2": "むぎ", "word": "mugi" },
+    { "info": "辺川", "info2": "へがわ", "word": "hegawa" },
+    { "info": "山河内", "info2": "やまがわち", "word": "yamagawati" },
+    { "info": "日和佐", "info2": "ひわさ", "word": "hiwasa" },
+    { "info": "北河内", "info2": "きたがわち", "word": "kitagawati" },
+    { "info": "木岐", "info2": "きき", "word": "kiki" },
+    { "info": "田井ノ浜", "info2": "たいのはま", "word": "tainohama" },
+    { "info": "由岐", "info2": "ゆき", "word": "yuki" },
+    { "info": "阿波福井", "info2": "あわふくい", "word": "awahukui" },
+    { "info": "新野", "info2": "あらたの", "word": "aratano" },
+    { "info": "桑野", "info2": "くわの", "word": "kuwano" },
+    { "info": "阿波橘", "info2": "あわたちばな", "word": "awatatibana" },
+    { "info": "見能林", "info2": "みのばやし", "word": "minobayasi" },
+    { "info": "阿南", "info2": "あなん", "word": "anann" },
+    { "info": "阿波中島", "info2": "あわなかしま", "word": "awanakasima" },
+    { "info": "西原", "info2": "にしばら", "word": "nisibara" },
+    { "info": "羽ノ浦", "info2": "はのうら", "word": "hanoura" },
+    { "info": "立江", "info2": "たつえ", "word": "tatue" },
+    { "info": "阿波赤石", "info2": "あわあかいし", "word": "awaakaisi" },
+    {
+      "info": "南小松島",
+      "info2": "みなみこまつしま",
+      "word": "minamikomatusima"
+    },
+    { "info": "中田", "info2": "ちゅうでん", "word": "tyuudenn" },
+    { "info": "地蔵橋", "info2": "じぞうばし", "word": "jizoubasi" },
+    { "info": "文化の森", "info2": "ぶんかのもり", "word": "bunkanomori" },
+    { "info": "二軒屋", "info2": "にけんや", "word": "nikenya" },
+    { "info": "阿波富田", "info2": "あわとみだ", "word": "awatomida" },
+    { "info": "徳島", "info2": "とくしま", "word": "tokusima" }
+  ]
+}
