@@ -1,0 +1,40 @@
+{
+  "id": "1010230",
+  "title": "ＪＲ予土線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-14",
+  "updatedAt": "2023-01-14",
+  "optional": { "cd": "230" },
+  "words": [
+    { "info": "宇和島", "info2": "うわじま", "word": "uwajima" },
+    { "info": "北宇和島", "info2": "きたうわじま", "word": "kitauwajima" },
+    { "info": "務田", "info2": "むでん", "word": "mudenn" },
+    {
+      "info": "伊予宮野下",
+      "info2": "いよみやのした",
+      "word": "iyomiyanosita"
+    },
+    { "info": "二名", "info2": "ふたな", "word": "hutana" },
+    { "info": "大内", "info2": "おおうち", "word": "oouti" },
+    { "info": "深田", "info2": "ふかた", "word": "hukata" },
+    { "info": "近永", "info2": "ちかなが", "word": "tikanaga" },
+    { "info": "出目", "info2": "いずめ", "word": "izume" },
+    { "info": "松丸", "info2": "まつまる", "word": "matumaru" },
+    { "info": "吉野生", "info2": "よしのぶ", "word": "yosinobu" },
+    { "info": "真土", "info2": "まつち", "word": "matuti" },
+    { "info": "西ケ方", "info2": "にしがほう", "word": "nisigahou" },
+    { "info": "江川崎", "info2": "えかわさき", "word": "ekawasaki" },
+    { "info": "半家", "info2": "はげ", "word": "hage" },
+    { "info": "十川", "info2": "とおかわ", "word": "tookawa" },
+    { "info": "土佐昭和", "info2": "とさしょうわ", "word": "tosasyouwa" },
+    { "info": "土佐大正", "info2": "とさたいしょう", "word": "tosataisyou" },
+    { "info": "打井川", "info2": "うついがわ", "word": "utuigawa" },
+    { "info": "家地川", "info2": "いえぢがわ", "word": "iedigawa" },
+    { "info": "若井", "info2": "わかい", "word": "wakai" }
+  ]
+}
