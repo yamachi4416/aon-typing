@@ -1,0 +1,23 @@
+{
+  "id": "1010075",
+  "title": "ＪＲ弥彦線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-19",
+  "updatedAt": "2023-01-19",
+  "optional": { "cd": "75" },
+  "words": [
+    { "info": "東三条", "info2": "ひがしさんじょう", "word": "higasisanjou" },
+    { "info": "北三条", "info2": "きたさんじょう", "word": "kitasanjou" },
+    { "info": "燕三条", "info2": "つばめさんじょう", "word": "tubamesanjou" },
+    { "info": "燕", "info2": "つばめ", "word": "tubame" },
+    { "info": "西燕", "info2": "にしつばめ", "word": "nisitubame" },
+    { "info": "吉田", "info2": "よしだ", "word": "yosida" },
+    { "info": "矢作", "info2": "やはぎ", "word": "yahagi" },
+    { "info": "弥彦", "info2": "やひこ", "word": "yahiko" }
+  ]
+}

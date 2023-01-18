@@ -1,0 +1,25 @@
+{
+  "id": "1010073",
+  "title": "ＪＲ白新線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-19",
+  "updatedAt": "2023-01-19",
+  "optional": { "cd": "73" },
+  "words": [
+    { "info": "新発田", "info2": "しばた", "word": "sibata" },
+    { "info": "西新発田", "info2": "にししばた", "word": "nisisibata" },
+    { "info": "佐々木", "info2": "ささき", "word": "sasaki" },
+    { "info": "黒山", "info2": "くろやま", "word": "kuroyama" },
+    { "info": "豊栄", "info2": "とよさか", "word": "toyosaka" },
+    { "info": "早通", "info2": "はやどおり", "word": "hayadoori" },
+    { "info": "新崎", "info2": "にいざき", "word": "niizaki" },
+    { "info": "大形", "info2": "おおがた", "word": "oogata" },
+    { "info": "東新潟", "info2": "ひがしにいがた", "word": "higasiniigata" },
+    { "info": "新潟", "info2": "にいがた", "word": "niigata" }
+  ]
+}
