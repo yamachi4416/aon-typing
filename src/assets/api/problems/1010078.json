@@ -1,0 +1,27 @@
+{
+  "id": "1010078",
+  "title": "ＪＲ烏山線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-20",
+  "updatedAt": "2023-01-20",
+  "optional": { "cd": "78" },
+  "words": [
+    { "info": "烏山", "info2": "からすやま", "word": "karasuyama" },
+    { "info": "滝", "info2": "たき", "word": "taki" },
+    { "info": "小塙", "info2": "こばな", "word": "kobana" },
+    { "info": "大金", "info2": "おおがね", "word": "oogane" },
+    { "info": "鴻野山", "info2": "こうのやま", "word": "kounoyama" },
+    { "info": "仁井田", "info2": "にいた", "word": "niita" },
+    {
+      "info": "下野花岡",
+      "info2": "しもつけはなおか",
+      "word": "simotukehanaoka"
+    },
+    { "info": "宝積寺", "info2": "ほうしゃくじ", "word": "housyakuji" }
+  ]
+}

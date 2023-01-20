@@ -1,0 +1,58 @@
+{
+  "id": "1010086",
+  "title": "ＪＲ飯山線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-20",
+  "updatedAt": "2023-01-20",
+  "optional": { "cd": "86" },
+  "words": [
+    { "info": "越後川口", "info2": "えちごかわぐち", "word": "etigokawaguti" },
+    { "info": "内ケ巻", "info2": "うちがまき", "word": "utigamaki" },
+    { "info": "越後岩沢", "info2": "えちごいわさわ", "word": "etigoiwasawa" },
+    { "info": "下条", "info2": "げじょう", "word": "gejou" },
+    {
+      "info": "魚沼中条",
+      "info2": "うおぬまなかじょう",
+      "word": "uonumanakajou"
+    },
+    { "info": "十日町", "info2": "とおかまち", "word": "tookamati" },
+    { "info": "土市", "info2": "どいち", "word": "doiti" },
+    { "info": "越後水沢", "info2": "えちごみずさわ", "word": "etigomizusawa" },
+    { "info": "越後田沢", "info2": "えちごたざわ", "word": "etigotazawa" },
+    {
+      "info": "越後鹿渡",
+      "info2": "えちごしかわたり",
+      "word": "etigosikawatari"
+    },
+    { "info": "津南", "info2": "つなん", "word": "tunann" },
+    { "info": "越後田中", "info2": "えちごたなか", "word": "etigotanaka" },
+    { "info": "足滝", "info2": "あしだき", "word": "asidaki" },
+    { "info": "森宮野原", "info2": "もりみやのはら", "word": "morimiyanohara" },
+    { "info": "横倉", "info2": "よこくら", "word": "yokokura" },
+    { "info": "平滝", "info2": "ひらたき", "word": "hirataki" },
+    { "info": "信濃白鳥", "info2": "しなのしらとり", "word": "sinanosiratori" },
+    { "info": "西大滝", "info2": "にしおおたき", "word": "nisiootaki" },
+    { "info": "桑名川", "info2": "くわながわ", "word": "kuwanagawa" },
+    { "info": "上桑名川", "info2": "かみくわながわ", "word": "kamikuwanagawa" },
+    { "info": "上境", "info2": "かみさかい", "word": "kamisakai" },
+    {
+      "info": "戸狩野沢温泉",
+      "info2": "とがりのざわおんせん",
+      "word": "togarinozawaonsenn"
+    },
+    { "info": "信濃平", "info2": "しなのたいら", "word": "sinanotaira" },
+    { "info": "北飯山", "info2": "きたいいやま", "word": "kitaiiyama" },
+    { "info": "飯山", "info2": "いいやま", "word": "iiyama" },
+    { "info": "蓮", "info2": "はちす", "word": "hatisu" },
+    { "info": "替佐", "info2": "かえさ", "word": "kaesa" },
+    { "info": "上今井", "info2": "かみいまい", "word": "kamiimai" },
+    { "info": "立ケ花", "info2": "たてがはな", "word": "tategahana" },
+    { "info": "信濃浅野", "info2": "しなのあさの", "word": "sinanoasano" },
+    { "info": "豊野", "info2": "とよの", "word": "toyono" }
+  ]
+}
