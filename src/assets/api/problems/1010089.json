@@ -1,0 +1,20 @@
+{
+  "id": "1010089",
+  "title": "ＪＲ東金線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-23",
+  "updatedAt": "2023-01-23",
+  "optional": { "cd": "89" },
+  "words": [
+    { "info": "成東", "info2": "なるとう", "word": "narutou" },
+    { "info": "求名", "info2": "ぐみょう", "word": "gumyou" },
+    { "info": "東金", "info2": "とうがね", "word": "tougane" },
+    { "info": "福俵", "info2": "ふくたわら", "word": "hukutawara" },
+    { "info": "大網", "info2": "おおあみ", "word": "ooami" }
+  ]
+}
