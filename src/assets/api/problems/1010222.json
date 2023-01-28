@@ -1,0 +1,28 @@
+{
+  "id": "1010222",
+  "title": "ＪＲ予讃線(向井原－伊予長浜－伊予大洲)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-28",
+  "updatedAt": "2023-01-28",
+  "optional": { "cd": "222" },
+  "words": [
+    { "info": "伊予大洲", "info2": "いよおおず", "word": "iyooozu" },
+    { "info": "五郎", "info2": "ごろう", "word": "gorou" },
+    { "info": "春賀", "info2": "はるか", "word": "haruka" },
+    { "info": "八多喜", "info2": "はたき", "word": "hataki" },
+    { "info": "伊予白滝", "info2": "いよしらたき", "word": "iyosirataki" },
+    { "info": "伊予出石", "info2": "いよいずし", "word": "iyoizusi" },
+    { "info": "伊予長浜", "info2": "いよながはま", "word": "iyonagahama" },
+    { "info": "喜多灘", "info2": "きたなだ", "word": "kitanada" },
+    { "info": "串", "info2": "くし", "word": "kusi" },
+    { "info": "下灘", "info2": "しもなだ", "word": "simonada" },
+    { "info": "伊予上灘", "info2": "いよかみなだ", "word": "iyokaminada" },
+    { "info": "高野川", "info2": "こうのかわ", "word": "kounokawa" },
+    { "info": "向井原", "info2": "むかいばら", "word": "mukaibara" }
+  ]
+}
