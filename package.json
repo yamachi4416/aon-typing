@@ -1,5 +1,8 @@
 {
   "private": true,
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "build": "npm run generate",
     "dev": "nuxt dev",
@@ -15,17 +18,17 @@
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@types/jsdom": "^20.0.0",
+    "@types/jsdom": "^20.0.1",
     "@types/prettier": "^2.7.1",
     "@types/yargs": "^17.0.13",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-config-standard-with-typescript": "^33.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.5.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-promise": "^6.1.1",
-    "jsdom": "^20.0.2",
+    "jsdom": "^21.1.0",
     "nuxt": "^3.0.0-rc.14",
     "prettier": "^2.7.1",
     "sass": "^1.56.0",

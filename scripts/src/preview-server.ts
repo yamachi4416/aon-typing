@@ -215,6 +215,7 @@ ${'-'.repeat(50)}`.trimStart(),
 const problem = defineCommand({
   command: 'preview',
   describe: 'generate preview server',
+  aliases: '$0',
   builder,
   handler,
 })
@@ -224,7 +225,7 @@ export function main() {
     .locale('en')
     .help()
     .alias('h', 'help')
-    .command({ ...problem, aliases: '$0' })
+    .command(problem)
     .parse()
 }
 
