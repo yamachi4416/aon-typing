@@ -1,0 +1,32 @@
+{
+  "id": "1010176",
+  "title": "ＪＲ東西線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-30",
+  "updatedAt": "2023-01-30",
+  "optional": { "cd": "176" },
+  "words": [
+    { "info": "尼崎", "info2": "あまがさき", "word": "amagasaki" },
+    { "info": "加島", "info2": "かしま", "word": "kasima" },
+    { "info": "御幣島", "info2": "みてじま", "word": "mitejima" },
+    { "info": "海老江", "info2": "えびえ", "word": "ebie" },
+    { "info": "新福島", "info2": "しんふくしま", "word": "sinhukusima" },
+    { "info": "北新地", "info2": "きたしんち", "word": "kitasinti" },
+    {
+      "info": "大阪天満宮",
+      "info2": "おおさかてんまんぐう",
+      "word": "oosakatenmanguu"
+    },
+    {
+      "info": "大阪城北詰",
+      "info2": "おおさかじょうきたづめ",
+      "word": "oosakajoukitadume"
+    },
+    { "info": "京橋", "info2": "きょうばし", "word": "kyoubasi" }
+  ]
+}
