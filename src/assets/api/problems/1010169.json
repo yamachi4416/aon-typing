@@ -1,0 +1,51 @@
+{
+  "id": "1010169",
+  "title": "ＪＲ学研都市線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-01-30",
+  "updatedAt": "2023-01-30",
+  "optional": { "cd": "169" },
+  "words": [
+    { "info": "京橋", "info2": "きょうばし", "word": "kyoubasi" },
+    { "info": "鴫野", "info2": "しぎの", "word": "sigino" },
+    { "info": "放出", "info2": "はなてん", "word": "hanatenn" },
+    { "info": "徳庵", "info2": "とくあん", "word": "tokuann" },
+    {
+      "info": "鴻池新田",
+      "info2": "こうのいけしんでん",
+      "word": "kounoikesindenn"
+    },
+    { "info": "住道", "info2": "すみのどう", "word": "suminodou" },
+    { "info": "野崎", "info2": "のざき", "word": "nozaki" },
+    { "info": "四条畷", "info2": "しじょうなわて", "word": "sijounawate" },
+    { "info": "忍ケ丘", "info2": "しのぶがおか", "word": "sinobugaoka" },
+    {
+      "info": "寝屋川公園",
+      "info2": "ねやがわこうえん",
+      "word": "neyagawakouenn"
+    },
+    { "info": "星田", "info2": "ほしだ", "word": "hosida" },
+    { "info": "河内磐船", "info2": "かわちいわふね", "word": "kawatiiwahune" },
+    { "info": "津田", "info2": "つだ", "word": "tuda" },
+    { "info": "藤阪", "info2": "ふじさか", "word": "hujisaka" },
+    { "info": "長尾", "info2": "ながお", "word": "nagao" },
+    { "info": "松井山手", "info2": "まついやまて", "word": "matuiyamate" },
+    { "info": "大住", "info2": "おおすみ", "word": "oosumi" },
+    { "info": "京田辺", "info2": "きょうたなべ", "word": "kyoutanabe" },
+    { "info": "同志社前", "info2": "どうししゃまえ", "word": "dousisyamae" },
+    {
+      "info": "ＪＲ三山木",
+      "info2": "じぇいあーるみやまき",
+      "word": "jeia-rumiyamaki"
+    },
+    { "info": "下狛", "info2": "しもこま", "word": "simokoma" },
+    { "info": "祝園", "info2": "ほうその", "word": "housono" },
+    { "info": "西木津", "info2": "にしきづ", "word": "nisikidu" },
+    { "info": "木津", "info2": "きづ", "word": "kidu" }
+  ]
+}
