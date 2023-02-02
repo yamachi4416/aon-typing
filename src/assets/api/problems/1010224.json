@@ -1,0 +1,51 @@
+{
+  "id": "1010224",
+  "title": "ＪＲ土讃線(高知－窪川)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-02",
+  "updatedAt": "2023-02-02",
+  "optional": { "cd": "224" },
+  "words": [
+    { "info": "窪川", "info2": "くぼかわ", "word": "kubokawa" },
+    { "info": "仁井田", "info2": "にいだ", "word": "niida" },
+    { "info": "六反地", "info2": "ろくたんじ", "word": "rokutanji" },
+    { "info": "影野", "info2": "かげの", "word": "kageno" },
+    { "info": "土佐久礼", "info2": "とさくれ", "word": "tosakure" },
+    { "info": "安和", "info2": "あわ", "word": "awa" },
+    { "info": "土佐新荘", "info2": "とさしんじょう", "word": "tosasinjou" },
+    { "info": "須崎", "info2": "すさき", "word": "susaki" },
+    { "info": "大間", "info2": "おおま", "word": "ooma" },
+    { "info": "多ノ郷", "info2": "おおのごう", "word": "oonogou" },
+    { "info": "吾桑", "info2": "あそう", "word": "asou" },
+    { "info": "斗賀野", "info2": "とがの", "word": "togano" },
+    { "info": "襟野々", "info2": "えりのの", "word": "erinono" },
+    { "info": "佐川", "info2": "さかわ", "word": "sakawa" },
+    { "info": "西佐川", "info2": "にしさかわ", "word": "nisisakawa" },
+    { "info": "土佐加茂", "info2": "とさかも", "word": "tosakamo" },
+    { "info": "岡花", "info2": "おかばな", "word": "okabana" },
+    { "info": "日下", "info2": "くさか", "word": "kusaka" },
+    {
+      "info": "小村神社前",
+      "info2": "おむらじんじゃまえ",
+      "word": "omurajinjamae"
+    },
+    { "info": "波川", "info2": "はかわ", "word": "hakawa" },
+    { "info": "伊野", "info2": "いの", "word": "ino" },
+    { "info": "枝川", "info2": "えだがわ", "word": "edagawa" },
+    { "info": "朝倉", "info2": "あさくら", "word": "asakura" },
+    {
+      "info": "高知商業前",
+      "info2": "こうちしょうぎょうまえ",
+      "word": "koutisyougyoumae"
+    },
+    { "info": "旭", "info2": "あさひ", "word": "asahi" },
+    { "info": "円行寺口", "info2": "えんぎょうじぐち", "word": "engyoujiguti" },
+    { "info": "入明", "info2": "いりあけ", "word": "iriake" },
+    { "info": "高知", "info2": "こうち", "word": "kouti" }
+  ]
+}
