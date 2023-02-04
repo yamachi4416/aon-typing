@@ -1,0 +1,17 @@
+{
+  "id": "1010173",
+  "title": "ＪＲ阪和線(鳳－東羽衣)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-04",
+  "updatedAt": "2023-02-04",
+  "optional": { "cd": "173" },
+  "words": [
+    { "info": "東羽衣", "info2": "ひがしはごろも", "word": "higasihagoromo" },
+    { "info": "鳳", "info2": "おおとり", "word": "ootori" }
+  ]
+}
