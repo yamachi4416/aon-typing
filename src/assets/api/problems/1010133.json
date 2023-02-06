@@ -1,0 +1,53 @@
+{
+  "id": "1010133",
+  "title": "ＪＲ大糸線(松本－南小谷)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-06",
+  "updatedAt": "2023-02-06",
+  "optional": { "cd": "133" },
+  "words": [
+    { "info": "南小谷", "info2": "みなみおたり", "word": "minamiotari" },
+    { "info": "千国", "info2": "ちくに", "word": "tikuni" },
+    { "info": "白馬大池", "info2": "はくばおおいけ", "word": "hakubaooike" },
+    { "info": "信濃森上", "info2": "しなのもりうえ", "word": "sinanomoriue" },
+    { "info": "白馬", "info2": "はくば", "word": "hakuba" },
+    { "info": "飯森", "info2": "いいもり", "word": "iimori" },
+    { "info": "神城", "info2": "かみしろ", "word": "kamisiro" },
+    { "info": "南神城", "info2": "みなみかみしろ", "word": "minamikamisiro" },
+    {
+      "info": "ヤナバスキー場前",
+      "info2": "やなばすきーじょうまえ",
+      "word": "yanabasuki-joumae"
+    },
+    { "info": "簗場", "info2": "やなば", "word": "yanaba" },
+    { "info": "海ノ口", "info2": "うみのくち", "word": "uminokuti" },
+    { "info": "稲尾", "info2": "いなお", "word": "inao" },
+    { "info": "信濃木崎", "info2": "しなのきざき", "word": "sinanokizaki" },
+    { "info": "北大町", "info2": "きたおおまち", "word": "kitaoomati" },
+    { "info": "信濃大町", "info2": "しなのおおまち", "word": "sinanooomati" },
+    { "info": "南大町", "info2": "みなみおおまち", "word": "minamioomati" },
+    { "info": "信濃常盤", "info2": "しなのときわ", "word": "sinanotokiwa" },
+    { "info": "安曇沓掛", "info2": "あずみくつかけ", "word": "azumikutukake" },
+    { "info": "信濃松川", "info2": "しなのまつかわ", "word": "sinanomatukawa" },
+    { "info": "北細野", "info2": "きたほその", "word": "kitahosono" },
+    { "info": "細野", "info2": "ほその", "word": "hosono" },
+    { "info": "安曇追分", "info2": "あずみおいわけ", "word": "azumioiwake" },
+    { "info": "有明", "info2": "ありあけ", "word": "ariake" },
+    { "info": "穂高", "info2": "ほたか", "word": "hotaka" },
+    { "info": "柏矢町", "info2": "はくやちょう", "word": "hakuyatyou" },
+    { "info": "豊科", "info2": "とよしな", "word": "toyosina" },
+    { "info": "南豊科", "info2": "みなみとよしな", "word": "minamitoyosina" },
+    { "info": "中萱", "info2": "なかがや", "word": "nakagaya" },
+    { "info": "一日市場", "info2": "ひといちば", "word": "hitoitiba" },
+    { "info": "梓橋", "info2": "あずさばし", "word": "azusabasi" },
+    { "info": "島高松", "info2": "しまたかまつ", "word": "simatakamatu" },
+    { "info": "島内", "info2": "しまうち", "word": "simauti" },
+    { "info": "北松本", "info2": "きたまつもと", "word": "kitamatumoto" },
+    { "info": "松本", "info2": "まつもと", "word": "matumoto" }
+  ]
+}

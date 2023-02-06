@@ -1,0 +1,24 @@
+{
+  "id": "1010148",
+  "title": "ＪＲ大糸線(南小谷－糸魚川)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-06",
+  "updatedAt": "2023-02-06",
+  "optional": { "cd": "148" },
+  "words": [
+    { "info": "糸魚川", "info2": "いといがわ", "word": "itoigawa" },
+    { "info": "姫川", "info2": "ひめかわ", "word": "himekawa" },
+    { "info": "頸城大野", "info2": "くびきおおの", "word": "kubikioono" },
+    { "info": "根知", "info2": "ねち", "word": "neti" },
+    { "info": "小滝", "info2": "こたき", "word": "kotaki" },
+    { "info": "平岩", "info2": "ひらいわ", "word": "hiraiwa" },
+    { "info": "北小谷", "info2": "きたおたり", "word": "kitaotari" },
+    { "info": "中土", "info2": "なかつち", "word": "nakatuti" },
+    { "info": "南小谷", "info2": "みなみおたり", "word": "minamiotari" }
+  ]
+}
