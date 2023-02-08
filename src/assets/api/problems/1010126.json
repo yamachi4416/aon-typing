@@ -1,0 +1,50 @@
+{
+  "id": "1010126",
+  "title": "ＪＲ小海線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-08",
+  "updatedAt": "2023-02-08",
+  "optional": { "cd": "126" },
+  "words": [
+    { "info": "小諸", "info2": "こもろ", "word": "komoro" },
+    { "info": "東小諸", "info2": "ひがしこもろ", "word": "higasikomoro" },
+    { "info": "乙女", "info2": "おとめ", "word": "otome" },
+    { "info": "三岡", "info2": "みつおか", "word": "mituoka" },
+    { "info": "美里", "info2": "みさと", "word": "misato" },
+    { "info": "中佐都", "info2": "なかさと", "word": "nakasato" },
+    { "info": "佐久平", "info2": "さくだいら", "word": "sakudaira" },
+    { "info": "岩村田", "info2": "いわむらだ", "word": "iwamurada" },
+    { "info": "北中込", "info2": "きたなかごみ", "word": "kitanakagomi" },
+    { "info": "滑津", "info2": "なめづ", "word": "namedu" },
+    { "info": "中込", "info2": "なかごみ", "word": "nakagomi" },
+    { "info": "太田部", "info2": "おおたべ", "word": "ootabe" },
+    { "info": "龍岡城", "info2": "たつおかじょう", "word": "tatuokajou" },
+    { "info": "臼田", "info2": "うすだ", "word": "usuda" },
+    { "info": "青沼", "info2": "あおぬま", "word": "aonuma" },
+    { "info": "羽黒下", "info2": "はぐろした", "word": "hagurosita" },
+    { "info": "海瀬", "info2": "かいぜ", "word": "kaize" },
+    { "info": "八千穂", "info2": "やちほ", "word": "yatiho" },
+    { "info": "高岩", "info2": "たかいわ", "word": "takaiwa" },
+    { "info": "馬流", "info2": "まながし", "word": "managasi" },
+    { "info": "小海", "info2": "こうみ", "word": "koumi" },
+    { "info": "松原湖", "info2": "まつばらこ", "word": "matubarako" },
+    { "info": "海尻", "info2": "うみじり", "word": "umijiri" },
+    {
+      "info": "佐久海ノ口",
+      "info2": "さくうみのくち",
+      "word": "sakuuminokuti"
+    },
+    { "info": "佐久広瀬", "info2": "さくひろせ", "word": "sakuhirose" },
+    { "info": "信濃川上", "info2": "しなのかわかみ", "word": "sinanokawakami" },
+    { "info": "野辺山", "info2": "のべやま", "word": "nobeyama" },
+    { "info": "清里", "info2": "きよさと", "word": "kiyosato" },
+    { "info": "甲斐大泉", "info2": "かいおおいずみ", "word": "kaiooizumi" },
+    { "info": "甲斐小泉", "info2": "かいこいずみ", "word": "kaikoizumi" },
+    { "info": "小淵沢", "info2": "こぶちざわ", "word": "kobutizawa" }
+  ]
+}
