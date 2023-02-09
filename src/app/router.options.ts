@@ -1,4 +1,4 @@
-import { RouterConfig } from '@nuxt/schema'
+import { type RouterConfig } from '@nuxt/schema'
 import { useScrollWaiter } from '~/composables/useScrollWaiter'
 
 const routerConfig: RouterConfig = {

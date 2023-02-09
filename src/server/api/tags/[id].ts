@@ -1,9 +1,9 @@
 import { readFile } from 'node:fs/promises'
-import { TagInfo } from '~~/types/problems'
+import { type TagInfo } from '~~/types/problems'
 
 export default defineEventHandler(async ({ context, res }) => {
   try {
-    const id = context.params.id?.split('.')[0] as string
+    const id = context.params?.id?.split('.')[0]
     const url = new URL(`../../src/assets/api/tags/${id}.json`, import.meta.url)
     return JSON.parse(String(await readFile(url))) as TagInfo
   } catch (e) {

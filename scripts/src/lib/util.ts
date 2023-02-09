@@ -26,7 +26,9 @@ export async function httpFetch(url: string, options: HttpRequestOptions = {}) {
       res.on('end', () => {
         resolve({ data: Buffer.concat(buffers), response: res })
       })
-      res.on('error', (error) => reject(error))
+      res.on('error', (error) => {
+        reject(error)
+      })
     })
 
     if (options.headers) {

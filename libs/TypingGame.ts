@@ -1,8 +1,8 @@
-import { TypingGameWordData } from './TypingGameWordData'
-import { TypingProblemQuestioner } from './TypingProblemQuestioner'
+import { type TypingGameWordData } from './TypingGameWordData'
+import { type TypingProblemQuestioner } from './TypingProblemQuestioner'
 import { keyCodeToChar } from './Keys'
 import { TypingGameInfo } from './TypingGameInfo'
-import { TypingGamer, useTypingGamer } from './TypingGamer'
+import { type TypingGamer, useTypingGamer } from './TypingGamer'
 import { isNumber } from './Util'
 
 type ProblemOrder = 'first' | 'last' | 'random'
@@ -451,7 +451,9 @@ class TimerManager {
   }
 
   pause() {
-    this.timers.forEach((timer) => timer.stop())
+    this.timers.forEach((timer) => {
+      timer.stop()
+    })
   }
 
   resume() {
@@ -459,7 +461,9 @@ class TimerManager {
   }
 
   clear() {
-    this.timers.forEach((timer) => timer.stop())
+    this.timers.forEach((timer) => {
+      timer.stop()
+    })
     this.timers = []
   }
 }

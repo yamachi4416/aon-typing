@@ -1,8 +1,12 @@
 import fs from 'node:fs/promises'
 import { createGzip } from 'node:zlib'
-import { createServer, IncomingMessage, ServerResponse } from 'node:http'
+import {
+  createServer,
+  type IncomingMessage,
+  type ServerResponse,
+} from 'node:http'
 import path from 'node:path'
-import { parse as urlParse, UrlWithStringQuery } from 'node:url'
+import { parse as urlParse, type UrlWithStringQuery } from 'node:url'
 import yargs from 'yargs'
 import { defineCommand } from './lib/util'
 
@@ -195,7 +199,7 @@ async function handler(args: MainArgs) {
     }
   })
 
-  return await new Promise<void>((resolve) => {
+  await new Promise<void>((resolve) => {
     server
       .listen(args.port, args.host, () => {
         console.log(
@@ -212,23 +216,17 @@ ${'-'.repeat(50)}`.trimStart(),
   })
 }
 
-const problem = defineCommand({
-  command: 'preview',
-  describe: 'generate preview server',
-  aliases: '$0',
-  builder,
-  handler,
-})
-
-export function main() {
-  void yargs
-    .locale('en')
-    .help()
-    .alias('h', 'help')
-    .command(problem)
-    .parse()
-}
-
-export default problem
-
-void main()
+void yargs
+  .locale('en')
+  .help()
+  .alias('h', 'help')
+  .command(
+    defineCommand({
+      command: 'preview',
+      describe: 'generate preview server',
+      aliases: '$0',
+      builder,
+      handler,
+    }),
+  )
+  .parse()

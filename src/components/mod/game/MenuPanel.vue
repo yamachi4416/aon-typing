@@ -176,7 +176,7 @@ const problemOrders = {
   first: '前から',
   last: '後から',
   random: 'ランダム',
-} as Record<typeof setting['problemOrder'], string>
+} as Record<(typeof setting)['problemOrder'], string>
 
 function openProblemSelect() {
   emit('openProblemSelect')

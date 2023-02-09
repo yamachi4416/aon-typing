@@ -1,6 +1,6 @@
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
-import { ProblemDetail } from '~~/types/problems'
-import { GameSetting } from '~~/libs/TypingGame'
+import { type ProblemDetail } from '~~/types/problems'
+import { type GameSetting } from '~~/libs/TypingGame'
 
 const shuffle = (array: any[]) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -44,7 +44,13 @@ export class TypingProblemQuestioner {
     return this.words[0]
   }
 
-  init({ problem, setting }: { problem?: ProblemDetail; setting: GameSetting }) {
+  init({
+    problem,
+    setting,
+  }: {
+    problem?: ProblemDetail
+    setting: GameSetting
+  }) {
     this.problem = problem
     this.words =
       problem?.words.map((w, i) => new TypingGameWordData(i, w)) ?? []
@@ -74,6 +80,8 @@ export class TypingProblemQuestioner {
 
   continue() {
     this.endWords.splice(0)
-    this.words.forEach((w, i) => w.continue(i))
+    this.words.forEach((w, i) => {
+      w.continue(i)
+    })
   }
 }

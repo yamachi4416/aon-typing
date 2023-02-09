@@ -30,7 +30,7 @@ export async function countDown(
 }
 
 export async function wait(time: number) {
-  return await new Promise<void>((resolve) => {
+  await new Promise<void>((resolve) => {
     setTimeout(() => {
       resolve()
     }, time)

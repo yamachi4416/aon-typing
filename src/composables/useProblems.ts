@@ -1,6 +1,6 @@
 import type { Ref } from 'vue'
 
-import { ProblemDetail, ProblemListItem } from '~~/types/problems'
+import { type ProblemDetail, type ProblemListItem } from '~~/types/problems'
 
 import { GameSetting } from '~~/libs/TypingGame'
 

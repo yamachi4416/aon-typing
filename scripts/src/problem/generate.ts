@@ -4,10 +4,10 @@ import * as prettier from 'prettier'
 import { defineCommand } from '../lib/util'
 import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
 import {
-  ProblemDetail,
-  ProblemListItem,
-  ProblemTagSummary,
-  TagInfo,
+  type ProblemDetail,
+  type ProblemListItem,
+  type ProblemTagSummary,
+  type TagInfo,
 } from '~~/types/problems'
 
 type ProblemDetailData = Omit<ProblemDetail, 'tags'> & { tags: string[] }
@@ -20,7 +20,7 @@ async function listJsonFiles(dir: string) {
 }
 
 async function writeJson(file: string, data: any) {
-  return await fs.writeFile(
+  await fs.writeFile(
     file,
     prettier.format(JSON.stringify(data), {
       parser: 'json',

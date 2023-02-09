@@ -2,7 +2,7 @@ import {
   TypingGameWordState,
   TypingGameWordInfoState,
 } from './TypingGameWordStates'
-import { ProblemDetailWord } from '~~/types/problems'
+import { type ProblemDetailWord } from '~~/types/problems'
 
 export class TypingGameWordData {
   index?: number
