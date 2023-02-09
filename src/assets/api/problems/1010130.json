@@ -1,0 +1,62 @@
+{
+  "id": "1010130",
+  "title": "ＪＲ身延線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-09",
+  "updatedAt": "2023-02-09",
+  "optional": { "cd": "130" },
+  "words": [
+    { "info": "甲府", "info2": "こうふ", "word": "kouhu" },
+    { "info": "金手", "info2": "かねんて", "word": "kanente" },
+    { "info": "善光寺", "info2": "ぜんこうじ", "word": "zenkouji" },
+    { "info": "南甲府", "info2": "みなみこうふ", "word": "minamikouhu" },
+    { "info": "甲斐住吉", "info2": "かいすみよし", "word": "kaisumiyosi" },
+    { "info": "国母", "info2": "こくぼ", "word": "kokubo" },
+    { "info": "常永", "info2": "じょうえい", "word": "jouei" },
+    { "info": "小井川", "info2": "こいかわ", "word": "koikawa" },
+    { "info": "東花輪", "info2": "ひがしはなわ", "word": "higasihanawa" },
+    { "info": "甲斐上野", "info2": "かいうえの", "word": "kaiueno" },
+    { "info": "芦川", "info2": "あしがわ", "word": "asigawa" },
+    {
+      "info": "市川本町",
+      "info2": "いちかわほんまち",
+      "word": "itikawahonmati"
+    },
+    {
+      "info": "市川大門",
+      "info2": "いちかわだいもん",
+      "word": "itikawadaimonn"
+    },
+    { "info": "鰍沢口", "info2": "かじかざわぐち", "word": "kajikazawaguti" },
+    { "info": "落居", "info2": "おちい", "word": "otii" },
+    { "info": "甲斐岩間", "info2": "かいいわま", "word": "kaiiwama" },
+    { "info": "久那土", "info2": "くなど", "word": "kunado" },
+    { "info": "市ノ瀬", "info2": "いちのせ", "word": "itinose" },
+    { "info": "甲斐常葉", "info2": "かいときわ", "word": "kaitokiwa" },
+    { "info": "下部温泉", "info2": "しもべおんせん", "word": "simobeonsenn" },
+    { "info": "波高島", "info2": "はだかじま", "word": "hadakajima" },
+    { "info": "塩之沢", "info2": "しおのさわ", "word": "sionosawa" },
+    { "info": "身延", "info2": "みのぶ", "word": "minobu" },
+    { "info": "甲斐大島", "info2": "かいおおしま", "word": "kaioosima" },
+    { "info": "内船", "info2": "うつぶな", "word": "utubuna" },
+    { "info": "寄畑", "info2": "よりはた", "word": "yorihata" },
+    { "info": "井出", "info2": "いで", "word": "ide" },
+    { "info": "十島", "info2": "とおしま", "word": "toosima" },
+    { "info": "稲子", "info2": "いなこ", "word": "inako" },
+    { "info": "芝川", "info2": "しばかわ", "word": "sibakawa" },
+    { "info": "沼久保", "info2": "ぬまくぼ", "word": "numakubo" },
+    { "info": "西富士宮", "info2": "にしふじのみや", "word": "nisihujinomiya" },
+    { "info": "富士宮", "info2": "ふじのみや", "word": "hujinomiya" },
+    { "info": "源道寺", "info2": "げんどうじ", "word": "gendouji" },
+    { "info": "富士根", "info2": "ふじね", "word": "hujine" },
+    { "info": "入山瀬", "info2": "いりやませ", "word": "iriyamase" },
+    { "info": "竪堀", "info2": "たてぼり", "word": "tatebori" },
+    { "info": "柚木", "info2": "ゆのき", "word": "yunoki" },
+    { "info": "富士", "info2": "ふじ", "word": "huji" }
+  ]
+}
