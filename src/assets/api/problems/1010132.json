@@ -1,0 +1,34 @@
+{
+  "id": "1010132",
+  "title": "ＪＲ篠ノ井線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-11",
+  "updatedAt": "2023-02-11",
+  "optional": { "cd": "132" },
+  "words": [
+    { "info": "塩尻", "info2": "しおじり", "word": "siojiri" },
+    { "info": "広丘", "info2": "ひろおか", "word": "hirooka" },
+    { "info": "村井", "info2": "むらい", "word": "murai" },
+    { "info": "平田", "info2": "ひらた", "word": "hirata" },
+    { "info": "南松本", "info2": "みなみまつもと", "word": "minamimatumoto" },
+    { "info": "松本", "info2": "まつもと", "word": "matumoto" },
+    { "info": "田沢", "info2": "たざわ", "word": "tazawa" },
+    { "info": "明科", "info2": "あかしな", "word": "akasina" },
+    { "info": "西条", "info2": "にしじょう", "word": "nisijou" },
+    { "info": "坂北", "info2": "さかきた", "word": "sakakita" },
+    { "info": "聖高原", "info2": "ひじりこうげん", "word": "hijirikougenn" },
+    { "info": "冠着", "info2": "かむりき", "word": "kamuriki" },
+    { "info": "姨捨", "info2": "おばすて", "word": "obasute" },
+    { "info": "稲荷山", "info2": "いなりやま", "word": "inariyama" },
+    { "info": "篠ノ井", "info2": "しののい", "word": "sinonoi" },
+    { "info": "今井", "info2": "いまい", "word": "imai" },
+    { "info": "川中島", "info2": "かわなかじま", "word": "kawanakajima" },
+    { "info": "安茂里", "info2": "あもり", "word": "amori" },
+    { "info": "長野", "info2": "ながの", "word": "nagano" }
+  ]
+}
