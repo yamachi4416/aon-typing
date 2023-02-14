@@ -1,0 +1,25 @@
+{
+  "id": "1010142",
+  "title": "ＪＲ参宮線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-14",
+  "updatedAt": "2023-02-14",
+  "optional": { "cd": "142" },
+  "words": [
+    { "info": "鳥羽", "info2": "とば", "word": "toba" },
+    { "info": "松下", "info2": "まつした", "word": "matusita" },
+    { "info": "二見浦", "info2": "ふたみのうら", "word": "hutaminoura" },
+    { "info": "五十鈴ケ丘", "info2": "いすずがおか", "word": "isuzugaoka" },
+    { "info": "伊勢市", "info2": "いせし", "word": "isesi" },
+    { "info": "山田上口", "info2": "やまだかみぐち", "word": "yamadakamiguti" },
+    { "info": "宮川", "info2": "みやがわ", "word": "miyagawa" },
+    { "info": "田丸", "info2": "たまる", "word": "tamaru" },
+    { "info": "外城田", "info2": "ときだ", "word": "tokida" },
+    { "info": "多気", "info2": "たき", "word": "taki" }
+  ]
+}
