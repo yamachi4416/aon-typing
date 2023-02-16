@@ -1,0 +1,30 @@
+{
+  "id": "1010144",
+  "title": "ＪＲ名松線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-16",
+  "updatedAt": "2023-02-16",
+  "optional": { "cd": "144" },
+  "words": [
+    { "info": "伊勢奥津", "info2": "いせおきつ", "word": "iseokitu" },
+    { "info": "比津", "info2": "ひつ", "word": "hitu" },
+    { "info": "伊勢八知", "info2": "いせやち", "word": "iseyati" },
+    { "info": "伊勢鎌倉", "info2": "いせかまくら", "word": "isekamakura" },
+    { "info": "伊勢竹原", "info2": "いせたけはら", "word": "isetakehara" },
+    { "info": "家城", "info2": "いえき", "word": "ieki" },
+    { "info": "関ノ宮", "info2": "せきのみや", "word": "sekinomiya" },
+    { "info": "伊勢川口", "info2": "いせかわぐち", "word": "isekawaguti" },
+    { "info": "伊勢大井", "info2": "いせおおい", "word": "iseooi" },
+    { "info": "井関", "info2": "いせぎ", "word": "isegi" },
+    { "info": "一志", "info2": "いちし", "word": "itisi" },
+    { "info": "伊勢八太", "info2": "いせはた", "word": "isehata" },
+    { "info": "権現前", "info2": "ごんげんまえ", "word": "gongenmae" },
+    { "info": "上ノ庄", "info2": "かみのしょう", "word": "kaminosyou" },
+    { "info": "松阪", "info2": "まつさか", "word": "matusaka" }
+  ]
+}

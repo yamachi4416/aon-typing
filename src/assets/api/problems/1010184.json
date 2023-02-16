@@ -1,0 +1,37 @@
+{
+  "id": "1010184",
+  "title": "ＪＲ赤穂線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-16",
+  "updatedAt": "2023-02-16",
+  "optional": { "cd": "184" },
+  "words": [
+    { "info": "岡山", "info2": "おかやま", "word": "okayama" },
+    { "info": "西川原", "info2": "にしがわら", "word": "nisigawara" },
+    { "info": "高島", "info2": "たかしま", "word": "takasima" },
+    { "info": "東岡山", "info2": "ひがしおかやま", "word": "higasiokayama" },
+    { "info": "大多羅", "info2": "おおだら", "word": "oodara" },
+    { "info": "西大寺", "info2": "さいだいじ", "word": "saidaiji" },
+    { "info": "大富", "info2": "おおどみ", "word": "oodomi" },
+    { "info": "邑久", "info2": "おく", "word": "oku" },
+    { "info": "長船", "info2": "おさふね", "word": "osahune" },
+    { "info": "香登", "info2": "かがと", "word": "kagato" },
+    { "info": "伊部", "info2": "いんべ", "word": "inbe" },
+    { "info": "西片上", "info2": "にしかたかみ", "word": "nisikatakami" },
+    { "info": "備前片上", "info2": "びぜんかたかみ", "word": "bizenkatakami" },
+    { "info": "伊里", "info2": "いり", "word": "iri" },
+    { "info": "日生", "info2": "ひなせ", "word": "hinase" },
+    { "info": "寒河", "info2": "そうご", "word": "sougo" },
+    { "info": "備前福河", "info2": "びぜんふくかわ", "word": "bizenhukukawa" },
+    { "info": "天和", "info2": "てんわ", "word": "tenwa" },
+    { "info": "播州赤穂", "info2": "ばんしゅうあこう", "word": "bansyuuakou" },
+    { "info": "坂越", "info2": "さこし", "word": "sakosi" },
+    { "info": "西相生", "info2": "にしあいおい", "word": "nisiaioi" },
+    { "info": "相生", "info2": "あいおい", "word": "aioi" }
+  ]
+}
