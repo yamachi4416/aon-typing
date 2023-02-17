@@ -1,0 +1,40 @@
+{
+  "id": "1010187",
+  "title": "ＪＲ加古川線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-17",
+  "updatedAt": "2023-02-17",
+  "optional": { "cd": "187" },
+  "words": [
+    { "info": "谷川", "info2": "たにかわ", "word": "tanikawa" },
+    { "info": "久下村", "info2": "くげむら", "word": "kugemura" },
+    { "info": "船町口", "info2": "ふなまちぐち", "word": "hunamatiguti" },
+    { "info": "本黒田", "info2": "ほんくろだ", "word": "honkuroda" },
+    { "info": "黒田庄", "info2": "くろだしょう", "word": "kurodasyou" },
+    {
+      "info": "日本へそ公園",
+      "info2": "にほんへそこうえん",
+      "word": "nihonhesokouenn"
+    },
+    { "info": "比延", "info2": "ひえ", "word": "hie" },
+    { "info": "新西脇", "info2": "しんにしわき", "word": "sinnnisiwaki" },
+    { "info": "西脇市", "info2": "にしわきし", "word": "nisiwakisi" },
+    { "info": "滝", "info2": "たき", "word": "taki" },
+    { "info": "滝野", "info2": "たきの", "word": "takino" },
+    { "info": "社町", "info2": "やしろちょう", "word": "yasirotyou" },
+    { "info": "青野ケ原", "info2": "あおのがはら", "word": "aonogahara" },
+    { "info": "河合西", "info2": "かわいにし", "word": "kawainisi" },
+    { "info": "粟生", "info2": "あお", "word": "ao" },
+    { "info": "小野町", "info2": "おのまち", "word": "onomati" },
+    { "info": "市場", "info2": "いちば", "word": "itiba" },
+    { "info": "厄神", "info2": "やくじん", "word": "yakujinn" },
+    { "info": "神野", "info2": "かんの", "word": "kannno" },
+    { "info": "日岡", "info2": "ひおか", "word": "hioka" },
+    { "info": "加古川", "info2": "かこがわ", "word": "kakogawa" }
+  ]
+}
