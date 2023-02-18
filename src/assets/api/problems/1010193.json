@@ -1,0 +1,33 @@
+{
+  "id": "1010193",
+  "title": "ＪＲ播但線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-18",
+  "updatedAt": "2023-02-18",
+  "optional": { "cd": "193" },
+  "words": [
+    { "info": "和田山", "info2": "わだやま", "word": "wadayama" },
+    { "info": "竹田", "info2": "たけだ", "word": "takeda" },
+    { "info": "青倉", "info2": "あおくら", "word": "aokura" },
+    { "info": "新井", "info2": "にい", "word": "nii" },
+    { "info": "生野", "info2": "いくの", "word": "ikuno" },
+    { "info": "長谷", "info2": "はせ", "word": "hase" },
+    { "info": "寺前", "info2": "てらまえ", "word": "teramae" },
+    { "info": "新野", "info2": "にいの", "word": "niino" },
+    { "info": "鶴居", "info2": "つるい", "word": "turui" },
+    { "info": "甘地", "info2": "あまじ", "word": "amaji" },
+    { "info": "福崎", "info2": "ふくさき", "word": "hukusaki" },
+    { "info": "溝口", "info2": "みぞぐち", "word": "mizoguti" },
+    { "info": "香呂", "info2": "こうろ", "word": "kouro" },
+    { "info": "仁豊野", "info2": "にぶの", "word": "nibuno" },
+    { "info": "砥堀", "info2": "とほり", "word": "tohori" },
+    { "info": "野里", "info2": "のざと", "word": "nozato" },
+    { "info": "京口", "info2": "きょうぐち", "word": "kyouguti" },
+    { "info": "姫路", "info2": "ひめじ", "word": "himeji" }
+  ]
+}
