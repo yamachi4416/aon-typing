@@ -1,0 +1,71 @@
+{
+  "id": "1010195",
+  "title": "ＪＲ姫新線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-19",
+  "updatedAt": "2023-02-19",
+  "optional": { "cd": "195" },
+  "words": [
+    { "info": "新見", "info2": "にいみ", "word": "niimi" },
+    { "info": "岩山", "info2": "いわやま", "word": "iwayama" },
+    { "info": "丹治部", "info2": "たじべ", "word": "tajibe" },
+    { "info": "刑部", "info2": "おさかべ", "word": "osakabe" },
+    { "info": "富原", "info2": "とみはら", "word": "tomihara" },
+    { "info": "月田", "info2": "つきだ", "word": "tukida" },
+    {
+      "info": "中国勝山",
+      "info2": "ちゅうごくかつやま",
+      "word": "tyuugokukatuyama"
+    },
+    { "info": "久世", "info2": "くせ", "word": "kuse" },
+    { "info": "古見", "info2": "こみ", "word": "komi" },
+    {
+      "info": "美作落合",
+      "info2": "みまさかおちあい",
+      "word": "mimasakaotiai"
+    },
+    {
+      "info": "美作追分",
+      "info2": "みまさかおいわけ",
+      "word": "mimasakaoiwake"
+    },
+    { "info": "坪井", "info2": "つぼい", "word": "tuboi" },
+    {
+      "info": "美作千代",
+      "info2": "みまさかせんだい",
+      "word": "mimasakasendai"
+    },
+    { "info": "院庄", "info2": "いんのしょう", "word": "innnosyou" },
+    { "info": "津山", "info2": "つやま", "word": "tuyama" },
+    { "info": "東津山", "info2": "ひがしつやま", "word": "higasituyama" },
+    {
+      "info": "美作大崎",
+      "info2": "みまさかおおさき",
+      "word": "mimasakaoosaki"
+    },
+    { "info": "西勝間田", "info2": "にしかつまだ", "word": "nisikatumada" },
+    { "info": "勝間田", "info2": "かつまだ", "word": "katumada" },
+    { "info": "林野", "info2": "はやしの", "word": "hayasino" },
+    { "info": "楢原", "info2": "ならはら", "word": "narahara" },
+    { "info": "美作江見", "info2": "みまさかえみ", "word": "mimasakaemi" },
+    { "info": "美作土居", "info2": "みまさかどい", "word": "mimasakadoi" },
+    { "info": "上月", "info2": "こうづき", "word": "kouduki" },
+    { "info": "佐用", "info2": "さよ", "word": "sayo" },
+    { "info": "播磨徳久", "info2": "はりまとくさ", "word": "harimatokusa" },
+    { "info": "三日月", "info2": "みかづき", "word": "mikaduki" },
+    { "info": "西栗栖", "info2": "にしくりす", "word": "nisikurisu" },
+    { "info": "千本", "info2": "せんぼん", "word": "senbonn" },
+    { "info": "播磨新宮", "info2": "はりましんぐう", "word": "harimasinguu" },
+    { "info": "東觜崎", "info2": "ひがしはしさき", "word": "higasihasisaki" },
+    { "info": "本竜野", "info2": "ほんたつの", "word": "hontatuno" },
+    { "info": "太市", "info2": "おおいち", "word": "ooiti" },
+    { "info": "余部", "info2": "よべ", "word": "yobe" },
+    { "info": "播磨高岡", "info2": "はりまたかおか", "word": "harimatakaoka" },
+    { "info": "姫路", "info2": "ひめじ", "word": "himeji" }
+  ]
+}
