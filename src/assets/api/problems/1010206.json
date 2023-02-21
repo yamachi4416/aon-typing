@@ -1,0 +1,33 @@
+{
+  "id": "1010206",
+  "title": "ＪＲ木次線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-21",
+  "updatedAt": "2023-02-21",
+  "optional": { "cd": "206" },
+  "words": [
+    { "info": "備後落合", "info2": "びんごおちあい", "word": "bingootiai" },
+    { "info": "油木", "info2": "ゆき", "word": "yuki" },
+    { "info": "三井野原", "info2": "みいのはら", "word": "miinohara" },
+    { "info": "出雲坂根", "info2": "いずもさかね", "word": "izumosakane" },
+    { "info": "八川", "info2": "やかわ", "word": "yakawa" },
+    { "info": "出雲横田", "info2": "いずもよこた", "word": "izumoyokota" },
+    { "info": "亀嵩", "info2": "かめだけ", "word": "kamedake" },
+    { "info": "出雲三成", "info2": "いずもみなり", "word": "izumominari" },
+    { "info": "出雲八代", "info2": "いずもやしろ", "word": "izumoyasiro" },
+    { "info": "下久野", "info2": "しもくの", "word": "simokuno" },
+    { "info": "日登", "info2": "ひのぼり", "word": "hinobori" },
+    { "info": "木次", "info2": "きすき", "word": "kisuki" },
+    { "info": "南大東", "info2": "みなみだいとう", "word": "minamidaitou" },
+    { "info": "出雲大東", "info2": "いずもだいとう", "word": "izumodaitou" },
+    { "info": "幡屋", "info2": "はたや", "word": "hataya" },
+    { "info": "加茂中", "info2": "かもなか", "word": "kamonaka" },
+    { "info": "南宍道", "info2": "みなみしんじ", "word": "minamisinji" },
+    { "info": "宍道", "info2": "しんじ", "word": "sinji" }
+  ]
+}
