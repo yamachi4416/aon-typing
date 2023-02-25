@@ -1,0 +1,35 @@
+{
+  "id": "1010211",
+  "title": "ＪＲ可部線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-25",
+  "updatedAt": "2023-02-25",
+  "optional": { "cd": "211" },
+  "words": [
+    { "info": "あき亀山", "info2": "あきかめやま", "word": "akikameyama" },
+    {
+      "info": "河戸帆待川",
+      "info2": "こうどほまちがわ",
+      "word": "koudohomatigawa"
+    },
+    { "info": "可部", "info2": "かべ", "word": "kabe" },
+    { "info": "中島", "info2": "なかしま", "word": "nakasima" },
+    { "info": "上八木", "info2": "かみやぎ", "word": "kamiyagi" },
+    { "info": "梅林", "info2": "ばいりん", "word": "bairinn" },
+    { "info": "七軒茶屋", "info2": "しちけんぢゃや", "word": "sitikendyaya" },
+    { "info": "緑井", "info2": "みどりい", "word": "midorii" },
+    { "info": "大町", "info2": "おおまち", "word": "oomati" },
+    { "info": "古市橋", "info2": "ふるいちばし", "word": "huruitibasi" },
+    { "info": "下祇園", "info2": "しもぎおん", "word": "simogionn" },
+    { "info": "安芸長束", "info2": "あきながつか", "word": "akinagatuka" },
+    { "info": "三滝", "info2": "みたき", "word": "mitaki" },
+    { "info": "横川", "info2": "よこがわ", "word": "yokogawa" },
+    { "info": "新白島", "info2": "しんはくしま", "word": "sinhakusima" },
+    { "info": "広島", "info2": "ひろしま", "word": "hirosima" }
+  ]
+}
