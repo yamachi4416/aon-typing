@@ -1,0 +1,41 @@
+{
+  "id": "1010702",
+  "title": "ＪＲ瀬戸大橋線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-26",
+  "updatedAt": "2023-02-26",
+  "optional": { "cd": "702" },
+  "words": [
+    { "info": "高松", "info2": "たかまつ", "word": "takamatu" },
+    { "info": "香西", "info2": "こうざい", "word": "kouzai" },
+    { "info": "鬼無", "info2": "きなし", "word": "kinasi" },
+    { "info": "端岡", "info2": "はしおか", "word": "hasioka" },
+    { "info": "国分", "info2": "こくぶ", "word": "kokubu" },
+    { "info": "讃岐府中", "info2": "さぬきふちゅう", "word": "sanukihutyuu" },
+    { "info": "鴨川", "info2": "かもがわ", "word": "kamogawa" },
+    { "info": "八十場", "info2": "やそば", "word": "yasoba" },
+    { "info": "坂出", "info2": "さかいで", "word": "sakaide" },
+    { "info": "宇多津", "info2": "うたづ", "word": "utadu" },
+    { "info": "児島", "info2": "こじま", "word": "kojima" },
+    { "info": "上の町", "info2": "かみのちょう", "word": "kaminotyou" },
+    { "info": "木見", "info2": "きみ", "word": "kimi" },
+    { "info": "植松", "info2": "うえまつ", "word": "uematu" },
+    { "info": "茶屋町", "info2": "ちゃやまち", "word": "tyayamati" },
+    { "info": "久々原", "info2": "くぐはら", "word": "kuguhara" },
+    { "info": "早島", "info2": "はやしま", "word": "hayasima" },
+    {
+      "info": "備中箕島",
+      "info2": "びっちゅうみしま",
+      "word": "bittyuumisima"
+    },
+    { "info": "妹尾", "info2": "せのお", "word": "senoo" },
+    { "info": "備前西市", "info2": "びぜんにしいち", "word": "bizennnisiiti" },
+    { "info": "大元", "info2": "おおもと", "word": "oomoto" },
+    { "info": "岡山", "info2": "おかやま", "word": "okayama" }
+  ]
+}
