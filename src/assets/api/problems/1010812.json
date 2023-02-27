@@ -1,0 +1,23 @@
+{
+  "id": "1010812",
+  "title": "ＪＲ埼京・相鉄直通線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-27",
+  "updatedAt": "2023-02-27",
+  "optional": { "cd": "812" },
+  "words": [
+    {
+      "info": "羽沢横浜国大",
+      "info2": "はざわよこはまこくだい",
+      "word": "hazawayokohamakokudai"
+    },
+    { "info": "武蔵小杉", "info2": "むさしこすぎ", "word": "musasikosugi" },
+    { "info": "西大井", "info2": "にしおおい", "word": "nisiooi" },
+    { "info": "大崎", "info2": "おおさき", "word": "oosaki" }
+  ]
+}
