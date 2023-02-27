@@ -1,0 +1,17 @@
+{
+  "id": "1010791",
+  "title": "ＪＲ上野東京ラインの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-27",
+  "updatedAt": "2023-02-27",
+  "optional": { "cd": "791" },
+  "words": [
+    { "info": "東京", "info2": "とうきょう", "word": "toukyou" },
+    { "info": "上野", "info2": "うえの", "word": "ueno" }
+  ]
+}
