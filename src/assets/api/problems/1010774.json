@@ -1,0 +1,68 @@
+{
+  "id": "1010774",
+  "title": "ＪＲ気仙沼線(BRT)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-02-28",
+  "updatedAt": "2023-02-28",
+  "optional": { "cd": "774" },
+  "words": [
+    { "info": "気仙沼", "info2": "けせんぬま", "word": "kesennnuma" },
+    { "info": "東新城", "info2": "ひがししんじょう", "word": "higasisinjou" },
+    { "info": "不動の沢", "info2": "ふどうのさわ", "word": "hudounosawa" },
+    {
+      "info": "南気仙沼",
+      "info2": "みなみけせんぬま",
+      "word": "minamikesennnuma"
+    },
+    {
+      "info": "気仙沼市立病院",
+      "info2": "けせんぬましりつびょういん",
+      "word": "kesennnumasiritubyouinn"
+    },
+    { "info": "赤岩港", "info2": "あかいわみなと", "word": "akaiwaminato" },
+    { "info": "松岩", "info2": "まついわ", "word": "matuiwa" },
+    { "info": "岩月", "info2": "いわつき", "word": "iwatuki" },
+    { "info": "最知", "info2": "さいち", "word": "saiti" },
+    {
+      "info": "陸前階上",
+      "info2": "りくぜんはしかみ",
+      "word": "rikuzenhasikami"
+    },
+    { "info": "大谷まち", "info2": "おおやまち", "word": "ooyamati" },
+    { "info": "大谷海岸", "info2": "おおやかいがん", "word": "ooyakaigann" },
+    { "info": "小金沢", "info2": "こがねざわ", "word": "koganezawa" },
+    { "info": "本吉", "info2": "もとよし", "word": "motoyosi" },
+    {
+      "info": "陸前小泉",
+      "info2": "りくぜんこいずみ",
+      "word": "rikuzenkoizumi"
+    },
+    { "info": "蔵内", "info2": "くらうち", "word": "kurauti" },
+    { "info": "陸前港", "info2": "りくぜんみなと", "word": "rikuzenminato" },
+    { "info": "歌津", "info2": "うたつ", "word": "utatu" },
+    { "info": "清水浜", "info2": "しずはま", "word": "sizuhama" },
+    {
+      "info": "志津川中央団地",
+      "info2": "しづがわちゅうおうだんち",
+      "word": "sidugawatyuuoudanti"
+    },
+    {
+      "info": "南三陸町役場・病院前",
+      "info2": "みなみさんりくちょうやくばびょういんまえ",
+      "word": "minamisanrikutyouyakubabyouinmae"
+    },
+    { "info": "志津川", "info2": "しづがわ", "word": "sidugawa" },
+    { "info": "陸前戸倉", "info2": "りくぜんとぐら", "word": "rikuzentogura" },
+    {
+      "info": "陸前横山",
+      "info2": "りくぜんよこやま",
+      "word": "rikuzenyokoyama"
+    },
+    { "info": "柳津", "info2": "やないづ", "word": "yanaidu" }
+  ]
+}
