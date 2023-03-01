@@ -1,0 +1,87 @@
+{
+  "id": "1010775",
+  "title": "ＪＲ大船渡線ＢＲＴの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-01",
+  "updatedAt": "2023-03-01",
+  "optional": { "cd": "775" },
+  "words": [
+    { "info": "盛", "info2": "さかり", "word": "sakari" },
+    { "info": "田茂山", "info2": "たもやま", "word": "tamoyama" },
+    { "info": "地ノ森", "info2": "じのもり", "word": "jinomori" },
+    { "info": "大船渡", "info2": "おおふなと", "word": "oohunato" },
+    {
+      "info": "大船渡魚市場前",
+      "info2": "おおふなとうおいちばまえ",
+      "word": "oohunatouoitibamae"
+    },
+    { "info": "下船渡", "info2": "しもふなと", "word": "simohunato" },
+    {
+      "info": "大船渡丸森",
+      "info2": "おおふなとまるもり",
+      "word": "oohunatomarumori"
+    },
+    { "info": "細浦", "info2": "ほそうら", "word": "hosoura" },
+    {
+      "info": "碁石海岸口",
+      "info2": "ごいしかいがんぐち",
+      "word": "goisikaiganguti"
+    },
+    { "info": "小友", "info2": "おとも", "word": "otomo" },
+    { "info": "西下", "info2": "にしした", "word": "nisisita" },
+    { "info": "脇ノ沢", "info2": "わきのさわ", "word": "wakinosawa" },
+    {
+      "info": "高田病院",
+      "info2": "たかたびょういん",
+      "word": "takatabyouinn"
+    },
+    {
+      "info": "高田高校前",
+      "info2": "たかたこうこうまえ",
+      "word": "takatakoukoumae"
+    },
+    {
+      "info": "まちなか陸前高田",
+      "info2": "まちなかりくぜんたかた",
+      "word": "matinakarikuzentakata"
+    },
+    { "info": "陸前高田", "info2": "りくぜんたかた", "word": "rikuzentakata" },
+    {
+      "info": "奇跡の一本松",
+      "info2": "きせきのいっぽんまつ",
+      "word": "kisekinoipponmatu"
+    },
+    {
+      "info": "陸前今泉",
+      "info2": "りくぜんいまいずみ",
+      "word": "rikuzennimaizumi"
+    },
+    { "info": "長部", "info2": "おさべ", "word": "osabe" },
+    {
+      "info": "唐桑大沢",
+      "info2": "からくわおおさわ",
+      "word": "karakuwaoosawa"
+    },
+    {
+      "info": "八幡大橋",
+      "info2": "はちまんおおはし",
+      "word": "hatimannoohasi"
+    },
+    {
+      "info": "鹿折唐桑",
+      "info2": "ししおりからくわ",
+      "word": "sisiorikarakuwa"
+    },
+    {
+      "info": "内湾入口",
+      "info2": "ないわんいりぐち",
+      "word": "naiwanniriguti"
+    },
+    { "info": "気仙沼", "info2": "けせんぬま", "word": "kesennnuma" }
+  ]
+}
