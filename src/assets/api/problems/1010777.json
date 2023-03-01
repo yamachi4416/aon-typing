@@ -1,0 +1,23 @@
+{
+  "id": "1010777",
+  "title": "ＪＲ大船渡線ＢＲＴ(陸前矢作－陸前高田)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-01",
+  "updatedAt": "2023-03-01",
+  "optional": { "cd": "777" },
+  "words": [
+    { "info": "陸前高田", "info2": "りくぜんたかた", "word": "rikuzentakata" },
+    {
+      "info": "栃ケ沢公園",
+      "info2": "とちがさわこうえん",
+      "word": "totigasawakouenn"
+    },
+    { "info": "竹駒", "info2": "たけこま", "word": "takekoma" },
+    { "info": "陸前矢作", "info2": "りくぜんやはぎ", "word": "rikuzenyahagi" }
+  ]
+}

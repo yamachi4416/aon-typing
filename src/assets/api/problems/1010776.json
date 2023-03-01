@@ -1,0 +1,21 @@
+{
+  "id": "1010776",
+  "title": "ＪＲ大船渡線ＢＲＴ(鹿折唐桑－上鹿折)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-01",
+  "updatedAt": "2023-03-01",
+  "optional": { "cd": "776" },
+  "words": [
+    { "info": "上鹿折", "info2": "かみししおり", "word": "kamisisiori" },
+    {
+      "info": "鹿折唐桑",
+      "info2": "ししおりからくわ",
+      "word": "sisiorikarakuwa"
+    }
+  ]
+}
