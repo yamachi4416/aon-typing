@@ -1,0 +1,38 @@
+{
+  "id": "1010493",
+  "title": "江ノ島電鉄の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-02",
+  "updatedAt": "2023-03-02",
+  "optional": { "cd": "493" },
+  "words": [
+    { "info": "鎌倉", "info2": "かまくら", "word": "kamakura" },
+    { "info": "和田塚", "info2": "わだづか", "word": "wadaduka" },
+    { "info": "由比ケ浜", "info2": "ゆいがはま", "word": "yuigahama" },
+    { "info": "長谷", "info2": "はせ", "word": "hase" },
+    { "info": "極楽寺", "info2": "ごくらくじ", "word": "gokurakuji" },
+    { "info": "稲村ケ崎", "info2": "いなむらがさき", "word": "inamuragasaki" },
+    { "info": "七里ケ浜", "info2": "しちりがはま", "word": "sitirigahama" },
+    {
+      "info": "鎌倉高校前",
+      "info2": "かまくらこうこうまえ",
+      "word": "kamakurakoukoumae"
+    },
+    { "info": "腰越", "info2": "こしごえ", "word": "kosigoe" },
+    { "info": "江ノ島", "info2": "えのしま", "word": "enosima" },
+    {
+      "info": "湘南海岸公園",
+      "info2": "しょうなんかいがんこうえん",
+      "word": "syounankaigankouenn"
+    },
+    { "info": "鵠沼", "info2": "くげぬま", "word": "kugenuma" },
+    { "info": "柳小路", "info2": "やなぎこうじ", "word": "yanagikouji" },
+    { "info": "石上", "info2": "いしがみ", "word": "isigami" },
+    { "info": "藤沢", "info2": "ふじさわ", "word": "hujisawa" }
+  ]
+}
