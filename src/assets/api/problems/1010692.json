@@ -1,0 +1,59 @@
+{
+  "id": "1010692",
+  "title": "つくばエクスプレスの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-03",
+  "updatedAt": "2023-03-03",
+  "optional": { "cd": "692" },
+  "words": [
+    { "info": "つくば", "info2": "つくば", "word": "tukuba" },
+    {
+      "info": "研究学園",
+      "info2": "けんきゅうがくえん",
+      "word": "kenkyuugakuenn"
+    },
+    {
+      "info": "万博記念公園",
+      "info2": "ばんぱくきねんこうえん",
+      "word": "banpakukinenkouenn"
+    },
+    { "info": "みどりの", "info2": "みどりの", "word": "midorino" },
+    { "info": "みらい平", "info2": "みらいだいら", "word": "miraidaira" },
+    { "info": "守谷", "info2": "もりや", "word": "moriya" },
+    { "info": "柏たなか", "info2": "かしわたなか", "word": "kasiwatanaka" },
+    {
+      "info": "柏の葉キャンパス",
+      "info2": "かしわのはきゃんぱす",
+      "word": "kasiwanohakyanpasu"
+    },
+    {
+      "info": "流山おおたかの森",
+      "info2": "ながれやまおおたかのもり",
+      "word": "nagareyamaootakanomori"
+    },
+    {
+      "info": "流山セントラルパーク",
+      "info2": "ながれやませんとらるぱーく",
+      "word": "nagareyamasentorarupa-ku"
+    },
+    {
+      "info": "南流山",
+      "info2": "みなみながれやま",
+      "word": "minaminagareyama"
+    },
+    { "info": "三郷中央", "info2": "みさとちゅうおう", "word": "misatotyuuou" },
+    { "info": "八潮", "info2": "やしお", "word": "yasio" },
+    { "info": "六町", "info2": "ろくちょう", "word": "rokutyou" },
+    { "info": "青井", "info2": "あおい", "word": "aoi" },
+    { "info": "北千住", "info2": "きたせんじゅ", "word": "kitasenju" },
+    { "info": "南千住", "info2": "みなみせんじゅ", "word": "minamisenju" },
+    { "info": "浅草", "info2": "あさくさ", "word": "asakusa" },
+    { "info": "新御徒町", "info2": "しんおかちまち", "word": "sinnokatimati" },
+    { "info": "秋葉原", "info2": "あきはばら", "word": "akihabara" }
+  ]
+}
