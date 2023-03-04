@@ -1,0 +1,31 @@
+{
+  "id": "1010313",
+  "title": "小田急多摩線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-04",
+  "updatedAt": "2023-03-04",
+  "optional": { "cd": "313" },
+  "words": [
+    { "info": "唐木田", "info2": "からきだ", "word": "karakida" },
+    {
+      "info": "小田急多摩センター",
+      "info2": "おだきゅうたませんたー",
+      "word": "odakyuutamasenta-"
+    },
+    {
+      "info": "小田急永山",
+      "info2": "おだきゅうながやま",
+      "word": "odakyuunagayama"
+    },
+    { "info": "はるひ野", "info2": "はるひの", "word": "haruhino" },
+    { "info": "黒川", "info2": "くろかわ", "word": "kurokawa" },
+    { "info": "栗平", "info2": "くりひら", "word": "kurihira" },
+    { "info": "五月台", "info2": "さつきだい", "word": "satukidai" },
+    { "info": "新百合ケ丘", "info2": "しんゆりがおか", "word": "sinyurigaoka" }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "1010311",
+  "title": "小田急江ノ島線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-04",
+  "updatedAt": "2023-03-04",
+  "optional": { "cd": "311" },
+  "words": [
+    {
+      "info": "片瀬江ノ島",
+      "info2": "かたせえのしま",
+      "word": "kataseenosima"
+    },
+    {
+      "info": "鵠沼海岸",
+      "info2": "くげぬまかいがん",
+      "word": "kugenumakaigann"
+    },
+    { "info": "本鵠沼", "info2": "ほんくげぬま", "word": "honkugenuma" },
+    { "info": "藤沢", "info2": "ふじさわ", "word": "hujisawa" },
+    {
+      "info": "藤沢本町",
+      "info2": "ふじさわほんまち",
+      "word": "hujisawahonmati"
+    },
+    { "info": "善行", "info2": "ぜんぎょう", "word": "zengyou" },
+    {
+      "info": "六会日大前",
+      "info2": "むつあいにちだいまえ",
+      "word": "mutuainitidaimae"
+    },
+    { "info": "湘南台", "info2": "しょうなんだい", "word": "syounandai" },
+    { "info": "長後", "info2": "ちょうご", "word": "tyougo" },
+    { "info": "高座渋谷", "info2": "こうざしぶや", "word": "kouzasibuya" },
+    { "info": "桜ケ丘", "info2": "さくらがおか", "word": "sakuragaoka" },
+    { "info": "大和", "info2": "やまと", "word": "yamato" },
+    { "info": "鶴間", "info2": "つるま", "word": "turuma" },
+    { "info": "南林間", "info2": "みなみりんかん", "word": "minamirinkann" },
+    {
+      "info": "中央林間",
+      "info2": "ちゅうおうりんかん",
+      "word": "tyuuourinkann"
+    },
+    { "info": "東林間", "info2": "ひがしりんかん", "word": "higasirinkann" },
+    { "info": "相模大野", "info2": "さがみおおの", "word": "sagamioono" }
+  ]
+}
