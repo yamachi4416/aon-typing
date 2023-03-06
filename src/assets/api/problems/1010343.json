@@ -1,0 +1,40 @@
+{
+  "id": "1010343",
+  "title": "日暮里・舎人ライナーの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-06",
+  "updatedAt": "2023-03-06",
+  "optional": { "cd": "343" },
+  "words": [
+    {
+      "info": "見沼代親水公園",
+      "info2": "みぬまだいしんすいこうえん",
+      "word": "minumadaisinsuikouenn"
+    },
+    { "info": "舎人", "info2": "とねり", "word": "toneri" },
+    { "info": "舎人公園", "info2": "とねりこうえん", "word": "tonerikouenn" },
+    { "info": "谷在家", "info2": "やざいけ", "word": "yazaike" },
+    {
+      "info": "西新井大師西",
+      "info2": "にしあらいだいしにし",
+      "word": "nisiaraidaisinisi"
+    },
+    { "info": "江北", "info2": "こうほく", "word": "kouhoku" },
+    { "info": "高野", "info2": "こうや", "word": "kouya" },
+    { "info": "扇大橋", "info2": "おうぎおおはし", "word": "ougioohasi" },
+    { "info": "足立小台", "info2": "あだちおだい", "word": "adatiodai" },
+    { "info": "熊野前", "info2": "くまのまえ", "word": "kumanomae" },
+    {
+      "info": "赤土小学校前",
+      "info2": "あかどしょうがっこうまえ",
+      "word": "akadosyougakkoumae"
+    },
+    { "info": "西日暮里", "info2": "にしにっぽり", "word": "nisinippori" },
+    { "info": "日暮里", "info2": "にっぽり", "word": "nippori" }
+  ]
+}
