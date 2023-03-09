@@ -1,0 +1,51 @@
+{
+  "id": "1010667",
+  "title": "ゆりかもめの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-09",
+  "updatedAt": "2023-03-09",
+  "optional": { "cd": "667" },
+  "words": [
+    { "info": "豊洲", "info2": "とよす", "word": "toyosu" },
+    { "info": "新豊洲", "info2": "しんとよす", "word": "sintoyosu" },
+    { "info": "市場前", "info2": "しじょうまえ", "word": "sijoumae" },
+    {
+      "info": "有明テニスの森",
+      "info2": "ありあけてにすのもり",
+      "word": "ariaketenisunomori"
+    },
+    { "info": "有明", "info2": "ありあけ", "word": "ariake" },
+    {
+      "info": "東京ビッグサイト",
+      "info2": "とうきょうびっぐさいと",
+      "word": "toukyoubiggusaito"
+    },
+    { "info": "青海", "info2": "あおみ", "word": "aomi" },
+    {
+      "info": "テレコムセンター",
+      "info2": "てれこむせんたー",
+      "word": "terekomusenta-"
+    },
+    {
+      "info": "東京国際クルーズターミナル",
+      "info2": "とうきょうこくさいくるーずたーみなる",
+      "word": "toukyoukokusaikuru-zuta-minaru"
+    },
+    { "info": "台場", "info2": "だいば", "word": "daiba" },
+    {
+      "info": "お台場海浜公園",
+      "info2": "おだいばかいひんこうえん",
+      "word": "odaibakaihinkouenn"
+    },
+    { "info": "芝浦ふ頭", "info2": "しばうらふとう", "word": "sibaurahutou" },
+    { "info": "日の出", "info2": "ひので", "word": "hinode" },
+    { "info": "竹芝", "info2": "たけしば", "word": "takesiba" },
+    { "info": "汐留", "info2": "しおどめ", "word": "siodome" },
+    { "info": "新橋", "info2": "しんばし", "word": "sinbasi" }
+  ]
+}
