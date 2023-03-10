@@ -1,0 +1,29 @@
+{
+  "id": "1010486",
+  "title": "いすみ鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-10",
+  "updatedAt": "2023-03-10",
+  "optional": { "cd": "486" },
+  "words": [
+    { "info": "上総中野", "info2": "かずさなかの", "word": "kazusanakano" },
+    { "info": "西畑", "info2": "にしはた", "word": "nisihata" },
+    { "info": "総元", "info2": "ふさもと", "word": "husamoto" },
+    { "info": "久我原", "info2": "くがはら", "word": "kugahara" },
+    { "info": "東総元", "info2": "ひがしふさもと", "word": "higasihusamoto" },
+    { "info": "小谷松", "info2": "こやまつ", "word": "koyamatu" },
+    { "info": "大多喜", "info2": "おおたき", "word": "ootaki" },
+    { "info": "城見ケ丘", "info2": "しろみがおか", "word": "siromigaoka" },
+    { "info": "上総中川", "info2": "かずさなかがわ", "word": "kazusanakagawa" },
+    { "info": "国吉", "info2": "くによし", "word": "kuniyosi" },
+    { "info": "新田野", "info2": "にったの", "word": "nittano" },
+    { "info": "上総東", "info2": "かずさあずま", "word": "kazusaazuma" },
+    { "info": "西大原", "info2": "にしおおはら", "word": "nisioohara" },
+    { "info": "大原", "info2": "おおはら", "word": "oohara" }
+  ]
+}
