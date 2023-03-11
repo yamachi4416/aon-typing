@@ -1,0 +1,32 @@
+{
+  "id": "1010476",
+  "title": "ニューシャトルの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-11",
+  "updatedAt": "2023-03-11",
+  "optional": { "cd": "476" },
+  "words": [
+    { "info": "内宿", "info2": "うちじゅく", "word": "utijuku" },
+    { "info": "羽貫", "info2": "はぬき", "word": "hanuki" },
+    { "info": "伊奈中央", "info2": "いなちゅうおう", "word": "inatyuuou" },
+    { "info": "志久", "info2": "しく", "word": "siku" },
+    { "info": "丸山", "info2": "まるやま", "word": "maruyama" },
+    { "info": "沼南", "info2": "しょうなん", "word": "syounann" },
+    { "info": "原市", "info2": "はらいち", "word": "haraiti" },
+    { "info": "吉野原", "info2": "よしのはら", "word": "yosinohara" },
+    { "info": "今羽", "info2": "こんば", "word": "konba" },
+    { "info": "東宮原", "info2": "ひがしみやはら", "word": "higasimiyahara" },
+    { "info": "加茂宮", "info2": "かものみや", "word": "kamonomiya" },
+    {
+      "info": "鉄道博物館",
+      "info2": "てつどうはくぶつかん",
+      "word": "tetudouhakubutukann"
+    },
+    { "info": "大宮", "info2": "おおみや", "word": "oomiya" }
+  ]
+}
