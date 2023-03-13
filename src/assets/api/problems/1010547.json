@@ -1,0 +1,33 @@
+{
+  "id": "1010547",
+  "title": "伊勢鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-14",
+  "updatedAt": "2023-03-14",
+  "optional": { "cd": "547" },
+  "words": [
+    { "info": "津", "info2": "つ", "word": "tu" },
+    {
+      "info": "東一身田",
+      "info2": "ひがしいしんでん",
+      "word": "higasiisindenn"
+    },
+    { "info": "河芸", "info2": "かわげ", "word": "kawage" },
+    { "info": "伊勢上野", "info2": "いせうえの", "word": "iseueno" },
+    { "info": "中瀬古", "info2": "なかせこ", "word": "nakaseko" },
+    { "info": "徳田", "info2": "とくだ", "word": "tokuda" },
+    {
+      "info": "鈴鹿サーキット稲生",
+      "info2": "すずかさーきっといのう",
+      "word": "suzukasa-kittoinou"
+    },
+    { "info": "玉垣", "info2": "たまがき", "word": "tamagaki" },
+    { "info": "鈴鹿", "info2": "すずか", "word": "suzuka" },
+    { "info": "河原田", "info2": "かわらだ", "word": "kawarada" }
+  ]
+}
