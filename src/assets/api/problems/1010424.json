@@ -1,0 +1,26 @@
+{
+  "id": "1010424",
+  "title": "阪神なんば線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-17",
+  "updatedAt": "2023-03-17",
+  "optional": { "cd": "424" },
+  "words": [
+    { "info": "大阪難波", "info2": "おおさかなんば", "word": "oosakananba" },
+    { "info": "桜川", "info2": "さくらがわ", "word": "sakuragawa" },
+    { "info": "ドーム前", "info2": "どーむまえ", "word": "do-mumae" },
+    { "info": "九条", "info2": "くじょう", "word": "kujou" },
+    { "info": "西九条", "info2": "にしくじょう", "word": "nisikujou" },
+    { "info": "千鳥橋", "info2": "ちどりばし", "word": "tidoribasi" },
+    { "info": "伝法", "info2": "でんぽう", "word": "denpou" },
+    { "info": "福", "info2": "ふく", "word": "huku" },
+    { "info": "出来島", "info2": "できじま", "word": "dekijima" },
+    { "info": "大物", "info2": "だいもつ", "word": "daimotu" },
+    { "info": "尼崎", "info2": "あまがさき", "word": "amagasaki" }
+  ]
+}
