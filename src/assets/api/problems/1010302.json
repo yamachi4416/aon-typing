@@ -1,0 +1,63 @@
+{
+  "id": "1010302",
+  "title": "京王線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-19",
+  "updatedAt": "2023-03-19",
+  "optional": { "cd": "302" },
+  "words": [
+    {
+      "info": "京王八王子",
+      "info2": "けいおうはちおうじ",
+      "word": "keiouhatiouji"
+    },
+    { "info": "北野", "info2": "きたの", "word": "kitano" },
+    { "info": "長沼", "info2": "ながぬま", "word": "naganuma" },
+    {
+      "info": "平山城址公園",
+      "info2": "ひらやまじょうしこうえん",
+      "word": "hirayamajousikouenn"
+    },
+    { "info": "南平", "info2": "みなみだいら", "word": "minamidaira" },
+    { "info": "高幡不動", "info2": "たかはたふどう", "word": "takahatahudou" },
+    { "info": "百草園", "info2": "もぐさえん", "word": "mogusaenn" },
+    {
+      "info": "聖蹟桜ケ丘",
+      "info2": "せいせきさくらがおか",
+      "word": "seisekisakuragaoka"
+    },
+    { "info": "中河原", "info2": "なかがわら", "word": "nakagawara" },
+    { "info": "分倍河原", "info2": "ぶばいがわら", "word": "bubaigawara" },
+    { "info": "府中", "info2": "ふちゅう", "word": "hutyuu" },
+    { "info": "東府中", "info2": "ひがしふちゅう", "word": "higasihutyuu" },
+    { "info": "多磨霊園", "info2": "たまれいえん", "word": "tamareienn" },
+    { "info": "武蔵野台", "info2": "むさしのだい", "word": "musasinodai" },
+    { "info": "飛田給", "info2": "とびたきゅう", "word": "tobitakyuu" },
+    { "info": "西調布", "info2": "にしちょうふ", "word": "nisityouhu" },
+    { "info": "調布", "info2": "ちょうふ", "word": "tyouhu" },
+    { "info": "布田", "info2": "ふだ", "word": "huda" },
+    { "info": "国領", "info2": "こくりょう", "word": "kokuryou" },
+    { "info": "柴崎", "info2": "しばさき", "word": "sibasaki" },
+    { "info": "つつじケ丘", "info2": "つつじがおか", "word": "tutujigaoka" },
+    { "info": "仙川", "info2": "せんがわ", "word": "sengawa" },
+    {
+      "info": "千歳烏山",
+      "info2": "ちとせからすやま",
+      "word": "titosekarasuyama"
+    },
+    { "info": "芦花公園", "info2": "ろかこうえん", "word": "rokakouenn" },
+    { "info": "八幡山", "info2": "はちまんやま", "word": "hatimanyama" },
+    { "info": "上北沢", "info2": "かみきたざわ", "word": "kamikitazawa" },
+    { "info": "桜上水", "info2": "さくらじょうすい", "word": "sakurajousui" },
+    { "info": "下高井戸", "info2": "しもたかいど", "word": "simotakaido" },
+    { "info": "明大前", "info2": "めいだいまえ", "word": "meidaimae" },
+    { "info": "代田橋", "info2": "だいたばし", "word": "daitabasi" },
+    { "info": "笹塚", "info2": "ささづか", "word": "sasaduka" },
+    { "info": "新宿", "info2": "しんじゅく", "word": "sinjuku" }
+  ]
+}
