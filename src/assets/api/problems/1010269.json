@@ -1,0 +1,17 @@
+{
+  "id": "1010269",
+  "title": "東武大師線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-25",
+  "updatedAt": "2023-03-25",
+  "optional": { "cd": "269" },
+  "words": [
+    { "info": "大師前", "info2": "だいしまえ", "word": "daisimae" },
+    { "info": "西新井", "info2": "にしあらい", "word": "nisiarai" }
+  ]
+}
