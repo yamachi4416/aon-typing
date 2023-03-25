@@ -1,0 +1,48 @@
+{
+  "id": "1010288",
+  "title": "西武新宿線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-25",
+  "updatedAt": "2023-03-25",
+  "optional": { "cd": "288" },
+  "words": [
+    { "info": "本川越", "info2": "ほんかわごえ", "word": "honkawagoe" },
+    { "info": "南大塚", "info2": "みなみおおつか", "word": "minamiootuka" },
+    { "info": "新狭山", "info2": "しんさやま", "word": "sinsayama" },
+    { "info": "狭山市", "info2": "さやまし", "word": "sayamasi" },
+    { "info": "入曽", "info2": "いりそ", "word": "iriso" },
+    { "info": "新所沢", "info2": "しんところざわ", "word": "sintokorozawa" },
+    { "info": "航空公園", "info2": "こうくうこうえん", "word": "koukuukouenn" },
+    { "info": "所沢", "info2": "ところざわ", "word": "tokorozawa" },
+    { "info": "東村山", "info2": "ひがしむらやま", "word": "higasimurayama" },
+    { "info": "久米川", "info2": "くめがわ", "word": "kumegawa" },
+    { "info": "小平", "info2": "こだいら", "word": "kodaira" },
+    { "info": "花小金井", "info2": "はなこがねい", "word": "hanakoganei" },
+    { "info": "田無", "info2": "たなし", "word": "tanasi" },
+    { "info": "西武柳沢", "info2": "せいぶやぎさわ", "word": "seibuyagisawa" },
+    { "info": "東伏見", "info2": "ひがしふしみ", "word": "higasihusimi" },
+    { "info": "武蔵関", "info2": "むさしせき", "word": "musasiseki" },
+    { "info": "上石神井", "info2": "かみしゃくじい", "word": "kamisyakujii" },
+    { "info": "上井草", "info2": "かみいぐさ", "word": "kamiigusa" },
+    { "info": "井荻", "info2": "いおぎ", "word": "iogi" },
+    { "info": "下井草", "info2": "しもいぐさ", "word": "simoigusa" },
+    { "info": "鷺ノ宮", "info2": "さぎのみや", "word": "saginomiya" },
+    { "info": "都立家政", "info2": "とりつかせい", "word": "toritukasei" },
+    { "info": "野方", "info2": "のがた", "word": "nogata" },
+    { "info": "沼袋", "info2": "ぬまぶくろ", "word": "numabukuro" },
+    {
+      "info": "新井薬師前",
+      "info2": "あらいやくしまえ",
+      "word": "araiyakusimae"
+    },
+    { "info": "中井", "info2": "なかい", "word": "nakai" },
+    { "info": "下落合", "info2": "しもおちあい", "word": "simootiai" },
+    { "info": "高田馬場", "info2": "たかだのばば", "word": "takadanobaba" },
+    { "info": "西武新宿", "info2": "せいぶしんじゅく", "word": "seibusinjuku" }
+  ]
+}
