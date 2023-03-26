@@ -1,0 +1,22 @@
+{
+  "id": "1010285",
+  "title": "西武有楽町線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-26",
+  "updatedAt": "2023-03-26",
+  "optional": { "cd": "285" },
+  "words": [
+    {
+      "info": "小竹向原",
+      "info2": "こたけむかいはら",
+      "word": "kotakemukaihara"
+    },
+    { "info": "新桜台", "info2": "しんさくらだい", "word": "sinsakuradai" },
+    { "info": "練馬", "info2": "ねりま", "word": "nerima" }
+  ]
+}
