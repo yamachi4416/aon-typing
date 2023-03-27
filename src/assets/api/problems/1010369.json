@@ -1,0 +1,83 @@
+{
+  "id": "1010369",
+  "title": "近鉄大阪線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-27",
+  "updatedAt": "2023-03-27",
+  "optional": { "cd": "369" },
+  "words": [
+    { "info": "伊勢中川", "info2": "いせなかがわ", "word": "isenakagawa" },
+    { "info": "川合高岡", "info2": "かわいたかおか", "word": "kawaitakaoka" },
+    { "info": "伊勢石橋", "info2": "いせいしばし", "word": "iseisibasi" },
+    { "info": "大三", "info2": "おおみつ", "word": "oomitu" },
+    {
+      "info": "榊原温泉口",
+      "info2": "さかきばらおんせんぐち",
+      "word": "sakakibaraonsenguti"
+    },
+    { "info": "東青山", "info2": "ひがしあおやま", "word": "higasiaoyama" },
+    { "info": "西青山", "info2": "にしあおやま", "word": "nisiaoyama" },
+    { "info": "伊賀上津", "info2": "いがこうづ", "word": "igakoudu" },
+    { "info": "青山町", "info2": "あおやまちょう", "word": "aoyamatyou" },
+    { "info": "伊賀神戸", "info2": "いがかんべ", "word": "igakanbe" },
+    { "info": "美旗", "info2": "みはた", "word": "mihata" },
+    { "info": "桔梗が丘", "info2": "ききょうがおか", "word": "kikyougaoka" },
+    { "info": "名張", "info2": "なばり", "word": "nabari" },
+    { "info": "赤目口", "info2": "あかめぐち", "word": "akameguti" },
+    { "info": "三本松", "info2": "さんぼんまつ", "word": "sanbonmatu" },
+    {
+      "info": "室生口大野",
+      "info2": "むろうぐちおおの",
+      "word": "murougutioono"
+    },
+    { "info": "榛原", "info2": "はいばら", "word": "haibara" },
+    { "info": "長谷寺", "info2": "はせでら", "word": "hasedera" },
+    { "info": "大和朝倉", "info2": "やまとあさくら", "word": "yamatoasakura" },
+    { "info": "桜井", "info2": "さくらい", "word": "sakurai" },
+    { "info": "大福", "info2": "だいふく", "word": "daihuku" },
+    { "info": "耳成", "info2": "みみなし", "word": "miminasi" },
+    { "info": "大和八木", "info2": "やまとやぎ", "word": "yamatoyagi" },
+    { "info": "真菅", "info2": "ますが", "word": "masuga" },
+    { "info": "松塚", "info2": "まつづか", "word": "matuduka" },
+    { "info": "大和高田", "info2": "やまとたかだ", "word": "yamatotakada" },
+    { "info": "築山", "info2": "つきやま", "word": "tukiyama" },
+    { "info": "五位堂", "info2": "ごいどう", "word": "goidou" },
+    { "info": "近鉄下田", "info2": "きんてつしもだ", "word": "kintetusimoda" },
+    { "info": "二上", "info2": "にじょう", "word": "nijou" },
+    { "info": "関屋", "info2": "せきや", "word": "sekiya" },
+    {
+      "info": "大阪教育大前",
+      "info2": "おおさかきょういくだいまえ",
+      "word": "oosakakyouikudaimae"
+    },
+    { "info": "河内国分", "info2": "かわちこくぶ", "word": "kawatikokubu" },
+    { "info": "安堂", "info2": "あんどう", "word": "andou" },
+    { "info": "堅下", "info2": "かたしも", "word": "katasimo" },
+    { "info": "法善寺", "info2": "ほうぜんじ", "word": "houzenji" },
+    { "info": "恩智", "info2": "おんぢ", "word": "ondi" },
+    { "info": "高安", "info2": "たかやす", "word": "takayasu" },
+    { "info": "河内山本", "info2": "かわちやまもと", "word": "kawatiyamamoto" },
+    { "info": "近鉄八尾", "info2": "きんてつやお", "word": "kintetuyao" },
+    {
+      "info": "久宝寺口",
+      "info2": "きゅうほうじぐち",
+      "word": "kyuuhoujiguti"
+    },
+    { "info": "弥刀", "info2": "みと", "word": "mito" },
+    { "info": "長瀬", "info2": "ながせ", "word": "nagase" },
+    { "info": "俊徳道", "info2": "しゅんとくみち", "word": "syuntokumiti" },
+    { "info": "布施", "info2": "ふせ", "word": "huse" },
+    { "info": "今里", "info2": "いまざと", "word": "imazato" },
+    { "info": "鶴橋", "info2": "つるはし", "word": "turuhasi" },
+    {
+      "info": "大阪上本町",
+      "info2": "おおさかうえほんまち",
+      "word": "oosakauehonmati"
+    }
+  ]
+}
