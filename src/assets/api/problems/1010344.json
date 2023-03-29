@@ -1,0 +1,33 @@
+{
+  "id": "1010344",
+  "title": "相鉄本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-03-29",
+  "updatedAt": "2023-03-29",
+  "optional": { "cd": "344" },
+  "words": [
+    { "info": "海老名", "info2": "えびな", "word": "ebina" },
+    { "info": "かしわ台", "info2": "かしわだい", "word": "kasiwadai" },
+    { "info": "さがみ野", "info2": "さがみの", "word": "sagamino" },
+    { "info": "相模大塚", "info2": "さがみおおつか", "word": "sagamiootuka" },
+    { "info": "大和", "info2": "やまと", "word": "yamato" },
+    { "info": "瀬谷", "info2": "せや", "word": "seya" },
+    { "info": "三ツ境", "info2": "みつきょう", "word": "mitukyou" },
+    { "info": "希望ケ丘", "info2": "きぼうがおか", "word": "kibougaoka" },
+    { "info": "二俣川", "info2": "ふたまたがわ", "word": "hutamatagawa" },
+    { "info": "鶴ケ峰", "info2": "つるがみね", "word": "turugamine" },
+    { "info": "西谷", "info2": "にしや", "word": "nisiya" },
+    { "info": "上星川", "info2": "かみほしかわ", "word": "kamihosikawa" },
+    { "info": "和田町", "info2": "わだまち", "word": "wadamati" },
+    { "info": "星川", "info2": "ほしかわ", "word": "hosikawa" },
+    { "info": "天王町", "info2": "てんのうちょう", "word": "tennnoutyou" },
+    { "info": "西横浜", "info2": "にしよこはま", "word": "nisiyokohama" },
+    { "info": "平沼橋", "info2": "ひらぬまばし", "word": "hiranumabasi" },
+    { "info": "横浜", "info2": "よこはま", "word": "yokohama" }
+  ]
+}
