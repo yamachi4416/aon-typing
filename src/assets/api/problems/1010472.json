@@ -1,0 +1,32 @@
+{
+  "id": "1010472",
+  "title": "わたらせ渓谷線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-02",
+  "updatedAt": "2023-04-02",
+  "optional": { "cd": "472" },
+  "words": [
+    { "info": "間藤", "info2": "まとう", "word": "matou" },
+    { "info": "足尾", "info2": "あしお", "word": "asio" },
+    { "info": "通洞", "info2": "つうどう", "word": "tuudou" },
+    { "info": "原向", "info2": "はらむこう", "word": "haramukou" },
+    { "info": "沢入", "info2": "そうり", "word": "souri" },
+    { "info": "神戸", "info2": "ごうど", "word": "goudo" },
+    { "info": "小中", "info2": "こなか", "word": "konaka" },
+    { "info": "中野", "info2": "なかの", "word": "nakano" },
+    { "info": "花輪", "info2": "はなわ", "word": "hanawa" },
+    { "info": "水沼", "info2": "みずぬま", "word": "mizunuma" },
+    { "info": "本宿", "info2": "もとじゅく", "word": "motojuku" },
+    { "info": "上神梅", "info2": "かみかんばい", "word": "kamikanbai" },
+    { "info": "大間々", "info2": "おおまま", "word": "oomama" },
+    { "info": "運動公園", "info2": "うんどうこうえん", "word": "undoukouenn" },
+    { "info": "相老", "info2": "あいおい", "word": "aioi" },
+    { "info": "下新田", "info2": "しもしんでん", "word": "simosindenn" },
+    { "info": "桐生", "info2": "きりゅう", "word": "kiryuu" }
+  ]
+}
