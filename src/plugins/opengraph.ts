@@ -41,7 +41,7 @@ export default defineNuxtPlugin((nuxtApp) => {
           if (tag.tag === 'title') {
             addTags.push({
               tag: 'meta',
-              props: { property: 'og:title', content: tag.children },
+              props: { property: 'og:title', content: tag.textContent ?? '' },
             })
           } else if (tag.props?.name === 'description') {
             addTags.push({
