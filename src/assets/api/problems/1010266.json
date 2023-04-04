@@ -1,0 +1,60 @@
+{
+  "id": "1010266",
+  "title": "東武スカイツリーライン(浅草－東武動物公園)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-04",
+  "updatedAt": "2023-04-04",
+  "optional": { "cd": "266" },
+  "words": [
+    {
+      "info": "東武動物公園",
+      "info2": "とうぶどうぶつこうえん",
+      "word": "toubudoubutukouenn"
+    },
+    { "info": "姫宮", "info2": "ひめみや", "word": "himemiya" },
+    { "info": "北春日部", "info2": "きたかすかべ", "word": "kitakasukabe" },
+    { "info": "春日部", "info2": "かすかべ", "word": "kasukabe" },
+    { "info": "一ノ割", "info2": "いちのわり", "word": "itinowari" },
+    { "info": "武里", "info2": "たけさと", "word": "takesato" },
+    { "info": "せんげん台", "info2": "せんげんだい", "word": "sengendai" },
+    { "info": "大袋", "info2": "おおぶくろ", "word": "oobukuro" },
+    { "info": "北越谷", "info2": "きたこしがや", "word": "kitakosigaya" },
+    { "info": "越谷", "info2": "こしがや", "word": "kosigaya" },
+    { "info": "新越谷", "info2": "しんこしがや", "word": "sinkosigaya" },
+    { "info": "蒲生", "info2": "がもう", "word": "gamou" },
+    { "info": "新田", "info2": "しんでん", "word": "sindenn" },
+    {
+      "info": "獨協大学前",
+      "info2": "どっきょうだいがくまえ",
+      "word": "dokkyoudaigakumae"
+    },
+    { "info": "草加", "info2": "そうか", "word": "souka" },
+    { "info": "谷塚", "info2": "やつか", "word": "yatuka" },
+    { "info": "竹ノ塚", "info2": "たけのつか", "word": "takenotuka" },
+    { "info": "西新井", "info2": "にしあらい", "word": "nisiarai" },
+    { "info": "梅島", "info2": "うめじま", "word": "umejima" },
+    { "info": "五反野", "info2": "ごたんの", "word": "gotannno" },
+    { "info": "小菅", "info2": "こすげ", "word": "kosuge" },
+    { "info": "北千住", "info2": "きたせんじゅ", "word": "kitasenju" },
+    { "info": "牛田", "info2": "うしだ", "word": "usida" },
+    { "info": "堀切", "info2": "ほりきり", "word": "horikiri" },
+    { "info": "鐘ケ淵", "info2": "かねがふち", "word": "kanegahuti" },
+    {
+      "info": "東向島",
+      "info2": "ひがしむこうじま",
+      "word": "higasimukoujima"
+    },
+    { "info": "曳舟", "info2": "ひきふね", "word": "hikihune" },
+    {
+      "info": "とうきょうスカイツリー",
+      "info2": "とうきょうすかいつりー",
+      "word": "toukyousukaituri-"
+    },
+    { "info": "浅草", "info2": "あさくさ", "word": "asakusa" }
+  ]
+}

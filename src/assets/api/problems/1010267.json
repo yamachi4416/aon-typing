@@ -1,0 +1,17 @@
+{
+  "id": "1010267",
+  "title": "東武スカイツリーライン(曳舟－押上)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-04",
+  "updatedAt": "2023-04-04",
+  "optional": { "cd": "267" },
+  "words": [
+    { "info": "押上", "info2": "おしあげ", "word": "osiage" },
+    { "info": "曳舟", "info2": "ひきふね", "word": "hikihune" }
+  ]
+}
