@@ -1,0 +1,25 @@
+{
+  "id": "1010270",
+  "title": "東武佐野線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-05",
+  "updatedAt": "2023-04-05",
+  "optional": { "cd": "270" },
+  "words": [
+    { "info": "葛生", "info2": "くずう", "word": "kuzuu" },
+    { "info": "多田", "info2": "ただ", "word": "tada" },
+    { "info": "田沼", "info2": "たぬま", "word": "tanuma" },
+    { "info": "吉水", "info2": "よしみず", "word": "yosimizu" },
+    { "info": "堀米", "info2": "ほりごめ", "word": "horigome" },
+    { "info": "佐野", "info2": "さの", "word": "sano" },
+    { "info": "佐野市", "info2": "さのし", "word": "sanosi" },
+    { "info": "田島", "info2": "たじま", "word": "tajima" },
+    { "info": "渡瀬", "info2": "わたらせ", "word": "watarase" },
+    { "info": "館林", "info2": "たてばやし", "word": "tatebayasi" }
+  ]
+}
