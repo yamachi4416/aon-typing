@@ -2,8 +2,7 @@
   "extends": [
     "stylelint-config-standard-scss",
     "stylelint-config-recommended-vue",
-    "stylelint-config-recess-order",
-    "stylelint-config-prettier"
+    "stylelint-config-recess-order"
   ],
   "rules": {
     "scss/at-mixin-pattern": null,

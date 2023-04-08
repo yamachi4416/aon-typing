@@ -180,6 +180,7 @@ function print() {
 
   .keymaps {
     padding: 6px;
+
     @media print {
       padding: 0;
     }
@@ -200,6 +201,7 @@ function print() {
         }
       }
     }
+
     @media print {
       display: none;
     }
@@ -301,9 +303,11 @@ function print() {
         @media print and (max-width: 600px) {
           width: calc(100% / 2);
         }
+
         @media print and (min-width: 600px) and (max-width: 1000px) {
           width: calc(100% / 3);
         }
+
         @media print and (min-width: 1000px) and (max-width: 1600px) {
           width: calc(100% / 4);
         }

@@ -28,6 +28,7 @@ withDefaults(
 
 .basic-page {
   min-height: 100vh;
+
   @media print {
     min-height: unset;
   }
@@ -37,9 +38,11 @@ withDefaults(
     min-height: calc(100vh - 200px);
     padding: 10px;
     margin: 0 auto;
+
     @include __media_s {
       padding: 5px 0;
     }
+
     @media print {
       padding: 3px;
     }
