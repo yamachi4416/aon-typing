@@ -1,0 +1,46 @@
+{
+  "id": "1010327",
+  "title": "東京メトロ銀座線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-08",
+  "updatedAt": "2023-04-08",
+  "optional": { "cd": "327" },
+  "words": [
+    { "info": "渋谷", "info2": "しぶや", "word": "sibuya" },
+    { "info": "表参道", "info2": "おもてさんどう", "word": "omotesandou" },
+    { "info": "外苑前", "info2": "がいえんまえ", "word": "gaienmae" },
+    {
+      "info": "青山一丁目",
+      "info2": "あおやまいっちょうめ",
+      "word": "aoyamaittyoume"
+    },
+    { "info": "赤坂見附", "info2": "あかさかみつけ", "word": "akasakamituke" },
+    {
+      "info": "溜池山王",
+      "info2": "ためいけさんのう",
+      "word": "tameikesannnou"
+    },
+    { "info": "虎ノ門", "info2": "とらのもん", "word": "toranomonn" },
+    { "info": "新橋", "info2": "しんばし", "word": "sinbasi" },
+    { "info": "銀座", "info2": "ぎんざ", "word": "ginza" },
+    { "info": "京橋", "info2": "きょうばし", "word": "kyoubasi" },
+    { "info": "日本橋", "info2": "にほんばし", "word": "nihonbasi" },
+    { "info": "三越前", "info2": "みつこしまえ", "word": "mitukosimae" },
+    { "info": "神田", "info2": "かんだ", "word": "kanda" },
+    { "info": "末広町", "info2": "すえひろちょう", "word": "suehirotyou" },
+    {
+      "info": "上野広小路",
+      "info2": "うえのひろこうじ",
+      "word": "uenohirokouji"
+    },
+    { "info": "上野", "info2": "うえの", "word": "ueno" },
+    { "info": "稲荷町", "info2": "いなりちょう", "word": "inarityou" },
+    { "info": "田原町", "info2": "たわらまち", "word": "tawaramati" },
+    { "info": "浅草", "info2": "あさくさ", "word": "asakusa" }
+  ]
+}
