@@ -1,0 +1,42 @@
+{
+  "id": "1010331",
+  "title": "東京メトロ東西線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-11",
+  "updatedAt": "2023-04-11",
+  "optional": { "cd": "331" },
+  "words": [
+    { "info": "西船橋", "info2": "にしふなばし", "word": "nisihunabasi" },
+    { "info": "原木中山", "info2": "ばらきなかやま", "word": "barakinakayama" },
+    { "info": "妙典", "info2": "みょうでん", "word": "myoudenn" },
+    { "info": "行徳", "info2": "ぎょうとく", "word": "gyoutoku" },
+    { "info": "南行徳", "info2": "みなみぎょうとく", "word": "minamigyoutoku" },
+    { "info": "浦安", "info2": "うらやす", "word": "urayasu" },
+    { "info": "葛西", "info2": "かさい", "word": "kasai" },
+    { "info": "西葛西", "info2": "にしかさい", "word": "nisikasai" },
+    { "info": "南砂町", "info2": "みなみすなまち", "word": "minamisunamati" },
+    { "info": "東陽町", "info2": "とうようちょう", "word": "touyoutyou" },
+    { "info": "木場", "info2": "きば", "word": "kiba" },
+    {
+      "info": "門前仲町",
+      "info2": "もんぜんなかちょう",
+      "word": "monzennnakatyou"
+    },
+    { "info": "茅場町", "info2": "かやばちょう", "word": "kayabatyou" },
+    { "info": "日本橋", "info2": "にほんばし", "word": "nihonbasi" },
+    { "info": "大手町", "info2": "おおてまち", "word": "ootemati" },
+    { "info": "竹橋", "info2": "たけばし", "word": "takebasi" },
+    { "info": "九段下", "info2": "くだんした", "word": "kudansita" },
+    { "info": "飯田橋", "info2": "いいだばし", "word": "iidabasi" },
+    { "info": "神楽坂", "info2": "かぐらざか", "word": "kagurazaka" },
+    { "info": "早稲田", "info2": "わせだ", "word": "waseda" },
+    { "info": "高田馬場", "info2": "たかだのばば", "word": "takadanobaba" },
+    { "info": "落合", "info2": "おちあい", "word": "otiai" },
+    { "info": "中野", "info2": "なかの", "word": "nakano" }
+  ]
+}
