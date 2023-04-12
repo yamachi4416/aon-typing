@@ -1,0 +1,43 @@
+{
+  "id": "1010338",
+  "title": "都営地下鉄浅草線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-12",
+  "updatedAt": "2023-04-12",
+  "optional": { "cd": "338" },
+  "words": [
+    { "info": "押上", "info2": "おしあげ", "word": "osiage" },
+    {
+      "info": "本所吾妻橋",
+      "info2": "ほんじょあづまばし",
+      "word": "honjoadumabasi"
+    },
+    { "info": "浅草", "info2": "あさくさ", "word": "asakusa" },
+    { "info": "蔵前", "info2": "くらまえ", "word": "kuramae" },
+    { "info": "浅草橋", "info2": "あさくさばし", "word": "asakusabasi" },
+    {
+      "info": "東日本橋",
+      "info2": "ひがしにほんばし",
+      "word": "higasinihonbasi"
+    },
+    { "info": "人形町", "info2": "にんぎょうちょう", "word": "ningyoutyou" },
+    { "info": "日本橋", "info2": "にほんばし", "word": "nihonbasi" },
+    { "info": "宝町", "info2": "たからちょう", "word": "takaratyou" },
+    { "info": "東銀座", "info2": "ひがしぎんざ", "word": "higasiginza" },
+    { "info": "新橋", "info2": "しんばし", "word": "sinbasi" },
+    { "info": "大門", "info2": "だいもん", "word": "daimonn" },
+    { "info": "三田", "info2": "みた", "word": "mita" },
+    { "info": "泉岳寺", "info2": "せんがくじ", "word": "sengakuji" },
+    { "info": "高輪台", "info2": "たかなわだい", "word": "takanawadai" },
+    { "info": "五反田", "info2": "ごたんだ", "word": "gotanda" },
+    { "info": "戸越", "info2": "とごし", "word": "togosi" },
+    { "info": "中延", "info2": "なかのぶ", "word": "nakanobu" },
+    { "info": "馬込", "info2": "まごめ", "word": "magome" },
+    { "info": "西馬込", "info2": "にしまごめ", "word": "nisimagome" }
+  ]
+}
