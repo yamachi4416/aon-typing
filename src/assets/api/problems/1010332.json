@@ -1,0 +1,46 @@
+{
+  "id": "1010332",
+  "title": "東京メトロ千代田線(綾瀬－代々木上原)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-13",
+  "updatedAt": "2023-04-13",
+  "optional": { "cd": "332" },
+  "words": [
+    { "info": "代々木上原", "info2": "よよぎうえはら", "word": "yoyogiuehara" },
+    { "info": "代々木公園", "info2": "よよぎこうえん", "word": "yoyogikouenn" },
+    {
+      "info": "明治神宮前",
+      "info2": "めいじじんぐうまえ",
+      "word": "meijijinguumae"
+    },
+    { "info": "表参道", "info2": "おもてさんどう", "word": "omotesandou" },
+    { "info": "乃木坂", "info2": "のぎざか", "word": "nogizaka" },
+    { "info": "赤坂", "info2": "あかさか", "word": "akasaka" },
+    {
+      "info": "国会議事堂前",
+      "info2": "こっかいぎじどうまえ",
+      "word": "kokkaigijidoumae"
+    },
+    { "info": "霞ケ関", "info2": "かすみがせき", "word": "kasumigaseki" },
+    { "info": "日比谷", "info2": "ひびや", "word": "hibiya" },
+    { "info": "二重橋前", "info2": "にじゅうばしまえ", "word": "nijuubasimae" },
+    { "info": "大手町", "info2": "おおてまち", "word": "ootemati" },
+    {
+      "info": "新御茶ノ水",
+      "info2": "しんおちゃのみず",
+      "word": "sinnotyanomizu"
+    },
+    { "info": "湯島", "info2": "ゆしま", "word": "yusima" },
+    { "info": "根津", "info2": "ねづ", "word": "nedu" },
+    { "info": "千駄木", "info2": "せんだぎ", "word": "sendagi" },
+    { "info": "西日暮里", "info2": "にしにっぽり", "word": "nisinippori" },
+    { "info": "町屋", "info2": "まちや", "word": "matiya" },
+    { "info": "北千住", "info2": "きたせんじゅ", "word": "kitasenju" },
+    { "info": "綾瀬", "info2": "あやせ", "word": "ayase" }
+  ]
+}
