@@ -1,0 +1,23 @@
+{
+  "id": "1010329",
+  "title": "東京メトロ丸ノ内線(中野坂上－方南町)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-15",
+  "updatedAt": "2023-04-15",
+  "optional": { "cd": "329" },
+  "words": [
+    { "info": "方南町", "info2": "ほうなんちょう", "word": "hounantyou" },
+    {
+      "info": "中野富士見町",
+      "info2": "なかのふじみちょう",
+      "word": "nakanohujimityou"
+    },
+    { "info": "中野新橋", "info2": "なかのしんばし", "word": "nakanosinbasi" },
+    { "info": "中野坂上", "info2": "なかのさかうえ", "word": "nakanosakaue" }
+  ]
+}

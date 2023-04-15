@@ -1,0 +1,68 @@
+{
+  "id": "1010328",
+  "title": "東京メトロ丸ノ内線(池袋－荻窪)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-15",
+  "updatedAt": "2023-04-15",
+  "optional": { "cd": "328" },
+  "words": [
+    { "info": "荻窪", "info2": "おぎくぼ", "word": "ogikubo" },
+    {
+      "info": "南阿佐ケ谷",
+      "info2": "みなみあさがや",
+      "word": "minamiasagaya"
+    },
+    { "info": "新高円寺", "info2": "しんこうえんじ", "word": "sinkouenji" },
+    {
+      "info": "東高円寺",
+      "info2": "ひがしこうえんじ",
+      "word": "higasikouenji"
+    },
+    { "info": "新中野", "info2": "しんなかの", "word": "sinnnakano" },
+    { "info": "中野坂上", "info2": "なかのさかうえ", "word": "nakanosakaue" },
+    { "info": "西新宿", "info2": "にししんじゅく", "word": "nisisinjuku" },
+    { "info": "新宿", "info2": "しんじゅく", "word": "sinjuku" },
+    {
+      "info": "新宿三丁目",
+      "info2": "しんじゅくさんちょうめ",
+      "word": "sinjukusantyoume"
+    },
+    {
+      "info": "新宿御苑前",
+      "info2": "しんじゅくぎょえんまえ",
+      "word": "sinjukugyoenmae"
+    },
+    {
+      "info": "四谷三丁目",
+      "info2": "よつやさんちょうめ",
+      "word": "yotuyasantyoume"
+    },
+    { "info": "四ツ谷", "info2": "よつや", "word": "yotuya" },
+    { "info": "赤坂見附", "info2": "あかさかみつけ", "word": "akasakamituke" },
+    {
+      "info": "国会議事堂前",
+      "info2": "こっかいぎじどうまえ",
+      "word": "kokkaigijidoumae"
+    },
+    { "info": "霞ケ関", "info2": "かすみがせき", "word": "kasumigaseki" },
+    { "info": "銀座", "info2": "ぎんざ", "word": "ginza" },
+    { "info": "東京", "info2": "とうきょう", "word": "toukyou" },
+    { "info": "大手町", "info2": "おおてまち", "word": "ootemati" },
+    { "info": "淡路町", "info2": "あわじちょう", "word": "awajityou" },
+    { "info": "御茶ノ水", "info2": "おちゃのみず", "word": "otyanomizu" },
+    {
+      "info": "本郷三丁目",
+      "info2": "ほんごうさんちょうめ",
+      "word": "hongousantyoume"
+    },
+    { "info": "後楽園", "info2": "こうらくえん", "word": "kourakuenn" },
+    { "info": "茗荷谷", "info2": "みょうがだに", "word": "myougadani" },
+    { "info": "新大塚", "info2": "しんおおつか", "word": "sinnootuka" },
+    { "info": "池袋", "info2": "いけぶくろ", "word": "ikebukuro" }
+  ]
+}
