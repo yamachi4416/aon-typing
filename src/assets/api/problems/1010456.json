@@ -1,0 +1,44 @@
+{
+  "id": "1010456",
+  "title": "仙台市地下鉄南北線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-15",
+  "updatedAt": "2023-04-15",
+  "optional": { "cd": "456" },
+  "words": [
+    { "info": "富沢", "info2": "とみざわ", "word": "tomizawa" },
+    { "info": "長町南", "info2": "ながまちみなみ", "word": "nagamatiminami" },
+    { "info": "長町", "info2": "ながまち", "word": "nagamati" },
+    {
+      "info": "長町一丁目",
+      "info2": "ながまちいっちょうめ",
+      "word": "nagamatiittyoume"
+    },
+    { "info": "河原町", "info2": "かわらまち", "word": "kawaramati" },
+    { "info": "愛宕橋", "info2": "あたごばし", "word": "atagobasi" },
+    { "info": "五橋", "info2": "いつつばし", "word": "itutubasi" },
+    { "info": "仙台", "info2": "せんだい", "word": "sendai" },
+    { "info": "広瀬通", "info2": "ひろせどおり", "word": "hirosedoori" },
+    {
+      "info": "勾当台公園",
+      "info2": "こうとうだいこうえん",
+      "word": "koutoudaikouenn"
+    },
+    {
+      "info": "北四番丁",
+      "info2": "きたよばんちょう",
+      "word": "kitayobantyou"
+    },
+    { "info": "北仙台", "info2": "きたせんだい", "word": "kitasendai" },
+    { "info": "台原", "info2": "だいのはら", "word": "dainohara" },
+    { "info": "旭ケ丘", "info2": "あさひがおか", "word": "asahigaoka" },
+    { "info": "黒松", "info2": "くろまつ", "word": "kuromatu" },
+    { "info": "八乙女", "info2": "やおとめ", "word": "yaotome" },
+    { "info": "泉中央", "info2": "いずみちゅうおう", "word": "izumityuuou" }
+  ]
+}

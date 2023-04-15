@@ -1,0 +1,44 @@
+{
+  "id": "1010457",
+  "title": "仙台市地下鉄東西線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-15",
+  "updatedAt": "2023-04-15",
+  "optional": { "cd": "457" },
+  "words": [
+    { "info": "荒井", "info2": "あらい", "word": "arai" },
+    { "info": "六丁の目", "info2": "ろくちょうのめ", "word": "rokutyounome" },
+    { "info": "卸町", "info2": "おろしまち", "word": "orosimati" },
+    { "info": "薬師堂", "info2": "やくしどう", "word": "yakusidou" },
+    { "info": "連坊", "info2": "れんぼう", "word": "renbou" },
+    { "info": "宮城野通", "info2": "みやぎのどおり", "word": "miyaginodoori" },
+    { "info": "仙台", "info2": "せんだい", "word": "sendai" },
+    {
+      "info": "青葉通一番町",
+      "info2": "あおばどおりいちばんちょう",
+      "word": "aobadooriitibantyou"
+    },
+    {
+      "info": "大町西公園",
+      "info2": "おおまちにしこうえん",
+      "word": "oomatinisikouenn"
+    },
+    {
+      "info": "国際センター",
+      "info2": "こくさいせんたー",
+      "word": "kokusaisenta-"
+    },
+    { "info": "川内", "info2": "かわうち", "word": "kawauti" },
+    { "info": "青葉山", "info2": "あおばやま", "word": "aobayama" },
+    {
+      "info": "八木山動物公園",
+      "info2": "やぎやまどうぶつこうえん",
+      "word": "yagiyamadoubutukouenn"
+    }
+  ]
+}
