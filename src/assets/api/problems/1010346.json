@@ -1,0 +1,103 @@
+{
+  "id": "1010346",
+  "title": "名鉄名古屋本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-17",
+  "updatedAt": "2023-04-17",
+  "optional": { "cd": "346" },
+  "words": [
+    { "info": "名鉄岐阜", "info2": "めいてつぎふ", "word": "meitetugihu" },
+    { "info": "加納", "info2": "かのう", "word": "kanou" },
+    { "info": "茶所", "info2": "ちゃじょ", "word": "tyajo" },
+    { "info": "岐南", "info2": "ぎなん", "word": "ginann" },
+    { "info": "笠松", "info2": "かさまつ", "word": "kasamatu" },
+    { "info": "木曽川堤", "info2": "きそがわづつみ", "word": "kisogawadutumi" },
+    { "info": "黒田", "info2": "くろだ", "word": "kuroda" },
+    { "info": "新木曽川", "info2": "しんきそがわ", "word": "sinkisogawa" },
+    { "info": "石刀", "info2": "いわと", "word": "iwato" },
+    { "info": "今伊勢", "info2": "いまいせ", "word": "imaise" },
+    {
+      "info": "名鉄一宮",
+      "info2": "めいてついちのみや",
+      "word": "meitetuitinomiya"
+    },
+    { "info": "妙興寺", "info2": "みょうこうじ", "word": "myoukouji" },
+    { "info": "島氏永", "info2": "しまうじなが", "word": "simaujinaga" },
+    { "info": "国府宮", "info2": "こうのみや", "word": "kounomiya" },
+    { "info": "奥田", "info2": "おくだ", "word": "okuda" },
+    { "info": "大里", "info2": "おおさと", "word": "oosato" },
+    { "info": "新清洲", "info2": "しんきよす", "word": "sinkiyosu" },
+    { "info": "丸ノ内", "info2": "まるのうち", "word": "marunouti" },
+    { "info": "須ケ口", "info2": "すかぐち", "word": "sukaguti" },
+    { "info": "新川橋", "info2": "しんかわばし", "word": "sinkawabasi" },
+    { "info": "二ツ杁", "info2": "ふたついり", "word": "hutatuiri" },
+    { "info": "西枇杷島", "info2": "にしびわじま", "word": "nisibiwajima" },
+    { "info": "東枇杷島", "info2": "ひがしびわじま", "word": "higasibiwajima" },
+    { "info": "栄生", "info2": "さこう", "word": "sakou" },
+    {
+      "info": "名鉄名古屋",
+      "info2": "めいてつなごや",
+      "word": "meitetunagoya"
+    },
+    { "info": "山王", "info2": "さんのう", "word": "sannnou" },
+    { "info": "金山", "info2": "かなやま", "word": "kanayama" },
+    { "info": "神宮前", "info2": "じんぐうまえ", "word": "jinguumae" },
+    { "info": "堀田", "info2": "ほりた", "word": "horita" },
+    { "info": "呼続", "info2": "よびつぎ", "word": "yobitugi" },
+    { "info": "桜", "info2": "さくら", "word": "sakura" },
+    { "info": "本笠寺", "info2": "もとかさでら", "word": "motokasadera" },
+    { "info": "本星崎", "info2": "もとほしざき", "word": "motohosizaki" },
+    { "info": "鳴海", "info2": "なるみ", "word": "narumi" },
+    { "info": "左京山", "info2": "さきょうやま", "word": "sakyouyama" },
+    { "info": "有松", "info2": "ありまつ", "word": "arimatu" },
+    {
+      "info": "中京競馬場前",
+      "info2": "ちゅうきょうけいばじょうまえ",
+      "word": "tyuukyoukeibajoumae"
+    },
+    { "info": "前後", "info2": "ぜんご", "word": "zengo" },
+    { "info": "豊明", "info2": "とよあけ", "word": "toyoake" },
+    { "info": "富士松", "info2": "ふじまつ", "word": "hujimatu" },
+    { "info": "一ツ木", "info2": "ひとつぎ", "word": "hitotugi" },
+    { "info": "知立", "info2": "ちりゅう", "word": "tiryuu" },
+    { "info": "牛田", "info2": "うしだ", "word": "usida" },
+    { "info": "新安城", "info2": "しんあんじょう", "word": "sinnanjou" },
+    { "info": "宇頭", "info2": "うとう", "word": "utou" },
+    { "info": "矢作橋", "info2": "やはぎばし", "word": "yahagibasi" },
+    {
+      "info": "岡崎公園前",
+      "info2": "おかざきこうえんまえ",
+      "word": "okazakikouenmae"
+    },
+    { "info": "東岡崎", "info2": "ひがしおかざき", "word": "higasiokazaki" },
+    { "info": "男川", "info2": "おとがわ", "word": "otogawa" },
+    { "info": "美合", "info2": "みあい", "word": "miai" },
+    { "info": "藤川", "info2": "ふじかわ", "word": "hujikawa" },
+    {
+      "info": "名電山中",
+      "info2": "めいでんやまなか",
+      "word": "meidenyamanaka"
+    },
+    { "info": "本宿", "info2": "もとじゅく", "word": "motojuku" },
+    {
+      "info": "名電長沢",
+      "info2": "めいでんながさわ",
+      "word": "meidennnagasawa"
+    },
+    {
+      "info": "名電赤坂",
+      "info2": "めいでんあかさか",
+      "word": "meidennakasaka"
+    },
+    { "info": "御油", "info2": "ごゆ", "word": "goyu" },
+    { "info": "国府", "info2": "こう", "word": "kou" },
+    { "info": "小田渕", "info2": "おだぶち", "word": "odabuti" },
+    { "info": "伊奈", "info2": "いな", "word": "ina" },
+    { "info": "豊橋", "info2": "とよはし", "word": "toyohasi" }
+  ]
+}
