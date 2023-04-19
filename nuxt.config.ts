@@ -44,6 +44,10 @@ export default defineNuxtConfig({
   ssr: true,
   srcDir: 'src',
 
+  experimental: {
+    polyfillVueUseHead: true,
+  },
+
   app: {
     head: {
       charset: 'utf-8',
