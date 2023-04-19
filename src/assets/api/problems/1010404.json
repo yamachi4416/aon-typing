@@ -1,0 +1,71 @@
+{
+  "id": "1010404",
+  "title": "京阪本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-19",
+  "updatedAt": "2023-04-19",
+  "optional": { "cd": "404" },
+  "words": [
+    { "info": "三条", "info2": "さんじょう", "word": "sanjou" },
+    { "info": "祇園四条", "info2": "ぎおんしじょう", "word": "gionsijou" },
+    {
+      "info": "清水五条",
+      "info2": "きよみずごじょう",
+      "word": "kiyomizugojou"
+    },
+    { "info": "七条", "info2": "しちじょう", "word": "sitijou" },
+    { "info": "東福寺", "info2": "とうふくじ", "word": "touhukuji" },
+    { "info": "鳥羽街道", "info2": "とばかいどう", "word": "tobakaidou" },
+    { "info": "伏見稲荷", "info2": "ふしみいなり", "word": "husimiinari" },
+    {
+      "info": "龍谷大前深草",
+      "info2": "りゅうこくだいまえふかくさ",
+      "word": "ryuukokudaimaehukakusa"
+    },
+    { "info": "藤森", "info2": "ふじのもり", "word": "hujinomori" },
+    { "info": "墨染", "info2": "すみぞめ", "word": "sumizome" },
+    { "info": "丹波橋", "info2": "たんばばし", "word": "tanbabasi" },
+    { "info": "伏見桃山", "info2": "ふしみももやま", "word": "husimimomoyama" },
+    { "info": "中書島", "info2": "ちゅうしょじま", "word": "tyuusyojima" },
+    { "info": "淀", "info2": "よど", "word": "yodo" },
+    {
+      "info": "石清水八幡宮",
+      "info2": "いわしみずはちまんぐう",
+      "word": "iwasimizuhatimanguu"
+    },
+    { "info": "橋本", "info2": "はしもと", "word": "hasimoto" },
+    { "info": "樟葉", "info2": "くずは", "word": "kuzuha" },
+    { "info": "牧野", "info2": "まきの", "word": "makino" },
+    { "info": "御殿山", "info2": "ごてんやま", "word": "gotenyama" },
+    { "info": "枚方市", "info2": "ひらかたし", "word": "hirakatasi" },
+    {
+      "info": "枚方公園",
+      "info2": "ひらかたこうえん",
+      "word": "hirakatakouenn"
+    },
+    { "info": "光善寺", "info2": "こうぜんじ", "word": "kouzenji" },
+    { "info": "香里園", "info2": "こうりえん", "word": "kourienn" },
+    { "info": "寝屋川市", "info2": "ねやがわし", "word": "neyagawasi" },
+    { "info": "萱島", "info2": "かやしま", "word": "kayasima" },
+    { "info": "大和田", "info2": "おおわだ", "word": "oowada" },
+    { "info": "古川橋", "info2": "ふるかわばし", "word": "hurukawabasi" },
+    { "info": "門真市", "info2": "かどまし", "word": "kadomasi" },
+    { "info": "西三荘", "info2": "にしさんそう", "word": "nisisansou" },
+    { "info": "守口市", "info2": "もりぐちし", "word": "morigutisi" },
+    { "info": "土居", "info2": "どい", "word": "doi" },
+    { "info": "滝井", "info2": "たきい", "word": "takii" },
+    { "info": "千林", "info2": "せんばやし", "word": "senbayasi" },
+    { "info": "森小路", "info2": "もりしょうじ", "word": "morisyouji" },
+    { "info": "関目", "info2": "せきめ", "word": "sekime" },
+    { "info": "野江", "info2": "のえ", "word": "noe" },
+    { "info": "京橋", "info2": "きょうばし", "word": "kyoubasi" },
+    { "info": "天満橋", "info2": "てんまばし", "word": "tenmabasi" },
+    { "info": "北浜", "info2": "きたはま", "word": "kitahama" },
+    { "info": "淀屋橋", "info2": "よどやばし", "word": "yodoyabasi" }
+  ]
+}
