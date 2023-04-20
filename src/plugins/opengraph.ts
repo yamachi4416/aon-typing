@@ -1,4 +1,4 @@
-import { injectHead } from '@vueuse/head'
+import { injectHead } from '@unhead/vue'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
