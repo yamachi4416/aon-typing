@@ -1,0 +1,42 @@
+{
+  "id": "1010275",
+  "title": "東武宇都宮線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-20",
+  "updatedAt": "2023-04-20",
+  "optional": { "cd": "275" },
+  "words": [
+    {
+      "info": "東武宇都宮",
+      "info2": "とうぶうつのみや",
+      "word": "toubuutunomiya"
+    },
+    {
+      "info": "南宇都宮",
+      "info2": "みなみうつのみや",
+      "word": "minamiutunomiya"
+    },
+    { "info": "江曽島", "info2": "えそじま", "word": "esojima" },
+    { "info": "西川田", "info2": "にしかわだ", "word": "nisikawada" },
+    { "info": "安塚", "info2": "やすづか", "word": "yasuduka" },
+    {
+      "info": "おもちゃのまち",
+      "info2": "おもちゃのまち",
+      "word": "omotyanomati"
+    },
+    { "info": "国谷", "info2": "くにや", "word": "kuniya" },
+    { "info": "壬生", "info2": "みぶ", "word": "mibu" },
+    { "info": "野州大塚", "info2": "やしゅうおおつか", "word": "yasyuuootuka" },
+    {
+      "info": "野州平川",
+      "info2": "やしゅうひらかわ",
+      "word": "yasyuuhirakawa"
+    },
+    { "info": "新栃木", "info2": "しんとちぎ", "word": "sintotigi" }
+  ]
+}
