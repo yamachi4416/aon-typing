@@ -1,0 +1,60 @@
+{
+  "id": "1010423",
+  "title": "阪神本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-22",
+  "updatedAt": "2023-04-22",
+  "optional": { "cd": "423" },
+  "words": [
+    { "info": "大阪梅田", "info2": "おおさかうめだ", "word": "oosakaumeda" },
+    { "info": "福島", "info2": "ふくしま", "word": "hukusima" },
+    { "info": "野田", "info2": "のだ", "word": "noda" },
+    { "info": "淀川", "info2": "よどがわ", "word": "yodogawa" },
+    { "info": "姫島", "info2": "ひめじま", "word": "himejima" },
+    { "info": "千船", "info2": "ちぶね", "word": "tibune" },
+    { "info": "杭瀬", "info2": "くいせ", "word": "kuise" },
+    { "info": "大物", "info2": "だいもつ", "word": "daimotu" },
+    { "info": "尼崎", "info2": "あまがさき", "word": "amagasaki" },
+    { "info": "出屋敷", "info2": "でやしき", "word": "deyasiki" },
+    {
+      "info": "尼崎センタープール前",
+      "info2": "あまがさきせんたーぷーるまえ",
+      "word": "amagasakisenta-pu-rumae"
+    },
+    { "info": "武庫川", "info2": "むこがわ", "word": "mukogawa" },
+    {
+      "info": "鳴尾・武庫川女子大前",
+      "info2": "なるおむこがわじょしだいまえ",
+      "word": "naruomukogawajosidaimae"
+    },
+    { "info": "甲子園", "info2": "こうしえん", "word": "kousienn" },
+    { "info": "久寿川", "info2": "くすがわ", "word": "kusugawa" },
+    { "info": "今津", "info2": "いまづ", "word": "imadu" },
+    { "info": "西宮", "info2": "にしのみや", "word": "nisinomiya" },
+    { "info": "香櫨園", "info2": "こうろえん", "word": "kouroenn" },
+    { "info": "打出", "info2": "うちで", "word": "utide" },
+    { "info": "芦屋", "info2": "あしや", "word": "asiya" },
+    { "info": "深江", "info2": "ふかえ", "word": "hukae" },
+    { "info": "青木", "info2": "おおぎ", "word": "oogi" },
+    { "info": "魚崎", "info2": "うおざき", "word": "uozaki" },
+    { "info": "住吉", "info2": "すみよし", "word": "sumiyosi" },
+    { "info": "御影", "info2": "みかげ", "word": "mikage" },
+    { "info": "石屋川", "info2": "いしやがわ", "word": "isiyagawa" },
+    { "info": "新在家", "info2": "しんざいけ", "word": "sinzaike" },
+    { "info": "大石", "info2": "おおいし", "word": "ooisi" },
+    { "info": "西灘", "info2": "にしなだ", "word": "nisinada" },
+    { "info": "岩屋", "info2": "いわや", "word": "iwaya" },
+    { "info": "春日野道", "info2": "かすがのみち", "word": "kasuganomiti" },
+    {
+      "info": "神戸三宮",
+      "info2": "こうべさんのみや",
+      "word": "koubesannnomiya"
+    },
+    { "info": "元町", "info2": "もとまち", "word": "motomati" }
+  ]
+}
