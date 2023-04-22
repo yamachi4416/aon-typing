@@ -1,0 +1,43 @@
+{
+  "id": "1010526",
+  "title": "伊豆急行線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-22",
+  "updatedAt": "2023-04-22",
+  "optional": { "cd": "526" },
+  "words": [
+    {
+      "info": "伊豆急下田",
+      "info2": "いずきゅうしもだ",
+      "word": "izukyuusimoda"
+    },
+    { "info": "蓮台寺", "info2": "れんだいじ", "word": "rendaiji" },
+    { "info": "稲梓", "info2": "いなずさ", "word": "inazusa" },
+    { "info": "河津", "info2": "かわづ", "word": "kawadu" },
+    {
+      "info": "今井浜海岸",
+      "info2": "いまいはまかいがん",
+      "word": "imaihamakaigann"
+    },
+    { "info": "伊豆稲取", "info2": "いずいなとり", "word": "izuinatori" },
+    { "info": "片瀬白田", "info2": "かたせしらた", "word": "katasesirata" },
+    { "info": "伊豆熱川", "info2": "いずあたがわ", "word": "izuatagawa" },
+    { "info": "伊豆北川", "info2": "いずほっかわ", "word": "izuhokkawa" },
+    { "info": "伊豆大川", "info2": "いずおおかわ", "word": "izuookawa" },
+    { "info": "伊豆高原", "info2": "いずこうげん", "word": "izukougenn" },
+    {
+      "info": "城ケ崎海岸",
+      "info2": "じょうがさきかいがん",
+      "word": "jougasakikaigann"
+    },
+    { "info": "富戸", "info2": "ふと", "word": "huto" },
+    { "info": "川奈", "info2": "かわな", "word": "kawana" },
+    { "info": "南伊東", "info2": "みなみいとう", "word": "minamiitou" },
+    { "info": "伊東", "info2": "いとう", "word": "itou" }
+  ]
+}
