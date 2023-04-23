@@ -1,0 +1,117 @@
+{
+  "id": "1010322",
+  "title": "京急本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-23",
+  "updatedAt": "2023-04-23",
+  "optional": { "cd": "322" },
+  "words": [
+    { "info": "浦賀", "info2": "うらが", "word": "uraga" },
+    { "info": "馬堀海岸", "info2": "まぼりかいがん", "word": "maborikaigann" },
+    { "info": "京急大津", "info2": "けいきゅうおおつ", "word": "keikyuuootu" },
+    { "info": "堀ノ内", "info2": "ほりのうち", "word": "horinouti" },
+    {
+      "info": "県立大学",
+      "info2": "けんりつだいがく",
+      "word": "kenritudaigaku"
+    },
+    {
+      "info": "横須賀中央",
+      "info2": "よこすかちゅうおう",
+      "word": "yokosukatyuuou"
+    },
+    { "info": "汐入", "info2": "しおいり", "word": "sioiri" },
+    { "info": "逸見", "info2": "へみ", "word": "hemi" },
+    { "info": "安針塚", "info2": "あんじんづか", "word": "anjinduka" },
+    { "info": "京急田浦", "info2": "けいきゅうたうら", "word": "keikyuutaura" },
+    { "info": "追浜", "info2": "おっぱま", "word": "oppama" },
+    {
+      "info": "金沢八景",
+      "info2": "かなざわはっけい",
+      "word": "kanazawahakkei"
+    },
+    { "info": "金沢文庫", "info2": "かなざわぶんこ", "word": "kanazawabunko" },
+    { "info": "能見台", "info2": "のうけんだい", "word": "noukendai" },
+    {
+      "info": "京急富岡",
+      "info2": "けいきゅうとみおか",
+      "word": "keikyuutomioka"
+    },
+    { "info": "杉田", "info2": "すぎた", "word": "sugita" },
+    { "info": "屏風浦", "info2": "びょうぶがうら", "word": "byoubugaura" },
+    { "info": "上大岡", "info2": "かみおおおか", "word": "kamioooka" },
+    { "info": "弘明寺", "info2": "ぐみょうじ", "word": "gumyouji" },
+    { "info": "井土ケ谷", "info2": "いどがや", "word": "idogaya" },
+    { "info": "南太田", "info2": "みなみおおた", "word": "minamioota" },
+    { "info": "黄金町", "info2": "こがねちょう", "word": "koganetyou" },
+    { "info": "日ノ出町", "info2": "ひのでちょう", "word": "hinodetyou" },
+    { "info": "戸部", "info2": "とべ", "word": "tobe" },
+    { "info": "横浜", "info2": "よこはま", "word": "yokohama" },
+    { "info": "神奈川", "info2": "かながわ", "word": "kanagawa" },
+    {
+      "info": "京急東神奈川",
+      "info2": "けいきゅうひがしかながわ",
+      "word": "keikyuuhigasikanagawa"
+    },
+    {
+      "info": "神奈川新町",
+      "info2": "かながわしんまち",
+      "word": "kanagawasinmati"
+    },
+    { "info": "子安", "info2": "こやす", "word": "koyasu" },
+    {
+      "info": "京急新子安",
+      "info2": "けいきゅうしんこやす",
+      "word": "keikyuusinkoyasu"
+    },
+    { "info": "生麦", "info2": "なまむぎ", "word": "namamugi" },
+    {
+      "info": "花月総持寺",
+      "info2": "かげつそうじじ",
+      "word": "kagetusoujiji"
+    },
+    {
+      "info": "京急鶴見",
+      "info2": "けいきゅうつるみ",
+      "word": "keikyuuturumi"
+    },
+    { "info": "鶴見市場", "info2": "つるみいちば", "word": "turumiitiba" },
+    { "info": "八丁畷", "info2": "はっちょうなわて", "word": "hattyounawate" },
+    {
+      "info": "京急川崎",
+      "info2": "けいきゅうかわさき",
+      "word": "keikyuukawasaki"
+    },
+    { "info": "六郷土手", "info2": "ろくごうどて", "word": "rokugoudote" },
+    { "info": "雑色", "info2": "ぞうしき", "word": "zousiki" },
+    {
+      "info": "京急蒲田",
+      "info2": "けいきゅうかまた",
+      "word": "keikyuukamata"
+    },
+    { "info": "梅屋敷", "info2": "うめやしき", "word": "umeyasiki" },
+    { "info": "大森町", "info2": "おおもりまち", "word": "oomorimati" },
+    { "info": "平和島", "info2": "へいわじま", "word": "heiwajima" },
+    {
+      "info": "大森海岸",
+      "info2": "おおもりかいがん",
+      "word": "oomorikaigann"
+    },
+    { "info": "立会川", "info2": "たちあいがわ", "word": "tatiaigawa" },
+    { "info": "鮫洲", "info2": "さめず", "word": "samezu" },
+    {
+      "info": "青物横丁",
+      "info2": "あおものよこちょう",
+      "word": "aomonoyokotyou"
+    },
+    { "info": "新馬場", "info2": "しんばんば", "word": "sinbanba" },
+    { "info": "北品川", "info2": "きたしながわ", "word": "kitasinagawa" },
+    { "info": "品川", "info2": "しながわ", "word": "sinagawa" },
+    { "info": "泉岳寺", "info2": "せんがくじ", "word": "sengakuji" }
+  ]
+}
