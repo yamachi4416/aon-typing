@@ -1,0 +1,51 @@
+{
+  "id": "1010304",
+  "title": "京王相模原線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-25",
+  "updatedAt": "2023-04-25",
+  "optional": { "cd": "304" },
+  "words": [
+    { "info": "橋本", "info2": "はしもと", "word": "hasimoto" },
+    { "info": "多摩境", "info2": "たまさかい", "word": "tamasakai" },
+    { "info": "南大沢", "info2": "みなみおおさわ", "word": "minamioosawa" },
+    {
+      "info": "京王堀之内",
+      "info2": "けいおうほりのうち",
+      "word": "keiouhorinouti"
+    },
+    {
+      "info": "京王多摩センター",
+      "info2": "けいおうたませんたー",
+      "word": "keioutamasenta-"
+    },
+    {
+      "info": "京王永山",
+      "info2": "けいおうながやま",
+      "word": "keiounagayama"
+    },
+    { "info": "若葉台", "info2": "わかばだい", "word": "wakabadai" },
+    { "info": "稲城", "info2": "いなぎ", "word": "inagi" },
+    {
+      "info": "京王よみうりランド",
+      "info2": "けいおうよみうりらんど",
+      "word": "keiouyomiurirando"
+    },
+    {
+      "info": "京王稲田堤",
+      "info2": "けいおういなだづつみ",
+      "word": "keiouinadadutumi"
+    },
+    {
+      "info": "京王多摩川",
+      "info2": "けいおうたまがわ",
+      "word": "keioutamagawa"
+    },
+    { "info": "調布", "info2": "ちょうふ", "word": "tyouhu" }
+  ]
+}
