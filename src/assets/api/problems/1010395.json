@@ -1,0 +1,76 @@
+{
+  "id": "1010395",
+  "title": "南海本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-28",
+  "updatedAt": "2023-04-28",
+  "optional": { "cd": "395" },
+  "words": [
+    { "info": "和歌山市", "info2": "わかやまし", "word": "wakayamasi" },
+    { "info": "紀ノ川", "info2": "きのかわ", "word": "kinokawa" },
+    {
+      "info": "和歌山大学前",
+      "info2": "わかやまだいがくまえ",
+      "word": "wakayamadaigakumae"
+    },
+    { "info": "孝子", "info2": "きょうし", "word": "kyousi" },
+    { "info": "みさき公園", "info2": "みさきこうえん", "word": "misakikouenn" },
+    { "info": "淡輪", "info2": "たんのわ", "word": "tannnowa" },
+    { "info": "箱作", "info2": "はこつくり", "word": "hakotukuri" },
+    {
+      "info": "鳥取ノ荘",
+      "info2": "とっとりのしょう",
+      "word": "tottorinosyou"
+    },
+    { "info": "尾崎", "info2": "おざき", "word": "ozaki" },
+    { "info": "樽井", "info2": "たるい", "word": "tarui" },
+    { "info": "岡田浦", "info2": "おかだうら", "word": "okadaura" },
+    { "info": "吉見ノ里", "info2": "よしみのさと", "word": "yosiminosato" },
+    { "info": "羽倉崎", "info2": "はぐらざき", "word": "hagurazaki" },
+    { "info": "泉佐野", "info2": "いずみさの", "word": "izumisano" },
+    { "info": "井原里", "info2": "いはらのさと", "word": "iharanosato" },
+    { "info": "鶴原", "info2": "つるはら", "word": "turuhara" },
+    { "info": "二色浜", "info2": "にしきのはま", "word": "nisikinohama" },
+    { "info": "貝塚", "info2": "かいづか", "word": "kaiduka" },
+    { "info": "蛸地蔵", "info2": "たこじぞう", "word": "takojizou" },
+    { "info": "岸和田", "info2": "きしわだ", "word": "kisiwada" },
+    { "info": "和泉大宮", "info2": "いずみおおみや", "word": "izumioomiya" },
+    { "info": "春木", "info2": "はるき", "word": "haruki" },
+    { "info": "忠岡", "info2": "ただおか", "word": "tadaoka" },
+    { "info": "泉大津", "info2": "いずみおおつ", "word": "izumiootu" },
+    { "info": "松ノ浜", "info2": "まつのはま", "word": "matunohama" },
+    { "info": "北助松", "info2": "きたすけまつ", "word": "kitasukematu" },
+    { "info": "高石", "info2": "たかいし", "word": "takaisi" },
+    { "info": "羽衣", "info2": "はごろも", "word": "hagoromo" },
+    {
+      "info": "浜寺公園",
+      "info2": "はまでらこうえん",
+      "word": "hamaderakouenn"
+    },
+    { "info": "諏訪ノ森", "info2": "すわのもり", "word": "suwanomori" },
+    { "info": "石津川", "info2": "いしづがわ", "word": "isidugawa" },
+    { "info": "湊", "info2": "みなと", "word": "minato" },
+    { "info": "堺", "info2": "さかい", "word": "sakai" },
+    { "info": "七道", "info2": "しちどう", "word": "sitidou" },
+    { "info": "住ノ江", "info2": "すみのえ", "word": "suminoe" },
+    {
+      "info": "住吉大社",
+      "info2": "すみよしたいしゃ",
+      "word": "sumiyositaisya"
+    },
+    { "info": "粉浜", "info2": "こはま", "word": "kohama" },
+    {
+      "info": "岸里玉出",
+      "info2": "きしのさとたまで",
+      "word": "kisinosatotamade"
+    },
+    { "info": "天下茶屋", "info2": "てんがちゃや", "word": "tengatyaya" },
+    { "info": "新今宮", "info2": "しんいまみや", "word": "sinnimamiya" },
+    { "info": "難波", "info2": "なんば", "word": "nanba" }
+  ]
+}
