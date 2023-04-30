@@ -1,0 +1,75 @@
+{
+  "id": "1010372",
+  "title": "近鉄名古屋線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-04-30",
+  "updatedAt": "2023-04-30",
+  "optional": { "cd": "372" },
+  "words": [
+    {
+      "info": "近鉄名古屋",
+      "info2": "きんてつなごや",
+      "word": "kintetunagoya"
+    },
+    { "info": "米野", "info2": "こめの", "word": "komeno" },
+    { "info": "黄金", "info2": "こがね", "word": "kogane" },
+    { "info": "烏森", "info2": "かすもり", "word": "kasumori" },
+    { "info": "近鉄八田", "info2": "きんてつはった", "word": "kintetuhatta" },
+    { "info": "伏屋", "info2": "ふしや", "word": "husiya" },
+    { "info": "戸田", "info2": "とだ", "word": "toda" },
+    { "info": "近鉄蟹江", "info2": "きんてつかにえ", "word": "kintetukanie" },
+    { "info": "富吉", "info2": "とみよし", "word": "tomiyosi" },
+    { "info": "佐古木", "info2": "さこぎ", "word": "sakogi" },
+    { "info": "近鉄弥富", "info2": "きんてつやとみ", "word": "kintetuyatomi" },
+    {
+      "info": "近鉄長島",
+      "info2": "きんてつながしま",
+      "word": "kintetunagasima"
+    },
+    { "info": "桑名", "info2": "くわな", "word": "kuwana" },
+    { "info": "益生", "info2": "ますお", "word": "masuo" },
+    { "info": "伊勢朝日", "info2": "いせあさひ", "word": "iseasahi" },
+    {
+      "info": "川越富洲原",
+      "info2": "かわごえとみすはら",
+      "word": "kawagoetomisuhara"
+    },
+    { "info": "近鉄富田", "info2": "きんてつとみだ", "word": "kintetutomida" },
+    { "info": "霞ケ浦", "info2": "かすみがうら", "word": "kasumigaura" },
+    { "info": "阿倉川", "info2": "あくらがわ", "word": "akuragawa" },
+    { "info": "川原町", "info2": "かわらまち", "word": "kawaramati" },
+    {
+      "info": "近鉄四日市",
+      "info2": "きんてつよっかいち",
+      "word": "kintetuyokkaiti"
+    },
+    { "info": "新正", "info2": "しんしょう", "word": "sinsyou" },
+    { "info": "海山道", "info2": "みやまど", "word": "miyamado" },
+    { "info": "塩浜", "info2": "しおはま", "word": "siohama" },
+    { "info": "北楠", "info2": "きたくす", "word": "kitakusu" },
+    { "info": "楠", "info2": "くす", "word": "kusu" },
+    { "info": "長太ノ浦", "info2": "なごのうら", "word": "nagonoura" },
+    { "info": "箕田", "info2": "みだ", "word": "mida" },
+    { "info": "伊勢若松", "info2": "いせわかまつ", "word": "isewakamatu" },
+    { "info": "千代崎", "info2": "ちよざき", "word": "tiyozaki" },
+    { "info": "白子", "info2": "しろこ", "word": "siroko" },
+    { "info": "鼓ケ浦", "info2": "つづみがうら", "word": "tudumigaura" },
+    { "info": "磯山", "info2": "いそやま", "word": "isoyama" },
+    { "info": "千里", "info2": "ちさと", "word": "tisato" },
+    { "info": "豊津上野", "info2": "とよつうえの", "word": "toyotuueno" },
+    { "info": "白塚", "info2": "しらつか", "word": "siratuka" },
+    { "info": "高田本山", "info2": "たかだほんざん", "word": "takadahonzann" },
+    { "info": "江戸橋", "info2": "えどばし", "word": "edobasi" },
+    { "info": "津", "info2": "つ", "word": "tu" },
+    { "info": "津新町", "info2": "つしんまち", "word": "tusinmati" },
+    { "info": "南が丘", "info2": "みなみがおか", "word": "minamigaoka" },
+    { "info": "久居", "info2": "ひさい", "word": "hisai" },
+    { "info": "桃園", "info2": "ももぞの", "word": "momozono" },
+    { "info": "伊勢中川", "info2": "いせなかがわ", "word": "isenakagawa" }
+  ]
+}
