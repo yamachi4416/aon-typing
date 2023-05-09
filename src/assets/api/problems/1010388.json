@@ -1,0 +1,27 @@
+{
+  "id": "1010388",
+  "title": "近鉄長野線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-05-10",
+  "updatedAt": "2023-05-10",
+  "optional": { "cd": "388" },
+  "words": [
+    { "info": "河内長野", "info2": "かわちながの", "word": "kawatinagano" },
+    { "info": "汐ノ宮", "info2": "しおのみや", "word": "sionomiya" },
+    { "info": "滝谷不動", "info2": "たきだにふどう", "word": "takidanihudou" },
+    { "info": "川西", "info2": "かわにし", "word": "kawanisi" },
+    {
+      "info": "富田林西口",
+      "info2": "とんだばやしにしぐち",
+      "word": "tondabayasinisiguti"
+    },
+    { "info": "富田林", "info2": "とんだばやし", "word": "tondabayasi" },
+    { "info": "喜志", "info2": "きし", "word": "kisi" },
+    { "info": "古市", "info2": "ふるいち", "word": "huruiti" }
+  ]
+}
