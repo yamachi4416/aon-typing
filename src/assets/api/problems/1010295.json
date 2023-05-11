@@ -1,0 +1,105 @@
+{
+  "id": "1010295",
+  "title": "京成本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-05-11",
+  "updatedAt": "2023-05-11",
+  "optional": { "cd": "295" },
+  "words": [
+    { "info": "成田空港", "info2": "なりたくうこう", "word": "naritakuukou" },
+    {
+      "info": "空港第２ビル",
+      "info2": "くうこうだいにびる",
+      "word": "kuukoudainibiru"
+    },
+    { "info": "京成成田", "info2": "けいせいなりた", "word": "keiseinarita" },
+    { "info": "公津の杜", "info2": "こうづのもり", "word": "koudunomori" },
+    { "info": "宗吾参道", "info2": "そうごさんどう", "word": "sougosandou" },
+    { "info": "京成酒々井", "info2": "けいせいしすい", "word": "keiseisisui" },
+    { "info": "大佐倉", "info2": "おおさくら", "word": "oosakura" },
+    { "info": "京成佐倉", "info2": "けいせいさくら", "word": "keiseisakura" },
+    { "info": "京成臼井", "info2": "けいせいうすい", "word": "keiseiusui" },
+    {
+      "info": "ユーカリが丘",
+      "info2": "ゆーかりがおか",
+      "word": "yu-karigaoka"
+    },
+    { "info": "志津", "info2": "しづ", "word": "sidu" },
+    { "info": "勝田台", "info2": "かつただい", "word": "katutadai" },
+    {
+      "info": "京成大和田",
+      "info2": "けいせいおおわだ",
+      "word": "keiseioowada"
+    },
+    { "info": "八千代台", "info2": "やちよだい", "word": "yatiyodai" },
+    { "info": "実籾", "info2": "みもみ", "word": "mimomi" },
+    {
+      "info": "京成大久保",
+      "info2": "けいせいおおくぼ",
+      "word": "keiseiookubo"
+    },
+    {
+      "info": "京成津田沼",
+      "info2": "けいせいつだぬま",
+      "word": "keiseitudanuma"
+    },
+    { "info": "谷津", "info2": "やつ", "word": "yatu" },
+    {
+      "info": "船橋競馬場",
+      "info2": "ふなばしけいばじょう",
+      "word": "hunabasikeibajou"
+    },
+    {
+      "info": "大神宮下",
+      "info2": "だいじんぐうした",
+      "word": "daijinguusita"
+    },
+    {
+      "info": "京成船橋",
+      "info2": "けいせいふなばし",
+      "word": "keiseihunabasi"
+    },
+    { "info": "海神", "info2": "かいじん", "word": "kaijinn" },
+    {
+      "info": "京成西船",
+      "info2": "けいせいにしふな",
+      "word": "keiseinisihuna"
+    },
+    { "info": "東中山", "info2": "ひがしなかやま", "word": "higasinakayama" },
+    {
+      "info": "京成中山",
+      "info2": "けいせいなかやま",
+      "word": "keiseinakayama"
+    },
+    { "info": "鬼越", "info2": "おにごえ", "word": "onigoe" },
+    { "info": "京成八幡", "info2": "けいせいやわた", "word": "keiseiyawata" },
+    { "info": "菅野", "info2": "すがの", "word": "sugano" },
+    { "info": "市川真間", "info2": "いちかわまま", "word": "itikawamama" },
+    { "info": "国府台", "info2": "こうのだい", "word": "kounodai" },
+    { "info": "江戸川", "info2": "えどがわ", "word": "edogawa" },
+    { "info": "京成小岩", "info2": "けいせいこいわ", "word": "keiseikoiwa" },
+    {
+      "info": "京成高砂",
+      "info2": "けいせいたかさご",
+      "word": "keiseitakasago"
+    },
+    { "info": "青砥", "info2": "あおと", "word": "aoto" },
+    { "info": "お花茶屋", "info2": "おはなぢゃや", "word": "ohanadyaya" },
+    {
+      "info": "堀切菖蒲園",
+      "info2": "ほりきりしょうぶえん",
+      "word": "horikirisyoubuenn"
+    },
+    { "info": "京成関屋", "info2": "けいせいせきや", "word": "keiseisekiya" },
+    { "info": "千住大橋", "info2": "せんじゅおおはし", "word": "senjuoohasi" },
+    { "info": "町屋", "info2": "まちや", "word": "matiya" },
+    { "info": "新三河島", "info2": "しんみかわしま", "word": "sinmikawasima" },
+    { "info": "日暮里", "info2": "にっぽり", "word": "nippori" },
+    { "info": "京成上野", "info2": "けいせいうえの", "word": "keiseiueno" }
+  ]
+}
