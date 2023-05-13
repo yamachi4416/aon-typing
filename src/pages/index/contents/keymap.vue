@@ -300,15 +300,15 @@ function print() {
       font-size: 9px !important;
 
       &-items {
-        @media print and (max-width: 600px) {
+        @media print and (width <= 600px) {
           width: calc(100% / 2);
         }
 
-        @media print and (min-width: 600px) and (max-width: 1000px) {
+        @media print and (600px <= width <= 1000px) {
           width: calc(100% / 3);
         }
 
-        @media print and (min-width: 1000px) and (max-width: 1600px) {
+        @media print and (1000px <= width <= 1600px) {
           width: calc(100% / 4);
         }
       }

@@ -27,11 +27,11 @@
     background-position: top 0 left 50vw;
     background-size: auto 100%;
 
-    @media (max-height: 450px) {
+    @media (height <= 450px) {
       height: 500px;
     }
 
-    @media (max-height: 650px) {
+    @media (height <= 650px) {
       height: 700px;
     }
   }

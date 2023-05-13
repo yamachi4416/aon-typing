@@ -1,29 +1,29 @@
 @mixin __media_s {
-  @media screen and (max-width: 480px) {
+  @media screen and (width <= 480px) {
     @content;
   }
 }
 
 @mixin __media_m {
-  @media screen and (min-width: 480px) and (max-width: 800px) {
+  @media screen and (480px <= width <= 800px) {
     @content;
   }
 }
 
 @mixin __media_sm {
-  @media screen and (max-width: 800px) {
+  @media screen and (width <= 800px) {
     @content;
   }
 }
 
 @mixin __media_ml {
-  @media screen and (min-width: 480px) {
+  @media screen and (width >= 480px) {
     @content;
   }
 }
 
 @mixin __media_l {
-  @media screen and (min-width: 700px) {
+  @media screen and (width >= 700px) {
     @content;
   }
 }
