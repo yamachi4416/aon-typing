@@ -1,0 +1,55 @@
+{
+  "id": "1010420",
+  "title": "阪急京都本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-05-14",
+  "updatedAt": "2023-05-14",
+  "optional": { "cd": "420" },
+  "words": [
+    {
+      "info": "京都河原町",
+      "info2": "きょうとかわらまち",
+      "word": "kyoutokawaramati"
+    },
+    { "info": "烏丸", "info2": "からすま", "word": "karasuma" },
+    { "info": "大宮", "info2": "おおみや", "word": "oomiya" },
+    { "info": "西院", "info2": "さいいん", "word": "saiinn" },
+    { "info": "西京極", "info2": "にしきょうごく", "word": "nisikyougoku" },
+    { "info": "桂", "info2": "かつら", "word": "katura" },
+    { "info": "洛西口", "info2": "らくさいぐち", "word": "rakusaiguti" },
+    { "info": "東向日", "info2": "ひがしむこう", "word": "higasimukou" },
+    { "info": "西向日", "info2": "にしむこう", "word": "nisimukou" },
+    {
+      "info": "長岡天神",
+      "info2": "ながおかてんじん",
+      "word": "nagaokatenjinn"
+    },
+    {
+      "info": "西山天王山",
+      "info2": "にしやまてんのうざん",
+      "word": "nisiyamatennnouzann"
+    },
+    { "info": "大山崎", "info2": "おおやまざき", "word": "ooyamazaki" },
+    { "info": "水無瀬", "info2": "みなせ", "word": "minase" },
+    { "info": "上牧", "info2": "かんまき", "word": "kanmaki" },
+    { "info": "高槻市", "info2": "たかつきし", "word": "takatukisi" },
+    { "info": "富田", "info2": "とんだ", "word": "tonda" },
+    { "info": "総持寺", "info2": "そうじじ", "word": "soujiji" },
+    { "info": "茨木市", "info2": "いばらきし", "word": "ibarakisi" },
+    { "info": "南茨木", "info2": "みなみいばらき", "word": "minamiibaraki" },
+    { "info": "摂津市", "info2": "せっつし", "word": "settusi" },
+    { "info": "正雀", "info2": "しょうじゃく", "word": "syoujaku" },
+    { "info": "相川", "info2": "あいかわ", "word": "aikawa" },
+    { "info": "上新庄", "info2": "かみしんじょう", "word": "kamisinjou" },
+    { "info": "淡路", "info2": "あわじ", "word": "awaji" },
+    { "info": "崇禅寺", "info2": "そうぜんじ", "word": "souzenji" },
+    { "info": "南方", "info2": "みなみかた", "word": "minamikata" },
+    { "info": "十三", "info2": "じゅうそう", "word": "juusou" },
+    { "info": "大阪梅田", "info2": "おおさかうめだ", "word": "oosakaumeda" }
+  ]
+}
