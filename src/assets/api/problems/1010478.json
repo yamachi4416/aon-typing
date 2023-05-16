@@ -1,0 +1,51 @@
+{
+  "id": "1010478",
+  "title": "新京成線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-05-16",
+  "updatedAt": "2023-05-16",
+  "optional": { "cd": "478" },
+  "words": [
+    {
+      "info": "京成津田沼",
+      "info2": "けいせいつだぬま",
+      "word": "keiseitudanuma"
+    },
+    { "info": "新津田沼", "info2": "しんつだぬま", "word": "sintudanuma" },
+    { "info": "前原", "info2": "まえばら", "word": "maebara" },
+    { "info": "薬園台", "info2": "やくえんだい", "word": "yakuendai" },
+    { "info": "習志野", "info2": "ならしの", "word": "narasino" },
+    { "info": "北習志野", "info2": "きたならしの", "word": "kitanarasino" },
+    { "info": "高根木戸", "info2": "たかねきど", "word": "takanekido" },
+    { "info": "高根公団", "info2": "たかねこうだん", "word": "takanekoudann" },
+    { "info": "滝不動", "info2": "たきふどう", "word": "takihudou" },
+    { "info": "三咲", "info2": "みさき", "word": "misaki" },
+    {
+      "info": "二和向台",
+      "info2": "ふたわむこうだい",
+      "word": "hutawamukoudai"
+    },
+    {
+      "info": "鎌ケ谷大仏",
+      "info2": "かまがやだいぶつ",
+      "word": "kamagayadaibutu"
+    },
+    { "info": "初富", "info2": "はつとみ", "word": "hatutomi" },
+    { "info": "新鎌ケ谷", "info2": "しんかまがや", "word": "sinkamagaya" },
+    { "info": "北初富", "info2": "きたはつとみ", "word": "kitahatutomi" },
+    { "info": "くぬぎ山", "info2": "くぬぎやま", "word": "kunugiyama" },
+    { "info": "元山", "info2": "もとやま", "word": "motoyama" },
+    { "info": "五香", "info2": "ごこう", "word": "gokou" },
+    { "info": "常盤平", "info2": "ときわだいら", "word": "tokiwadaira" },
+    { "info": "八柱", "info2": "やばしら", "word": "yabasira" },
+    { "info": "みのり台", "info2": "みのりだい", "word": "minoridai" },
+    { "info": "松戸新田", "info2": "まつどしんでん", "word": "matudosindenn" },
+    { "info": "上本郷", "info2": "かみほんごう", "word": "kamihongou" },
+    { "info": "松戸", "info2": "まつど", "word": "matudo" }
+  ]
+}
