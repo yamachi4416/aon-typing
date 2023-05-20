@@ -1,0 +1,53 @@
+{
+  "id": "1010382",
+  "title": "近鉄京都線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-05-20",
+  "updatedAt": "2023-05-20",
+  "optional": { "cd": "382" },
+  "words": [
+    {
+      "info": "大和西大寺",
+      "info2": "やまとさいだいじ",
+      "word": "yamatosaidaiji"
+    },
+    { "info": "平城", "info2": "へいじょう", "word": "heijou" },
+    { "info": "高の原", "info2": "たかのはら", "word": "takanohara" },
+    { "info": "山田川", "info2": "やまだがわ", "word": "yamadagawa" },
+    { "info": "木津川台", "info2": "きづがわだい", "word": "kidugawadai" },
+    { "info": "新祝園", "info2": "しんほうその", "word": "sinhousono" },
+    { "info": "狛田", "info2": "こまだ", "word": "komada" },
+    { "info": "近鉄宮津", "info2": "きんてつみやづ", "word": "kintetumiyadu" },
+    { "info": "三山木", "info2": "みやまき", "word": "miyamaki" },
+    { "info": "興戸", "info2": "こうど", "word": "koudo" },
+    { "info": "新田辺", "info2": "しんたなべ", "word": "sintanabe" },
+    { "info": "富野荘", "info2": "とのしょう", "word": "tonosyou" },
+    { "info": "寺田", "info2": "てらだ", "word": "terada" },
+    { "info": "久津川", "info2": "くつかわ", "word": "kutukawa" },
+    { "info": "大久保", "info2": "おおくぼ", "word": "ookubo" },
+    { "info": "伊勢田", "info2": "いせだ", "word": "iseda" },
+    { "info": "小倉", "info2": "おぐら", "word": "ogura" },
+    { "info": "向島", "info2": "むかいじま", "word": "mukaijima" },
+    {
+      "info": "桃山御陵前",
+      "info2": "ももやまごりょうまえ",
+      "word": "momoyamagoryoumae"
+    },
+    {
+      "info": "近鉄丹波橋",
+      "info2": "きんてつたんばばし",
+      "word": "kintetutanbabasi"
+    },
+    { "info": "伏見", "info2": "ふしみ", "word": "husimi" },
+    { "info": "竹田", "info2": "たけだ", "word": "takeda" },
+    { "info": "上鳥羽口", "info2": "かみとばぐち", "word": "kamitobaguti" },
+    { "info": "十条", "info2": "じゅうじょう", "word": "juujou" },
+    { "info": "東寺", "info2": "とうじ", "word": "touji" },
+    { "info": "京都", "info2": "きょうと", "word": "kyouto" }
+  ]
+}
