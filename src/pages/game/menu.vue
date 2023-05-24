@@ -1,28 +1,30 @@
 <template>
-  <ModalPanel ref="modalMenu">
-    <ModGameMenuPanel
-      :show-close="false"
-      @start="startTyping"
-      @cancel="cancel"
-      @detail="openProblemDetail"
-      @open-problem-select="modalProblemList?.open()"
-    />
-  </ModalPanel>
-  <ModalPanel ref="modalProblemList">
-    <ModGameProblemListPanel
-      @close="modalProblemList?.close()"
-      @select="selcet"
-      @detail="openProblemSelectDetail"
-    />
-  </ModalPanel>
-  <ModalPanel ref="modalProblemDetail">
-    <ProblemDetailPanel
-      ref="problemDetailPanel"
-      @close="modalProblemDetail?.close()"
-      @back="modalProblemDetail?.close()"
-      @select="selcet"
-    />
-  </ModalPanel>
+  <div>
+    <ModalPanel ref="modalMenu">
+      <ModGameMenuPanel
+        :show-close="false"
+        @start="startTyping"
+        @cancel="cancel"
+        @detail="openProblemDetail"
+        @open-problem-select="modalProblemList?.open()"
+      />
+    </ModalPanel>
+    <ModalPanel ref="modalProblemList">
+      <ModGameProblemListPanel
+        @close="modalProblemList?.close()"
+        @select="selcet"
+        @detail="openProblemSelectDetail"
+      />
+    </ModalPanel>
+    <ModalPanel ref="modalProblemDetail">
+      <ProblemDetailPanel
+        ref="problemDetailPanel"
+        @close="modalProblemDetail?.close()"
+        @back="modalProblemDetail?.close()"
+        @select="selcet"
+      />
+    </ModalPanel>
+  </div>
 </template>
 
 <script setup lang="ts">
