@@ -1,0 +1,57 @@
+{
+  "id": "1010274",
+  "title": "東武日光線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-05-27",
+  "updatedAt": "2023-05-27",
+  "optional": { "cd": "274" },
+  "words": [
+    { "info": "東武日光", "info2": "とうぶにっこう", "word": "toubunikkou" },
+    { "info": "上今市", "info2": "かみいまいち", "word": "kamiimaiti" },
+    { "info": "下今市", "info2": "しもいまいち", "word": "simoimaiti" },
+    { "info": "明神", "info2": "みょうじん", "word": "myoujinn" },
+    { "info": "下小代", "info2": "しもごしろ", "word": "simogosiro" },
+    { "info": "板荷", "info2": "いたが", "word": "itaga" },
+    { "info": "北鹿沼", "info2": "きたかぬま", "word": "kitakanuma" },
+    { "info": "新鹿沼", "info2": "しんかぬま", "word": "sinkanuma" },
+    { "info": "樅山", "info2": "もみやま", "word": "momiyama" },
+    { "info": "楡木", "info2": "にれぎ", "word": "niregi" },
+    { "info": "東武金崎", "info2": "とうぶかなさき", "word": "toubukanasaki" },
+    { "info": "家中", "info2": "いえなか", "word": "ienaka" },
+    { "info": "合戦場", "info2": "かっせんば", "word": "kassenba" },
+    { "info": "新栃木", "info2": "しんとちぎ", "word": "sintotigi" },
+    { "info": "栃木", "info2": "とちぎ", "word": "totigi" },
+    {
+      "info": "新大平下",
+      "info2": "しんおおひらした",
+      "word": "sinnoohirasita"
+    },
+    { "info": "静和", "info2": "しずわ", "word": "sizuwa" },
+    { "info": "藤岡", "info2": "ふじおか", "word": "hujioka" },
+    {
+      "info": "板倉東洋大前",
+      "info2": "いたくらとうようだいまえ",
+      "word": "itakuratouyoudaimae"
+    },
+    { "info": "柳生", "info2": "やぎゅう", "word": "yagyuu" },
+    { "info": "新古河", "info2": "しんこが", "word": "sinkoga" },
+    { "info": "栗橋", "info2": "くりはし", "word": "kurihasi" },
+    { "info": "南栗橋", "info2": "みなみくりはし", "word": "minamikurihasi" },
+    { "info": "幸手", "info2": "さって", "word": "satte" },
+    {
+      "info": "杉戸高野台",
+      "info2": "すぎとたかのだい",
+      "word": "sugitotakanodai"
+    },
+    {
+      "info": "東武動物公園",
+      "info2": "とうぶどうぶつこうえん",
+      "word": "toubudoubutukouenn"
+    }
+  ]
+}
