@@ -1,0 +1,47 @@
+{
+  "id": "1010519",
+  "title": "長野電鉄長野線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-02",
+  "updatedAt": "2023-06-02",
+  "optional": { "cd": "519" },
+  "words": [
+    { "info": "湯田中", "info2": "ゆだなか", "word": "yudanaka" },
+    { "info": "上条", "info2": "かみじょう", "word": "kamijou" },
+    { "info": "夜間瀬", "info2": "よませ", "word": "yomase" },
+    { "info": "信濃竹原", "info2": "しなのたけはら", "word": "sinanotakehara" },
+    { "info": "中野松川", "info2": "なかのまつかわ", "word": "nakanomatukawa" },
+    {
+      "info": "信州中野",
+      "info2": "しんしゅうなかの",
+      "word": "sinsyuunakano"
+    },
+    { "info": "延徳", "info2": "えんとく", "word": "entoku" },
+    { "info": "桜沢", "info2": "さくらさわ", "word": "sakurasawa" },
+    { "info": "都住", "info2": "つすみ", "word": "tusumi" },
+    { "info": "小布施", "info2": "おぶせ", "word": "obuse" },
+    { "info": "北須坂", "info2": "きたすざか", "word": "kitasuzaka" },
+    { "info": "須坂", "info2": "すざか", "word": "suzaka" },
+    { "info": "日野", "info2": "ひの", "word": "hino" },
+    { "info": "村山", "info2": "むらやま", "word": "murayama" },
+    { "info": "柳原", "info2": "やなぎはら", "word": "yanagihara" },
+    {
+      "info": "附属中学前",
+      "info2": "ふぞくちゅうがくまえ",
+      "word": "huzokutyuugakumae"
+    },
+    { "info": "朝陽", "info2": "あさひ", "word": "asahi" },
+    { "info": "信濃吉田", "info2": "しなのよしだ", "word": "sinanoyosida" },
+    { "info": "桐原", "info2": "きりはら", "word": "kirihara" },
+    { "info": "本郷", "info2": "ほんごう", "word": "hongou" },
+    { "info": "善光寺下", "info2": "ぜんこうじした", "word": "zenkoujisita" },
+    { "info": "権堂", "info2": "ごんどう", "word": "gondou" },
+    { "info": "市役所前", "info2": "しやくしょまえ", "word": "siyakusyomae" },
+    { "info": "長野", "info2": "ながの", "word": "nagano" }
+  ]
+}
