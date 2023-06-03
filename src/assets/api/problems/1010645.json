@@ -1,0 +1,47 @@
+{
+  "id": "1010645",
+  "title": "島原鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-03",
+  "updatedAt": "2023-06-03",
+  "optional": { "cd": "645" },
+  "words": [
+    { "info": "島原港", "info2": "しまばらこう", "word": "simabarakou" },
+    { "info": "島原船津", "info2": "しまばらふなつ", "word": "simabarahunatu" },
+    {
+      "info": "霊丘公園体育館",
+      "info2": "れいきゅうこうえんたいいくかん",
+      "word": "reikyuukouentaiikukann"
+    },
+    { "info": "島原", "info2": "しまばら", "word": "simabara" },
+    { "info": "三会", "info2": "みえ", "word": "mie" },
+    { "info": "松尾", "info2": "まつお", "word": "matuo" },
+    { "info": "大三東", "info2": "おおみさき", "word": "oomisaki" },
+    { "info": "有明湯江", "info2": "ありあけゆえ", "word": "ariakeyue" },
+    { "info": "多比良", "info2": "たいら", "word": "taira" },
+    { "info": "神代", "info2": "こうじろ", "word": "koujiro" },
+    { "info": "西郷", "info2": "さいごう", "word": "saigou" },
+    { "info": "大正", "info2": "たいしょう", "word": "taisyou" },
+    { "info": "古部", "info2": "こべ", "word": "kobe" },
+    { "info": "吾妻", "info2": "あづま", "word": "aduma" },
+    { "info": "阿母崎", "info2": "あぼざき", "word": "abozaki" },
+    { "info": "愛野", "info2": "あいの", "word": "aino" },
+    {
+      "info": "諫早東高校",
+      "info2": "いさはやひがしこうこう",
+      "word": "isahayahigasikoukou"
+    },
+    { "info": "釜ノ鼻", "info2": "かまのはな", "word": "kamanohana" },
+    { "info": "森山", "info2": "もりやま", "word": "moriyama" },
+    { "info": "干拓の里", "info2": "かんたくのさと", "word": "kantakunosato" },
+    { "info": "小野", "info2": "おの", "word": "ono" },
+    { "info": "幸", "info2": "さいわい", "word": "saiwai" },
+    { "info": "本諫早", "info2": "ほんいさはや", "word": "honnisahaya" },
+    { "info": "諫早", "info2": "いさはや", "word": "isahaya" }
+  ]
+}
