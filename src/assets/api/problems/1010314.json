@@ -1,0 +1,40 @@
+{
+  "id": "1010314",
+  "title": "東急東横線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-03",
+  "updatedAt": "2023-06-03",
+  "optional": { "cd": "314" },
+  "words": [
+    { "info": "横浜", "info2": "よこはま", "word": "yokohama" },
+    { "info": "反町", "info2": "たんまち", "word": "tanmati" },
+    { "info": "東白楽", "info2": "ひがしはくらく", "word": "higasihakuraku" },
+    { "info": "白楽", "info2": "はくらく", "word": "hakuraku" },
+    { "info": "妙蓮寺", "info2": "みょうれんじ", "word": "myourenji" },
+    { "info": "菊名", "info2": "きくな", "word": "kikuna" },
+    { "info": "大倉山", "info2": "おおくらやま", "word": "ookurayama" },
+    { "info": "綱島", "info2": "つなしま", "word": "tunasima" },
+    { "info": "日吉", "info2": "ひよし", "word": "hiyosi" },
+    { "info": "元住吉", "info2": "もとすみよし", "word": "motosumiyosi" },
+    { "info": "武蔵小杉", "info2": "むさしこすぎ", "word": "musasikosugi" },
+    { "info": "新丸子", "info2": "しんまるこ", "word": "sinmaruko" },
+    { "info": "多摩川", "info2": "たまがわ", "word": "tamagawa" },
+    { "info": "田園調布", "info2": "でんえんちょうふ", "word": "dennentyouhu" },
+    { "info": "自由が丘", "info2": "じゆうがおか", "word": "jiyuugaoka" },
+    { "info": "都立大学", "info2": "とりつだいがく", "word": "toritudaigaku" },
+    {
+      "info": "学芸大学",
+      "info2": "がくげいだいがく",
+      "word": "gakugeidaigaku"
+    },
+    { "info": "祐天寺", "info2": "ゆうてんじ", "word": "yuutenji" },
+    { "info": "中目黒", "info2": "なかめぐろ", "word": "nakameguro" },
+    { "info": "代官山", "info2": "だいかんやま", "word": "daikanyama" },
+    { "info": "渋谷", "info2": "しぶや", "word": "sibuya" }
+  ]
+}
