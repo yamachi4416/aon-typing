@@ -1,0 +1,29 @@
+{
+  "id": "1010500",
+  "title": "富山地方鉄道立山線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-04",
+  "updatedAt": "2023-06-04",
+  "optional": { "cd": "500" },
+  "words": [
+    { "info": "立山", "info2": "たてやま", "word": "tateyama" },
+    { "info": "本宮", "info2": "ほんぐう", "word": "honguu" },
+    { "info": "有峰口", "info2": "ありみねぐち", "word": "arimineguti" },
+    { "info": "千垣", "info2": "ちがき", "word": "tigaki" },
+    { "info": "横江", "info2": "よこえ", "word": "yokoe" },
+    { "info": "岩峅寺", "info2": "いわくらじ", "word": "iwakuraji" },
+    { "info": "沢中山", "info2": "さわなかやま", "word": "sawanakayama" },
+    { "info": "釜ケ淵", "info2": "かまがふち", "word": "kamagahuti" },
+    { "info": "下段", "info2": "しただん", "word": "sitadann" },
+    { "info": "榎町", "info2": "えのきまち", "word": "enokimati" },
+    { "info": "五百石", "info2": "ごひゃっこく", "word": "gohyakkoku" },
+    { "info": "田添", "info2": "たぞえ", "word": "tazoe" },
+    { "info": "稚子塚", "info2": "ちごづか", "word": "tigoduka" },
+    { "info": "寺田", "info2": "てらだ", "word": "terada" }
+  ]
+}
