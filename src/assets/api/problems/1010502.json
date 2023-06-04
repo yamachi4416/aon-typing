@@ -1,0 +1,26 @@
+{
+  "id": "1010502",
+  "title": "富山地方鉄道上滝線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-04",
+  "updatedAt": "2023-06-04",
+  "optional": { "cd": "502" },
+  "words": [
+    { "info": "岩峅寺", "info2": "いわくらじ", "word": "iwakuraji" },
+    { "info": "大川寺", "info2": "だいせんじ", "word": "daisenji" },
+    { "info": "上滝", "info2": "かみだき", "word": "kamidaki" },
+    { "info": "大庄", "info2": "おおしょう", "word": "oosyou" },
+    { "info": "月岡", "info2": "つきおか", "word": "tukioka" },
+    { "info": "開発", "info2": "かいほつ", "word": "kaihotu" },
+    { "info": "布市", "info2": "ぬのいち", "word": "nunoiti" },
+    { "info": "小杉", "info2": "こすぎ", "word": "kosugi" },
+    { "info": "上堀", "info2": "かみほり", "word": "kamihori" },
+    { "info": "朝菜町", "info2": "あさなまち", "word": "asanamati" },
+    { "info": "南富山", "info2": "みなみとやま", "word": "minamitoyama" }
+  ]
+}
