@@ -1,0 +1,76 @@
+{
+  "id": "1010499",
+  "title": "富山地方鉄道本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-04",
+  "updatedAt": "2023-06-04",
+  "optional": { "cd": "499" },
+  "words": [
+    {
+      "info": "宇奈月温泉",
+      "info2": "うなづきおんせん",
+      "word": "unadukionsenn"
+    },
+    { "info": "音沢", "info2": "おとざわ", "word": "otozawa" },
+    { "info": "内山", "info2": "うちやま", "word": "utiyama" },
+    { "info": "愛本", "info2": "あいもと", "word": "aimoto" },
+    { "info": "下立", "info2": "おりたて", "word": "oritate" },
+    { "info": "下立口", "info2": "おりたてぐち", "word": "oritateguti" },
+    { "info": "浦山", "info2": "うらやま", "word": "urayama" },
+    { "info": "栃屋", "info2": "とちや", "word": "totiya" },
+    { "info": "若栗", "info2": "わかぐり", "word": "wakaguri" },
+    { "info": "舌山", "info2": "したやま", "word": "sitayama" },
+    { "info": "新黒部", "info2": "しんくろべ", "word": "sinkurobe" },
+    { "info": "長屋", "info2": "ながや", "word": "nagaya" },
+    { "info": "荻生", "info2": "おぎゅう", "word": "ogyuu" },
+    {
+      "info": "東三日市",
+      "info2": "ひがしみっかいち",
+      "word": "higasimikkaiti"
+    },
+    { "info": "電鉄黒部", "info2": "でんてつくろべ", "word": "dentetukurobe" },
+    { "info": "電鉄石田", "info2": "でんてついしだ", "word": "dentetuisida" },
+    { "info": "経田", "info2": "きょうでん", "word": "kyoudenn" },
+    { "info": "新魚津", "info2": "しんうおづ", "word": "sinnuodu" },
+    { "info": "電鉄魚津", "info2": "でんてつうおづ", "word": "dentetuuodu" },
+    { "info": "西魚津", "info2": "にしうおづ", "word": "nisiuodu" },
+    {
+      "info": "越中中村",
+      "info2": "えっちゅうなかむら",
+      "word": "ettyuunakamura"
+    },
+    { "info": "早月加積", "info2": "はやつきかづみ", "word": "hayatukikadumi" },
+    { "info": "浜加積", "info2": "はまかづみ", "word": "hamakadumi" },
+    { "info": "滑川", "info2": "なめりかわ", "word": "namerikawa" },
+    { "info": "中滑川", "info2": "なかなめりかわ", "word": "nakanamerikawa" },
+    { "info": "西滑川", "info2": "にしなめりかわ", "word": "nisinamerikawa" },
+    { "info": "西加積", "info2": "にしかづみ", "word": "nisikadumi" },
+    { "info": "中加積", "info2": "なかかづみ", "word": "nakakadumi" },
+    { "info": "新宮川", "info2": "しんみやかわ", "word": "sinmiyakawa" },
+    { "info": "上市", "info2": "かみいち", "word": "kamiiti" },
+    { "info": "新相ノ木", "info2": "しんあいのき", "word": "sinnainoki" },
+    { "info": "相ノ木", "info2": "あいのき", "word": "ainoki" },
+    { "info": "越中泉", "info2": "えっちゅういずみ", "word": "ettyuuizumi" },
+    { "info": "寺田", "info2": "てらだ", "word": "terada" },
+    {
+      "info": "越中舟橋",
+      "info2": "えっちゅうふなはし",
+      "word": "ettyuuhunahasi"
+    },
+    {
+      "info": "越中三郷",
+      "info2": "えっちゅうさんごう",
+      "word": "ettyuusangou"
+    },
+    { "info": "越中荏原", "info2": "えっちゅうえばら", "word": "ettyuuebara" },
+    { "info": "東新庄", "info2": "ひがししんじょう", "word": "higasisinjou" },
+    { "info": "新庄田中", "info2": "しんじょうたなか", "word": "sinjoutanaka" },
+    { "info": "稲荷町", "info2": "いなりまち", "word": "inarimati" },
+    { "info": "電鉄富山", "info2": "でんてつとやま", "word": "dentetutoyama" }
+  ]
+}
