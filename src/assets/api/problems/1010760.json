@@ -1,0 +1,79 @@
+{
+  "id": "1010760",
+  "title": "福井鉄道福武線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-07",
+  "updatedAt": "2023-06-07",
+  "optional": { "cd": "760" },
+  "words": [
+    { "info": "田原町", "info2": "たわらまち", "word": "tawaramati" },
+    {
+      "info": "仁愛女子高校",
+      "info2": "じんあいじょしこうこう",
+      "word": "jinnaijosikoukou"
+    },
+    {
+      "info": "福井城址大名町",
+      "info2": "ふくいじょうしだいみょうまち",
+      "word": "hukuijousidaimyoumati"
+    },
+    {
+      "info": "足羽山公園口",
+      "info2": "あすわやまこうえんぐち",
+      "word": "asuwayamakouenguti"
+    },
+    {
+      "info": "商工会議所前",
+      "info2": "しょうこうかいぎしょまえ",
+      "word": "syoukoukaigisyomae"
+    },
+    { "info": "赤十字前", "info2": "せきじゅうじまえ", "word": "sekijuujimae" },
+    { "info": "花堂", "info2": "はなんどう", "word": "hanandou" },
+    { "info": "ベル前", "info2": "べるまえ", "word": "berumae" },
+    { "info": "江端", "info2": "えばた", "word": "ebata" },
+    { "info": "清明", "info2": "せいめい", "word": "seimei" },
+    {
+      "info": "ハーモニーホール",
+      "info2": "はーもにーほーる",
+      "word": "ha-moni-ho-ru"
+    },
+    { "info": "浅水", "info2": "あそうず", "word": "asouzu" },
+    {
+      "info": "泰澄の里",
+      "info2": "たいちょうのさと",
+      "word": "taityounosato"
+    },
+    {
+      "info": "三十八社",
+      "info2": "さんじゅうはっしゃ",
+      "word": "sanjuuhassya"
+    },
+    { "info": "鳥羽中", "info2": "とばなか", "word": "tobanaka" },
+    { "info": "神明", "info2": "しんめい", "word": "sinmei" },
+    { "info": "水落", "info2": "みずおち", "word": "mizuoti" },
+    {
+      "info": "西山公園",
+      "info2": "にしやまこうえん",
+      "word": "nisiyamakouenn"
+    },
+    { "info": "西鯖江", "info2": "にしさばえ", "word": "nisisabae" },
+    {
+      "info": "サンドーム西",
+      "info2": "さんどーむにし",
+      "word": "sando-munisi"
+    },
+    { "info": "家久", "info2": "いえひさ", "word": "iehisa" },
+    {
+      "info": "スポーツ公園",
+      "info2": "すぽーつこうえん",
+      "word": "supo-tukouenn"
+    },
+    { "info": "北府", "info2": "きたご", "word": "kitago" },
+    { "info": "たけふ新", "info2": "たけふしん", "word": "takehusinn" }
+  ]
+}
