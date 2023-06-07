@@ -82,11 +82,11 @@ body,
   line-height: 2;
   color: var(--color-3);
   white-space: nowrap;
+  appearance: none;
   cursor: pointer;
   background: var(--color-e);
   border: 1px solid var(--color-9);
   border-radius: 10px;
-  appearance: none;
 
   &.big {
     line-height: 2.5;
@@ -139,7 +139,6 @@ body,
 
   input,
   textarea {
-    appearance: none;
     display: block;
     width: 100%;
     height: calc(1.5em + 0.7rem + 2px);
@@ -148,6 +147,7 @@ body,
     font-weight: 400;
     line-height: 1.5;
     color: var(--color-3);
+    appearance: none;
     background: var(--color-f);
     background-clip: padding-box;
     border: 1px solid var(--color-c);
