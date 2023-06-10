@@ -1,0 +1,37 @@
+{
+  "id": "1010335",
+  "title": "東京メトロ半蔵門線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-10",
+  "updatedAt": "2023-06-10",
+  "optional": { "cd": "335" },
+  "words": [
+    { "info": "押上", "info2": "おしあげ", "word": "osiage" },
+    { "info": "錦糸町", "info2": "きんしちょう", "word": "kinsityou" },
+    { "info": "住吉", "info2": "すみよし", "word": "sumiyosi" },
+    {
+      "info": "清澄白河",
+      "info2": "きよすみしらかわ",
+      "word": "kiyosumisirakawa"
+    },
+    { "info": "水天宮前", "info2": "すいてんぐうまえ", "word": "suitenguumae" },
+    { "info": "三越前", "info2": "みつこしまえ", "word": "mitukosimae" },
+    { "info": "大手町", "info2": "おおてまち", "word": "ootemati" },
+    { "info": "神保町", "info2": "じんぼうちょう", "word": "jinboutyou" },
+    { "info": "九段下", "info2": "くだんした", "word": "kudansita" },
+    { "info": "半蔵門", "info2": "はんぞうもん", "word": "hanzoumonn" },
+    { "info": "永田町", "info2": "ながたちょう", "word": "nagatatyou" },
+    {
+      "info": "青山一丁目",
+      "info2": "あおやまいっちょうめ",
+      "word": "aoyamaittyoume"
+    },
+    { "info": "表参道", "info2": "おもてさんどう", "word": "omotesandou" },
+    { "info": "渋谷", "info2": "しぶや", "word": "sibuya" }
+  ]
+}
