@@ -1,0 +1,59 @@
+{
+  "id": "1010334",
+  "title": "東京メトロ有楽町線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-10",
+  "updatedAt": "2023-06-10",
+  "optional": { "cd": "334" },
+  "words": [
+    { "info": "新木場", "info2": "しんきば", "word": "sinkiba" },
+    { "info": "辰巳", "info2": "たつみ", "word": "tatumi" },
+    { "info": "豊洲", "info2": "とよす", "word": "toyosu" },
+    { "info": "月島", "info2": "つきしま", "word": "tukisima" },
+    { "info": "新富町", "info2": "しんとみちょう", "word": "sintomityou" },
+    {
+      "info": "銀座一丁目",
+      "info2": "ぎんざいっちょうめ",
+      "word": "ginzaittyoume"
+    },
+    { "info": "有楽町", "info2": "ゆうらくちょう", "word": "yuurakutyou" },
+    { "info": "桜田門", "info2": "さくらだもん", "word": "sakuradamonn" },
+    { "info": "永田町", "info2": "ながたちょう", "word": "nagatatyou" },
+    { "info": "麹町", "info2": "こうじまち", "word": "koujimati" },
+    { "info": "市ケ谷", "info2": "いちがや", "word": "itigaya" },
+    { "info": "飯田橋", "info2": "いいだばし", "word": "iidabasi" },
+    { "info": "江戸川橋", "info2": "えどがわばし", "word": "edogawabasi" },
+    { "info": "護国寺", "info2": "ごこくじ", "word": "gokokuji" },
+    {
+      "info": "東池袋",
+      "info2": "ひがしいけぶくろ",
+      "word": "higasiikebukuro"
+    },
+    { "info": "池袋", "info2": "いけぶくろ", "word": "ikebukuro" },
+    { "info": "要町", "info2": "かなめちょう", "word": "kanametyou" },
+    { "info": "千川", "info2": "せんかわ", "word": "senkawa" },
+    {
+      "info": "小竹向原",
+      "info2": "こたけむかいはら",
+      "word": "kotakemukaihara"
+    },
+    { "info": "氷川台", "info2": "ひかわだい", "word": "hikawadai" },
+    { "info": "平和台", "info2": "へいわだい", "word": "heiwadai" },
+    {
+      "info": "地下鉄赤塚",
+      "info2": "ちかてつあかつか",
+      "word": "tikatetuakatuka"
+    },
+    {
+      "info": "地下鉄成増",
+      "info2": "ちかてつなります",
+      "word": "tikatetunarimasu"
+    },
+    { "info": "和光市", "info2": "わこうし", "word": "wakousi" }
+  ]
+}
