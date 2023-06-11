@@ -1,0 +1,50 @@
+{
+  "id": "1010336",
+  "title": "東京メトロ南北線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-11",
+  "updatedAt": "2023-06-11",
+  "optional": { "cd": "336" },
+  "words": [
+    {
+      "info": "赤羽岩淵",
+      "info2": "あかばねいわぶち",
+      "word": "akabaneiwabuti"
+    },
+    { "info": "志茂", "info2": "しも", "word": "simo" },
+    { "info": "王子神谷", "info2": "おうじかみや", "word": "oujikamiya" },
+    { "info": "王子", "info2": "おうじ", "word": "ouji" },
+    { "info": "西ケ原", "info2": "にしがはら", "word": "nisigahara" },
+    { "info": "駒込", "info2": "こまごめ", "word": "komagome" },
+    { "info": "本駒込", "info2": "ほんこまごめ", "word": "honkomagome" },
+    { "info": "東大前", "info2": "とうだいまえ", "word": "toudaimae" },
+    { "info": "後楽園", "info2": "こうらくえん", "word": "kourakuenn" },
+    { "info": "飯田橋", "info2": "いいだばし", "word": "iidabasi" },
+    { "info": "市ケ谷", "info2": "いちがや", "word": "itigaya" },
+    { "info": "四ツ谷", "info2": "よつや", "word": "yotuya" },
+    { "info": "永田町", "info2": "ながたちょう", "word": "nagatatyou" },
+    {
+      "info": "溜池山王",
+      "info2": "ためいけさんのう",
+      "word": "tameikesannnou"
+    },
+    {
+      "info": "六本木一丁目",
+      "info2": "ろっぽんぎいっちょうめ",
+      "word": "roppongiittyoume"
+    },
+    { "info": "麻布十番", "info2": "あざぶじゅうばん", "word": "azabujuubann" },
+    {
+      "info": "白金高輪",
+      "info2": "しろかねたかなわ",
+      "word": "sirokanetakanawa"
+    },
+    { "info": "白金台", "info2": "しろかねだい", "word": "sirokanedai" },
+    { "info": "目黒", "info2": "めぐろ", "word": "meguro" }
+  ]
+}
