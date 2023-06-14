@@ -1,0 +1,60 @@
+{
+  "id": "1010474",
+  "title": "上信電鉄上信線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-14",
+  "updatedAt": "2023-06-14",
+  "optional": { "cd": "474" },
+  "words": [
+    { "info": "下仁田", "info2": "しもにた", "word": "simonita" },
+    { "info": "千平", "info2": "せんだいら", "word": "sendaira" },
+    { "info": "南蛇井", "info2": "なんじゃい", "word": "nanjai" },
+    { "info": "神農原", "info2": "かのはら", "word": "kanohara" },
+    {
+      "info": "上州一ノ宮",
+      "info2": "じょうしゅういちのみや",
+      "word": "jousyuuitinomiya"
+    },
+    {
+      "info": "上州七日市",
+      "info2": "じょうしゅうなのかいち",
+      "word": "jousyuunanokaiti"
+    },
+    { "info": "西富岡", "info2": "にしとみおか", "word": "nisitomioka" },
+    {
+      "info": "上州富岡",
+      "info2": "じょうしゅうとみおか",
+      "word": "jousyuutomioka"
+    },
+    { "info": "東富岡", "info2": "ひがしとみおか", "word": "higasitomioka" },
+    {
+      "info": "上州福島",
+      "info2": "じょうしゅうふくしま",
+      "word": "jousyuuhukusima"
+    },
+    {
+      "info": "上州新屋",
+      "info2": "じょうしゅうにいや",
+      "word": "jousyuuniiya"
+    },
+    { "info": "西吉井", "info2": "にしよしい", "word": "nisiyosii" },
+    { "info": "吉井", "info2": "よしい", "word": "yosii" },
+    { "info": "馬庭", "info2": "まにわ", "word": "maniwa" },
+    { "info": "西山名", "info2": "にしやまな", "word": "nisiyamana" },
+    { "info": "山名", "info2": "やまな", "word": "yamana" },
+    {
+      "info": "高崎商科大学前",
+      "info2": "たかさきしょうかだいがくまえ",
+      "word": "takasakisyoukadaigakumae"
+    },
+    { "info": "根小屋", "info2": "ねごや", "word": "negoya" },
+    { "info": "佐野のわたし", "info2": "さののわたし", "word": "sanonowatasi" },
+    { "info": "南高崎", "info2": "みなみたかさき", "word": "minamitakasaki" },
+    { "info": "高崎", "info2": "たかさき", "word": "takasaki" }
+  ]
+}
