@@ -1,0 +1,29 @@
+{
+  "id": "1010687",
+  "title": "みなとみらい線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-15",
+  "updatedAt": "2023-06-15",
+  "optional": { "cd": "687" },
+  "words": [
+    {
+      "info": "元町・中華街",
+      "info2": "もとまちちゅうかがい",
+      "word": "motomatityuukagai"
+    },
+    {
+      "info": "日本大通り",
+      "info2": "にほんおおどおり",
+      "word": "nihonnoodoori"
+    },
+    { "info": "馬車道", "info2": "ばしゃみち", "word": "basyamiti" },
+    { "info": "みなとみらい", "info2": "みなとみらい", "word": "minatomirai" },
+    { "info": "新高島", "info2": "しんたかしま", "word": "sintakasima" },
+    { "info": "横浜", "info2": "よこはま", "word": "yokohama" }
+  ]
+}
