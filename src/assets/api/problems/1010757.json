@@ -1,0 +1,101 @@
+{
+  "id": "1010757",
+  "title": "都営地下鉄大江戸線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-15",
+  "updatedAt": "2023-06-15",
+  "optional": { "cd": "757" },
+  "words": [
+    { "info": "光が丘", "info2": "ひかりがおか", "word": "hikarigaoka" },
+    {
+      "info": "練馬春日町",
+      "info2": "ねりまかすがちょう",
+      "word": "nerimakasugatyou"
+    },
+    { "info": "豊島園", "info2": "としまえん", "word": "tosimaenn" },
+    { "info": "練馬", "info2": "ねりま", "word": "nerima" },
+    { "info": "新江古田", "info2": "しんえごた", "word": "sinnegota" },
+    {
+      "info": "落合南長崎",
+      "info2": "おちあいみなみながさき",
+      "word": "otiaiminaminagasaki"
+    },
+    { "info": "中井", "info2": "なかい", "word": "nakai" },
+    { "info": "東中野", "info2": "ひがしなかの", "word": "higasinakano" },
+    { "info": "中野坂上", "info2": "なかのさかうえ", "word": "nakanosakaue" },
+    {
+      "info": "西新宿五丁目",
+      "info2": "にししんじゅくごちょうめ",
+      "word": "nisisinjukugotyoume"
+    },
+    { "info": "都庁前", "info2": "とちょうまえ", "word": "totyoumae" },
+    { "info": "新宿", "info2": "しんじゅく", "word": "sinjuku" },
+    { "info": "代々木", "info2": "よよぎ", "word": "yoyogi" },
+    {
+      "info": "国立競技場",
+      "info2": "こくりつきょうぎじょう",
+      "word": "kokuritukyougijou"
+    },
+    {
+      "info": "青山一丁目",
+      "info2": "あおやまいっちょうめ",
+      "word": "aoyamaittyoume"
+    },
+    { "info": "六本木", "info2": "ろっぽんぎ", "word": "roppongi" },
+    { "info": "麻布十番", "info2": "あざぶじゅうばん", "word": "azabujuubann" },
+    { "info": "赤羽橋", "info2": "あかばねばし", "word": "akabanebasi" },
+    { "info": "大門", "info2": "だいもん", "word": "daimonn" },
+    { "info": "汐留", "info2": "しおどめ", "word": "siodome" },
+    { "info": "築地市場", "info2": "つきじしじょう", "word": "tukijisijou" },
+    { "info": "勝どき", "info2": "かちどき", "word": "katidoki" },
+    { "info": "月島", "info2": "つきしま", "word": "tukisima" },
+    {
+      "info": "門前仲町",
+      "info2": "もんぜんなかちょう",
+      "word": "monzennnakatyou"
+    },
+    {
+      "info": "清澄白河",
+      "info2": "きよすみしらかわ",
+      "word": "kiyosumisirakawa"
+    },
+    { "info": "森下", "info2": "もりした", "word": "morisita" },
+    { "info": "両国", "info2": "りょうごく", "word": "ryougoku" },
+    { "info": "蔵前", "info2": "くらまえ", "word": "kuramae" },
+    { "info": "新御徒町", "info2": "しんおかちまち", "word": "sinnokatimati" },
+    {
+      "info": "上野御徒町",
+      "info2": "うえのおかちまち",
+      "word": "uenookatimati"
+    },
+    {
+      "info": "本郷三丁目",
+      "info2": "ほんごうさんちょうめ",
+      "word": "hongousantyoume"
+    },
+    { "info": "春日", "info2": "かすが", "word": "kasuga" },
+    { "info": "飯田橋", "info2": "いいだばし", "word": "iidabasi" },
+    {
+      "info": "牛込神楽坂",
+      "info2": "うしごめかぐらざか",
+      "word": "usigomekagurazaka"
+    },
+    {
+      "info": "牛込柳町",
+      "info2": "うしごめやなぎちょう",
+      "word": "usigomeyanagityou"
+    },
+    { "info": "若松河田", "info2": "わかまつかわだ", "word": "wakamatukawada" },
+    { "info": "東新宿", "info2": "ひがししんじゅく", "word": "higasisinjuku" },
+    {
+      "info": "新宿西口",
+      "info2": "しんじゅくにしぐち",
+      "word": "sinjukunisiguti"
+    }
+  ]
+}
