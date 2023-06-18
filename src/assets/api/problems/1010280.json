@@ -1,0 +1,27 @@
+{
+  "id": "1010280",
+  "title": "東武越生線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-18",
+  "updatedAt": "2023-06-18",
+  "optional": { "cd": "280" },
+  "words": [
+    { "info": "越生", "info2": "おごせ", "word": "ogose" },
+    {
+      "info": "武州唐沢",
+      "info2": "ぶしゅうからさわ",
+      "word": "busyuukarasawa"
+    },
+    { "info": "東毛呂", "info2": "ひがしもろ", "word": "higasimoro" },
+    { "info": "武州長瀬", "info2": "ぶしゅうながせ", "word": "busyuunagase" },
+    { "info": "川角", "info2": "かわかど", "word": "kawakado" },
+    { "info": "西大家", "info2": "にしおおや", "word": "nisiooya" },
+    { "info": "一本松", "info2": "いっぽんまつ", "word": "ipponmatu" },
+    { "info": "坂戸", "info2": "さかど", "word": "sakado" }
+  ]
+}
