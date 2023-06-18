@@ -12,6 +12,7 @@
     "generate": "nuxt generate",
     "generate:problem": "node ./scripts/dist/problem.js generate -i ./data/problems -o ./src/assets/api",
     "lint": "run-p 'lint:*'",
+    "lint:typecheck": "nuxt typecheck",
     "lint:scripts": "eslint .",
     "lint:styles": "stylelint src/**/*.{scss,vue}",
     "lint:format": "prettier {src,libs,scripts}/**/*.{scss,vue,ts} -c"
