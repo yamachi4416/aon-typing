@@ -1,0 +1,23 @@
+{
+  "id": "1010271",
+  "title": "東武桐生線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-18",
+  "updatedAt": "2023-06-18",
+  "optional": { "cd": "271" },
+  "words": [
+    { "info": "赤城", "info2": "あかぎ", "word": "akagi" },
+    { "info": "相老", "info2": "あいおい", "word": "aioi" },
+    { "info": "新桐生", "info2": "しんきりゅう", "word": "sinkiryuu" },
+    { "info": "阿左美", "info2": "あざみ", "word": "azami" },
+    { "info": "藪塚", "info2": "やぶづか", "word": "yabuduka" },
+    { "info": "治良門橋", "info2": "じろえんばし", "word": "jiroenbasi" },
+    { "info": "三枚橋", "info2": "さんまいばし", "word": "sanmaibasi" },
+    { "info": "太田", "info2": "おおた", "word": "oota" }
+  ]
+}
