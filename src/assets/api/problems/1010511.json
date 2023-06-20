@@ -1,0 +1,23 @@
+{
+  "id": "1010511",
+  "title": "のと鉄道七尾線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-20",
+  "updatedAt": "2023-06-20",
+  "optional": { "cd": "511" },
+  "words": [
+    { "info": "穴水", "info2": "あなみず", "word": "anamizu" },
+    { "info": "能登鹿島", "info2": "のとかしま", "word": "notokasima" },
+    { "info": "西岸", "info2": "にしぎし", "word": "nisigisi" },
+    { "info": "能登中島", "info2": "のとなかじま", "word": "notonakajima" },
+    { "info": "笠師保", "info2": "かさしほ", "word": "kasasiho" },
+    { "info": "田鶴浜", "info2": "たつるはま", "word": "taturuhama" },
+    { "info": "和倉温泉", "info2": "わくらおんせん", "word": "wakuraonsenn" },
+    { "info": "七尾", "info2": "ななお", "word": "nanao" }
+  ]
+}
