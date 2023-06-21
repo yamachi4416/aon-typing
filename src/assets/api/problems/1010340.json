@@ -1,0 +1,40 @@
+{
+  "id": "1010340",
+  "title": "都営地下鉄新宿線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-21",
+  "updatedAt": "2023-06-21",
+  "optional": { "cd": "340" },
+  "words": [
+    { "info": "本八幡", "info2": "もとやわた", "word": "motoyawata" },
+    { "info": "篠崎", "info2": "しのざき", "word": "sinozaki" },
+    { "info": "瑞江", "info2": "みずえ", "word": "mizue" },
+    { "info": "一之江", "info2": "いちのえ", "word": "itinoe" },
+    { "info": "船堀", "info2": "ふなぼり", "word": "hunabori" },
+    { "info": "東大島", "info2": "ひがしおおじま", "word": "higasioojima" },
+    { "info": "大島", "info2": "おおじま", "word": "oojima" },
+    { "info": "西大島", "info2": "にしおおじま", "word": "nisioojima" },
+    { "info": "住吉", "info2": "すみよし", "word": "sumiyosi" },
+    { "info": "菊川", "info2": "きくかわ", "word": "kikukawa" },
+    { "info": "森下", "info2": "もりした", "word": "morisita" },
+    { "info": "浜町", "info2": "はまちょう", "word": "hamatyou" },
+    { "info": "馬喰横山", "info2": "ばくろよこやま", "word": "bakuroyokoyama" },
+    { "info": "岩本町", "info2": "いわもとちょう", "word": "iwamototyou" },
+    { "info": "小川町", "info2": "おがわまち", "word": "ogawamati" },
+    { "info": "神保町", "info2": "じんぼうちょう", "word": "jinboutyou" },
+    { "info": "九段下", "info2": "くだんした", "word": "kudansita" },
+    { "info": "市ケ谷", "info2": "いちがや", "word": "itigaya" },
+    { "info": "曙橋", "info2": "あけぼのばし", "word": "akebonobasi" },
+    {
+      "info": "新宿三丁目",
+      "info2": "しんじゅくさんちょうめ",
+      "word": "sinjukusantyoume"
+    },
+    { "info": "新宿", "info2": "しんじゅく", "word": "sinjuku" }
+  ]
+}
