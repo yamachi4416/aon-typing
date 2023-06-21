@@ -1,0 +1,70 @@
+{
+  "id": "1010339",
+  "title": "都営地下鉄三田線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-21",
+  "updatedAt": "2023-06-21",
+  "optional": { "cd": "339" },
+  "words": [
+    {
+      "info": "西高島平",
+      "info2": "にしたかしまだいら",
+      "word": "nisitakasimadaira"
+    },
+    {
+      "info": "新高島平",
+      "info2": "しんたかしまだいら",
+      "word": "sintakasimadaira"
+    },
+    { "info": "高島平", "info2": "たかしまだいら", "word": "takasimadaira" },
+    { "info": "西台", "info2": "にしだい", "word": "nisidai" },
+    { "info": "蓮根", "info2": "はすね", "word": "hasune" },
+    {
+      "info": "志村三丁目",
+      "info2": "しむらさんちょうめ",
+      "word": "simurasantyoume"
+    },
+    { "info": "志村坂上", "info2": "しむらさかうえ", "word": "simurasakaue" },
+    { "info": "本蓮沼", "info2": "もとはすぬま", "word": "motohasunuma" },
+    {
+      "info": "板橋本町",
+      "info2": "いたばしほんちょう",
+      "word": "itabasihontyou"
+    },
+    {
+      "info": "板橋区役所前",
+      "info2": "いたばしくやくしょまえ",
+      "word": "itabasikuyakusyomae"
+    },
+    { "info": "新板橋", "info2": "しんいたばし", "word": "sinnitabasi" },
+    { "info": "西巣鴨", "info2": "にしすがも", "word": "nisisugamo" },
+    { "info": "巣鴨", "info2": "すがも", "word": "sugamo" },
+    { "info": "千石", "info2": "せんごく", "word": "sengoku" },
+    { "info": "白山", "info2": "はくさん", "word": "hakusann" },
+    { "info": "春日", "info2": "かすが", "word": "kasuga" },
+    { "info": "水道橋", "info2": "すいどうばし", "word": "suidoubasi" },
+    { "info": "神保町", "info2": "じんぼうちょう", "word": "jinboutyou" },
+    { "info": "大手町", "info2": "おおてまち", "word": "ootemati" },
+    { "info": "日比谷", "info2": "ひびや", "word": "hibiya" },
+    {
+      "info": "内幸町",
+      "info2": "うちさいわいちょう",
+      "word": "utisaiwaityou"
+    },
+    { "info": "御成門", "info2": "おなりもん", "word": "onarimonn" },
+    { "info": "芝公園", "info2": "しばこうえん", "word": "sibakouenn" },
+    { "info": "三田", "info2": "みた", "word": "mita" },
+    {
+      "info": "白金高輪",
+      "info2": "しろかねたかなわ",
+      "word": "sirokanetakanawa"
+    },
+    { "info": "白金台", "info2": "しろかねだい", "word": "sirokanedai" },
+    { "info": "目黒", "info2": "めぐろ", "word": "meguro" }
+  ]
+}
