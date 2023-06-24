@@ -44,6 +44,10 @@ export default defineNuxtConfig({
   ssr: true,
   srcDir: 'src',
 
+  experimental: {
+    inlineSSRStyles: false,
+  },
+
   app: {
     head: {
       charset: 'utf-8',
