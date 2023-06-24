@@ -1,0 +1,59 @@
+{
+  "id": "1010386",
+  "title": "近鉄南大阪線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-24",
+  "updatedAt": "2023-06-24",
+  "optional": { "cd": "386" },
+  "words": [
+    {
+      "info": "橿原神宮前",
+      "info2": "かしはらじんぐうまえ",
+      "word": "kasiharajinguumae"
+    },
+    {
+      "info": "橿原神宮西口",
+      "info2": "かしはらじんぐうにしぐち",
+      "word": "kasiharajinguunisiguti"
+    },
+    { "info": "坊城", "info2": "ぼうじょう", "word": "boujou" },
+    { "info": "浮孔", "info2": "うきあな", "word": "ukiana" },
+    { "info": "高田市", "info2": "たかだし", "word": "takadasi" },
+    { "info": "尺土", "info2": "しゃくど", "word": "syakudo" },
+    { "info": "磐城", "info2": "いわき", "word": "iwaki" },
+    { "info": "当麻寺", "info2": "たいまでら", "word": "taimadera" },
+    {
+      "info": "二上神社口",
+      "info2": "にじょうじんじゃぐち",
+      "word": "nijoujinjaguti"
+    },
+    { "info": "二上山", "info2": "にじょうざん", "word": "nijouzann" },
+    { "info": "上ノ太子", "info2": "かみのたいし", "word": "kaminotaisi" },
+    { "info": "駒ケ谷", "info2": "こまがたに", "word": "komagatani" },
+    { "info": "古市", "info2": "ふるいち", "word": "huruiti" },
+    { "info": "道明寺", "info2": "どうみょうじ", "word": "doumyouji" },
+    { "info": "土師ノ里", "info2": "はじのさと", "word": "hajinosato" },
+    { "info": "藤井寺", "info2": "ふじいでら", "word": "hujiidera" },
+    { "info": "高鷲", "info2": "たかわし", "word": "takawasi" },
+    { "info": "恵我ノ荘", "info2": "えがのしょう", "word": "eganosyou" },
+    { "info": "河内松原", "info2": "かわちまつばら", "word": "kawatimatubara" },
+    { "info": "高見ノ里", "info2": "たかみのさと", "word": "takaminosato" },
+    { "info": "布忍", "info2": "ぬのせ", "word": "nunose" },
+    { "info": "河内天美", "info2": "かわちあまみ", "word": "kawatiamami" },
+    { "info": "矢田", "info2": "やた", "word": "yata" },
+    { "info": "針中野", "info2": "はりなかの", "word": "harinakano" },
+    { "info": "今川", "info2": "いまがわ", "word": "imagawa" },
+    { "info": "北田辺", "info2": "きたたなべ", "word": "kitatanabe" },
+    { "info": "河堀口", "info2": "こぼれぐち", "word": "koboreguti" },
+    {
+      "info": "大阪阿部野橋",
+      "info2": "おおさかあべのばし",
+      "word": "oosakaabenobasi"
+    }
+  ]
+}
