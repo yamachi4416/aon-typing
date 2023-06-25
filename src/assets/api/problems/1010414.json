@@ -1,0 +1,19 @@
+{
+  "id": "1010414",
+  "title": "阪急伊丹線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-25",
+  "updatedAt": "2023-06-25",
+  "optional": { "cd": "414" },
+  "words": [
+    { "info": "伊丹", "info2": "いたみ", "word": "itami" },
+    { "info": "新伊丹", "info2": "しんいたみ", "word": "sinnitami" },
+    { "info": "稲野", "info2": "いなの", "word": "inano" },
+    { "info": "塚口", "info2": "つかぐち", "word": "tukaguti" }
+  ]
+}
