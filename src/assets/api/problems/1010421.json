@@ -1,0 +1,30 @@
+{
+  "id": "1010421",
+  "title": "阪急千里線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-25",
+  "updatedAt": "2023-06-25",
+  "optional": { "cd": "421" },
+  "words": [
+    { "info": "北千里", "info2": "きたせんり", "word": "kitasenri" },
+    { "info": "山田", "info2": "やまだ", "word": "yamada" },
+    { "info": "南千里", "info2": "みなみせんり", "word": "minamisenri" },
+    { "info": "千里山", "info2": "せんりやま", "word": "senriyama" },
+    { "info": "関大前", "info2": "かんだいまえ", "word": "kandaimae" },
+    { "info": "豊津", "info2": "とよつ", "word": "toyotu" },
+    { "info": "吹田", "info2": "すいた", "word": "suita" },
+    { "info": "下新庄", "info2": "しもしんじょう", "word": "simosinjou" },
+    { "info": "淡路", "info2": "あわじ", "word": "awaji" },
+    { "info": "柴島", "info2": "くにじま", "word": "kunijima" },
+    {
+      "info": "天神橋筋六丁目",
+      "info2": "てんじんばしすじろくちょうめ",
+      "word": "tenjinbasisujirokutyoume"
+    }
+  ]
+}
