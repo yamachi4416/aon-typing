@@ -1,0 +1,19 @@
+{
+  "id": "1010422",
+  "title": "阪急嵐山線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-25",
+  "updatedAt": "2023-06-25",
+  "optional": { "cd": "422" },
+  "words": [
+    { "info": "嵐山", "info2": "あらしやま", "word": "arasiyama" },
+    { "info": "松尾大社", "info2": "まつおたいしゃ", "word": "matuotaisya" },
+    { "info": "上桂", "info2": "かみかつら", "word": "kamikatura" },
+    { "info": "桂", "info2": "かつら", "word": "katura" }
+  ]
+}
