@@ -1,0 +1,61 @@
+{
+  "id": "1010532",
+  "title": "遠州鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-27",
+  "updatedAt": "2023-06-27",
+  "optional": { "cd": "532" },
+  "words": [
+    { "info": "西鹿島", "info2": "にしかじま", "word": "nisikajima" },
+    {
+      "info": "遠州岩水寺",
+      "info2": "えんしゅうがんすいじ",
+      "word": "ensyuugansuiji"
+    },
+    {
+      "info": "遠州芝本",
+      "info2": "えんしゅうしばもと",
+      "word": "ensyuusibamoto"
+    },
+    {
+      "info": "遠州小林",
+      "info2": "えんしゅうこばやし",
+      "word": "ensyuukobayasi"
+    },
+    {
+      "info": "美薗中央公園",
+      "info2": "みそのちゅうおうこうえん",
+      "word": "misonotyuuoukouenn"
+    },
+    { "info": "浜北", "info2": "はまきた", "word": "hamakita" },
+    { "info": "遠州小松", "info2": "えんしゅうこまつ", "word": "ensyuukomatu" },
+    {
+      "info": "遠州西ケ崎",
+      "info2": "えんしゅうにしがさき",
+      "word": "ensyuunisigasaki"
+    },
+    { "info": "積志", "info2": "せきし", "word": "sekisi" },
+    { "info": "さぎの宮", "info2": "さぎのみや", "word": "saginomiya" },
+    {
+      "info": "自動車学校前",
+      "info2": "じどうしゃがっこうまえ",
+      "word": "jidousyagakkoumae"
+    },
+    { "info": "上島", "info2": "かみじま", "word": "kamijima" },
+    { "info": "曳馬", "info2": "ひくま", "word": "hikuma" },
+    { "info": "助信", "info2": "すけのぶ", "word": "sukenobu" },
+    { "info": "八幡", "info2": "はちまん", "word": "hatimann" },
+    {
+      "info": "遠州病院",
+      "info2": "えんしゅうびょういん",
+      "word": "ensyuubyouinn"
+    },
+    { "info": "第一通り", "info2": "だいいちどおり", "word": "daiitidoori" },
+    { "info": "新浜松", "info2": "しんはままつ", "word": "sinhamamatu" }
+  ]
+}
