@@ -1,0 +1,85 @@
+{
+  "id": "1010523",
+  "title": "長良川鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-27",
+  "updatedAt": "2023-06-27",
+  "optional": { "cd": "523" },
+  "words": [
+    { "info": "北濃", "info2": "ほくのう", "word": "hokunou" },
+    {
+      "info": "白山長滝",
+      "info2": "はくさんながたき",
+      "word": "hakusannnagataki"
+    },
+    {
+      "info": "白鳥高原",
+      "info2": "しろとりこうげん",
+      "word": "sirotorikougenn"
+    },
+    { "info": "美濃白鳥", "info2": "みのしろとり", "word": "minosirotori" },
+    { "info": "大島", "info2": "おおしま", "word": "oosima" },
+    { "info": "大中", "info2": "おおなか", "word": "oonaka" },
+    { "info": "上万場", "info2": "かみまんば", "word": "kamimanba" },
+    { "info": "万場", "info2": "まんば", "word": "manba" },
+    { "info": "郡上大和", "info2": "ぐじょうやまと", "word": "gujouyamato" },
+    { "info": "徳永", "info2": "とくなが", "word": "tokunaga" },
+    { "info": "山田", "info2": "やまだ", "word": "yamada" },
+    { "info": "自然園前", "info2": "しぜんえんまえ", "word": "sizennenmae" },
+    {
+      "info": "郡上八幡",
+      "info2": "ぐじょうはちまん",
+      "word": "gujouhatimann"
+    },
+    { "info": "相生", "info2": "あいおい", "word": "aioi" },
+    { "info": "深戸", "info2": "ふかど", "word": "hukado" },
+    { "info": "赤池", "info2": "あかいけ", "word": "akaike" },
+    { "info": "美並苅安", "info2": "みなみかりやす", "word": "minamikariyasu" },
+    { "info": "福野", "info2": "ふくの", "word": "hukuno" },
+    { "info": "大矢", "info2": "おおや", "word": "ooya" },
+    {
+      "info": "みなみ子宝温泉",
+      "info2": "みなみこだからおんせん",
+      "word": "minamikodakaraonsenn"
+    },
+    { "info": "八坂", "info2": "やさか", "word": "yasaka" },
+    { "info": "木尾", "info2": "こんの", "word": "konnno" },
+    { "info": "母野", "info2": "はんの", "word": "hannno" },
+    { "info": "洲原", "info2": "すはら", "word": "suhara" },
+    {
+      "info": "湯の洞温泉口",
+      "info2": "ゆのほらおんせんぐち",
+      "word": "yunohoraonsenguti"
+    },
+    { "info": "梅山", "info2": "うめやま", "word": "umeyama" },
+    { "info": "美濃市", "info2": "みのし", "word": "minosi" },
+    { "info": "松森", "info2": "まつもり", "word": "matumori" },
+    { "info": "関下有知", "info2": "せきしもうち", "word": "sekisimouti" },
+    {
+      "info": "関市役所前",
+      "info2": "せきしやくしょまえ",
+      "word": "sekisiyakusyomae"
+    },
+    { "info": "関", "info2": "せき", "word": "seki" },
+    {
+      "info": "せきてらす前",
+      "info2": "せきてらすまえ",
+      "word": "sekiterasumae"
+    },
+    { "info": "関口", "info2": "せきぐち", "word": "sekiguti" },
+    { "info": "関富岡", "info2": "せきとみおか", "word": "sekitomioka" },
+    { "info": "富加", "info2": "とみか", "word": "tomika" },
+    { "info": "加茂野", "info2": "かもの", "word": "kamono" },
+    {
+      "info": "前平公園",
+      "info2": "まえひらこうえん",
+      "word": "maehirakouenn"
+    },
+    { "info": "美濃太田", "info2": "みのおおた", "word": "minooota" }
+  ]
+}
