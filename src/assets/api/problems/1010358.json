@@ -1,0 +1,47 @@
+{
+  "id": "1010358",
+  "title": "名鉄常滑線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-30",
+  "updatedAt": "2023-06-30",
+  "optional": { "cd": "358" },
+  "words": [
+    { "info": "常滑", "info2": "とこなめ", "word": "tokoname" },
+    { "info": "多屋", "info2": "たや", "word": "taya" },
+    { "info": "榎戸", "info2": "えのきど", "word": "enokido" },
+    { "info": "蒲池", "info2": "かばいけ", "word": "kabaike" },
+    { "info": "西ノ口", "info2": "にしのくち", "word": "nisinokuti" },
+    { "info": "大野町", "info2": "おおのまち", "word": "oonomati" },
+    { "info": "新舞子", "info2": "しんまいこ", "word": "sinmaiko" },
+    { "info": "日長", "info2": "ひなが", "word": "hinaga" },
+    { "info": "長浦", "info2": "ながうら", "word": "nagaura" },
+    { "info": "古見", "info2": "こみ", "word": "komi" },
+    { "info": "朝倉", "info2": "あさくら", "word": "asakura" },
+    { "info": "寺本", "info2": "てらもと", "word": "teramoto" },
+    {
+      "info": "尾張横須賀",
+      "info2": "おわりよこすか",
+      "word": "owariyokosuka"
+    },
+    { "info": "太田川", "info2": "おおたがわ", "word": "ootagawa" },
+    {
+      "info": "新日鉄前",
+      "info2": "しんにってつまえ",
+      "word": "sinnnittetumae"
+    },
+    { "info": "聚楽園", "info2": "しゅうらくえん", "word": "syuurakuenn" },
+    { "info": "名和", "info2": "なわ", "word": "nawa" },
+    { "info": "柴田", "info2": "しばた", "word": "sibata" },
+    { "info": "大同町", "info2": "だいどうちょう", "word": "daidoutyou" },
+    { "info": "大江", "info2": "おおえ", "word": "ooe" },
+    { "info": "道徳", "info2": "どうとく", "word": "doutoku" },
+    { "info": "豊田本町", "info2": "とよだほんまち", "word": "toyodahonmati" },
+    { "info": "神宮前", "info2": "じんぐうまえ", "word": "jinguumae" },
+    { "info": "金山", "info2": "かなやま", "word": "kanayama" }
+  ]
+}
