@@ -1,0 +1,33 @@
+{
+  "id": "1010356",
+  "title": "名鉄小牧線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-30",
+  "updatedAt": "2023-06-30",
+  "optional": { "cd": "356" },
+  "words": [
+    { "info": "犬山", "info2": "いぬやま", "word": "inuyama" },
+    { "info": "羽黒", "info2": "はぐろ", "word": "haguro" },
+    { "info": "楽田", "info2": "がくでん", "word": "gakudenn" },
+    {
+      "info": "田県神社前",
+      "info2": "たがたじんじゃまえ",
+      "word": "tagatajinjamae"
+    },
+    { "info": "味岡", "info2": "あじおか", "word": "ajioka" },
+    { "info": "小牧原", "info2": "こまきはら", "word": "komakihara" },
+    { "info": "小牧", "info2": "こまき", "word": "komaki" },
+    { "info": "小牧口", "info2": "こまきぐち", "word": "komakiguti" },
+    { "info": "間内", "info2": "まない", "word": "manai" },
+    { "info": "牛山", "info2": "うしやま", "word": "usiyama" },
+    { "info": "春日井", "info2": "かすがい", "word": "kasugai" },
+    { "info": "味美", "info2": "あじよし", "word": "ajiyosi" },
+    { "info": "味鋺", "info2": "あじま", "word": "ajima" },
+    { "info": "上飯田", "info2": "かみいいだ", "word": "kamiiida" }
+  ]
+}
