@@ -1,0 +1,21 @@
+{
+  "id": "1010357",
+  "title": "名鉄築港線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-06-30",
+  "updatedAt": "2023-06-30",
+  "optional": { "cd": "357" },
+  "words": [
+    {
+      "info": "東名古屋港",
+      "info2": "ひがしなごやこう",
+      "word": "higasinagoyakou"
+    },
+    { "info": "大江", "info2": "おおえ", "word": "ooe" }
+  ]
+}
