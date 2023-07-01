@@ -1,0 +1,60 @@
+{
+  "id": "1010411",
+  "title": "京阪石山坂本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-01",
+  "updatedAt": "2023-07-01",
+  "optional": { "cd": "411" },
+  "words": [
+    {
+      "info": "坂本比叡山口",
+      "info2": "さかもとひえいざんぐち",
+      "word": "sakamotohieizanguti"
+    },
+    { "info": "松ノ馬場", "info2": "まつのばんば", "word": "matunobanba" },
+    { "info": "穴太", "info2": "あのお", "word": "anoo" },
+    { "info": "滋賀里", "info2": "しがさと", "word": "sigasato" },
+    { "info": "南滋賀", "info2": "みなみしが", "word": "minamisiga" },
+    {
+      "info": "近江神宮前",
+      "info2": "おうみじんぐうまえ",
+      "word": "oumijinguumae"
+    },
+    {
+      "info": "京阪大津京",
+      "info2": "けいはんおおつきょう",
+      "word": "keihannootukyou"
+    },
+    {
+      "info": "大津市役所前",
+      "info2": "おおつしやくしょまえ",
+      "word": "ootusiyakusyomae"
+    },
+    { "info": "三井寺", "info2": "みいでら", "word": "miidera" },
+    {
+      "info": "びわ湖浜大津",
+      "info2": "びわこはまおおつ",
+      "word": "biwakohamaootu"
+    },
+    { "info": "島ノ関", "info2": "しまのせき", "word": "simanoseki" },
+    { "info": "石場", "info2": "いしば", "word": "isiba" },
+    { "info": "京阪膳所", "info2": "けいはんぜぜ", "word": "keihanzeze" },
+    { "info": "錦", "info2": "にしき", "word": "nisiki" },
+    { "info": "膳所本町", "info2": "ぜぜほんまち", "word": "zezehonmati" },
+    { "info": "中ノ庄", "info2": "なかのしょう", "word": "nakanosyou" },
+    { "info": "瓦ケ浜", "info2": "かわらがはま", "word": "kawaragahama" },
+    { "info": "粟津", "info2": "あわづ", "word": "awadu" },
+    {
+      "info": "京阪石山",
+      "info2": "けいはんいしやま",
+      "word": "keihannisiyama"
+    },
+    { "info": "唐橋前", "info2": "からはしまえ", "word": "karahasimae" },
+    { "info": "石山寺", "info2": "いしやまでら", "word": "isiyamadera" }
+  ]
+}
