@@ -1,0 +1,27 @@
+{
+  "id": "1010408",
+  "title": "京阪宇治線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-01",
+  "updatedAt": "2023-07-01",
+  "optional": { "cd": "408" },
+  "words": [
+    { "info": "宇治", "info2": "うじ", "word": "uji" },
+    { "info": "三室戸", "info2": "みむろど", "word": "mimurodo" },
+    { "info": "黄檗", "info2": "おうばく", "word": "oubaku" },
+    { "info": "木幡", "info2": "こわた", "word": "kowata" },
+    { "info": "六地蔵", "info2": "ろくじぞう", "word": "rokujizou" },
+    {
+      "info": "桃山南口",
+      "info2": "ももやまみなみぐち",
+      "word": "momoyamaminamiguti"
+    },
+    { "info": "観月橋", "info2": "かんげつきょう", "word": "kangetukyou" },
+    { "info": "中書島", "info2": "ちゅうしょじま", "word": "tyuusyojima" }
+  ]
+}
