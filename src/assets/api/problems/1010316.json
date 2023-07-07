@@ -1,0 +1,58 @@
+{
+  "id": "1010316",
+  "title": "東急田園都市線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-07",
+  "updatedAt": "2023-07-07",
+  "optional": { "cd": "316" },
+  "words": [
+    {
+      "info": "中央林間",
+      "info2": "ちゅうおうりんかん",
+      "word": "tyuuourinkann"
+    },
+    { "info": "つきみ野", "info2": "つきみの", "word": "tukimino" },
+    {
+      "info": "南町田グランベリーパーク",
+      "info2": "みなみまちだぐらんべりーぱーく",
+      "word": "minamimatidaguranberi-pa-ku"
+    },
+    { "info": "すずかけ台", "info2": "すずかけだい", "word": "suzukakedai" },
+    { "info": "つくし野", "info2": "つくしの", "word": "tukusino" },
+    { "info": "長津田", "info2": "ながつた", "word": "nagatuta" },
+    { "info": "田奈", "info2": "たな", "word": "tana" },
+    { "info": "青葉台", "info2": "あおばだい", "word": "aobadai" },
+    { "info": "藤が丘", "info2": "ふじがおか", "word": "hujigaoka" },
+    { "info": "市が尾", "info2": "いちがお", "word": "itigao" },
+    { "info": "江田", "info2": "えだ", "word": "eda" },
+    { "info": "あざみ野", "info2": "あざみの", "word": "azamino" },
+    { "info": "たまプラーザ", "info2": "たまぷらーざ", "word": "tamapura-za" },
+    { "info": "鷺沼", "info2": "さぎぬま", "word": "saginuma" },
+    { "info": "宮前平", "info2": "みやまえだいら", "word": "miyamaedaira" },
+    { "info": "宮崎台", "info2": "みやざきだい", "word": "miyazakidai" },
+    { "info": "梶が谷", "info2": "かじがや", "word": "kajigaya" },
+    { "info": "溝の口", "info2": "みぞのくち", "word": "mizonokuti" },
+    { "info": "高津", "info2": "たかつ", "word": "takatu" },
+    { "info": "二子新地", "info2": "ふたこしんち", "word": "hutakosinti" },
+    { "info": "二子玉川", "info2": "ふたこたまがわ", "word": "hutakotamagawa" },
+    { "info": "用賀", "info2": "ようが", "word": "youga" },
+    { "info": "桜新町", "info2": "さくらしんまち", "word": "sakurasinmati" },
+    {
+      "info": "駒沢大学",
+      "info2": "こまざわだいがく",
+      "word": "komazawadaigaku"
+    },
+    { "info": "三軒茶屋", "info2": "さんげんぢゃや", "word": "sangendyaya" },
+    {
+      "info": "池尻大橋",
+      "info2": "いけじりおおはし",
+      "word": "ikejirioohasi"
+    },
+    { "info": "渋谷", "info2": "しぶや", "word": "sibuya" }
+  ]
+}
