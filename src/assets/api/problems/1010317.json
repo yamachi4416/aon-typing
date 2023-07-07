@@ -1,0 +1,33 @@
+{
+  "id": "1010317",
+  "title": "東急大井町線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-07",
+  "updatedAt": "2023-07-07",
+  "optional": { "cd": "317" },
+  "words": [
+    { "info": "溝の口", "info2": "みぞのくち", "word": "mizonokuti" },
+    { "info": "高津", "info2": "たかつ", "word": "takatu" },
+    { "info": "二子新地", "info2": "ふたこしんち", "word": "hutakosinti" },
+    { "info": "二子玉川", "info2": "ふたこたまがわ", "word": "hutakotamagawa" },
+    { "info": "上野毛", "info2": "かみのげ", "word": "kaminoge" },
+    { "info": "等々力", "info2": "とどろき", "word": "todoroki" },
+    { "info": "尾山台", "info2": "おやまだい", "word": "oyamadai" },
+    { "info": "九品仏", "info2": "くほんぶつ", "word": "kuhonbutu" },
+    { "info": "自由が丘", "info2": "じゆうがおか", "word": "jiyuugaoka" },
+    { "info": "緑が丘", "info2": "みどりがおか", "word": "midorigaoka" },
+    { "info": "大岡山", "info2": "おおおかやま", "word": "oookayama" },
+    { "info": "北千束", "info2": "きたせんぞく", "word": "kitasenzoku" },
+    { "info": "旗の台", "info2": "はたのだい", "word": "hatanodai" },
+    { "info": "荏原町", "info2": "えばらまち", "word": "ebaramati" },
+    { "info": "中延", "info2": "なかのぶ", "word": "nakanobu" },
+    { "info": "戸越公園", "info2": "とごしこうえん", "word": "togosikouenn" },
+    { "info": "下神明", "info2": "しもしんめい", "word": "simosinmei" },
+    { "info": "大井町", "info2": "おおいまち", "word": "ooimati" }
+  ]
+}
