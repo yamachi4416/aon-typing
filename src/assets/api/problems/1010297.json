@@ -1,0 +1,29 @@
+{
+  "id": "1010297",
+  "title": "京成押上線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-09",
+  "updatedAt": "2023-07-09",
+  "optional": { "cd": "297" },
+  "words": [
+    { "info": "青砥", "info2": "あおと", "word": "aoto" },
+    {
+      "info": "京成立石",
+      "info2": "けいせいたていし",
+      "word": "keiseitateisi"
+    },
+    { "info": "四ツ木", "info2": "よつぎ", "word": "yotugi" },
+    { "info": "八広", "info2": "やひろ", "word": "yahiro" },
+    {
+      "info": "京成曳舟",
+      "info2": "けいせいひきふね",
+      "word": "keiseihikihune"
+    },
+    { "info": "押上", "info2": "おしあげ", "word": "osiage" }
+  ]
+}
