@@ -1,0 +1,17 @@
+{
+  "id": "1010347",
+  "title": "名鉄羽島線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-11",
+  "updatedAt": "2023-07-11",
+  "optional": { "cd": "347" },
+  "words": [
+    { "info": "新羽島", "info2": "しんはしま", "word": "sinhasima" },
+    { "info": "江吉良", "info2": "えぎら", "word": "egira" }
+  ]
+}
