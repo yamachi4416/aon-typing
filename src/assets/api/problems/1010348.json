@@ -1,0 +1,28 @@
+{
+  "id": "1010348",
+  "title": "名鉄竹鼻線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-11",
+  "updatedAt": "2023-07-11",
+  "optional": { "cd": "348" },
+  "words": [
+    { "info": "江吉良", "info2": "えぎら", "word": "egira" },
+    {
+      "info": "羽島市役所前",
+      "info2": "はしましやくしょまえ",
+      "word": "hasimasiyakusyomae"
+    },
+    { "info": "竹鼻", "info2": "たけはな", "word": "takehana" },
+    { "info": "不破一色", "info2": "ふわいしき", "word": "huwaisiki" },
+    { "info": "須賀", "info2": "すか", "word": "suka" },
+    { "info": "南宿", "info2": "みなみじゅく", "word": "minamijuku" },
+    { "info": "柳津", "info2": "やないづ", "word": "yanaidu" },
+    { "info": "西笠松", "info2": "にしかさまつ", "word": "nisikasamatu" },
+    { "info": "笠松", "info2": "かさまつ", "word": "kasamatu" }
+  ]
+}
