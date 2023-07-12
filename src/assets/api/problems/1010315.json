@@ -1,0 +1,28 @@
+{
+  "id": "1010315",
+  "title": "東急目黒線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-12",
+  "updatedAt": "2023-07-12",
+  "optional": { "cd": "315" },
+  "words": [
+    { "info": "日吉", "info2": "ひよし", "word": "hiyosi" },
+    { "info": "元住吉", "info2": "もとすみよし", "word": "motosumiyosi" },
+    { "info": "武蔵小杉", "info2": "むさしこすぎ", "word": "musasikosugi" },
+    { "info": "新丸子", "info2": "しんまるこ", "word": "sinmaruko" },
+    { "info": "多摩川", "info2": "たまがわ", "word": "tamagawa" },
+    { "info": "田園調布", "info2": "でんえんちょうふ", "word": "dennentyouhu" },
+    { "info": "奥沢", "info2": "おくさわ", "word": "okusawa" },
+    { "info": "大岡山", "info2": "おおおかやま", "word": "oookayama" },
+    { "info": "洗足", "info2": "せんぞく", "word": "senzoku" },
+    { "info": "西小山", "info2": "にしこやま", "word": "nisikoyama" },
+    { "info": "武蔵小山", "info2": "むさしこやま", "word": "musasikoyama" },
+    { "info": "不動前", "info2": "ふどうまえ", "word": "hudoumae" },
+    { "info": "目黒", "info2": "めぐろ", "word": "meguro" }
+  ]
+}
