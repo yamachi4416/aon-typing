@@ -46,6 +46,7 @@ export default defineNuxtConfig({
 
   experimental: {
     inlineSSRStyles: false,
+    payloadExtraction: false,
   },
 
   app: {
