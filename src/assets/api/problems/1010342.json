@@ -1,0 +1,101 @@
+{
+  "id": "1010342",
+  "title": "都電荒川線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-15",
+  "updatedAt": "2023-07-15",
+  "optional": { "cd": "342" },
+  "words": [
+    { "info": "早稲田", "info2": "わせだ", "word": "waseda" },
+    { "info": "面影橋", "info2": "おもかげばし", "word": "omokagebasi" },
+    {
+      "info": "学習院下",
+      "info2": "がくしゅういんした",
+      "word": "gakusyuuinsita"
+    },
+    { "info": "鬼子母神前", "info2": "きしぼじんまえ", "word": "kisibojinmae" },
+    {
+      "info": "都電雑司ケ谷",
+      "info2": "とでんぞうしがや",
+      "word": "todenzousigaya"
+    },
+    {
+      "info": "東池袋四丁目",
+      "info2": "ひがしいけぶくろよんちょうめ",
+      "word": "higasiikebukuroyontyoume"
+    },
+    { "info": "向原", "info2": "むこうはら", "word": "mukouhara" },
+    { "info": "大塚駅前", "info2": "おおつかえきまえ", "word": "ootukaekimae" },
+    { "info": "巣鴨新田", "info2": "すがもしんでん", "word": "sugamosindenn" },
+    { "info": "庚申塚", "info2": "こうしんづか", "word": "kousinduka" },
+    {
+      "info": "新庚申塚",
+      "info2": "しんこうしんづか",
+      "word": "sinkousinduka"
+    },
+    {
+      "info": "西ケ原四丁目",
+      "info2": "にしがはらよんちょうめ",
+      "word": "nisigaharayontyoume"
+    },
+    {
+      "info": "滝野川一丁目",
+      "info2": "たきのがわいっちょうめ",
+      "word": "takinogawaittyoume"
+    },
+    { "info": "飛鳥山", "info2": "あすかやま", "word": "asukayama" },
+    { "info": "王子駅前", "info2": "おうじえきまえ", "word": "oujiekimae" },
+    { "info": "栄町", "info2": "さかえちょう", "word": "sakaetyou" },
+    { "info": "梶原", "info2": "かじわら", "word": "kajiwara" },
+    {
+      "info": "荒川車庫前",
+      "info2": "あらかわしゃこまえ",
+      "word": "arakawasyakomae"
+    },
+    {
+      "info": "荒川遊園地前",
+      "info2": "あらかわゆうえんちまえ",
+      "word": "arakawayuuentimae"
+    },
+    { "info": "小台", "info2": "おだい", "word": "odai" },
+    { "info": "宮ノ前", "info2": "みやのまえ", "word": "miyanomae" },
+    { "info": "熊野前", "info2": "くまのまえ", "word": "kumanomae" },
+    {
+      "info": "東尾久三丁目",
+      "info2": "ひがしおぐさんちょうめ",
+      "word": "higasiogusantyoume"
+    },
+    {
+      "info": "町屋二丁目",
+      "info2": "まちやにちょうめ",
+      "word": "matiyanityoume"
+    },
+    { "info": "町屋駅前", "info2": "まちやえきまえ", "word": "matiyaekimae" },
+    {
+      "info": "荒川七丁目",
+      "info2": "あらかわななちょうめ",
+      "word": "arakawananatyoume"
+    },
+    {
+      "info": "荒川二丁目",
+      "info2": "あらかわにちょうめ",
+      "word": "arakawanityoume"
+    },
+    {
+      "info": "荒川区役所前",
+      "info2": "あらかわくやくしょまえ",
+      "word": "arakawakuyakusyomae"
+    },
+    {
+      "info": "荒川一中前",
+      "info2": "あらかわいっちゅうまえ",
+      "word": "arakawaittyuumae"
+    },
+    { "info": "三ノ輪橋", "info2": "みのわばし", "word": "minowabasi" }
+  ]
+}
