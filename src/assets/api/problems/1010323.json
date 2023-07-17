@@ -1,0 +1,30 @@
+{
+  "id": "1010323",
+  "title": "京急空港線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-17",
+  "updatedAt": "2023-07-17",
+  "optional": { "cd": "323" },
+  "words": [
+    {
+      "info": "羽田空港第１・第２ターミナル",
+      "info2": "はねだくうこうだいいち・だいにたーみなる",
+      "word": "hanedakuukoudaiiti/dainita-minaru"
+    },
+    {
+      "info": "羽田空港第３ターミナル",
+      "info2": "はねだくうこうだいさんたーみなる",
+      "word": "hanedakuukoudaisanta-minaru"
+    },
+    { "info": "天空橋", "info2": "てんくうばし", "word": "tenkuubasi" },
+    { "info": "穴守稲荷", "info2": "あなもりいなり", "word": "anamoriinari" },
+    { "info": "大鳥居", "info2": "おおとりい", "word": "ootorii" },
+    { "info": "糀谷", "info2": "こうじや", "word": "koujiya" },
+    { "info": "京急蒲田", "info2": "けいきゅうかまた", "word": "keikyuukamata" }
+  ]
+}

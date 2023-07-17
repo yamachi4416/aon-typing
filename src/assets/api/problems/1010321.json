@@ -1,0 +1,18 @@
+{
+  "id": "1010321",
+  "title": "こどもの国線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-17",
+  "updatedAt": "2023-07-17",
+  "optional": { "cd": "321" },
+  "words": [
+    { "info": "こどもの国", "info2": "こどものくに", "word": "kodomonokuni" },
+    { "info": "恩田", "info2": "おんだ", "word": "onda" },
+    { "info": "長津田", "info2": "ながつた", "word": "nagatuta" }
+  ]
+}

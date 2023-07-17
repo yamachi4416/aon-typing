@@ -1,0 +1,26 @@
+{
+  "id": "1010324",
+  "title": "京急大師線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-17",
+  "updatedAt": "2023-07-17",
+  "optional": { "cd": "324" },
+  "words": [
+    { "info": "小島新田", "info2": "こじましんでん", "word": "kojimasindenn" },
+    { "info": "大師橋", "info2": "だいしばし", "word": "daisibasi" },
+    { "info": "東門前", "info2": "ひがしもんぜん", "word": "higasimonzenn" },
+    { "info": "川崎大師", "info2": "かわさきだいし", "word": "kawasakidaisi" },
+    { "info": "鈴木町", "info2": "すずきちょう", "word": "suzukityou" },
+    { "info": "港町", "info2": "みなとちょう", "word": "minatotyou" },
+    {
+      "info": "京急川崎",
+      "info2": "けいきゅうかわさき",
+      "word": "keikyuukawasaki"
+    }
+  ]
+}
