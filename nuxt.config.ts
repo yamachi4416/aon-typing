@@ -44,6 +44,10 @@ export default defineNuxtConfig({
   ssr: true,
   srcDir: 'src',
 
+  routeRules: {
+    '/game/play': { ssr: false },
+  },
+
   experimental: {
     inlineSSRStyles: false,
     payloadExtraction: false,
@@ -66,22 +70,17 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         ...googleFont(),
       ],
-      script: [
-        { src: '/static/js/index.js' },
-      ],
+      script: [{ src: '/static/js/index.js' }],
     },
   },
 
   runtimeConfig: {
+    apiDir: resolver.resolve('./src/assets/api'),
     public: {
       gtagId: process.env.APP_G_TAGID,
       baseUrl: process.env.APP_BASE_URL ?? 'http://localhost:3000',
       contactUrl: process.env.APP_CONTACT_URL ?? '/api/contact',
     },
-  },
-
-  typescript: {
-    typeCheck: 'build',
   },
 
   nitro: {
