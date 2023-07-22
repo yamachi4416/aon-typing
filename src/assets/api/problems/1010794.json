@@ -1,0 +1,22 @@
+{
+  "id": "1010794",
+  "title": "京都丹後鉄道宮舞線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-22",
+  "updatedAt": "2023-07-22",
+  "optional": { "cd": "794" },
+  "words": [
+    { "info": "宮津", "info2": "みやづ", "word": "miyadu" },
+    { "info": "栗田", "info2": "くんだ", "word": "kunda" },
+    { "info": "丹後由良", "info2": "たんごゆら", "word": "tangoyura" },
+    { "info": "丹後神崎", "info2": "たんごかんざき", "word": "tangokanzaki" },
+    { "info": "東雲", "info2": "しののめ", "word": "sinonome" },
+    { "info": "四所", "info2": "ししょ", "word": "sisyo" },
+    { "info": "西舞鶴", "info2": "にしまいづる", "word": "nisimaiduru" }
+  ]
+}

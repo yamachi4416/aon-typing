@@ -1,0 +1,40 @@
+{
+  "id": "1010795",
+  "title": "京都丹後鉄道宮豊線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-22",
+  "updatedAt": "2023-07-22",
+  "optional": { "cd": "795" },
+  "words": [
+    { "info": "豊岡", "info2": "とよおか", "word": "toyooka" },
+    {
+      "info": "コウノトリの郷",
+      "info2": "こうのとりのさと",
+      "word": "kounotorinosato"
+    },
+    { "info": "久美浜", "info2": "くみはま", "word": "kumihama" },
+    { "info": "かぶと山", "info2": "かぶとやま", "word": "kabutoyama" },
+    { "info": "小天橋", "info2": "しょうてんきょう", "word": "syoutenkyou" },
+    {
+      "info": "夕日ケ浦木津温泉",
+      "info2": "ゆうひがうらきつおんせん",
+      "word": "yuuhigaurakituonsenn"
+    },
+    { "info": "網野", "info2": "あみの", "word": "amino" },
+    { "info": "峰山", "info2": "みねやま", "word": "mineyama" },
+    {
+      "info": "京丹後大宮",
+      "info2": "きょうたんごおおみや",
+      "word": "kyoutangooomiya"
+    },
+    { "info": "与謝野", "info2": "よさの", "word": "yosano" },
+    { "info": "岩滝口", "info2": "いわたきぐち", "word": "iwatakiguti" },
+    { "info": "天橋立", "info2": "あまのはしだて", "word": "amanohasidate" },
+    { "info": "宮津", "info2": "みやづ", "word": "miyadu" }
+  ]
+}
