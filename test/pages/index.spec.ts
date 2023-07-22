@@ -1,9 +1,15 @@
 import { describe, expect, it } from 'vitest'
 import { setup, createPage } from '@nuxt/test-utils'
 
-describe('トップページ', async () => {
-  await setup()
+await setup({
+  nuxtConfig: {
+    typescript: {
+      typeCheck: false,
+    },
+  },
+})
 
+describe('トップページ', () => {
   it('ページの見出し', async () => {
     const page = await createPage('/')
 
@@ -65,7 +71,7 @@ describe('トップページ', async () => {
 
     await input.fill('駅')
     await button.click()
-    await page.waitForURL('**/problems**')
+    await page.waitForLoadState('networkidle')
 
     expect(
       await page.getByRole('heading', { name: '駅 の検索結果' }).count(),

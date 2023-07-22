@@ -1,9 +1,10 @@
-import { expect, it, assert } from 'vitest'
+import { it, assert } from 'vitest'
 import { resolve } from 'node:path'
 import { readdir, readFile } from 'node:fs/promises'
 import { ProblemDetail } from '../../types/problems'
 import { TypingGameWordData } from '../../libs/TypingGameWordData'
 import { useTypingGamer } from '../../libs/TypingGamer'
+import { typeJapaneseChars } from '../../libs/TypingJapaneseChars'
 
 it('タイピングチェック', async () => {
   const dir = './src/assets/api/problems'
@@ -24,9 +25,10 @@ it('タイピングチェック', async () => {
     }
 
     const words = problem.words.map((w, i) => new TypingGameWordData(i, w))
-    const chars = Array.from(
-      words.reduce((a, w) => a + w.wordState.remaining, ''),
-    )
+    const chars =
+      problem.type === 'japanese'
+        ? problem.words.map((word) => typeJapaneseChars(word.info2)).join('')
+        : problem.words.map((word) => word.word).join('')
 
     let word = words.shift()
 

@@ -83,6 +83,10 @@ export default defineNuxtConfig({
     },
   },
 
+  typescript: {
+    typeCheck: 'build',
+  },
+
   nitro: {
     minify: true,
     prerender: {
