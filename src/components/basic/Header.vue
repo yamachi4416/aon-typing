@@ -1,31 +1,25 @@
 <template>
-  <header class="basic-header">
-    <nav class="basic-header-nav">
-      <div class="basic-header-nav-main">
-        <h1 class="basic-header-nav-main-title">
-          <NuxtLink :to="{ name: 'index' }">
-            <span v-if="startAnim" class="title-anim">{{ title }}</span>
-            <span v-show="!startAnim" class="title-no-anim">{{
-              titleText
-            }}</span>
+  <header class="basic-header" role="banner">
+    <section>
+      <h1>
+        <NuxtLink :to="{ name: 'index' }">
+          <span v-if="startAnim" class="title-anim">{{ title }}</span>
+          <span v-show="!startAnim" class="title-no-anim">{{ titleText }}</span>
+        </NuxtLink>
+      </h1>
+      <div class="theme">
+        <a href="#" @click.prevent="changeTheme('light')">light</a> /
+        <a href="#" @click.prevent="changeTheme('dark')">dark</a>
+      </div>
+    </section>
+    <nav>
+      <ul>
+        <li v-for="(menu, i) in menus" :key="`menu-${i}`">
+          <NuxtLink :to="menu.route">
+            {{ menu.label }}
           </NuxtLink>
-        </h1>
-        <div class="basic-header-nav-main-theme">
-          <a href="#" @click.prevent="changeTheme('light')">light</a> /
-          <a href="#" @click.prevent="changeTheme('dark')">dark</a>
-        </div>
-      </div>
-      <div class="basic-header-nav-sub">
-        <nav class="basic-header-nav-sub-menu">
-          <ul>
-            <li v-for="(menu, i) in menus" :key="`menu-${i}`">
-              <NuxtLink :to="menu.route">
-                {{ menu.label }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
@@ -109,6 +103,8 @@ const menus = [
   z-index: 99;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 100px;
   padding: 10px;
@@ -122,86 +118,81 @@ const menus = [
     background: var(--color-f);
   }
 
-  &-nav {
-    display: flex;
-    flex-direction: column;
+  a {
+    color: var(--color-6);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: var(--color-9);
+    }
+  }
+
+  & > * {
     width: 100%;
     max-width: 1000px;
-    height: 100%;
     padding-right: 10px;
     padding-left: 10px;
 
     @media print {
       max-width: unset;
     }
+  }
 
-    a {
-      color: var(--color-6);
-      text-decoration: none;
-      cursor: pointer;
+  & > section {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
 
-      &:hover,
-      &:focus {
-        color: var(--color-9);
-      }
-    }
-
-    &-main {
+    h1 {
       display: flex;
-      flex: 1;
       align-items: center;
-      justify-content: space-between;
+      height: 100%;
+      font-size: 1.5em;
+      line-height: 1;
+      color: var(--color-p);
 
-      & &-title {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        font-size: 1.5em;
-        line-height: 1;
-        color: var(--color-p);
+      a {
+        color: inherit;
 
-        a {
+        &:hover,
+        &:focus {
           color: inherit;
-
-          &:hover,
-          &:focus {
-            color: inherit;
-          }
-        }
-      }
-
-      & &-theme {
-        color: var(--color-3);
-
-        @media print {
-          display: none;
         }
       }
     }
 
-    &-sub {
+    .theme {
+      color: var(--color-3);
+
       @media print {
         display: none;
       }
+    }
+  }
 
-      & &-menu {
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
+  & > nav {
+    @media print {
+      display: none;
+    }
 
-        ul {
-          display: flex;
-          justify-content: space-around;
-          width: 100%;
-          padding: 0 10px;
-          list-style: none;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 
-          & > li {
-            flex: 1;
-            text-align: center;
-            white-space: nowrap;
-          }
-        }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 0 10px;
+      list-style: none;
+
+      & > li {
+        flex: 1;
+        text-align: center;
+        white-space: nowrap;
       }
     }
   }

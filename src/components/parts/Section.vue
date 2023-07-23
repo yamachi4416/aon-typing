@@ -4,7 +4,7 @@
       <span class="fuki" />
       <slot class="parts-section-left-slot" name="left" />
     </div>
-    <section class="parts-section-main">
+    <section class="parts-section-main" v-bind="$attrs">
       <slot />
     </section>
     <div v-if="$slots.right" class="parts-section-right">
@@ -13,6 +13,12 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+export default defineComponent({
+  inheritAttrs: false,
+})
+</script>
 
 <style lang="scss" scoped>
 @import '~/assets/css/vars';

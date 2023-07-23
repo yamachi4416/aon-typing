@@ -1,7 +1,7 @@
 <template>
   <section class="basic-page">
     <BasicHeader v-if="showHeader" :anim="anim" />
-    <main class="basic-page-main">
+    <main>
       <slot />
     </main>
     <BasicFooter v-if="showFooter" />
@@ -33,7 +33,7 @@ withDefaults(
     min-height: unset;
   }
 
-  &-main {
+  & > main {
     max-width: 1000px;
     min-height: calc(100vh - 200px);
     padding: 10px;

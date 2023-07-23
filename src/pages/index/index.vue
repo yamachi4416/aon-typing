@@ -16,31 +16,27 @@
     <PartsSection class="index-page-search">
       <h2>タイトル検索</h2>
       <p>タイピングの問題のタイトルをキーワードで検索します。</p>
-      <div class="index-page-search-form">
-        <div class="index-page-search-form-search row">
-          <div
-            class="index-page-search-form-search-keyword row form-group placeholder"
-          >
-            <input
-              id="search-keyword"
-              v-model="state.kwd"
-              placeholder=" "
-              @keyup.enter="searchEnterProblems"
-              @change="changeKwds"
-            />
-            <label for="search-keyword">検索キーワード</label>
-          </div>
-          <div class="buttons">
-            <span>
-              <button
-                class="button big"
-                :disabled="!enableSearch"
-                @click="searchProblems"
-              >
-                検索する
-              </button>
-            </span>
-          </div>
+      <div class="row" role="search">
+        <div class="row form-group placeholder">
+          <input
+            id="search-keyword"
+            v-model="state.kwd"
+            placeholder=" "
+            @keyup.enter="searchEnterProblems"
+            @change="changeKwds"
+          />
+          <label for="search-keyword">検索キーワード</label>
+        </div>
+        <div class="buttons">
+          <span>
+            <button
+              class="button big"
+              :disabled="!enableSearch"
+              @click="searchProblems"
+            >
+              検索する
+            </button>
+          </span>
         </div>
       </div>
       <template #left>
@@ -95,15 +91,13 @@
 
     <PartsSection class="index-page-others">
       <h2>その他</h2>
-      <nav class="others-contents">
-        <ul class="others-contents-list">
-          <li class="others-contents-list-item">
-            <NuxtLink :to="{ name: 'index-contents-keymap' }" class="button">
-              ローマ字タイピング入力表
-            </NuxtLink>
-          </li>
-        </ul>
-      </nav>
+      <ul>
+        <li>
+          <NuxtLink :to="{ name: 'index-contents-keymap' }" class="button">
+            ローマ字タイピング入力表
+          </NuxtLink>
+        </li>
+      </ul>
       <template #left>
         <ImgNekoUserKeyboard />
       </template>
@@ -209,17 +203,13 @@ await Promise.all([
   }
 
   &-search {
-    &-form {
+    & [role='search'] {
       display: flex;
       flex-wrap: wrap;
       padding: 10px;
 
-      &-search {
-        flex: 1;
-
-        &-keyword {
-          padding-right: 3px;
-        }
+      .form-group {
+        padding-right: 3px;
       }
     }
   }
@@ -265,33 +255,31 @@ await Promise.all([
   }
 
   &-others {
-    .others-contents {
-      &-list {
-        display: flex;
-        padding: 15px 10px;
-        list-style: none;
+    & ul {
+      display: flex;
+      padding: 15px 10px;
+      list-style: none;
 
-        &-item {
-          a {
-            display: flex;
-            align-items: center;
-            padding: 5px 15px;
-            font-size: 1em;
-            color: var(--color-p);
-            text-decoration: none;
-            background: var(--color-f);
-            border: 1.5px solid var(--color-p);
-            border-radius: 20px;
+      & > li {
+        a {
+          display: flex;
+          align-items: center;
+          padding: 5px 15px;
+          font-size: 1em;
+          color: var(--color-p);
+          text-decoration: none;
+          background: var(--color-f);
+          border: 1.5px solid var(--color-p);
+          border-radius: 20px;
 
-            &::before {
-              display: block;
-              width: 8px;
-              height: 8px;
-              margin-right: 8px;
-              content: '';
-              background: var(--color-p);
-              border-radius: 100%;
-            }
+          &::before {
+            display: block;
+            width: 8px;
+            height: 8px;
+            margin-right: 8px;
+            content: '';
+            background: var(--color-p);
+            border-radius: 100%;
           }
         }
       }

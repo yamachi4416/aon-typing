@@ -1,6 +1,6 @@
 <template>
-  <footer class="basic-footer">
-    <nav class="basic-footer-nav">
+  <footer class="basic-footer" role="contentinfo">
+    <nav>
       <ul>
         <li v-for="(menu, i) in menus" :key="`footer-menu-${i}`">
           <NuxtLink :to="menu.route">
@@ -9,7 +9,7 @@
         </li>
       </ul>
     </nav>
-    <div class="basic-footer-copy">
+    <div class="copy">
       <p>&copy; 2021 Studio AON</p>
     </div>
   </footer>
@@ -35,11 +35,7 @@ const menus = [
     display: none;
   }
 
-  &.hide-footer {
-    visibility: hidden;
-  }
-
-  &-nav {
+  & > nav {
     & > ul {
       display: flex;
       justify-content: center;
@@ -62,7 +58,7 @@ const menus = [
     }
   }
 
-  &-copy {
+  & > .copy {
     flex: 1;
     width: 100%;
     padding-top: 10px;
