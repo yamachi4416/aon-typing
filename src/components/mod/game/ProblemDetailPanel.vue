@@ -1,18 +1,14 @@
 <template>
-  <PartsModalContent :show-close="true" @close="$emit('close')">
-    <template #title>
-      No.{{ detail?.id ?? problem?.id }}
-      {{ detail?.title ?? problem?.title }}
-    </template>
+  <PartsModalContent :show-close="true" :title="title" @close="$emit('close')">
     <ModProblemDetail v-if="detail" :detail="detail">
-      <span>
-        <button class="button" @click.self="$emit('back')">もどる</button>
-      </span>
-      <span v-if="showSelect">
-        <button class="button" @click.self="$emit('select', detail)">
-          選択する
-        </button>
-      </span>
+      <button class="button" @click.self="$emit('back')">もどる</button>
+      <button
+        v-if="showSelect"
+        class="button"
+        @click.self="$emit('select', detail)"
+      >
+        選択する
+      </button>
     </ModProblemDetail>
   </PartsModalContent>
 </template>
@@ -51,6 +47,12 @@ const detail = computed(() => {
     updatedAt: null as never,
   } as ProblemDetail
 })
+const title = computed(
+  () =>
+    `No.${detail.value?.id ?? problem.value?.id} ${
+      detail.value?.title ?? problem.value?.title
+    }`,
+)
 
 async function setProblem(item: ProblemListItem) {
   problem.value = item

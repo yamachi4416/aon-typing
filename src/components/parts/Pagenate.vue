@@ -4,6 +4,7 @@
       <select
         v-if="p === page"
         v-model.number="editPage"
+        title="表示するページを選択"
         class="button"
         selected
       >
@@ -11,7 +12,14 @@
           {{ c }}
         </option>
       </select>
-      <button v-else class="button" @click="editPage = p">{{ p }}</button>
+      <button
+        v-else
+        :title="`${p}ページ目を表示する`"
+        class="button"
+        @click="editPage = p"
+      >
+        {{ p }}
+      </button>
     </template>
   </div>
 </template>

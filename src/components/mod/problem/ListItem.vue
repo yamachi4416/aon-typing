@@ -20,6 +20,7 @@
           <button
             v-for="(tag, i) in item.tags"
             :key="`tag-${item.id}-${i}`"
+            :title="`「${tag.name}」のタグの問題のみ表示する`"
             class="button"
             @click="$emit('tag', tag)"
           >

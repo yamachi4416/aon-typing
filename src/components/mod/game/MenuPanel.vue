@@ -2,9 +2,9 @@
   <PartsModalContent
     class="typing-menu-panel"
     :show-close="false"
+    title="タイピングメニュー"
     @close="emit('close')"
   >
-    <template #title>タイピングメニュー</template>
     <div role="table" class="typing-menu-panel-content">
       <div role="row">
         <div role="rowheader">制限時間</div>
@@ -14,6 +14,7 @@
               v-for="i in [0, 1, 2, 3, 4, 5]"
               :key="`time-limit-${i}`"
               class="button"
+              :title="`制限時間を「${i ? i + '分' : 'なし'}」に設定する`"
               :selected="i * 60000 === setting.timeLimit || null"
               @click="setting.timeLimit = i * 60000"
               v-text="i ? i + '分' : 'なし'"
@@ -28,12 +29,12 @@
             <button
               v-for="i in goalCharCounts"
               :key="`goalCharCount-${i}`"
+              :title="`目標タイプ数を「${i || 'なし'}」に設定する`"
               class="button"
               :selected="i === setting.goalCharCount || null"
               @click="setting.goalCharCount = i"
-            >
-              {{ i || 'なし' }}
-            </button>
+              v-text="i || 'なし'"
+            />
           </div>
         </div>
       </div>
@@ -44,12 +45,12 @@
             <button
               v-for="a in HelpAnimals"
               :key="`automode-${a.speed}`"
+              :title="`自動モードを「${a.name}」に設定する`"
               class="button"
               :selected="setting.autoMode === a.speed || null"
               @click="setting.autoMode = a.speed"
-            >
-              {{ a.name }}
-            </button>
+              v-text="a.name"
+            />
           </div>
         </div>
       </div>
@@ -60,6 +61,7 @@
             <button
               v-for="(label, order) in problemOrders"
               :key="order"
+              :title="`出題する順番を「${label}」に設定する`"
               class="button"
               :selected="setting.problemOrder === order || null"
               @click="setting.problemOrder = order"
@@ -72,10 +74,18 @@
         <div role="rowheader">問題</div>
         <div role="cell">
           <div class="buttons tight">
-            <button class="button" @click="openProblemSelect()">
+            <button
+              class="button"
+              title="問題をいちらんから選択する"
+              @click="openProblemSelect()"
+            >
               いちらん選択
             </button>
-            <button class="button" @click="randomProblemSelect()">
+            <button
+              class="button"
+              title="問題をランダムに選択する"
+              @click="randomProblemSelect()"
+            >
               ランダム選択
             </button>
           </div>
@@ -87,7 +97,12 @@
             <div role="row">
               <div role="rowheader">タイトル</div>
               <div role="cell">
-                <a @click="emit('detail', problem)">{{ problem?.title }}</a>
+                <a
+                  v-if="problem?.title"
+                  :title="`選択した問題「${problem.title}」の内容を表示する`"
+                  @click="emit('detail', problem)"
+                  >{{ problem?.title }}</a
+                >
               </div>
             </div>
             <div role="row">

@@ -7,6 +7,11 @@
         <button
           v-for="t in tags"
           :key="`tag-${t.id}`"
+          :title="
+            t.selected
+              ? `「${t.name}」タグの問題のみ表示するのをやめる`
+              : `「${t.name}」タグの問題のみ表示する`
+          "
           class="tag-info-taglist-item button tight"
           :selected="t.selected || null"
           @click="selectTag(t)"

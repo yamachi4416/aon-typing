@@ -1,13 +1,15 @@
 <template>
-  <section class="modal-content" role="dialog">
+  <section :aria-labelledby="titleId" class="modal-content" role="dialog">
     <header class="modal-content-header">
       <span class="modal-content-header-left" />
-      <h3 class="modal-content-header-title">
-        <slot name="title" />
-      </h3>
+      <h1 :id="titleId" class="modal-content-header-title">{{ title }}</h1>
       <span class="modal-content-header-right">
         <div class="close-circle">
-          <CloseCircle v-if="showClose" @click="$emit('close')" />
+          <CloseCircle
+            v-if="showClose"
+            :title="`${title}ダイアログを閉じる`"
+            @click="$emit('close')"
+          />
         </div>
       </span>
     </header>
@@ -25,9 +27,11 @@ import CloseCircle from '~/components/parts/CloseCircle.vue'
 
 withDefaults(
   defineProps<{
+    title: string
     showClose?: boolean
   }>(),
   {
+    title: 'ダイアログ',
     showClose: true,
   },
 )
@@ -37,6 +41,8 @@ defineEmits<{
 }>()
 
 const content = ref<HTMLElement>()
+const uid = getCurrentInstance()?.uid
+const titleId = computed(() => `dialog-title-${uid}`)
 
 function scroll(options: ScrollToOptions) {
   content.value?.scroll(options)
@@ -103,6 +109,7 @@ defineExpose({
 
     &-title {
       padding-bottom: 3px;
+      font-size: 1.17em;
       font-weight: normal;
       text-align: center;
     }

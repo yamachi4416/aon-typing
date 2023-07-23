@@ -1,6 +1,10 @@
 <template>
-  <PartsModalContent v-if="result" class="panel" :show-close="false">
-    <template #title>タイピング結果</template>
+  <PartsModalContent
+    v-if="result"
+    class="panel"
+    title="タイピング結果"
+    :show-close="false"
+  >
     <div class="info-main">
       <div class="info-main-left">
         <div class="table">

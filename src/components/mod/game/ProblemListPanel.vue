@@ -2,14 +2,15 @@
   <PartsModalContent
     ref="content"
     class="typing-menu-panel"
+    title="タイピング問題の選択"
     :show-close="true"
     @close="$emit('close')"
   >
-    <template #title> タイピング問題の選択 </template>
     <div v-show="tags.size > 0" class="taglist buttons">
       <button
         v-for="t in tags.values()"
         :key="`tag-${t.id}`"
+        :title="`「${t.name}」タグの問題のみ表示するのをやめる`"
         class="taglist-item button"
         @click.self="removeTag(t)"
       >
