@@ -166,7 +166,7 @@ defineEmits<{
     flex-wrap: wrap;
     list-style-type: none;
 
-    &-item {
+    :where(.details-item) {
       display: flex;
       flex-direction: column;
       color: var(--color-6);

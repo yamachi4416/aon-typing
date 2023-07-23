@@ -1,10 +1,10 @@
 <template>
   <div class="item">
     <header>
-      <h3>
+      <h1>
         <span class="no">No.{{ item.id }}</span>
         <span class="title">{{ item.title }}</span>
-      </h3>
+      </h1>
     </header>
     <div class="content">
       <div class="detail">
@@ -56,7 +56,7 @@ defineEmits<{
   & > header {
     text-align: center;
 
-    h3 {
+    h1 {
       display: flex;
       flex-direction: column;
       font-size: 1em;
