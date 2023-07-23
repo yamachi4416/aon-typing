@@ -1,5 +1,10 @@
 <template>
-  <button class="close-button" v-bind="$attrs" @click.self="$emit('click')">
+  <button
+    class="close-button"
+    v-bind="$attrs"
+    title="ダイアログを閉じる"
+    @click.self="$emit('click')"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
