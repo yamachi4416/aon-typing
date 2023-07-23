@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { assert, describe, expect, it } from 'vitest'
 import { setup, createPage } from '@nuxt/test-utils'
 
 await setup({
@@ -13,16 +13,21 @@ describe('トップページ', () => {
   it('ページの見出し', async () => {
     const page = await createPage('/')
 
-    for (const name of [
+    const names = [
       'ようこそ「あぉ～ん タイピング」へ',
       'タイトル検索',
       '新着の問題',
       'タグいちらん',
       'その他',
-    ]) {
-      const heading = page.getByRole('heading', { name })
-      expect(await heading.textContent()).toEqual(name)
-    }
+    ]
+
+    await Promise.all(
+      names.map(async (name) => {
+        const heading = page.getByRole('heading', { name })
+        const visible = await heading.isVisible()
+        assert(visible, `heading '${name}' is not visible`)
+      }),
+    )
   })
 
   it('ページのリンク', async () => {
@@ -38,10 +43,16 @@ describe('トップページ', () => {
       { name: 'ローマ字タイピング入力表', href: '/contents/keymap' },
     ]
 
-    for (const { name, href } of links) {
-      const link = page.getByRole('link', { name })
-      expect(await link.getAttribute('href')).toEqual(href)
-    }
+    await Promise.all(
+      links.map(async ({ name, href }) => {
+        const link = page.getByRole('link', { name })
+        const visible = await link.isVisible()
+        assert(visible, `link '${name}' is not visible`)
+
+        const actual = await link.getAttribute('href')
+        assert(actual === href, `${name} href '${actual}' is not ${href}`)
+      }),
+    )
   })
 
   it('検索ボックスが未入力の場合は検索ボタンは非活性', async () => {
@@ -49,6 +60,7 @@ describe('トップページ', () => {
 
     const button = page.getByRole('button', { name: '検索する' })
 
+    expect(await button.isVisible()).toBeTruthy()
     expect(await button.isDisabled()).toBeTruthy()
   })
 
@@ -56,11 +68,14 @@ describe('トップページ', () => {
     const page = await createPage('/')
 
     const input = page.getByRole('textbox', { name: '検索キーワード' })
+    expect(await input.isVisible()).toBeTruthy()
+
     const button = page.getByRole('button', { name: '検索する' })
+    expect(await button.isVisible()).toBeTruthy()
 
     await input.fill('駅')
 
-    expect(await button.isDisabled()).toBeFalsy()
+    expect(await button.isEnabled()).toBeTruthy()
   })
 
   it('検索ボタンをクリックすると問題一覧ページに遷移する', async () => {
@@ -73,8 +88,8 @@ describe('トップページ', () => {
     await button.click()
     await page.waitForLoadState('networkidle')
 
-    expect(
-      await page.getByRole('heading', { name: '駅 の検索結果' }).count(),
-    ).toBeGreaterThan(0)
+    const heading = page.getByRole('heading', { name: '駅 の検索結果' })
+
+    expect(await heading.isVisible()).toBeTruthy()
   })
 })
