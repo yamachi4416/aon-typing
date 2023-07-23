@@ -78,38 +78,3 @@ function select(p: number) {
   router.push({ query: { ...route.query, page: String(p) } })
 }
 </script>
-
-<style lang="scss" scoped>
-@import '~/assets/css/vars';
-
-.problem-list {
-  &-item {
-    display: flex;
-    justify-content: center;
-
-    &-inner {
-      flex: 1;
-    }
-
-    @include __media_l {
-      &:nth-of-type(3n + 1) {
-        justify-content: flex-start;
-      }
-
-      &:nth-of-type(3n) {
-        justify-content: flex-end;
-      }
-    }
-
-    @include __media_m {
-      &:nth-of-type(2n + 1) {
-        justify-content: flex-start;
-      }
-
-      &:nth-of-type(2n) {
-        justify-content: flex-end;
-      }
-    }
-  }
-}
-</style>

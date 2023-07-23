@@ -3,22 +3,19 @@
     <PartsSection>
       <div class="detail-header">
         <div class="detail-info">
-          <div class="detail-info-id">
+          <div class="id">
             <span>No.{{ detail.id }}</span>
           </div>
-          <h2 class="detail-info-title">
+          <h2 class="title">
             {{ detail.title }}
           </h2>
-          <div class="detail-info-info">
-            <dl>
+          <div class="info">
+            <dl class="detail-info-tags">
               <dt>タグ</dt>
-              <dd class="detail-info-info-tags">
-                <div class="detail-info-info-tags-list buttons">
+              <dd>
+                <div class="buttons">
                   <span v-for="(tag, i) in detail.tags" :key="`tag-${i}`">
-                    <button
-                      class="detail-info-info-tags-list-item button"
-                      @click="$emit('tag', tag)"
-                    >
+                    <button class="button" @click="$emit('tag', tag)">
                       {{ tag.name }}
                     </button>
                   </span>
@@ -27,7 +24,7 @@
             </dl>
             <dl
               v-if="detail.links && detail.links.length"
-              class="detail-info-info-links"
+              class="detail-info-links"
             >
               <dt>引用元</dt>
               <dd>
@@ -55,27 +52,18 @@
         <slot name="right" />
       </template>
     </PartsSection>
-    <div>
-      <ol class="details row">
-        <li
-          v-for="(w, i) in detail.words"
-          :key="i"
-          class="details-item col-s-12 col-m-6 col-4"
-        >
-          <PartsSection class="details-item-inner">
-            <div class="detail-card">
-              <div class="detail-card-no">No.{{ i + 1 }}</div>
-              <div class="detail-card-info">
-                {{ w.info || w.info2 }}
-              </div>
-              <div class="detail-card-word">
-                {{ w.word }}
-              </div>
-            </div>
-          </PartsSection>
-        </li>
-      </ol>
-    </div>
+    <ol class="details row">
+      <PartsCard
+        is="li"
+        v-for="(w, i) in detail.words"
+        :key="i"
+        class="details-item"
+      >
+        <div>No.{{ i + 1 }}</div>
+        <div>{{ w.info || w.info2 }}</div>
+        <div>{{ w.word }}</div>
+      </PartsCard>
+    </ol>
   </div>
 </template>
 
@@ -99,73 +87,74 @@ defineEmits<{
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+  }
 
-    .detail-info {
-      &-id,
-      &-info {
-        padding: 5px;
-      }
-
-      &-info {
-        font-size: 1em;
-
-        &-links {
-          ul {
-            list-style: none;
-          }
-        }
-
-        & > * {
-          display: flex;
-          align-items: center;
-
-          & > * {
-            flex: 1;
-          }
-
-          & > dt {
-            max-width: 5em;
-            padding: 5px 0;
-            color: var(--color-6);
-            white-space: nowrap;
-          }
-
-          & > dd {
-            flex: 1;
-            padding: 5px;
-            color: var(--color-6);
-          }
-        }
-      }
-
-      .detail-info-info-tags {
-        &-list {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex-start;
-
-          & > * {
-            padding-left: 0;
-          }
-
-          &-item {
-            padding: 0 1em;
-            font-size: 0.85em;
-            color: var(--color-f);
-            background: var(--color-p);
-            border: none;
-          }
-        }
-      }
+  .detail-info {
+    .id,
+    .info {
+      padding: 5px;
     }
 
-    .detail-actions {
-      padding-top: 5px;
+    .info {
+      font-size: 1em;
+    }
+  }
 
-      .buttons {
-        display: flex;
-        justify-content: flex-start;
+  .detail-info-links,
+  .detail-info-tags {
+    display: flex;
+    align-items: center;
+
+    & > * {
+      flex: 1;
+    }
+
+    & > dt {
+      max-width: 5em;
+      padding: 5px 0;
+      color: var(--color-6);
+      white-space: nowrap;
+    }
+
+    & > dd {
+      flex: 1;
+      padding: 5px;
+      color: var(--color-6);
+    }
+  }
+
+  .detail-info-links {
+    ul {
+      list-style: none;
+    }
+  }
+
+  .detail-info-tags {
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      & > * {
+        padding-left: 0;
       }
+
+      .button {
+        padding: 0 1em;
+        font-size: 0.85em;
+        color: var(--color-f);
+        background: var(--color-p);
+        border: none;
+      }
+    }
+  }
+
+  .detail-actions {
+    padding-top: 5px;
+
+    .buttons {
+      display: flex;
+      justify-content: flex-start;
     }
   }
 
@@ -174,22 +163,11 @@ defineEmits<{
     flex-wrap: wrap;
     list-style-type: none;
 
-    &-item {
-      display: flex;
-
-      &-inner {
-        flex-grow: 1;
-      }
-    }
-
-    .detail-card {
+    :where(.details-item) {
       display: flex;
       flex-direction: column;
       color: var(--color-6);
-
-      &-word {
-        word-break: break-all;
-      }
+      word-break: break-all;
     }
   }
 }

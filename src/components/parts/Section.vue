@@ -1,17 +1,17 @@
 <template>
-  <div class="parts-section">
+  <section class="parts-section">
     <div v-if="$slots.left" class="parts-section-left">
       <span class="fuki" />
       <slot class="parts-section-left-slot" name="left" />
     </div>
-    <section class="parts-section-main" v-bind="$attrs">
+    <PartsPaper v-bind="$attrs">
       <slot />
-    </section>
+    </PartsPaper>
     <div v-if="$slots.right" class="parts-section-right">
       <span class="fuki" />
       <slot class="parts-section-right-slot" name="right" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
@@ -32,25 +32,6 @@ export default defineComponent({
 
   &:hover {
     z-index: 1;
-  }
-
-  &-main {
-    position: relative;
-    flex: 1;
-    padding: 20px;
-    color: var(--color-3);
-    background: var(--background-90);
-    border-radius: 20px;
-    box-shadow: var(--shadow-color-md) 0 1px 3px 0;
-
-    :where(h1, h2, h3) {
-      color: var(--color-6);
-    }
-
-    :where(p) {
-      padding: 10px;
-      line-height: 1.8;
-    }
   }
 
   &-right,

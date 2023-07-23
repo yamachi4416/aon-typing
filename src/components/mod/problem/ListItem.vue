@@ -1,34 +1,31 @@
 <template>
   <div class="item">
-    <header class="item-header">
+    <header>
       <h3>
-        <span class="item-header-no">No.{{ item.id }}</span>
-        <span class="item-header-title">{{ item.title }}</span>
+        <span class="no">No.{{ item.id }}</span>
+        <span class="title">{{ item.title }}</span>
       </h3>
     </header>
-    <main class="item-main">
-      <div class="item-main-detail">
-        <div class="item-main-detail-row">
+    <div class="content">
+      <div class="detail">
+        <div class="detail-row">
           <label>問題数</label>
           <div>{{ item.words }}</div>
         </div>
-        <div class="item-main-detail-row">
+        <div class="detail-row">
           <label>タイピング数</label>
           <div>{{ item.chars }}</div>
         </div>
-        <div class="item-main-detail-tags buttons">
+        <div class="detail-tags buttons">
           <span v-for="(tag, i) in item.tags" :key="`tag-${item.id}-${i}`">
-            <button
-              class="item-main-detail-tags-item button"
-              @click="$emit('tag', tag)"
-            >
+            <button class="button" @click="$emit('tag', tag)">
               {{ tag.name }}
             </button>
           </span>
         </div>
       </div>
-    </main>
-    <footer v-if="$slots.footer" class="item-footer">
+    </div>
+    <footer v-if="$slots.footer">
       <slot name="footer" />
     </footer>
   </div>
@@ -53,17 +50,17 @@ defineEmits<{
   height: 100%;
   color: var(--color-6);
 
-  &-header {
+  & > header {
     text-align: center;
 
-    & > h3 {
+    h3 {
       display: flex;
       flex-direction: column;
       font-size: 1em;
       font-weight: normal;
     }
 
-    &-no {
+    .no {
       position: absolute;
       top: 8px;
       left: 20px;
@@ -71,51 +68,51 @@ defineEmits<{
       text-align: left;
     }
 
-    &-title {
+    .title {
       flex: 1;
     }
   }
 
-  &-main {
+  .content {
     flex: 1;
     border-top: 1px solid var(--color-9);
+  }
 
-    &-detail {
-      padding: 5px;
+  .detail {
+    padding: 5px;
+  }
 
-      &-tags {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        padding: 10px 5px;
+  .detail-row {
+    display: flex;
 
-        & > * {
-          padding-left: 0;
-        }
+    & > div {
+      flex: 1;
+      padding: 5px 15px;
+      text-align: right;
+    }
 
-        &-item {
-          padding: 0 8px;
-          font-size: 0.8em;
-          color: var(--color-f);
-          background: var(--color-p);
-          border: none;
-        }
-      }
+    & > label {
+      flex: 1;
+      text-align: left;
+      white-space: nowrap;
+    }
+  }
 
-      &-row {
-        display: flex;
+  .detail-tags {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px 5px;
 
-        & > *:not(label) {
-          flex: 1;
-          padding: 5px 15px;
-          text-align: right;
-        }
+    & > * {
+      padding-left: 0;
+    }
 
-        & > label {
-          flex: 1;
-          text-align: left;
-          white-space: nowrap;
-        }
-      }
+    .button {
+      padding: 0 8px;
+      font-size: 0.8em;
+      color: var(--color-f);
+      background: var(--color-p);
+      border: none;
     }
   }
 }
