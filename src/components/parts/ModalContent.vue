@@ -1,5 +1,5 @@
 <template>
-  <section class="modal-content">
+  <section class="modal-content" role="dialog">
     <header class="modal-content-header">
       <span class="modal-content-header-left" />
       <h3 class="modal-content-header-title">
@@ -11,9 +11,9 @@
         </div>
       </span>
     </header>
-    <main ref="content" class="modal-content-main">
+    <div ref="content" class="modal-content-main">
       <slot name="default" />
-    </main>
+    </div>
     <footer v-if="$slots.footer" class="modal-content-footer">
       <slot name="footer" />
     </footer>
