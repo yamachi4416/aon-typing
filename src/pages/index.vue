@@ -31,6 +31,10 @@ definePageMeta({
     },
   },
 })
+
+if (process.client) {
+  await nextTick()
+}
 </script>
 
 <style scoped lang="scss">
