@@ -1,7 +1,7 @@
 <template>
   <header class="basic-header" role="banner">
     <section>
-      <h1>
+      <h1 role="heading">
         <NuxtLink :to="{ name: 'index' }">
           <span v-if="startAnim" class="title-anim">{{ title }}</span>
           <span v-show="!startAnim" class="title-no-anim">{{ titleText }}</span>
@@ -12,7 +12,7 @@
         <a href="#" @click.prevent="changeTheme('dark')">dark</a>
       </div>
     </section>
-    <nav>
+    <nav role="navigation">
       <ul>
         <li v-for="(menu, i) in menus" :key="`menu-${i}`">
           <NuxtLink :to="menu.route">
@@ -102,9 +102,9 @@ const menus = [
   top: 0;
   z-index: 99;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100px;
   padding: 10px;
@@ -146,7 +146,7 @@ const menus = [
     align-items: center;
     justify-content: space-between;
 
-    h1 {
+    [role='heading'] {
       display: flex;
       align-items: center;
       height: 100%;
@@ -173,7 +173,7 @@ const menus = [
     }
   }
 
-  & > nav {
+  & > [role='navigation'] {
     @media print {
       display: none;
     }

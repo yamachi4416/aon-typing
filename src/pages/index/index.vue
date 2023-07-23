@@ -261,7 +261,7 @@ await Promise.all([
       list-style: none;
 
       & > li {
-        a {
+        .button {
           display: flex;
           align-items: center;
           padding: 5px 15px;
