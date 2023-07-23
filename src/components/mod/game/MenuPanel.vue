@@ -5,10 +5,10 @@
     @close="emit('close')"
   >
     <template #title>タイピングメニュー</template>
-    <div class="typing-menu-panel-content">
-      <div class="typing-menu-panel-content-row">
-        <label>制限時間</label>
-        <div>
+    <div role="table" class="typing-menu-panel-content">
+      <div role="row">
+        <div role="rowheader">制限時間</div>
+        <div role="cell">
           <div class="buttons tight">
             <button
               v-for="i in [0, 1, 2, 3, 4, 5]"
@@ -21,9 +21,9 @@
           </div>
         </div>
       </div>
-      <div class="typing-menu-panel-content-row">
-        <label>目標タイプ数</label>
-        <div>
+      <div role="row">
+        <div role="rowheader">目標タイプ数</div>
+        <div role="cell">
           <div class="buttons tight">
             <button
               v-for="i in goalCharCounts"
@@ -37,9 +37,9 @@
           </div>
         </div>
       </div>
-      <div class="typing-menu-panel-content-row">
-        <label>自動モード</label>
-        <div>
+      <div role="row">
+        <div role="rowheader">自動モード</div>
+        <div role="cell">
           <div class="buttons tight">
             <button
               v-for="a in HelpAnimals"
@@ -53,9 +53,9 @@
           </div>
         </div>
       </div>
-      <div class="typing-menu-panel-content-row">
-        <label>出題する順番</label>
-        <div>
+      <div role="row">
+        <div role="rowheader">出題する順番</div>
+        <div role="cell">
           <div class="buttons tight">
             <button
               v-for="(label, order) in problemOrders"
@@ -68,9 +68,9 @@
           </div>
         </div>
       </div>
-      <div class="typing-menu-panel-content-row problem-section">
-        <label>問題</label>
-        <div>
+      <div role="row" class="problem-section">
+        <div role="rowheader">問題</div>
+        <div role="cell">
           <div class="buttons tight">
             <button class="button" @click="openProblemSelect()">
               いちらん選択
@@ -79,24 +79,24 @@
               ランダム選択
             </button>
           </div>
-          <div class="table problem-detail">
-            <div>
-              <label>タイプ</label>
-              <div>{{ problemType }}</div>
+          <div role="table" class="table">
+            <div role="row">
+              <div role="rowheader">タイプ</div>
+              <div role="cell">{{ problemType }}</div>
             </div>
-            <div>
-              <label>タイトル</label>
-              <div>
+            <div role="row">
+              <div role="rowheader">タイトル</div>
+              <div role="cell">
                 <a @click="emit('detail', problem)">{{ problem?.title }}</a>
               </div>
             </div>
-            <div>
-              <label>問題数</label>
-              <div>{{ problem?.words }}</div>
+            <div role="row">
+              <div role="rowheader">問題数</div>
+              <div role="cell">{{ problem?.words }}</div>
             </div>
-            <div>
-              <label>タイピング数</label>
-              <div>{{ problem?.chars }}</div>
+            <div role="row">
+              <div role="rowheader">タイピング数</div>
+              <div role="cell">{{ problem?.chars }}</div>
             </div>
           </div>
         </div>
@@ -190,11 +190,15 @@ function randomProblemSelect() {
   max-width: 100%;
   height: unset;
 
+  [role='rowheader'] {
+    white-space: nowrap;
+  }
+
   &-content {
     width: fit-content;
     padding: 5px 0;
 
-    &-row {
+    & > [role='row'] {
       display: flex;
       flex-wrap: nowrap;
       padding: 5px;
@@ -203,14 +207,10 @@ function randomProblemSelect() {
         flex: 1;
       }
 
-      & > label {
+      & > [role='rowheader'] {
         min-width: 8em;
         max-width: 8em;
       }
-    }
-
-    label {
-      white-space: nowrap;
     }
 
     .buttons {
@@ -228,7 +228,7 @@ function randomProblemSelect() {
       vertical-align: top;
     }
 
-    .problem-detail {
+    [role='table'] {
       font-size: 0.9em;
 
       label {
