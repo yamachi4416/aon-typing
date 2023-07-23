@@ -16,18 +16,14 @@
         </p>
         <div class="detail-actions">
           <div class="buttons">
-            <span>
-              <button
-                v-show="$navigator.enable"
-                class="button"
-                @click="$router.back()"
-              >
-                もどる
-              </button>
-            </span>
-            <span>
-              <button class="button" @click="print()">印刷する</button>
-            </span>
+            <button
+              v-show="$navigator.enable"
+              class="button"
+              @click="$router.back()"
+            >
+              もどる
+            </button>
+            <button class="button" @click="print()">印刷する</button>
           </div>
         </div>
       </div>

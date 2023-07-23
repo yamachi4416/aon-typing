@@ -16,12 +16,15 @@
           <label>タイピング数</label>
           <div>{{ item.chars }}</div>
         </div>
-        <div class="detail-tags buttons">
-          <span v-for="(tag, i) in item.tags" :key="`tag-${item.id}-${i}`">
-            <button class="button" @click="$emit('tag', tag)">
-              {{ tag.name }}
-            </button>
-          </span>
+        <div class="detail-tags buttons tight">
+          <button
+            v-for="(tag, i) in item.tags"
+            :key="`tag-${item.id}-${i}`"
+            class="button"
+            @click="$emit('tag', tag)"
+          >
+            {{ tag.name }}
+          </button>
         </div>
       </div>
     </div>

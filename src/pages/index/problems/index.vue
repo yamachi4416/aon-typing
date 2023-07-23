@@ -14,15 +14,13 @@
       <p v-else>{{ problems.length }} 件の検索結果があります</p>
       <div class="actions">
         <div class="buttons">
-          <span>
-            <button
-              v-show="$navigator.enable"
-              class="button"
-              @click="$router.back()"
-            >
-              もどる
-            </button>
-          </span>
+          <button
+            v-show="$navigator.enable"
+            class="button"
+            @click="$router.back()"
+          >
+            もどる
+          </button>
         </div>
       </div>
       <template #right>

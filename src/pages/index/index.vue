@@ -28,15 +28,13 @@
           <label for="search-keyword">検索キーワード</label>
         </div>
         <div class="buttons">
-          <span>
-            <button
-              class="button big"
-              :disabled="!enableSearch"
-              @click="searchProblems"
-            >
-              検索する
-            </button>
-          </span>
+          <button
+            class="button big"
+            :disabled="!enableSearch"
+            @click="searchProblems"
+          >
+            検索する
+          </button>
         </div>
       </div>
       <template #left>
@@ -66,23 +64,23 @@
     <PartsSection class="index-page-tags">
       <h2>タグいちらん</h2>
       <div class="buttons index-page-tags-list">
-        <span v-for="tag in tagSummary" :key="`tag-${tag.id}`">
-          <NuxtLink
-            :to="{ name: 'index-problems-tags-id', params: { id: tag.id } }"
-            class="index-page-tags-list-item button"
-          >
-            <span class="tag-item">
-              <span class="tag-item-name">{{ tag.name }}</span>
-              <span class="tag-item-count">
-                <span class="tag-item-count-number">
-                  <span>(</span>
-                  <span>{{ tag.count }}</span>
-                  <span>)</span>
-                </span>
+        <NuxtLink
+          v-for="tag in tagSummary"
+          :key="`tag-${tag.id}`"
+          :to="{ name: 'index-problems-tags-id', params: { id: tag.id } }"
+          class="index-page-tags-list-item button"
+        >
+          <span class="tag-item">
+            <span class="tag-item-name">{{ tag.name }}</span>
+            <span class="tag-item-count">
+              <span class="tag-item-count-number">
+                <span>(</span>
+                <span>{{ tag.count }}</span>
+                <span>)</span>
               </span>
             </span>
-          </NuxtLink>
-        </span>
+          </span>
+        </NuxtLink>
       </div>
       <template #right>
         <ImgNekoUserKeyboard />

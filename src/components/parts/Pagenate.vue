@@ -1,6 +1,6 @@
 <template>
   <div v-if="pages.length > 1" class="pagenate buttons">
-    <span v-for="p in dispPages" :key="p">
+    <template v-for="p in dispPages" :key="p">
       <select
         v-if="p === page"
         v-model.number="editPage"
@@ -12,7 +12,7 @@
         </option>
       </select>
       <button v-else class="button" @click="editPage = p">{{ p }}</button>
-    </span>
+    </template>
   </div>
 </template>
 

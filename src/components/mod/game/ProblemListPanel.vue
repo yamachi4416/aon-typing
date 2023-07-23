@@ -7,25 +7,24 @@
   >
     <template #title> タイピング問題の選択 </template>
     <div v-show="tags.size > 0" class="taglist buttons">
-      <span v-for="t in tags.values()" :key="`tag-${t.id}`">
-        <button class="taglist-item button" @click.self="removeTag(t)">
-          {{ t.name }}
-        </button>
-      </span>
+      <button
+        v-for="t in tags.values()"
+        :key="`tag-${t.id}`"
+        class="taglist-item button"
+        @click.self="removeTag(t)"
+      >
+        {{ t.name }}
+      </button>
     </div>
     <ModProblemList :problems="pages.items" @tag="addTag">
       <template #default="{ problem }">
         <div class="buttons">
-          <span>
-            <button class="button" @click.self="$emit('detail', problem)">
-              内容を見る
-            </button>
-          </span>
-          <span>
-            <button class="button" @click.self="$emit('select', problem)">
-              選択する
-            </button>
-          </span>
+          <button class="button" @click.self="$emit('detail', problem)">
+            内容を見る
+          </button>
+          <button class="button" @click.self="$emit('select', problem)">
+            選択する
+          </button>
         </div>
       </template>
     </ModProblemList>

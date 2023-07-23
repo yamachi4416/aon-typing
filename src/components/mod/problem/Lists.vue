@@ -6,16 +6,12 @@
     >
       <template #default="{ problem }">
         <div class="buttons">
-          <span>
-            <button class="button" @click="$emit('detail', problem)">
-              内容を見る
-            </button>
-          </span>
-          <span>
-            <button class="button" @click="$emit('play', problem)">
-              プレイする
-            </button>
-          </span>
+          <button class="button" @click="$emit('detail', problem)">
+            内容を見る
+          </button>
+          <button class="button" @click="$emit('play', problem)">
+            プレイする
+          </button>
         </div>
       </template>
     </ModProblemList>

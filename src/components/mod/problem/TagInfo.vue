@@ -4,15 +4,15 @@
       <div class="tag-info-id">No.{{ tag.id }}</div>
       <h2 class="tag-info-title">タグ：{{ tag.name }}</h2>
       <div class="tag-info-taglist buttons">
-        <span v-for="t in tags" :key="`tag-${t.id}`">
-          <button
-            class="tag-info-taglist-item button"
-            :selected="t.selected || null"
-            @click="selectTag(t)"
-          >
-            {{ t.name }}
-          </button>
-        </span>
+        <button
+          v-for="t in tags"
+          :key="`tag-${t.id}`"
+          class="tag-info-taglist-item button tight"
+          :selected="t.selected || null"
+          @click="selectTag(t)"
+        >
+          {{ t.name }}
+        </button>
       </div>
       <div v-if="$slots.default" class="tags-actions">
         <div class="buttons">

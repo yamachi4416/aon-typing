@@ -67,12 +67,15 @@ body,
 .buttons {
   display: flex;
   flex-wrap: wrap;
+  gap: 6px;
   align-items: center;
   justify-content: center;
   max-width: 100%;
+  padding: 3px;
 
-  & > * {
-    padding: 3px;
+  &.tight {
+    gap: 3px;
+    padding: 3px 0;
   }
 }
 

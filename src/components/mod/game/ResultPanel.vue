@@ -65,21 +65,15 @@
     </div>
     <template #footer>
       <div class="buttons">
-        <span>
-          <button class="button" @click="$emit('retry')">もういちど</button>
-        </span>
-        <span>
-          <button class="button" @click="$emit('menu')">メニューに戻る</button>
-        </span>
-        <span>
-          <button
-            class="button"
-            :disabled="!problem?.hasNext"
-            @click="$emit('next')"
-          >
-            つづきをする
-          </button>
-        </span>
+        <button class="button" @click="$emit('retry')">もういちど</button>
+        <button class="button" @click="$emit('menu')">メニューに戻る</button>
+        <button
+          class="button"
+          :disabled="!problem?.hasNext"
+          @click="$emit('next')"
+        >
+          つづきをする
+        </button>
       </div>
     </template>
   </PartsModalContent>

@@ -13,12 +13,15 @@
             <dl class="detail-info-tags">
               <dt>タグ</dt>
               <dd>
-                <div class="buttons">
-                  <span v-for="(tag, i) in detail.tags" :key="`tag-${i}`">
-                    <button class="button" @click="$emit('tag', tag)">
-                      {{ tag.name }}
-                    </button>
-                  </span>
+                <div class="buttons tight">
+                  <button
+                    v-for="(tag, i) in detail.tags"
+                    :key="`tag-${i}`"
+                    class="button"
+                    @click="$emit('tag', tag)"
+                  >
+                    {{ tag.name }}
+                  </button>
                 </div>
               </dd>
             </dl>
@@ -163,7 +166,7 @@ defineEmits<{
     flex-wrap: wrap;
     list-style-type: none;
 
-    :where(.details-item) {
+    &-item {
       display: flex;
       flex-direction: column;
       color: var(--color-6);
