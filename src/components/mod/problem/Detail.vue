@@ -12,6 +12,7 @@
             <td>
               <ModProblemTags
                 :tags="detail.tags"
+                :clickable="hasOnTag"
                 @tag="(tag) => $emit('tag', tag)"
               />
             </td>
@@ -57,6 +58,7 @@
 
 <script setup lang="ts">
 import { ProblemDetail, ProblemItemTag } from '~~/types/problems'
+
 defineProps<{
   detail: ProblemDetail
 }>()
@@ -64,6 +66,8 @@ defineProps<{
 defineEmits<{
   (e: 'tag', tag: ProblemItemTag): any
 }>()
+
+const hasOnTag = computed(() => !!getCurrentInstance()?.vnode?.props?.onTag)
 </script>
 
 <style lang="scss" scoped>

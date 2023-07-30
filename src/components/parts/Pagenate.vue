@@ -71,12 +71,6 @@ function selectPage(page: number) {
   padding-top: 5px;
   padding-bottom: 8px;
 
-  select {
-    @include cmps.button;
-
-    text-align: center;
-  }
-
   button,
   select {
     width: 3.8em;

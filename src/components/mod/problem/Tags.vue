@@ -1,22 +1,31 @@
 <template>
   <div class="tags">
-    <button
-      v-for="(tag, i) in tags"
-      :key="`tag-${i}`"
-      :title="`「${tag.name}」タグの問題のみ表示する`"
-      @click="$emit('tag', tag)"
-    >
-      {{ tag.name }}
-    </button>
+    <template v-for="(tag, i) in tags" :key="`tag-${i}`">
+      <span v-if="clickable === false">{{ tag.name }}</span>
+      <button
+        v-else
+        :title="`「${tag.name}」タグの問題のみ表示する`"
+        @click="$emit('tag', tag)"
+      >
+        {{ tag.name }}
+      </button>
+    </template>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ProblemItemTag } from '~~/types/problems'
 
-defineProps<{
-  tags: ProblemItemTag[]
-}>()
+withDefaults(
+  defineProps<{
+    tags?: ProblemItemTag[]
+    clickable?: boolean
+  }>(),
+  {
+    tags: () => [],
+    clickable: true,
+  },
+)
 
 defineEmits<{
   (e: 'tag', tag: ProblemItemTag): any
@@ -34,6 +43,7 @@ defineEmits<{
   justify-content: flex-start;
   padding: 3px 0;
 
+  span,
   button {
     @include cmps.button;
 
