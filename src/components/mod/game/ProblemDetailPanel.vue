@@ -1,12 +1,8 @@
 <template>
   <PartsModalContent :show-close="true" :title="title" @close="$emit('close')">
     <ModProblemDetail v-if="detail" :detail="detail">
-      <button class="button" @click.self="$emit('back')">もどる</button>
-      <button
-        v-if="showSelect"
-        class="button"
-        @click.self="$emit('select', detail)"
-      >
+      <button @click.self="$emit('back')">もどる</button>
+      <button v-if="showSelect" @click.self="$emit('select', detail)">
         選択する
       </button>
     </ModProblemDetail>

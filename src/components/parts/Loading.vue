@@ -6,6 +6,7 @@
       height="200px"
       viewBox="0 0 100 100"
       class="loading-svg"
+      title="処理中です"
     >
       <circle v-for="c in 4" :key="c" :cx="c * 20" cy="50" r="6">
         <animate

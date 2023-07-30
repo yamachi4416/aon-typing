@@ -1,130 +1,125 @@
 <template>
   <PartsModalContent
-    class="typing-menu-panel"
+    class="panel"
     :show-close="false"
     title="タイピングメニュー"
     @close="emit('close')"
   >
-    <div role="table" class="typing-menu-panel-content">
-      <div role="row">
-        <div role="rowheader">制限時間</div>
-        <div role="cell">
-          <div class="buttons tight">
+    <table>
+      <tbody>
+        <tr>
+          <th>制限時間</th>
+          <td role="radiogroup">
             <button
               v-for="i in [0, 1, 2, 3, 4, 5]"
               :key="`time-limit-${i}`"
-              class="button"
+              role="radio"
               :title="`制限時間を「${i ? i + '分' : 'なし'}」に設定する`"
-              :selected="i * 60000 === setting.timeLimit || null"
+              :aria-checked="i * 60000 === setting.timeLimit"
               @click="setting.timeLimit = i * 60000"
               v-text="i ? i + '分' : 'なし'"
             />
-          </div>
-        </div>
-      </div>
-      <div role="row">
-        <div role="rowheader">目標タイプ数</div>
-        <div role="cell">
-          <div class="buttons tight">
+          </td>
+        </tr>
+        <tr>
+          <th>目標タイプ数</th>
+          <td role="radiogroup">
             <button
               v-for="i in goalCharCounts"
               :key="`goalCharCount-${i}`"
+              role="radio"
               :title="`目標タイプ数を「${i || 'なし'}」に設定する`"
-              class="button"
-              :selected="i === setting.goalCharCount || null"
+              :aria-checked="i === setting.goalCharCount"
               @click="setting.goalCharCount = i"
               v-text="i || 'なし'"
             />
-          </div>
-        </div>
-      </div>
-      <div role="row">
-        <div role="rowheader">自動モード</div>
-        <div role="cell">
-          <div class="buttons tight">
+          </td>
+        </tr>
+        <tr>
+          <th>自動モード</th>
+          <td role="radiogroup">
             <button
               v-for="a in HelpAnimals"
               :key="`automode-${a.speed}`"
+              role="radio"
               :title="`自動モードを「${a.name}」に設定する`"
-              class="button"
-              :selected="setting.autoMode === a.speed || null"
+              :aria-checked="setting.autoMode === a.speed"
               @click="setting.autoMode = a.speed"
               v-text="a.name"
             />
-          </div>
-        </div>
-      </div>
-      <div role="row">
-        <div role="rowheader">出題する順番</div>
-        <div role="cell">
-          <div class="buttons tight">
+          </td>
+        </tr>
+        <tr>
+          <th>出題する順番</th>
+          <td role="radiogroup">
             <button
               v-for="(label, order) in problemOrders"
               :key="order"
+              role="radio"
               :title="`出題する順番を「${label}」に設定する`"
-              class="button"
-              :selected="setting.problemOrder === order || null"
+              :aria-checked="setting.problemOrder === order"
               @click="setting.problemOrder = order"
               v-text="label"
             />
-          </div>
-        </div>
-      </div>
-      <div role="row" class="problem-section">
-        <div role="rowheader">問題</div>
-        <div role="cell">
-          <div class="buttons tight">
+          </td>
+        </tr>
+        <tr>
+          <th>問題</th>
+          <td>
             <button
-              class="button"
               title="問題をいちらんから選択する"
               @click="openProblemSelect()"
             >
               いちらん選択
             </button>
             <button
-              class="button"
               title="問題をランダムに選択する"
               @click="randomProblemSelect()"
             >
               ランダム選択
             </button>
-          </div>
-          <div role="table" class="table">
-            <div role="row">
-              <div role="rowheader">タイプ</div>
-              <div role="cell">{{ problemType }}</div>
-            </div>
-            <div role="row">
-              <div role="rowheader">タイトル</div>
-              <div role="cell">
-                <a
-                  v-if="problem?.title"
-                  :title="`選択した問題「${problem.title}」の内容を表示する`"
-                  @click="emit('detail', problem)"
-                  >{{ problem?.title }}</a
-                >
-              </div>
-            </div>
-            <div role="row">
-              <div role="rowheader">問題数</div>
-              <div role="cell">{{ problem?.words }}</div>
-            </div>
-            <div role="row">
-              <div role="rowheader">タイピング数</div>
-              <div role="cell">{{ problem?.chars }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <table>
+              <tbody>
+                <tr>
+                  <th>タイプ</th>
+                  <td>{{ problemType }}</td>
+                </tr>
+                <tr>
+                  <th>タイトル</th>
+                  <td>
+                    <a
+                      v-if="problem?.title"
+                      :title="`選択した問題「${problem.title}」の内容を表示する`"
+                      href="#"
+                      @click.prevent="emit('detail', problem)"
+                      >{{ problem?.title }}</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th>問題数</th>
+                  <td>{{ problem?.words }}</td>
+                </tr>
+                <tr>
+                  <th>タイピング数</th>
+                  <td>{{ problem?.chars }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
     <template #footer>
-      <div class="buttons">
-        <button :disabled="!problem?.id" class="button" @click="emit('start')">
-          スタートする
-        </button>
-        <button class="button" @click="emit('cancel')">やめる</button>
-      </div>
+      <button :disabled="!problem?.id" @click="emit('start')">
+        スタートする
+      </button>
+      <button @click="emit('cancel')">やめる</button>
     </template>
   </PartsModalContent>
 </template>
@@ -200,66 +195,26 @@ function randomProblemSelect() {
 </script>
 
 <style lang="scss" scoped>
-.typing-menu-panel {
+@use '~/assets/css/cmps';
+
+.panel {
   width: 500px;
   max-width: 100%;
   height: unset;
 
-  [role='rowheader'] {
-    white-space: nowrap;
-  }
+  table {
+    td:has(> button) {
+      @include cmps.buttons-tight;
 
-  &-content {
-    width: fit-content;
-    padding: 5px 0;
-
-    & > [role='row'] {
-      display: flex;
-      flex-wrap: nowrap;
-      padding: 5px;
-
-      & > * {
-        flex: 1;
-      }
-
-      & > [role='rowheader'] {
-        min-width: 8em;
-        max-width: 8em;
-      }
-    }
-
-    .buttons {
       flex-wrap: nowrap;
       justify-content: flex-start;
-
-      .button {
-        padding: 0 10px;
-      }
-    }
-  }
-
-  .problem-section {
-    & > label {
-      vertical-align: top;
+      padding: 8px;
+      padding-left: 10px;
     }
 
-    [role='table'] {
-      font-size: 0.9em;
-
-      label {
-        width: 1px;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-        cursor: pointer;
-
-        &:hover,
-        &:focus {
-          color: var(--color-9);
-        }
-      }
+    td:has(table) {
+      padding-left: 2em;
+      font-size: 0.95em;
     }
   }
 }

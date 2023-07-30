@@ -1,27 +1,19 @@
 <template>
-  <div>
-    <ModProblemList
-      :problems="pages.items"
-      @tag="(tag: ProblemItemTag) => emit('tag', tag)"
-    >
-      <template #default="{ problem }">
-        <div class="buttons">
-          <button class="button" @click="$emit('detail', problem)">
-            内容を見る
-          </button>
-          <button class="button" @click="$emit('play', problem)">
-            プレイする
-          </button>
-        </div>
-      </template>
-    </ModProblemList>
-    <PartsPagenate
-      :page="page"
-      :page-size="props.pageSize"
-      :record-count="pages.count"
-      @select="select"
-    />
-  </div>
+  <ModProblemList
+    :problems="pages.items"
+    @tag="(tag: ProblemItemTag) => emit('tag', tag)"
+  >
+    <template #default="{ problem }">
+      <button @click="$emit('detail', problem)">内容を見る</button>
+      <button @click="$emit('play', problem)">プレイする</button>
+    </template>
+  </ModProblemList>
+  <PartsPagenate
+    :page="page"
+    :page-size="props.pageSize"
+    :record-count="pages.count"
+    @select="select"
+  />
 </template>
 
 <script setup lang="ts">

@@ -24,7 +24,7 @@ withDefaults(
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars';
+@use '~/assets/css/vars';
 
 .basic-page {
   min-height: 100vh;
@@ -39,7 +39,7 @@ withDefaults(
     padding: 10px;
     margin: 0 auto;
 
-    @include __media_s {
+    @include vars.media_s {
       padding: 5px 0;
     }
 

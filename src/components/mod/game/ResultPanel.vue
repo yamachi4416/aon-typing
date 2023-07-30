@@ -5,80 +5,51 @@
     title="タイピング結果"
     :show-close="false"
   >
-    <div class="info-main">
-      <div class="info-main-left">
-        <div class="table">
-          <div>
-            <label>ランク</label>
-            <div class="rank">
-              {{ result.rank?.name }}
-            </div>
-          </div>
-          <div>
-            <label>スコア</label>
-            <div class="score">
-              {{ result.score }}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="info-main-right">
-        <div class="table">
-          <div>
-            <label>入力時間</label>
-            <div>{{ $filters.dispTime(result.time) }}</div>
-          </div>
-          <div>
-            <label>タイプ数</label>
-            <div>{{ result.totalTypeCount }}</div>
-          </div>
-          <div>
-            <label>タイプ数（分）</label>
-            <div>{{ result.wordPerMin }}</div>
-          </div>
-          <div>
-            <label>ミスタイプ数</label>
-            <div>{{ result.missCount }}</div>
-          </div>
-          <div>
-            <label>正確タイプ率</label>
-            <div>{{ $filters.percent(result.correctRate) }}%</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="info-main-bottom">
-      <div class="table">
-        <div class="miss-keys">
-          <label>ミスしたキー</label>
-          <div>
-            <div class="miss-keys-chars">
-              <div
-                v-for="(k, i) in result.missKeys"
-                :key="`miss-key-${i}`"
-                class="miss-keys-chars-item"
-              >
-                <div class="miss-keys-chars-item-char">
-                  <span class="miss-keys-chars-item-char-key">{{ k.w }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <section>
+      <table>
+        <tbody>
+          <tr>
+            <th>ランク</th>
+            <td>{{ result.rank?.name }}</td>
+          </tr>
+          <tr>
+            <th>スコア</th>
+            <td>{{ result.score }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr>
+            <th>入力時間</th>
+            <td>{{ $filters.dispTime(result.time) }}</td>
+          </tr>
+          <tr>
+            <th>タイプ数</th>
+            <td>{{ result.totalTypeCount }}</td>
+          </tr>
+          <tr>
+            <th>タイプ数（分）</th>
+            <td>{{ result.wordPerMin }}</td>
+          </tr>
+          <tr>
+            <th>ミスタイプ数</th>
+            <td>{{ result.missCount }}</td>
+          </tr>
+          <tr>
+            <th>正確タイプ率</th>
+            <td>{{ $filters.percent(result.correctRate) }}%</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <ModGameResultPanelMissKeys :miss-keys="result.missKeys" />
     <template #footer>
-      <div class="buttons">
-        <button class="button" @click="$emit('retry')">もういちど</button>
-        <button class="button" @click="$emit('menu')">メニューに戻る</button>
-        <button
-          class="button"
-          :disabled="!problem?.hasNext"
-          @click="$emit('next')"
-        >
-          つづきをする
-        </button>
-      </div>
+      <button @click="$emit('retry')">もういちど</button>
+      <button @click="$emit('menu')">メニューに戻る</button>
+      <button :disabled="!problem?.hasNext" @click="$emit('next')">
+        つづきをする
+      </button>
     </template>
   </PartsModalContent>
 </template>
@@ -105,68 +76,22 @@ defineEmits<{
   max-width: 100%;
   height: unset;
 
-  .info-main {
+  section {
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    justify-content: space-around;
+    white-space: nowrap;
 
-    &-left,
-    &-right {
-      flex: 1;
-      white-space: nowrap;
+    table:nth-of-type(1) {
+      td {
+        font-size: 2em;
+        text-align: center;
+      }
     }
 
-    &-right {
-      div {
+    table:nth-of-type(2) {
+      td {
         text-align: right;
-      }
-
-      label {
-        text-align: left;
-      }
-    }
-
-    &-left {
-      .rank {
-        font-size: 2em;
-        text-align: center;
-      }
-
-      .score {
-        font-size: 2em;
-        text-align: center;
-      }
-    }
-
-    &-bottom {
-      .miss-keys {
-        label {
-          width: 1px;
-          white-space: nowrap;
-        }
-
-        &-chars {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-
-          &-item {
-            padding: 3px;
-
-            &-char {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 30px;
-              height: 30px;
-              padding: 5px;
-              color: var(--color-f);
-              white-space: pre;
-              background: var(--color-3);
-              border-radius: 50%;
-            }
-          }
-        }
       }
     }
   }

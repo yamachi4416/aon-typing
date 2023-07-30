@@ -1,23 +1,15 @@
 <template>
-  <ModProblemDetail :detail="detail" @tag="$navigator.indexTagDetail">
-    <span>
-      <button
-        v-show="$navigator.enable"
-        class="button"
-        @click="$navigator.backOrIndex()"
-      >
+  <div>
+    <ModProblemDetail :detail="detail" @tag="$navigator.indexTagDetail">
+      <button v-show="$navigator.enable" @click="$navigator.backOrIndex()">
         もどる
       </button>
-    </span>
-    <span>
-      <button class="button" @click="$navigator.gameMenu({ id })">
-        プレイする
-      </button>
-    </span>
-    <template #right>
-      <ImgNekoUserKeyboard />
-    </template>
-  </ModProblemDetail>
+      <button @click="$navigator.gameMenu({ id })">プレイする</button>
+      <template #right>
+        <ImgNekoUserKeyboard />
+      </template>
+    </ModProblemDetail>
+  </div>
 </template>
 
 <script setup lang="ts">

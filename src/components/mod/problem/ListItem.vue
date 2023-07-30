@@ -1,38 +1,34 @@
 <template>
-  <div class="item">
-    <header>
-      <h1>
-        <span class="no">No.{{ item.id }}</span>
-        <span class="title">{{ item.title }}</span>
-      </h1>
-    </header>
-    <div class="content">
-      <div class="detail">
-        <div class="detail-row">
-          <label>問題数</label>
-          <div>{{ item.words }}</div>
-        </div>
-        <div class="detail-row">
-          <label>タイピング数</label>
-          <div>{{ item.chars }}</div>
-        </div>
-        <div class="detail-tags buttons tight">
-          <button
-            v-for="(tag, i) in item.tags"
-            :key="`tag-${item.id}-${i}`"
-            :title="`「${tag.name}」のタグの問題のみ表示する`"
-            class="button"
-            @click="$emit('tag', tag)"
-          >
-            {{ tag.name }}
-          </button>
-        </div>
+  <article class="item" :aria-labelledby="`item-title-${uid}`">
+    <div>
+      <header>
+        <span>No.{{ item.id }}</span>
+        <h1 :id="`item-title-${uid}`">{{ item.title }}</h1>
+      </header>
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <th>問題数</th>
+              <td>{{ item.words }}</td>
+            </tr>
+            <tr>
+              <th>タイピング数</th>
+              <td>{{ item.chars }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <ModProblemTags
+          class="tags"
+          :tags="item.tags"
+          @tag="(tag) => $emit('tag', tag)"
+        />
       </div>
+      <footer v-if="$slots.footer">
+        <slot name="footer" />
+      </footer>
     </div>
-    <footer v-if="$slots.footer">
-      <slot name="footer" />
-    </footer>
-  </div>
+  </article>
 </template>
 
 <script setup lang="ts">
@@ -45,78 +41,62 @@ defineProps<{
 defineEmits<{
   (e: 'tag', tag: ProblemItemTag): any
 }>()
+
+const uid = getCurrentInstance()?.uid
 </script>
 
 <style lang="scss" scoped>
+@use '~/assets/css/cmps';
+
 .item {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  color: var(--color-6);
 
-  & > header {
-    text-align: center;
+  @include cmps.card;
 
-    h1 {
+  & > div {
+    @include cmps.paper;
+
+    & > header {
       display: flex;
       flex-direction: column;
-      font-size: 1em;
-      font-weight: normal;
+      color: var(--color-6);
+
+      & > span {
+        position: absolute;
+        top: 8px;
+        left: 20px;
+        font-size: 0.8em;
+        text-align: left;
+      }
+
+      h1 {
+        font-size: 1em;
+        font-weight: normal;
+        text-align: center;
+      }
     }
-
-    .no {
-      position: absolute;
-      top: 8px;
-      left: 20px;
-      font-size: 0.8em;
-      text-align: left;
-    }
-
-    .title {
-      flex: 1;
-    }
-  }
-
-  .content {
-    flex: 1;
-    border-top: 1px solid var(--color-9);
-  }
-
-  .detail {
-    padding: 5px;
-  }
-
-  .detail-row {
-    display: flex;
 
     & > div {
-      flex: 1;
-      padding: 5px 15px;
-      text-align: right;
+      flex-grow: 1;
+      border-top: 1px solid var(--color-9);
+
+      table {
+        padding: 5px;
+
+        td {
+          text-align: right;
+        }
+      }
+
+      .tags {
+        padding: 5px 10px 15px;
+        font-size: 0.9em;
+      }
     }
 
-    & > label {
-      flex: 1;
-      text-align: left;
-      white-space: nowrap;
-    }
-  }
-
-  .detail-tags {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 10px 5px;
-
-    & > * {
-      padding-left: 0;
-    }
-
-    .button {
-      padding: 0 8px;
-      font-size: 0.8em;
-      color: var(--color-f);
-      background: var(--color-p);
-      border: none;
+    & > footer {
+      @include cmps.buttons;
     }
   }
 }

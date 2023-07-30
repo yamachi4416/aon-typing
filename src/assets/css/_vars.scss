@@ -1,34 +1,34 @@
-@mixin __media_s {
+@mixin media_s {
   @media screen and (width <= 480px) {
     @content;
   }
 }
 
-@mixin __media_m {
+@mixin media_m {
   @media screen and (480px <= width <= 800px) {
     @content;
   }
 }
 
-@mixin __media_sm {
+@mixin media_sm {
   @media screen and (width <= 800px) {
     @content;
   }
 }
 
-@mixin __media_ml {
+@mixin media_ml {
   @media screen and (width >= 480px) {
     @content;
   }
 }
 
-@mixin __media_l {
+@mixin media_l {
   @media screen and (width >= 700px) {
     @content;
   }
 }
 
-@mixin __theme_light_cssvars {
+@mixin theme_light_cssvars {
   --color-3: #333;
   --color-6: #666;
   --color-9: #999;
@@ -57,7 +57,7 @@
   --countdown-color: var(--color-l);
 }
 
-@mixin __theme_dark_cssvars {
+@mixin theme_dark_cssvars {
   --color-3: #fff;
   --color-6: #ccc;
   --color-9: #999;

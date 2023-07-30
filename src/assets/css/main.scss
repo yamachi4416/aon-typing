@@ -1,8 +1,8 @@
-@use 'sass:math';
-@import './vars';
+@use './vars';
+@use './cmps';
 
 :root {
-  @include __theme_light_cssvars;
+  @include vars.theme_light_cssvars;
 }
 
 * {
@@ -21,7 +21,7 @@
 @media screen {
   html {
     &.dark {
-      @include __theme_dark_cssvars;
+      @include vars.theme_dark_cssvars;
     }
   }
 }
@@ -45,10 +45,6 @@ body {
   }
 }
 
-a {
-  color: var(--color-l);
-}
-
 /* stylelint-disable-next-line selector-id-pattern */
 body,
 #__nuxt,
@@ -64,70 +60,34 @@ body,
   }
 }
 
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  padding: 3px;
-
-  &.tight {
-    gap: 3px;
-    padding: 3px 0;
-  }
-}
-
-.button {
-  padding: 0 1.5em;
-  font-size: 0.9em;
-  line-height: 2;
-  color: var(--color-3);
-  white-space: nowrap;
-  appearance: none;
-  cursor: pointer;
-  background: var(--color-e);
-  border: 1px solid var(--color-9);
-  border-radius: 10px;
-
-  &.big {
-    line-height: 2.5;
-  }
-
-  &:disabled {
-    color: var(--color-a);
-    border-color: var(--color-9);
-  }
-
-  &:not(:disabled) {
-    &:hover {
-      box-shadow: 1px 1px 1px var(--color-6);
-    }
-
-    &[selected] {
-      background: var(--input-selected);
-    }
-  }
-}
-
-.table {
-  display: table;
+table {
   width: 100%;
+  margin: 5px 0;
+  color: var(--color-6);
   border-collapse: collapse;
 
-  & > * {
-    display: table-row;
+  th,
+  td {
+    padding: 5px 10px;
+    vertical-align: middle;
+  }
 
-    & > * {
-      display: table-cell;
-      padding: 8px 15px;
-      vertical-align: middle;
-    }
+  th {
+    width: 1px;
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
   }
 }
 
-.form-group {
+a {
+  color: var(--color-l);
+}
+
+form > div {
+  @include cmps.row;
+
+  position: relative;
   flex: 1;
   align-items: center;
   padding: 5px;
@@ -170,132 +130,10 @@ body,
       box-shadow: 0 0 0 0.2rem var(--input-active-outine);
     }
   }
-
-  &.placeholder {
-    position: relative;
-
-    label {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      padding: 10px;
-      overflow: hidden;
-      color: var(--color-a);
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      pointer-events: none;
-    }
-
-    input {
-      z-index: 1;
-      background: transparent;
-
-      &:not(:placeholder-shown) + label {
-        display: none;
-      }
-    }
-  }
-}
-
-.sm-table {
-  margin: 0 auto;
-  border-collapse: collapse;
-
-  th {
-    padding: 2px 20px;
-    font-weight: normal;
-    text-align: left;
-  }
-
-  td {
-    padding: 2px 20px;
-    text-align: right;
-  }
-
-  thead {
-    th {
-      padding: 5px 10px;
-      text-align: center;
-      border-bottom: 1px solid var(--color-c);
-    }
-  }
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-
-  @for $i from 1 to 13 {
-    & > .col-#{$i} {
-      width: math.div(100%, 12) * $i;
-    }
-
-    & > .col-#{$i}-5 {
-      width: math.div(100%, 12) * $i + math.div(100%, 24);
-    }
-
-    @include __media_s {
-      & > .col-s-#{$i},
-      & > .col-s-#{$i}[class^='col-'] {
-        width: math.div(100%, 12) * $i;
-        max-width: math.div(100%, 12) * $i;
-      }
-
-      & > .col-s-#{$i}-5,
-      & > .col-s-#{$i}-5[class^='col-'] {
-        width: math.div(100%, 12) * $i + math.div(100%, 24);
-        max-width: math.div(100%, 12) * $i + math.div(100%, 24);
-      }
-    }
-
-    @include __media_m {
-      & > .col-m-#{$i},
-      & > .col-m-#{$i}[class^='col-'] {
-        width: math.div(100%, 12) * $i;
-        max-width: math.div(100%, 12) * $i;
-      }
-
-      & > .col-m-#{$i}-5,
-      & > .col-m-#{$i}-5[class^='col-'] {
-        width: math.div(100%, 12) * $i + math.div(100%, 24);
-        max-width: math.div(100%, 12) * $i + math.div(100%, 24);
-      }
-    }
-
-    @include __media_sm {
-      & > .col-sm-#{$i},
-      & > .col-sm-#{$i}[class^='col-'] {
-        width: math.div(100%, 12) * $i;
-        max-width: math.div(100%, 12) * $i;
-      }
-
-      & > .col-sm-#{$i}-5,
-      & > .col-sm-#{$i}-5[class^='col-'] {
-        width: math.div(100%, 12) * $i + math.div(100%, 24);
-        max-width: math.div(100%, 12) * $i + math.div(100%, 24);
-      }
-    }
-
-    @include __media_ml {
-      & > .col-ml-#{$i},
-      & > .col-ml-#{$i}[class^='col-'] {
-        width: math.div(100%, 12) * $i;
-        max-width: math.div(100%, 12) * $i;
-      }
-
-      & > .col-ml-#{$i}-5,
-      & > .col-ml-#{$i}-5[class^='col-'] {
-        width: math.div(100%, 12) * $i + math.div(100%, 24);
-        max-width: math.div(100%, 12) * $i + math.div(100%, 24);
-      }
-    }
-  }
+  @include cmps.row;
 }
 
 .overflow-x-a {

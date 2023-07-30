@@ -24,31 +24,31 @@
       "
       />
       <foreignObject width="88" height="60">
-        <p class="keyboard-text" v-text="'enter'" />
+        <kbd class="keyboard-text" v-text="'enter'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'tab'">
       <rect x="0" y="0" rx="5" ry="5" width="93" height="60" />
       <foreignObject width="93" height="60">
-        <p class="keyboard-text" v-text="'tab'" />
+        <kbd class="keyboard-text" v-text="'tab'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'caps lock'">
       <rect x="0" y="0" rx="5" ry="5" width="108" height="60" />
       <foreignObject width="108" height="60">
-        <p class="keyboard-text" v-text="'caps lock'" />
+        <kbd class="keyboard-text" v-text="'caps lock'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'shiftL'">
       <rect x="0" y="0" rx="5" ry="5" width="140" height="60" />
       <foreignObject width="140" height="60">
-        <p class="keyboard-text" v-text="'shift'" />
+        <kbd class="keyboard-text" v-text="'shift'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'shiftR'">
       <rect x="0" y="0" rx="5" ry="5" width="112" height="60" />
       <foreignObject width="112" height="60">
-        <p class="keyboard-text" v-text="'shift'" />
+        <kbd class="keyboard-text" v-text="'shift'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'middle'">
@@ -57,19 +57,19 @@
     <g v-else-if="text === 'space'">
       <rect x="0" y="0" rx="5" ry="5" width="256" height="60" />
       <foreignObject width="258" height="60">
-        <p class="keyboard-text" v-text="'space'" />
+        <kbd class="keyboard-text" v-text="'space'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'back\nspace'">
       <rect x="0" y="0" rx="5" ry="5" width="60" height="60" />
       <foreignObject width="60" height="60">
-        <p class="keyboard-text" v-text="text" />
+        <kbd class="keyboard-text" v-text="text" />
       </foreignObject>
     </g>
     <g v-else>
       <rect x="0" y="0" rx="5" ry="5" width="60" height="60" />
       <foreignObject width="60" height="60">
-        <p class="keyboard-text normal" v-text="text" />
+        <kbd class="keyboard-text normal" v-text="text" />
       </foreignObject>
     </g>
   </g>

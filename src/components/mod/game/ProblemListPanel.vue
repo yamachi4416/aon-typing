@@ -6,12 +6,11 @@
     :show-close="true"
     @close="$emit('close')"
   >
-    <div v-show="tags.size > 0" class="taglist buttons">
+    <div v-show="tags.size > 0" class="taglist">
       <button
         v-for="t in tags.values()"
         :key="`tag-${t.id}`"
         :title="`「${t.name}」タグの問題のみ表示するのをやめる`"
-        class="taglist-item button"
         @click.self="removeTag(t)"
       >
         {{ t.name }}
@@ -19,14 +18,8 @@
     </div>
     <ModProblemList :problems="pages.items" @tag="addTag">
       <template #default="{ problem }">
-        <div class="buttons">
-          <button class="button" @click.self="$emit('detail', problem)">
-            内容を見る
-          </button>
-          <button class="button" @click.self="$emit('select', problem)">
-            選択する
-          </button>
-        </div>
+        <button @click.self="$emit('detail', problem)">内容を見る</button>
+        <button @click.self="$emit('select', problem)">選択する</button>
       </template>
     </ModProblemList>
     <template v-if="pages.pages > 1" #footer>
@@ -91,7 +84,11 @@ function removeTag(tag: ProblemItemTag) {
 </script>
 
 <style scoped lang="scss">
+@use '~/assets/css/cmps';
+
 .taglist {
+  @include cmps.buttons;
+
   position: sticky;
   top: 0;
   z-index: 2;

@@ -4,9 +4,9 @@
       <span class="fuki" />
       <slot class="parts-section-left-slot" name="left" />
     </div>
-    <PartsPaper v-bind="$attrs">
+    <div class="content" v-bind="$attrs">
       <slot />
-    </PartsPaper>
+    </div>
     <div v-if="$slots.right" class="parts-section-right">
       <span class="fuki" />
       <slot class="parts-section-right-slot" name="right" />
@@ -21,7 +21,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars';
+@use '~/assets/css/vars';
+@use '~/assets/css/cmps';
 
 .parts-section {
   position: relative;
@@ -32,6 +33,10 @@ export default defineComponent({
 
   &:hover {
     z-index: 1;
+  }
+
+  .content {
+    @include cmps.paper;
   }
 
   &-right,
@@ -85,7 +90,7 @@ export default defineComponent({
     transform: scale(-1, 1);
   }
 
-  @include __media_s {
+  @include vars.media_s {
     padding: 5px 7px;
 
     &-right,

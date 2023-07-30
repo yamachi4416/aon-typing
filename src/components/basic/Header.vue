@@ -1,26 +1,15 @@
 <template>
   <header class="basic-header" role="banner">
     <section>
-      <h1 role="heading">
+      <h1>
         <NuxtLink :to="{ name: 'index' }">
-          <span v-if="startAnim" class="title-anim">{{ title }}</span>
-          <span v-show="!startAnim" class="title-no-anim">{{ titleText }}</span>
+          <span v-if="startAnim">{{ title }}</span>
+          <span v-show="!startAnim">{{ titleText }}</span>
         </NuxtLink>
       </h1>
-      <div class="theme">
-        <a href="#" @click.prevent="changeTheme('light')">light</a> /
-        <a href="#" @click.prevent="changeTheme('dark')">dark</a>
-      </div>
+      <BasicHeaderThemeChagne />
     </section>
-    <nav role="navigation">
-      <ul>
-        <li v-for="(menu, i) in menus" :key="`menu-${i}`">
-          <NuxtLink :to="menu.route">
-            {{ menu.label }}
-          </NuxtLink>
-        </li>
-      </ul>
-    </nav>
+    <BasicHeaderNavigation />
   </header>
 </template>
 
@@ -43,7 +32,6 @@ const titleChars = ref([] as string[])
 const title = computed(() =>
   props.anim ? titleChars.value.join('') : titleText,
 )
-const { changeTheme } = useTheme()
 
 onMounted(() => typing(titleText))
 
@@ -88,12 +76,6 @@ function typing(text: string) {
     requestAnimationFrame(type)
   })
 }
-
-const menus = [
-  { route: { name: 'game-menu' }, label: 'プレイする' },
-  { route: { name: 'index-problems' }, label: '問題いちらん' },
-  { route: { name: 'index-about' }, label: 'サイト説明' },
-]
 </script>
 
 <style lang="scss" scoped>
@@ -118,17 +100,6 @@ const menus = [
     background: var(--color-f);
   }
 
-  a {
-    color: var(--color-6);
-    text-decoration: none;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-      color: var(--color-9);
-    }
-  }
-
   & > * {
     width: 100%;
     max-width: 1000px;
@@ -140,13 +111,18 @@ const menus = [
     }
   }
 
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
   & > section {
     display: flex;
     flex: 1;
     align-items: center;
     justify-content: space-between;
 
-    [role='heading'] {
+    h1 {
       display: flex;
       align-items: center;
       height: 100%;
@@ -161,38 +137,6 @@ const menus = [
         &:focus {
           color: inherit;
         }
-      }
-    }
-
-    .theme {
-      color: var(--color-3);
-
-      @media print {
-        display: none;
-      }
-    }
-  }
-
-  & > [role='navigation'] {
-    @media print {
-      display: none;
-    }
-
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-
-    ul {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      padding: 0 10px;
-      list-style: none;
-
-      & > li {
-        flex: 1;
-        text-align: center;
-        white-space: nowrap;
       }
     }
   }

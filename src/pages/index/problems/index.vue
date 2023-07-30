@@ -1,28 +1,19 @@
 <template>
-  <div class="problem-list-page">
-    <PartsSection
-      v-if="kwds.length > 0"
-      class="problem-list-page-search-header"
-    >
-      <h2>
-        <span class="problem-list-page-search-header-kwd">{{
-          kwds.join(' ')
-        }}</span>
-        の検索結果
-      </h2>
+  <div class="page">
+    <PartsSection v-if="kwds.length > 0">
+      <header>
+        <h2>
+          <span>{{ kwds.join(' ') }}</span>
+          の検索結果
+        </h2>
+      </header>
       <p v-if="problems.length == 0">検索結果はありません</p>
       <p v-else>{{ problems.length }} 件の検索結果があります</p>
-      <div class="actions">
-        <div class="buttons">
-          <button
-            v-show="$navigator.enable"
-            class="button"
-            @click="$router.back()"
-          >
-            もどる
-          </button>
-        </div>
-      </div>
+      <footer>
+        <button v-show="$navigator.enable" @click="$router.back()">
+          もどる
+        </button>
+      </footer>
       <template #right>
         <ImgNekoUserKeyboard />
       </template>
@@ -81,20 +72,18 @@ function convertKwds(val: LocationQueryValue | LocationQueryValue[]) {
 </script>
 
 <style lang="scss" scoped>
-.problem-list-page {
-  &-search-header {
-    &-kwd {
-      word-break: break-all;
-    }
+@use '~/assets/css/cmps';
 
-    .actions {
-      padding-top: 5px;
+.page {
+  header {
+    word-break: break-all;
+  }
 
-      .buttons {
-        display: flex;
-        justify-content: flex-start;
-      }
-    }
+  footer {
+    @include cmps.buttons;
+
+    justify-content: flex-start;
+    padding-top: 5px;
   }
 }
 </style>

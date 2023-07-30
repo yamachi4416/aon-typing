@@ -5,49 +5,43 @@
         {{ gError }}
       </div>
     </PartsSection>
-    <PartsSection class="contact-page-section">
+    <PartsSection class="form-section">
       <h2>お問い合わせ</h2>
-      <div class="contact-form" name="contact">
-        <div class="form-group row">
-          <label class="form-group-label col-3 col-sm-12" for="name">
-            <span>お名前</span>
+      <form @submit.prevent>
+        <div>
+          <label class="col-3 col-sm-12" for="name">
+            お名前
             <small>（ハンドルネーム）</small>
           </label>
-          <span class="form-group-input">
+          <span>
             <input id="name" v-model="name" @change="validate" />
             <span v-show="errors.name" class="error-message">{{
               errors.name
             }}</span>
           </span>
         </div>
-        <div class="form-group row">
-          <label class="form-group-label col-3 col-sm-12" for="email">
-            <span>メールアドレス</span>
-          </label>
-          <span class="form-group-input">
+        <div>
+          <label class="col-3 col-sm-12" for="email"> メールアドレス </label>
+          <span>
             <input id="email" v-model="email" type="email" @change="validate" />
             <span v-show="errors.email" class="error-message">{{
               errors.email
             }}</span>
           </span>
         </div>
-        <div class="form-group row">
-          <label class="form-group-label col-3 col-sm-12" for="message">
-            <span>お問い合わせ内容</span>
+        <div>
+          <label class="col-3 col-sm-12" for="message">
+            お問い合わせ内容
           </label>
-          <span class="form-group-input">
+          <span>
             <textarea id="message" v-model="message" @change="validate" />
             <span v-show="errors.message" class="error-message">{{
               errors.message
             }}</span>
           </span>
         </div>
-        <div class="buttons">
-          <button class="button big" :disabled="hasErrors" @click="submit">
-            送信する
-          </button>
-        </div>
-      </div>
+        <button :disabled="hasErrors" @click="submit">送信する</button>
+      </form>
     </PartsSection>
   </div>
 </template>
@@ -94,6 +88,8 @@ async function submit() {
 </script>
 
 <style lang="scss" scoped>
+@use '~/assets/css/cmps';
+
 .contact-page {
   max-width: 900px;
   margin: auto;
@@ -104,33 +100,26 @@ async function submit() {
     }
   }
 
-  &-section {
-    display: block;
-  }
+  form {
+    button {
+      @include cmps.button-big;
 
-  .form-group {
-    align-items: flex-start;
-
-    #message {
-      height: 10em;
-      resize: vertical;
-    }
-
-    .error-message {
-      padding-top: 3px;
-      font-size: 0.9em;
-      color: var(--input-error-message);
-    }
-  }
-
-  .buttons {
-    justify-content: center;
-    padding-top: 10px;
-
-    .button {
+      display: block;
       width: 300px;
       max-width: 50%;
+      margin: 10px auto;
     }
+  }
+
+  #message {
+    height: 10em;
+    resize: vertical;
+  }
+
+  .error-message {
+    padding-top: 3px;
+    font-size: 0.9em;
+    color: var(--input-error-message);
   }
 }
 </style>

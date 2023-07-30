@@ -1,30 +1,27 @@
 <template>
-  <PartsSection>
-    <div class="tag-info">
-      <div class="tag-info-id">No.{{ tag.id }}</div>
-      <h2 class="tag-info-title">タグ：{{ tag.name }}</h2>
-      <div class="tag-info-taglist buttons">
-        <button
-          v-for="t in tags"
-          :key="`tag-${t.id}`"
-          :title="
-            t.selected
-              ? `「${t.name}」タグの問題のみ表示するのをやめる`
-              : `「${t.name}」タグの問題のみ表示する`
-          "
-          class="tag-info-taglist-item button tight"
-          :selected="t.selected || null"
-          @click="selectTag(t)"
-        >
-          {{ t.name }}
-        </button>
-      </div>
-      <div v-if="$slots.default" class="tags-actions">
-        <div class="buttons">
-          <slot />
-        </div>
-      </div>
+  <PartsSection class="tag-info">
+    <header>
+      <span>No.{{ tag.id }}</span>
+      <h2>タグ：{{ tag.name }}</h2>
+    </header>
+    <div>
+      <label
+        v-for="t in tags"
+        :key="`tag-${t.id}`"
+        :title="
+          t.selected
+            ? `「${t.name}」タグの問題のみ表示するのをやめる`
+            : `「${t.name}」タグの問題のみ表示する`
+        "
+        @click.prevent="selectTag(t)"
+      >
+        {{ t.name }}
+        <input type="checkbox" name="tag" :checked="t.selected" />
+      </label>
     </div>
+    <footer v-if="$slots.default">
+      <slot />
+    </footer>
     <template v-if="$slots.right" #right>
       <slot name="right" />
     </template>
@@ -89,47 +86,38 @@ watch(
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/vars';
+@use '~/assets/css/cmps';
 
 .tag-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-
-  &-type,
-  &-id {
-    padding: 5px;
+  & > header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 
-  &-taglist {
-    flex-wrap: wrap;
+  & > div {
+    @include cmps.buttons;
+
     justify-content: flex-start;
-    padding-top: 10px;
+    padding: 10px 0;
 
-    & > * {
-      padding-left: 0;
-    }
-
-    &-item {
+    label {
       padding: 0 1em;
       color: var(--color-6);
       border: none;
 
-      &[selected] {
+      &:has(input:checked) {
         color: var(--color-f);
         background: var(--color-p);
       }
     }
   }
 
-  .tags-actions {
-    padding-top: 10px;
+  & > footer {
+    @include cmps.buttons;
 
-    .buttons {
-      display: flex;
-      justify-content: flex-start;
-    }
+    justify-content: flex-start;
+    padding-top: 5px;
   }
 }
 </style>

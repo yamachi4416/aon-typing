@@ -32,7 +32,7 @@
     </PartsSection>
 
     <PartsSection class="about-score">
-      <div class="about-score-body row">
+      <div class="row">
         <div class="col-sm-12 col-6">
           <h2>スコアってなんですか？</h2>
           <p>
@@ -40,7 +40,7 @@
             なおスコアは次の式からもとめられます。
           </p>
           <p>
-            １分あたりのタイプ数 × 正確タイプ率の３乗<br />
+            １分あたりのタイプ数 &times; 正確タイプ率の３乗<br />
             （あまりは四捨五入）
           </p>
         </div>
@@ -49,13 +49,13 @@
             <dt>１分あたりのタイプ数</dt>
             <dd>
               <p>
-                総タイプ数 ÷ 入力時間<small>（ミリ秒）</small> × 60,000<small
+                総タイプ数 &divide; 入力時間<small>（ミリ秒）</small> &times; 60,000<small
                   >ミリ秒</small
                 >
               </p>
             </dd>
             <dt>正確タイプ率</dt>
-            <dd><p>正確にタイプしたタイプ数 ÷ 総タイプ数</p></dd>
+            <dd><p>正確にタイプしたタイプ数 &divide; 総タイプ数</p></dd>
           </dl>
         </div>
       </div>
@@ -65,7 +65,7 @@
     </PartsSection>
 
     <PartsSection class="about-rank">
-      <div class="about-rank-body row">
+      <div class="row">
         <div class="col-sm-12 col-6">
           <h2>ランクってなんですか？</h2>
           <p>
@@ -78,7 +78,7 @@
           </p>
         </div>
         <div class="col-sm-12 col-6 overflow-x-a">
-          <table class="sm-table">
+          <table class="ranks">
             <thead>
               <tr>
                 <th>ランク</th>
@@ -86,10 +86,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="r in ranks" :key="`about-rank-table-${r.id}`">
+              <tr v-for="r in ranks" :key="r.id">
                 <th>{{ r.end === null ? '？？？？' : r.name }}</th>
                 <td>{{ r.start }}</td>
-                <td class="sm-table-between">～</td>
+                <td class="between">～</td>
                 <td>{{ r.end }}</td>
               </tr>
             </tbody>
@@ -129,8 +129,10 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
+@use '~/assets/css/cmps';
+
 .about-score {
-  &-body {
+  .row {
     align-items: center;
     justify-content: space-around;
 
@@ -141,13 +143,17 @@ useHead({
 }
 
 .about-rank {
-  &-body {
+  .row {
     align-items: flex-start;
     justify-content: space-around;
 
-    .sm-table-between {
-      padding-right: 10px;
-      padding-left: 10px;
+    .ranks {
+      @include cmps.table-tight;
+
+      .between {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="problem-news-page">
+  <div>
     <ModProblemLists
       :problems="allNewProblems"
       @tag="$navigator.indexTagDetail"
