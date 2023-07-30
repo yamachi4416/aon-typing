@@ -15,7 +15,7 @@ describe('ページフッターの画面遷移の確認', () => {
     async ({ name, path, title }) => {
       const page = await createPage('/')
 
-      const container = page.getByRole('contentinfo')
+      const container = page.getByRole('contentinfo').getByRole('navigation')
       const link = container.getByRole('link', { name, exact: true })
 
       expect(await link.isVisible()).toBeTruthy()

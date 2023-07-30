@@ -1,5 +1,5 @@
 <template>
-  <div class="keymap">
+  <section class="keymap">
     <table>
       <tbody>
         <tr v-for="(tb, i) in table" :key="`${i}`">
@@ -29,7 +29,7 @@
         </tr>
       </tbody>
     </table>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

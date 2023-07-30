@@ -1,7 +1,7 @@
 <template>
   <div>
-    <PartsSection>
-      <h2>あぉ～ん タイピングとは？</h2>
+    <PartsSection aria-labelledby="intro-title">
+      <h2 id="intro-title">あぉ～ん タイピングとは？</h2>
       <p>
         あぉ～ん タイピングは無料のタイピング練習サイトです。<br />
         タッチ操作に対応しているのでキーボードがない時でもタブレットなどで練習することができます。
@@ -16,8 +16,8 @@
       </template>
     </PartsSection>
 
-    <PartsSection>
-      <h2>自動モードってなんですか？</h2>
+    <PartsSection aria-labelledby="automode-title">
+      <h2 id="automode-title">自動モードってなんですか？</h2>
       <p>
         自動モードはあなたのかわりにタイピングをしてくれる機能です。<br />
         {{ animals }}のタイピングの助っ人を用意しています。
@@ -31,10 +31,10 @@
       </template>
     </PartsSection>
 
-    <PartsSection class="about-score">
+    <PartsSection class="about-score" aria-labelledby="score-title">
       <div class="row">
         <div class="col-sm-12 col-6">
-          <h2>スコアってなんですか？</h2>
+          <h2 id="score-title">スコアってなんですか？</h2>
           <p>
             スコアはタイピングの実力をはかる目安です。<br />
             なおスコアは次の式からもとめられます。
@@ -63,10 +63,10 @@
       </template>
     </PartsSection>
 
-    <PartsSection class="about-rank">
+    <PartsSection class="about-rank" aria-labelledby="rank-title">
       <div class="row">
         <div class="col-sm-12 col-6">
-          <h2>ランクってなんですか？</h2>
+          <h2 id="rank-title">ランクってなんですか？</h2>
           <p>
             ランクはタイピングの実力をあらわす等級です。<br />
             ランクは次の表でスコアからもとめられます。<br />
@@ -100,8 +100,8 @@
       </template>
     </PartsSection>
 
-    <PartsSection>
-      <h2>目標タイプ数ってなんですか？</h2>
+    <PartsSection aria-labelledby="goal-count-title">
+      <h2 id="goal-count-title">目標タイプ数ってなんですか？</h2>
       <p>
         目標タイプ数はタイピングのタイプ数の目標を設定する機能です。<br />
         設定した場合は目標に設定したタイプ数タイピングしたときにも終了するようになります。<br />

@@ -1,8 +1,8 @@
 <template>
   <div class="page">
-    <PartsSection>
+    <PartsSection aria-labelledby="info-title">
       <header>
-        <h2>ローマ字タイピング入力表</h2>
+        <h2 id="info-title">ローマ字タイピング入力表</h2>
       </header>
       <div>
         <p>
@@ -50,7 +50,7 @@ function print() {
 @use '~/assets/css/cmps';
 
 .page {
-  & > section {
+  :where(:has([aria-labelledby='info-title'])) {
     footer {
       @include cmps.buttons;
 

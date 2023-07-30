@@ -1,12 +1,12 @@
 <template>
-  <div class="contact-page">
-    <PartsSection v-show="gError" class="contact-page-global-error-message">
+  <div class="page">
+    <PartsSection v-show="gError" class="global-error">
       <div class="error-message">
         {{ gError }}
       </div>
     </PartsSection>
-    <PartsSection class="form-section">
-      <h2>お問い合わせ</h2>
+    <PartsSection aria-labelledby="form-title">
+      <h2 id="form-title">お問い合わせ</h2>
       <form @submit.prevent>
         <div>
           <label class="col-3 col-sm-12" for="name">
@@ -90,14 +90,12 @@ async function submit() {
 <style lang="scss" scoped>
 @use '~/assets/css/cmps';
 
-.contact-page {
+.page {
   max-width: 900px;
   margin: auto;
 
-  &-global-error-message {
-    .error-message {
-      color: var(--input-error-message);
-    }
+  .error-message {
+    color: var(--input-error-message);
   }
 
   form {
@@ -109,17 +107,16 @@ async function submit() {
       max-width: 50%;
       margin: 10px auto;
     }
-  }
 
-  #message {
-    height: 10em;
-    resize: vertical;
-  }
+    textarea {
+      height: 10em;
+      resize: vertical;
+    }
 
-  .error-message {
-    padding-top: 3px;
-    font-size: 0.9em;
-    color: var(--input-error-message);
+    .error-message {
+      padding-top: 3px;
+      font-size: 0.9em;
+    }
   }
 }
 </style>
