@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { createPage } from '@nuxt/test-utils'
-import { waitForRouterPath } from '../util'
+import { expectLoadingHidden, waitForRouterPath } from '../util'
 
 describe('トップページの画面遷移の確認', () => {
   it.each([
@@ -21,6 +21,7 @@ describe('トップページの画面遷移の確認', () => {
       await waitForRouterPath(page, path)
 
       expect(await page.title()).toContain(title)
+      await expectLoadingHidden(page)
     },
   )
 
@@ -44,6 +45,7 @@ describe('トップページの画面遷移の確認', () => {
       await waitForRouterPath(page, path)
 
       expect(await page.title()).toContain(title)
+      await expectLoadingHidden(page)
     },
   )
 
@@ -64,6 +66,7 @@ describe('トップページの画面遷移の確認', () => {
       await waitForRouterPath(page, path)
 
       expect(await page.title()).toContain(title)
+      await expectLoadingHidden(page)
     },
   )
 })

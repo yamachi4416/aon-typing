@@ -2,10 +2,14 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   resolve: {
-    alias: { '~~': '.' },
+    alias: {
+      '~': './src',
+      '~~': '.',
+    },
   },
   test: {
     dir: './test/e2e',
-    globalSetup: ['./test/e2e/setup.ts']
+    globalSetup: ['./test/e2e/setup.ts'],
+    testTimeout: 10_000,
   },
 })
