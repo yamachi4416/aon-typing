@@ -1,0 +1,36 @@
+{
+  "id": "1010276",
+  "title": "東武鬼怒川線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-07-30",
+  "updatedAt": "2023-07-30",
+  "optional": { "cd": "276" },
+  "words": [
+    { "info": "新藤原", "info2": "しんふじわら", "word": "sinhujiwara" },
+    {
+      "info": "鬼怒川公園",
+      "info2": "きぬがわこうえん",
+      "word": "kinugawakouenn"
+    },
+    {
+      "info": "鬼怒川温泉",
+      "info2": "きぬがわおんせん",
+      "word": "kinugawaonsenn"
+    },
+    {
+      "info": "東武ワールドスクウェア",
+      "info2": "とうぶわーるどすくうぇあ",
+      "word": "toubuwa-rudosukuwea"
+    },
+    { "info": "小佐越", "info2": "こさごえ", "word": "kosagoe" },
+    { "info": "新高徳", "info2": "しんたかとく", "word": "sintakatoku" },
+    { "info": "大桑", "info2": "おおくわ", "word": "ookuwa" },
+    { "info": "大谷向", "info2": "だいやむこう", "word": "daiyamukou" },
+    { "info": "下今市", "info2": "しもいまいち", "word": "simoimaiti" }
+  ]
+}
