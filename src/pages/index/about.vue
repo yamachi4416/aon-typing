@@ -49,9 +49,8 @@
             <dt>１分あたりのタイプ数</dt>
             <dd>
               <p>
-                総タイプ数 &divide; 入力時間<small>（ミリ秒）</small> &times; 60,000<small
-                  >ミリ秒</small
-                >
+                総タイプ数 &divide; 入力時間<small>（ミリ秒）</small> &times;
+                60,000<small>ミリ秒</small>
               </p>
             </dd>
             <dt>正確タイプ率</dt>
