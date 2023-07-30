@@ -30,5 +30,6 @@ export async function expectPageTitle(
 
 export async function expectLoadingHidden(page: Page) {
   const loading = page.getByRole('img', { name: '処理中です', exact: true })
+  await loading.waitFor({ state: 'hidden' })
   expect(await loading.isHidden()).toBeTruthy()
 }
