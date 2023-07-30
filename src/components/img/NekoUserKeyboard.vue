@@ -3,7 +3,7 @@
     src="~/assets/img/neko-tk-01.png"
     width="296"
     height="296"
-    alt="タイピングねこ"
+    alt=""
     loading="lazy"
   />
 </template>

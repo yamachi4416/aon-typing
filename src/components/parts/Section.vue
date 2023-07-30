@@ -1,17 +1,17 @@
 <template>
-  <section class="parts-section">
-    <div v-if="$slots.left" class="parts-section-left">
+  <div class="parts-section">
+    <div v-if="$slots.left" class="left">
       <span class="fuki" />
-      <slot class="parts-section-left-slot" name="left" />
+      <slot class="left-slot" name="left" />
     </div>
-    <div class="content" v-bind="$attrs">
+    <section class="content" v-bind="$attrs">
       <slot />
-    </div>
-    <div v-if="$slots.right" class="parts-section-right">
+    </section>
+    <div v-if="$slots.right" class="right">
       <span class="fuki" />
-      <slot class="parts-section-right-slot" name="right" />
+      <slot class="right-slot" name="right" />
     </div>
-  </section>
+  </div>
 </template>
 
 <script lang="ts">
@@ -39,8 +39,8 @@ export default defineComponent({
     @include cmps.paper;
   }
 
-  &-right,
-  &-left {
+  .right,
+  .left {
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -86,15 +86,15 @@ export default defineComponent({
     }
   }
 
-  &-left {
+  .left {
     transform: scale(-1, 1);
   }
 
   @include vars.media_s {
     padding: 5px 7px;
 
-    &-right,
-    &-left {
+    .right,
+    .left {
       display: none;
     }
   }

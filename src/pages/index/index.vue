@@ -1,7 +1,7 @@
 <template>
   <div class="page">
-    <PartsSection class="hello">
-      <h2>ようこそ「あぉ～ん タイピング」へ</h2>
+    <PartsSection class="hello" aria-labelledby="hello-title">
+      <h2 id="hello-title">ようこそ「あぉ～ん タイピング」へ</h2>
       <p>
         あぉ～ん
         タイピングはインターネット上でタイピングの練習ができる無料のタイピング練習サイトです。
@@ -13,8 +13,8 @@
       </template>
     </PartsSection>
 
-    <PartsSection class="search">
-      <h2>タイトル検索</h2>
+    <PartsSection class="search" aria-labelledby="search-title">
+      <h2 id="search-title">タイトル検索</h2>
       <p>タイピングの問題のタイトルをキーワードで検索します。</p>
       <form role="search" @submit.prevent>
         <div>
@@ -36,8 +36,8 @@
       </template>
     </PartsSection>
 
-    <section class="news">
-      <h2>新着の問題</h2>
+    <section class="news" aria-labelledby="news-title">
+      <h2 id="news-title">新着の問題</h2>
       <ModProblemLists
         :problems="newProblems"
         @tag="$navigator.indexTagDetail"
@@ -51,8 +51,8 @@
       </footer>
     </section>
 
-    <PartsSection class="tags">
-      <h2>タグいちらん</h2>
+    <PartsSection class="tags" aria-labelledby="tags-title">
+      <h2 id="tags-title">タグいちらん</h2>
       <ul>
         <li v-for="tag in tagSummary" :key="`tag-${tag.id}`">
           <NuxtLink
@@ -72,8 +72,8 @@
       </template>
     </PartsSection>
 
-    <PartsSection class="others">
-      <h2>その他</h2>
+    <PartsSection class="others" aria-labelledby="others-title">
+      <h2 id="others-title">その他</h2>
       <ul>
         <li>
           <NuxtLink :to="{ name: 'index-contents-keymap' }">
