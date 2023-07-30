@@ -38,7 +38,7 @@ describe('問題いちらんページの画面遷移の確認', () => {
       name: problem.title,
       exact: true,
     })
-    
+
     expect(await selected.isVisible()).toBeTruthy()
     await expectLoadingHidden(page)
   })

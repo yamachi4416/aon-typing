@@ -15,7 +15,7 @@
     "lint:typecheck": "nuxt typecheck",
     "lint:scripts": "eslint .",
     "lint:styles": "stylelint src/**/*.{scss,vue}",
-    "lint:format": "prettier {src,libs,scripts}/**/*.{scss,vue,ts} -c",
+    "lint:format": "prettier {src,libs,scripts,test}/**/*.{scss,vue,ts} -c",
     "test:unit": "vitest run -c vitest.unit.config.ts",
     "test:e2e:dist": "vitest run -c vitest.e2e.config.ts"
   },
