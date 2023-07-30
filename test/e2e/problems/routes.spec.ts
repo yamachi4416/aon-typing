@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import { createPage } from '@nuxt/test-utils'
-import { expectLoadingHidden, waitForRouterPath } from '~~/test/e2e/util'
+import {
+  expectLoadingHidden,
+  expectPageTitle,
+  waitForRouterPath,
+} from '~~/test/e2e/util'
 import problem from '~/assets/api/problems/1000001.json'
 
 describe('問題いちらんページの画面遷移の確認', () => {
@@ -16,7 +20,7 @@ describe('問題いちらんページの画面遷移の確認', () => {
     await button.click()
     await waitForRouterPath(page, `/problems/${problem.id}`)
 
-    expect(await page.title()).toContain(problem.id)
+    await expectPageTitle(page, problem.id)
     await expectLoadingHidden(page)
   })
 
@@ -32,7 +36,7 @@ describe('問題いちらんページの画面遷移の確認', () => {
     await button.click()
     await waitForRouterPath(page, '/game/menu')
 
-    expect(await page.title()).toContain('タイピングメニュー')
+    await expectPageTitle(page, 'タイピングメニュー')
 
     const selected = page.getByRole('link', {
       name: problem.title,

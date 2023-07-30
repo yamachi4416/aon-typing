@@ -1,6 +1,10 @@
 import { expect, it } from 'vitest'
 import { createPage } from '@nuxt/test-utils'
-import { expectLoadingHidden, waitForRouterPath } from '~~/test/e2e/util'
+import {
+  expectLoadingHidden,
+  expectPageTitle,
+  waitForRouterPath,
+} from '~~/test/e2e/util'
 
 it("トップページの'検索'フォームから問題を検索することができる", async () => {
   const page = await createPage('/')
@@ -17,6 +21,8 @@ it("トップページの'検索'フォームから問題を検索すること�
   await button.click()
 
   await waitForRouterPath(page, '/problems')
+
+  await expectPageTitle(page, '問題いちらん')
 
   const heading = container.getByRole('heading', {
     name: '駅 の検索結果',

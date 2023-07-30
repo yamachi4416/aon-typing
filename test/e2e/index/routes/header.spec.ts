@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import { createPage } from '@nuxt/test-utils'
-import { expectLoadingHidden, waitForRouterPath } from '~~/test/e2e/util'
+import {
+  expectLoadingHidden,
+  expectPageTitle,
+  waitForRouterPath,
+} from '~~/test/e2e/util'
 
 describe('ページヘッダーの画面遷移の確認', () => {
   it.each([
@@ -19,7 +23,7 @@ describe('ページヘッダーの画面遷移の確認', () => {
 
       await waitForRouterPath(page, path)
 
-      expect(await page.title()).toContain(title)
+      await expectPageTitle(page, title)
       await expectLoadingHidden(page)
     },
   )
