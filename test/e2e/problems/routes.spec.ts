@@ -46,4 +46,22 @@ describe('問題いちらんページの画面遷移の確認', () => {
     expect(await selected.isVisible()).toBeTruthy()
     await expectLoadingHidden(page)
   })
+
+  it("問題の'タグ'ボタンをクリックすると'タグ'ページに遷移する", async () => {
+    const tag = problem.tags[0]
+
+    const page = await createPage('/problems')
+
+    const item = page.getByRole('article', { name: problem.title }).first()
+    expect(await item.isVisible()).toBeTruthy()
+
+    const button = item.getByRole('button', { name: tag.name, exact: true })
+    expect(await button.isEnabled()).toBeTruthy()
+
+    await button.click()
+    await waitForRouterPath(page, `/problems/tags/${tag.id}`)
+
+    await expectPageTitle(page, `問題 タグ：${tag.name}`)
+    await expectLoadingHidden(page)
+  })
 })
