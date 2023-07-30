@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { createPage } from '@nuxt/test-utils'
-import { expectLoadingHidden, waitForRouterPath } from '../util'
+import { expectLoadingHidden, waitForRouterPath } from '~~/test/e2e/util'
 import problem from '~/assets/api/problems/1000001.json'
 
 describe('問題いちらんページの画面遷移の確認', () => {

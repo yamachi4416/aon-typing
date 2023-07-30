@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { createPage } from '@nuxt/test-utils'
-import { expectLoadingHidden, waitForRouterPath } from '../util'
+import { expectLoadingHidden, waitForRouterPath } from '~~/test/e2e/util'
 
 describe('問題いちらんの確認', () => {
   it("トップページの'検索'ボタンをクリックすると問題いちらんページに遷移する", async () => {
