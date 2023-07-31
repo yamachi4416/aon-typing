@@ -1,6 +1,6 @@
 import { expect, it } from 'vitest'
-import { createPage } from '@nuxt/test-utils'
 import {
+  createPage,
   expectLoadingHidden,
   expectPageTitle,
   waitForRouterPath,

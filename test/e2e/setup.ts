@@ -2,21 +2,37 @@ import { resolve } from 'node:path'
 import { createTestContext, exposeContextToEnv } from '@nuxt/test-utils'
 import { previewServer } from '~~/scripts/src/lib/preview'
 
-const server = await previewServer({
-  distDir: resolve(process.cwd(), 'dist'),
-})
+const { close, url } = await getEndpoint()
 
-const { address: host, port } = server.address() as {
-  address: string
-  port: number
+async function getEndpoint() {
+  if (process.env.TEST_ENDPOINT) {
+    return {
+      close: async () => {},
+      url: process.env.TEST_ENDPOINT,
+    }
+  }
+
+  const server = await previewServer({
+    distDir: resolve(process.cwd(), 'dist'),
+  })
+
+  const { address: host, port } = server.address() as {
+    address: string
+    port: number
+  }
+
+  return {
+    close: async () => await new Promise((resolve) => server.close(resolve)),
+    url: `http://${host}:${port}`,
+  }
 }
 
 export function setup() {
   const ctx = createTestContext({ server: false })
-  ctx.url = `http://${host}:${port}`
+  ctx.url = url
   exposeContextToEnv()
 }
 
 export async function teardown() {
-  await new Promise((resolve) => server.close(resolve))
+  await close()
 }

@@ -1,12 +1,27 @@
-import { type createPage } from '@nuxt/test-utils'
+import { createPage as _createPage } from '@nuxt/test-utils'
 import { expect } from 'vitest'
 
-type Page = ReturnType<typeof createPage> extends Promise<infer P> ? P : unknown
+type PageOptions = Parameters<typeof _createPage>[1]
+type Page = ReturnType<typeof _createPage> extends Promise<infer P>
+  ? P
+  : unknown
 
-export async function waitForRouterPath(page: Page, path: string) {
+export async function createPage(path: string, options?: PageOptions) {
+  const page = await _createPage(path, options)
+  await page.waitForLoadState('networkidle')
+  return page
+}
+
+export async function waitForRouterPath(
+  page: Page,
+  path: string,
+  timeout = 3000,
+) {
   await page.waitForFunction(
-    (path: string) => useNuxtApp().$router.currentRoute.value.path === path,
+    (path: string) =>
+      window.useNuxtApp?.()?.$router?.currentRoute?.value?.path === path,
     path,
+    { timeout },
   )
   await page.waitForLoadState('networkidle')
 }
@@ -14,7 +29,7 @@ export async function waitForRouterPath(page: Page, path: string) {
 export async function expectPageTitle(
   page: Page,
   title: string,
-  timeout = 1000,
+  timeout = 3000,
 ) {
   if (!(await page.title()).includes(title)) {
     await page.waitForFunction(

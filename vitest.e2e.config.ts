@@ -10,6 +10,6 @@ export default defineConfig({
   test: {
     dir: './test/e2e',
     globalSetup: ['./test/e2e/setup.ts'],
-    testTimeout: 10_000,
+    testTimeout: 30_000,
   },
 })
