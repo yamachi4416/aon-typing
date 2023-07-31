@@ -12,6 +12,7 @@ import { wait } from '~~/libs/Util'
 const pending = ref(false)
 const show = ref(false)
 const modal = ref<HTMLElement>()
+const prevActive = ref<HTMLElement>()
 
 defineExpose({
   get isOpen() {
@@ -24,6 +25,9 @@ defineExpose({
     if (show.value || pending.value) return
     pending.value = true
     show.value = true
+    if (document.activeElement instanceof HTMLElement) {
+      prevActive.value = document.activeElement
+    }
     await nextTick()
     modal.value?.classList.remove('hide')
     if (anim) {
@@ -43,9 +47,25 @@ defineExpose({
       await wait(300)
       modal.value.classList.remove('close')
     }
+
     show.value = false
     await nextTick()
     pending.value = false
+
+    const prev = prevActive.value
+    prevActive.value = undefined
+
+    const focus = () => {
+      if (prev && document.contains(prev)) {
+        prev.focus()
+      }
+    }
+
+    focus()
+
+    return {
+      focus,
+    }
   },
 })
 </script>

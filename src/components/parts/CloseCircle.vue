@@ -31,13 +31,15 @@
 .close-button {
   width: 100%;
   height: 100%;
+  color: var(--color-3);
   cursor: pointer;
   background: transparent;
-  border: 2px solid var(--color-3);
+  border: 2px solid currentcolor;
   border-radius: 50%;
 
-  line {
-    color: var(--color-3);
+  &:hover,
+  &:focus {
+    border-width: 3px;
   }
 }
 </style>

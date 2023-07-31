@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ModalPanel ref="modalMenu">
+    <ModalPanel ref="modalMenu" :inert="!!currentModal">
       <ModGameMenuPanel
         :show-close="false"
         @start="startTyping"
@@ -9,10 +9,10 @@
         @open-problem-select="modalProblemList?.open()"
       />
     </ModalPanel>
-    <ModalPanel ref="modalProblemList">
+    <ModalPanel ref="modalProblemList" :inert="modalProblemDetail?.isOpen">
       <ModGameProblemListPanel
         @close="modalProblemList?.close()"
-        @select="selcet"
+        @select="selcetProblem"
         @detail="openProblemSelectDetail"
       />
     </ModalPanel>
@@ -21,7 +21,7 @@
         ref="problemDetailPanel"
         @close="modalProblemDetail?.close()"
         @back="modalProblemDetail?.close()"
-        @select="selcet"
+        @select="selcetProblem"
       />
     </ModalPanel>
   </div>
@@ -42,20 +42,26 @@ useHead({
 const modalMenu = ref<Modal>()
 const modalProblemList = ref<Modal>()
 const modalProblemDetail = ref<Modal>()
-const modals = [modalProblemList, modalProblemDetail]
+const modals = () =>
+  [modalProblemDetail.value, modalProblemList.value].filter((m) => m) as Modal[]
 
 const { setting } = useProblems()
 const problemDetailPanel = ref<InstanceType<typeof ProblemDetailPanel>>()
 
-const hasPendingModal = computed(
-  () => (modals.filter((modal) => modal.value?.isPending)?.length ?? 0) > 0,
+const hasPendingModal = computed(() =>
+  modals().some((modal) => modal.isPending),
 )
 
-const openModal = computed(
-  () => modals.reverse().find((modal) => modal.value?.isOpen)?.value,
-)
+const currentModal = computed(() => modals().find((modal) => modal.isOpen))
 
-onMounted(() => modalMenu.value?.open())
+onMounted(() => {
+  modalMenu.value?.open()
+  window.addEventListener('keydown', onEscapeKey)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', onEscapeKey)
+})
 
 onBeforeRouteLeave(async (_to, _from, next) => {
   if (hasPendingModal.value) {
@@ -63,9 +69,9 @@ onBeforeRouteLeave(async (_to, _from, next) => {
     return false
   }
 
-  if (openModal.value) {
+  if (currentModal.value) {
     next(false)
-    await openModal.value.close()
+    await currentModal.value.close()
     return false
   }
 
@@ -104,16 +110,33 @@ async function openProblemDetailShow(
   await Promise.all(tasks)
 }
 
-function selcet({ id }: { id: string }) {
+async function onEscapeKey(e: KeyboardEvent) {
+  if (e.key !== 'Escape') {
+    return
+  }
+
+  if (hasPendingModal.value) {
+    return
+  }
+
+  if (currentModal.value) {
+    await currentModal.value.close()
+  }
+}
+
+async function selcetProblem({ id }: { id: string }) {
   if (hasPendingModal.value) return
   setting.problemId = id
-  let anim = true
-  for (const modal of modals.reverse()) {
-    if (modal.value?.isOpen) {
-      modal.value.close(anim)
-      anim = false
-    }
-  }
+
+  const closes = await Promise.all(
+    modals()
+      .filter((m) => m.isOpen && m !== currentModal.value)
+      .map((m) => m.close(false)),
+  )
+
+  await currentModal.value?.close()
+
+  closes?.pop()?.focus()
 }
 
 function cancel() {
