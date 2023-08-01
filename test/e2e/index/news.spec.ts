@@ -27,6 +27,10 @@ describe('新着の問題の画面遷移の確認', () => {
 
     await expectPageTitle(page, '問題いちらん（新着順）')
     await expectLoadingHidden(page)
+
+    await page.goBack()
+    await waitForRouterPath(page, '/')
+    await expectLoadingHidden(page)
   })
 
   it("'内容を見る'ボタンをクリックすると'問題の内容'ページに遷移する", async () => {
@@ -52,6 +56,10 @@ describe('新着の問題の画面遷移の確認', () => {
     await waitForRouterPath(page, `/problems/${problem.id}`)
 
     await expectPageTitle(page, `問題 No.${problem.id} ${problem.title}`)
+    await expectLoadingHidden(page)
+
+    await page.goBack()
+    await waitForRouterPath(page, '/')
     await expectLoadingHidden(page)
   })
 
@@ -79,6 +87,10 @@ describe('新着の問題の画面遷移の確認', () => {
 
     await expectPageTitle(page, 'タイピングメニュー')
     await expectLoadingHidden(page)
+
+    await page.goBack()
+    await waitForRouterPath(page, '/')
+    await expectLoadingHidden(page)
   })
 
   it("'タグ'ボタンをクリックすると'タグ'ページに遷移する", async () => {
@@ -105,6 +117,10 @@ describe('新着の問題の画面遷移の確認', () => {
     await waitForRouterPath(page, `/problems/tags/${tag.id}`)
 
     await expectPageTitle(page, `問題 タグ：${tag.name}`)
+    await expectLoadingHidden(page)
+
+    await page.goBack()
+    await waitForRouterPath(page, '/')
     await expectLoadingHidden(page)
   })
 })

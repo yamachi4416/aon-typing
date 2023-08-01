@@ -38,4 +38,8 @@ it("トップページの'検索'フォームから問題を検索すること�
     .all()
 
   expect(titles.length).greaterThan(0)
+
+  await page.goBack()
+  await waitForRouterPath(page, '/')
+  await expectLoadingHidden(page)
 })

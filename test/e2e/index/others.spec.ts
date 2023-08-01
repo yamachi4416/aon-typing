@@ -26,5 +26,9 @@ describe('トップページのコンテンツの画面遷移の確認', () => {
 
     await expectPageTitle(page, 'ローマ字タイピング入力表')
     await expectLoadingHidden(page)
+
+    await page.goBack()
+    await waitForRouterPath(page, '/')
+    await expectLoadingHidden(page)
   })
 })

@@ -22,6 +22,10 @@ describe('問題いちらんページの画面遷移の確認', () => {
 
     await expectPageTitle(page, problem.id)
     await expectLoadingHidden(page)
+
+    await page.goBack()
+    await waitForRouterPath(page, '/problems')
+    await expectLoadingHidden(page)
   })
 
   it("問題の'プレイする'ボタンをクリックすると'タイピングメニュー'ページに遷移する", async () => {
@@ -45,6 +49,10 @@ describe('問題いちらんページの画面遷移の確認', () => {
 
     expect(await selected.isVisible()).toBeTruthy()
     await expectLoadingHidden(page)
+
+    await page.goBack()
+    await waitForRouterPath(page, '/problems')
+    await expectLoadingHidden(page)
   })
 
   it("問題の'タグ'ボタンをクリックすると'タグ'ページに遷移する", async () => {
@@ -62,6 +70,10 @@ describe('問題いちらんページの画面遷移の確認', () => {
     await waitForRouterPath(page, `/problems/tags/${tag.id}`)
 
     await expectPageTitle(page, `問題 タグ：${tag.name}`)
+    await expectLoadingHidden(page)
+
+    await page.goBack()
+    await waitForRouterPath(page, '/problems')
     await expectLoadingHidden(page)
   })
 })
