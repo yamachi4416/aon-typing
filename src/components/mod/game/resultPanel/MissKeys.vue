@@ -23,17 +23,8 @@ defineProps<{
 
 <style scoped lang="scss">
 .miss-keys {
-  display: flex;
-
-  th,
   td {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  td {
-    flex: 1;
     flex-wrap: wrap;
     gap: 3px;
 
