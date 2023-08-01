@@ -78,7 +78,10 @@ describe('問題の内容ページの画面遷移の確認', () => {
     const container = page.getByRole('region', { name: problem.title })
     expect(await container.isVisible()).toBeTruthy()
 
-    const buttonTag = container.getByRole('button', { name: tag.name, exact: true })
+    const buttonTag = container.getByRole('button', {
+      name: tag.name,
+      exact: true,
+    })
     expect(await buttonTag.isEnabled()).toBeTruthy()
 
     await buttonTag.click()

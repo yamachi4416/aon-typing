@@ -4,9 +4,9 @@
       <span class="fuki" />
       <slot class="left-slot" name="left" />
     </div>
-    <section class="content" v-bind="$attrs">
+    <component :is="is" class="content" v-bind="$attrs">
       <slot />
-    </section>
+    </component>
     <div v-if="$slots.right" class="right">
       <span class="fuki" />
       <slot class="right-slot" name="right" />
@@ -18,6 +18,17 @@
 export default defineComponent({
   inheritAttrs: false,
 })
+</script>
+
+<script setup lang="ts">
+withDefaults(
+  defineProps<{
+    is?: string
+  }>(),
+  {
+    is: 'div',
+  },
+)
 </script>
 
 <style lang="scss" scoped>

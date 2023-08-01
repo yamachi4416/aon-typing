@@ -1,47 +1,68 @@
 <template>
   <div class="page">
-    <PartsSection v-show="gError" class="global-error">
-      <div class="error-message">
-        {{ gError }}
+    <div role="alert" :aria-hidden="!gError" v-text="gError" />
+    <PartsSection
+      is="form"
+      :aria-labelledby="`form-title-${uid}`"
+      @submit.prevent
+    >
+      <h2 :id="`form-title-${uid}`">お問い合わせ</h2>
+      <div>
+        <label class="col-3 col-sm-12" :for="`name-${uid}`">
+          お名前<small>（ハンドルネーム）</small>
+        </label>
+        <span>
+          <input
+            :id="`name-${uid}`"
+            v-model="name"
+            required
+            @change="validate"
+          />
+          <span
+            role="status"
+            :aria-hidden="!errors.name"
+            v-text="errors.name"
+          />
+        </span>
       </div>
-    </PartsSection>
-    <PartsSection aria-labelledby="form-title">
-      <h2 id="form-title">お問い合わせ</h2>
-      <form @submit.prevent>
-        <div>
-          <label class="col-3 col-sm-12" for="name">
-            お名前
-            <small>（ハンドルネーム）</small>
-          </label>
-          <span>
-            <input id="name" v-model="name" @change="validate" />
-            <span v-show="errors.name" class="error-message">{{
-              errors.name
-            }}</span>
-          </span>
-        </div>
-        <div>
-          <label class="col-3 col-sm-12" for="email"> メールアドレス </label>
-          <span>
-            <input id="email" v-model="email" type="email" @change="validate" />
-            <span v-show="errors.email" class="error-message">{{
-              errors.email
-            }}</span>
-          </span>
-        </div>
-        <div>
-          <label class="col-3 col-sm-12" for="message">
-            お問い合わせ内容
-          </label>
-          <span>
-            <textarea id="message" v-model="message" @change="validate" />
-            <span v-show="errors.message" class="error-message">{{
-              errors.message
-            }}</span>
-          </span>
-        </div>
-        <button :disabled="hasErrors" @click="submit">送信する</button>
-      </form>
+      <div>
+        <label class="col-3 col-sm-12" :for="`email-${uid}`">
+          メールアドレス
+        </label>
+        <span>
+          <input
+            :id="`email-${uid}`"
+            v-model="email"
+            type="email"
+            required
+            @change="validate"
+          />
+          <span
+            role="status"
+            :aria-hidden="!errors.email"
+            v-text="errors.email"
+          />
+        </span>
+      </div>
+      <div>
+        <label class="col-3 col-sm-12" :for="`message-${uid}`">
+          お問い合わせ内容
+        </label>
+        <span>
+          <textarea
+            :id="`message-${uid}`"
+            v-model="message"
+            required
+            @change="validate"
+          />
+          <span
+            role="status"
+            :aria-hidden="!errors.message"
+            v-text="errors.message"
+          />
+        </span>
+      </div>
+      <button :disabled="hasErrors" @click="submit">送信する</button>
     </PartsSection>
   </div>
 </template>
@@ -53,15 +74,20 @@ useHead({
 })
 
 const gError = ref('')
+const uid = getCurrentInstance()?.uid
+
 const { name, email, message, errors, hasErrors, validate, toJson } =
   useContact()
-const { posted } = useContactPosted()
 
-posted.value = false
+onMounted(() => {
+  const { posted } = useContactPosted()
+  posted.value = false
+})
 
 async function submit() {
   if (!validate()) return
   try {
+    const { posted } = useContactPosted()
     gError.value = ''
     useScrollWaiter().add()
     await fetch(useRuntimeConfig().public.contactUrl, {
@@ -94,7 +120,14 @@ async function submit() {
   max-width: 900px;
   margin: auto;
 
-  .error-message {
+  [aria-hidden='true'] {
+    display: none;
+  }
+
+  [role='alert']:not([aria-hidden='true']) {
+    @include cmps.paper;
+
+    margin: 0 10px;
     color: var(--input-error-message);
   }
 
@@ -113,9 +146,11 @@ async function submit() {
       resize: vertical;
     }
 
-    .error-message {
+    [role='status']:not([aria-hidden='true']) {
+      display: block;
       padding-top: 3px;
       font-size: 0.9em;
+      color: var(--input-error-message);
     }
   }
 }
