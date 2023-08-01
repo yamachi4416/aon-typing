@@ -26,7 +26,7 @@ withDefaults(
     is?: string
   }>(),
   {
-    is: 'div',
+    is: 'section',
   },
 )
 </script>
