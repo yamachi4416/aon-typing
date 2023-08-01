@@ -1,9 +1,9 @@
 <template>
   <div class="problem-detail">
-    <PartsSection>
+    <PartsSection :aria-labelledby="`title-${uid}`">
       <header>
         <span>No.{{ detail.id }}</span>
-        <h2>{{ detail.title }}</h2>
+        <h2 :id="`title-${uid}`">{{ detail.title }}</h2>
       </header>
       <table>
         <tbody>
@@ -40,7 +40,7 @@
         <slot name="right" />
       </template>
     </PartsSection>
-    <ol class="row">
+    <ol class="row" :aria-label="`「${detail.title}」の問題いちらん`">
       <li
         v-for="(w, i) in detail.words"
         :key="i"
@@ -48,7 +48,7 @@
       >
         <div>
           <div>No.{{ i + 1 }}</div>
-          <div>{{ w.info || w.info2 }}</div>
+          <div :id="`title-${uid}-${i}`">{{ w.info || w.info2 }}</div>
           <div>{{ w.word }}</div>
         </div>
       </li>
@@ -67,6 +67,7 @@ defineEmits<{
   (e: 'tag', tag: ProblemItemTag): any
 }>()
 
+const uid = getCurrentInstance()?.uid
 const hasOnTag = computed(() => !!getCurrentInstance()?.vnode?.props?.onTag)
 </script>
 
