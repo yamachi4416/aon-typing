@@ -1,0 +1,30 @@
+{
+  "id": "1010410",
+  "title": "京阪京津線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-02",
+  "updatedAt": "2023-08-02",
+  "optional": { "cd": "410" },
+  "words": [
+    {
+      "info": "びわ湖浜大津",
+      "info2": "びわこはまおおつ",
+      "word": "biwakohamaootu"
+    },
+    { "info": "上栄町", "info2": "かみさかえまち", "word": "kamisakaemati" },
+    { "info": "大谷", "info2": "おおたに", "word": "ootani" },
+    { "info": "追分", "info2": "おいわけ", "word": "oiwake" },
+    { "info": "四宮", "info2": "しのみや", "word": "sinomiya" },
+    {
+      "info": "京阪山科",
+      "info2": "けいはんやましな",
+      "word": "keihanyamasina"
+    },
+    { "info": "御陵", "info2": "みささぎ", "word": "misasagi" }
+  ]
+}
