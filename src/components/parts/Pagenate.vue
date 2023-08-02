@@ -1,16 +1,14 @@
 <template>
   <div v-if="pages.length > 1" class="pagenate">
     <template v-for="p in dispPages" :key="p">
-      <select
-        v-if="p === page"
-        v-model.number="editPage"
-        title="表示するページを選択"
-        selected
-      >
-        <option v-for="c in pages" :key="c" :value="c">
-          {{ c }}
-        </option>
-      </select>
+      <label v-if="p === page" title="表示するページを選択" selected>
+        {{ editPage }}
+        <select v-model.number="editPage">
+          <option v-for="c in pages" :key="c" :value="c">
+            {{ c }}
+          </option>
+        </select>
+      </label>
       <button v-else :title="`${p}ページ目を表示する`" @click="editPage = p">
         {{ p }}
       </button>
@@ -72,11 +70,21 @@ function selectPage(page: number) {
   padding-bottom: 8px;
 
   button,
-  select {
+  label {
     width: 3.8em;
     padding-right: 0;
     padding-left: 0;
     text-align: center;
+  }
+
+  label {
+    position: relative;
+
+    select {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
   }
 }
 </style>
