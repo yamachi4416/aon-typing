@@ -5,10 +5,30 @@
   "buildCommand": "npm run generate",
   "outputDirectory": "dist",
   "redirects": [
-    { "source": "/problems/1010501", "destination": "/problems/1020501", "permanent": true },
-    { "source": "/problems/1010510", "destination": "/problems/1020510", "permanent": true },
-    { "source": "/problems/1010511", "destination": "/problems/1020511", "permanent": true },
-    { "source": "/problems/1010512", "destination": "/problems/1020512", "permanent": true },
-    { "source": "/problems/1010513", "destination": "/problems/1020513", "permanent": true }
+    {
+      "source": "/problems/1010501",
+      "destination": "/problems/1020501",
+      "permanent": true
+    },
+    {
+      "source": "/problems/1010510",
+      "destination": "/problems/1020510",
+      "permanent": true
+    },
+    {
+      "source": "/problems/1010511",
+      "destination": "/problems/1020511",
+      "permanent": true
+    },
+    {
+      "source": "/problems/1010512",
+      "destination": "/problems/1020512",
+      "permanent": true
+    },
+    {
+      "source": "/problems/1010513",
+      "destination": "/problems/1020513",
+      "permanent": true
+    }
   ]
 }

@@ -15,7 +15,7 @@
     "lint:typecheck": "nuxt typecheck",
     "lint:scripts": "eslint .",
     "lint:styles": "stylelint src/**/*.{scss,vue}",
-    "lint:format": "prettier {src,libs,scripts,test}/**/*.{scss,vue,ts} -c",
+    "lint:format": "prettier {src,libs,scripts,test}/**/*.{scss,vue,ts} *.{js,ts,json} -c",
     "test": "nuxt test"
   },
   "devDependencies": {
