@@ -5,6 +5,14 @@ import { previewServer } from '~~/scripts/src/lib/preview'
 const { close, url } = await getEndpoint()
 
 async function getEndpoint() {
+  const ctx = createTestContext({})
+  if (ctx.url) {
+    return {
+      close: async () => {},
+      url: ctx.url,
+    }
+  }
+
   if (process.env.TEST_ENDPOINT) {
     return {
       close: async () => {},

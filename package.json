@@ -16,9 +16,7 @@
     "lint:scripts": "eslint .",
     "lint:styles": "stylelint src/**/*.{scss,vue}",
     "lint:format": "prettier {src,libs,scripts,test}/**/*.{scss,vue,ts} -c",
-    "test:unit": "vitest run -c vitest.unit.config.ts",
-    "test:e2e:run": "vitest run -c vitest.e2e.config.ts",
-    "test:e2e:dev": "vitest -c vitest.e2e.config.ts"
+    "test": "nuxt test"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.6.5",
