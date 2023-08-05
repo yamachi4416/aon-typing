@@ -6,6 +6,7 @@ import {
   type ServerResponse,
 } from 'node:http'
 import path from 'node:path'
+import contentDisposition from 'content-disposition'
 
 type Logger = Pick<Console, 'info' | 'error'>
 
@@ -81,6 +82,10 @@ function sendFileHandler({ distDir }: { distDir: string; logger?: Logger }) {
 
       res.statusCode = 200
       res.setHeader('Content-Type', mimetype(file))
+      res.setHeader(
+        'Content-Disposition',
+        contentDisposition(file, { type: 'inline' }),
+      )
 
       if (req.headers['accept-encoding']?.includes('gzip')) {
         res.setHeader('Content-Encoding', 'gzip')
@@ -171,7 +176,7 @@ export async function previewServer({
   const server = createServer((req, res) => {
     try {
       logging({ req, res, logger })
-      const url = req.url ?? ''
+      const url = decodeURI(req.url ?? '')
       const handler = handlers.find((handler) => handler.match(url, req))
       if (handler) {
         void handler.handle(url, req, res)

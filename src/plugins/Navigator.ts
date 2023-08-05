@@ -12,6 +12,32 @@ class Navigator {
     return `/static/${path}/${filename}`
   }
 
+  async download(e: MouseEvent) {
+    const target = e.target as HTMLAnchorElement
+
+    const href = target.getAttribute('href')
+    const file = target.getAttribute('download')
+
+    if (!href || !file) {
+      return
+    }
+
+    try {
+      useScrollWaiter().add()
+
+      const res = await fetch(href)
+
+      const a = document.createElement('a')
+      a.setAttribute('href', URL.createObjectURL(await res.blob()))
+      a.setAttribute('download', file)
+      a.click()
+    } catch (e) {
+      console.log(e)
+    } finally {
+      useScrollWaiter().flush()
+    }
+  }
+
   replaceQuery(query: Record<string, string | string[]>, keep = true) {
     const router = useRouter()
     const repQuery = keep ? { ...useRoute().query, ...query } : { ...query }

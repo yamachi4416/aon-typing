@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { createPage } from '~~/test/e2e/util'
+import { createPage, expectLoadingHidden } from '~~/test/e2e/util'
 
 describe('ローマ字タイピング入力表ページのPDFファイルダウンロードの確認', () => {
   it('ローマ字タイピング入力表をダウンロードすることができる', async () => {
@@ -16,5 +16,6 @@ describe('ローマ字タイピング入力表ページのPDFファイルダウ�
     const download = await resolver
     expect(download.suggestedFilename()).toEqual('ローマ字タイピング入力表.pdf')
     expect(await download.failure()).toBeFalsy()
+    await expectLoadingHidden(page)
   })
 })

@@ -14,6 +14,7 @@
             download="ローマ字タイピング入力表.pdf"
             title="ローマ字タイピング入力表をダウンロードする"
             target="_blank"
+            @click.prevent="$navigator.download"
             >こちら</a
           >からどうぞ。
         </p>

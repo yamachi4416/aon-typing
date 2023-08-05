@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: mcr.microsoft.com/playwright:v1.36.0-jammy
+      image: mcr.microsoft.com/playwright:v1.36.2-jammy
 
     steps:
       - uses: actions/checkout@v3
@@ -23,6 +23,6 @@ jobs:
         with:
           node-version: 18
       - run: npm clean-install
-      - run: npm run generate
+      - run: npm run generate 1> /dev/null
       - run: npm run lint
       - run: npx vitest run
