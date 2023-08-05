@@ -1,6 +1,6 @@
 <template>
-  <div class="count-down">
-    <div v-if="count > 0" class="count">
+  <div :class="$style.count">
+    <div v-if="count > 0">
       <span>{{ count }}</span>
     </div>
   </div>
@@ -17,8 +17,8 @@ withDefaults(
 )
 </script>
 
-<style lang="scss" scoped>
-.count-down {
+<style lang="scss" module>
+.count {
   position: fixed;
   top: 0;
   left: 0;
@@ -30,19 +30,19 @@ withDefaults(
   height: 100vh;
   height: var(--maxvh, 100vh);
   background: var(--color-f);
-}
 
-.count-down .count {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 
-.count-down .count span {
-  font-size: 100px;
-  font-size: 35vmin;
-  font-weight: bold;
-  color: var(--countdown-color);
+    & > span {
+      font-size: 100px;
+      font-size: 35vmin;
+      font-weight: bold;
+      color: var(--countdown-color);
+    }
+  }
 }
 </style>

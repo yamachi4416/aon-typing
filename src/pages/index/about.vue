@@ -31,7 +31,7 @@
       </template>
     </PartsSection>
 
-    <PartsSection class="about-score" aria-labelledby="score-title">
+    <PartsSection :class="$style.score" aria-labelledby="score-title">
       <div class="row">
         <div class="col-sm-12 col-6">
           <h2 id="score-title">スコアってなんですか？</h2>
@@ -63,7 +63,7 @@
       </template>
     </PartsSection>
 
-    <PartsSection class="about-rank" aria-labelledby="rank-title">
+    <PartsSection :class="$style.rank" aria-labelledby="rank-title">
       <div class="row">
         <div class="col-sm-12 col-6">
           <h2 id="rank-title">ランクってなんですか？</h2>
@@ -77,7 +77,7 @@
           </p>
         </div>
         <div class="col-sm-12 col-6 overflow-x-a">
-          <table class="ranks">
+          <table>
             <thead>
               <tr>
                 <th>ランク</th>
@@ -88,7 +88,7 @@
               <tr v-for="r in ranks" :key="r.id">
                 <th>{{ r.end === null ? '？？？？' : r.name }}</th>
                 <td>{{ r.start }}</td>
-                <td class="between">～</td>
+                <td>～</td>
                 <td>{{ r.end }}</td>
               </tr>
             </tbody>
@@ -127,11 +127,11 @@ useHead({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/cmps';
 
-.about-score {
-  .row {
+.score {
+  & > div {
     align-items: center;
     justify-content: space-around;
 
@@ -141,15 +141,15 @@ useHead({
   }
 }
 
-.about-rank {
-  .row {
+.rank {
+  & > div {
     align-items: flex-start;
     justify-content: space-around;
 
-    .ranks {
+    table {
       @include cmps.table-tight;
 
-      .between {
+      tr > td:nth-last-of-type(3) {
         padding-right: 10px;
         padding-left: 10px;
       }

@@ -1,6 +1,6 @@
 <template>
   <svg viewBox="0 0 550 15" xmlns="http://www.w3.org/2000/svg">
-    <g class="hands">
+    <g :class="$style.hands">
       <rect
         v-for="(k, i) in [1, 2, 3, 4, 5]"
         :key="`hands-${k}`"
@@ -31,7 +31,7 @@ function hi(k: number) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 .hands {
   rect {
     fill: var(--color-e);

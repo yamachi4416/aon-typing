@@ -1,12 +1,6 @@
 <template>
-  <g class="line-guage">
-    <rect
-      class="line-guage-used"
-      :height="height"
-      :width="usedWidth"
-      rx="3"
-      ry="3"
-    />
+  <g :class="$style.line">
+    <rect :height="height" :width="usedWidth" rx="3" ry="3" />
   </g>
 </template>
 
@@ -34,9 +28,9 @@ const usedWidth = computed(() => {
 })
 </script>
 
-<style lang="scss" scoped>
-.line-guage {
-  &-used {
+<style lang="scss" module>
+.line {
+  rect {
     fill: var(--keyboard-highlight);
   }
 }

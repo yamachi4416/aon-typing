@@ -1,5 +1,5 @@
 <template>
-  <header class="basic-header" role="banner">
+  <header :class="$style.header" role="banner">
     <section>
       <h1>
         <NuxtLink :to="{ name: 'index' }">
@@ -78,8 +78,8 @@ function typing(text: string) {
 }
 </script>
 
-<style lang="scss" scoped>
-.basic-header {
+<style lang="scss" module>
+.header {
   position: sticky;
   top: 0;
   z-index: 99;

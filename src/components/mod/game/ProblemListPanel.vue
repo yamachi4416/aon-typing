@@ -1,12 +1,11 @@
 <template>
   <PartsModalContent
     ref="content"
-    class="typing-menu-panel"
     title="タイピング問題の選択"
     :show-close="true"
     @close="$emit('close')"
   >
-    <div v-show="tags.size > 0" class="taglist">
+    <div v-show="tags.size > 0" :class="$style.tags">
       <button
         v-for="t in tags.values()"
         :key="`tag-${t.id}`"
@@ -83,10 +82,10 @@ function removeTag(tag: ProblemItemTag) {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" module>
 @use '~/assets/css/cmps';
 
-.taglist {
+.tags {
   @include cmps.buttons;
 
   position: sticky;

@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div :class="$style.page">
     <PartsSection v-if="kwds.length > 0">
       <header>
         <h2>
@@ -71,7 +71,7 @@ function convertKwds(val: LocationQueryValue | LocationQueryValue[]) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/cmps';
 
 .page {

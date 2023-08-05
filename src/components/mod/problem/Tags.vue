@@ -1,5 +1,5 @@
 <template>
-  <div class="tags">
+  <div :class="$style.tags">
     <template v-for="(tag, i) in tags" :key="`tag-${i}`">
       <span v-if="clickable === false">{{ tag.name }}</span>
       <button
@@ -32,7 +32,7 @@ defineEmits<{
 }>()
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" module>
 @use '~/assets/css/cmps';
 
 .tags {
@@ -41,7 +41,7 @@ defineEmits<{
   flex-wrap: wrap;
   gap: 3px;
   justify-content: flex-start;
-  padding: 3px 0;
+  padding: unset;
 
   span,
   button {

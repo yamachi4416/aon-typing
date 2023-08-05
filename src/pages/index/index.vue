@@ -1,6 +1,6 @@
 <template>
-  <div class="page">
-    <PartsSection class="hello" aria-labelledby="hello-title">
+  <div>
+    <PartsSection aria-labelledby="hello-title">
       <h2 id="hello-title">ようこそ「あぉ～ん タイピング」へ</h2>
       <p>
         あぉ～ん
@@ -13,7 +13,7 @@
       </template>
     </PartsSection>
 
-    <PartsSection class="search" aria-labelledby="search-title">
+    <PartsSection :class="$style.search" aria-labelledby="search-title">
       <h2 id="search-title">タイトル検索</h2>
       <p>タイピングの問題のタイトルをキーワードで検索します。</p>
       <form role="search" @submit.prevent>
@@ -36,7 +36,7 @@
       </template>
     </PartsSection>
 
-    <section class="news" aria-labelledby="news-title">
+    <section :class="$style.news" aria-labelledby="news-title">
       <h2 id="news-title">新着の問題</h2>
       <ModProblemLists
         :problems="newProblems"
@@ -51,7 +51,7 @@
       </footer>
     </section>
 
-    <PartsSection class="tags" aria-labelledby="tags-title">
+    <PartsSection :class="$style.tags" aria-labelledby="tags-title">
       <h2 id="tags-title">タグいちらん</h2>
       <ul>
         <li v-for="tag in tagSummary" :key="`tag-${tag.id}`">
@@ -59,7 +59,7 @@
             :to="{ name: 'index-problems-tags-id', params: { id: tag.id } }"
           >
             <span>{{ tag.name }}</span>
-            <span class="count">
+            <span :class="$style.count">
               <span>(</span>
               <span>{{ tag.count }}</span>
               <span>)</span>
@@ -72,7 +72,7 @@
       </template>
     </PartsSection>
 
-    <PartsSection class="others" aria-labelledby="others-title">
+    <PartsSection :class="$style.others" aria-labelledby="others-title">
       <h2 id="others-title">その他</h2>
       <ul>
         <li>
@@ -139,7 +139,7 @@ await Promise.all([
 ])
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/vars';
 @use '~/assets/css/cmps';
 
@@ -172,75 +172,73 @@ await Promise.all([
   }
 }
 
-.page {
-  .tags {
-    @include tag-clound($color: var(--color-f)) {
-      background: var(--color-p);
-      border: none;
-      border-radius: 15px;
+.tags {
+  @include tag-clound($color: var(--color-f)) {
+    background: var(--color-p);
+    border: none;
+    border-radius: 15px;
+  }
+}
 
-      .count {
-        display: flex;
-        gap: 2px;
-        align-items: center;
-        font-size: 0.9em;
-      }
+.count {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.search {
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+
+    input {
+      @include cmps.placeholder;
+    }
+
+    button {
+      @include cmps.button-big;
+
+      align-self: center;
     }
   }
+}
 
-  .search {
-    form {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      padding: 10px;
+.news {
+  margin: 10px;
+  background: var(--background-90);
+  border-radius: 20px;
+  box-shadow: var(--shadow-color-md) 0 1px 3px 0;
 
-      input {
-        @include cmps.placeholder;
-      }
-
-      button {
-        @include cmps.button-big;
-
-        align-self: center;
-      }
-    }
+  @include vars.media_s {
+    padding: 5px 7px;
   }
 
-  .news {
-    margin: 10px;
-    background: var(--background-90);
-    border-radius: 20px;
-    box-shadow: var(--shadow-color-md) 0 1px 3px 0;
+  h2 {
+    padding: 20px;
+    padding-bottom: 5px;
+    color: var(--color-6);
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px 20px;
 
     @include vars.media_s {
-      padding: 5px 7px;
-    }
-
-    h2 {
-      padding: 20px;
-      padding-bottom: 5px;
-      color: var(--color-6);
-    }
-
-    footer {
-      display: flex;
-      justify-content: flex-end;
-      padding: 10px 20px 20px;
-
-      @include vars.media_s {
-        padding: 10px 20px 15px;
-      }
+      padding: 10px 20px 15px;
     }
   }
+}
 
-  .others {
-    @include tag-clound($color: var(--color-p)) {
-      font-size: 1em;
-      background: var(--color-f);
-      border: 1.5px solid var(--color-p);
-      border-radius: 20px;
-    }
+.others {
+  @include tag-clound($color: var(--color-p)) {
+    font-size: 1em;
+    background: var(--color-f);
+    border: 1.5px solid var(--color-p);
+    border-radius: 20px;
   }
 }
 </style>

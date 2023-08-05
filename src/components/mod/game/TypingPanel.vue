@@ -86,11 +86,11 @@ const props = defineProps<{
 }>()
 
 const keys = new JISKeys()
-const mistakeFlash = ref(props.typing?.currentMistake ?? false)
+const mistakeFlash = ref(false)
 
 watch(
   () => props.typing?.totalTypeCount ?? 0,
-  (value, oldValue) => {
+  (value) => {
     if (!props.typing) {
       return
     }

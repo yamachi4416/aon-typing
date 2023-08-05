@@ -1,6 +1,6 @@
 <template>
   <Keyboard
-    class="typing-keyboard"
+    :class="$style.keyboard"
     :type-key="typeKey"
     :setting="setting"
     :keys="keys"
@@ -24,9 +24,9 @@ withDefaults(
 )
 </script>
 
-<style lang="scss">
-.typing-keyboard {
-  .keyboard-key {
+<style lang="scss" module>
+.keyboard {
+  g:has(kbd) {
     cursor: pointer;
 
     path,
@@ -43,7 +43,7 @@ withDefaults(
       }
     }
 
-    .keyboard-text {
+    kbd {
       color: var(--color-3);
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div :class="$style.page">
     <div role="alert" :aria-hidden="!gError" v-text="gError" />
     <PartsSection
       is="form"
@@ -113,7 +113,7 @@ async function submit() {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/cmps';
 
 .page {

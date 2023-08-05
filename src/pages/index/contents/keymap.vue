@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div :class="$style.page">
     <PartsSection aria-labelledby="info-title">
       <header>
         <h2 id="info-title">ローマ字タイピング入力表</h2>
@@ -46,7 +46,7 @@ function print() {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/cmps';
 
 .page {

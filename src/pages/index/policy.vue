@@ -48,7 +48,7 @@
       <p>
         このウェブサイトでは、個人情報は適切に管理し、以下に該当する場合を除いて第三者に開示することはありません。
       </p>
-      <div class="policy3-list">
+      <div :class="$style.p3list">
         <ul>
           <li>本人のご了解がある場合</li>
           <li>法令等への協力のため、開示が必要となる場合</li>
@@ -112,8 +112,8 @@ useHead({
 })
 </script>
 
-<style lang="scss" scoped>
-.policy3-list {
+<style lang="scss" module>
+.p3list {
   padding: 5px 0 0 40px;
 }
 </style>

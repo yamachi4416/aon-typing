@@ -1,5 +1,5 @@
 <template>
-  <div class="problem-detail">
+  <div :class="$style.detail">
     <PartsSection :aria-labelledby="`title-${uid}`">
       <header>
         <span>No.{{ detail.id }}</span>
@@ -11,6 +11,7 @@
             <th>タグ</th>
             <td>
               <ModProblemTags
+                :class="$style.tags"
                 :tags="detail.tags"
                 :clickable="hasOnTag"
                 @tag="(tag) => $emit('tag', tag)"
@@ -71,10 +72,10 @@ const uid = getCurrentInstance()?.uid
 const hasOnTag = computed(() => !!getCurrentInstance()?.vnode?.props?.onTag)
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/cmps';
 
-.problem-detail {
+.detail {
   header {
     display: flex;
     flex-direction: column;
@@ -107,5 +108,9 @@ const hasOnTag = computed(() => !!getCurrentInstance()?.vnode?.props?.onTag)
       }
     }
   }
+}
+
+.tags {
+  padding: 3px 0;
 }
 </style>

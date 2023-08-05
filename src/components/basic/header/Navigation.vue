@@ -1,5 +1,5 @@
 <template>
-  <nav role="navigation">
+  <nav :class="$style.nav" role="navigation">
     <ul>
       <li v-for="(menu, i) in menus" :key="`menu-${i}`">
         <NuxtLink :to="menu.route">
@@ -18,8 +18,8 @@ const menus = [
 ]
 </script>
 
-<style scoped lang="scss">
-nav {
+<style lang="scss" module>
+.nav {
   @media print {
     display: none;
   }

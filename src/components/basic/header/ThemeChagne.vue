@@ -1,5 +1,5 @@
 <template>
-  <div class="theme">
+  <div :class="$style.theme">
     <a href="#" @click.prevent="changeTheme('light')">light</a> /
     <a href="#" @click.prevent="changeTheme('dark')">dark</a>
   </div>
@@ -9,7 +9,7 @@
 const { changeTheme } = useTheme()
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" module>
 .theme {
   a {
     color: var(--color-3);

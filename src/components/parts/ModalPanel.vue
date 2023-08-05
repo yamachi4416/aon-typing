@@ -1,6 +1,6 @@
 <template>
-  <div v-if="show" ref="modal" class="modal-panel hide">
-    <div class="contents">
+  <div v-if="show" ref="modal" :class="[$style.modal, $style.hide]">
+    <div :class="$style.contents">
       <slot />
     </div>
   </div>
@@ -13,6 +13,7 @@ const pending = ref(false)
 const show = ref(false)
 const modal = ref<HTMLElement>()
 const prevActive = ref<HTMLElement>()
+const styles = useCssModule()
 
 defineExpose({
   get isOpen() {
@@ -29,12 +30,12 @@ defineExpose({
       prevActive.value = document.activeElement
     }
     await nextTick()
-    modal.value?.classList.remove('hide')
+    modal.value?.classList.remove(styles.hide)
     if (anim) {
       if (modal.value) {
-        modal.value.classList.add('open')
+        modal.value.classList.add(styles.open)
         await wait(300)
-        modal.value.classList.remove('open')
+        modal.value.classList.remove(styles.open)
       }
     }
     pending.value = false
@@ -43,9 +44,9 @@ defineExpose({
     if (!show.value || pending.value) return
     pending.value = true
     if (anim && modal.value) {
-      modal.value.classList.add('close')
+      modal.value.classList.add(styles.close)
       await wait(300)
-      modal.value.classList.remove('close')
+      modal.value.classList.remove(styles.close)
     }
 
     show.value = false
@@ -70,8 +71,8 @@ defineExpose({
 })
 </script>
 
-<style lang="scss" scoped>
-.modal-panel {
+<style lang="scss" module>
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -86,25 +87,6 @@ defineExpose({
   overflow: auto;
   background: transparent;
 
-  .contents {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 1000px;
-    height: 100%;
-    max-height: 100%;
-
-    &::after,
-    &::before {
-      display: block;
-      flex: 1;
-      width: 100%;
-      content: ' ';
-    }
-  }
-
   @keyframes modal {
     0% {
       transform: translateY(-100%);
@@ -114,17 +96,36 @@ defineExpose({
       transform: translateY(0);
     }
   }
+}
 
-  &.hide {
-    display: none;
-  }
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  max-height: 100%;
 
-  &.open {
-    animation: modal 0.3s ease-in forwards;
+  &::after,
+  &::before {
+    display: block;
+    flex: 1;
+    width: 100%;
+    content: ' ';
   }
+}
 
-  &.close {
-    animation: modal 0.3s ease-out reverse forwards;
-  }
+.hide {
+  display: none;
+}
+
+.open {
+  animation: modal 0.3s ease-in forwards;
+}
+
+.close {
+  animation: modal 0.3s ease-out reverse forwards;
 }
 </style>

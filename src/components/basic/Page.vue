@@ -1,5 +1,5 @@
 <template>
-  <section class="basic-page">
+  <section :class="$style.page">
     <BasicHeader v-if="showHeader" :anim="anim" />
     <main>
       <slot />
@@ -23,10 +23,10 @@ withDefaults(
 )
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/vars';
 
-.basic-page {
+.page {
   min-height: 100vh;
 
   @media print {

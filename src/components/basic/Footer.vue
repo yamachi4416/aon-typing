@@ -1,5 +1,5 @@
 <template>
-  <footer class="basic-footer" role="contentinfo">
+  <footer :class="$style.footer" role="contentinfo">
     <nav>
       <ul>
         <li v-for="(menu, i) in menus" :key="`footer-menu-${i}`">
@@ -9,7 +9,7 @@
         </li>
       </ul>
     </nav>
-    <div class="copy">
+    <div :class="$style.copy">
       <p>&copy; 2021 Studio AON</p>
     </div>
   </footer>
@@ -22,8 +22,8 @@ const menus = [
 ]
 </script>
 
-<style lang="scss" scoped>
-.basic-footer {
+<style lang="scss" module>
+.footer {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -57,13 +57,13 @@ const menus = [
       }
     }
   }
+}
 
-  & > .copy {
-    flex: 1;
-    width: 100%;
-    padding-top: 10px;
-    color: var(--color-6);
-    text-align: center;
-  }
+.copy {
+  flex: 1;
+  width: 100%;
+  padding-top: 10px;
+  color: var(--color-6);
+  text-align: center;
 }
 </style>

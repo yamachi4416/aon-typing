@@ -1,10 +1,10 @@
 <template>
-  <div class="background">
-    <div class="background-image" />
+  <div :class="$style.background">
+    <div />
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 .background {
   position: fixed;
   top: 0;
@@ -15,7 +15,7 @@
   overflow: hidden;
   background-color: var(--page-background-color);
 
-  &-image {
+  & > div {
     position: absolute;
     top: 0;
     left: 0;

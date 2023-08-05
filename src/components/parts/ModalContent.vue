@@ -1,36 +1,48 @@
 <template>
-  <section class="modal-content" role="dialog" :aria-labelledby="titleId">
+  <section
+    :class="[$style.content, $props.panelClass]"
+    role="dialog"
+    :aria-labelledby="titleId"
+  >
     <header>
       <h1 :id="titleId">{{ title }}</h1>
       <span>
-        <div>
-          <CloseCircle
-            v-if="showClose"
-            :title="`${title}ダイアログを閉じる`"
-            @click="$emit('close')"
-          />
-        </div>
+        <CloseCircle
+          v-if="showClose"
+          :title="`${title}ダイアログを閉じる`"
+          @click="$emit('close')"
+        />
       </span>
     </header>
-    <div ref="content">
+    <component :is="is" ref="content" v-bind="$attrs">
       <slot name="default" />
-    </div>
+    </component>
     <footer v-if="$slots.footer">
       <slot name="footer" />
     </footer>
   </section>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 import CloseCircle from '~/components/parts/CloseCircle.vue'
 
+export default defineComponent({
+  inheritAttrs: false,
+})
+</script>
+
+<script setup lang="ts">
 withDefaults(
   defineProps<{
     title: string
+    is?: string
+    panelClass?: string
     showClose?: boolean
   }>(),
   {
     title: 'ダイアログ',
+    is: 'div',
+    panelClass: undefined,
     showClose: true,
   },
 )
@@ -52,11 +64,11 @@ defineExpose({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/vars';
 @use '~/assets/css/cmps';
 
-.modal-content {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,35 +106,35 @@ defineExpose({
     position: sticky;
     top: 0;
     z-index: 10;
-    display: flex;
+    display: grid;
+    grid-template-columns: 42px 1fr 42px;
+    align-items: center;
     justify-content: center;
-    padding-top: 8px;
-    padding-bottom: 2px;
     border-bottom: 1px solid var(--color-9);
 
-    &::before {
-      flex: 1;
-      content: '';
+    @include vars.media_s {
+      grid-template-columns: 1fr 42px;
+    }
+
+    @include vars.media_ml {
+      &::before {
+        content: '';
+      }
     }
 
     h1 {
-      padding-bottom: 3px;
+      padding-top: 8px;
+      padding-bottom: 5px;
       font-size: 1.17em;
       font-weight: normal;
       text-align: center;
     }
 
     span {
-      flex: 1;
-      min-width: 50px;
-
-      & > * {
-        position: absolute;
-        top: 3px;
-        right: 0;
-        width: 35px;
-        height: 35px;
-      }
+      display: flex;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      padding: 3px 0 3px 6px;
     }
   }
 

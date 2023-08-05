@@ -1,6 +1,6 @@
 <template>
   <svg viewBox="-31 -31 62 62" width="60" xmlns="http://www.w3.org/2000/svg">
-    <g class="time-clock" @click="$emit('click')">
+    <g :class="$style.clock" @click="$emit('click')">
       <text
         class="time-clock-text"
         text-anchor="middle"
@@ -42,8 +42,8 @@ const second = computed(() => {
 const dispTime = computed(() => `${minute.value}:${second.value}`)
 </script>
 
-<style lang="scss" scoped>
-.time-clock {
+<style lang="scss" module>
+.clock {
   text {
     font-family: monospace;
     font-size: 1.3em;

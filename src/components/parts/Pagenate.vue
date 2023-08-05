@@ -1,5 +1,5 @@
 <template>
-  <div v-if="pages.length > 1" class="pagenate">
+  <div v-if="pages.length > 1" :class="$style.pagenate">
     <template v-for="p in dispPages" :key="p">
       <label v-if="p === page" title="表示するページを選択" selected>
         {{ editPage }}
@@ -60,7 +60,7 @@ function selectPage(page: number) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/cmps';
 
 .pagenate {

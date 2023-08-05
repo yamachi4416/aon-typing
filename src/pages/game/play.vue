@@ -1,14 +1,11 @@
 <template>
-  <div class="game-typing-page-content">
-    <div class="game-typing-page-content-main">
-      <div class="game-typing-page-content-main-keyboard">
-        <ModGameTypingPanel
-          class="game-typing-page-content-main-keyboard-svg"
-          :typing="state.typing"
-        />
+  <div :class="$style.content">
+    <div :class="$style.main">
+      <div :class="$style.keyboard">
+        <ModGameTypingPanel :class="$style.svg" :typing="state.typing" />
       </div>
     </div>
-    <div class="game-typing-page-content-sub">
+    <div>
       <PartsCountDown v-show="state.isCountDownShow" :count="state.countDown" />
       <ModalPanel ref="modalGameResult">
         <ModGameResultPanel
@@ -144,40 +141,40 @@ useHead({
 })
 </script>
 
-<style lang="scss" scoped>
-.game-typing-page-content {
+<style lang="scss" module>
+.content {
   display: flex;
   align-items: center;
   width: 100%;
   height: var(--maxvh, 100vh);
+}
 
-  &-main {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1350px;
-    height: 100%;
-    max-height: 100%;
-    padding: 10px;
-    margin: 0 auto;
+.main {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1350px;
+  height: 100%;
+  max-height: 100%;
+  padding: 10px;
+  margin: 0 auto;
+}
 
-    &-keyboard {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: 100%;
-      height: 100%;
-      max-height: 100%;
+.keyboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
 
-      &-svg {
-        width: auto;
-        max-width: 100%;
-        height: auto;
-        max-height: 100vh;
-        max-height: calc(100vh - 20px);
-      }
-    }
-  }
+.svg {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100vh;
+  max-height: calc(100vh - 20px);
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="keymap">
+  <section :class="$style.keymap">
     <table>
       <tbody>
         <tr v-for="(tb, i) in table" :key="`${i}`">
@@ -112,7 +112,7 @@ const chars = japaneseToTypeCharList()
   }, {} as Record<string, string>)
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" module>
 @use '~/assets/css/vars';
 
 .keymap {

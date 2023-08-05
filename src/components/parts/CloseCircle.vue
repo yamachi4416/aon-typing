@@ -1,5 +1,5 @@
 <template>
-  <button class="close-button" v-bind="$attrs" @click.self="$emit('click')">
+  <button :class="$style.close" v-bind="$attrs" @click.self="$emit('click')">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
@@ -27,8 +27,8 @@
   </button>
 </template>
 
-<style lang="scss" scoped>
-.close-button {
+<style lang="scss" module>
+.close {
   width: 100%;
   height: 100%;
   color: var(--color-3);

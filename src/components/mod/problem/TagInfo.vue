@@ -1,5 +1,5 @@
 <template>
-  <PartsSection class="tag-info">
+  <PartsSection :class="$style.info">
     <header>
       <span>No.{{ tag.id }}</span>
       <h2>タグ：{{ tag.name }}</h2>
@@ -85,10 +85,10 @@ watch(
 )
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/cmps';
 
-.tag-info {
+.info {
   & > header {
     display: flex;
     flex-direction: column;

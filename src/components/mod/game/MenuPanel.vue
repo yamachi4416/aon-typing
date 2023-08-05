@@ -1,6 +1,7 @@
 <template>
   <PartsModalContent
-    class="panel"
+    :panel-class="$style.panel"
+    :class="$style.content"
     :show-close="false"
     title="タイピングメニュー"
     @close="emit('close')"
@@ -80,37 +81,34 @@
             </button>
           </td>
         </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <tbody>
         <tr>
-          <td colspan="2">
-            <table>
-              <tbody>
-                <tr>
-                  <th>タイプ</th>
-                  <td>{{ problemType }}</td>
-                </tr>
-                <tr>
-                  <th>タイトル</th>
-                  <td>
-                    <a
-                      v-if="problem?.title"
-                      :title="`選択した問題「${problem.title}」の内容を表示する`"
-                      href="#"
-                      @click.prevent="emit('detail', problem)"
-                      >{{ problem?.title }}</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th>問題数</th>
-                  <td>{{ problem?.words }}</td>
-                </tr>
-                <tr>
-                  <th>タイピング数</th>
-                  <td>{{ problem?.chars }}</td>
-                </tr>
-              </tbody>
-            </table>
+          <th>タイプ</th>
+          <td>{{ problemType }}</td>
+        </tr>
+        <tr>
+          <th>タイトル</th>
+          <td>
+            <a
+              v-if="problem?.title"
+              :title="`選択した問題「${problem.title}」の内容を表示する`"
+              href="#"
+              @click.prevent="emit('detail', problem)"
+              >{{ problem?.title }}</a
+            >
           </td>
+        </tr>
+        <tr>
+          <th>問題数</th>
+          <td>{{ problem?.words }}</td>
+        </tr>
+        <tr>
+          <th>タイピング数</th>
+          <td>{{ problem?.chars }}</td>
         </tr>
       </tbody>
     </table>
@@ -194,15 +192,25 @@ function randomProblemSelect() {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/cmps';
 
 .panel {
   width: 500px;
   max-width: 100%;
   height: unset;
+}
 
-  table {
+.content {
+  display: grid;
+  justify-content: center;
+  padding: 0.5em;
+
+  & > table {
+    margin: 0;
+  }
+
+  & > table:nth-of-type(1) {
     td:has(> button) {
       @include cmps.buttons-tight;
 
@@ -211,10 +219,13 @@ function randomProblemSelect() {
       padding: 8px;
       padding-left: 10px;
     }
+  }
 
-    td:has(table) {
-      padding-left: 2em;
-      font-size: 0.95em;
+  & > table:nth-of-type(2) {
+    font-size: 0.95em;
+
+    th {
+      padding-left: 1em;
     }
   }
 }

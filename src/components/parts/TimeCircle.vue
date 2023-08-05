@@ -1,17 +1,17 @@
 <template>
   <svg viewBox="-31 -31 62 62" xmlns="http://www.w3.org/2000/svg">
-    <g class="time-circle">
-      <path class="time-circle-total" :d="totalPath" />
-      <path class="time-circle-used" :d="usedPath" />
+    <g>
+      <path :class="$style.total" :d="totalPath" />
+      <path :class="$style.used" :d="usedPath" />
       <circle
-        class="time-circle-center"
+        :class="$style.center"
         cy="0"
         cx="0"
         r="20"
         @click="$emit('click')"
       />
       <text
-        class="time-circle-number"
+        :class="$style.number"
         text-anchor="middle"
         dominant-baseline="central"
         x="0"
@@ -104,24 +104,22 @@ function donut(
 }
 </script>
 
-<style lang="scss" scoped>
-.time-circle {
-  &-total {
-    fill: var(--color-e);
-  }
+<style lang="scss" module>
+.total {
+  fill: var(--color-e);
+}
 
-  &-used {
-    fill: var(--color-p);
-  }
+.used {
+  fill: var(--color-p);
+}
 
-  &-center {
-    cursor: pointer;
-    fill: transparent;
-  }
+.center {
+  cursor: pointer;
+  fill: transparent;
+}
 
-  &-number {
-    pointer-events: none;
-    fill: var(--color-3);
-  }
+.number {
+  pointer-events: none;
+  fill: var(--color-3);
 }
 </style>

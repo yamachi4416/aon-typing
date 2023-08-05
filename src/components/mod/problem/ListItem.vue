@@ -1,5 +1,5 @@
 <template>
-  <article class="item" :aria-labelledby="`item-title-${uid}`">
+  <article :class="$style.item" :aria-labelledby="`item-title-${uid}`">
     <div>
       <header>
         <span>No.{{ item.id }}</span>
@@ -19,7 +19,7 @@
           </tbody>
         </table>
         <ModProblemTags
-          class="tags"
+          :class="$style.tags"
           :tags="item.tags"
           @tag="(tag) => $emit('tag', tag)"
         />
@@ -45,7 +45,7 @@ defineEmits<{
 const uid = getCurrentInstance()?.uid
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use '~/assets/css/cmps';
 
 .item {
@@ -88,16 +88,16 @@ const uid = getCurrentInstance()?.uid
           text-align: right;
         }
       }
-
-      .tags {
-        padding: 5px 10px 15px;
-        font-size: 0.9em;
-      }
     }
 
     & > footer {
       @include cmps.buttons;
     }
   }
+}
+
+.tags {
+  padding: 5px 10px 15px;
+  font-size: 0.9em;
 }
 </style>

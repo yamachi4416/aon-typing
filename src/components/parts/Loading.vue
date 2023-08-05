@@ -1,11 +1,10 @@
 <template>
-  <div class="loading">
+  <div :class="$style.loading">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="200px"
       height="200px"
       viewBox="0 0 100 100"
-      class="loading-svg"
       title="処理中です"
     >
       <circle v-for="c in 4" :key="c" :cx="c * 20" cy="50" r="6">
@@ -34,7 +33,7 @@ onMounted(async () => {
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 .loading {
   position: fixed;
   top: 0;
@@ -45,7 +44,7 @@ onMounted(async () => {
   background: transparent;
   opacity: 1;
 
-  &-svg {
+  & > svg {
     position: absolute;
     bottom: calc(50% - 100px);
     left: calc(50% - 100px);

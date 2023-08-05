@@ -34,11 +34,3 @@ if (process.client) {
   await nextTick()
 }
 </script>
-
-<style scoped lang="scss">
-.main {
-  :where(.v-enter-active) {
-    opacity: 0;
-  }
-}
-</style>

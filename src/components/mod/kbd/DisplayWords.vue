@@ -1,9 +1,9 @@
 <template>
-  <div class="word-words">
-    <div class="word-words-info">
-      <span class="word-words-info-left">{{ leftWord }}</span
-      ><span class="word-words-info-current">{{ currentWord }}</span
-      ><span class="word-words-info-right">{{ rightWord }}</span>
+  <div :class="$style.words">
+    <div :class="$style.info">
+      <span :class="$style.left" v-text="leftWord" />
+      <span :class="$style.current" v-text="currentWord" />
+      <span :class="$style.right" v-text="rightWord" />
     </div>
   </div>
 </template>
@@ -44,37 +44,37 @@ const currentWord = computed(() => {
 })
 </script>
 
-<style lang="scss" scoped>
-.word-words {
+<style lang="scss" module>
+.words {
   width: 100%;
   font-size: 1.2em;
+}
 
-  &-info {
-    display: flex;
-    width: 100%;
-    white-space: nowrap;
+.info {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+}
 
-    &-left {
-      display: flex;
-      flex: 1;
-      justify-content: flex-end;
-      min-width: calc(50% - 0.5em);
-      color: var(--color-6);
-      white-space: pre;
-    }
+.left {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  min-width: calc(50% - 0.5em);
+  color: var(--color-6);
+  white-space: pre;
+}
 
-    &-current {
-      color: var(--color-p);
-      white-space: pre;
-    }
+.current {
+  color: var(--color-p);
+  white-space: pre;
+}
 
-    &-right {
-      display: flex;
-      flex: 1;
-      justify-content: flex-start;
-      color: var(--color-3);
-      white-space: pre;
-    }
-  }
+.right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  color: var(--color-3);
+  white-space: pre;
 }
 </style>

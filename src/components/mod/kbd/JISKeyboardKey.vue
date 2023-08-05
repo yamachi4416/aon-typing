@@ -1,6 +1,6 @@
 <template>
   <g
-    class="keyboard-key"
+    :class="$style.key"
     :highlight="hi"
     @touchstart.prevent.stop="touchstart"
     @touchmove.prevent.stop="touchmove"
@@ -24,31 +24,31 @@
       "
       />
       <foreignObject width="88" height="60">
-        <kbd class="keyboard-text" v-text="'enter'" />
+        <kbd v-text="'enter'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'tab'">
       <rect x="0" y="0" rx="5" ry="5" width="93" height="60" />
       <foreignObject width="93" height="60">
-        <kbd class="keyboard-text" v-text="'tab'" />
+        <kbd v-text="'tab'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'caps lock'">
       <rect x="0" y="0" rx="5" ry="5" width="108" height="60" />
       <foreignObject width="108" height="60">
-        <kbd class="keyboard-text" v-text="'caps lock'" />
+        <kbd v-text="'caps lock'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'shiftL'">
       <rect x="0" y="0" rx="5" ry="5" width="140" height="60" />
       <foreignObject width="140" height="60">
-        <kbd class="keyboard-text" v-text="'shift'" />
+        <kbd v-text="'shift'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'shiftR'">
       <rect x="0" y="0" rx="5" ry="5" width="112" height="60" />
       <foreignObject width="112" height="60">
-        <kbd class="keyboard-text" v-text="'shift'" />
+        <kbd v-text="'shift'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'middle'">
@@ -57,19 +57,19 @@
     <g v-else-if="text === 'space'">
       <rect x="0" y="0" rx="5" ry="5" width="256" height="60" />
       <foreignObject width="258" height="60">
-        <kbd class="keyboard-text" v-text="'space'" />
+        <kbd v-text="'space'" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'back\nspace'">
       <rect x="0" y="0" rx="5" ry="5" width="60" height="60" />
       <foreignObject width="60" height="60">
-        <kbd class="keyboard-text" v-text="text" />
+        <kbd v-text="text" />
       </foreignObject>
     </g>
     <g v-else>
       <rect x="0" y="0" rx="5" ry="5" width="60" height="60" />
       <foreignObject width="60" height="60">
-        <kbd class="keyboard-text normal" v-text="text" />
+        <kbd :class="$style.keys" v-text="text" />
       </foreignObject>
     </g>
   </g>
@@ -130,9 +130,9 @@ function touchend() {
 }
 </script>
 
-<style lang="scss" scoped>
-.keyboard-key {
-  .keyboard-text {
+<style lang="scss" module>
+.key {
+  kbd {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,11 +143,11 @@ function touchend() {
     text-align: center;
     white-space: pre;
     border-radius: 5px;
-
-    &.normal {
-      font-size: 22px;
-      line-height: 2;
-    }
   }
+}
+
+.normal {
+  font-size: 22px;
+  line-height: 2;
 }
 </style>
