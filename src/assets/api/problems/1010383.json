@@ -1,0 +1,52 @@
+{
+  "id": "1010383",
+  "title": "近鉄橿原線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-06",
+  "updatedAt": "2023-08-06",
+  "optional": { "cd": "383" },
+  "words": [
+    {
+      "info": "橿原神宮前",
+      "info2": "かしはらじんぐうまえ",
+      "word": "kasiharajinguumae"
+    },
+    {
+      "info": "畝傍御陵前",
+      "info2": "うねびごりょうまえ",
+      "word": "unebigoryoumae"
+    },
+    { "info": "八木西口", "info2": "やぎにしぐち", "word": "yaginisiguti" },
+    { "info": "大和八木", "info2": "やまとやぎ", "word": "yamatoyagi" },
+    { "info": "新ノ口", "info2": "にのくち", "word": "ninokuti" },
+    { "info": "笠縫", "info2": "かさぬい", "word": "kasanui" },
+    { "info": "田原本", "info2": "たわらもと", "word": "tawaramoto" },
+    { "info": "石見", "info2": "いわみ", "word": "iwami" },
+    { "info": "結崎", "info2": "ゆうざき", "word": "yuuzaki" },
+    {
+      "info": "ファミリー公園前",
+      "info2": "ふぁみりーこうえんまえ",
+      "word": "famiri-kouenmae"
+    },
+    { "info": "平端", "info2": "ひらはた", "word": "hirahata" },
+    { "info": "筒井", "info2": "つつい", "word": "tutui" },
+    {
+      "info": "近鉄郡山",
+      "info2": "きんてつこおりやま",
+      "word": "kintetukooriyama"
+    },
+    { "info": "九条", "info2": "くじょう", "word": "kujou" },
+    { "info": "西ノ京", "info2": "にしのきょう", "word": "nisinokyou" },
+    { "info": "尼ケ辻", "info2": "あまがつじ", "word": "amagatuji" },
+    {
+      "info": "大和西大寺",
+      "info2": "やまとさいだいじ",
+      "word": "yamatosaidaiji"
+    }
+  ]
+}
