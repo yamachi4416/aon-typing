@@ -214,7 +214,7 @@ const chars = japaneseToTypeCharList()
 
       td {
         padding: 3px;
-        font-size: 9px !important;
+        font-size: 9px;
 
         ul {
           @media (width <= 600px) {

@@ -111,6 +111,6 @@ const hasOnTag = computed(() => !!getCurrentInstance()?.vnode?.props?.onTag)
 }
 
 .tags {
-  padding: 3px 0 !important;
+  padding: 3px 0;
 }
 </style>
