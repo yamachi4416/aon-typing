@@ -45,5 +45,9 @@ const _scrollWaiter = scrollWaiter()
 export type ScrollWaiter = typeof _scrollWaiter
 
 export function useScrollWaiter() {
-  return _scrollWaiter
+  if (process.client) {
+    return _scrollWaiter
+  } else {
+    return scrollWaiter()
+  }
 }

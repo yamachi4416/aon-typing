@@ -17,10 +17,6 @@ onBeforeRouteUpdate(() => {
   useScrollWaiter().add()
 })
 
-onBeforeUpdate(() => {
-  useScrollWaiter().add()
-})
-
 definePageMeta({
   pageTransition: {
     duration: 1,
