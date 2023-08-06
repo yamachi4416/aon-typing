@@ -5,13 +5,13 @@ import {
   expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
-import { problems } from '~/assets/api/problems.json'
+import problems from '~/assets/api/newProblems.json'
 
 describe.each(problems.slice(0, 2))(
-  '問題いちらんページの画面遷移の確認',
+  '問題いちらん（新着順）いちらんページの画面遷移の確認',
   (problem) => {
     it(`No.${problem.id}の問題の'内容を見る'ボタンをクリックすると'問題の内容'ページに遷移する`, async () => {
-      const page = await createPage('/problems')
+      const page = await createPage('/problems/news')
 
       const item = page.getByRole('article', { name: problem.title }).first()
       expect(await item.isVisible()).toBeTruthy()
@@ -29,12 +29,12 @@ describe.each(problems.slice(0, 2))(
       await expectLoadingHidden(page)
 
       await page.goBack()
-      await waitForRouterPath(page, '/problems')
+      await waitForRouterPath(page, '/problems/news')
       await expectLoadingHidden(page)
     })
 
     it(`No.${problem.id}の問題の'プレイする'ボタンをクリックすると'タイピングメニュー'ページに遷移する`, async () => {
-      const page = await createPage('/problems')
+      const page = await createPage('/problems/news')
 
       const item = page.getByRole('article', { name: problem.title }).first()
       expect(await item.isVisible()).toBeTruthy()
@@ -59,14 +59,14 @@ describe.each(problems.slice(0, 2))(
       await expectLoadingHidden(page)
 
       await page.goBack()
-      await waitForRouterPath(page, '/problems')
+      await waitForRouterPath(page, '/problems/news')
       await expectLoadingHidden(page)
     })
 
     it(`No.${problem.id}の問題の'タグ'ボタンをクリックすると'タグ'ページに遷移する`, async () => {
       const tag = problem.tags[0]
 
-      const page = await createPage('/problems')
+      const page = await createPage('/problems/news')
 
       const item = page.getByRole('article', { name: problem.title }).first()
       expect(await item.isVisible()).toBeTruthy()
@@ -81,7 +81,7 @@ describe.each(problems.slice(0, 2))(
       await expectLoadingHidden(page)
 
       await page.goBack()
-      await waitForRouterPath(page, '/problems')
+      await waitForRouterPath(page, '/problems/news')
       await expectLoadingHidden(page)
     })
   },
