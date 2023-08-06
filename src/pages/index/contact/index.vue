@@ -101,7 +101,7 @@ async function submit() {
         throw createError({ statusCode: res.status, message: res.statusText })
       }
       posted.value = true
-      useRouter().replace({ name: 'index-contact-thanks' })
+      navigateTo({ name: 'index-contact-thanks', replace: true })
     })
     useScrollWaiter().flush()
   } catch (err) {

@@ -5,18 +5,15 @@ import {
   type IncomingMessage,
   type ServerResponse,
 } from 'node:http'
+import type { AddressInfo } from 'node:net'
 import path from 'node:path'
 import contentDisposition from 'content-disposition'
 
 type Logger = Pick<Console, 'info' | 'error'>
 
 interface Hanlder {
-  match: (url: string, req: IncomingMessage) => boolean
-  handle: (
-    url: string,
-    req: IncomingMessage,
-    res: ServerResponse,
-  ) => Promise<void>
+  match: (url: URL, req: IncomingMessage) => boolean
+  handle: (url: URL, req: IncomingMessage, res: ServerResponse) => Promise<void>
 }
 
 function defineHandler(handler: Hanlder) {
@@ -28,7 +25,7 @@ function contactHandler({ logger }: { logger?: Logger }) {
     match(url, req) {
       return (
         req.method?.toLowerCase() === 'post' &&
-        url === '/api/contact' &&
+        url.pathname === '/api/contact' &&
         /^application\/json/i.test(req.headers?.['content-type'] ?? '')
       )
     },
@@ -57,7 +54,7 @@ function sendFileHandler({ distDir }: { distDir: string; logger?: Logger }) {
     },
     async handle(url, req, res) {
       let file = path.normalize(
-        path.resolve(distDir, ...normalize(url ?? '').split('/')),
+        path.resolve(distDir, ...normalize(url).split('/')),
       )
 
       if (!file.startsWith(root)) {
@@ -98,7 +95,7 @@ function sendFileHandler({ distDir }: { distDir: string; logger?: Logger }) {
     },
   })
 
-  function normalize(pathname: string) {
+  function normalize({ pathname }: URL) {
     if (pathname.endsWith('/')) {
       return `${pathname}index.html`
     } else if (!/\.[^./]+$/.test(pathname)) {
@@ -133,10 +130,12 @@ function sendFileHandler({ distDir }: { distDir: string; logger?: Logger }) {
 }
 
 function logging({
+  url,
   req,
   res,
   logger,
 }: {
+  url: URL
   req: IncomingMessage
   res: ServerResponse
   logger?: Logger
@@ -154,7 +153,7 @@ function logging({
   })
 
   const date = new Date().toISOString()
-  logger?.info(`${date} : ${req.method} ${req.url}`)
+  logger?.info(`${date} : ${req.method} ${url}`)
 }
 
 export async function previewServer({
@@ -168,36 +167,59 @@ export async function previewServer({
   port?: number
   logger?: Logger
 }) {
-  const handlers = [
-    contactHandler({ logger }),
-    sendFileHandler({ distDir, logger }),
-  ]
+  const startServer = async () => {
+    const handlers = [
+      contactHandler({ logger }),
+      sendFileHandler({ distDir, logger }),
+    ]
 
-  const server = createServer((req, res) => {
-    try {
-      logging({ req, res, logger })
-      const url = decodeURI(req.url ?? '')
-      const handler = handlers.find((handler) => handler.match(url, req))
-      if (handler) {
-        void handler.handle(url, req, res)
+    const server = createServer((req, res) => {
+      try {
+        const url = new URL(`${address().address}${decodeURI(req.url ?? '')}`)
+        logging({ url, req, res, logger })
+        const handler = handlers.find((handler) => handler.match(url, req))
+        if (handler) {
+          void handler.handle(url, req, res)
+        }
+      } catch (e) {
+        console.error(e)
+        res.statusCode = 500
+        res.end()
       }
-    } catch (e) {
-      console.error(e)
-      res.statusCode = 500
-      res.end()
-    }
-  })
-
-  return await new Promise<typeof server>((resolve) => {
-    server.listen(port ?? 0, host ?? '127.0.0.1', () => {
-      logger?.info(
-        `
-${'-'.repeat(50)}
-Server Listen On  : ${host}:${port}
-Static Files Root : ${distDir}
-${'-'.repeat(50)}`.trimStart(),
-      )
-      resolve(server)
     })
-  })
+
+    await new Promise((resolve) => {
+      server.listen(port ?? 0, host ?? '127.0.0.1', () => {
+        logger?.info(
+          `
+  ${'-'.repeat(50)}
+  Server Listen On  : ${host}:${port}
+  Static Files Root : ${distDir}
+  ${'-'.repeat(50)}`.trimStart(),
+        )
+        resolve(server)
+      })
+    })
+
+    async function close() {
+      await new Promise((resolve) => server.close(resolve))
+    }
+
+    function address() {
+      const { address: host, port } = server.address() as AddressInfo
+      return {
+        host,
+        port,
+        address: `http://${host}:${port}`,
+      }
+    }
+
+    return {
+      server,
+      close,
+      address: address().address,
+    }
+  }
+
+  return await startServer()
 }

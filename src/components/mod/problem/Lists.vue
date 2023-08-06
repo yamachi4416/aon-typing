@@ -38,7 +38,6 @@ const emit = defineEmits<{
 }>()
 
 const route = useRoute()
-const router = useRouter()
 
 const path = ref(route.path?.replace(/\/$/, ''))
 const page = ref(Number(route.query.page || 1))
@@ -63,6 +62,6 @@ watch(
 )
 
 function select(p: number) {
-  router.push({ query: { ...route.query, page: String(p) } })
+  navigateTo({ query: { ...route.query, page: String(p) } })
 }
 </script>

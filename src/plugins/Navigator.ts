@@ -52,28 +52,28 @@ class Navigator {
   }
 
   async indexProblemDetail({ id }: { id: string }) {
-    await useRouter().push({
+    await navigateTo({
       name: 'index-problems-id',
       params: { id },
     })
   }
 
   async indexTagDetail({ id }: { id: string }) {
-    await useRouter().push({
+    await navigateTo({
       name: 'index-problems-tags-id',
       params: { id },
     })
   }
 
   async gameTagDetail({ id }: { id: string }) {
-    await useRouter().push({
+    await navigateTo({
       name: 'game-menu-problems-tags-id',
       params: { id },
     })
   }
 
   async gameProblemDetail({ id }: { id: string }) {
-    await useRouter().push({
+    await navigateTo({
       name: 'game-menu-problems-id',
       params: { id },
     })
@@ -81,18 +81,18 @@ class Navigator {
 
   async gameMenu({ id }: { id: string }) {
     useGameSetting().setting.value.problemId = id
-    await useRouter().push({ name: 'game-menu' })
+    await navigateTo({ name: 'game-menu' })
   }
 
   async backOrIndex() {
     if (this.enable) {
       if (this.path?.startsWith('/game')) {
-        await useRouter().push({ name: 'index' })
+        await navigateTo({ name: 'index' })
       } else {
         useRouter().back()
       }
     } else {
-      await useRouter().push({ name: 'index' })
+      await navigateTo({ name: 'index' })
     }
   }
 
@@ -100,7 +100,7 @@ class Navigator {
     if (this.enable) {
       useRouter().back()
     } else {
-      await useRouter().replace({ name: 'game-menu' })
+      await navigateTo({ name: 'game-menu', replace: true })
     }
   }
 }

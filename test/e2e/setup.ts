@@ -20,18 +20,13 @@ async function getEndpoint() {
     }
   }
 
-  const server = await previewServer({
+  const { close, address: url } = await previewServer({
     distDir: resolve(process.cwd(), 'dist'),
   })
 
-  const { address: host, port } = server.address() as {
-    address: string
-    port: number
-  }
-
   return {
-    close: async () => await new Promise((resolve) => server.close(resolve)),
-    url: `http://${host}:${port}`,
+    close,
+    url,
   }
 }
 

@@ -82,7 +82,7 @@ onBeforeRouteLeave(async (_to, _from, next) => {
 
 async function startTyping() {
   if (hasPendingModal.value) return
-  await useRouter().push({
+  await navigateTo({
     name: 'game-play',
     query: { id: setting.value.problemId },
   })

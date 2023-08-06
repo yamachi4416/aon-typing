@@ -44,7 +44,7 @@ const { setting } = useGameSetting()
 
 onBeforeMount(() => {
   if (!findProblemItem({ id })) {
-    useRouter().replace({ name: 'game-menu' })
+    navigateTo({ name: 'game-menu', replace: true })
   }
 })
 
@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
 
 onMounted(async () => {
   if (!findProblemItem({ id })) {
-    useRouter().replace({ name: 'game-menu' })
+    navigateTo({ name: 'game-menu', replace: true })
     return
   }
 
@@ -62,7 +62,7 @@ onMounted(async () => {
   const problem = unref(await retrieveProblemDetail({ id }).catch(() => null))
 
   if (!problem) {
-    useRouter().replace({ name: 'game-menu' })
+    navigateTo({ name: 'game-menu', replace: true })
     return
   }
 

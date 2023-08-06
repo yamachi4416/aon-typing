@@ -112,7 +112,7 @@ function normalizedKwd(val: string) {
 
 async function searchProblems() {
   if (enableSearch.value) {
-    await useRouter().push({
+    await navigateTo({
       name: 'index-problems',
       query: { kwd: normalizedKwd(state.kwd) },
     })

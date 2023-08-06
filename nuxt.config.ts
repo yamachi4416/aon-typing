@@ -44,10 +44,6 @@ export default defineNuxtConfig({
   ssr: true,
   srcDir: 'src',
 
-  routeRules: {
-    '/game/play': { ssr: false },
-  },
-
   experimental: {
     payloadExtraction: false,
   },

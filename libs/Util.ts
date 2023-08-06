@@ -63,7 +63,7 @@ export function pagenate<T>({
 export async function healthcheck() {
   try {
     const time = new Date().getTime()
-    const res = await fetch(`/favicon.ico?$t=${time}`)
+    const res = await fetch(`/favicon.ico?t=${time}`)
     return res.status >= 200 && res.status < 300
   } catch (err) {
     return false
