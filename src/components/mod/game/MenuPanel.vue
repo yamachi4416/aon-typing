@@ -134,10 +134,11 @@ const emit = defineEmits<{
   (e: 'detail', problem?: ProblemListItem): any
 }>()
 
-const { setting, problems } = useProblems()
+const { problems } = useProblems()
+const { setting } = useGameSetting()
 
 const problem = computed(() => {
-  const id = setting.problemId
+  const id = setting.value.problemId
   return problems.value.find((p) => p.id === id)
 })
 
@@ -172,7 +173,7 @@ const problemOrders = {
   first: '前から',
   last: '後から',
   random: 'ランダム',
-} as Record<(typeof setting)['problemOrder'], string>
+} as Record<(typeof setting)['value']['problemOrder'], string>
 
 function openProblemSelect() {
   emit('openProblemSelect')
@@ -183,8 +184,8 @@ function randomProblemSelect() {
   if (length > 0) {
     const idx = Math.floor(Math.random() * length)
     const problemId = problems.value[idx].id
-    if (setting.problemId !== problemId) {
-      setting.problemId = problemId
+    if (setting.value.problemId !== problemId) {
+      setting.value.problemId = problemId
     } else if (length > 1) {
       randomProblemSelect()
     }

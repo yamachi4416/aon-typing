@@ -21,7 +21,7 @@ const { retrieveTag, filterTagProblems } = useProblems()
 const tag = await retrieveTag({ id: String(useRoute().params.id) })
 const tags = ref(queryTags())
 const problems = filterTagProblems({
-  problems: computed(() => tag.value?.problems ?? []),
+  problems: computed(() => tag.value.problems),
   tagId: computed(() => tag.value.id),
   tags,
 })

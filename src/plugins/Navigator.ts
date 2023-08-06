@@ -80,7 +80,7 @@ class Navigator {
   }
 
   async gameMenu({ id }: { id: string }) {
-    useProblems().setting.problemId = id
+    useGameSetting().setting.value.problemId = id
     await useRouter().push({ name: 'game-menu' })
   }
 

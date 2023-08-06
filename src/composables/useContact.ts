@@ -1,6 +1,5 @@
-const posted = ref(false)
-
 export function useContactPosted() {
+  const posted = useState(() => false)
   return {
     posted,
   }

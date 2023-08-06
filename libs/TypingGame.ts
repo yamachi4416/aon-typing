@@ -19,20 +19,12 @@ declare global {
   }
 }
 
-export class GameSetting {
-  timeLimit = 0
-  autoMode = 0
-  problemOrder: ProblemOrder = 'first'
-  goalCharCount = 0
-  problemId = ''
-
-  clear() {
-    this.timeLimit = 0
-    this.autoMode = 0
-    this.problemOrder = 'first'
-    this.goalCharCount = 0
-    this.problemId = ''
-  }
+export interface GameSetting {
+  timeLimit: number
+  autoMode: number
+  problemOrder: ProblemOrder
+  goalCharCount: number
+  problemId: string
 }
 
 export class TypingGame {

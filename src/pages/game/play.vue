@@ -39,7 +39,8 @@ const state = reactive({
 
 const id = useRoute().query.id as string
 const modalGameResult = ref<InstanceType<typeof ModalPanel>>()
-const { setting, retrieveProblemDetail, findProblemItem } = useProblems()
+const { retrieveProblemDetail, findProblemItem } = useProblems()
+const { setting } = useGameSetting()
 
 onBeforeMount(() => {
   if (!findProblemItem({ id })) {
@@ -57,7 +58,7 @@ onMounted(async () => {
     return
   }
 
-  setting.problemId = id
+  setting.value.problemId = id
   const problem = unref(await retrieveProblemDetail({ id }).catch(() => null))
 
   if (!problem) {
@@ -105,7 +106,7 @@ async function startTyping() {
 
   state.result = await state.typing.start({
     problem: state.problem,
-    setting,
+    setting: setting.value,
   })
 
   await modalGameResult.value?.open()

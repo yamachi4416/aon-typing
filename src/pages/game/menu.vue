@@ -45,7 +45,7 @@ const modalProblemDetail = ref<Modal>()
 const modals = () =>
   [modalProblemDetail.value, modalProblemList.value].filter((m) => m) as Modal[]
 
-const { setting } = useProblems()
+const { setting } = useGameSetting()
 const problemDetailPanel = ref<InstanceType<typeof ProblemDetailPanel>>()
 
 const hasPendingModal = computed(() =>
@@ -84,7 +84,7 @@ async function startTyping() {
   if (hasPendingModal.value) return
   await useRouter().push({
     name: 'game-play',
-    query: { id: setting.problemId },
+    query: { id: setting.value.problemId },
   })
 }
 
@@ -126,7 +126,7 @@ async function onEscapeKey(e: KeyboardEvent) {
 
 async function selcetProblem({ id }: { id: string }) {
   if (hasPendingModal.value) return
-  setting.problemId = id
+  setting.value.problemId = id
 
   const closes = await Promise.all(
     modals()

@@ -1,35 +1,60 @@
 import type { Ref } from 'vue'
+import type { NitroFetchRequest, AvailableRouterMethod } from 'nitropack'
+import type { FetchResult } from '#app/composables'
+import type { ProblemListItem } from '~~/types/problems'
 
-import { type ProblemDetail, type ProblemListItem } from '~~/types/problems'
+function useFetchCache<
+  K extends NitroFetchRequest,
+  M extends AvailableRouterMethod<K> = 'get' extends AvailableRouterMethod<K>
+    ? 'get'
+    : AvailableRouterMethod<K>,
+  R extends FetchResult<K, M> = FetchResult<K, M>,
+>({ path, key }: { path: K; method?: M; key?: string }) {
+  const cacheKey = key ?? (path as string)
+  const cache = useNuxtData<R>(cacheKey)
 
-import { GameSetting } from '~~/libs/TypingGame'
+  async function fetch() {
+    if (cache.data.value == null) {
+      const { error } = await useFetch(key ?? path, {
+        key: cacheKey,
+      })
 
-function justOrThrow<T = any>(
-  state: Awaited<ReturnType<typeof useFetch<T>>>,
-): Ref<NonNullable<T>> {
-  const { data, error } = state
-  if (data.value == null || typeof data.value === 'string') {
-    throw createError({
-      statusCode: 404,
-      statusMessage: 'Page Not Found',
-      fatal: true,
-    })
+      if (error.value instanceof Error) {
+        throw createError({ ...error.value, fatal: true })
+      }
+    }
+
+    if (cache.data.value == null) {
+      throw createError({
+        statusCode: 404,
+        statusMessage: 'Page Not Found',
+        fatal: true,
+      })
+    } else {
+      return ref(cache.data.value)
+    }
   }
 
-  if (error.value instanceof Error) {
-    throw createError({ ...error.value, fatal: true })
+  return {
+    cache,
+    fetch,
   }
-
-  return data as Ref<NonNullable<T>>
 }
 
-function useProblemState() {
-  let _problems: Awaited<ReturnType<typeof retriveProblems>>
-  let _newProblems: Awaited<ReturnType<typeof retriveTopNewsProblems>>
-  let _tags: Awaited<ReturnType<typeof retriveTags>>
-  let _allNewProblems: Awaited<ReturnType<typeof retriveTopNewsProblems>>
+export function useProblems() {
+  const { cache: _problems, fetch: fetchProblems } = useFetchCache({
+    path: '/api/problems.json',
+  })
+  const { cache: _newProblems, fetch: fetchTopNewsProblems } = useFetchCache({
+    path: '/api/problems/news.json',
+  })
+  const { cache: _tags, fetch: fetchTags } = useFetchCache({
+    path: '/api/tags.json',
+  })
+  const { cache: _allNewProblems, fetch: fetchAllNewProblems } = useFetchCache({
+    path: '/api/problems/news/all.json',
+  })
 
-  const setting = shallowReactive(new GameSetting())
   const problems = computed(() => _problems?.data.value?.problems ?? [])
   const newProblems = computed(() => _newProblems?.data.value ?? [])
   const tagSummary = computed(() => {
@@ -41,74 +66,20 @@ function useProblemState() {
   })
   const allNewProblems = computed(() => _allNewProblems?.data.value ?? [])
 
-  async function retriveProblems() {
-    return await useFetch('/api/problems.json')
-  }
-
-  async function retriveTopNewsProblems() {
-    return await useFetch('/api/problems/news.json')
-  }
-
-  async function retriveTags() {
-    return await useFetch('/api/tags.json')
-  }
-
-  async function retriveAllNewProblems() {
-    return await useFetch('/api/problems/news/all.json')
-  }
-
-  async function fetchProblems() {
-    if (!_problems?.data?.value || process.server) {
-      const state = await retriveProblems()
-      const result = justOrThrow(state)
-      _problems = state
-      return result
-    }
-    return _problems.data
-  }
-
-  async function fetchTopNewsProblems() {
-    if (!_newProblems?.data?.value || process.server) {
-      const state = await retriveTopNewsProblems()
-      const result = justOrThrow(state)
-      _newProblems = state
-      return result
-    }
-    return _newProblems.data
-  }
-
-  async function fetchTags() {
-    if (!_tags?.data?.value || process.server) {
-      const state = await retriveTags()
-      const result = justOrThrow(state)
-      _tags = state
-      return result
-    }
-    return _tags.data
-  }
-
-  async function fetchAllNewProblems() {
-    if (!_allNewProblems?.data?.value || process.server) {
-      const state = await retriveAllNewProblems()
-      const result = justOrThrow(state)
-      _allNewProblems = state
-      return result
-    }
-    return _allNewProblems.data
-  }
-
   async function retrieveTag({ id }: { id: string }) {
-    const state = await useFetch(`/api/tags/${id}.json`, {
+    const { fetch } = useFetchCache({
+      path: '/api/tags/:id',
       key: `/api/tags/${id}.json`,
     })
-    return justOrThrow(state)
+    return await fetch()
   }
 
   async function retrieveProblemDetail({ id }: { id: string }) {
-    const state = await useFetch(`/api/problems/${id}.json`, {
+    const { fetch } = useFetchCache({
+      path: '/api/problems/:id',
       key: `/api/problems/${id}.json`,
     })
-    return justOrThrow(state) as Ref<ProblemDetail>
+    return await fetch()
   }
 
   function findProblemItem({ id }: { id: string }) {
@@ -143,7 +114,6 @@ function useProblemState() {
   }
 
   return {
-    setting,
     problems,
     newProblems,
     tagSummary,
@@ -157,10 +127,4 @@ function useProblemState() {
     findProblemItem,
     filterTagProblems,
   }
-}
-
-const _useProblemState = useProblemState()
-
-export function useProblems() {
-  return _useProblemState
 }
