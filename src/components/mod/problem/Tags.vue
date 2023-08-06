@@ -41,7 +41,6 @@ defineEmits<{
   flex-wrap: wrap;
   gap: 3px;
   justify-content: flex-start;
-  padding: unset;
 
   span,
   button {

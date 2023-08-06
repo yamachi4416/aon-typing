@@ -97,7 +97,7 @@ const uid = getCurrentInstance()?.uid
 }
 
 .tags {
-  padding: 5px 10px 15px;
+  padding: 5px 10px 15px !important;
   font-size: 0.9em;
 }
 </style>
