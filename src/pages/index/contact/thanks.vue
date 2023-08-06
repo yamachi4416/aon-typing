@@ -19,7 +19,7 @@ const { posted } = useContactPosted()
 
 onBeforeMount(() => {
   if (!posted.value) {
-    useNavigator().backOrIndex()
+    navigateTo({ name: 'index', replace: true })
   }
 })
 </script>
