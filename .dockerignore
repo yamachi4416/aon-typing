@@ -1,9 +1,0 @@
-.bin
-.git
-.nuxt
-.output
-.vscode
-.vercel
-node_modules
-/dist
-/data
