@@ -15,6 +15,8 @@ function useFetchCache<
 
   async function fetch() {
     if (cache.data.value == null) {
+      clearNuxtData(cacheKey)
+
       const { error } = await useFetch(key ?? path, {
         key: cacheKey,
       })

@@ -42,19 +42,13 @@ const modalGameResult = ref<InstanceType<typeof ModalPanel>>()
 const { retrieveProblemDetail, findProblemItem } = useProblems()
 const { setting } = useGameSetting()
 
-onBeforeMount(() => {
-  if (!findProblemItem({ id })) {
-    navigateTo({ name: 'game-menu', replace: true })
-  }
-})
-
 onBeforeUnmount(() => {
   abort?.abort()
 })
 
 onMounted(async () => {
   if (!findProblemItem({ id })) {
-    navigateTo({ name: 'game-menu', replace: true })
+    await navigateTo({ name: 'game-menu', replace: true })
     return
   }
 
@@ -62,7 +56,7 @@ onMounted(async () => {
   const problem = unref(await retrieveProblemDetail({ id }).catch(() => null))
 
   if (!problem) {
-    navigateTo({ name: 'game-menu', replace: true })
+    await navigateTo({ name: 'game-menu', replace: true })
     return
   }
 
@@ -70,6 +64,7 @@ onMounted(async () => {
     problem,
     setting,
   })
+
   startTyping()
 })
 
