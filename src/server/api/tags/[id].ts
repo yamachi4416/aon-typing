@@ -2,7 +2,7 @@ import { join } from 'node:path'
 import { readFile } from 'node:fs/promises'
 import { type TagInfo } from '~~/types/problems'
 
-export default defineEventHandler(async ({ context, res }) => {
+export default defineEventHandler(async ({ context, node: { res } }) => {
   try {
     const id = context.params?.id?.split('.')[0]
     const { apiDir } = useRuntimeConfig()
