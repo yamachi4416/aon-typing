@@ -1,4 +1,4 @@
-import { createPage as _createPage } from '@nuxt/test-utils'
+import { createPage as _createPage, url as _url } from '@nuxt/test-utils'
 import { expect } from 'vitest'
 
 type PageOptions = Parameters<typeof _createPage>[1]
@@ -10,6 +10,20 @@ export async function createPage(path: string, options?: PageOptions) {
   const page = await _createPage(path, options)
   await page.waitForLoadState('networkidle')
   return page
+}
+
+export function url(path: string) {
+  if (/^https?:\/\//.test(path)) {
+    return path
+  }
+  return _url(path)
+}
+
+export async function contactUrl(page: Page) {
+  const confUrl = await page.evaluate(
+    () => useNuxtApp().$config.public.contactUrl,
+  )
+  return url(confUrl)
 }
 
 export async function waitForRouterPath(
