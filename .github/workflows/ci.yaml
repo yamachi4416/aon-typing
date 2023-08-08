@@ -19,8 +19,17 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: npm
+      - uses: actions/cache@v2
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/package-lock.json') }}
       - run: npm clean-install
-      - run: npx playwright install --with-deps chromium
+      - if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+      - if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
       - run: npm run generate 1> /dev/null
       - run: npm run lint
       - run: npx vitest run

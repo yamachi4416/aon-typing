@@ -1,6 +1,6 @@
 {
   "framework": "nuxtjs",
-  "installCommand": "npm install",
+  "installCommand": "npm clean-install",
   "devCommand": "npm run dev",
   "buildCommand": "npm run generate",
   "outputDirectory": "dist",
