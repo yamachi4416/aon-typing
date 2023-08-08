@@ -20,11 +20,18 @@ jobs:
         with:
           node-version: 18
           cache: npm
+      - name: playwright-version
+        run: |
+          node -e '
+            const lockfile = require("./package-lock.json")
+            const playwright = lockfile.packages["node_modules/playwright"]
+            process.stdout.write(`::set-output name=version::${playwright.version}`)
+          '
       - uses: actions/cache@v2
         id: playwright-cache
         with:
           path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-playwright-${{ steps.playwright-version.outputs.version }}
       - run: npm clean-install
       - if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
