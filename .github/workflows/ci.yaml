@@ -20,13 +20,13 @@ jobs:
         with:
           node-version: 18
           cache: npm
-      - name: playwright-version
+      - id: playwright-version
         run: |
           node -e '
             const lockfile = require("./package-lock.json")
             const playwright = lockfile.packages["node_modules/playwright"]
-            process.stdout.write(`::set-output name=version::${playwright.version}`)
-          '
+            console.log(`version=${playwright.version}`)
+          ' >> $GITHUB_OUTPUT
       - uses: actions/cache@v2
         id: playwright-cache
         with:
