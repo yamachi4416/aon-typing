@@ -1,16 +1,30 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - main
-      - develop
-  pull_request:
-    branches:
-      - main
-      - develop
+on: push
+
+env:
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm clean-install
+
+      - name: Nuxt prepare
+        run: npx nuxt prepare
+
+      - name: Lint
+        run: npm run lint
+
   test:
     runs-on: ubuntu-latest
 
@@ -20,23 +34,38 @@ jobs:
         with:
           node-version: 18
           cache: npm
-      - id: playwright-version
+
+      - name: Install dependencies
+        run: npm clean-install
+
+      - name: Set playwright path and Get playwright version
         run: |
+          echo "PLAYWRIGHT_BROWSERS_PATH=$HOME/.cache/playwright-bin" >> $GITHUB_ENV
           node -e '
             const lockfile = require("./package-lock.json")
             const playwright = lockfile.packages["node_modules/playwright"]
-            console.log(`version=${playwright.version}`)
-          ' >> $GITHUB_OUTPUT
-      - uses: actions/cache@v2
+            console.log(`PLAYWRIGHT_VERSION=${playwright.version}`)
+          ' >> $GITHUB_ENV
+
+      - name: Cache playwright bin
+        uses: actions/cache@v3
         id: playwright-cache
         with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ steps.playwright-version.outputs.version }}
-      - run: npm clean-install
-      - if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps chromium
-      - if: steps.playwright-cache.outputs.cache-hit == 'true'
-        run: npx playwright install-deps chromium
-      - run: npm run generate 1> /dev/null
-      - run: npm run lint
-      - run: npx vitest run
+          key: ${{ runner.os }}-playwright-bin-v1-${{ env.PLAYWRIGHT_VERSION }}
+          path: ${{ env.PLAYWRIGHT_BROWSERS_PATH }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-bin-v1-
+
+      - name: Install playwright
+        run: |
+          if ${{ steps.playwright-cache.outputs.cache-hit != 'true' }}; then
+            npx playwright-core install --with-deps chromium
+          else
+            npx playwright install-deps chromium
+          fi
+
+      - name: Run generate
+        run: npm run generate
+
+      - name: Run e2e test
+        run: npx vitest run
