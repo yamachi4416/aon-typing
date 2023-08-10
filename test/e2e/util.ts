@@ -19,11 +19,18 @@ export function url(path: string) {
   return _url(path)
 }
 
+export async function publicConfig(page: Page) {
+  return await page.evaluate(() => useNuxtApp().$config.public)
+}
+
+export async function baseUrl(page: Page, path: string) {
+  const config = await publicConfig(page)
+  return url(`${config.baseUrl}${path}`)
+}
+
 export async function contactUrl(page: Page) {
-  const confUrl = await page.evaluate(
-    () => useNuxtApp().$config.public.contactUrl,
-  )
-  return url(confUrl)
+  const config = await publicConfig(page)
+  return url(config.contactUrl)
 }
 
 export async function waitForRouterPath(
