@@ -1,7 +1,7 @@
 <template>
   <div>
     <ModProblemDetail :detail="detail" @tag="$navigator.indexTagDetail">
-      <button v-show="$navigator.enable" @click="$navigator.backOrIndex()">
+      <button v-show="$navigator.enable" @click="$navigator.backOrIndex">
         もどる
       </button>
       <button @click="$navigator.gameMenu({ id })">プレイする</button>

@@ -19,7 +19,7 @@
       </template>
     </PartsSection>
     <ModProblemLists
-      :problems="problems"
+      :problems="kwdsProblems"
       @tag="$navigator.indexTagDetail"
       @detail="$navigator.indexProblemDetail"
       @play="$navigator.gameMenu"
@@ -35,18 +35,18 @@ useHead({
   title: '問題いちらん',
 })
 
-await useProblems().fetchProblems()
+const { problems, fetchProblems } = useProblems()
 
 const kwds = ref([] as string[])
-const problems = computed(() => {
+const kwdsProblems = computed(() => {
   if (kwds.value?.length) {
     return (
-      useProblems().problems.value.filter((p) =>
+      problems.value.filter((p) =>
         kwds.value.every((kwd) => p.title.includes(kwd)),
       ) ?? []
     )
   }
-  return useProblems().problems.value
+  return problems.value
 })
 
 onMounted(() => {
@@ -69,6 +69,8 @@ function convertKwds(val: LocationQueryValue | LocationQueryValue[]) {
     .flatMap((kwd) => kwd?.split(/[\u{20}\u{3000}]/u).filter((v) => v) ?? [])
     .filter((kwd) => kwd)
 }
+
+await fetchProblems()
 </script>
 
 <style lang="scss" module>

@@ -6,12 +6,12 @@
         @start="startTyping"
         @cancel="cancel"
         @detail="openProblemDetail"
-        @open-problem-select="modalProblemList?.open()"
+        @open-problem-select="modalProblemList?.open"
       />
     </ModalPanel>
     <ModalPanel ref="modalProblemList" :inert="modalProblemDetail?.isOpen">
       <ModGameProblemListPanel
-        @close="modalProblemList?.close()"
+        @close="modalProblemList?.close"
         @select="selcetProblem"
         @detail="openProblemSelectDetail"
       />
@@ -19,8 +19,8 @@
     <ModalPanel ref="modalProblemDetail">
       <ProblemDetailPanel
         ref="problemDetailPanel"
-        @close="modalProblemDetail?.close()"
-        @back="modalProblemDetail?.close()"
+        @close="modalProblemDetail?.close"
+        @back="modalProblemDetail?.close"
         @select="selcetProblem"
       />
     </ModalPanel>

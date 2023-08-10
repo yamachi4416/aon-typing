@@ -1,8 +1,5 @@
 <template>
-  <ModProblemList
-    :problems="pages.items"
-    @tag="(tag: ProblemItemTag) => emit('tag', tag)"
-  >
+  <ModProblemList :problems="pages.items" @tag="(tag) => emit('tag', tag)">
     <template #default="{ problem }">
       <button @click="$emit('detail', problem)">内容を見る</button>
       <button @click="$emit('play', problem)">プレイする</button>

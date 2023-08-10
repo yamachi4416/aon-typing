@@ -19,10 +19,10 @@
           >からどうぞ。
         </p>
         <footer>
-          <button v-show="$navigator.enable" @click="$router.back()">
+          <button v-show="$navigator.enable" @click="$router.back">
             もどる
           </button>
-          <button title="印刷ダイアログを表示する" @click="print()">
+          <button title="印刷ダイアログを表示する" @click="print">
             印刷する
           </button>
         </footer>

@@ -93,7 +93,8 @@ useHead({
   title: 'トップページ',
 })
 
-const { newProblems, tagSummary } = useProblems()
+const { newProblems, tagSummary, fetchTopNewsProblems, fetchTags } =
+  useProblems()
 
 const state = reactive({
   kwd: '',
@@ -133,10 +134,7 @@ function changeKwds() {
   }
 }
 
-await Promise.all([
-  useProblems().fetchTopNewsProblems(),
-  useProblems().fetchTags(),
-])
+await Promise.all([fetchTopNewsProblems(), fetchTags()])
 </script>
 
 <style lang="scss" module>

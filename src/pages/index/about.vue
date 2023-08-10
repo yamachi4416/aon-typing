@@ -12,7 +12,7 @@
         他のサイトにはないおもしろ機能もあるのでいちど遊んでみてください。
       </p>
       <template #right>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
     </PartsSection>
 
@@ -59,7 +59,7 @@
         </div>
       </div>
       <template #right>
-        <img-neko-user-keyboard />
+        <ImgNekoUserKeyboard />
       </template>
     </PartsSection>
 

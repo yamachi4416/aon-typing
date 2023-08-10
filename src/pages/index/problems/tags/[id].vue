@@ -1,7 +1,7 @@
 <template>
   <div>
     <ModProblemTagInfo :tag="tag" :qtags="tags" @tag="changeTags">
-      <button v-show="$navigator.enable" @click="$router.back()">もどる</button>
+      <button v-show="$navigator.enable" @click="$router.back">もどる</button>
       <template #right>
         <ImgNekoUserKeyboard />
       </template>

@@ -69,13 +69,13 @@
           <td>
             <button
               title="問題をいちらんから選択する"
-              @click="openProblemSelect()"
+              @click="openProblemSelect"
             >
               いちらん選択
             </button>
             <button
               title="問題をランダムに選択する"
-              @click="randomProblemSelect()"
+              @click="randomProblemSelect"
             >
               ランダム選択
             </button>
