@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { baseUrl, createPage } from '~~/test/e2e/util'
+import { $fetch, baseUrl, createPage } from '~~/test/e2e/util'
 
 describe('SEO関連のメタタグの確認', () => {
   it.each([{ path: '/' }, { path: '/about' }])(
@@ -24,6 +24,12 @@ describe('SEO関連のメタタグの確認', () => {
         { property: 'og:image:height', content: '315' },
         { property: 'og:image:width', content: '600' },
       ]
+
+      const html = await $fetch(path)
+      for (const { property, content } of ogps) {
+        expect(html).toContain(`property="${property}"`)
+        expect(html).toContain(`content="${content}"`)
+      }
 
       for (const { property, content } of ogps) {
         const actual = await head

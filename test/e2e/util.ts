@@ -1,4 +1,8 @@
-import { createPage as _createPage, url as _url } from '@nuxt/test-utils'
+import {
+  $fetch,
+  createPage as _createPage,
+  url as _url,
+} from '@nuxt/test-utils'
 import { expect } from 'vitest'
 
 type PageOptions = Parameters<typeof _createPage>[1]
@@ -69,3 +73,5 @@ export async function expectLoadingHidden(page: Page, timeout = 3000) {
   await loading.waitFor({ state: 'hidden', timeout })
   expect(await loading.isHidden()).toBeTruthy()
 }
+
+export { $fetch }
