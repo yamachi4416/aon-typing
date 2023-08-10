@@ -1,4 +1,4 @@
-import { injectHead } from '@unhead/vue'
+import { injectHead } from '#imports'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
@@ -9,7 +9,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       const route = useRoute()
       const head = injectHead()
 
-      head?.hooks?.hook('ssr:render', ({ tags }) => {
+      head?.hooks?.hook('tags:resolve', ({ tags }) => {
         const addTags = [
           {
             tag: 'meta',
