@@ -9,9 +9,20 @@ function useFetchCache<
     ? 'get'
     : AvailableRouterMethod<K>,
   R extends FetchResult<K, M> = FetchResult<K, M>,
->({ path, key }: { path: K; method?: M; key?: string }) {
+  T = any,
+>({
+  path,
+  key,
+  transform,
+}: {
+  path: K
+  method?: M
+  key?: string
+  transform: (data: Ref<R | null>) => T
+}) {
   const cacheKey = key ?? (path as string)
   const cache = useNuxtData<R>(cacheKey)
+  const value = computed(() => transform(cache.data))
 
   async function fetch() {
     if (cache.data.value == null) {
@@ -39,39 +50,43 @@ function useFetchCache<
 
   return {
     cache,
+    value,
     fetch,
   }
 }
 
 export function useProblems() {
-  const { cache: _problems, fetch: fetchProblems } = useFetchCache({
+  const { value: problems, fetch: fetchProblems } = useFetchCache({
     path: '/api/problems.json',
-  })
-  const { cache: _newProblems, fetch: fetchTopNewsProblems } = useFetchCache({
-    path: '/api/problems/news.json',
-  })
-  const { cache: _tags, fetch: fetchTags } = useFetchCache({
-    path: '/api/tags.json',
-  })
-  const { cache: _allNewProblems, fetch: fetchAllNewProblems } = useFetchCache({
-    path: '/api/problems/news/all.json',
+    transform: (data) => data.value?.problems ?? [],
   })
 
-  const problems = computed(() => _problems?.data.value?.problems ?? [])
-  const newProblems = computed(() => _newProblems?.data.value ?? [])
-  const tagSummary = computed(() => {
-    const tags = _tags?.data.value ?? {}
-    return Object.entries(tags).map(([name, tag]) => ({
-      ...tag,
-      name,
-    }))
+  const { value: newProblems, fetch: fetchTopNewsProblems } = useFetchCache({
+    path: '/api/problems/news.json',
+    transform: (data) => data.value ?? [],
   })
-  const allNewProblems = computed(() => _allNewProblems?.data.value ?? [])
+
+  const { value: tagSummary, fetch: fetchTags } = useFetchCache({
+    path: '/api/tags.json',
+    transform: (data) => {
+      const tags = data.value ?? {}
+      return Object.entries(tags).map(([name, tag]) => ({
+        ...tag,
+        name,
+      }))
+    },
+  })
+
+  const { value: allNewProblems, fetch: fetchAllNewProblems } = useFetchCache({
+    path: '/api/problems/news/all.json',
+    transform: (data) => data.value ?? [],
+  })
 
   async function retrieveTag({ id }: { id: string }) {
     const { fetch } = useFetchCache({
       path: '/api/tags/:id',
       key: `/api/tags/${id}.json`,
+      transform: (data) => data,
     })
     return await fetch()
   }
@@ -80,6 +95,7 @@ export function useProblems() {
     const { fetch } = useFetchCache({
       path: '/api/problems/:id',
       key: `/api/problems/${id}.json`,
+      transform: (data) => data,
     })
     return await fetch()
   }
