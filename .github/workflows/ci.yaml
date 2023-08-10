@@ -61,7 +61,7 @@ jobs:
           if ${{ steps.playwright-cache.outputs.cache-hit != 'true' }}; then
             npx playwright-core install --with-deps chromium
           else
-            npx playwright install-deps chromium
+            npx playwright-core install-deps chromium
           fi
 
       - name: Run generate
