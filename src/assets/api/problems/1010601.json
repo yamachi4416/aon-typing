@@ -1,0 +1,28 @@
+{
+  "id": "1010601",
+  "title": "一畑電車大社線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-10",
+  "updatedAt": "2023-08-10",
+  "optional": { "cd": "601" },
+  "words": [
+    {
+      "info": "出雲大社前",
+      "info2": "いずもたいしゃまえ",
+      "word": "izumotaisyamae"
+    },
+    {
+      "info": "浜山公園北口",
+      "info2": "はまやまこうえんきたぐち",
+      "word": "hamayamakouenkitaguti"
+    },
+    { "info": "遙堪", "info2": "ようかん", "word": "youkann" },
+    { "info": "高浜", "info2": "たかはま", "word": "takahama" },
+    { "info": "川跡", "info2": "かわと", "word": "kawato" }
+  ]
+}

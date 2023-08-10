@@ -1,0 +1,61 @@
+{
+  "id": "1010600",
+  "title": "一畑電車北松江線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-10",
+  "updatedAt": "2023-08-10",
+  "optional": { "cd": "600" },
+  "words": [
+    {
+      "info": "松江しんじ湖温泉",
+      "info2": "まつえしんじこおんせん",
+      "word": "matuesinjikoonsenn"
+    },
+    {
+      "info": "松江イングリッシュガーデン前",
+      "info2": "まつえいんぐりっしゅがーでんまえ",
+      "word": "matueingurissyuga-denmae"
+    },
+    { "info": "朝日ケ丘", "info2": "あさひがおか", "word": "asahigaoka" },
+    { "info": "長江", "info2": "ながえ", "word": "nagae" },
+    { "info": "秋鹿町", "info2": "あいかまち", "word": "aikamati" },
+    {
+      "info": "松江フォーゲルパーク",
+      "info2": "まつえふぉーげるぱーく",
+      "word": "matuefo-gerupa-ku"
+    },
+    { "info": "高ノ宮", "info2": "たかのみや", "word": "takanomiya" },
+    { "info": "津ノ森", "info2": "つのもり", "word": "tunomori" },
+    { "info": "伊野灘", "info2": "いのなだ", "word": "inonada" },
+    { "info": "一畑口", "info2": "いちばたぐち", "word": "itibataguti" },
+    { "info": "園", "info2": "その", "word": "sono" },
+    {
+      "info": "湖遊館新駅",
+      "info2": "こゆうかんしんえき",
+      "word": "koyuukansinneki"
+    },
+    { "info": "布崎", "info2": "ぬのざき", "word": "nunozaki" },
+    { "info": "雲州平田", "info2": "うんしゅうひらた", "word": "unsyuuhirata" },
+    { "info": "旅伏", "info2": "たぶし", "word": "tabusi" },
+    { "info": "美談", "info2": "みだみ", "word": "midami" },
+    { "info": "大寺", "info2": "おおてら", "word": "ootera" },
+    { "info": "川跡", "info2": "かわと", "word": "kawato" },
+    { "info": "武志", "info2": "たけし", "word": "takesi" },
+    { "info": "大津町", "info2": "おおつまち", "word": "ootumati" },
+    {
+      "info": "出雲科学館パークタウン前",
+      "info2": "いずもかがくかんぱーくたうんまえ",
+      "word": "izumokagakukanpa-kutaunmae"
+    },
+    {
+      "info": "電鉄出雲市",
+      "info2": "でんてついずもし",
+      "word": "dentetuizumosi"
+    }
+  ]
+}
