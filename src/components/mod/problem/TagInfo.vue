@@ -46,43 +46,25 @@ const emit = defineEmits<{
   (e: 'tag', tags: string[]): any
 }>()
 
-const tags = ref(getTags())
+const tags = computed(() => {
+  const all = props.tag.problems?.flatMap((p) => p.tags) ?? []
+  const map = new Map(all.map((tag) => [tag.id, tag]))
+  const ons = new Set(props.qtags)
+  return [...map.values()]
+    .filter(({ id }) => id !== props.tag.id)
+    .map((tag) => ({
+      ...tag,
+      selected: ons.has(tag.id),
+    }))
+})
 
-function getTags() {
-  const mp = new Set<string>()
-  return (
-    props.tag.problems
-      ?.flatMap((p) => p.tags)
-      .filter((tag) => {
-        if (tag.id === props.tag.id || mp.has(tag.id)) {
-          return false
-        }
-        mp.add(tag.id)
-        return true
-      })
-      .map((tag) => ({
-        ...tag,
-        selected: false,
-      })) ?? []
-  )
-}
-
-function selectTag(tag: { selected: boolean }) {
-  tag.selected = !tag.selected
-  const stags = tags.value.filter((t) => t.selected).map((t) => t.id)
+function selectTag(tag: { id: string; selected: boolean }) {
+  const stags = tag.selected
+    ? props.qtags.filter((id) => id !== tag.id)
+    : [...props.qtags, tag.id].sort()
   useNavigator().replaceQuery({ tags: stags.join(',') })
   emit('tag', stags)
 }
-
-watch(
-  () => props.qtags,
-  (value) => {
-    const stags = new Set(value ?? [])
-    tags.value.forEach((tag) => {
-      tag.selected = stags.has(tag.id)
-    })
-  },
-)
 </script>
 
 <style lang="scss" module>
