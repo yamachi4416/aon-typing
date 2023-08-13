@@ -10,9 +10,7 @@
       <p v-if="problems.length == 0">検索結果はありません</p>
       <p v-else>{{ problems.length }} 件の検索結果があります</p>
       <footer>
-        <button v-show="$navigator.enable" @click="$router.back()">
-          もどる
-        </button>
+        <button v-show="$navigator.enable" @click="$router.back">もどる</button>
       </footer>
       <template #right>
         <ImgNekoUserKeyboard />
@@ -28,9 +26,6 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeRouteLeave } from 'vue-router'
-import type { LocationQueryValue } from 'vue-router'
-
 useHead({
   title: '問題いちらん',
 })
@@ -60,7 +55,7 @@ onMounted(() => {
   onBeforeRouteLeave(() => unwatchQuery())
 })
 
-function convertKwds(val: LocationQueryValue | LocationQueryValue[]) {
+function convertKwds(val: string | null | (string | null)[]) {
   const kwds = () => {
     if (!val) return []
     return typeof val === 'string' ? [val] : val

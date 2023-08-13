@@ -1,4 +1,3 @@
-import type { Ref } from 'vue'
 import type { NitroFetchRequest, AvailableRouterMethod } from 'nitropack'
 import type { FetchResult } from '#app/composables'
 import type { ProblemListItem } from '~~/types/problems'

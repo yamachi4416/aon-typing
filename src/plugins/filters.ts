@@ -18,7 +18,7 @@ function percent(value: number, length = 1) {
   return Math.round(n * m) / m
 }
 
-export default defineNuxtPlugin((_) => {
+export default defineNuxtPlugin(() => {
   return {
     provide: {
       filters: {

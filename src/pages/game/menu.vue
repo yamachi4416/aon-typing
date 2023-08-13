@@ -28,7 +28,6 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeRouteLeave } from 'vue-router'
 import ModalPanel from '~/components/parts/ModalPanel.vue'
 import ProblemDetailPanel from '~/components/mod/game/ProblemDetailPanel.vue'
 import { ProblemListItem } from '~~/types/problems'

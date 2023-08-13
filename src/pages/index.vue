@@ -5,8 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeRouteUpdate } from 'vue-router'
-
 useHead({
   bodyAttrs: {
     class: 'scroll-y',
