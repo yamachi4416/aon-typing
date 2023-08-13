@@ -7,8 +7,8 @@
           の検索結果
         </h2>
       </header>
-      <p v-if="problems.length == 0">検索結果はありません</p>
-      <p v-else>{{ problems.length }} 件の検索結果があります</p>
+      <p v-if="kwdsProblems.length == 0">検索結果はありません</p>
+      <p v-else>{{ kwdsProblems.length }} 件の検索結果があります</p>
       <footer>
         <button v-show="$navigator.enable" @click="$router.back">もどる</button>
       </footer>

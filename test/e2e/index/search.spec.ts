@@ -6,6 +6,8 @@ import {
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
+import { problems } from '~/assets/api/problems.json'
+
 it("トップページの'検索'フォームから問題を検索することができる", async () => {
   const page = await createPage('/')
 
@@ -31,6 +33,13 @@ it("トップページの'検索'フォームから問題を検索すること�
 
   expect(await heading.isVisible()).toBeTruthy()
   await expectLoadingHidden(page)
+
+  const hits = problems.filter(({ title }) => title.includes('駅')).length
+  const message = container.getByRole('paragraph')
+
+  expect(await message.textContent()).toContain(
+    `${hits} 件の検索結果があります`,
+  )
 
   const titles = await container
     .getByRole('article')
