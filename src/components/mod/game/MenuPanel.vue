@@ -204,7 +204,6 @@ function randomProblemSelect() {
 
 .content {
   display: grid;
-  justify-content: center;
   padding: 0.5em;
 
   & > table {

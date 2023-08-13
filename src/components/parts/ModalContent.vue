@@ -6,9 +6,8 @@
   >
     <header>
       <h1 :id="titleId">{{ title }}</h1>
-      <span>
+      <span v-if="showClose">
         <CloseCircle
-          v-if="showClose"
           :title="`${title}ダイアログを閉じる`"
           @click="$emit('close')"
         />
@@ -107,19 +106,28 @@ defineExpose({
     top: 0;
     z-index: 10;
     display: grid;
-    grid-template-columns: 42px 1fr 42px;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid var(--color-9);
 
-    @include vars.media_s {
-      grid-template-columns: 1fr 42px;
+    &:has(> span) {
+      grid-template-columns: 42px 1fr 42px;
+
+      @include vars.media_s {
+        grid-template-columns: 1fr 42px;
+      }
+
+      @include vars.media_ml {
+        &::before {
+          content: '';
+        }
+
+        grid-template-columns: 42px 1fr 42px;
+      }
     }
 
-    @include vars.media_ml {
-      &::before {
-        content: '';
-      }
+    &:not(:has(> span)) {
+      grid-template-columns: 1fr;
     }
 
     h1 {
