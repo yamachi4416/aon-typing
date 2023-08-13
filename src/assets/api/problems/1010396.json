@@ -1,0 +1,27 @@
+{
+  "id": "1010396",
+  "title": "南海高師浜線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-13",
+  "updatedAt": "2023-08-13",
+  "optional": { "cd": "396" },
+  "words": [
+    { "info": "高師浜", "info2": "たかしのはま", "word": "takasinohama" },
+    {
+      "info": "伽羅橋・南",
+      "info2": "きゃらばしみなみ",
+      "word": "kyarabasiminami"
+    },
+    {
+      "info": "伽羅橋・北",
+      "info2": "きゃらばしきた",
+      "word": "kyarabasikita"
+    },
+    { "info": "羽衣", "info2": "はごろも", "word": "hagoromo" }
+  ]
+}
