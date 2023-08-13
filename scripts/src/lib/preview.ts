@@ -95,7 +95,8 @@ function sendFileHandler({ distDir }: { distDir: string; logger?: Logger }) {
     },
   })
 
-  function normalize({ pathname }: URL) {
+  function normalize(url: URL) {
+    const pathname = decodeURIComponent(url.pathname)
     if (pathname.endsWith('/')) {
       return `${pathname}index.html`
     } else if (!/\.[^./]+$/.test(pathname)) {
@@ -192,10 +193,10 @@ export async function previewServer({
       server.listen(port ?? 0, host ?? '127.0.0.1', () => {
         logger?.info(
           `
-  ${'-'.repeat(50)}
-  Server Listen On  : ${host}:${port}
-  Static Files Root : ${distDir}
-  ${'-'.repeat(50)}`.trimStart(),
+${'-'.repeat(50)}
+Server Listen On  : ${host}:${port}
+Static Files Root : ${distDir}
+${'-'.repeat(50)}`.trimStart(),
         )
         resolve(server)
       })
