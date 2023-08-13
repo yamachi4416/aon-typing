@@ -11,41 +11,40 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - run: corepack enable
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: npm
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: npm clean-install
+        run: pnpm install
 
       - name: Nuxt prepare
-        run: npx nuxt prepare
+        run: pnpx nuxt prepare
 
       - name: Lint
-        run: npm run lint
+        run: pnpm run lint
 
   test:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
+      - run: corepack enable
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: npm
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: npm clean-install
+        run: pnpm install
 
       - name: Set playwright path and Get playwright version
         run: |
-          echo "PLAYWRIGHT_BROWSERS_PATH=$HOME/.cache/playwright-bin" >> $GITHUB_ENV
-          node -e '
-            const lockfile = require("./package-lock.json")
-            const playwright = lockfile.packages["node_modules/playwright"]
-            console.log(`PLAYWRIGHT_VERSION=${playwright.version}`)
-          ' >> $GITHUB_ENV
+          echo "PLAYWRIGHT_BROWSERS_PATH=${HOME}/.cache/playwright-bin" >> $GITHUB_ENV
+          PLAYWRIGHT_VERSION="$(pnpm ls --json playwright-core | jq --raw-output '.[0].devDependencies["playwright-core"].version')"
+          echo "PLAYWRIGHT_VERSION=${PLAYWRIGHT_VERSION}" >> $GITHUB_ENV
 
       - name: Cache playwright bin
         uses: actions/cache@v3
@@ -59,13 +58,13 @@ jobs:
       - name: Install playwright
         run: |
           if ${{ steps.playwright-cache.outputs.cache-hit != 'true' }}; then
-            npx playwright-core install --with-deps chromium
+            pnpm playwright-core install --with-deps chromium
           else
-            npx playwright-core install-deps chromium
+            pnpm playwright-core install-deps chromium
           fi
 
       - name: Run generate
-        run: npm run generate
+        run: pnpm run generate
 
       - name: Run e2e test
-        run: npx vitest run
+        run: pnpm run test:ci
