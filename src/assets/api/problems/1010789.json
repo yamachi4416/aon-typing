@@ -1,0 +1,20 @@
+{
+  "id": "1010789",
+  "title": "ＩＲいしかわ鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-14",
+  "updatedAt": "2023-08-14",
+  "optional": { "cd": "789" },
+  "words": [
+    { "info": "倶利伽羅", "info2": "くりから", "word": "kurikara" },
+    { "info": "津幡", "info2": "つばた", "word": "tubata" },
+    { "info": "森本", "info2": "もりもと", "word": "morimoto" },
+    { "info": "東金沢", "info2": "ひがしかなざわ", "word": "higasikanazawa" },
+    { "info": "金沢", "info2": "かなざわ", "word": "kanazawa" }
+  ]
+}

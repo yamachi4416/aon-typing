@@ -1,0 +1,54 @@
+{
+  "id": "1010788",
+  "title": "あいの風とやま鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-14",
+  "updatedAt": "2023-08-14",
+  "optional": { "cd": "788" },
+  "words": [
+    { "info": "市振", "info2": "いちぶり", "word": "itiburi" },
+    {
+      "info": "越中宮崎",
+      "info2": "えっちゅうみやざき",
+      "word": "ettyuumiyazaki"
+    },
+    { "info": "泊", "info2": "とまり", "word": "tomari" },
+    { "info": "入善", "info2": "にゅうぜん", "word": "nyuuzenn" },
+    { "info": "西入善", "info2": "にしにゅうぜん", "word": "nisinyuuzenn" },
+    { "info": "生地", "info2": "いくじ", "word": "ikuji" },
+    { "info": "黒部", "info2": "くろべ", "word": "kurobe" },
+    { "info": "魚津", "info2": "うおづ", "word": "uodu" },
+    {
+      "info": "東滑川",
+      "info2": "ひがしなめりかわ",
+      "word": "higasinamerikawa"
+    },
+    { "info": "滑川", "info2": "なめりかわ", "word": "namerikawa" },
+    { "info": "水橋", "info2": "みずはし", "word": "mizuhasi" },
+    { "info": "東富山", "info2": "ひがしとやま", "word": "higasitoyama" },
+    { "info": "新富山口", "info2": "しんとやまぐち", "word": "sintoyamaguti" },
+    { "info": "富山", "info2": "とやま", "word": "toyama" },
+    { "info": "呉羽", "info2": "くれは", "word": "kureha" },
+    { "info": "小杉", "info2": "こすぎ", "word": "kosugi" },
+    {
+      "info": "越中大門",
+      "info2": "えっちゅうだいもん",
+      "word": "ettyuudaimonn"
+    },
+    { "info": "高岡", "info2": "たかおか", "word": "takaoka" },
+    {
+      "info": "高岡やぶなみ",
+      "info2": "たかおかやぶなみ",
+      "word": "takaokayabunami"
+    },
+    { "info": "西高岡", "info2": "にしたかおか", "word": "nisitakaoka" },
+    { "info": "福岡", "info2": "ふくおか", "word": "hukuoka" },
+    { "info": "石動", "info2": "いするぎ", "word": "isurugi" },
+    { "info": "倶利伽羅", "info2": "くりから", "word": "kurikara" }
+  ]
+}
