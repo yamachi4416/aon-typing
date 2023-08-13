@@ -2,8 +2,10 @@ name: CI
 
 on: push
 
+permissions: {}
+
 env:
-  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
 jobs:
   lint:
@@ -15,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: "pnpm"
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install
@@ -35,7 +37,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: "pnpm"
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install
@@ -68,10 +70,3 @@ jobs:
 
       - name: Run e2e test
         run: pnpm run test:ci
-
-  deploy:
-    needs:
-      - lint
-      - test
-    uses: ./.github/workflows/vercel.yaml
-    secrets: inherit

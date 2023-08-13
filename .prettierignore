@@ -1,4 +1,5 @@
 .*/
+!.github/
 **/dist/
 /data/
 node_modules/
