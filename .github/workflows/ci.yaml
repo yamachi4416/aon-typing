@@ -68,3 +68,10 @@ jobs:
 
       - name: Run e2e test
         run: pnpm run test:ci
+
+  deploy:
+    needs:
+      - lint
+      - test
+    uses: ./.github/workflows/vercel.yaml
+    secrets: inherit
