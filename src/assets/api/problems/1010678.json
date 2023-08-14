@@ -1,0 +1,30 @@
+{
+  "id": "1010678",
+  "title": "ディズニーリゾートライン(ベイサイド－リゾートゲートウェイ)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-14",
+  "updatedAt": "2023-08-14",
+  "optional": { "cd": "678" },
+  "words": [
+    {
+      "info": "リゾートゲートウェイ・ステーション",
+      "info2": "りぞーとげーとうぇい・すてーしょん",
+      "word": "rizo-toge-towei/sute-syonn"
+    },
+    {
+      "info": "東京ディズニーシー・ステーション",
+      "info2": "とうきょうでぃずにーしー・すてーしょん",
+      "word": "toukyoudhizuni-si-/sute-syonn"
+    },
+    {
+      "info": "ベイサイド・ステーション",
+      "info2": "べいさいど・すてーしょん",
+      "word": "beisaido/sute-syonn"
+    }
+  ]
+}
