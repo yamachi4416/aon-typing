@@ -4,6 +4,7 @@ on:
   workflow_run:
     workflows: ['CI']
     types: [completed]
+    branches: [main]
 
 permissions: {}
 
@@ -12,8 +13,7 @@ env:
 
 jobs:
   prod:
-    if: |
-      github.ref == 'refs/heads/main' && github.event.workflow_run.conclusion == 'success'
+    if: github.event.workflow_run.conclusion == 'success'
 
     runs-on: ubuntu-latest
 
