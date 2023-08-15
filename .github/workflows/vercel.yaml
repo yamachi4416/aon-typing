@@ -1,4 +1,4 @@
-name: Vercel
+name: Vercel Deployment
 
 on:
   workflow_run:
@@ -6,6 +6,9 @@ on:
     types: [completed]
 
 permissions: {}
+
+env:
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
 jobs:
   prod:
@@ -22,10 +25,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: corepack enable
+      - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'pnpm'
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
