@@ -22,7 +22,7 @@ it("トップページの'検索'フォームから問題を検索すること�
   await input.fill('駅')
   await button.click()
 
-  await waitForRouterPath(page, '/problems')
+  await waitForRouterPath(page, `/problems?kwd=${encodeURIComponent('駅')}`)
 
   await expectPageTitle(page, '問題いちらん')
 
@@ -49,6 +49,6 @@ it("トップページの'検索'フォームから問題を検索すること�
   expect(titles.length).greaterThan(0)
 
   await page.goBack()
-  await waitForRouterPath(page, '/')
+  await waitForRouterPath(page, `/?kwd=${encodeURIComponent('駅')}`)
   await expectLoadingHidden(page)
 })

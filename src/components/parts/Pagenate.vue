@@ -9,9 +9,15 @@
           </option>
         </select>
       </label>
-      <button v-else :title="`${p}ページ目を表示する`" @click="editPage = p">
+      <a
+        v-else
+        href="#"
+        :title="`${p}ページ目を表示する`"
+        :aria-label="`${p}ページ目を表示する`"
+        @click.prevent="editPage = p"
+      >
         {{ p }}
-      </button>
+      </a>
     </template>
   </div>
 </template>
@@ -69,7 +75,7 @@ function selectPage(page: number) {
   padding-top: 5px;
   padding-bottom: 8px;
 
-  button,
+  a,
   label {
     width: 3.8em;
     padding-right: 0;

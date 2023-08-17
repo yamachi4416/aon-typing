@@ -44,7 +44,7 @@ export async function waitForRouterPath(
 ) {
   await page.waitForFunction(
     (path: string) =>
-      window.useNuxtApp?.()?.$router?.currentRoute?.value?.path === path,
+      window.useNuxtApp?.()?.$router?.currentRoute?.value?.fullPath === path,
     path,
     { timeout },
   )

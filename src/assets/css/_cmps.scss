@@ -16,6 +16,7 @@
   font-size: 0.9em;
   line-height: 2;
   color: var(--color-3);
+  text-decoration: none;
   white-space: nowrap;
   appearance: none;
   background: var(--color-e);
@@ -27,11 +28,21 @@
     border-color: var(--color-9);
   }
 
+  &:is(label):has(> :focus-visible) {
+    outline: rgb(16 16 16) auto 0.6px;
+    outline-offset: 1px;
+  }
+
   &:is(button, input, select, label, a):not(:disabled) {
     cursor: pointer;
 
     &:hover {
       box-shadow: 1px 1px 1px var(--color-6);
+    }
+
+    &:focus-visible {
+      outline: rgb(16 16 16) auto 0.6px;
+      outline-offset: 1px;
     }
 
     &[selected],
