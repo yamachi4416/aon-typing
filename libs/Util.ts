@@ -8,32 +8,41 @@ export function isNumber(num: any): num is number {
 export async function countDown(
   count: number,
   tick: (count: number) => void,
-  options: { abort?: AbortController } = {},
+  options: { abort?: AbortController; rejectOnAbort?: boolean } = {},
 ) {
-  let id: ReturnType<typeof setInterval>
-
-  if (options.abort) {
-    options.abort.signal?.addEventListener('abort', function () {
-      clearTimeout(id)
-    })
-  }
-
-  return await new Promise((resolve) => {
-    id = setInterval(() => {
+  return await new Promise((resolve, reject) => {
+    const id = setInterval(() => {
       tick(--count)
       if (count <= 0) {
         clearInterval(id)
-        resolve(count)
+        options?.rejectOnAbort ? reject(new Error('abort')) : resolve(count)
       }
     }, 1000)
+
+    if (options.abort) {
+      options.abort.signal?.addEventListener('abort', function () {
+        clearTimeout(id)
+        resolve(count)
+      })
+    }
   })
 }
 
-export async function wait(time: number) {
-  await new Promise<void>((resolve) => {
-    setTimeout(() => {
+export async function wait(
+  time: number,
+  options: { abort?: AbortController; rejectOnAbort?: boolean } = {},
+) {
+  await new Promise<void>((resolve, reject) => {
+    const id = setTimeout(() => {
       resolve()
     }, time)
+
+    if (options.abort) {
+      options.abort.signal?.addEventListener('abort', function () {
+        clearTimeout(id)
+        options?.rejectOnAbort ? reject(new Error('abort')) : resolve()
+      })
+    }
   })
 }
 
