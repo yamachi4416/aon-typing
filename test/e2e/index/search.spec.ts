@@ -3,7 +3,6 @@ import {
   createPage,
   expectLoadingHidden,
   expectPageTitle,
-  publicConfig,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -11,8 +10,6 @@ import { problems } from '~/assets/api/problems.json'
 
 it("トップページの'検索'フォームから問題を検索することができる", async () => {
   const page = await createPage('/')
-
-  const { pageSize } = await publicConfig(page)
 
   const container = page.getByRole('main')
   const search = container.getByRole('search')
@@ -43,13 +40,6 @@ it("トップページの'検索'フォームから問題を検索すること�
   expect(await message.textContent()).toContain(
     `${hits} 件の検索結果があります`,
   )
-
-  const titles = await container
-    .getByRole('article')
-    .getByRole('heading', { name: '駅', exact: false })
-    .all()
-
-  expect(titles.length).toEqual(Math.min(pageSize, hits))
 
   await page.goBack()
   await waitForRouterPath(page, `/?kwd=${encodeURIComponent('駅')}`)

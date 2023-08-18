@@ -6,9 +6,23 @@ import {
   type Page,
   publicConfig,
 } from '~~/test/e2e/util'
-import { problems } from '~/assets/api/problems.json'
 
-describe('問題いちらん画面のページングの確認', () => {
+import { problems } from '~/assets/api/problems.json'
+import newProblems from '~/assets/api/newProblems.json'
+
+describe.each([
+  { name: '問題いちらんページ', pageUrl: '/problems', problems },
+  {
+    name: '問題いちらん（新着順）いちらんページ',
+    pageUrl: '/problems/news',
+    problems: newProblems,
+  },
+  {
+    name: '問題いちらん（検索）ページ',
+    pageUrl: `/problems?kwd=${encodeURIComponent('駅')}`,
+    problems: problems.filter(({ title }) => title.includes('駅')),
+  },
+])('$nameのページングの確認', ({ name, pageUrl, problems }) => {
   const getItem = (page: Page, i: number) =>
     page.getByRole('article', { name: problems[i].title }).first()
 
@@ -18,8 +32,11 @@ describe('問題いちらん画面のページングの確認', () => {
       exact: true,
     })
 
+  const pagenateUrl = (n: number) =>
+    pageUrl.includes('?') ? `${pageUrl}&page=${n}` : `${pageUrl}?page=${n}`
+
   it('Nページ目を表示するリンクの確認', async (i) => {
-    const page = await createPage('/problems')
+    const page = await createPage(pageUrl)
 
     const { pageSize } = await publicConfig(page)
 
@@ -27,21 +44,21 @@ describe('問題いちらん画面のページングの確認', () => {
 
     await getPageLink(page, 2).click()
 
-    await waitForRouterPath(page, '/problems?page=2')
+    await waitForRouterPath(page, pagenateUrl(2))
     await expectLoadingHidden(page)
 
     expect(await getItem(page, pageSize).isVisible()).toBeTruthy()
 
     await getPageLink(page, 3).click()
 
-    await waitForRouterPath(page, '/problems?page=3')
+    await waitForRouterPath(page, pagenateUrl(3))
     await expectLoadingHidden(page)
 
     expect(await getItem(page, pageSize * 2).isVisible()).toBeTruthy()
   })
 
-  it('最後のページを表示するボタンの確認', async (i) => {
-    const page = await createPage('/problems')
+  it('最後のページを表示するリンクの確認', async (i) => {
+    const page = await createPage(pageUrl)
 
     const { pageSize } = await publicConfig(page)
 
@@ -49,7 +66,7 @@ describe('問題いちらん画面のページングの確認', () => {
 
     await getPageLink(page, lastPage).click()
 
-    await waitForRouterPath(page, `/problems?page=${lastPage}`)
+    await waitForRouterPath(page, pagenateUrl(lastPage))
     await expectLoadingHidden(page)
 
     expect(await getItem(page, problems.length - 1).isVisible()).toBeTruthy()
