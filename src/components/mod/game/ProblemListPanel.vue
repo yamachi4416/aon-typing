@@ -45,7 +45,7 @@ defineEmits<{
 }>()
 
 const { problems, filterTagProblems } = useProblems()
-const pageSize = 30
+const { pageSize } = useRuntimeConfig().public
 const page = ref(1)
 
 const tags = ref(new Map<string, ProblemItemTag>())

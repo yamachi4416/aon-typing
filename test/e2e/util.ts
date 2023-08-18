@@ -3,10 +3,10 @@ import {
   createPage as _createPage,
   url as _url,
 } from '@nuxt/test-utils'
-import { expect } from 'vitest'
+import { assert, expect } from 'vitest'
 
 type PageOptions = Parameters<typeof _createPage>[1]
-type Page = ReturnType<typeof _createPage> extends Promise<infer P>
+export type Page = ReturnType<typeof _createPage> extends Promise<infer P>
   ? P
   : unknown
 
@@ -42,13 +42,17 @@ export async function waitForRouterPath(
   path: string,
   timeout = 3000,
 ) {
-  await page.waitForFunction(
-    (path: string) =>
-      window.useNuxtApp?.()?.$router?.currentRoute?.value?.fullPath === path,
-    path,
-    { timeout },
-  )
-  await page.waitForLoadState('networkidle')
+  try {
+    await page.waitForFunction(
+      (path: string) =>
+        window.useNuxtApp?.()?.$router?.currentRoute?.value?.fullPath === path,
+      path,
+      { timeout },
+    )
+    await page.waitForLoadState('networkidle')
+  } catch (err) {
+    assert(false, `${path} ${err}`)
+  }
 }
 
 export async function expectPageTitle(
@@ -57,13 +61,17 @@ export async function expectPageTitle(
   timeout = 3000,
 ) {
   if (!(await page.title()).includes(title)) {
-    await page.waitForFunction(
-      (title: string) => document.title.includes(title),
-      title,
-      {
-        timeout,
-      },
-    )
+    try {
+      await page.waitForFunction(
+        (title: string) => document.title.includes(title),
+        title,
+        {
+          timeout,
+        },
+      )
+    } catch (err) {
+      assert(false, `${title} ${err}`)
+    }
     expect(await page.title()).toContain(title)
   }
 }
