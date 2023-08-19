@@ -1,0 +1,37 @@
+{
+  "id": "1010349",
+  "title": "名鉄尾西線(弥富－名鉄一宮)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-19",
+  "updatedAt": "2023-08-19",
+  "optional": { "cd": "349" },
+  "words": [
+    {
+      "info": "名鉄一宮",
+      "info2": "めいてついちのみや",
+      "word": "meitetuitinomiya"
+    },
+    { "info": "観音寺", "info2": "かんのんじ", "word": "kannnonji" },
+    { "info": "苅安賀", "info2": "かりやすか", "word": "kariyasuka" },
+    { "info": "二子", "info2": "ふたご", "word": "hutago" },
+    { "info": "萩原", "info2": "はぎわら", "word": "hagiwara" },
+    { "info": "玉野", "info2": "たまの", "word": "tamano" },
+    { "info": "山崎", "info2": "やまざき", "word": "yamazaki" },
+    { "info": "森上", "info2": "もりかみ", "word": "morikami" },
+    { "info": "上丸渕", "info2": "かみまるぶち", "word": "kamimarubuti" },
+    { "info": "丸渕", "info2": "まるぶち", "word": "marubuti" },
+    { "info": "渕高", "info2": "ふちだか", "word": "hutidaka" },
+    { "info": "六輪", "info2": "ろくわ", "word": "rokuwa" },
+    { "info": "町方", "info2": "まちかた", "word": "matikata" },
+    { "info": "津島", "info2": "つしま", "word": "tusima" },
+    { "info": "日比野", "info2": "ひびの", "word": "hibino" },
+    { "info": "佐屋", "info2": "さや", "word": "saya" },
+    { "info": "五ノ三", "info2": "ごのさん", "word": "gonosann" },
+    { "info": "弥富", "info2": "やとみ", "word": "yatomi" }
+  ]
+}

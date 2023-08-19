@@ -1,0 +1,24 @@
+{
+  "id": "1010350",
+  "title": "名鉄尾西線(名鉄一宮－玉ノ井)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-19",
+  "updatedAt": "2023-08-19",
+  "optional": { "cd": "350" },
+  "words": [
+    { "info": "玉ノ井", "info2": "たまのい", "word": "tamanoi" },
+    { "info": "奥町", "info2": "おくちょう", "word": "okutyou" },
+    { "info": "開明", "info2": "かいめい", "word": "kaimei" },
+    { "info": "西一宮", "info2": "にしいちのみや", "word": "nisiitinomiya" },
+    {
+      "info": "名鉄一宮",
+      "info2": "めいてついちのみや",
+      "word": "meitetuitinomiya"
+    }
+  ]
+}
