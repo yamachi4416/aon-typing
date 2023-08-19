@@ -67,6 +67,16 @@ const tags = computed(() => {
         : `「${tag.name}」タグの問題のみ表示する`,
     }))
 })
+
+onMounted(() => {
+  const idsHas = new Set(tags.value.map(({ id }) => id))
+  const ids = tagIds.value.filter(idsHas.has.bind(idsHas))
+  if (tagIds.value.length !== ids.length) {
+    nextTick().then(() => {
+      tagIds.value = ids
+    })
+  }
+})
 </script>
 
 <style lang="scss" module>
