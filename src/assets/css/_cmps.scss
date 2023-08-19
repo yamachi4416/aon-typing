@@ -65,8 +65,15 @@
     @include button;
   }
 
-  :where(label > input) {
-    display: none;
+  :where(label) {
+    position: relative;
+  }
+
+  :where(label > input),
+  :where(label > select) {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
   }
 }
 

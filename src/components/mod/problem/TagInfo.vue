@@ -5,18 +5,15 @@
       <h2>タグ：{{ tag.name }}</h2>
     </header>
     <div>
-      <label
-        v-for="t in tags"
-        :key="`tag-${t.id}`"
-        :title="
-          t.selected
-            ? `「${t.name}」タグの問題のみ表示するのをやめる`
-            : `「${t.name}」タグの問題のみ表示する`
-        "
-        @click.prevent="selectTag(t)"
-      >
+      <label v-for="t in tags" :key="`tag-${t.id}`" :title="t.title">
         {{ t.name }}
-        <input type="checkbox" name="tag" :checked="t.selected" />
+        <input
+          v-model="tagIds"
+          type="checkbox"
+          name="tags"
+          :value="t.id"
+          @keyup.enter.prevent=";($event.target as any)?.click?.()"
+        />
       </label>
     </div>
     <footer v-if="$slots.default">
@@ -46,25 +43,30 @@ const emit = defineEmits<{
   (e: 'tag', tags: string[]): any
 }>()
 
+const tagIds = computed({
+  get() {
+    return props.qtags ?? []
+  },
+  set(value) {
+    const tags = [...value].sort()
+    useNavigator().replaceQuery({ tags: tags.join(',') })
+    emit('tag', tags)
+  },
+})
+
 const tags = computed(() => {
   const all = props.tag.problems?.flatMap((p) => p.tags) ?? []
   const map = new Map(all.map((tag) => [tag.id, tag]))
-  const ons = new Set(props.qtags)
+  const ons = new Set(tagIds.value)
   return [...map.values()]
     .filter(({ id }) => id !== props.tag.id)
     .map((tag) => ({
       ...tag,
-      selected: ons.has(tag.id),
+      title: ons.has(tag.id)
+        ? `「${tag.name}」タグの問題のみ表示するのをやめる`
+        : `「${tag.name}」タグの問題のみ表示する`,
     }))
 })
-
-function selectTag(tag: { id: string; selected: boolean }) {
-  const stags = tag.selected
-    ? props.qtags.filter((id) => id !== tag.id)
-    : [...props.qtags, tag.id].sort()
-  useNavigator().replaceQuery({ tags: stags.join(',') })
-  emit('tag', stags)
-}
 </script>
 
 <style lang="scss" module>
