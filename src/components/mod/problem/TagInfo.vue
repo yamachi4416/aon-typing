@@ -34,7 +34,7 @@ const props = withDefaults(
     qtags?: string[]
   }>(),
   {
-    tag: () => ({} as TagInfo),
+    tag: () => ({}) as TagInfo,
     qtags: () => [],
   },
 )

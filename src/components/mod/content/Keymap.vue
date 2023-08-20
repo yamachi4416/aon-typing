@@ -102,14 +102,17 @@ const chars = japaneseToTypeCharList()
     jc: hira2Kana(c[0]),
     keys: c[1].split(','),
   }))
-  .reduce((a, c) => {
-    const m = c.keys.reduce((n, k) => Math.min(n, k.length), Infinity)
-    a[c.jc] = c.keys
-      .filter((k) => k.length === m)
-      .map((s) => s.toUpperCase())
-      .join('/')
-    return a
-  }, {} as Record<string, string>)
+  .reduce(
+    (a, c) => {
+      const m = c.keys.reduce((n, k) => Math.min(n, k.length), Infinity)
+      a[c.jc] = c.keys
+        .filter((k) => k.length === m)
+        .map((s) => s.toUpperCase())
+        .join('/')
+      return a
+    },
+    {} as Record<string, string>,
+  )
 </script>
 
 <style lang="scss" module>

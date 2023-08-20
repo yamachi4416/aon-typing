@@ -38,7 +38,7 @@ export default defineCommand({
       .option('operation-line-code', {
         alias: 'c',
         type: 'array',
-        describe: 'operation Line Codes',
+        describe: 'operation line codes',
         demandOption: true,
         requiresArg: true,
       })
@@ -103,7 +103,7 @@ export default defineCommand({
       operationLineCodes: cds,
     }).then(({ words }) => words)
 
-    const json = prettier.format(JSON.stringify(data), {
+    const json = await prettier.format(JSON.stringify(data), {
       parser: 'json',
     })
 

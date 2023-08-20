@@ -22,7 +22,7 @@ async function listJsonFiles(dir: string) {
 async function writeJson(file: string, data: any) {
   await fs.writeFile(
     file,
-    prettier.format(JSON.stringify(data), {
+    await prettier.format(JSON.stringify(data), {
       parser: 'json',
     }),
   )
@@ -55,9 +55,7 @@ async function generateProblemData({
   })
 
   const problems = await Promise.all(
-    (
-      await listJsonFiles(dataDir)
-    ).map(async (p) => {
+    (await listJsonFiles(dataDir)).map(async (p) => {
       const dataObj: ProblemDetailData = JSON.parse(
         (await fs.readFile(p)).toString(),
       )
