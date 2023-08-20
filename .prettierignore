@@ -2,5 +2,5 @@
 !.github/
 **/dist/
 /data/
-node_modules/
-src/assets/api/**/*.json
+/src/assets/api/**/*.json
+pnpm-lock.yaml
