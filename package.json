@@ -5,6 +5,7 @@
   },
   "packageManager": "pnpm@8.6.12",
   "scripts": {
+    "postinstall": "nuxt prepare",
     "build": "nuxt generate",
     "build:scripts": "node scripts/build-scripts.mjs",
     "dev": "nuxt dev",
