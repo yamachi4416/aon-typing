@@ -84,7 +84,7 @@ defineEmits<{
 <style lang="scss" module>
 .panel {
   width: unset;
-  max-width: min(500px, 100%);
+  max-width: min(530px, 100%);
   height: unset;
 }
 
