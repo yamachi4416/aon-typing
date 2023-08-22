@@ -115,7 +115,7 @@
 </template>
 
 <script setup lang="ts">
-import { rankList, helpAnimals } from '~~/libs/TypingGameInfo'
+import { helpAnimals, rankList } from '~~/libs/TypingGameInfo'
 
 const animals = helpAnimals()
   .map(({ name }) => name)

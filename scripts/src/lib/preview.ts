@@ -1,9 +1,9 @@
 import fs from 'node:fs/promises'
 import { createGzip } from 'node:zlib'
 import {
-  createServer,
   type IncomingMessage,
   type ServerResponse,
+  createServer,
 } from 'node:http'
 import type { AddressInfo } from 'node:net'
 import path from 'node:path'
@@ -174,13 +174,13 @@ export async function previewServer({
       sendFileHandler({ distDir, logger }),
     ]
 
-    const server = createServer((req, res) => {
+    const server = createServer(async (req, res) => {
       try {
         const url = new URL(`${address().address}${decodeURI(req.url ?? '')}`)
         logging({ url, req, res, logger })
         const handler = handlers.find((handler) => handler.match(url, req))
         if (handler) {
-          void handler.handle(url, req, res)
+          await handler.handle(url, req, res)
         }
       } catch (e) {
         console.error(e)

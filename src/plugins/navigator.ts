@@ -12,7 +12,6 @@ function newNavigator() {
     const repQuery = keep ? { ...useRoute().query, ...query } : { ...query }
     Object.keys(repQuery).forEach((key) => {
       if (!repQuery[key]) {
-        // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
         delete repQuery[key]
       }
     })

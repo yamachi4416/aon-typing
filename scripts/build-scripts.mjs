@@ -23,7 +23,6 @@ import yargs from 'yargs'
     {},
   )
 
-  // eslint-disable-next-line no-unused-expressions
   yargs(process.argv.splice(2))
     .locale('en')
     .command({
@@ -69,5 +68,6 @@ import yargs from 'yargs'
     })
     .strictCommands()
     .help()
-    .alias('h', 'help').argv
+    .alias('h', 'help')
+    .parse()
 })()

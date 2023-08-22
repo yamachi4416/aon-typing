@@ -1,4 +1,4 @@
-import { readdir, readFile, writeFile } from 'node:fs/promises'
+import { readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import * as prettier from 'prettier'
 import { defineCommand } from '../lib/util'

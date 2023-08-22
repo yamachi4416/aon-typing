@@ -5,7 +5,7 @@ import ekiListProblems from './problem/eki-ls-problems'
 import ekiWordDL from './problem/eki-word-dl'
 import ekiWordsDL from './problem/eki-words-dl'
 
-void yargs
+yargs
   .locale('en')
   .command(generate)
   .command(aozoraUtaDL)
@@ -16,4 +16,5 @@ void yargs
   .strictCommands()
   .help()
   .config()
-  .alias('h', 'help').argv
+  .alias('h', 'help')
+  .parse()

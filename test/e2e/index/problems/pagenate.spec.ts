@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import {
+  type Page,
   createPage,
   expectLoadingHidden,
-  waitForRouterPath,
-  type Page,
   publicConfig,
+  waitForRouterPath,
 } from '~~/test/e2e/util'
 
 import { problems } from '~/assets/api/problems.json'
@@ -22,7 +22,7 @@ describe.each([
     pageUrl: `/problems?kwd=${encodeURIComponent('駅')}`,
     problems: problems.filter(({ title }) => title.includes('駅')),
   },
-])('$nameのページングの確認', ({ name, pageUrl, problems }) => {
+])('$nameのページングの確認', ({ pageUrl, problems }) => {
   const getItem = (page: Page, i: number) =>
     page.getByRole('article', { name: problems[i].title }).first()
 
@@ -35,7 +35,7 @@ describe.each([
   const pagenateUrl = (n: number) =>
     pageUrl.includes('?') ? `${pageUrl}&page=${n}` : `${pageUrl}?page=${n}`
 
-  it('Nページ目を表示するリンクの確認', async (i) => {
+  it('Nページ目を表示するリンクの確認', async () => {
     const page = await createPage(pageUrl)
 
     const { pageSize } = await publicConfig(page)
@@ -57,7 +57,7 @@ describe.each([
     expect(await getItem(page, pageSize * 2).isVisible()).toBeTruthy()
   })
 
-  it('最後のページを表示するリンクの確認', async (i) => {
+  it('最後のページを表示するリンクの確認', async () => {
     const page = await createPage(pageUrl)
 
     const { pageSize } = await publicConfig(page)

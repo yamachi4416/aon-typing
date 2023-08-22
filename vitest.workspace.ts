@@ -1,4 +1,4 @@
-import { defineWorkspace, mergeConfig, type UserConfig } from 'vitest/config'
+import { type UserConfig, defineWorkspace, mergeConfig } from 'vitest/config'
 
 const sharedConfig: UserConfig = {
   resolve: {

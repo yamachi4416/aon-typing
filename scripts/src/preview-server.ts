@@ -28,7 +28,7 @@ function builder(yargs: yargs.Argv) {
     })
 }
 
-void yargs
+yargs
   .locale('en')
   .help()
   .alias('h', 'help')

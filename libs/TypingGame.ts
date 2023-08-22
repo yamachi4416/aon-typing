@@ -41,8 +41,8 @@ export class TypingGame {
   totalTypeMiss = 0
   currentMistake = false
 
-  private readonly eventManager: EventManager
-  private readonly timerManager: TimerManager
+  private readonly eventManager
+  private readonly timerManager
 
   private _stop?: () => void
 

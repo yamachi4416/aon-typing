@@ -1,6 +1,6 @@
 import {
-  TypingGameWordState,
   TypingGameWordInfoState,
+  TypingGameWordState,
 } from './TypingGameWordStates'
 import { type ProblemDetailWord } from '~~/types/problems'
 
