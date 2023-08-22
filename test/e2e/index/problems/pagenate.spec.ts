@@ -9,6 +9,7 @@ import {
 
 import { problems } from '~/assets/api/problems.json'
 import newProblems from '~/assets/api/newProblems.json'
+import tag from '~/assets/api/tags/00009.json'
 
 describe.each([
   { name: '問題いちらんページ', pageUrl: '/problems', problems },
@@ -21,6 +22,11 @@ describe.each([
     name: '問題いちらん（検索）ページ',
     pageUrl: `/problems?kwd=${encodeURIComponent('駅')}`,
     problems: problems.filter(({ title }) => title.includes('駅')),
+  },
+  {
+    name: `問題 タグ：${tag.name}`,
+    pageUrl: `/problems/tags/${tag.id}`,
+    problems: tag.problems,
   },
 ])('$nameのページングの確認', ({ pageUrl, problems }) => {
   const getItem = (page: Page, i: number) =>
