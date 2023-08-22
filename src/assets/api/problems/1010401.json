@@ -1,0 +1,73 @@
+{
+  "id": "1010401",
+  "title": "南海高野線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-22",
+  "updatedAt": "2023-08-22",
+  "optional": { "cd": "401" },
+  "words": [
+    { "info": "極楽橋", "info2": "ごくらくばし", "word": "gokurakubasi" },
+    { "info": "紀伊神谷", "info2": "きいかみや", "word": "kiikamiya" },
+    { "info": "紀伊細川", "info2": "きいほそかわ", "word": "kiihosokawa" },
+    { "info": "上古沢", "info2": "かみこさわ", "word": "kamikosawa" },
+    { "info": "下古沢", "info2": "しもこさわ", "word": "simokosawa" },
+    { "info": "高野下", "info2": "こうやした", "word": "kouyasita" },
+    { "info": "九度山", "info2": "くどやま", "word": "kudoyama" },
+    { "info": "学文路", "info2": "かむろ", "word": "kamuro" },
+    { "info": "紀伊清水", "info2": "きいしみず", "word": "kiisimizu" },
+    { "info": "橋本", "info2": "はしもと", "word": "hasimoto" },
+    { "info": "御幸辻", "info2": "みゆきつじ", "word": "miyukituji" },
+    {
+      "info": "林間田園都市",
+      "info2": "りんかんでんえんとし",
+      "word": "rinkandennentosi"
+    },
+    { "info": "紀見峠", "info2": "きみとうげ", "word": "kimitouge" },
+    { "info": "天見", "info2": "あまみ", "word": "amami" },
+    { "info": "千早口", "info2": "ちはやぐち", "word": "tihayaguti" },
+    { "info": "美加の台", "info2": "みかのだい", "word": "mikanodai" },
+    { "info": "三日市町", "info2": "みっかいちちょう", "word": "mikkaitityou" },
+    { "info": "河内長野", "info2": "かわちながの", "word": "kawatinagano" },
+    { "info": "千代田", "info2": "ちよだ", "word": "tiyoda" },
+    { "info": "滝谷", "info2": "たきだに", "word": "takidani" },
+    { "info": "金剛", "info2": "こんごう", "word": "kongou" },
+    {
+      "info": "大阪狭山市",
+      "info2": "おおさかさやまし",
+      "word": "oosakasayamasi"
+    },
+    { "info": "狭山", "info2": "さやま", "word": "sayama" },
+    { "info": "北野田", "info2": "きたのだ", "word": "kitanoda" },
+    {
+      "info": "萩原天神",
+      "info2": "はぎはらてんじん",
+      "word": "hagiharatenjinn"
+    },
+    { "info": "初芝", "info2": "はつしば", "word": "hatusiba" },
+    { "info": "白鷺", "info2": "しらさぎ", "word": "sirasagi" },
+    { "info": "中百舌鳥", "info2": "なかもず", "word": "nakamozu" },
+    { "info": "百舌鳥八幡", "info2": "もずはちまん", "word": "mozuhatimann" },
+    { "info": "三国ケ丘", "info2": "みくにがおか", "word": "mikunigaoka" },
+    { "info": "堺東", "info2": "さかいひがし", "word": "sakaihigasi" },
+    { "info": "浅香山", "info2": "あさかやま", "word": "asakayama" },
+    { "info": "我孫子前", "info2": "あびこまえ", "word": "abikomae" },
+    { "info": "沢ノ町", "info2": "さわのちょう", "word": "sawanotyou" },
+    { "info": "住吉東", "info2": "すみよしひがし", "word": "sumiyosihigasi" },
+    { "info": "帝塚山", "info2": "てづかやま", "word": "tedukayama" },
+    {
+      "info": "岸里玉出",
+      "info2": "きしのさとたまで",
+      "word": "kisinosatotamade"
+    },
+    { "info": "天下茶屋", "info2": "てんがちゃや", "word": "tengatyaya" },
+    { "info": "萩ノ茶屋", "info2": "はぎのちゃや", "word": "haginotyaya" },
+    { "info": "新今宮", "info2": "しんいまみや", "word": "sinnimamiya" },
+    { "info": "今宮戎", "info2": "いまみやえびす", "word": "imamiyaebisu" },
+    { "info": "難波", "info2": "なんば", "word": "nanba" }
+  ]
+}
