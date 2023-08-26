@@ -1,0 +1,26 @@
+{
+  "id": "1010307",
+  "title": "京王高尾線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-26",
+  "updatedAt": "2023-08-26",
+  "optional": { "cd": "307" },
+  "words": [
+    { "info": "高尾山口", "info2": "たかおさんぐち", "word": "takaosanguti" },
+    { "info": "高尾", "info2": "たかお", "word": "takao" },
+    { "info": "狭間", "info2": "はざま", "word": "hazama" },
+    { "info": "めじろ台", "info2": "めじろだい", "word": "mejirodai" },
+    { "info": "山田", "info2": "やまだ", "word": "yamada" },
+    {
+      "info": "京王片倉",
+      "info2": "けいおうかたくら",
+      "word": "keioukatakura"
+    },
+    { "info": "北野", "info2": "きたの", "word": "kitano" }
+  ]
+}

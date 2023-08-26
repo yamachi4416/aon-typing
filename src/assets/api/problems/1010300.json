@@ -1,0 +1,21 @@
+{
+  "id": "1010300",
+  "title": "京成千原線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-26",
+  "updatedAt": "2023-08-26",
+  "optional": { "cd": "300" },
+  "words": [
+    { "info": "ちはら台", "info2": "ちはらだい", "word": "tiharadai" },
+    { "info": "おゆみ野", "info2": "おゆみの", "word": "oyumino" },
+    { "info": "学園前", "info2": "がくえんまえ", "word": "gakuenmae" },
+    { "info": "大森台", "info2": "おおもりだい", "word": "oomoridai" },
+    { "info": "千葉寺", "info2": "ちばでら", "word": "tibadera" },
+    { "info": "千葉中央", "info2": "ちばちゅうおう", "word": "tibatyuuou" }
+  ]
+}
