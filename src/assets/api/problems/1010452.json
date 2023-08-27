@@ -1,0 +1,44 @@
+{
+  "id": "1010452",
+  "title": "弘南鉄道弘南線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-27",
+  "updatedAt": "2023-08-27",
+  "optional": { "cd": "452" },
+  "words": [
+    { "info": "黒石", "info2": "くろいし", "word": "kuroisi" },
+    { "info": "境松", "info2": "さかいまつ", "word": "sakaimatu" },
+    { "info": "田舎館", "info2": "いなかだて", "word": "inakadate" },
+    { "info": "田んぼアート", "info2": "たんぼあーと", "word": "tanboa-to" },
+    {
+      "info": "尾上高校前",
+      "info2": "おのえこうこうまえ",
+      "word": "onoekoukoumae"
+    },
+    { "info": "津軽尾上", "info2": "つがるおのえ", "word": "tugaruonoe" },
+    {
+      "info": "柏農高校前",
+      "info2": "はくのうこうこうまえ",
+      "word": "hakunoukoukoumae"
+    },
+    { "info": "平賀", "info2": "ひらか", "word": "hiraka" },
+    { "info": "館田", "info2": "たちた", "word": "tatita" },
+    { "info": "新里", "info2": "にさと", "word": "nisato" },
+    {
+      "info": "運動公園前",
+      "info2": "うんどうこうえんまえ",
+      "word": "undoukouenmae"
+    },
+    {
+      "info": "弘前東高前",
+      "info2": "ひろさきひがしこうまえ",
+      "word": "hirosakihigasikoumae"
+    },
+    { "info": "弘前", "info2": "ひろさき", "word": "hirosaki" }
+  ]
+}

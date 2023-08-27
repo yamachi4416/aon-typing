@@ -1,0 +1,49 @@
+{
+  "id": "1010451",
+  "title": "弘南鉄道大鰐線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-27",
+  "updatedAt": "2023-08-27",
+  "optional": { "cd": "451" },
+  "words": [
+    {
+      "info": "中央弘前",
+      "info2": "ちゅうおうひろさき",
+      "word": "tyuuouhirosaki"
+    },
+    { "info": "弘高下", "info2": "ひろこうした", "word": "hirokousita" },
+    {
+      "info": "弘前学院大前",
+      "info2": "ひろさきがくいんだいまえ",
+      "word": "hirosakigakuindaimae"
+    },
+    {
+      "info": "聖愛中高前",
+      "info2": "せいあいちゅうこうまえ",
+      "word": "seiaityuukoumae"
+    },
+    { "info": "千年", "info2": "ちとせ", "word": "titose" },
+    { "info": "小栗山", "info2": "こぐりやま", "word": "koguriyama" },
+    { "info": "松木平", "info2": "まつきたい", "word": "matukitai" },
+    { "info": "津軽大沢", "info2": "つがるおおさわ", "word": "tugaruoosawa" },
+    {
+      "info": "義塾高校前",
+      "info2": "ぎじゅくこうこうまえ",
+      "word": "gijukukoukoumae"
+    },
+    { "info": "石川", "info2": "いしかわ", "word": "isikawa" },
+    {
+      "info": "石川プール前",
+      "info2": "いしかわぷーるまえ",
+      "word": "isikawapu-rumae"
+    },
+    { "info": "鯖石", "info2": "さばいし", "word": "sabaisi" },
+    { "info": "宿川原", "info2": "しゅくがわら", "word": "syukugawara" },
+    { "info": "大鰐", "info2": "おおわに", "word": "oowani" }
+  ]
+}
