@@ -1,0 +1,38 @@
+{
+  "id": "1010318",
+  "title": "東急池上線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-29",
+  "updatedAt": "2023-08-29",
+  "optional": { "cd": "318" },
+  "words": [
+    { "info": "蒲田", "info2": "かまた", "word": "kamata" },
+    { "info": "蓮沼", "info2": "はすぬま", "word": "hasunuma" },
+    { "info": "池上", "info2": "いけがみ", "word": "ikegami" },
+    { "info": "千鳥町", "info2": "ちどりちょう", "word": "tidorityou" },
+    { "info": "久が原", "info2": "くがはら", "word": "kugahara" },
+    { "info": "御嶽山", "info2": "おんたけさん", "word": "ontakesann" },
+    {
+      "info": "雪が谷大塚",
+      "info2": "ゆきがやおおつか",
+      "word": "yukigayaootuka"
+    },
+    { "info": "石川台", "info2": "いしかわだい", "word": "isikawadai" },
+    { "info": "洗足池", "info2": "せんぞくいけ", "word": "senzokuike" },
+    { "info": "長原", "info2": "ながはら", "word": "nagahara" },
+    { "info": "旗の台", "info2": "はたのだい", "word": "hatanodai" },
+    { "info": "荏原中延", "info2": "えばらなかのぶ", "word": "ebaranakanobu" },
+    { "info": "戸越銀座", "info2": "とごしぎんざ", "word": "togosiginza" },
+    {
+      "info": "大崎広小路",
+      "info2": "おおさきひろこうじ",
+      "word": "oosakihirokouji"
+    },
+    { "info": "五反田", "info2": "ごたんだ", "word": "gotanda" }
+  ]
+}

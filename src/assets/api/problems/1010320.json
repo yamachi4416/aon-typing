@@ -1,0 +1,29 @@
+{
+  "id": "1010320",
+  "title": "東急世田谷線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-08-29",
+  "updatedAt": "2023-08-29",
+  "optional": { "cd": "320" },
+  "words": [
+    { "info": "下高井戸", "info2": "しもたかいど", "word": "simotakaido" },
+    { "info": "松原", "info2": "まつばら", "word": "matubara" },
+    { "info": "山下", "info2": "やました", "word": "yamasita" },
+    { "info": "宮の坂", "info2": "みやのさか", "word": "miyanosaka" },
+    { "info": "上町", "info2": "かみまち", "word": "kamimati" },
+    { "info": "世田谷", "info2": "せたがや", "word": "setagaya" },
+    {
+      "info": "松陰神社前",
+      "info2": "しょういんじんじゃまえ",
+      "word": "syouinjinjamae"
+    },
+    { "info": "若林", "info2": "わかばやし", "word": "wakabayasi" },
+    { "info": "西太子堂", "info2": "にしたいしどう", "word": "nisitaisidou" },
+    { "info": "三軒茶屋", "info2": "さんげんぢゃや", "word": "sangendyaya" }
+  ]
+}
