@@ -23,10 +23,10 @@
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.7.0",
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@types/content-disposition": "^0.5.5",
     "@types/jsdom": "^21.1.2",
-    "@types/node": "^20.5.6",
+    "@types/node": "^20.5.7",
     "@types/yargs": "^17.0.24",
     "content-disposition": "^0.5.4",
     "eslint": "^8.48.0",
