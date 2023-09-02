@@ -358,6 +358,7 @@ class TimerEntry {
   private id?: number
   private time?: number
   private tick?: number
+  private running: boolean = false
 
   private readonly handler: () => void
   private readonly interval: () => number
@@ -372,7 +373,7 @@ class TimerEntry {
   }
 
   private *ticker() {
-    while (true) {
+    while (this.running) {
       if (isNumber(this.tick)) {
         if (isNumber(this.time)) {
           this.time += this.tick
@@ -401,6 +402,7 @@ class TimerEntry {
       }
     }
 
+    this.running = true
     this.time = Date.now()
     const next = tick.next().value
     if (isNumber(next)) {
@@ -414,6 +416,7 @@ class TimerEntry {
   }
 
   stop() {
+    this.running = false
     if (this.id) {
       this.tick = Math.max((this.time ?? 0) - Date.now(), 0) || 0
       window.clearTimeout(this.id)
