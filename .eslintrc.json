@@ -1,22 +1,17 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
+  "ignorePatterns": [
+    "dist",
+    "data",
+    "node_modules",
+    "schema",
+    "**/*.tmpl.*",
+    "sw.js"
+  ],
   "extends": [
     "@nuxtjs/eslint-config-typescript",
     "plugin:import/typescript",
     "prettier"
   ],
-  "overrides": [],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "parser": "@typescript-eslint/parser",
-    "project": ["./tsconfig.json"],
-    "extraFileExtensions": [".vue"]
-  },
   "plugins": [],
   "rules": {
     "sort-imports": [
