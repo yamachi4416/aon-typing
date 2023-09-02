@@ -1,0 +1,17 @@
+{
+  "id": "1010286",
+  "title": "西武豊島線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-09-02",
+  "updatedAt": "2023-09-02",
+  "optional": { "cd": "286" },
+  "words": [
+    { "info": "豊島園", "info2": "としまえん", "word": "tosimaenn" },
+    { "info": "練馬", "info2": "ねりま", "word": "nerima" }
+  ]
+}

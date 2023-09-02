@@ -1,0 +1,22 @@
+{
+  "id": "1010287",
+  "title": "西武狭山線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-09-02",
+  "updatedAt": "2023-09-02",
+  "optional": { "cd": "287" },
+  "words": [
+    {
+      "info": "西武球場前",
+      "info2": "せいぶきゅうじょうまえ",
+      "word": "seibukyuujoumae"
+    },
+    { "info": "下山口", "info2": "しもやまぐち", "word": "simoyamaguti" },
+    { "info": "西所沢", "info2": "にしところざわ", "word": "nisitokorozawa" }
+  ]
+}

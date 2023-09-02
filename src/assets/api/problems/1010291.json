@@ -1,0 +1,26 @@
+{
+  "id": "1010291",
+  "title": "西武多摩湖線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-09-02",
+  "updatedAt": "2023-09-02",
+  "optional": { "cd": "291" },
+  "words": [
+    { "info": "多摩湖", "info2": "たまこ", "word": "tamako" },
+    { "info": "武蔵大和", "info2": "むさしやまと", "word": "musasiyamato" },
+    { "info": "八坂", "info2": "やさか", "word": "yasaka" },
+    { "info": "萩山", "info2": "はぎやま", "word": "hagiyama" },
+    { "info": "青梅街道", "info2": "おうめかいどう", "word": "oumekaidou" },
+    {
+      "info": "一橋学園",
+      "info2": "ひとつばしがくえん",
+      "word": "hitotubasigakuenn"
+    },
+    { "info": "国分寺", "info2": "こくぶんじ", "word": "kokubunji" }
+  ]
+}
