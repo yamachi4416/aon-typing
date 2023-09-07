@@ -1,0 +1,35 @@
+{
+  "id": "1010492",
+  "title": "湘南モノレールの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-09-07",
+  "updatedAt": "2023-09-07",
+  "optional": { "cd": "492" },
+  "words": [
+    {
+      "info": "湘南江の島",
+      "info2": "しょうなんえのしま",
+      "word": "syounannenosima"
+    },
+    { "info": "目白山下", "info2": "めじろやました", "word": "mejiroyamasita" },
+    { "info": "片瀬山", "info2": "かたせやま", "word": "kataseyama" },
+    { "info": "西鎌倉", "info2": "にしかまくら", "word": "nisikamakura" },
+    {
+      "info": "湘南深沢",
+      "info2": "しょうなんふかさわ",
+      "word": "syounanhukasawa"
+    },
+    {
+      "info": "湘南町屋",
+      "info2": "しょうなんまちや",
+      "word": "syounanmatiya"
+    },
+    { "info": "富士見町", "info2": "ふじみちょう", "word": "hujimityou" },
+    { "info": "大船", "info2": "おおふな", "word": "oohuna" }
+  ]
+}

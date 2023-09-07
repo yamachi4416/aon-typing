@@ -1,0 +1,45 @@
+{
+  "id": "1010491",
+  "title": "横浜シーサイドラインの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-09-07",
+  "updatedAt": "2023-09-07",
+  "optional": { "cd": "491" },
+  "words": [
+    {
+      "info": "金沢八景",
+      "info2": "かなざわはっけい",
+      "word": "kanazawahakkei"
+    },
+    { "info": "野島公園", "info2": "のじまこうえん", "word": "nojimakouenn" },
+    {
+      "info": "海の公園南口",
+      "info2": "うみのこうえんみなみぐち",
+      "word": "uminokouenminamiguti"
+    },
+    {
+      "info": "海の公園柴口",
+      "info2": "うみのこうえんしばぐち",
+      "word": "uminokouensibaguti"
+    },
+    { "info": "八景島", "info2": "はっけいじま", "word": "hakkeijima" },
+    { "info": "市大医学部", "info2": "しだいいがくぶ", "word": "sidaiigakubu" },
+    { "info": "福浦", "info2": "ふくうら", "word": "hukuura" },
+    {
+      "info": "産業振興センター",
+      "info2": "さんぎょうしんこうせんたー",
+      "word": "sangyousinkousenta-"
+    },
+    { "info": "幸浦", "info2": "さちうら", "word": "satiura" },
+    { "info": "並木中央", "info2": "なみきちゅうおう", "word": "namikityuuou" },
+    { "info": "並木北", "info2": "なみききた", "word": "namikikita" },
+    { "info": "鳥浜", "info2": "とりはま", "word": "torihama" },
+    { "info": "南部市場", "info2": "なんぶしじょう", "word": "nanbusijou" },
+    { "info": "新杉田", "info2": "しんすぎた", "word": "sinsugita" }
+  ]
+}
