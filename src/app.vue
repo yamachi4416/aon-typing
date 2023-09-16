@@ -30,10 +30,13 @@ onErrorCaptured((err) => {
     healthcheck().then((ok) => {
       if (!ok) {
         window.location.reload()
+      } else {
+        showError(err)
       }
     })
+  } else {
+    throw err
   }
-  throw err
 })
 
 function setVH() {

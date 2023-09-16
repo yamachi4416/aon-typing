@@ -2,6 +2,13 @@ import type { AvailableRouterMethod, NitroFetchRequest } from 'nitropack'
 import type { FetchResult } from '#app/composables'
 import type { ProblemListItem } from '~~/types/problems'
 
+function createNotFoundError() {
+  return createError({
+    statusCode: 404,
+    message: 'Page Not Found',
+  })
+}
+
 function useFetchCache<
   K extends NitroFetchRequest,
   M extends AvailableRouterMethod<K> = 'get' extends AvailableRouterMethod<K>
@@ -87,7 +94,11 @@ export function useProblems() {
       key: `/api/tags/${id}.json`,
       transform: (data) => data,
     })
-    return await fetch()
+    const tag = await fetch()
+    if (!tag.value.id) {
+      throw createNotFoundError()
+    }
+    return tag
   }
 
   async function retrieveProblemDetail({ id }: { id: string }) {
@@ -96,7 +107,11 @@ export function useProblems() {
       key: `/api/problems/${id}.json`,
       transform: (data) => data,
     })
-    return await fetch()
+    const detail = await fetch()
+    if (!detail.value.id) {
+      throw createNotFoundError()
+    }
+    return detail
   }
 
   function findProblemItem({ id }: { id: string }) {
