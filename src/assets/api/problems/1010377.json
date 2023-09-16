@@ -1,0 +1,31 @@
+{
+  "id": "1010377",
+  "title": "近鉄志摩線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-09-16",
+  "updatedAt": "2023-09-16",
+  "optional": { "cd": "377" },
+  "words": [
+    { "info": "賢島", "info2": "かしこじま", "word": "kasikojima" },
+    { "info": "志摩神明", "info2": "しましんめい", "word": "simasinmei" },
+    { "info": "鵜方", "info2": "うがた", "word": "ugata" },
+    { "info": "志摩横山", "info2": "しまよこやま", "word": "simayokoyama" },
+    { "info": "穴川", "info2": "あながわ", "word": "anagawa" },
+    { "info": "志摩磯部", "info2": "しまいそべ", "word": "simaisobe" },
+    { "info": "上之郷", "info2": "かみのごう", "word": "kaminogou" },
+    { "info": "沓掛", "info2": "くつかけ", "word": "kutukake" },
+    { "info": "五知", "info2": "ごち", "word": "goti" },
+    { "info": "白木", "info2": "しらき", "word": "siraki" },
+    { "info": "松尾", "info2": "まつお", "word": "matuo" },
+    { "info": "加茂", "info2": "かも", "word": "kamo" },
+    { "info": "船津", "info2": "ふなつ", "word": "hunatu" },
+    { "info": "志摩赤崎", "info2": "しまあかさき", "word": "simaakasaki" },
+    { "info": "中之郷", "info2": "なかのごう", "word": "nakanogou" },
+    { "info": "鳥羽", "info2": "とば", "word": "toba" }
+  ]
+}
