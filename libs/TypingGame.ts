@@ -250,6 +250,7 @@ export class TypingGame {
       this.addAutoTyping({ words, autoMode })
       this.timerManager.start()
       this.running = true
+      this.visibleChange()
     })
   }
 
