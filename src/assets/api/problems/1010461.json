@@ -1,0 +1,36 @@
+{
+  "id": "1010461",
+  "title": "山形鉄道フラワー長井線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-09-17",
+  "updatedAt": "2023-09-17",
+  "optional": { "cd": "461" },
+  "words": [
+    { "info": "荒砥", "info2": "あらと", "word": "arato" },
+    { "info": "四季の郷", "info2": "しきのさと", "word": "sikinosato" },
+    { "info": "鮎貝", "info2": "あゆかい", "word": "ayukai" },
+    { "info": "蚕桑", "info2": "こぐわ", "word": "koguwa" },
+    { "info": "白兎", "info2": "しろうさぎ", "word": "sirousagi" },
+    { "info": "羽前成田", "info2": "うぜんなりた", "word": "uzennnarita" },
+    { "info": "あやめ公園", "info2": "あやめこうえん", "word": "ayamekouenn" },
+    { "info": "長井", "info2": "ながい", "word": "nagai" },
+    { "info": "南長井", "info2": "みなみながい", "word": "minaminagai" },
+    { "info": "時庭", "info2": "ときにわ", "word": "tokiniwa" },
+    { "info": "今泉", "info2": "いまいずみ", "word": "imaizumi" },
+    { "info": "西大塚", "info2": "にしおおつか", "word": "nisiootuka" },
+    { "info": "梨郷", "info2": "りんごう", "word": "ringou" },
+    { "info": "おりはた", "info2": "おりはた", "word": "orihata" },
+    { "info": "宮内", "info2": "みやうち", "word": "miyauti" },
+    {
+      "info": "南陽市役所",
+      "info2": "なんようしやくしょ",
+      "word": "nanyousiyakusyo"
+    },
+    { "info": "赤湯", "info2": "あかゆ", "word": "akayu" }
+  ]
+}
