@@ -10,8 +10,8 @@
   top: 0;
   left: 0;
   z-index: -1;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   overflow: hidden;
   background-color: var(--page-background-color);
 
@@ -19,12 +19,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     background-color: var(--page-background-image-color);
     background-image: var(--page-background-image);
     background-repeat: repeat-x;
-    background-position: top 0 left 50vw;
+    background-position: top 0 left 50dvw;
     background-size: auto 100%;
 
     @media (height <= 450px) {

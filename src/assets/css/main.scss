@@ -51,8 +51,7 @@ body,
 #__layout {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  min-height: var(--maxvh, 100vh);
+  min-height: 100dvh;
 
   @media print {
     height: 100%;

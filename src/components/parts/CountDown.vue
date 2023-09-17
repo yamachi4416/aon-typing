@@ -26,9 +26,8 @@ withDefaults(
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  height: var(--maxvh, 100vh);
+  width: 100dvw;
+  height: 100dvh;
   background: var(--color-f);
 
   & > div {

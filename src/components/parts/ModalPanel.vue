@@ -81,7 +81,7 @@ defineExpose({
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100dvw;
   height: 100%;
   padding: 10px;
   overflow: auto;

@@ -142,7 +142,7 @@ useHead({
   display: flex;
   align-items: center;
   width: 100%;
-  height: var(--maxvh, 100vh);
+  height: 100dvh;
 }
 
 .main {
@@ -170,7 +170,7 @@ useHead({
   width: auto;
   max-width: 100%;
   height: auto;
-  max-height: 100vh;
-  max-height: calc(100vh - 20px);
+  max-height: 100dvh;
+  max-height: calc(100dvh - 20px);
 }
 </style>

@@ -73,7 +73,7 @@ defineExpose({
   align-items: center;
   justify-content: flex-start;
   width: 1000px;
-  max-width: calc(100vw - 20px);
+  max-width: calc(100dvw - 20px);
   height: 100%;
   max-height: 100%;
   padding: 0 5px;

@@ -27,7 +27,7 @@ withDefaults(
 @use '~/assets/css/vars';
 
 .page {
-  min-height: 100vh;
+  min-height: 100dvh;
 
   @media print {
     min-height: unset;
@@ -35,7 +35,7 @@ withDefaults(
 
   & > main {
     max-width: 1000px;
-    min-height: calc(100vh - 200px);
+    min-height: calc(100dvh - 200px);
     padding: 10px;
     margin: 0 auto;
 
