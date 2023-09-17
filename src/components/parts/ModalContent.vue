@@ -142,7 +142,8 @@ defineExpose({
       display: flex;
       width: 100%;
       aspect-ratio: 1 / 1;
-      padding: 3px 0 3px 6px;
+      transform: scale(0.9);
+      transform-origin: right center;
     }
   }
 
