@@ -27,7 +27,7 @@
           />
           <label for="search-keyword">検索キーワード</label>
         </div>
-        <button :disabled="!enableSearch" @click="searchProblems">
+        <button type="button" :disabled="!enableSearch" @click="searchProblems">
           検索する
         </button>
       </form>

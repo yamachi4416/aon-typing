@@ -62,7 +62,9 @@
           />
         </span>
       </div>
-      <button :disabled="hasErrors" @click="submit">送信する</button>
+      <button type="button" :disabled="hasErrors" @click="submit">
+        送信する
+      </button>
     </PartsSection>
   </div>
 </template>
