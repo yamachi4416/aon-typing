@@ -46,6 +46,10 @@ withDefaults(
     @media print {
       padding: 3px;
     }
+
+    :where(:target) {
+      scroll-margin-top: 130px;
+    }
   }
 }
 </style>
