@@ -13,8 +13,10 @@
 </template>
 
 <script setup lang="ts">
+const { wrapLoading } = useLoading()
+
 const id = String(useRoute().params.id)
-const detail = await useProblems().retrieveProblemDetail({ id })
+const detail = await wrapLoading(useProblems().retrieveProblemDetail({ id }))
 
 useHead({
   title: `問題 No.${id} ${detail.value.title}`,

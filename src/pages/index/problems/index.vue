@@ -21,6 +21,7 @@
       @tag="$navigator.indexTagDetail"
       @detail="$navigator.indexProblemDetail"
       @play="$navigator.gameMenu"
+      @page="$navigator.scrollTop"
     />
   </div>
 </template>

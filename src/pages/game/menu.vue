@@ -45,6 +45,7 @@ const modals = () =>
   [modalProblemDetail.value, modalProblemList.value].filter((m) => m) as Modal[]
 
 const { setting } = useGameSetting()
+const { wrapLoading } = useLoading()
 const problemDetailPanel = ref<InstanceType<typeof ProblemDetailPanel>>()
 
 const hasPendingModal = computed(() =>
@@ -106,7 +107,7 @@ async function openProblemDetailShow(
   tasks.push(modalProblemDetail.value?.open())
   await nextTick()
   tasks.push(problemDetailPanel.value?.setDetail({ problem, selectable }))
-  await Promise.all(tasks)
+  await wrapLoading(Promise.all(tasks))
 }
 
 async function onEscapeKey(e: KeyboardEvent) {

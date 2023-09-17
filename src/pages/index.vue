@@ -5,26 +5,11 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  bodyAttrs: {
-    class: 'scroll-y',
-  },
+onBeforeMount(() => {
+  document.body.classList.add('scroll-y')
 })
 
-onBeforeRouteUpdate(() => {
-  useScrollWaiter().add()
+onBeforeUnmount(() => {
+  document.body.classList.remove('scroll-y')
 })
-
-definePageMeta({
-  pageTransition: {
-    duration: 1,
-    onAfterEnter() {
-      useScrollWaiter().flush()
-    },
-  },
-})
-
-if (process.client) {
-  await nextTick()
-}
 </script>

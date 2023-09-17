@@ -34,7 +34,7 @@ const props = defineProps<{
 const error = computed(() => props.error)
 
 onBeforeMount(() => {
-  useScrollWaiter().flush()
+  useLoading().stopLoading()
 })
 
 const offline = computed(() => {

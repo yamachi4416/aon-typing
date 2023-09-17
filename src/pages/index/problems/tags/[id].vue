@@ -11,14 +11,16 @@
       @tag="$navigator.indexTagDetail"
       @detail="$navigator.indexProblemDetail"
       @play="$navigator.gameMenu"
+      @page="$navigator.scrollTop"
     />
   </div>
 </template>
 
 <script setup lang="ts">
+const { wrapLoading } = useLoading()
 const { retrieveTag, filterTagProblems } = useProblems()
 
-const tag = await retrieveTag({ id: String(useRoute().params.id) })
+const tag = await wrapLoading(retrieveTag({ id: String(useRoute().params.id) }))
 const tags = ref(queryTags())
 const problems = filterTagProblems({
   problems: computed(() => tag.value.problems),

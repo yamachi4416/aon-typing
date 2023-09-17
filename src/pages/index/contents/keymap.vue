@@ -18,7 +18,7 @@
             >こちら</a
           >からどうぞ。
         </p>
-        <footer>
+        <footer :class="$style.footer">
           <button v-show="$navigator.enable" @click="$router.back">
             もどる
           </button>
@@ -52,16 +52,16 @@ function print() {
 
 .page {
   :where(:has([aria-labelledby='info-title'])) {
-    footer {
-      @include cmps.buttons;
-
-      justify-content: flex-start;
-      padding-top: 5px;
-    }
-
     @media print {
       display: none;
     }
   }
+}
+
+.footer {
+  @include cmps.buttons;
+
+  justify-content: flex-start;
+  padding-top: 5px;
 }
 </style>

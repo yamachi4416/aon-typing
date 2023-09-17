@@ -1,16 +1,16 @@
 <template>
-  <div>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-    <PartsLoading v-if="waiting" />
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+    <Teleport to="body">
+      <PartsLoading v-show="isLoading" />
+    </Teleport>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
 import { healthcheck } from '~~/libs/Util'
 
-const { waiting } = useScrollWaiter()
+const { isLoading, stopLoading } = useLoading()
 
 onBeforeMount(() => {
   setVH()
@@ -28,6 +28,7 @@ useHead({
 onErrorCaptured((err) => {
   if (process.client) {
     healthcheck().then((ok) => {
+      stopLoading()
       if (!ok) {
         window.location.reload()
       } else {

@@ -82,26 +82,32 @@ function newNavigator() {
       return
     }
 
-    try {
-      useScrollWaiter().add()
+    await useLoading().wrapLoading(async () => {
+      try {
+        const res = await fetch(href)
+        const url = URL.createObjectURL(await res.blob())
 
-      const res = await fetch(href)
-      const url = URL.createObjectURL(await res.blob())
+        const unwatch = useRouter().afterEach(() => {
+          unwatch()
+          URL.revokeObjectURL(url)
+        })
 
-      const unwatch = useRouter().afterEach(() => {
-        unwatch()
-        URL.revokeObjectURL(url)
-      })
+        const a = document.createElement('a')
+        a.setAttribute('href', url)
+        a.setAttribute('download', file)
+        a.click()
+      } catch (e) {
+        console.log(e)
+      }
+    })
+  }
 
-      const a = document.createElement('a')
-      a.setAttribute('href', url)
-      a.setAttribute('download', file)
-      a.click()
-    } catch (e) {
-      console.log(e)
-    } finally {
-      useScrollWaiter().flush()
-    }
+  function scrollTop() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant',
+    })
   }
 
   return {
@@ -117,6 +123,7 @@ function newNavigator() {
     backOrIndex,
     backOrGameMenu,
     download,
+    scrollTop,
   }
 }
 

@@ -85,11 +85,15 @@ onMounted(() => {
 })
 
 async function submit() {
-  if (!validate()) return
+  if (validate()) {
+    await useLoading().wrapLoading(submitPost)
+  }
+}
+
+async function submitPost() {
   try {
     const { posted } = useContactPosted()
     gError.value = ''
-    useScrollWaiter().add()
     await fetch(useRuntimeConfig().public.contactUrl, {
       method: 'post',
       headers: {
@@ -103,9 +107,7 @@ async function submit() {
       posted.value = true
       navigateTo({ name: 'index-contact-thanks', replace: true })
     })
-    useScrollWaiter().flush()
   } catch (err) {
-    useScrollWaiter().flush()
     console.log(err)
     gError.value = '申し訳ありません。お問い合わせを送信できませんでした。'
     window.scroll({ top: 0, behavior: 'smooth' })

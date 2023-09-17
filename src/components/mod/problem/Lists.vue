@@ -32,6 +32,7 @@ const emit = defineEmits<{
   (e: 'tag', tag: ProblemItemTag): any
   (e: 'detail', p: ProblemListItem): any
   (e: 'play', p: ProblemListItem): any
+  (e: 'page', page: number): any
 }>()
 
 const route = useRoute()
@@ -53,6 +54,7 @@ watch(
       const nextPage = Number(to) || 1
       if (page.value !== nextPage) {
         page.value = nextPage
+        emit('page', page.value)
       }
     }
   },
