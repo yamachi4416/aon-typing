@@ -11,7 +11,7 @@
   left: 0;
   z-index: -1;
   width: 100dvw;
-  height: 100dvh;
+  height: 100vh;
   overflow: hidden;
   background-color: var(--page-background-color);
 
@@ -20,7 +20,7 @@
     top: 0;
     left: 0;
     width: 100dvw;
-    height: 100dvh;
+    height: 100vh;
     background-color: var(--page-background-image-color);
     background-image: var(--page-background-image);
     background-repeat: repeat-x;

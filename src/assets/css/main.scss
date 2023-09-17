@@ -12,6 +12,10 @@
   font-family: Itim, 'Noto Sans JP', cursive;
 }
 
+html {
+  background-color: var(--page-background-color);
+}
+
 @media print {
   @page {
     margin-top: 0;
