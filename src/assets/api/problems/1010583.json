@@ -1,0 +1,33 @@
+{
+  "id": "1010583",
+  "title": "神鉄三田線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-09-24",
+  "updatedAt": "2023-09-24",
+  "optional": { "cd": "583" },
+  "words": [
+    { "info": "三田", "info2": "さんだ", "word": "sanda" },
+    { "info": "三田本町", "info2": "さんだほんまち", "word": "sandahonmati" },
+    { "info": "横山", "info2": "よこやま", "word": "yokoyama" },
+    {
+      "info": "神鉄道場",
+      "info2": "しんてつどうじょう",
+      "word": "sintetudoujou"
+    },
+    {
+      "info": "道場南口",
+      "info2": "どうじょうみなみぐち",
+      "word": "doujouminamiguti"
+    },
+    { "info": "二郎", "info2": "にろう", "word": "nirou" },
+    { "info": "田尾寺", "info2": "たおじ", "word": "taoji" },
+    { "info": "岡場", "info2": "おかば", "word": "okaba" },
+    { "info": "五社", "info2": "ごしゃ", "word": "gosya" },
+    { "info": "有馬口", "info2": "ありまぐち", "word": "arimaguti" }
+  ]
+}

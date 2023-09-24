@@ -1,0 +1,38 @@
+{
+  "id": "1010582",
+  "title": "神鉄有馬線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-09-24",
+  "updatedAt": "2023-09-24",
+  "optional": { "cd": "582" },
+  "words": [
+    { "info": "有馬温泉", "info2": "ありまおんせん", "word": "arimaonsenn" },
+    { "info": "有馬口", "info2": "ありまぐち", "word": "arimaguti" },
+    { "info": "唐櫃台", "info2": "からとだい", "word": "karatodai" },
+    {
+      "info": "神鉄六甲",
+      "info2": "しんてつろっこう",
+      "word": "sinteturokkou"
+    },
+    { "info": "大池", "info2": "おおいけ", "word": "ooike" },
+    { "info": "花山", "info2": "はなやま", "word": "hanayama" },
+    { "info": "谷上", "info2": "たにがみ", "word": "tanigami" },
+    { "info": "箕谷", "info2": "みのたに", "word": "minotani" },
+    { "info": "山の街", "info2": "やまのまち", "word": "yamanomati" },
+    {
+      "info": "北鈴蘭台",
+      "info2": "きたすずらんだい",
+      "word": "kitasuzurandai"
+    },
+    { "info": "鈴蘭台", "info2": "すずらんだい", "word": "suzurandai" },
+    { "info": "鵯越", "info2": "ひよどりごえ", "word": "hiyodorigoe" },
+    { "info": "丸山", "info2": "まるやま", "word": "maruyama" },
+    { "info": "長田", "info2": "ながた", "word": "nagata" },
+    { "info": "湊川", "info2": "みなとがわ", "word": "minatogawa" }
+  ]
+}
