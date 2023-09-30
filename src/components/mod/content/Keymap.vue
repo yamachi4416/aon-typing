@@ -220,15 +220,15 @@ const chars = japaneseToTypeCharList()
         font-size: 9px;
 
         ul {
-          @media (width <= 600px) {
+          @media (width < 700px) {
             width: calc(100% / 2);
           }
 
-          @media (600px <= width <= 1000px) {
+          @media (700px <= width < 1000px) {
             width: calc(100% / 3);
           }
 
-          @media (1000px <= width <= 1600px) {
+          @media (1000px <= width) {
             width: calc(100% / 4);
           }
         }
