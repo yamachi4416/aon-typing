@@ -1,0 +1,26 @@
+{
+  "id": "1010298",
+  "title": "京成金町線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-09-30",
+  "updatedAt": "2023-09-30",
+  "optional": { "cd": "298" },
+  "words": [
+    {
+      "info": "京成金町",
+      "info2": "けいせいかなまち",
+      "word": "keiseikanamati"
+    },
+    { "info": "柴又", "info2": "しばまた", "word": "sibamata" },
+    {
+      "info": "京成高砂",
+      "info2": "けいせいたかさご",
+      "word": "keiseitakasago"
+    }
+  ]
+}

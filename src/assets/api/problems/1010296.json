@@ -1,0 +1,17 @@
+{
+  "id": "1010296",
+  "title": "京成東成田線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-09-30",
+  "updatedAt": "2023-09-30",
+  "optional": { "cd": "296" },
+  "words": [
+    { "info": "東成田", "info2": "ひがしなりた", "word": "higasinarita" },
+    { "info": "京成成田", "info2": "けいせいなりた", "word": "keiseinarita" }
+  ]
+}
