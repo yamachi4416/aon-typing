@@ -755,7 +755,7 @@
       "title": "ＪＲ気仙沼線の駅いちらん",
       "type": "japanese",
       "words": 33,
-      "chars": 363,
+      "chars": 364,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1151,7 +1151,7 @@
       "title": "ＪＲ吾妻線の駅いちらん",
       "type": "japanese",
       "words": 24,
-      "chars": 226,
+      "chars": 227,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -3587,7 +3587,7 @@
       "title": "京急逗子線の駅いちらん",
       "type": "japanese",
       "words": 4,
-      "chars": 38,
+      "chars": 39,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -3875,7 +3875,7 @@
       "title": "名鉄犬山線の駅いちらん",
       "type": "japanese",
       "words": 20,
-      "chars": 185,
+      "chars": 186,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4079,7 +4079,7 @@
       "title": "南海高師浜線の駅いちらん",
       "type": "japanese",
       "words": 4,
-      "chars": 48,
+      "chars": 50,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4271,7 +4271,7 @@
       "title": "阪神本線の駅いちらん",
       "type": "japanese",
       "words": 33,
-      "chars": 276,
+      "chars": 277,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4703,7 +4703,7 @@
       "title": "嵐電北野線の駅いちらん",
       "type": "japanese",
       "words": 10,
-      "chars": 135,
+      "chars": 136,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4859,7 +4859,7 @@
       "title": "みなとみらい線の駅いちらん",
       "type": "japanese",
       "words": 6,
-      "chars": 69,
+      "chars": 70,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4919,7 +4919,7 @@
       "title": "広島電鉄１号線の駅いちらん",
       "type": "japanese",
       "words": 27,
-      "chars": 339,
+      "chars": 340,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4931,7 +4931,7 @@
       "title": "広島電鉄２号線の駅いちらん",
       "type": "japanese",
       "words": 40,
-      "chars": 508,
+      "chars": 509,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4943,7 +4943,7 @@
       "title": "広島電鉄３号線の駅いちらん",
       "type": "japanese",
       "words": 29,
-      "chars": 375,
+      "chars": 377,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4955,7 +4955,7 @@
       "title": "広島電鉄５号線の駅いちらん",
       "type": "japanese",
       "words": 18,
-      "chars": 257,
+      "chars": 258,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -5063,7 +5063,7 @@
       "title": "ＪＲ気仙沼線(BRT)の駅いちらん",
       "type": "japanese",
       "words": 25,
-      "chars": 296,
+      "chars": 297,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },

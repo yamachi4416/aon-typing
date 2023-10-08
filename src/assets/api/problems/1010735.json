@@ -13,8 +13,8 @@
   "words": [
     {
       "info": "広島港・宇品",
-      "info2": "ひろしまこううじな",
-      "word": "hirosimakouujina"
+      "info2": "ひろしまこう・うじな",
+      "word": "hirosimakou/ujina"
     },
     { "info": "元宇品口", "info2": "もとうじなぐち", "word": "motoujinaguti" },
     { "info": "海岸通", "info2": "かいがんどおり", "word": "kaigandoori" },
@@ -93,8 +93,8 @@
     { "info": "福島町", "info2": "ふくしまちょう", "word": "hukusimatyou" },
     {
       "info": "広電西広島・己斐",
-      "info2": "ひろでんにしひろしまこい",
-      "word": "hirodennnisihirosimakoi"
+      "info2": "ひろでんにしひろしま・こい",
+      "word": "hirodennnisihirosima/koi"
     }
   ]
 }

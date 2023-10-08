@@ -14,13 +14,13 @@
     { "info": "高師浜", "info2": "たかしのはま", "word": "takasinohama" },
     {
       "info": "伽羅橋・南",
-      "info2": "きゃらばしみなみ",
-      "word": "kyarabasiminami"
+      "info2": "きゃらばし・みなみ",
+      "word": "kyarabasi/minami"
     },
     {
       "info": "伽羅橋・北",
-      "info2": "きゃらばしきた",
-      "word": "kyarabasikita"
+      "info2": "きゃらばし・きた",
+      "word": "kyarabasi/kita"
     },
     { "info": "羽衣", "info2": "はごろも", "word": "hagoromo" }
   ]
