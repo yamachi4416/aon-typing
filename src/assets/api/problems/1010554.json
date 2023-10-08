@@ -1,0 +1,44 @@
+{
+  "id": "1010554",
+  "title": "嵐電嵐山本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-10-08",
+  "updatedAt": "2023-10-08",
+  "optional": { "cd": "554" },
+  "words": [
+    { "info": "嵐山", "info2": "あらしやま", "word": "arasiyama" },
+    { "info": "嵐電嵯峨", "info2": "らんでんさが", "word": "randensaga" },
+    { "info": "鹿王院", "info2": "ろくおういん", "word": "rokuouinn" },
+    {
+      "info": "車折神社",
+      "info2": "くるまざきじんじゃ",
+      "word": "kurumazakijinja"
+    },
+    { "info": "有栖川", "info2": "ありすがわ", "word": "arisugawa" },
+    { "info": "帷子ノ辻", "info2": "かたびらのつじ", "word": "katabiranotuji" },
+    {
+      "info": "太秦広隆寺",
+      "info2": "うずまさこうりゅうじ",
+      "word": "uzumasakouryuuji"
+    },
+    { "info": "蚕ノ社", "info2": "かいこのやしろ", "word": "kaikonoyasiro" },
+    {
+      "info": "嵐電天神川",
+      "info2": "らんでんてんじんがわ",
+      "word": "randentenjingawa"
+    },
+    { "info": "山ノ内", "info2": "やまのうち", "word": "yamanouti" },
+    {
+      "info": "西大路三条",
+      "info2": "にしおおじさんじょう",
+      "word": "nisioojisanjou"
+    },
+    { "info": "西院", "info2": "さい", "word": "sai" },
+    { "info": "四条大宮", "info2": "しじょうおおみや", "word": "sijouoomiya" }
+  ]
+}

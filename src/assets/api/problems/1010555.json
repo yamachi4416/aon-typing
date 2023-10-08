@@ -1,0 +1,37 @@
+{
+  "id": "1010555",
+  "title": "嵐電北野線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-10-08",
+  "updatedAt": "2023-10-08",
+  "optional": { "cd": "555" },
+  "words": [
+    { "info": "帷子ノ辻", "info2": "かたびらのつじ", "word": "katabiranotuji" },
+    { "info": "撮影所前", "info2": "さつえいしょまえ", "word": "satueisyomae" },
+    { "info": "常盤", "info2": "ときわ", "word": "tokiwa" },
+    { "info": "鳴滝", "info2": "なるたき", "word": "narutaki" },
+    { "info": "宇多野", "info2": "うたの", "word": "utano" },
+    {
+      "info": "御室仁和寺",
+      "info2": "おむろにんなじ",
+      "word": "omuroninnnaji"
+    },
+    { "info": "妙心寺", "info2": "みょうしんじ", "word": "myousinji" },
+    { "info": "龍安寺", "info2": "りょうあんじ", "word": "ryouanji" },
+    {
+      "info": "等持院・立命館大学衣笠キャンパス前",
+      "info2": "とうじいんりつめいかんだいがくきぬがさきゃんぱすまえ",
+      "word": "toujiinritumeikandaigakukinugasakyanpasumae"
+    },
+    {
+      "info": "北野白梅町",
+      "info2": "きたのはくばいちょう",
+      "word": "kitanohakubaityou"
+    }
+  ]
+}
