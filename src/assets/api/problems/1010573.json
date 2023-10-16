@@ -1,0 +1,21 @@
+{
+  "id": "1010573",
+  "title": "能勢電鉄日生線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-10-17",
+  "updatedAt": "2023-10-17",
+  "optional": { "cd": "573" },
+  "words": [
+    {
+      "info": "日生中央",
+      "info2": "にっせいちゅうおう",
+      "word": "nisseityuuou"
+    },
+    { "info": "山下", "info2": "やました", "word": "yamasita" }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "1010572",
+  "title": "能勢電鉄妙見線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-10-17",
+  "updatedAt": "2023-10-17",
+  "optional": { "cd": "572" },
+  "words": [
+    { "info": "妙見口", "info2": "みょうけんぐち", "word": "myoukenguti" },
+    { "info": "ときわ台", "info2": "ときわだい", "word": "tokiwadai" },
+    { "info": "光風台", "info2": "こうふうだい", "word": "kouhuudai" },
+    { "info": "笹部", "info2": "ささべ", "word": "sasabe" },
+    { "info": "山下", "info2": "やました", "word": "yamasita" },
+    { "info": "畦野", "info2": "うねの", "word": "uneno" },
+    { "info": "一の鳥居", "info2": "いちのとりい", "word": "itinotorii" },
+    { "info": "平野", "info2": "ひらの", "word": "hirano" },
+    { "info": "多田", "info2": "ただ", "word": "tada" },
+    { "info": "鼓滝", "info2": "つづみがたき", "word": "tudumigataki" },
+    { "info": "鴬の森", "info2": "うぐいすのもり", "word": "uguisunomori" },
+    { "info": "滝山", "info2": "たきやま", "word": "takiyama" },
+    { "info": "絹延橋", "info2": "きぬのべばし", "word": "kinunobebasi" },
+    {
+      "info": "川西能勢口",
+      "info2": "かわにしのせぐち",
+      "word": "kawanisinoseguti"
+    }
+  ]
+}
