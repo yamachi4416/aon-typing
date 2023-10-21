@@ -1,0 +1,30 @@
+{
+  "id": "1010521",
+  "title": "上田電鉄別所線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-10-21",
+  "updatedAt": "2023-10-21",
+  "optional": { "cd": "521" },
+  "words": [
+    { "info": "別所温泉", "info2": "べっしょおんせん", "word": "bessyoonsenn" },
+    { "info": "八木沢", "info2": "やぎさわ", "word": "yagisawa" },
+    { "info": "舞田", "info2": "まいた", "word": "maita" },
+    { "info": "中野", "info2": "なかの", "word": "nakano" },
+    { "info": "塩田町", "info2": "しおだまち", "word": "siodamati" },
+    { "info": "中塩田", "info2": "なかしおだ", "word": "nakasioda" },
+    { "info": "下之郷", "info2": "しものごう", "word": "simonogou" },
+    { "info": "大学前", "info2": "だいがくまえ", "word": "daigakumae" },
+    { "info": "神畑", "info2": "かばたけ", "word": "kabatake" },
+    { "info": "寺下", "info2": "てらした", "word": "terasita" },
+    { "info": "上田原", "info2": "うえだはら", "word": "uedahara" },
+    { "info": "赤坂上", "info2": "あかさかうえ", "word": "akasakaue" },
+    { "info": "三好町", "info2": "みよしちょう", "word": "miyosityou" },
+    { "info": "城下", "info2": "しろした", "word": "sirosita" },
+    { "info": "上田", "info2": "うえだ", "word": "ueda" }
+  ]
+}

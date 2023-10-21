@@ -1,0 +1,33 @@
+{
+  "id": "1010522",
+  "title": "松本電鉄上高地線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-10-21",
+  "updatedAt": "2023-10-21",
+  "optional": { "cd": "522" },
+  "words": [
+    { "info": "新島々", "info2": "しんしましま", "word": "sinsimasima" },
+    { "info": "渕東", "info2": "えんどう", "word": "endou" },
+    { "info": "波田", "info2": "はた", "word": "hata" },
+    { "info": "下島", "info2": "しもじま", "word": "simojima" },
+    { "info": "森口", "info2": "もりぐち", "word": "moriguti" },
+    { "info": "三溝", "info2": "さみぞ", "word": "samizo" },
+    { "info": "新村", "info2": "にいむら", "word": "niimura" },
+    {
+      "info": "北新・松本大学前",
+      "info2": "きたにいまつもとだいがくまえ",
+      "word": "kitaniimatumotodaigakumae"
+    },
+    { "info": "下新", "info2": "しもにい", "word": "simonii" },
+    { "info": "大庭", "info2": "おおにわ", "word": "ooniwa" },
+    { "info": "信濃荒井", "info2": "しなのあらい", "word": "sinanoarai" },
+    { "info": "渚", "info2": "なぎさ", "word": "nagisa" },
+    { "info": "西松本", "info2": "にしまつもと", "word": "nisimatumoto" },
+    { "info": "松本", "info2": "まつもと", "word": "matumoto" }
+  ]
+}
