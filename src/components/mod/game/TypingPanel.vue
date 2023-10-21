@@ -331,8 +331,7 @@ function pauseToggle() {
 
     .hands {
       display: flex;
-      row-gap: 20px;
-      column-gap: 20px;
+      gap: 20px 20px;
       width: 90%;
       height: 15px;
 
