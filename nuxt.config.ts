@@ -86,6 +86,11 @@ export default defineNuxtConfig({
 
   typescript: {
     typeCheck: 'build',
+    tsConfig: {
+      compilerOptions: {
+        verbatimModuleSyntax: false,
+      },
+    },
   },
 
   nitro: {
