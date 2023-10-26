@@ -1,0 +1,35 @@
+{
+  "id": "1010390",
+  "title": "近鉄吉野線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-10-26",
+  "updatedAt": "2023-10-26",
+  "optional": { "cd": "390" },
+  "words": [
+    { "info": "吉野", "info2": "よしの", "word": "yosino" },
+    { "info": "吉野神宮", "info2": "よしのじんぐう", "word": "yosinojinguu" },
+    { "info": "大和上市", "info2": "やまとかみいち", "word": "yamatokamiiti" },
+    { "info": "六田", "info2": "むだ", "word": "muda" },
+    { "info": "越部", "info2": "こしべ", "word": "kosibe" },
+    { "info": "下市口", "info2": "しもいちぐち", "word": "simoitiguti" },
+    { "info": "大阿太", "info2": "おおあだ", "word": "ooada" },
+    { "info": "福神", "info2": "ふくがみ", "word": "hukugami" },
+    { "info": "薬水", "info2": "くすりみず", "word": "kusurimizu" },
+    { "info": "吉野口", "info2": "よしのぐち", "word": "yosinoguti" },
+    { "info": "葛", "info2": "くず", "word": "kuzu" },
+    { "info": "市尾", "info2": "いちお", "word": "itio" },
+    { "info": "壺阪山", "info2": "つぼさかやま", "word": "tubosakayama" },
+    { "info": "飛鳥", "info2": "あすか", "word": "asuka" },
+    { "info": "岡寺", "info2": "おかでら", "word": "okadera" },
+    {
+      "info": "橿原神宮前",
+      "info2": "かしはらじんぐうまえ",
+      "word": "kasiharajinguumae"
+    }
+  ]
+}
