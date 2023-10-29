@@ -1,0 +1,42 @@
+{
+  "id": "1010671",
+  "title": "しなの鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-10-29",
+  "updatedAt": "2023-10-29",
+  "optional": { "cd": "671" },
+  "words": [
+    { "info": "篠ノ井", "info2": "しののい", "word": "sinonoi" },
+    {
+      "info": "屋代高校前",
+      "info2": "やしろこうこうまえ",
+      "word": "yasirokoukoumae"
+    },
+    { "info": "屋代", "info2": "やしろ", "word": "yasiro" },
+    { "info": "千曲", "info2": "ちくま", "word": "tikuma" },
+    { "info": "戸倉", "info2": "とぐら", "word": "togura" },
+    { "info": "坂城", "info2": "さかき", "word": "sakaki" },
+    { "info": "テクノさかき", "info2": "てくのさかき", "word": "tekunosakaki" },
+    { "info": "西上田", "info2": "にしうえだ", "word": "nisiueda" },
+    { "info": "上田", "info2": "うえだ", "word": "ueda" },
+    {
+      "info": "信濃国分寺",
+      "info2": "しなのこくぶんじ",
+      "word": "sinanokokubunji"
+    },
+    { "info": "大屋", "info2": "おおや", "word": "ooya" },
+    { "info": "田中", "info2": "たなか", "word": "tanaka" },
+    { "info": "滋野", "info2": "しげの", "word": "sigeno" },
+    { "info": "小諸", "info2": "こもろ", "word": "komoro" },
+    { "info": "平原", "info2": "ひらはら", "word": "hirahara" },
+    { "info": "御代田", "info2": "みよた", "word": "miyota" },
+    { "info": "信濃追分", "info2": "しなのおいわけ", "word": "sinanooiwake" },
+    { "info": "中軽井沢", "info2": "なかかるいざわ", "word": "nakakaruizawa" },
+    { "info": "軽井沢", "info2": "かるいざわ", "word": "karuizawa" }
+  ]
+}
