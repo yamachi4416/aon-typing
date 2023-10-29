@@ -3,7 +3,7 @@ import { type TypingProblemQuestioner } from './TypingProblemQuestioner'
 import { keyCodeToChar } from './Keys'
 import { TypingGameInfo } from './TypingGameInfo'
 import { type TypingGamer, useTypingGamer } from './TypingGamer'
-import { isNumber } from './Util'
+import { timerEntry, timerTicker } from './Util'
 
 type ProblemOrder = 'first' | 'last' | 'random'
 
@@ -141,7 +141,7 @@ export class TypingGame {
       const { keyCode, shiftKey } = e
       const detail = { keyCode, shiftKey, char: null }
       const event = new CustomEvent('c:typing', { detail })
-      window.dispatchEvent(event)
+      this.eventManager.dispatch(event)
     }
   }
 
@@ -154,16 +154,17 @@ export class TypingGame {
   }
 
   private addTickTimer(timeLimit: number) {
-    return this.timerManager.create({
+    const interval = 60
+    this.timerManager.create({
       handler: () => {
         if (timeLimit > 0 && this.timeUse >= timeLimit) {
           this.cancel()
         } else if (this.isRunning) {
-          this.tick += 10
-          this.timeUse += 10
+          this.tick += interval
+          this.timeUse += interval
         }
       },
-      interval: 10,
+      interval,
     })
   }
 
@@ -180,7 +181,7 @@ export class TypingGame {
 
     const xs = Array.from(words.reduce((a, w) => a + w.wordState.remaining, ''))
 
-    const timer = this.timerManager.create({
+    this.timerManager.create({
       handler: () => {
         if (!this.isRunning) {
           return
@@ -190,15 +191,13 @@ export class TypingGame {
         if (char) {
           const detail = { char }
           const event = new CustomEvent('c:typing', { detail })
-          window.dispatchEvent(event)
+          this.eventManager.dispatch(event)
         } else {
-          timer?.stop()
+          this.timerManager.stop()
         }
       },
       interval: autoMode,
     })
-
-    return timer
   }
 
   async start({
@@ -345,6 +344,11 @@ class EventManager {
     })
   }
 
+  dispatch(event: Event, target?: Document | Element | Window) {
+    target = target ?? window
+    target.dispatchEvent(event)
+  }
+
   clear() {
     const targets = [...this.listeners]
     this.listeners = []
@@ -354,81 +358,9 @@ class EventManager {
   }
 }
 
-class TimerEntry {
-  private uid?: number
-  private id?: number
-  private time?: number
-  private tick?: number
-  private running: boolean = false
-
-  private readonly handler: () => void
-  private readonly interval: () => number
-
-  constructor(handler: () => void, interval: (() => number) | number) {
-    if (typeof interval === 'function') {
-      this.interval = interval
-    } else {
-      this.interval = () => interval
-    }
-    this.handler = handler
-  }
-
-  private *ticker() {
-    while (this.running) {
-      if (isNumber(this.tick)) {
-        if (isNumber(this.time)) {
-          this.time += this.tick
-        }
-        yield this.tick
-        delete this.tick
-      }
-      const next = this.interval()
-      if (isNumber(this.time) && isNumber(next)) {
-        yield Math.max((this.time += next) - Date.now(), 0)
-      } else {
-        return
-      }
-    }
-  }
-
-  start() {
-    const handler = this.handler
-    const tick = this.ticker()
-
-    const fn = () => {
-      handler()
-      const next = tick.next().value
-      if (isNumber(next)) {
-        this.id = window.setTimeout(fn, next)
-      }
-    }
-
-    this.running = true
-    this.time = Date.now()
-    const next = tick.next().value
-    if (isNumber(next)) {
-      this.uid = window.setTimeout(fn, next)
-      this.id = this.uid
-    } else {
-      this.time = undefined
-    }
-
-    return this.uid
-  }
-
-  stop() {
-    this.running = false
-    if (this.id) {
-      this.tick = Math.max((this.time ?? 0) - Date.now(), 0) || 0
-      window.clearTimeout(this.id)
-    }
-    this.id = undefined
-    this.time = undefined
-  }
-}
-
 class TimerManager {
-  private timers: TimerEntry[] = []
+  private timer = timerTicker(30)
+  private timers: ReturnType<typeof timerEntry>[] = []
 
   create({
     handler,
@@ -437,19 +369,27 @@ class TimerManager {
     handler: () => void
     interval: (() => number) | number
   }) {
-    const timer = new TimerEntry(handler, interval)
-    this.timers.push(timer)
-    return timer
+    this.timers.push(timerEntry(handler, interval))
   }
 
-  start() {
-    this.timers.forEach((timer) => timer.start())
+  async start() {
+    for (const entry of this.timers) {
+      entry.setup(Date.now())
+    }
+
+    for await (const time of this.timer.start()) {
+      for (const entry of this.timers) {
+        entry.handle(time)
+      }
+    }
+  }
+
+  stop() {
+    this.timer.stop()
   }
 
   pause() {
-    this.timers.forEach((timer) => {
-      timer.stop()
-    })
+    this.stop()
   }
 
   resume() {
@@ -457,9 +397,7 @@ class TimerManager {
   }
 
   clear() {
-    this.timers.forEach((timer) => {
-      timer.stop()
-    })
+    this.timer.stop()
     this.timers = []
   }
 }

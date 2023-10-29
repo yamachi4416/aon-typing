@@ -5,26 +5,118 @@ export function isNumber(num: any): num is number {
   return typeof num === 'number' && !isNaN(num)
 }
 
+export function timerTicker(interval: number) {
+  const state = {
+    running: false,
+    timerId: 0,
+  }
+
+  function stop() {
+    state.running = false
+    if (state.timerId) {
+      const { timerId } = state
+      state.timerId = 0
+      cancelIdleCallback(timerId)
+    }
+  }
+
+  async function* ticker() {
+    while (state.running) {
+      await new Promise((resolve) => {
+        requestIdleCallback(resolve, { timeout: interval })
+      })
+      yield Date.now()
+    }
+  }
+
+  function start() {
+    stop()
+    state.running = true
+    return ticker()
+  }
+
+  return {
+    stop,
+    start,
+  }
+}
+
+export function timerEntry(
+  handler: () => void,
+  timespan: (() => number) | number,
+) {
+  const interval = typeof timespan === 'function' ? timespan : () => timespan
+
+  let next = Number.MAX_VALUE
+
+  function setup(current: number) {
+    next = current + interval()
+  }
+
+  function handle(current: number) {
+    if (next <= current) {
+      next += interval()
+      handler()
+      return true
+    }
+    return false
+  }
+
+  return {
+    setup,
+    handle,
+  }
+}
+
+async function intervalTimer(
+  count: number,
+  tick: (count: number) => void,
+  options: {
+    abort?: AbortController
+    rejectOnAbort?: boolean
+    interval: number
+    fps: number
+  } = {
+    interval: 1000,
+    fps: 100,
+  },
+) {
+  const { interval, fps } = options
+  return await new Promise((resolve, reject) => {
+    const timer = timerTicker(fps)
+
+    if (options.abort) {
+      options.abort.signal?.addEventListener('abort', function () {
+        options?.rejectOnAbort ? reject(new Error('abort')) : resolve(count)
+      })
+    }
+
+    const entry = timerEntry(() => {
+      tick(--count)
+      if (count <= 0) {
+        timer.stop()
+        resolve(count)
+      }
+    }, interval)
+
+    requestIdleCallback(async () => {
+      entry.setup(Date.now())
+      for await (const time of timer.start()) {
+        entry.handle(time)
+      }
+    })
+  })
+}
+
 export async function countDown(
   count: number,
   tick: (count: number) => void,
   options: { abort?: AbortController; rejectOnAbort?: boolean } = {},
 ) {
-  return await new Promise((resolve, reject) => {
-    const id = setInterval(() => {
-      tick(--count)
-      if (count <= 0) {
-        clearInterval(id)
-        options?.rejectOnAbort ? reject(new Error('abort')) : resolve(count)
-      }
-    }, 1000)
-
-    if (options.abort) {
-      options.abort.signal?.addEventListener('abort', function () {
-        clearTimeout(id)
-        resolve(count)
-      })
-    }
+  return await intervalTimer(count, tick, {
+    ...options,
+    interval: 1000,
+    fps: 100,
   })
 }
 
@@ -32,18 +124,13 @@ export async function wait(
   time: number,
   options: { abort?: AbortController; rejectOnAbort?: boolean } = {},
 ) {
-  await new Promise<void>((resolve, reject) => {
-    const id = setTimeout(() => {
-      resolve()
-    }, time)
-
-    if (options.abort) {
-      options.abort.signal?.addEventListener('abort', function () {
-        clearTimeout(id)
-        options?.rejectOnAbort ? reject(new Error('abort')) : resolve()
-      })
-    }
-  })
+  if (process.client) {
+    return await intervalTimer(1, () => {}, {
+      ...options,
+      interval: time,
+      fps: Math.trunc(time / 2),
+    })
+  }
 }
 
 export function pagenate<T>({
