@@ -76,7 +76,7 @@
 
 <script setup lang="ts">
 import { JISKeys } from '~~/libs/JISKeys'
-import { GameSetting, TypingGame } from '~~/libs/TypingGame'
+import type { GameSetting, TypingGame } from '~~/libs/TypingGame'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
 import { TypingGameWordInfoState } from '~~/libs/TypingGameWordStates'
 import { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'

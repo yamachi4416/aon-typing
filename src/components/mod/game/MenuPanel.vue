@@ -124,7 +124,7 @@
 
 <script setup lang="ts">
 import { helpAnimals } from '~~/libs/TypingGameInfo'
-import { ProblemListItem } from '~~/types/problems'
+import type { ProblemListItem } from '~~/types/problems'
 
 const emit = defineEmits<{
   (e: 'openProblemSelect'): any

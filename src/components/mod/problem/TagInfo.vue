@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import { TagInfo } from '~~/types/problems'
+import type { TagInfo } from '~~/types/problems'
 
 const props = withDefaults(
   defineProps<{

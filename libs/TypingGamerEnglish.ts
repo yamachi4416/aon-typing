@@ -1,4 +1,4 @@
-import { type TypingGameWordData } from './TypingGameWordData'
+import type { TypingGameWordData } from './TypingGameWordData'
 import type { TypingGamer } from './TypingGamer'
 
 export class TypingGamerEnglish implements TypingGamer {

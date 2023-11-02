@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { ProblemItemTag, ProblemListItem } from '~~/types/problems'
+import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 
 withDefaults(
   defineProps<{

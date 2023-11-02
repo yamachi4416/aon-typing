@@ -3,11 +3,11 @@ import path from 'node:path'
 import * as prettier from 'prettier'
 import { defineCommand } from '../lib/util'
 import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
-import {
-  type ProblemDetail,
-  type ProblemListItem,
-  type ProblemTagSummary,
-  type TagInfo,
+import type {
+  ProblemDetail,
+  ProblemListItem,
+  ProblemTagSummary,
+  TagInfo,
 } from '~~/types/problems'
 
 type ProblemDetailData = Omit<ProblemDetail, 'tags'> & { tags: string[] }

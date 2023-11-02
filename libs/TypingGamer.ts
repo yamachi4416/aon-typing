@@ -1,6 +1,6 @@
 import { TypingGamerEnglish } from './TypingGamerEnglish'
 import { TypingGamerJapanese } from './TypingGamerJapanese'
-import { type TypingGameWordData } from './TypingGameWordData'
+import type { TypingGameWordData } from './TypingGameWordData'
 
 export interface TypingGamer {
   init: (word?: TypingGameWordData) => void

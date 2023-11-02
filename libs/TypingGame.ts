@@ -1,8 +1,9 @@
-import { type TypingGameWordData } from './TypingGameWordData'
-import { type TypingProblemQuestioner } from './TypingProblemQuestioner'
+import type { TypingGameWordData } from './TypingGameWordData'
+import type { TypingProblemQuestioner } from './TypingProblemQuestioner'
 import { keyCodeToChar } from './Keys'
 import { TypingGameInfo } from './TypingGameInfo'
-import { type TypingGamer, useTypingGamer } from './TypingGamer'
+import type { TypingGamer } from './TypingGamer'
+import { useTypingGamer } from './TypingGamer'
 import { timerEntry, timerTicker } from './Util'
 
 type ProblemOrder = 'first' | 'last' | 'random'

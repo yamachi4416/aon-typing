@@ -58,7 +58,7 @@
 </template>
 
 <script setup lang="ts">
-import { ProblemDetail, ProblemItemTag } from '~~/types/problems'
+import type { ProblemDetail, ProblemItemTag } from '~~/types/problems'
 
 defineProps<{
   detail: ProblemDetail

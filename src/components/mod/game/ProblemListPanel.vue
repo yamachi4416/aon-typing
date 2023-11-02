@@ -34,7 +34,7 @@
 
 <script setup lang="ts">
 import ModalContentVue from '~/components/parts/ModalContent.vue'
-import { ProblemItemTag, ProblemListItem } from '~~/types/problems'
+import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 import { pagenate } from '~~/libs/Util'
 
 defineEmits<{

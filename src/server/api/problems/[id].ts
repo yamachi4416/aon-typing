@@ -1,6 +1,6 @@
 import { join } from 'node:path'
 import { readFile } from 'node:fs/promises'
-import { type ProblemDetail } from '~~/types/problems'
+import type { ProblemDetail } from '~~/types/problems'
 
 export default defineEventHandler(async ({ context, node: { res } }) => {
   try {

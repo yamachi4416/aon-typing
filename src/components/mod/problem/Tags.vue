@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.tags">
-    <template v-for="(tag, i) in tags" :key="`tag-${i}`">
+    <template v-for="tag in tags" :key="`tag-${i}`">
       <span v-if="clickable === false">{{ tag.name }}</span>
       <button
         v-else
@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { ProblemItemTag } from '~~/types/problems'
+import type { ProblemItemTag } from '~~/types/problems'
 
 withDefaults(
   defineProps<{

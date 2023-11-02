@@ -1,4 +1,4 @@
-import { type GameSetting } from '../../libs/TypingGame'
+import type { GameSetting } from '../../libs/TypingGame'
 
 export function useGameSetting() {
   const setting = useState<GameSetting>(() => ({
