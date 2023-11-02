@@ -1,0 +1,96 @@
+{
+  "id": "1010436",
+  "title": "西鉄天神大牟田線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-02",
+  "updatedAt": "2023-11-02",
+  "optional": { "cd": "436" },
+  "words": [
+    { "info": "大牟田", "info2": "おおむた", "word": "oomuta" },
+    { "info": "新栄町", "info2": "しんさかえまち", "word": "sinsakaemati" },
+    {
+      "info": "西鉄銀水",
+      "info2": "にしてつぎんすい",
+      "word": "nisitetuginsui"
+    },
+    { "info": "東甘木", "info2": "ひがしあまぎ", "word": "higasiamagi" },
+    { "info": "倉永", "info2": "くらなが", "word": "kuranaga" },
+    { "info": "西鉄渡瀬", "info2": "にしてつわたぜ", "word": "nisitetuwataze" },
+    { "info": "開", "info2": "ひらき", "word": "hiraki" },
+    { "info": "江の浦", "info2": "えのうら", "word": "enoura" },
+    {
+      "info": "西鉄中島",
+      "info2": "にしてつなかしま",
+      "word": "nisitetunakasima"
+    },
+    { "info": "塩塚", "info2": "しおつか", "word": "siotuka" },
+    { "info": "徳益", "info2": "とくます", "word": "tokumasu" },
+    {
+      "info": "西鉄柳川",
+      "info2": "にしてつやながわ",
+      "word": "nisitetuyanagawa"
+    },
+    { "info": "矢加部", "info2": "やかべ", "word": "yakabe" },
+    { "info": "蒲池", "info2": "かまち", "word": "kamati" },
+    { "info": "八丁牟田", "info2": "はっちょうむた", "word": "hattyoumuta" },
+    { "info": "大溝", "info2": "おおみぞ", "word": "oomizo" },
+    { "info": "犬塚", "info2": "いぬづか", "word": "inuduka" },
+    { "info": "三潴", "info2": "みずま", "word": "mizuma" },
+    { "info": "大善寺", "info2": "だいぜんじ", "word": "daizenji" },
+    { "info": "安武", "info2": "やすたけ", "word": "yasutake" },
+    { "info": "津福", "info2": "つぶく", "word": "tubuku" },
+    { "info": "試験場前", "info2": "しけんじょうまえ", "word": "sikenjoumae" },
+    { "info": "花畑", "info2": "はなばたけ", "word": "hanabatake" },
+    {
+      "info": "西鉄久留米",
+      "info2": "にしてつくるめ",
+      "word": "nisitetukurume"
+    },
+    { "info": "櫛原", "info2": "くしわら", "word": "kusiwara" },
+    { "info": "宮の陣", "info2": "みやのじん", "word": "miyanojinn" },
+    { "info": "味坂", "info2": "あじさか", "word": "ajisaka" },
+    { "info": "端間", "info2": "はたま", "word": "hatama" },
+    {
+      "info": "西鉄小郡",
+      "info2": "にしてつおごおり",
+      "word": "nisitetuogoori"
+    },
+    { "info": "大保", "info2": "おおほ", "word": "ooho" },
+    { "info": "三沢", "info2": "みつさわ", "word": "mitusawa" },
+    { "info": "三国が丘", "info2": "みくにがおか", "word": "mikunigaoka" },
+    { "info": "津古", "info2": "つこ", "word": "tuko" },
+    { "info": "筑紫", "info2": "ちくし", "word": "tikusi" },
+    { "info": "桜台", "info2": "さくらだい", "word": "sakuradai" },
+    {
+      "info": "朝倉街道",
+      "info2": "あさくらがいどう",
+      "word": "asakuragaidou"
+    },
+    { "info": "紫", "info2": "むらさき", "word": "murasaki" },
+    {
+      "info": "西鉄二日市",
+      "info2": "にしてつふつかいち",
+      "word": "nisitetuhutukaiti"
+    },
+    { "info": "都府楼前", "info2": "とふろうまえ", "word": "tohuroumae" },
+    { "info": "下大利", "info2": "しもおおり", "word": "simooori" },
+    { "info": "白木原", "info2": "しらきばる", "word": "sirakibaru" },
+    { "info": "春日原", "info2": "かすがばる", "word": "kasugabaru" },
+    { "info": "雑餉隈", "info2": "ざっしょのくま", "word": "zassyonokuma" },
+    { "info": "井尻", "info2": "いじり", "word": "ijiri" },
+    { "info": "大橋", "info2": "おおはし", "word": "oohasi" },
+    { "info": "高宮", "info2": "たかみや", "word": "takamiya" },
+    { "info": "西鉄平尾", "info2": "にしてつひらお", "word": "nisitetuhirao" },
+    { "info": "薬院", "info2": "やくいん", "word": "yakuinn" },
+    {
+      "info": "西鉄福岡",
+      "info2": "にしてつふくおか",
+      "word": "nisitetuhukuoka"
+    }
+  ]
+}

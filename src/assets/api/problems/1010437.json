@@ -1,0 +1,26 @@
+{
+  "id": "1010437",
+  "title": "西鉄太宰府線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-02",
+  "updatedAt": "2023-11-02",
+  "optional": { "cd": "437" },
+  "words": [
+    { "info": "太宰府", "info2": "だざいふ", "word": "dazaihu" },
+    {
+      "info": "西鉄五条",
+      "info2": "にしてつごじょう",
+      "word": "nisitetugojou"
+    },
+    {
+      "info": "西鉄二日市",
+      "info2": "にしてつふつかいち",
+      "word": "nisitetuhutukaiti"
+    }
+  ]
+}
