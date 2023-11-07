@@ -1,0 +1,20 @@
+{
+  "id": "1010367",
+  "title": "名鉄豊川線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-07",
+  "updatedAt": "2023-11-07",
+  "optional": { "cd": "367" },
+  "words": [
+    { "info": "豊川稲荷", "info2": "とよかわいなり", "word": "toyokawainari" },
+    { "info": "稲荷口", "info2": "いなりぐち", "word": "inariguti" },
+    { "info": "諏訪町", "info2": "すわちょう", "word": "suwatyou" },
+    { "info": "八幡", "info2": "やわた", "word": "yawata" },
+    { "info": "国府", "info2": "こう", "word": "kou" }
+  ]
+}

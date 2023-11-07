@@ -1,0 +1,47 @@
+{
+  "id": "1010368",
+  "title": "名鉄瀬戸線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-07",
+  "updatedAt": "2023-11-07",
+  "optional": { "cd": "368" },
+  "words": [
+    { "info": "尾張瀬戸", "info2": "おわりせと", "word": "owariseto" },
+    {
+      "info": "瀬戸市役所前",
+      "info2": "せとしやくしょまえ",
+      "word": "setosiyakusyomae"
+    },
+    { "info": "新瀬戸", "info2": "しんせと", "word": "sinseto" },
+    { "info": "水野", "info2": "みずの", "word": "mizuno" },
+    { "info": "三郷", "info2": "さんごう", "word": "sangou" },
+    { "info": "尾張旭", "info2": "おわりあさひ", "word": "owariasahi" },
+    { "info": "旭前", "info2": "あさひまえ", "word": "asahimae" },
+    { "info": "印場", "info2": "いんば", "word": "inba" },
+    {
+      "info": "大森・金城学院前",
+      "info2": "おおもりきんじょうがくいんまえ",
+      "word": "oomorikinjougakuinmae"
+    },
+    { "info": "喜多山", "info2": "きたやま", "word": "kitayama" },
+    { "info": "小幡", "info2": "おばた", "word": "obata" },
+    { "info": "瓢箪山", "info2": "ひょうたんやま", "word": "hyoutanyama" },
+    {
+      "info": "守山自衛隊前",
+      "info2": "もりやまじえいたいまえ",
+      "word": "moriyamajieitaimae"
+    },
+    { "info": "矢田", "info2": "やだ", "word": "yada" },
+    { "info": "大曽根", "info2": "おおぞね", "word": "oozone" },
+    { "info": "森下", "info2": "もりした", "word": "morisita" },
+    { "info": "尼ケ坂", "info2": "あまがさか", "word": "amagasaka" },
+    { "info": "清水", "info2": "しみず", "word": "simizu" },
+    { "info": "東大手", "info2": "ひがしおおて", "word": "higasioote" },
+    { "info": "栄町", "info2": "さかえまち", "word": "sakaemati" }
+  ]
+}
