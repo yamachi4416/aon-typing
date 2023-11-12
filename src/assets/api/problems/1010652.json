@@ -1,0 +1,22 @@
+{
+  "id": "1010652",
+  "title": "熊本電気鉄道藤崎線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-12",
+  "updatedAt": "2023-11-12",
+  "optional": { "cd": "652" },
+  "words": [
+    {
+      "info": "藤崎宮前",
+      "info2": "ふじさきぐうまえ",
+      "word": "hujisakiguumae"
+    },
+    { "info": "黒髪町", "info2": "くろかみまち", "word": "kurokamimati" },
+    { "info": "北熊本", "info2": "きたくまもと", "word": "kitakumamoto" }
+  ]
+}
