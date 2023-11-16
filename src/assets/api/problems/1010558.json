@@ -1,0 +1,31 @@
+{
+  "id": "1010558",
+  "title": "嵯峨野観光鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-16",
+  "updatedAt": "2023-11-16",
+  "optional": { "cd": "558" },
+  "words": [
+    {
+      "info": "トロッコ亀岡",
+      "info2": "とろっこかめおか",
+      "word": "torokkokameoka"
+    },
+    {
+      "info": "トロッコ保津峡",
+      "info2": "とろっこほづきょう",
+      "word": "torokkohodukyou"
+    },
+    {
+      "info": "トロッコ嵐山",
+      "info2": "とろっこあらしやま",
+      "word": "torokkoarasiyama"
+    },
+    { "info": "トロッコ嵯峨", "info2": "とろっこさが", "word": "torokkosaga" }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "1010551",
+  "title": "信楽高原鐵道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-16",
+  "updatedAt": "2023-11-16",
+  "optional": { "cd": "551" },
+  "words": [
+    { "info": "信楽", "info2": "しがらき", "word": "sigaraki" },
+    {
+      "info": "玉桂寺前",
+      "info2": "ぎょくけいじまえ",
+      "word": "gyokukeijimae"
+    },
+    { "info": "勅旨", "info2": "ちょくし", "word": "tyokusi" },
+    { "info": "雲井", "info2": "くもい", "word": "kumoi" },
+    {
+      "info": "紫香楽宮跡",
+      "info2": "しがらきぐうし",
+      "word": "sigarakiguusi"
+    },
+    { "info": "貴生川", "info2": "きぶかわ", "word": "kibukawa" }
+  ]
+}
