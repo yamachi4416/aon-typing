@@ -1,0 +1,42 @@
+{
+  "id": "1010619",
+  "title": "伊予鉄道横河原線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-17",
+  "updatedAt": "2023-11-17",
+  "optional": { "cd": "619" },
+  "words": [
+    { "info": "横河原", "info2": "よこがわら", "word": "yokogawara" },
+    {
+      "info": "愛大医学部南口",
+      "info2": "あいだいいがくぶみなみぐち",
+      "word": "aidaiigakubuminamiguti"
+    },
+    { "info": "見奈良", "info2": "みなら", "word": "minara" },
+    { "info": "田窪", "info2": "たのくぼ", "word": "tanokubo" },
+    { "info": "牛渕", "info2": "うしぶち", "word": "usibuti" },
+    {
+      "info": "牛渕団地前",
+      "info2": "うしぶちだんちまえ",
+      "word": "usibutidantimae"
+    },
+    { "info": "梅本", "info2": "うめのもと", "word": "umenomoto" },
+    { "info": "平井", "info2": "ひらい", "word": "hirai" },
+    { "info": "鷹ノ子", "info2": "たかのこ", "word": "takanoko" },
+    { "info": "久米", "info2": "くめ", "word": "kume" },
+    { "info": "北久米", "info2": "きたくめ", "word": "kitakume" },
+    { "info": "福音寺", "info2": "ふくおんじ", "word": "hukuonji" },
+    { "info": "いよ立花", "info2": "いよたちばな", "word": "iyotatibana" },
+    {
+      "info": "石手川公園",
+      "info2": "いしてがわこうえん",
+      "word": "isitegawakouenn"
+    },
+    { "info": "松山市", "info2": "まつやまし", "word": "matuyamasi" }
+  ]
+}
