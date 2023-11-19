@@ -1,0 +1,47 @@
+{
+  "id": "1010462",
+  "title": "阿武隈急行の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-19",
+  "updatedAt": "2023-11-19",
+  "optional": { "cd": "462" },
+  "words": [
+    { "info": "槻木", "info2": "つきのき", "word": "tukinoki" },
+    { "info": "東船岡", "info2": "ひがしふなおか", "word": "higasihunaoka" },
+    { "info": "岡", "info2": "おか", "word": "oka" },
+    { "info": "横倉", "info2": "よこくら", "word": "yokokura" },
+    { "info": "角田", "info2": "かくだ", "word": "kakuda" },
+    { "info": "南角田", "info2": "みなみかくだ", "word": "minamikakuda" },
+    { "info": "北丸森", "info2": "きたまるもり", "word": "kitamarumori" },
+    { "info": "丸森", "info2": "まるもり", "word": "marumori" },
+    { "info": "あぶくま", "info2": "あぶくま", "word": "abukuma" },
+    { "info": "兜", "info2": "かぶと", "word": "kabuto" },
+    { "info": "富野", "info2": "とみの", "word": "tomino" },
+    {
+      "info": "やながわ希望の森公園前",
+      "info2": "やながわきぼうのもりこうえんまえ",
+      "word": "yanagawakibounomorikouenmae"
+    },
+    { "info": "梁川", "info2": "やながわ", "word": "yanagawa" },
+    { "info": "新田", "info2": "にった", "word": "nitta" },
+    { "info": "二井田", "info2": "にいだ", "word": "niida" },
+    { "info": "大泉", "info2": "おおいずみ", "word": "ooizumi" },
+    { "info": "保原", "info2": "ほばら", "word": "hobara" },
+    { "info": "上保原", "info2": "かみほばら", "word": "kamihobara" },
+    { "info": "高子", "info2": "たかこ", "word": "takako" },
+    { "info": "向瀬上", "info2": "むかいせのうえ", "word": "mukaisenoue" },
+    { "info": "瀬上", "info2": "せのうえ", "word": "senoue" },
+    {
+      "info": "福島学院前",
+      "info2": "ふくしまがくいんまえ",
+      "word": "hukusimagakuinmae"
+    },
+    { "info": "卸町", "info2": "おろしまち", "word": "orosimati" },
+    { "info": "福島", "info2": "ふくしま", "word": "hukusima" }
+  ]
+}
