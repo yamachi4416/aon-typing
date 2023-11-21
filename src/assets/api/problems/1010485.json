@@ -1,0 +1,37 @@
+{
+  "id": "1010485",
+  "title": "小湊鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-21",
+  "updatedAt": "2023-11-21",
+  "optional": { "cd": "485" },
+  "words": [
+    { "info": "上総中野", "info2": "かずさなかの", "word": "kazusanakano" },
+    {
+      "info": "養老渓谷",
+      "info2": "ようろうけいこく",
+      "word": "youroukeikoku"
+    },
+    { "info": "上総大久保", "info2": "かずさおおくぼ", "word": "kazusaookubo" },
+    { "info": "月崎", "info2": "つきざき", "word": "tukizaki" },
+    { "info": "飯給", "info2": "いたぶ", "word": "itabu" },
+    { "info": "里見", "info2": "さとみ", "word": "satomi" },
+    { "info": "高滝", "info2": "たかたき", "word": "takataki" },
+    { "info": "上総久保", "info2": "かずさくぼ", "word": "kazusakubo" },
+    { "info": "上総鶴舞", "info2": "かずさつるまい", "word": "kazusaturumai" },
+    { "info": "上総川間", "info2": "かずさかわま", "word": "kazusakawama" },
+    { "info": "上総牛久", "info2": "かずさうしく", "word": "kazusausiku" },
+    { "info": "馬立", "info2": "うまたて", "word": "umatate" },
+    { "info": "光風台", "info2": "こうふうだい", "word": "kouhuudai" },
+    { "info": "上総山田", "info2": "かずさやまだ", "word": "kazusayamada" },
+    { "info": "上総三又", "info2": "かずさみつまた", "word": "kazusamitumata" },
+    { "info": "海士有木", "info2": "あまありき", "word": "amaariki" },
+    { "info": "上総村上", "info2": "かずさむらかみ", "word": "kazusamurakami" },
+    { "info": "五井", "info2": "ごい", "word": "goi" }
+  ]
+}
