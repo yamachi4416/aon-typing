@@ -280,10 +280,15 @@ export const JapaneseToTypeCharList1 = [
   ['を', 'wo'],
   ['ん', 'nn,xn'],
   ['ヴァ', 'va'],
+  ['ヴぁ', 'va'],
   ['ヴィ', 'vi'],
+  ['ヴぃ', 'vi'],
+  ['ゔ', 'vu'],
   ['ヴ', 'vu'],
   ['ヴェ', 've'],
+  ['ヴぇ', 've'],
   ['ヴォ', 'vo'],
+  ['ヴぉ', 'vo'],
 ]
 
 export const JapaneseToTypeCharList2 = [
