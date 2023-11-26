@@ -1,0 +1,31 @@
+{
+  "id": "1010513",
+  "title": "北陸鉄道浅野川線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-26",
+  "updatedAt": "2023-11-26",
+  "optional": { "cd": "513" },
+  "words": [
+    { "info": "内灘", "info2": "うちなだ", "word": "utinada" },
+    { "info": "粟ケ崎", "info2": "あわがさき", "word": "awagasaki" },
+    { "info": "蚊爪", "info2": "かがつめ", "word": "kagatume" },
+    { "info": "北間", "info2": "きたま", "word": "kitama" },
+    { "info": "大河端", "info2": "おこばた", "word": "okobata" },
+    { "info": "三ツ屋", "info2": "みつや", "word": "mituya" },
+    { "info": "三口", "info2": "みつくち", "word": "mitukuti" },
+    { "info": "割出", "info2": "わりだし", "word": "waridasi" },
+    { "info": "磯部", "info2": "いそべ", "word": "isobe" },
+    { "info": "上諸江", "info2": "かみもろえ", "word": "kamimoroe" },
+    { "info": "七ツ屋", "info2": "ななつや", "word": "nanatuya" },
+    {
+      "info": "北鉄金沢",
+      "info2": "ほくてつかなざわ",
+      "word": "hokutetukanazawa"
+    }
+  ]
+}

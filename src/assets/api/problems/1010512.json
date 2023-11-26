@@ -1,0 +1,44 @@
+{
+  "id": "1010512",
+  "title": "北陸鉄道石川線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-26",
+  "updatedAt": "2023-11-26",
+  "optional": { "cd": "512" },
+  "words": [
+    { "info": "鶴来", "info2": "つるぎ", "word": "turugi" },
+    { "info": "日御子", "info2": "ひのみこ", "word": "hinomiko" },
+    { "info": "小柳", "info2": "おやなぎ", "word": "oyanagi" },
+    { "info": "井口", "info2": "いのくち", "word": "inokuti" },
+    { "info": "道法寺", "info2": "どうほうじ", "word": "douhouji" },
+    { "info": "曽谷", "info2": "そだに", "word": "sodani" },
+    { "info": "陽羽里", "info2": "ひばり", "word": "hibari" },
+    { "info": "四十万", "info2": "しじま", "word": "sijima" },
+    { "info": "乙丸", "info2": "おとまる", "word": "otomaru" },
+    {
+      "info": "額住宅前",
+      "info2": "ぬかじゅうたくまえ",
+      "word": "nukajuutakumae"
+    },
+    { "info": "馬替", "info2": "まがえ", "word": "magae" },
+    {
+      "info": "野々市工大前",
+      "info2": "ののいちこうだいまえ",
+      "word": "nonoitikoudaimae"
+    },
+    { "info": "野々市", "info2": "ののいち", "word": "nonoiti" },
+    { "info": "押野", "info2": "おしの", "word": "osino" },
+    {
+      "info": "新西金沢",
+      "info2": "しんにしかなざわ",
+      "word": "sinnnisikanazawa"
+    },
+    { "info": "西泉", "info2": "にしいずみ", "word": "nisiizumi" },
+    { "info": "野町", "info2": "のまち", "word": "nomati" }
+  ]
+}
