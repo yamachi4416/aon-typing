@@ -1,0 +1,21 @@
+{
+  "id": "1010283",
+  "title": "西武秩父線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-11-29",
+  "updatedAt": "2023-11-29",
+  "optional": { "cd": "283" },
+  "words": [
+    { "info": "西武秩父", "info2": "せいぶちちぶ", "word": "seibutitibu" },
+    { "info": "横瀬", "info2": "よこぜ", "word": "yokoze" },
+    { "info": "芦ケ久保", "info2": "あしがくぼ", "word": "asigakubo" },
+    { "info": "正丸", "info2": "しょうまる", "word": "syoumaru" },
+    { "info": "西吾野", "info2": "にしあがの", "word": "nisiagano" },
+    { "info": "吾野", "info2": "あがの", "word": "agano" }
+  ]
+}
