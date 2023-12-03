@@ -1,0 +1,38 @@
+{
+  "id": "1010528",
+  "title": "静岡鉄道静岡清水線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-03",
+  "updatedAt": "2023-12-03",
+  "optional": { "cd": "528" },
+  "words": [
+    { "info": "新清水", "info2": "しんしみず", "word": "sinsimizu" },
+    { "info": "入江岡", "info2": "いりえおか", "word": "irieoka" },
+    { "info": "桜橋", "info2": "さくらばし", "word": "sakurabasi" },
+    { "info": "狐ケ崎", "info2": "きつねがさき", "word": "kitunegasaki" },
+    { "info": "御門台", "info2": "みかどだい", "word": "mikadodai" },
+    { "info": "草薙", "info2": "くさなぎ", "word": "kusanagi" },
+    {
+      "info": "県立美術館前",
+      "info2": "けんりつびじゅつかんまえ",
+      "word": "kenritubijutukanmae"
+    },
+    {
+      "info": "県総合運動場",
+      "info2": "けんそうごううんどうじょう",
+      "word": "kensougouundoujou"
+    },
+    { "info": "古庄", "info2": "ふるしょう", "word": "hurusyou" },
+    { "info": "長沼", "info2": "ながぬま", "word": "naganuma" },
+    { "info": "柚木", "info2": "ゆのき", "word": "yunoki" },
+    { "info": "春日町", "info2": "かすがちょう", "word": "kasugatyou" },
+    { "info": "音羽町", "info2": "おとわちょう", "word": "otowatyou" },
+    { "info": "日吉町", "info2": "ひよしちょう", "word": "hiyosityou" },
+    { "info": "新静岡", "info2": "しんしずおか", "word": "sinsizuoka" }
+  ]
+}
