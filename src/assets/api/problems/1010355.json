@@ -1,0 +1,20 @@
+{
+  "id": "1010355",
+  "title": "名鉄広見線(新可児－御嵩)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-05",
+  "updatedAt": "2023-12-05",
+  "optional": { "cd": "355" },
+  "words": [
+    { "info": "御嵩", "info2": "みたけ", "word": "mitake" },
+    { "info": "御嵩口", "info2": "みたけぐち", "word": "mitakeguti" },
+    { "info": "顔戸", "info2": "ごうど", "word": "goudo" },
+    { "info": "明智", "info2": "あけち", "word": "aketi" },
+    { "info": "新可児", "info2": "しんかに", "word": "sinkani" }
+  ]
+}
