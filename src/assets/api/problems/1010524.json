@@ -1,0 +1,34 @@
+{
+  "id": "1010524",
+  "title": "樽見鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-10",
+  "updatedAt": "2023-12-10",
+  "optional": { "cd": "524" },
+  "words": [
+    { "info": "樽見", "info2": "たるみ", "word": "tarumi" },
+    { "info": "水鳥", "info2": "みどり", "word": "midori" },
+    { "info": "高尾", "info2": "たかお", "word": "takao" },
+    { "info": "日当", "info2": "ひなた", "word": "hinata" },
+    { "info": "鍋原", "info2": "なべら", "word": "nabera" },
+    { "info": "高科", "info2": "たかしな", "word": "takasina" },
+    { "info": "神海", "info2": "こうみ", "word": "koumi" },
+    { "info": "谷汲口", "info2": "たにぐみぐち", "word": "tanigumiguti" },
+    { "info": "木知原", "info2": "こちぼら", "word": "kotibora" },
+    { "info": "織部", "info2": "おりべ", "word": "oribe" },
+    { "info": "本巣", "info2": "もとす", "word": "motosu" },
+    { "info": "糸貫", "info2": "いとぬき", "word": "itonuki" },
+    { "info": "モレラ岐阜", "info2": "もれらぎふ", "word": "moreragihu" },
+    { "info": "北方真桑", "info2": "きたがたまくわ", "word": "kitagatamakuwa" },
+    { "info": "美江寺", "info2": "みえじ", "word": "mieji" },
+    { "info": "十九条", "info2": "じゅうくじょう", "word": "juukujou" },
+    { "info": "横屋", "info2": "よこや", "word": "yokoya" },
+    { "info": "東大垣", "info2": "ひがしおおがき", "word": "higasioogaki" },
+    { "info": "大垣", "info2": "おおがき", "word": "oogaki" }
+  ]
+}

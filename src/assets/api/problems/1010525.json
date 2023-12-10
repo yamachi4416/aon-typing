@@ -1,0 +1,30 @@
+{
+  "id": "1010525",
+  "title": "明知鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-10",
+  "updatedAt": "2023-12-10",
+  "optional": { "cd": "525" },
+  "words": [
+    { "info": "明智", "info2": "あけち", "word": "aketi" },
+    { "info": "野志", "info2": "のし", "word": "nosi" },
+    { "info": "山岡", "info2": "やまおか", "word": "yamaoka" },
+    {
+      "info": "花白温泉",
+      "info2": "はなしろおんせん",
+      "word": "hanasiroonsenn"
+    },
+    { "info": "岩村", "info2": "いわむら", "word": "iwamura" },
+    { "info": "極楽", "info2": "ごくらく", "word": "gokuraku" },
+    { "info": "飯羽間", "info2": "いいばま", "word": "iibama" },
+    { "info": "阿木", "info2": "あぎ", "word": "agi" },
+    { "info": "飯沼", "info2": "いいぬま", "word": "iinuma" },
+    { "info": "東野", "info2": "ひがしの", "word": "higasino" },
+    { "info": "恵那", "info2": "えな", "word": "ena" }
+  ]
+}
