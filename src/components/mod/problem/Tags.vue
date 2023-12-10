@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.tags">
-    <template v-for="tag in tags" :key="`tag-${i}`">
+    <template v-for="tag in tags" :key="tag.id">
       <span v-if="clickable === false">{{ tag.name }}</span>
       <button
         v-else
