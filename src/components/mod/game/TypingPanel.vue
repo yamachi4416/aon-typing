@@ -75,7 +75,6 @@
 </template>
 
 <script setup lang="ts">
-import { JISKeys } from '~~/libs/JISKeys'
 import type { GameSetting, TypingGame } from '~~/libs/TypingGame'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
 import { TypingGameWordInfoState } from '~~/libs/TypingGameWordStates'
@@ -85,7 +84,7 @@ const props = defineProps<{
   typing: Readonly<TypingGame>
 }>()
 
-const keys = new JISKeys()
+const keys = computed(() => props.typing.keyboardKeys!)
 const mistakeFlash = ref(false)
 
 watch(
@@ -115,16 +114,16 @@ const infoState = computed(
 )
 
 const typeKey = computed(() => current.value.wordState?.current ?? '')
-const handNumber = computed(() => keys.getHandIdx(typeKey.value))
+const handNumber = computed(() => keys.value.getHandIdx(typeKey.value))
 
 const leftHands = computed(() => [
   handNumber.value,
-  keys.isShiftRightKey(typeKey.value) ? 1 : 0,
+  keys.value.isShiftRightKey(typeKey.value) ? 1 : 0,
 ])
 
 const rightHands = computed(() => [
   handNumber.value - 5,
-  keys.isShiftLeftKey(typeKey.value) ? 5 : 0,
+  keys.value.isShiftLeftKey(typeKey.value) ? 5 : 0,
 ])
 
 const infoClass = computed(() => {

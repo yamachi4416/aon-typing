@@ -69,7 +69,77 @@ const shiftKeySet = new Set(shiftKeys)
 const shiftLeftKeySet = new Set(shiftLeftKeys)
 const shiftRightKeySet = new Set(shiftRightKeys)
 
+function keyCodeToChar(code?: number, shift = false) {
+  if (code == null) {
+    return ''
+  }
+
+  if (code === 9) {
+    return '\t'
+  }
+
+  if (code === 13) {
+    return '\n'
+  }
+
+  if (code === 32) {
+    return ' '
+  }
+
+  if (code >= 48 && code <= 57) {
+    if (shift) {
+      if (code === 48) {
+        return ''
+      }
+      return '!"#$%&\'()'[code - 49]
+    }
+    return '0123456789'[code - 48]
+  }
+
+  if (code >= 65 && code <= 90) {
+    if (shift) {
+      return String.fromCharCode(code)
+    }
+    return String.fromCharCode(97 + code - 65)
+  }
+
+  if (code <= 96 && code <= 111) {
+    return '0123456789*+-./'[code - 96]
+  }
+
+  if (code >= 186 && code <= 192) {
+    if (shift) {
+      return '*+<=>?`'[code - 186]
+    }
+    return ':;,-./@'[code - 186]
+  }
+
+  if (code >= 219 && code <= 222) {
+    if (shift) {
+      return '{|}~'[code - 219]
+    }
+    return '[\\]^'[code - 219]
+  }
+
+  if (code === 226) {
+    if (shift) {
+      return '_'
+    }
+    return '\\'
+  }
+
+  return ''
+}
+
 export class JISKeys extends Keys {
+  get name() {
+    return 'JIS'
+  }
+
+  keyCodeToChar(code?: number, shift = false): string {
+    return keyCodeToChar(code, shift)
+  }
+
   getLabelByIndex(idx: number, shift: boolean): string {
     switch (idx) {
       case 0:

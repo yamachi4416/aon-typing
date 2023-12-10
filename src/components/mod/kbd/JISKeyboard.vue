@@ -95,22 +95,15 @@
 </template>
 
 <script setup lang="ts">
-import { Keys } from '~~/libs/Keys'
-import { JISKeys } from '~~/libs/JISKeys'
+import type { Keys } from '~~/libs/Keys'
+import type { GameSetting } from '~~/libs/TypingGame'
 import KbdKey from '~/components/mod/kbd/JISKeyboardKey.vue'
 
-const props = withDefaults(
-  defineProps<{
-    typeKey?: string
-    setting?: any
-    keys?: Keys
-  }>(),
-  {
-    typeKey: undefined,
-    setting: () => ({}),
-    keys: () => new JISKeys(),
-  },
-)
+const props = defineProps<{
+  typeKey?: string
+  setting: GameSetting
+  keys: Keys
+}>()
 
 const shiftKey = ref(false)
 const shift = computed(

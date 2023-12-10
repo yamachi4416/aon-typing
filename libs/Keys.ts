@@ -1,72 +1,12 @@
-export function keyCodeToChar(code?: number, shift = false) {
-  if (code == null) {
-    return ''
-  }
-
-  if (code === 9) {
-    return '\t'
-  }
-
-  if (code === 13) {
-    return '\n'
-  }
-
-  if (code === 32) {
-    return ' '
-  }
-
-  if (code >= 48 && code <= 57) {
-    if (shift) {
-      if (code === 48) {
-        return ''
-      }
-      return '!"#$%&\'()'[code - 49]
-    }
-    return '0123456789'[code - 48]
-  }
-
-  if (code >= 65 && code <= 90) {
-    if (shift) {
-      return String.fromCharCode(code)
-    }
-    return String.fromCharCode(97 + code - 65)
-  }
-
-  if (code <= 96 && code <= 111) {
-    return '0123456789*+-./'[code - 96]
-  }
-
-  if (code >= 186 && code <= 192) {
-    if (shift) {
-      return '*+<=>?`'[code - 186]
-    }
-    return ':;,-./@'[code - 186]
-  }
-
-  if (code >= 219 && code <= 222) {
-    if (shift) {
-      return '{|}~'[code - 219]
-    }
-    return '[\\]^'[code - 219]
-  }
-
-  if (code === 226) {
-    if (shift) {
-      return '_'
-    }
-    return '\\'
-  }
-
-  return ''
-}
-
 export abstract class Keys {
+  abstract get name(): string
   abstract getLabelByIndex(idx: number, shift: boolean): string
   abstract getKeyByIndex(idx: number, shift: boolean): string
   abstract isShiftKey(key: string): boolean
   abstract isShiftRightKey(key: string): boolean
   abstract isShiftLeftKey(key: string): boolean
   abstract getHandIdx(key: string): number
+  abstract keyCodeToChar(code?: number, shift?: boolean): string
 
   isTypeKeyByIndex(idx: number, typeKey: string, shift = false) {
     const label = this.getLabelByIndex(idx, shift)
@@ -79,9 +19,24 @@ export abstract class Keys {
         return typeKey === this.getKeyByIndex(idx, shift)
     }
   }
+
+  static nullKeys() {
+    return NullKeys
+  }
+}
+
+const NullKeys: Readonly<Keys> = {
+  name: 'Null',
+  isTypeKeyByIndex: () => false,
+  getLabelByIndex: () => '',
+  getKeyByIndex: () => '',
+  isShiftKey: () => false,
+  isShiftRightKey: () => false,
+  isShiftLeftKey: () => false,
+  getHandIdx: () => -1,
+  keyCodeToChar: () => '',
 }
 
 export default {
-  keyCodeToChar,
   Keys,
 }
