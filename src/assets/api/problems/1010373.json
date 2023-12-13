@@ -1,0 +1,33 @@
+{
+  "id": "1010373",
+  "title": "近鉄湯の山線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-13",
+  "updatedAt": "2023-12-13",
+  "optional": { "cd": "373" },
+  "words": [
+    {
+      "info": "湯の山温泉",
+      "info2": "ゆのやまおんせん",
+      "word": "yunoyamaonsenn"
+    },
+    { "info": "大羽根園", "info2": "おおばねえん", "word": "oobaneenn" },
+    { "info": "中菰野", "info2": "なかこもの", "word": "nakakomono" },
+    { "info": "菰野", "info2": "こもの", "word": "komono" },
+    { "info": "桜", "info2": "さくら", "word": "sakura" },
+    { "info": "高角", "info2": "たかつの", "word": "takatuno" },
+    { "info": "伊勢川島", "info2": "いせかわしま", "word": "isekawasima" },
+    { "info": "伊勢松本", "info2": "いせまつもと", "word": "isematumoto" },
+    { "info": "中川原", "info2": "なかがわら", "word": "nakagawara" },
+    {
+      "info": "近鉄四日市",
+      "info2": "きんてつよっかいち",
+      "word": "kintetuyokkaiti"
+    }
+  ]
+}
