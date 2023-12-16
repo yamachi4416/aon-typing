@@ -143,7 +143,7 @@ export class TypingGame {
     return (e: KeyboardEvent) => {
       e.preventDefault()
       const { shiftKey, key } = e
-      if (key === 'Shift') {
+      if (key === 'Shift' || e.repeat) {
         return
       }
       const detail = { shiftKey, char: key }
