@@ -95,9 +95,9 @@
 </template>
 
 <script setup lang="ts">
+import KbdKey from './JISKeyboardKey.vue'
 import type { Keys } from '~~/libs/Keys'
 import type { GameSetting } from '~~/libs/TypingGame'
-import KbdKey from '~/components/mod/kbd/JISKeyboardKey.vue'
 
 const props = defineProps<{
   typeKey?: string
