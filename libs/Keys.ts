@@ -6,7 +6,6 @@ export abstract class Keys {
   abstract isShiftRightKey(key: string): boolean
   abstract isShiftLeftKey(key: string): boolean
   abstract getHandIdx(key: string): number
-  abstract keyCodeToChar(code?: number, shift?: boolean): string
 
   isTypeKeyByIndex(idx: number, typeKey: string, shift = false) {
     const label = this.getLabelByIndex(idx, shift)
@@ -34,7 +33,6 @@ const NullKeys: Readonly<Keys> = {
   isShiftRightKey: () => false,
   isShiftLeftKey: () => false,
   getHandIdx: () => -1,
-  keyCodeToChar: () => '',
 }
 
 export default {

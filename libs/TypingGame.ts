@@ -10,7 +10,6 @@ import { JISKeys } from './JISKeys'
 type ProblemOrder = 'first' | 'last' | 'random'
 
 type TypingEvent = CustomEvent<{
-  keyCode?: number
   shiftKey?: boolean
   char?: string
 }>
@@ -104,9 +103,7 @@ export class TypingGame {
       }
 
       const detail = event.detail
-      const char =
-        detail.char ??
-        this.keyboardKeys?.keyCodeToChar(detail.keyCode, detail.shiftKey)
+      const char = detail.char
       const word = this.current
 
       if (char) {
@@ -145,8 +142,11 @@ export class TypingGame {
   private _keydown() {
     return (e: KeyboardEvent) => {
       e.preventDefault()
-      const { keyCode, shiftKey, key } = e
-      const detail = { keyCode, shiftKey, char: key }
+      const { shiftKey, key } = e
+      if (key === 'Shift') {
+        return
+      }
+      const detail = { shiftKey, char: key }
       const event = new CustomEvent('c:typing', { detail })
       this.eventManager.dispatch(event)
     }
