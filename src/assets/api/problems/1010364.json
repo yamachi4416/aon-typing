@@ -1,0 +1,31 @@
+{
+  "id": "1010364",
+  "title": "名鉄三河線(知立－碧南)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-17",
+  "updatedAt": "2023-12-17",
+  "optional": { "cd": "364" },
+  "words": [
+    { "info": "碧南", "info2": "へきなん", "word": "hekinann" },
+    {
+      "info": "碧南中央",
+      "info2": "へきなんちゅうおう",
+      "word": "hekinantyuuou"
+    },
+    { "info": "新川町", "info2": "しんかわまち", "word": "sinkawamati" },
+    { "info": "北新川", "info2": "きたしんかわ", "word": "kitasinkawa" },
+    { "info": "高浜港", "info2": "たかはまみなと", "word": "takahamaminato" },
+    { "info": "三河高浜", "info2": "みかわたかはま", "word": "mikawatakahama" },
+    { "info": "吉浜", "info2": "よしはま", "word": "yosihama" },
+    { "info": "小垣江", "info2": "おがきえ", "word": "ogakie" },
+    { "info": "刈谷市", "info2": "かりやし", "word": "kariyasi" },
+    { "info": "刈谷", "info2": "かりや", "word": "kariya" },
+    { "info": "重原", "info2": "しげはら", "word": "sigehara" },
+    { "info": "知立", "info2": "ちりゅう", "word": "tiryuu" }
+  ]
+}

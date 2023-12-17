@@ -1,0 +1,27 @@
+{
+  "id": "1010363",
+  "title": "名鉄三河線(猿投－知立)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-17",
+  "updatedAt": "2023-12-17",
+  "optional": { "cd": "363" },
+  "words": [
+    { "info": "知立", "info2": "ちりゅう", "word": "tiryuu" },
+    { "info": "三河知立", "info2": "みかわちりゅう", "word": "mikawatiryuu" },
+    { "info": "三河八橋", "info2": "みかわやつはし", "word": "mikawayatuhasi" },
+    { "info": "若林", "info2": "わかばやし", "word": "wakabayasi" },
+    { "info": "竹村", "info2": "たけむら", "word": "takemura" },
+    { "info": "土橋", "info2": "つちはし", "word": "tutihasi" },
+    { "info": "上挙母", "info2": "うわごろも", "word": "uwagoromo" },
+    { "info": "豊田市", "info2": "とよたし", "word": "toyotasi" },
+    { "info": "梅坪", "info2": "うめつぼ", "word": "umetubo" },
+    { "info": "越戸", "info2": "こしど", "word": "kosido" },
+    { "info": "平戸橋", "info2": "ひらとばし", "word": "hiratobasi" },
+    { "info": "猿投", "info2": "さなげ", "word": "sanage" }
+  ]
+}
