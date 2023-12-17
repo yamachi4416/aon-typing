@@ -1,10 +1,12 @@
 <template>
-  <KeyboardKey
-    :text="props.text"
-    :highlight="props.highlight"
-    @click="(start) => emit('click', props, start)"
-  >
-    <g v-if="text === 'enter'">
+  <KeyboardKey :text="text" :highlight="props.highlight" @click="onClick">
+    <g v-if="middle">
+      <rect x="0" y="0" rx="5" ry="5" width="100" height="60" />
+      <foreignObject v-if="text" width="100" height="60">
+        <Kbd :text="text" />
+      </foreignObject>
+    </g>
+    <g v-else-if="text === '\n'">
       <path
         d="
         M 0,5
@@ -25,13 +27,13 @@
         <Kbd text="enter" />
       </foreignObject>
     </g>
-    <g v-else-if="text === 'tab'">
+    <g v-else-if="text === '\t'">
       <rect x="0" y="0" rx="5" ry="5" width="93" height="60" />
       <foreignObject width="93" height="60">
         <Kbd text="tab" />
       </foreignObject>
     </g>
-    <g v-else-if="text === 'caps lock'">
+    <g v-else-if="text === 'cap'">
       <rect x="0" y="0" rx="5" ry="5" width="108" height="60" />
       <foreignObject width="108" height="60">
         <Kbd text="caps lock" />
@@ -49,19 +51,22 @@
         <Kbd text="shift" />
       </foreignObject>
     </g>
-    <g v-else-if="text === 'middle'">
-      <rect x="0" y="0" rx="5" ry="5" width="100" height="60" />
-    </g>
-    <g v-else-if="text === 'space'">
+    <g v-else-if="text === ' '">
       <rect x="0" y="0" rx="5" ry="5" width="256" height="60" />
       <foreignObject width="258" height="60">
         <Kbd text="space" />
       </foreignObject>
     </g>
-    <g v-else-if="text === 'back\nspace'">
+    <g v-else-if="text === 'bs'">
       <rect x="0" y="0" rx="5" ry="5" width="60" height="60" />
       <foreignObject width="60" height="60">
-        <Kbd :text="text" />
+        <Kbd :text="'back\nspace'" />
+      </foreignObject>
+    </g>
+    <g v-else-if="text === 'zh'">
+      <rect x="0" y="0" rx="5" ry="5" width="60" height="60" />
+      <foreignObject width="60" height="60">
+        <Kbd text="" />
       </foreignObject>
     </g>
     <g v-else>
@@ -76,21 +81,36 @@
 <script setup lang="ts">
 import Kbd from './parts/Kbd.vue'
 import KeyboardKey from './parts/KeyboardKey.vue'
+import type { Key } from '~~/libs/Keys'
 
 const props = withDefaults(
   defineProps<{
-    index?: number
-    text?: string
+    kbd?: Key
+    text?: Key[0] | Key[1]
+    shift?: boolean
+    middle?: boolean
     highlight?: boolean
   }>(),
   {
-    index: undefined,
-    text: '',
+    kbd: undefined,
+    text: undefined,
+    shift: false,
+    middle: false,
     highlight: false,
   },
 )
 
+const text = computed(
+  () => props.text ?? props.kbd?.[props.shift ? 1 : 0] ?? '',
+)
+
 const emit = defineEmits<{
-  (e: 'click', key: { index?: number; text?: string }, start: boolean): any
+  (e: 'click', kbd: Key, start: boolean): any
 }>()
+
+function onClick(start: boolean) {
+  if (props.kbd) {
+    emit('click', props.kbd, start)
+  }
+}
 </script>

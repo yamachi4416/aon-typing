@@ -1,92 +1,38 @@
 <template>
   <svg viewBox="0 0 986 331" xmlns="http://www.w3.org/2000/svg">
     <g class="keyboard" :transform="`translate(1 1)`">
-      <g>
+      <g
+        v-for="(special, j) in [0, 33, 48, 80]"
+        :key="j"
+        :transform="`translate(0 ${66 * j})`"
+      >
         <KbdKey
-          v-for="(k, i) in lines[0]"
-          :key="`key-${k}`"
-          :index="k"
-          :text="key(k)"
-          :highlight="hi(k)"
-          :transform="`translate(${66 * i})`"
+          v-for="(kbd, i) in keyboard[j]"
+          :key="i"
+          :kbd="kbd"
+          :shift="isShift"
+          :highlight="hi(kbd)"
+          :transform="`translate(${66 * i + (i ? special : 0)})`"
           @click="keydown"
         />
-      </g>
-      <g :transform="`translate(0 ${66 * 1})`">
-        <KbdKey
-          :index="15"
-          :text="key(15)"
-          :highlight="hi(15)"
-          @click="keydown"
-        />
-        <g transform="translate(99)">
-          <KbdKey
-            v-for="(k, i) in lines[1]"
-            :key="`key-${k}`"
-            :index="k"
-            :text="key(k)"
-            :highlight="hi(k)"
-            :transform="`translate(${66 * i})`"
-            @click="keydown"
-          />
-        </g>
-      </g>
-      <g :transform="`translate(0 ${66 * 2})`">
-        <KbdKey
-          :index="29"
-          :text="key(29)"
-          :highlight="hi(29)"
-          @click="keydown"
-        />
-        <g transform="translate(114)">
-          <KbdKey
-            v-for="(k, i) in lines[2]"
-            :key="`key-${k}`"
-            :index="k"
-            :text="key(k)"
-            :highlight="hi(k)"
-            :transform="`translate(${66 * i})`"
-            @click="keydown"
-          />
-        </g>
-      </g>
-      <g :transform="`translate(0 ${66 * 3})`">
-        <KbdKey
-          :index="42"
-          :text="key(42)"
-          :highlight="hi(42)"
-          @click="keydown"
-        />
-        <g transform="translate(146)">
-          <KbdKey
-            v-for="(k, i) in lines[3]"
-            :key="`key-${k}`"
-            :index="k"
-            :text="key(k)"
-            :highlight="hi(k)"
-            :transform="`translate(${66 * i})`"
-            @click="keydown"
-          />
-        </g>
       </g>
       <g :transform="`translate(0 ${66 * 4})`">
-        <KbdKey text="middle" />
+        <KbdKey text="ctrl" middle />
         <g transform="translate(106)">
           <KbdKey />
           <KbdKey :transform="`translate(${66 * 1})`" />
           <KbdKey :transform="`translate(${66 * 2})`" />
           <KbdKey
-            :index="55"
-            :text="key(55)"
-            :highlight="hi(55)"
+            :kbd="keyboard[4][0]"
+            :highlight="hi(keyboard[4][0])"
             :transform="`translate(${66 * 3})`"
             @click="keydown"
           />
           <g :transform="`translate(${66 * 3 + 262})`">
-            <KbdKey text="middle" />
-            <KbdKey text="middle" :transform="`translate(${106 * 1})`" />
-            <KbdKey text="middle" :transform="`translate(${106 * 2})`" />
-            <KbdKey text="middle" :transform="`translate(${106 * 3})`" />
+            <KbdKey middle />
+            <KbdKey middle :transform="`translate(${106 * 1})`" />
+            <KbdKey middle :transform="`translate(${106 * 2})`" />
+            <KbdKey middle :transform="`translate(${106 * 3})`" />
           </g>
         </g>
       </g>
@@ -96,7 +42,7 @@
 
 <script setup lang="ts">
 import KbdKey from './JISKeyboardKey.vue'
-import type { Keys } from '~~/libs/Keys'
+import type { Key, Keys } from '~~/libs/Keys'
 import type { GameSetting } from '~~/libs/TypingGame'
 
 const props = defineProps<{
@@ -106,55 +52,42 @@ const props = defineProps<{
 }>()
 
 const shiftKey = ref(false)
-const shift = computed(
-  () => props.typeKey != null && props.keys?.isShiftKey(props.typeKey),
+const keyboard = computed(() => props.keys?.getKeys() ?? [])
+const isShift = computed(
+  () =>
+    shiftKey.value ||
+    (props.typeKey ? props.keys.isShiftKey(props.typeKey) : false),
 )
-const lines = [
-  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
-  [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
-  [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
-  [43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54],
-]
 
-function key(n: number) {
-  return props.keys.getLabelByIndex(n, shift.value)
-}
-
-function hi(n: number) {
+function hi([normal, shift]: Key) {
   if (!props.typeKey) {
     return false
   }
 
-  switch (n) {
-    case 42:
-      return props.keys.isShiftRightKey(props.typeKey)
-    case 54:
+  const typeKey = isShift.value ? shift : normal
+
+  switch (typeKey) {
+    case 'shiftR':
       return props.keys.isShiftLeftKey(props.typeKey)
+    case 'shiftL':
+      return props.keys.isShiftRightKey(props.typeKey)
     default:
-      return props.typeKey === props.keys.getKeyByIndex(n, shift.value)
+      return props.typeKey === typeKey
   }
 }
 
-function keydown(k: { text?: string; index?: number }, start: boolean) {
+function keydown([normal, shift]: Key, start: boolean) {
   if (props.setting.autoMode) {
     return
   }
 
-  if (k.text === 'shiftL' || k.text === 'shiftR') {
+  if (normal === 'shiftL' || normal === 'shiftR') {
     shiftKey.value = start
     return
   }
 
   if (start) {
-    let char = null
-    if (k.text === 'space') {
-      char = ' '
-    } else if (k.text === 'enter') {
-      char = '\n'
-    } else if (k.index != null) {
-      char = props.keys.getKeyByIndex(k.index, shiftKey.value)
-    }
-    const detail = { char }
+    const detail = { char: shiftKey.value ? shift : normal }
     const event = new CustomEvent('c:typing', { detail })
     window.dispatchEvent(event)
   }

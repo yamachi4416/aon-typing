@@ -64,6 +64,7 @@
         </div>
         <div class="keyboard-zone">
           <ModKbdTypingKeyboard
+            v-if="keys"
             :type-key="typeKey"
             :setting="setting"
             :keys="keys"
@@ -75,6 +76,7 @@
 </template>
 
 <script setup lang="ts">
+import { getKeyLayout } from '~~/libs/Keys'
 import type { GameSetting, TypingGame } from '~~/libs/TypingGame'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
 import { TypingGameWordInfoState } from '~~/libs/TypingGameWordStates'
@@ -84,7 +86,6 @@ const props = defineProps<{
   typing: Readonly<TypingGame>
 }>()
 
-const keys = computed(() => props.typing.keyboardKeys!)
 const mistakeFlash = ref(false)
 
 watch(
@@ -105,7 +106,9 @@ watch(
 const problem = computed(
   () => props.typing.problem ?? ({} as TypingProblemQuestioner),
 )
-const setting = computed(() => problem.value.setting ?? ({} as GameSetting))
+const setting = computed<GameSetting>(
+  () => problem.value.setting ?? ({} as GameSetting),
+)
 const current = computed(
   () => props.typing.current ?? ({} as TypingGameWordData),
 )
@@ -114,6 +117,7 @@ const infoState = computed(
 )
 
 const typeKey = computed(() => current.value.wordState?.current ?? '')
+const keys = computed(() => getKeyLayout(setting.value.keyLayout ?? 'NULL'))
 const handNumber = computed(() => keys.value.getHandIdx(typeKey.value))
 
 const leftHands = computed(() => [

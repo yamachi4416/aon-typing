@@ -1,40 +1,123 @@
-export abstract class Keys {
-  abstract get name(): string
-  abstract getLabelByIndex(idx: number, shift: boolean): string
-  abstract getKeyByIndex(idx: number, shift: boolean): string
-  abstract isShiftKey(key: string): boolean
-  abstract isShiftRightKey(key: string): boolean
-  abstract isShiftLeftKey(key: string): boolean
-  abstract getHandIdx(key: string): number
+// prettier-ignore
+const KeyValues = [
+'zh', 'ctrl', 'bs', 'cap', 'shiftL', 'shiftR', ' ', '\t', '\\', '\n',
+'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '^',
+'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '@', '[',
+'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', ':', ']',
+'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/',
+'!', '"', '#', '$', '%', '&', '\'', '(', ')', '', '=', '~', '|',
+'Q', 'W', 'E', 'R', 'T', 'Y', 'U',  'I', 'O', 'P', '`', '{',
+'A', 'S', 'D', 'F', 'G', 'H', 'J',  'K', 'L', '+', '*', '}',
+'Z', 'X', 'C', 'V', 'B', 'N', 'M',  '<', '>', '?', '_'
+] as const
 
-  isTypeKeyByIndex(idx: number, typeKey: string, shift = false) {
-    const label = this.getLabelByIndex(idx, shift)
-    switch (label) {
-      case 'shiftL':
-        return this.isShiftRightKey(typeKey)
-      case 'shiftR':
-        return this.isShiftLeftKey(typeKey)
-      default:
-        return typeKey === this.getKeyByIndex(idx, shift)
-    }
-  }
+type KeyValue = (typeof KeyValues)[number]
 
-  static nullKeys() {
-    return NullKeys
+export type Key = Readonly<[KeyValue, KeyValue]>
+
+export type KeyLayoutName = 'NULL' | 'JIS' | 'US'
+
+export interface Keys {
+  get name(): KeyLayoutName
+  isShiftKey(key: string): boolean
+  isShiftRightKey(key: string): boolean
+  isShiftLeftKey(key: string): boolean
+  getHandIdx(key: string): number
+  getKeys(): Readonly<Key[][]>
+}
+
+export function defineKeys({
+  name,
+  normalKeys,
+  shiftKeys,
+}: {
+  name: KeyLayoutName
+  normalKeys: Readonly<KeyValue[][]>
+  shiftKeys: Readonly<KeyValue[][]>
+}): Readonly<Keys> {
+  const normalLeftKeys = normalKeys.slice(0, 4).map((line) => line.slice(1, 6))
+  const shiftLeftKeys = shiftKeys.slice(0, 4).map((line) => line.slice(1, 6))
+  const normalRightKeys = normalKeys.slice(0, 4).map((line) => line.slice(6))
+  const shiftRightKeys = shiftKeys.slice(0, 4).map((line) => line.slice(6))
+
+  const handMap = new Map<string, number>([
+    ...[...normalLeftKeys, ...shiftLeftKeys].flatMap((keys) =>
+      keys.map<[string, number]>((key, i) => [key, Math.min(i, 3) + 1]),
+    ),
+    ...[...normalRightKeys, ...shiftRightKeys].flatMap((keys) =>
+      keys.map<[string, number]>((key, i) => [
+        key,
+        (i < 2 ? 1 : Math.min(i, 4)) + 6,
+      ]),
+    ),
+  ])
+
+  const isCharKey = (key: KeyValue) => key.trim().length === 1
+
+  const shiftKeySet = new Set<string>(shiftKeys.flat().filter(isCharKey))
+  const shiftLeftKeySet = new Set<string>(
+    shiftLeftKeys.flat().filter(isCharKey),
+  )
+  const shiftRightKeySet = new Set<string>(
+    shiftRightKeys.flat().filter(isCharKey),
+  )
+
+  return {
+    get name() {
+      return name
+    },
+    isShiftKey(key: string): boolean {
+      return shiftKeySet.has(key)
+    },
+    isShiftLeftKey(key: string): boolean {
+      return shiftLeftKeySet.has(key)
+    },
+    isShiftRightKey(key: string): boolean {
+      return shiftRightKeySet.has(key)
+    },
+    getHandIdx(key: string): number {
+      return handMap.get(key) || 0
+    },
+    getKeys(): Readonly<Key[][]> {
+      return normalKeys.map((keys, i) =>
+        keys.map((k, j) => [k, shiftKeys[i][j]]),
+      )
+    },
   }
 }
 
-const NullKeys: Readonly<Keys> = {
-  name: 'Null',
-  isTypeKeyByIndex: () => false,
-  getLabelByIndex: () => '',
-  getKeyByIndex: () => '',
-  isShiftKey: () => false,
-  isShiftRightKey: () => false,
-  isShiftLeftKey: () => false,
-  getHandIdx: () => -1,
-}
+const NullKeys = defineKeys({
+  name: 'NULL',
+  normalKeys: [],
+  shiftKeys: [],
+})
 
-export default {
-  Keys,
+const JISKeys = defineKeys({
+  name: 'JIS',
+  // prettier-ignore
+  normalKeys: [
+    ['zh',     '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '^', '\\', 'bs'],
+    ['\t',     'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '@', '[', '\n'],
+    ['cap',    'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', ':', ']'],
+    ['shiftL', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '\\', 'shiftR'],
+    [' ']
+  ],
+  // prettier-ignore
+  shiftKeys: [
+    ['zh',     '!', '"', '#', '$', '%', '&', '\'', '(', ')', '', '=', '~', '|', 'bs'],
+    ['\t',     'Q', 'W', 'E', 'R', 'T', 'Y', 'U',  'I', 'O', 'P', '`', '{', '\n'],
+    ['cap',    'A', 'S', 'D', 'F', 'G', 'H', 'J',  'K', 'L', '+', '*', '}'],
+    ['shiftL', 'Z', 'X', 'C', 'V', 'B', 'N', 'M',  '<', '>', '?', '_', 'shiftR'],
+    [' ']
+  ],
+})
+
+export function getKeyLayout(name: KeyLayoutName) {
+  switch (name) {
+    case 'NULL':
+      return NullKeys
+    case 'JIS':
+      return JISKeys
+  }
+  throw new Error(`${name} keyboard is not support yet`)
 }

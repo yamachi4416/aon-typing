@@ -1,11 +1,10 @@
 import type { TypingGameWordData } from './TypingGameWordData'
 import type { TypingProblemQuestioner } from './TypingProblemQuestioner'
-import { Keys } from './Keys'
-import { TypingGameInfo } from './TypingGameInfo'
 import type { TypingGamer } from './TypingGamer'
+import type { KeyLayoutName } from './Keys'
+import { TypingGameInfo } from './TypingGameInfo'
 import { useTypingGamer } from './TypingGamer'
 import { timerEntry, timerTicker } from './Util'
-import { JISKeys } from './JISKeys'
 
 type ProblemOrder = 'first' | 'last' | 'random'
 
@@ -26,6 +25,7 @@ export interface GameSetting {
   problemOrder: ProblemOrder
   goalCharCount: number
   problemId: string
+  keyLayout: KeyLayoutName
 }
 
 export class TypingGame {
@@ -41,7 +41,6 @@ export class TypingGame {
   totalTypeCorrect = 0
   totalTypeMiss = 0
   currentMistake = false
-  keyboardKeys = Keys.nullKeys()
 
   private readonly eventManager
   private readonly timerManager
@@ -66,7 +65,6 @@ export class TypingGame {
     this.totalTypeCount = 0
     this.totalTypeCorrect = 0
     this.totalTypeMiss = 0
-    this.keyboardKeys = Keys.nullKeys()
   }
 
   init({
@@ -81,8 +79,6 @@ export class TypingGame {
     this.timeLimit = setting?.timeLimit ?? 0
     this.timeUse = 0
     this.goalCharCount = setting?.goalCharCount ?? 0
-    // TODO: US配列
-    this.keyboardKeys = new JISKeys()
     this._stop = undefined
   }
 

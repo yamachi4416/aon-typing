@@ -1,5 +1,6 @@
 <template>
-  <Keyboard
+  <component
+    :is="keyboard"
     :class="$style.keyboard"
     :type-key="typeKey"
     :setting="setting"
@@ -8,19 +9,18 @@
 </template>
 
 <script setup lang="ts">
-import { Keys } from '~~/libs/Keys'
-import Keyboard from '~/components/mod/kbd/JISKeyboard.vue'
+import type { Keys } from '~~/libs/Keys'
+import type { GameSetting } from '~~/libs/TypingGame'
+import JISKeyboard from '~/components/mod/kbd/JISKeyboard.vue'
 
-withDefaults(
-  defineProps<{
-    typeKey?: string
-    setting?: any
-    keys: Keys
-  }>(),
-  {
-    typeKey: undefined,
-    setting: () => ({}),
-  },
+const props = defineProps<{
+  typeKey?: string
+  setting: GameSetting
+  keys: Keys
+}>()
+
+const keyboard = computed(() =>
+  props.keys.name === 'JIS' ? JISKeyboard : undefined,
 )
 </script>
 
