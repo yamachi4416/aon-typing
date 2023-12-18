@@ -1,0 +1,27 @@
+{
+  "id": "1010438",
+  "title": "西鉄甘木線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-18",
+  "updatedAt": "2023-12-18",
+  "optional": { "cd": "438" },
+  "words": [
+    { "info": "宮の陣", "info2": "みやのじん", "word": "miyanojinn" },
+    { "info": "五郎丸", "info2": "ごろうまる", "word": "goroumaru" },
+    { "info": "学校前", "info2": "がっこうまえ", "word": "gakkoumae" },
+    { "info": "古賀茶屋", "info2": "こがんちゃや", "word": "kogantyaya" },
+    { "info": "北野", "info2": "きたの", "word": "kitano" },
+    { "info": "大城", "info2": "おおき", "word": "ooki" },
+    { "info": "金島", "info2": "かねしま", "word": "kanesima" },
+    { "info": "大堰", "info2": "おおぜき", "word": "oozeki" },
+    { "info": "本郷", "info2": "ほんごう", "word": "hongou" },
+    { "info": "上浦", "info2": "かみうら", "word": "kamiura" },
+    { "info": "馬田", "info2": "まだ", "word": "mada" },
+    { "info": "甘木", "info2": "あまぎ", "word": "amagi" }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "1010439",
+  "title": "西鉄貝塚線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-18",
+  "updatedAt": "2023-12-18",
+  "optional": { "cd": "439" },
+  "words": [
+    {
+      "info": "西鉄新宮",
+      "info2": "にしてつしんぐう",
+      "word": "nisitetusinguu"
+    },
+    { "info": "三苫", "info2": "みとま", "word": "mitoma" },
+    { "info": "和白", "info2": "わじろ", "word": "wajiro" },
+    { "info": "唐の原", "info2": "とうのはる", "word": "tounoharu" },
+    {
+      "info": "香椎花園前",
+      "info2": "かしいかえんまえ",
+      "word": "kasiikaenmae"
+    },
+    { "info": "西鉄香椎", "info2": "にしてつかしい", "word": "nisitetukasii" },
+    { "info": "香椎宮前", "info2": "かしいみやまえ", "word": "kasiimiyamae" },
+    { "info": "西鉄千早", "info2": "にしてつちはや", "word": "nisitetutihaya" },
+    { "info": "名島", "info2": "なじま", "word": "najima" },
+    { "info": "貝塚", "info2": "かいづか", "word": "kaiduka" }
+  ]
+}
