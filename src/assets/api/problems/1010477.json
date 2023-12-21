@@ -1,0 +1,21 @@
+{
+  "id": "1010477",
+  "title": "流鉄流山線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-21",
+  "updatedAt": "2023-12-21",
+  "optional": { "cd": "477" },
+  "words": [
+    { "info": "流山", "info2": "ながれやま", "word": "nagareyama" },
+    { "info": "平和台", "info2": "へいわだい", "word": "heiwadai" },
+    { "info": "鰭ケ崎", "info2": "ひれがさき", "word": "hiregasaki" },
+    { "info": "小金城趾", "info2": "こがねじょうし", "word": "koganejousi" },
+    { "info": "幸谷", "info2": "こうや", "word": "kouya" },
+    { "info": "馬橋", "info2": "まばし", "word": "mabasi" }
+  ]
+}
