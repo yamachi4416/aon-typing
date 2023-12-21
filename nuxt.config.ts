@@ -65,6 +65,7 @@ export default defineNuxtConfig({
           name: 'description',
           content: 'あぉ～ん タイピングは無料のタイピング練習サイトです。',
         },
+        { name: 'google', content: 'notranslate' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
