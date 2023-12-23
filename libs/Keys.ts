@@ -19,21 +19,25 @@ export type KeyLayoutName = 'NULL' | 'JIS' | 'US'
 
 export interface Keys {
   get name(): KeyLayoutName
+  get isCapsLock(): boolean
   isShiftKey(key: string): boolean
   isShiftRightKey(key: string): boolean
   isShiftLeftKey(key: string): boolean
   getHandIdx(key: string): number
   getKeys(): Readonly<Key[][]>
+  getCapsLockKeys(): Keys | null
 }
 
 export function defineKeys({
   name,
   normalKeys,
   shiftKeys,
+  isCapsLock,
 }: {
   name: KeyLayoutName
   normalKeys: Readonly<KeyValue[][]>
   shiftKeys: Readonly<KeyValue[][]>
+  isCapsLock?: boolean
 }): Readonly<Keys> {
   const normalLeftKeys = normalKeys.slice(0, 4).map((line) => line.slice(1, 6))
   const shiftLeftKeys = shiftKeys.slice(0, 4).map((line) => line.slice(1, 6))
@@ -62,9 +66,33 @@ export function defineKeys({
     shiftRightKeys.flat().filter(isCharKey),
   )
 
+  const capsLockKeys = isCapsLock
+    ? null
+    : defineKeys({
+        name,
+        normalKeys: normalKeys.map((lines) =>
+          lines.map((c) => {
+            return c.length === 1 && c >= 'a' && c <= 'z'
+              ? (c.toUpperCase() as KeyValue)
+              : c
+          }),
+        ),
+        shiftKeys: shiftKeys.map((lines) =>
+          lines.map((c) => {
+            return c.length === 1 && c >= 'A' && c <= 'Z'
+              ? (c.toLocaleLowerCase() as KeyValue)
+              : c
+          }),
+        ),
+        isCapsLock: true,
+      })
+
   return {
     get name() {
       return name
+    },
+    get isCapsLock() {
+      return isCapsLock ?? false
     },
     isShiftKey(key: string): boolean {
       return shiftKeySet.has(key)
@@ -82,6 +110,9 @@ export function defineKeys({
       return normalKeys.map((keys, i) =>
         keys.map((k, j) => [k, shiftKeys[i][j]]),
       )
+    },
+    getCapsLockKeys() {
+      return capsLockKeys
     },
   }
 }

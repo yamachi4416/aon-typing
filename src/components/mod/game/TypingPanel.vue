@@ -2,6 +2,7 @@
   <svg
     class="typing-game-panel"
     :flash-typing-mistake="mistakeFlash"
+    :caps-lock="isCapsLock"
     viewBox="0 0 1000 470"
     width="1000"
     height="470"
@@ -86,29 +87,30 @@ const props = defineProps<{
   typing: Readonly<TypingGame>
 }>()
 
+const typingState = computed(() => props.typing?.currentTypingState)
+const isCapsLock = computed(() => typingState.value?.detail?.capsLock ?? false)
 const mistakeFlash = ref(false)
 
 watch(
-  () => props.typing?.totalTypeCount ?? 0,
-  (value) => {
-    if (!props.typing) {
-      return
+  () => typingState.value,
+  (state) => {
+    if (!state?.mistake) {
+      mistakeFlash.value = false
+    } else {
+      mistakeFlash.value = true
+      setTimeout(() => {
+        if (state === typingState.value) {
+          mistakeFlash.value = false
+        }
+      }, 120)
     }
-    mistakeFlash.value = props.typing.currentMistake
-    setTimeout(() => {
-      if (value === props.typing?.totalTypeCount) {
-        mistakeFlash.value = false
-      }
-    }, 120)
   },
 )
 
 const problem = computed(
   () => props.typing.problem ?? ({} as TypingProblemQuestioner),
 )
-const setting = computed<GameSetting>(
-  () => problem.value.setting ?? ({} as GameSetting),
-)
+const setting = computed(() => problem.value.setting ?? ({} as GameSetting))
 const current = computed(
   () => props.typing.current ?? ({} as TypingGameWordData),
 )
@@ -117,7 +119,12 @@ const infoState = computed(
 )
 
 const typeKey = computed(() => current.value.wordState?.current ?? '')
-const keys = computed(() => getKeyLayout(setting.value.keyLayout ?? 'NULL'))
+const keyLayout = computed(() =>
+  getKeyLayout(setting.value.keyLayout ?? 'NULL'),
+)
+const keys = computed(() =>
+  isCapsLock.value ? keyLayout.value.getCapsLockKeys()! : keyLayout.value,
+)
 const handNumber = computed(() => keys.value.getHandIdx(typeKey.value))
 
 const leftHands = computed(() => [
@@ -157,6 +164,14 @@ function pauseToggle() {
   &[flash-typing-mistake='true'] {
     --color-p: var(--input-error-message);
     --keyboard-highlight: var(--input-error-message);
+  }
+
+  --keyboard-capslock-stroke: transparent;
+  --keyboard-capslock-fill: transparent;
+
+  &[caps-lock='true'] {
+    --keyboard-capslock-stroke: var(--color-3);
+    --keyboard-capslock-fill: var(--keyboard-highlight);
   }
 
   background: var(--background-60);

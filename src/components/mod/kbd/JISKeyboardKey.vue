@@ -24,49 +24,50 @@
       "
       />
       <foreignObject width="88" height="60">
-        <Kbd text="enter" />
+        <Kbd :text="text" />
       </foreignObject>
     </g>
     <g v-else-if="text === '\t'">
       <rect x="0" y="0" rx="5" ry="5" width="93" height="60" />
       <foreignObject width="93" height="60">
-        <Kbd text="tab" />
+        <Kbd :text="text" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'cap'">
       <rect x="0" y="0" rx="5" ry="5" width="108" height="60" />
+      <circle cx="10" cy="10" r="5" />
       <foreignObject width="108" height="60">
-        <Kbd text="caps lock" />
+        <Kbd :text="text" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'shiftL'">
       <rect x="0" y="0" rx="5" ry="5" width="140" height="60" />
       <foreignObject width="140" height="60">
-        <Kbd text="shift" />
+        <Kbd :text="text" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'shiftR'">
       <rect x="0" y="0" rx="5" ry="5" width="112" height="60" />
       <foreignObject width="112" height="60">
-        <Kbd text="shift" />
+        <Kbd :text="text" />
       </foreignObject>
     </g>
     <g v-else-if="text === ' '">
       <rect x="0" y="0" rx="5" ry="5" width="256" height="60" />
       <foreignObject width="258" height="60">
-        <Kbd text="space" />
+        <Kbd :text="text" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'bs'">
       <rect x="0" y="0" rx="5" ry="5" width="60" height="60" />
       <foreignObject width="60" height="60">
-        <Kbd :text="'back\nspace'" />
+        <Kbd :text="text" />
       </foreignObject>
     </g>
     <g v-else-if="text === 'zh'">
       <rect x="0" y="0" rx="5" ry="5" width="60" height="60" />
       <foreignObject width="60" height="60">
-        <Kbd text="" />
+        <Kbd :text="text" />
       </foreignObject>
     </g>
     <g v-else>

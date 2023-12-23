@@ -9,8 +9,9 @@ import { timerEntry, timerTicker } from './Util'
 type ProblemOrder = 'first' | 'last' | 'random'
 
 type TypingEvent = CustomEvent<{
-  shiftKey?: boolean
   char?: string
+  shiftKey?: boolean
+  capsLock?: boolean
 }>
 
 declare global {
@@ -28,6 +29,11 @@ export interface GameSetting {
   keyLayout: KeyLayoutName
 }
 
+export interface CurrentTypingState {
+  detail?: TypingEvent['detail']
+  mistake: boolean
+}
+
 export class TypingGame {
   problem?: TypingProblemQuestioner
   tick = 0
@@ -40,7 +46,7 @@ export class TypingGame {
   totalTypeCount = 0
   totalTypeCorrect = 0
   totalTypeMiss = 0
-  currentMistake = false
+  currentTypingState: CurrentTypingState = { mistake: false }
 
   private readonly eventManager
   private readonly timerManager
@@ -65,6 +71,7 @@ export class TypingGame {
     this.totalTypeCount = 0
     this.totalTypeCorrect = 0
     this.totalTypeMiss = 0
+    this.currentTypingState = { mistake: false }
   }
 
   init({
@@ -106,10 +113,10 @@ export class TypingGame {
         this.totalTypeCount += 1
 
         if (gamer.expect(char, word)) {
-          this.currentMistake = false
+          this.currentTypingState = { detail, mistake: false }
           this.totalTypeCorrect += 1
         } else {
-          this.currentMistake = true
+          this.currentTypingState = { detail, mistake: true }
           this.totalTypeMiss += 1
         }
 
@@ -131,6 +138,8 @@ export class TypingGame {
             this._stop()
           }
         }
+      } else {
+        this.currentTypingState = { detail, mistake: false }
       }
     }
   }
@@ -138,11 +147,19 @@ export class TypingGame {
   private _keydown() {
     return (e: KeyboardEvent) => {
       e.preventDefault()
-      const { shiftKey, key } = e
-      if (key === 'Shift' || e.repeat) {
+      if (e.repeat) {
         return
       }
-      const detail = { shiftKey, char: key }
+
+      const shiftKey = e.shiftKey
+      const char = { Enter: '\n', Tab: '\t' }[e.key] ?? e.key ?? ''
+      const capsLock = e.getModifierState?.('CapsLock')
+      const detail = { char, shiftKey, capsLock }
+
+      if (['CapsLock', 'Shift'].includes(detail.char)) {
+        detail.char = ''
+      }
+
       const event = new CustomEvent('c:typing', { detail })
       this.eventManager.dispatch(event)
     }

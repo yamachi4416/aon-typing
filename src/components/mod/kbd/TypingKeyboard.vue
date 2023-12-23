@@ -36,6 +36,13 @@ const keyboard = computed(() =>
       stroke-width: 1;
     }
 
+    &:has([data-kbd='cap']) {
+      circle {
+        fill: var(--keyboard-capslock-fill, transparent);
+        stroke: var(--keyboard-capslock-stroke, transparent);
+      }
+    }
+
     &[highlight='true'] {
       path,
       rect {
