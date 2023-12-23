@@ -1,0 +1,28 @@
+{
+  "id": "1010599",
+  "title": "若桜鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-23",
+  "updatedAt": "2023-12-23",
+  "optional": { "cd": "599" },
+  "words": [
+    { "info": "若桜", "info2": "わかさ", "word": "wakasa" },
+    { "info": "丹比", "info2": "たんぴ", "word": "tanpi" },
+    { "info": "徳丸", "info2": "とくまる", "word": "tokumaru" },
+    { "info": "八東", "info2": "はっとう", "word": "hattou" },
+    { "info": "安部", "info2": "あべ", "word": "abe" },
+    { "info": "隼", "info2": "はやぶさ", "word": "hayabusa" },
+    { "info": "因幡船岡", "info2": "いなばふなおか", "word": "inabahunaoka" },
+    {
+      "info": "八頭高校前",
+      "info2": "やずこうこうまえ",
+      "word": "yazukoukoumae"
+    },
+    { "info": "郡家", "info2": "こおげ", "word": "kooge" }
+  ]
+}
