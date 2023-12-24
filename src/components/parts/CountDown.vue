@@ -28,6 +28,8 @@ withDefaults(
   justify-content: center;
   width: 100dvw;
   height: 100dvh;
+  pointer-events: none;
+  user-select: none;
   background: var(--color-f);
 
   & > div {

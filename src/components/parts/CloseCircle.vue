@@ -32,7 +32,9 @@
   width: 100%;
   height: 100%;
   color: var(--color-3);
+  pointer-events: visible;
   cursor: pointer;
+  user-select: none;
   background: transparent;
   border: 2px solid currentcolor;
   border-radius: 50%;

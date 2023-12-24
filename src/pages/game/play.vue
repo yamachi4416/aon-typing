@@ -139,6 +139,7 @@ useHead({
 
 <style lang="scss" module>
 .content {
+  position: fixed;
   display: flex;
   align-items: center;
   width: 100%;

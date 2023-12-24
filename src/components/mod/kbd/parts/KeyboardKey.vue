@@ -3,7 +3,10 @@
     :highlight="hi"
     @touchstart.prevent.stop="touchstart"
     @touchmove.prevent.stop="touchmove"
-    @touchend="touchend"
+    @touchend.prevent.stop="touchend"
+    @pointerup.prevent.stop="touchend"
+    @pointercancel.prevent.stop="touchend"
+    @pointerout.prevent.stop="touchend"
   >
     <slot />
   </g>

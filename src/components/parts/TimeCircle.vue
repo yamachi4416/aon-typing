@@ -1,5 +1,9 @@
 <template>
-  <svg viewBox="-31 -31 62 62" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    viewBox="-31 -31 62 62"
+    xmlns="http://www.w3.org/2000/svg"
+    :class="$style.svg"
+  >
     <g>
       <path :class="$style.total" :d="totalPath" />
       <path :class="$style.used" :d="usedPath" />
@@ -105,6 +109,10 @@ function donut(
 </script>
 
 <style lang="scss" module>
+.svg {
+  user-select: none;
+}
+
 .total {
   fill: var(--color-e);
 }
@@ -114,6 +122,7 @@ function donut(
 }
 
 .center {
+  pointer-events: visible;
   cursor: pointer;
   fill: transparent;
 }

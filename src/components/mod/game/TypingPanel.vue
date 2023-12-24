@@ -140,6 +140,8 @@ function orDefaultComputed<T>(source: () => T, defaultValue: any) {
 
 <style lang="scss" scoped>
 .typing-game-panel {
+  pointer-events: none;
+
   &[flash-typing-mistake='true'] {
     --color-p: var(--input-error-message);
     --keyboard-highlight: var(--input-error-message);

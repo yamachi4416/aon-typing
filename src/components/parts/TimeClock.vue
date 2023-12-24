@@ -44,6 +44,9 @@ const dispTime = computed(() => `${minute.value}:${second.value}`)
 
 <style lang="scss" module>
 .clock {
+  pointer-events: visible;
+  user-select: none;
+
   text {
     font-family: monospace;
     font-size: 1.3em;

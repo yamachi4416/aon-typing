@@ -26,6 +26,9 @@ const keyboard = computed(() =>
 
 <style lang="scss" module>
 .keyboard {
+  pointer-events: visible;
+  user-select: none;
+
   g:has(kbd) {
     cursor: pointer;
 
