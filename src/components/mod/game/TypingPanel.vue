@@ -1,8 +1,8 @@
 <template>
   <svg
     class="typing-game-panel"
-    :flash-typing-mistake="mistakeFlash"
-    :caps-lock="isCapsLock"
+    :flash-typing-mistake="flashTypingMistake"
+    :caps-lock="keys.isCapsLock"
     viewBox="0 0 1000 470"
     width="1000"
     height="470"
@@ -60,8 +60,8 @@
           </div>
         </div>
         <div class="hands">
-          <ModKbdHandMap :hand-numbers="leftHands" />
-          <ModKbdHandMap :hand-numbers="rightHands" />
+          <ModKbdHandMap :hand-numbers="handNumbers.L" />
+          <ModKbdHandMap :hand-numbers="handNumbers.R" />
         </div>
         <div class="keyboard-zone">
           <ModKbdTypingKeyboard
@@ -78,64 +78,39 @@
 
 <script setup lang="ts">
 import { getKeyLayout } from '~~/libs/Keys'
-import type { GameSetting, TypingGame } from '~~/libs/TypingGame'
-import { TypingGameWordData } from '~~/libs/TypingGameWordData'
-import { TypingGameWordInfoState } from '~~/libs/TypingGameWordStates'
-import { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
+import type { TypingGame } from '~~/libs/TypingGame'
 
 const props = defineProps<{
   typing: Readonly<TypingGame>
 }>()
 
-const typingState = computed(() => props.typing?.currentTypingState)
-const isCapsLock = computed(() => typingState.value?.detail?.capsLock ?? false)
-const mistakeFlash = ref(false)
+const typingState = computed(() => props.typing.currentTypingState)
+const problem = orDefaultComputed(() => props.typing.problem, {})
+const setting = orDefaultComputed(() => problem.value.setting, {})
+const current = orDefaultComputed(() => props.typing.current, {})
+const infoState = orDefaultComputed(() => current.value.infoState, {})
+const typeKey = orDefaultComputed(() => current.value.wordState?.current, '')
 
-watch(
-  () => typingState.value,
-  (state) => {
-    if (!state?.mistake) {
-      mistakeFlash.value = false
-    } else {
-      mistakeFlash.value = true
-      setTimeout(() => {
-        if (state === typingState.value) {
-          mistakeFlash.value = false
-        }
-      }, 120)
-    }
-  },
-)
+const keys = computed(() => {
+  const isCapsLock = typingState.value.detail?.capsLock ?? false
+  const layout = getKeyLayout(setting.value.keyLayout ?? 'NULL')
+  return isCapsLock ? layout.getCapsLockKeys()! : layout
+})
 
-const problem = computed(
-  () => props.typing.problem ?? ({} as TypingProblemQuestioner),
-)
-const setting = computed(() => problem.value.setting ?? ({} as GameSetting))
-const current = computed(
-  () => props.typing.current ?? ({} as TypingGameWordData),
-)
-const infoState = computed(
-  () => current.value.infoState ?? ({} as TypingGameWordInfoState),
-)
+const handNumbers = computed(() => {
+  const handNumber = keys.value.getHandIdx(typeKey.value)
+  return {
+    L: [handNumber, keys.value.isShiftRightKey(typeKey.value) ? 1 : 0],
+    R: [handNumber - 5, keys.value.isShiftLeftKey(typeKey.value) ? 5 : 0],
+  }
+})
 
-const typeKey = computed(() => current.value.wordState?.current ?? '')
-const keyLayout = computed(() =>
-  getKeyLayout(setting.value.keyLayout ?? 'NULL'),
-)
-const keys = computed(() =>
-  isCapsLock.value ? keyLayout.value.getCapsLockKeys()! : keyLayout.value,
-)
-const handNumber = computed(() => keys.value.getHandIdx(typeKey.value))
-
-const leftHands = computed(() => [
-  handNumber.value,
-  keys.value.isShiftRightKey(typeKey.value) ? 1 : 0,
-])
-
-const rightHands = computed(() => [
-  handNumber.value - 5,
-  keys.value.isShiftLeftKey(typeKey.value) ? 5 : 0,
-])
+const { flash: flashTypingMistake } = useFlashing({
+  watchSource: typingState,
+  valueGetter: (source) => source.mistake,
+  defaultValue: false,
+  timeout: 120,
+})
 
 const infoClass = computed(() => {
   const chars = infoState.value.info?.length || 0
@@ -144,7 +119,7 @@ const infoClass = computed(() => {
   return { [`chars-${n}`]: true, [type]: true }
 })
 
-onBeforeUnmount(() => props.typing?.dispose())
+onBeforeUnmount(() => props.typing.dispose())
 
 function cancel() {
   props.typing.cancel()
@@ -156,6 +131,10 @@ function pauseToggle() {
   } else if (props.typing.isPausing) {
     props.typing.resume()
   }
+}
+
+function orDefaultComputed<T>(source: () => T, defaultValue: any) {
+  return computed<Exclude<T, undefined>>(() => source() ?? defaultValue)
 }
 </script>
 
