@@ -1,0 +1,26 @@
+{
+  "id": "1010359",
+  "title": "名鉄空港線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-25",
+  "updatedAt": "2023-12-25",
+  "optional": { "cd": "359" },
+  "words": [
+    {
+      "info": "中部国際空港",
+      "info2": "ちゅうぶこくさいくうこう",
+      "word": "tyuubukokusaikuukou"
+    },
+    {
+      "info": "りんくう常滑",
+      "info2": "りんくうとこなめ",
+      "word": "rinkuutokoname"
+    },
+    { "info": "常滑", "info2": "とこなめ", "word": "tokoname" }
+  ]
+}

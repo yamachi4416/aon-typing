@@ -1,0 +1,34 @@
+{
+  "id": "1010360",
+  "title": "名鉄河和線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-25",
+  "updatedAt": "2023-12-25",
+  "optional": { "cd": "360" },
+  "words": [
+    { "info": "河和", "info2": "こうわ", "word": "kouwa" },
+    { "info": "河和口", "info2": "こうわぐち", "word": "kouwaguti" },
+    { "info": "富貴", "info2": "ふき", "word": "huki" },
+    { "info": "知多武豊", "info2": "ちたたけとよ", "word": "titataketoyo" },
+    { "info": "上ゲ", "info2": "あげ", "word": "age" },
+    { "info": "青山", "info2": "あおやま", "word": "aoyama" },
+    { "info": "成岩", "info2": "ならわ", "word": "narawa" },
+    { "info": "知多半田", "info2": "ちたはんだ", "word": "titahanda" },
+    { "info": "住吉町", "info2": "すみよしちょう", "word": "sumiyosityou" },
+    { "info": "半田口", "info2": "はんだぐち", "word": "handaguti" },
+    { "info": "植大", "info2": "うえだい", "word": "uedai" },
+    { "info": "阿久比", "info2": "あぐい", "word": "agui" },
+    { "info": "坂部", "info2": "さかべ", "word": "sakabe" },
+    { "info": "白沢", "info2": "しらさわ", "word": "sirasawa" },
+    { "info": "巽ケ丘", "info2": "たつみがおか", "word": "tatumigaoka" },
+    { "info": "八幡新田", "info2": "やわたしんでん", "word": "yawatasindenn" },
+    { "info": "南加木屋", "info2": "みなみかぎや", "word": "minamikagiya" },
+    { "info": "高横須賀", "info2": "たかよこすか", "word": "takayokosuka" },
+    { "info": "太田川", "info2": "おおたがわ", "word": "ootagawa" }
+  ]
+}
