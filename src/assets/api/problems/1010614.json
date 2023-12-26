@@ -1,0 +1,35 @@
+{
+  "id": "1010614",
+  "title": "錦川鉄道錦川清流線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-26",
+  "updatedAt": "2023-12-26",
+  "optional": { "cd": "614" },
+  "words": [
+    { "info": "錦町", "info2": "にしきちょう", "word": "nisikityou" },
+    { "info": "柳瀬", "info2": "やなぜ", "word": "yanaze" },
+    { "info": "河山", "info2": "かわやま", "word": "kawayama" },
+    { "info": "根笠", "info2": "ねがさ", "word": "negasa" },
+    { "info": "南桑", "info2": "なぐわ", "word": "naguwa" },
+    { "info": "椋野", "info2": "むくの", "word": "mukuno" },
+    { "info": "北河内", "info2": "きたごうち", "word": "kitagouti" },
+    { "info": "行波", "info2": "ゆかば", "word": "yukaba" },
+    { "info": "南河内", "info2": "みなみごうち", "word": "minamigouti" },
+    {
+      "info": "守内かさ神",
+      "info2": "しゅうちかさがみ",
+      "word": "syuutikasagami"
+    },
+    {
+      "info": "清流新岩国",
+      "info2": "せいりゅうしんいわくに",
+      "word": "seiryuusinniwakuni"
+    },
+    { "info": "川西", "info2": "かわにし", "word": "kawanisi" }
+  ]
+}

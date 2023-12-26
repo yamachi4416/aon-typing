@@ -1,0 +1,76 @@
+{
+  "id": "1010613",
+  "title": "広島電鉄宮島線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2023-12-26",
+  "updatedAt": "2023-12-26",
+  "optional": { "cd": "613" },
+  "words": [
+    {
+      "info": "広電宮島口",
+      "info2": "ひろでんみやじまぐち",
+      "word": "hirodenmiyajimaguti"
+    },
+    { "info": "広電阿品", "info2": "ひろでんあじな", "word": "hirodennajina" },
+    { "info": "阿品東", "info2": "あじなひがし", "word": "ajinahigasi" },
+    { "info": "地御前", "info2": "じごぜん", "word": "jigozenn" },
+    {
+      "info": "ＪＡ広島病院前",
+      "info2": "じぇいえいひろしまびょういんまえ",
+      "word": "jeieihirosimabyouinmae"
+    },
+    { "info": "宮内", "info2": "みやうち", "word": "miyauti" },
+    {
+      "info": "廿日市市役所前・平良",
+      "info2": "はつかいちしやくしょまえ・へら",
+      "word": "hatukaitisiyakusyomae/hera"
+    },
+    {
+      "info": "広電廿日市",
+      "info2": "ひろでんはつかいち",
+      "word": "hirodenhatukaiti"
+    },
+    {
+      "info": "山陽女学園前",
+      "info2": "さんようじょがくえんまえ",
+      "word": "sanyoujogakuenmae"
+    },
+    { "info": "楽々園", "info2": "らくらくえん", "word": "rakurakuenn" },
+    {
+      "info": "佐伯区役所前",
+      "info2": "さえきくやくしょまえ",
+      "word": "saekikuyakusyomae"
+    },
+    {
+      "info": "広電五日市",
+      "info2": "ひろでんいつかいち",
+      "word": "hirodennitukaiti"
+    },
+    {
+      "info": "修大協創中高前",
+      "info2": "しゅうだいきょうそうちゅうこうまえ",
+      "word": "syuudaikyousoutyuukoumae"
+    },
+    { "info": "井口", "info2": "いのくち", "word": "inokuti" },
+    {
+      "info": "商工センター入口",
+      "info2": "しょうこうせんたーいりぐち",
+      "word": "syoukousenta-iriguti"
+    },
+    { "info": "草津南", "info2": "くさつみなみ", "word": "kusatuminami" },
+    { "info": "草津", "info2": "くさつ", "word": "kusatu" },
+    { "info": "古江", "info2": "ふるえ", "word": "hurue" },
+    { "info": "高須", "info2": "たかす", "word": "takasu" },
+    { "info": "東高須", "info2": "ひがしたかす", "word": "higasitakasu" },
+    {
+      "info": "広電西広島・己斐",
+      "info2": "ひろでんにしひろしま・こい",
+      "word": "hirodennnisihirosima/koi"
+    }
+  ]
+}
