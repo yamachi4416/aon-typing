@@ -1,0 +1,31 @@
+{
+  "id": "1010495",
+  "title": "伊豆箱根鉄道大雄山線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-03",
+  "updatedAt": "2024-01-03",
+  "optional": { "cd": "495" },
+  "words": [
+    { "info": "大雄山", "info2": "だいゆうざん", "word": "daiyuuzann" },
+    {
+      "info": "富士フイルム前",
+      "info2": "ふじふいるむまえ",
+      "word": "hujihuirumumae"
+    },
+    { "info": "和田河原", "info2": "わだがはら", "word": "wadagahara" },
+    { "info": "塚原", "info2": "つかはら", "word": "tukahara" },
+    { "info": "岩原", "info2": "いわはら", "word": "iwahara" },
+    { "info": "相模沼田", "info2": "さがみぬまた", "word": "sagaminumata" },
+    { "info": "飯田岡", "info2": "いいだおか", "word": "iidaoka" },
+    { "info": "穴部", "info2": "あなべ", "word": "anabe" },
+    { "info": "五百羅漢", "info2": "ごひゃくらかん", "word": "gohyakurakann" },
+    { "info": "井細田", "info2": "いさいだ", "word": "isaida" },
+    { "info": "緑町", "info2": "みどりちょう", "word": "midorityou" },
+    { "info": "小田原", "info2": "おだわら", "word": "odawara" }
+  ]
+}

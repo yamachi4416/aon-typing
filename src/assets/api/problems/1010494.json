@@ -1,0 +1,36 @@
+{
+  "id": "1010494",
+  "title": "伊豆箱根鉄道駿豆線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-03",
+  "updatedAt": "2024-01-03",
+  "optional": { "cd": "494" },
+  "words": [
+    { "info": "修善寺", "info2": "しゅぜんじ", "word": "syuzenji" },
+    { "info": "牧之郷", "info2": "まきのこう", "word": "makinokou" },
+    { "info": "大仁", "info2": "おおひと", "word": "oohito" },
+    { "info": "田京", "info2": "たきょう", "word": "takyou" },
+    { "info": "伊豆長岡", "info2": "いずながおか", "word": "izunagaoka" },
+    { "info": "韮山", "info2": "にらやま", "word": "nirayama" },
+    { "info": "原木", "info2": "ばらき", "word": "baraki" },
+    { "info": "伊豆仁田", "info2": "いずにった", "word": "izunitta" },
+    { "info": "大場", "info2": "だいば", "word": "daiba" },
+    {
+      "info": "三島二日町",
+      "info2": "みしまふつかまち",
+      "word": "misimahutukamati"
+    },
+    { "info": "三島田町", "info2": "みしまたまち", "word": "misimatamati" },
+    {
+      "info": "三島広小路",
+      "info2": "みしまひろこうじ",
+      "word": "misimahirokouji"
+    },
+    { "info": "三島", "info2": "みしま", "word": "misima" }
+  ]
+}
