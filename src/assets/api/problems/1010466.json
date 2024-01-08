@@ -1,0 +1,34 @@
+{
+  "id": "1010466",
+  "title": "ひたちなか海浜鉄道湊線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-08",
+  "updatedAt": "2024-01-08",
+  "optional": { "cd": "466" },
+  "words": [
+    { "info": "阿字ケ浦", "info2": "あじがうら", "word": "ajigaura" },
+    { "info": "磯崎", "info2": "いそざき", "word": "isozaki" },
+    {
+      "info": "美乃浜学園",
+      "info2": "みのはまがくえん",
+      "word": "minohamagakuenn"
+    },
+    { "info": "平磯", "info2": "ひらいそ", "word": "hiraiso" },
+    { "info": "殿山", "info2": "とのやま", "word": "tonoyama" },
+    { "info": "那珂湊", "info2": "なかみなと", "word": "nakaminato" },
+    {
+      "info": "高田の鉄橋",
+      "info2": "たかだのてっきょう",
+      "word": "takadanotekkyou"
+    },
+    { "info": "中根", "info2": "なかね", "word": "nakane" },
+    { "info": "金上", "info2": "かねあげ", "word": "kaneage" },
+    { "info": "工機前", "info2": "こうきまえ", "word": "koukimae" },
+    { "info": "勝田", "info2": "かつた", "word": "katuta" }
+  ]
+}
