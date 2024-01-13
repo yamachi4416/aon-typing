@@ -6,9 +6,8 @@ import {
 import { assert, expect } from 'vitest'
 
 type PageOptions = Parameters<typeof _createPage>[1]
-export type Page = ReturnType<typeof _createPage> extends Promise<infer P>
-  ? P
-  : unknown
+export type Page =
+  ReturnType<typeof _createPage> extends Promise<infer P> ? P : unknown
 
 export async function createPage(path: string, options?: PageOptions) {
   const page = await _createPage(path, options)

@@ -46,11 +46,8 @@ export interface OperationLineApiResult {
   }
 }
 
-type FetchStationResult = ReturnType<typeof fetchStation> extends Promise<
-  infer T
->
-  ? T
-  : any
+type FetchStationResult =
+  ReturnType<typeof fetchStation> extends Promise<infer T> ? T : any
 
 function joinWords(pages: Array<FetchStationResult['words']>) {
   let words = [...pages[0]]
