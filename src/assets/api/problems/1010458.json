@@ -1,0 +1,37 @@
+{
+  "id": "1010458",
+  "title": "智頭急行智頭線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-13",
+  "updatedAt": "2024-01-13",
+  "optional": { "cd": "458" },
+  "words": [
+    { "info": "智頭", "info2": "ちず", "word": "tizu" },
+    { "info": "恋山形", "info2": "こいやまがた", "word": "koiyamagata" },
+    { "info": "山郷", "info2": "やまさと", "word": "yamasato" },
+    {
+      "info": "あわくら温泉",
+      "info2": "あわくらおんせん",
+      "word": "awakuraonsenn"
+    },
+    { "info": "西粟倉", "info2": "にしあわくら", "word": "nisiawakura" },
+    { "info": "大原", "info2": "おおはら", "word": "oohara" },
+    { "info": "宮本武蔵", "info2": "みやもとむさし", "word": "miyamotomusasi" },
+    { "info": "石井", "info2": "いしい", "word": "isii" },
+    { "info": "平福", "info2": "ひらふく", "word": "hirahuku" },
+    { "info": "佐用", "info2": "さよ", "word": "sayo" },
+    { "info": "久崎", "info2": "くざき", "word": "kuzaki" },
+    {
+      "info": "河野原円心",
+      "info2": "こうのはらえんしん",
+      "word": "kounoharaensinn"
+    },
+    { "info": "苔縄", "info2": "こけなわ", "word": "kokenawa" },
+    { "info": "上郡", "info2": "かみごおり", "word": "kamigoori" }
+  ]
+}

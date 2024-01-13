@@ -1,0 +1,27 @@
+{
+  "id": "1010460",
+  "title": "由利高原鉄道鳥海山ろく線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-13",
+  "updatedAt": "2024-01-13",
+  "optional": { "cd": "460" },
+  "words": [
+    { "info": "矢島", "info2": "やしま", "word": "yasima" },
+    { "info": "川辺", "info2": "かわべ", "word": "kawabe" },
+    { "info": "吉沢", "info2": "よしざわ", "word": "yosizawa" },
+    { "info": "西滝沢", "info2": "にしたきさわ", "word": "nisitakisawa" },
+    { "info": "久保田", "info2": "くぼた", "word": "kubota" },
+    { "info": "前郷", "info2": "まえごう", "word": "maegou" },
+    { "info": "曲沢", "info2": "まがりさわ", "word": "magarisawa" },
+    { "info": "黒沢", "info2": "くろさわ", "word": "kurosawa" },
+    { "info": "鮎川", "info2": "あゆかわ", "word": "ayukawa" },
+    { "info": "子吉", "info2": "こよし", "word": "koyosi" },
+    { "info": "薬師堂", "info2": "やくしどう", "word": "yakusidou" },
+    { "info": "羽後本荘", "info2": "うごほんじょう", "word": "ugohonjou" }
+  ]
+}
