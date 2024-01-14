@@ -1,7 +1,18 @@
 export function useContactPosted() {
-  const posted = useState(() => false)
+  const isPosted = useState(() => false)
+
+  function setIsPosted() {
+    isPosted.value = true
+  }
+
+  function clearIsPosted() {
+    isPosted.value = false
+  }
+
   return {
-    posted,
+    isPosted: readonly(isPosted),
+    setIsPosted,
+    clearIsPosted,
   }
 }
 
@@ -70,6 +81,20 @@ export function useContact() {
     })
   }
 
+  async function postContact() {
+    const res = await fetch(useRuntimeConfig().public.contactUrl, {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: toJson(),
+    })
+
+    if (!res.ok) {
+      throw createError({ statusCode: res.status, message: res.statusText })
+    }
+  }
+
   return {
     name,
     email,
@@ -77,6 +102,6 @@ export function useContact() {
     errors,
     hasErrors,
     validate,
-    toJson,
+    postContact,
   }
 }

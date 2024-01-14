@@ -78,12 +78,11 @@ useHead({
 const gError = ref('')
 const uid = getCurrentInstance()?.uid
 
-const { name, email, message, errors, hasErrors, validate, toJson } =
+const { name, email, message, errors, hasErrors, validate, postContact } =
   useContact()
 
 onMounted(() => {
-  const { posted } = useContactPosted()
-  posted.value = false
+  useContactPosted().clearIsPosted()
 })
 
 async function submit() {
@@ -94,21 +93,10 @@ async function submit() {
 
 async function submitPost() {
   try {
-    const { posted } = useContactPosted()
     gError.value = ''
-    await fetch(useRuntimeConfig().public.contactUrl, {
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: toJson(),
-    }).then((res) => {
-      if (!res.ok) {
-        throw createError({ statusCode: res.status, message: res.statusText })
-      }
-      posted.value = true
-      navigateTo({ name: 'index-contact-thanks', replace: true })
-    })
+    await postContact()
+    useContactPosted().setIsPosted()
+    navigateTo({ name: 'index-contact-thanks', replace: true })
   } catch (err) {
     console.log(err)
     gError.value = '申し訳ありません。お問い合わせを送信できませんでした。'

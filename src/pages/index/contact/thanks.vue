@@ -1,5 +1,5 @@
 <template>
-  <PartsSection v-show="posted" aria-labelledby="thanks-title">
+  <PartsSection v-show="isPosted" aria-labelledby="thanks-title">
     <h2 id="thanks-title">お問い合わせありがとうございます</h2>
     <p>この度はお問い合わせいただきありがとうございます。</p>
     <p>
@@ -15,10 +15,10 @@ useHead({
   meta: [{ name: 'robots', content: 'noindex' }],
 })
 
-const { posted } = useContactPosted()
+const { isPosted } = useContactPosted()
 
 onBeforeMount(() => {
-  if (!posted.value) {
+  if (!isPosted.value) {
     navigateTo({ name: 'index', replace: true })
   }
 })

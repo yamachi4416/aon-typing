@@ -6,7 +6,7 @@ export function useGameSetting() {
       autoMode: 0,
       goalCharCount: 0,
       problemId: '',
-      problemOrder: 'first' as const,
+      problemOrder: 'first',
       timeLimit: 0,
       keyLayout: 'JIS',
     }),
