@@ -1,0 +1,29 @@
+{
+  "id": "1010571",
+  "title": "水間鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-18",
+  "updatedAt": "2024-01-18",
+  "optional": { "cd": "571" },
+  "words": [
+    { "info": "水間観音", "info2": "みずまかんのん", "word": "mizumakannnonn" },
+    { "info": "三ケ山口", "info2": "みかやまぐち", "word": "mikayamaguti" },
+    { "info": "三ツ松", "info2": "みつまつ", "word": "mitumatu" },
+    { "info": "森", "info2": "もり", "word": "mori" },
+    { "info": "名越", "info2": "なごせ", "word": "nagose" },
+    { "info": "清児", "info2": "せちご", "word": "setigo" },
+    { "info": "石才", "info2": "いしざい", "word": "isizai" },
+    { "info": "近義の里", "info2": "こぎのさと", "word": "koginosato" },
+    {
+      "info": "貝塚市役所前",
+      "info2": "かいづかしやくしょまえ",
+      "word": "kaidukasiyakusyomae"
+    },
+    { "info": "貝塚", "info2": "かいづか", "word": "kaiduka" }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "1010585",
+  "title": "神鉄粟生線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-18",
+  "updatedAt": "2024-01-18",
+  "optional": { "cd": "585" },
+  "words": [
+    { "info": "粟生", "info2": "あお", "word": "ao" },
+    { "info": "葉多", "info2": "はた", "word": "hata" },
+    { "info": "小野", "info2": "おの", "word": "ono" },
+    { "info": "市場", "info2": "いちば", "word": "itiba" },
+    { "info": "樫山", "info2": "かしやま", "word": "kasiyama" },
+    { "info": "大村", "info2": "おおむら", "word": "oomura" },
+    { "info": "三木", "info2": "みき", "word": "miki" },
+    { "info": "三木上の丸", "info2": "みきうえのまる", "word": "mikiuenomaru" },
+    { "info": "恵比須", "info2": "えびす", "word": "ebisu" },
+    { "info": "志染", "info2": "しじみ", "word": "sijimi" },
+    {
+      "info": "広野ゴルフ場前",
+      "info2": "ひろのごるふじょうまえ",
+      "word": "hironogoruhujoumae"
+    },
+    { "info": "緑が丘", "info2": "みどりがおか", "word": "midorigaoka" },
+    { "info": "押部谷", "info2": "おしべだに", "word": "osibedani" },
+    { "info": "栄", "info2": "さかえ", "word": "sakae" },
+    { "info": "木幡", "info2": "こばた", "word": "kobata" },
+    { "info": "木津", "info2": "きづ", "word": "kidu" },
+    { "info": "藍那", "info2": "あいな", "word": "aina" },
+    {
+      "info": "西鈴蘭台",
+      "info2": "にしすずらんだい",
+      "word": "nisisuzurandai"
+    },
+    {
+      "info": "鈴蘭台西口",
+      "info2": "すずらんだいにしぐち",
+      "word": "suzurandainisiguti"
+    },
+    { "info": "鈴蘭台", "info2": "すずらんだい", "word": "suzurandai" }
+  ]
+}
