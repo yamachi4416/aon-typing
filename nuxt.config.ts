@@ -14,7 +14,7 @@ export const routes = (() => {
     JSON.parse(String(readFileSync('./src/assets/api/tags.json'))),
   )
 
-  return () => [
+  return [
     '/robots.txt',
     '/sitemap.xml',
     '/problems',
@@ -77,6 +77,9 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     apiDir: resolver.resolve('./src/assets/api'),
+    sitemap: {
+      routes,
+    },
     public: {
       gtagId: process.env.APP_G_TAGID,
       baseUrl: process.env.APP_BASE_URL ?? 'http://localhost:3000',
@@ -92,7 +95,7 @@ export default defineNuxtConfig({
   nitro: {
     minify: true,
     prerender: {
-      routes: [...routes(), '/404.html'],
+      routes: [...routes, '/404.html'],
     },
   },
 

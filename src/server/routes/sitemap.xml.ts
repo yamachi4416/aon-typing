@@ -1,11 +1,10 @@
-import { routes } from '~~/nuxt.config'
-
-export default defineEventHandler(({ res }) => {
-  res.setHeader('Content-Type', 'text/xml')
+export default defineEventHandler(({ node }) => {
+  node.res.setHeader('Content-Type', 'text/xml')
 
   const config = useRuntimeConfig()
   const baseUrl = config.public.baseUrl
-  const urlset = [...new Set(['/', ...routes()])]
+  const routes = config.sitemap.routes
+  const urlset = [...new Set(['/', ...routes])]
     .filter((route) => !/\.\w+$/.test(route))
     .map((route) => `${baseUrl}${route}`)
     .sort()
