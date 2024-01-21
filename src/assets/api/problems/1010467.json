@@ -1,0 +1,44 @@
+{
+  "id": "1010467",
+  "title": "関東鉄道常総線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-21",
+  "updatedAt": "2024-01-21",
+  "optional": { "cd": "467" },
+  "words": [
+    { "info": "下館", "info2": "しもだて", "word": "simodate" },
+    { "info": "大田郷", "info2": "おおたごう", "word": "ootagou" },
+    { "info": "黒子", "info2": "くろご", "word": "kurogo" },
+    { "info": "騰波ノ江", "info2": "とばのえ", "word": "tobanoe" },
+    { "info": "大宝", "info2": "だいほう", "word": "daihou" },
+    { "info": "下妻", "info2": "しもつま", "word": "simotuma" },
+    { "info": "宗道", "info2": "そうどう", "word": "soudou" },
+    { "info": "玉村", "info2": "たまむら", "word": "tamamura" },
+    { "info": "石下", "info2": "いしげ", "word": "isige" },
+    { "info": "南石下", "info2": "みなみいしげ", "word": "minamiisige" },
+    { "info": "三妻", "info2": "みつま", "word": "mituma" },
+    { "info": "中妻", "info2": "なかつま", "word": "nakatuma" },
+    {
+      "info": "北水海道",
+      "info2": "きたみつかいどう",
+      "word": "kitamitukaidou"
+    },
+    { "info": "水海道", "info2": "みつかいどう", "word": "mitukaidou" },
+    { "info": "小絹", "info2": "こきぬ", "word": "kokinu" },
+    { "info": "新守谷", "info2": "しんもりや", "word": "sinmoriya" },
+    { "info": "守谷", "info2": "もりや", "word": "moriya" },
+    { "info": "南守谷", "info2": "みなみもりや", "word": "minamimoriya" },
+    { "info": "戸頭", "info2": "とがしら", "word": "togasira" },
+    { "info": "稲戸井", "info2": "いなとい", "word": "inatoi" },
+    { "info": "ゆめみ野", "info2": "ゆめみの", "word": "yumemino" },
+    { "info": "新取手", "info2": "しんとりで", "word": "sintoride" },
+    { "info": "寺原", "info2": "てらはら", "word": "terahara" },
+    { "info": "西取手", "info2": "にしとりで", "word": "nisitoride" },
+    { "info": "取手", "info2": "とりで", "word": "toride" }
+  ]
+}
