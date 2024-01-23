@@ -1,0 +1,29 @@
+{
+  "id": "1010553",
+  "title": "叡山電鉄鞍馬線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-23",
+  "updatedAt": "2024-01-23",
+  "optional": { "cd": "553" },
+  "words": [
+    { "info": "鞍馬", "info2": "くらま", "word": "kurama" },
+    { "info": "貴船口", "info2": "きぶねぐち", "word": "kibuneguti" },
+    { "info": "二ノ瀬", "info2": "にのせ", "word": "ninose" },
+    { "info": "市原", "info2": "いちはら", "word": "itihara" },
+    { "info": "二軒茶屋", "info2": "にけんちゃや", "word": "nikentyaya" },
+    {
+      "info": "京都精華大前",
+      "info2": "きょうとせいかだいまえ",
+      "word": "kyoutoseikadaimae"
+    },
+    { "info": "木野", "info2": "きの", "word": "kino" },
+    { "info": "岩倉", "info2": "いわくら", "word": "iwakura" },
+    { "info": "八幡前", "info2": "はちまんまえ", "word": "hatimanmae" },
+    { "info": "宝ケ池", "info2": "たからがいけ", "word": "takaragaike" }
+  ]
+}
