@@ -1,0 +1,35 @@
+{
+  "id": "1010533",
+  "title": "豊橋鉄道渥美線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-28",
+  "updatedAt": "2024-01-28",
+  "optional": { "cd": "533" },
+  "words": [
+    { "info": "三河田原", "info2": "みかわたはら", "word": "mikawatahara" },
+    { "info": "神戸", "info2": "かんべ", "word": "kanbe" },
+    { "info": "豊島", "info2": "としま", "word": "tosima" },
+    { "info": "やぐま台", "info2": "やぐまだい", "word": "yagumadai" },
+    { "info": "杉山", "info2": "すぎやま", "word": "sugiyama" },
+    { "info": "老津", "info2": "おいつ", "word": "oitu" },
+    { "info": "大清水", "info2": "おおしみず", "word": "oosimizu" },
+    { "info": "向ケ丘", "info2": "むこうがおか", "word": "mukougaoka" },
+    { "info": "植田", "info2": "うえた", "word": "ueta" },
+    { "info": "芦原", "info2": "あしはら", "word": "asihara" },
+    { "info": "高師", "info2": "たかし", "word": "takasi" },
+    { "info": "南栄", "info2": "みなみさかえ", "word": "minamisakae" },
+    {
+      "info": "愛知大学前",
+      "info2": "あいちだいがくまえ",
+      "word": "aitidaigakumae"
+    },
+    { "info": "小池", "info2": "こいけ", "word": "koike" },
+    { "info": "柳生橋", "info2": "やぎゅうばし", "word": "yagyuubasi" },
+    { "info": "新豊橋", "info2": "しんとよはし", "word": "sintoyohasi" }
+  ]
+}

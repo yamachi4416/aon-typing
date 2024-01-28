@@ -1,0 +1,21 @@
+{
+  "id": "1010535",
+  "title": "豊橋鉄道東田本線(井原－運動公園)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-28",
+  "updatedAt": "2024-01-28",
+  "optional": { "cd": "535" },
+  "words": [
+    {
+      "info": "運動公園前",
+      "info2": "うんどうこうえんまえ",
+      "word": "undoukouenmae"
+    },
+    { "info": "井原", "info2": "いはら", "word": "ihara" }
+  ]
+}
