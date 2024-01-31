@@ -1,0 +1,25 @@
+{
+  "id": "1010361",
+  "title": "名鉄知多新線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-31",
+  "updatedAt": "2024-01-31",
+  "optional": { "cd": "361" },
+  "words": [
+    { "info": "内海", "info2": "うつみ", "word": "utumi" },
+    { "info": "野間", "info2": "のま", "word": "noma" },
+    { "info": "知多奥田", "info2": "ちたおくだ", "word": "titaokuda" },
+    {
+      "info": "美浜緑苑",
+      "info2": "みはまりょくえん",
+      "word": "mihamaryokuenn"
+    },
+    { "info": "上野間", "info2": "かみのま", "word": "kaminoma" },
+    { "info": "富貴", "info2": "ふき", "word": "huki" }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "1010352",
+  "title": "名鉄各務原線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-01-31",
+  "updatedAt": "2024-01-31",
+  "optional": { "cd": "352" },
+  "words": [
+    { "info": "新鵜沼", "info2": "しんうぬま", "word": "sinnunuma" },
+    { "info": "鵜沼宿", "info2": "うぬまじゅく", "word": "unumajuku" },
+    { "info": "羽場", "info2": "はば", "word": "haba" },
+    { "info": "苧ケ瀬", "info2": "おがせ", "word": "ogase" },
+    {
+      "info": "名電各務原",
+      "info2": "めいでんかかみがはら",
+      "word": "meidenkakamigahara"
+    },
+    { "info": "二十軒", "info2": "にじっけん", "word": "nijikkenn" },
+    { "info": "三柿野", "info2": "みかきの", "word": "mikakino" },
+    { "info": "六軒", "info2": "ろっけん", "word": "rokkenn" },
+    {
+      "info": "各務原市役所前",
+      "info2": "かかみがはらしやくしょまえ",
+      "word": "kakamigaharasiyakusyomae"
+    },
+    {
+      "info": "市民公園前",
+      "info2": "しみんこうえんまえ",
+      "word": "siminkouenmae"
+    },
+    { "info": "新那加", "info2": "しんなか", "word": "sinnnaka" },
+    { "info": "新加納", "info2": "しんかのう", "word": "sinkanou" },
+    { "info": "高田橋", "info2": "たかだばし", "word": "takadabasi" },
+    { "info": "手力", "info2": "てぢから", "word": "tedikara" },
+    { "info": "切通", "info2": "きりどおし", "word": "kiridoosi" },
+    { "info": "細畑", "info2": "ほそばた", "word": "hosobata" },
+    { "info": "田神", "info2": "たがみ", "word": "tagami" },
+    { "info": "名鉄岐阜", "info2": "めいてつぎふ", "word": "meitetugihu" }
+  ]
+}
