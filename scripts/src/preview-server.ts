@@ -1,8 +1,10 @@
+import type { Argv } from 'yargs'
 import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
 import { previewServer } from './lib/preview'
 import { defineCommand } from './lib/util'
 
-function builder(yargs: yargs.Argv) {
+function builder(yargs: Argv) {
   return yargs
     .options('dir', {
       alias: 'd',
@@ -28,7 +30,7 @@ function builder(yargs: yargs.Argv) {
     })
 }
 
-yargs
+yargs(hideBin(process.argv))
   .locale('en')
   .help()
   .alias('h', 'help')
