@@ -1,0 +1,26 @@
+{
+  "id": "1010497",
+  "title": "箱根登山鉄道(箱根湯本－強羅)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-02-03",
+  "updatedAt": "2024-02-03",
+  "optional": { "cd": "497" },
+  "words": [
+    { "info": "強羅", "info2": "ごうら", "word": "goura" },
+    {
+      "info": "彫刻の森",
+      "info2": "ちょうこくのもり",
+      "word": "tyoukokunomori"
+    },
+    { "info": "小涌谷", "info2": "こわきだに", "word": "kowakidani" },
+    { "info": "宮ノ下", "info2": "みやのした", "word": "miyanosita" },
+    { "info": "大平台", "info2": "おおひらだい", "word": "oohiradai" },
+    { "info": "塔ノ沢", "info2": "とうのさわ", "word": "tounosawa" },
+    { "info": "箱根湯本", "info2": "はこねゆもと", "word": "hakoneyumoto" }
+  ]
+}
