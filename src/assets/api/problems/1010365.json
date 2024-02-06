@@ -1,0 +1,33 @@
+{
+  "id": "1010365",
+  "title": "名鉄西尾線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-02-07",
+  "updatedAt": "2024-02-07",
+  "optional": { "cd": "365" },
+  "words": [
+    { "info": "吉良吉田", "info2": "きらよしだ", "word": "kirayosida" },
+    { "info": "上横須賀", "info2": "かみよこすか", "word": "kamiyokosuka" },
+    { "info": "福地", "info2": "ふくち", "word": "hukuti" },
+    { "info": "西尾", "info2": "にしお", "word": "nisio" },
+    { "info": "西尾口", "info2": "にしおぐち", "word": "nisioguti" },
+    { "info": "桜町前", "info2": "さくらまちまえ", "word": "sakuramatimae" },
+    { "info": "米津", "info2": "よねづ", "word": "yonedu" },
+    { "info": "南桜井", "info2": "みなみさくらい", "word": "minamisakurai" },
+    { "info": "桜井", "info2": "さくらい", "word": "sakurai" },
+    {
+      "info": "堀内公園",
+      "info2": "ほりうちこうえん",
+      "word": "horiutikouenn"
+    },
+    { "info": "碧海古井", "info2": "へきかいふるい", "word": "hekikaihurui" },
+    { "info": "南安城", "info2": "みなみあんじょう", "word": "minamianjou" },
+    { "info": "北安城", "info2": "きたあんじょう", "word": "kitaanjou" },
+    { "info": "新安城", "info2": "しんあんじょう", "word": "sinnanjou" }
+  ]
+}

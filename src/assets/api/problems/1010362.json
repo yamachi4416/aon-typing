@@ -1,0 +1,24 @@
+{
+  "id": "1010362",
+  "title": "名鉄豊田線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-02-07",
+  "updatedAt": "2024-02-07",
+  "optional": { "cd": "362" },
+  "words": [
+    { "info": "豊田市", "info2": "とよたし", "word": "toyotasi" },
+    { "info": "梅坪", "info2": "うめつぼ", "word": "umetubo" },
+    { "info": "上豊田", "info2": "かみとよた", "word": "kamitoyota" },
+    { "info": "浄水", "info2": "じょうすい", "word": "jousui" },
+    { "info": "三好ケ丘", "info2": "みよしがおか", "word": "miyosigaoka" },
+    { "info": "黒笹", "info2": "くろざさ", "word": "kurozasa" },
+    { "info": "米野木", "info2": "こめのき", "word": "komenoki" },
+    { "info": "日進", "info2": "にっしん", "word": "nissinn" },
+    { "info": "赤池", "info2": "あかいけ", "word": "akaike" }
+  ]
+}
