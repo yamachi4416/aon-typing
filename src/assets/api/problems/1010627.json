@@ -1,0 +1,93 @@
+{
+  "id": "1010627",
+  "title": "とさでん交通伊野線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-02-10",
+  "updatedAt": "2024-02-10",
+  "optional": { "cd": "627" },
+  "words": [
+    { "info": "伊野", "info2": "いの", "word": "ino" },
+    { "info": "伊野駅前", "info2": "いのえきまえ", "word": "inoekimae" },
+    { "info": "鳴谷", "info2": "なるたに", "word": "narutani" },
+    { "info": "北山", "info2": "きたやま", "word": "kitayama" },
+    { "info": "北内", "info2": "きたうち", "word": "kitauti" },
+    {
+      "info": "伊野商業前",
+      "info2": "いのしょうぎょうまえ",
+      "word": "inosyougyoumae"
+    },
+    { "info": "枝川", "info2": "えだがわ", "word": "edagawa" },
+    { "info": "中山", "info2": "なかやま", "word": "nakayama" },
+    { "info": "八代通", "info2": "やしろどおり", "word": "yasirodoori" },
+    { "info": "宇治団地前", "info2": "うじだんちまえ", "word": "ujidantimae" },
+    { "info": "咥内", "info2": "こうない", "word": "kounai" },
+    { "info": "宮の奥", "info2": "みやのおく", "word": "miyanooku" },
+    {
+      "info": "朝倉神社前",
+      "info2": "あさくらじんじゃまえ",
+      "word": "asakurajinjamae"
+    },
+    {
+      "info": "朝倉駅前",
+      "info2": "あさくらえきまえ",
+      "word": "asakuraekimae"
+    },
+    { "info": "朝倉", "info2": "あさくら", "word": "asakura" },
+    { "info": "曙町", "info2": "あけぼのちょう", "word": "akebonotyou" },
+    {
+      "info": "曙町東町",
+      "info2": "あけぼのちょうひがしまち",
+      "word": "akebonotyouhigasimati"
+    },
+    { "info": "鴨部", "info2": "かもべ", "word": "kamobe" },
+    { "info": "鏡川橋", "info2": "かがみがわばし", "word": "kagamigawabasi" },
+    { "info": "蛍橋", "info2": "ほたるばし", "word": "hotarubasi" },
+    {
+      "info": "旭町三丁目",
+      "info2": "あさひまちさんちょうめ",
+      "word": "asahimatisantyoume"
+    },
+    {
+      "info": "旭駅前通",
+      "info2": "あさひえきまえどおり",
+      "word": "asahiekimaedoori"
+    },
+    {
+      "info": "旭町一丁目",
+      "info2": "あさひまちいっちょうめ",
+      "word": "asahimatiittyoume"
+    },
+    {
+      "info": "上町五丁目",
+      "info2": "かみまちごちょうめ",
+      "word": "kamimatigotyoume"
+    },
+    {
+      "info": "上町四丁目",
+      "info2": "かみまちよんちょうめ",
+      "word": "kamimatiyontyoume"
+    },
+    {
+      "info": "上町二丁目",
+      "info2": "かみまちにちょうめ",
+      "word": "kamimatinityoume"
+    },
+    {
+      "info": "上町一丁目",
+      "info2": "かみまちいっちょうめ",
+      "word": "kamimatiittyoume"
+    },
+    { "info": "枡形", "info2": "ますがた", "word": "masugata" },
+    { "info": "グランド通", "info2": "ぐらんどどおり", "word": "gurandodoori" },
+    { "info": "県庁前", "info2": "けんちょうまえ", "word": "kentyoumae" },
+    { "info": "高知城前", "info2": "こうちじょうまえ", "word": "koutijoumae" },
+    { "info": "大橋通", "info2": "おおはしどおり", "word": "oohasidoori" },
+    { "info": "堀詰", "info2": "ほりづめ", "word": "horidume" },
+    { "info": "はりまや橋", "info2": "はりまやばし", "word": "harimayabasi" }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "1010628",
+  "title": "とさでん交通後免線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-02-10",
+  "updatedAt": "2024-02-10",
+  "optional": { "cd": "628" },
+  "words": [
+    { "info": "はりまや橋", "info2": "はりまやばし", "word": "harimayabasi" },
+    {
+      "info": "デンテツターミナルビル前",
+      "info2": "でんてつたーみなるびるまえ",
+      "word": "dentetuta-minarubirumae"
+    },
+    { "info": "菜園場町", "info2": "さえんばちょう", "word": "saenbatyou" },
+    { "info": "宝永町", "info2": "ほうえいちょう", "word": "houeityou" },
+    {
+      "info": "知寄町一丁目",
+      "info2": "ちよりちょういっちょうめ",
+      "word": "tiyorityouittyoume"
+    },
+    {
+      "info": "知寄町二丁目",
+      "info2": "ちよりちょうにちょうめ",
+      "word": "tiyorityounityoume"
+    },
+    { "info": "知寄町", "info2": "ちよりちょう", "word": "tiyorityou" },
+    {
+      "info": "知寄町三丁目",
+      "info2": "ちよりちょうさんちょうめ",
+      "word": "tiyorityousantyoume"
+    },
+    {
+      "info": "葛島橋東詰",
+      "info2": "かずらしまばしひがしづめ",
+      "word": "kazurasimabasihigasidume"
+    },
+    { "info": "西高須", "info2": "にしたかす", "word": "nisitakasu" },
+    {
+      "info": "県立美術館通",
+      "info2": "けんりつびじゅつかんどおり",
+      "word": "kenritubijutukandoori"
+    },
+    { "info": "高須", "info2": "たかす", "word": "takasu" },
+    { "info": "文珠通", "info2": "もんじゅどおり", "word": "monjudoori" },
+    { "info": "介良通", "info2": "けらどおり", "word": "keradoori" },
+    { "info": "新木", "info2": "しんぎ", "word": "singi" },
+    { "info": "東新木", "info2": "ひがししんぎ", "word": "higasisingi" },
+    { "info": "田辺島通", "info2": "たべしまどおり", "word": "tabesimadoori" },
+    { "info": "鹿児", "info2": "かこ", "word": "kako" },
+    { "info": "舟戸", "info2": "ふなと", "word": "hunato" },
+    { "info": "北浦", "info2": "きたうら", "word": "kitaura" },
+    { "info": "領石通", "info2": "りょうせきどおり", "word": "ryousekidoori" },
+    {
+      "info": "清和学園前",
+      "info2": "せいわがくえんまえ",
+      "word": "seiwagakuenmae"
+    },
+    { "info": "一条橋", "info2": "いちじょうばし", "word": "itijoubasi" },
+    { "info": "明見橋", "info2": "みょうけんばし", "word": "myoukenbasi" },
+    { "info": "長崎", "info2": "ながさき", "word": "nagasaki" },
+    { "info": "小篭通", "info2": "こごめどおり", "word": "kogomedoori" },
+    { "info": "篠原", "info2": "しのはら", "word": "sinohara" },
+    { "info": "住吉通", "info2": "すみよしどおり", "word": "sumiyosidoori" },
+    {
+      "info": "東工業前",
+      "info2": "ひがしこうぎょうまえ",
+      "word": "higasikougyoumae"
+    },
+    { "info": "後免西町", "info2": "ごめんにしまち", "word": "gomennnisimati" },
+    { "info": "後免中町", "info2": "ごめんなかまち", "word": "gomennnakamati" },
+    {
+      "info": "後免東町",
+      "info2": "ごめんひがしまち",
+      "word": "gomenhigasimati"
+    },
+    { "info": "後免町", "info2": "ごめんまち", "word": "gomenmati" }
+  ]
+}

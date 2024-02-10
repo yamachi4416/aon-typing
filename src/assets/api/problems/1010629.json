@@ -1,0 +1,54 @@
+{
+  "id": "1010629",
+  "title": "とさでん交通桟橋線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-02-10",
+  "updatedAt": "2024-02-10",
+  "optional": { "cd": "629" },
+  "words": [
+    {
+      "info": "桟橋通五丁目",
+      "info2": "さんばしどおりごちょうめ",
+      "word": "sanbasidoorigotyoume"
+    },
+    {
+      "info": "桟橋車庫前",
+      "info2": "さんばししゃこまえ",
+      "word": "sanbasisyakomae"
+    },
+    {
+      "info": "桟橋通四丁目",
+      "info2": "さんばしどおりよんちょうめ",
+      "word": "sanbasidooriyontyoume"
+    },
+    {
+      "info": "桟橋通三丁目",
+      "info2": "さんばしどおりさんちょうめ",
+      "word": "sanbasidoorisantyoume"
+    },
+    {
+      "info": "桟橋通二丁目",
+      "info2": "さんばしどおりにちょうめ",
+      "word": "sanbasidoorinityoume"
+    },
+    {
+      "info": "桟橋通一丁目",
+      "info2": "さんばしどおりいっちょうめ",
+      "word": "sanbasidooriittyoume"
+    },
+    { "info": "梅の辻", "info2": "うめのつじ", "word": "umenotuji" },
+    { "info": "はりまや橋", "info2": "はりまやばし", "word": "harimayabasi" },
+    {
+      "info": "蓮池町通",
+      "info2": "はすいけまちどおり",
+      "word": "hasuikematidoori"
+    },
+    { "info": "高知橋", "info2": "こうちばし", "word": "koutibasi" },
+    { "info": "高知駅前", "info2": "こうちえきまえ", "word": "koutiekimae" }
+  ]
+}
