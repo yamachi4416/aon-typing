@@ -76,7 +76,7 @@ useHead({
 })
 
 const gError = ref('')
-const uid = getCurrentInstance()?.uid
+const uid = useId()
 
 const { name, email, message, errors, hasErrors, validate, postContact } =
   useContact()

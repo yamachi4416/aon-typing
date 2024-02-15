@@ -51,7 +51,7 @@ defineEmits<{
 }>()
 
 const content = ref<HTMLElement>()
-const uid = getCurrentInstance()?.uid
+const uid = useId()
 const titleId = computed(() => `dialog-title-${uid}`)
 
 function scroll(options: ScrollToOptions) {

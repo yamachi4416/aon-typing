@@ -68,7 +68,7 @@ defineEmits<{
   (e: 'tag', tag: ProblemItemTag): any
 }>()
 
-const uid = getCurrentInstance()?.uid
+const uid = useId()
 const hasOnTag = computed(() => !!getCurrentInstance()?.vnode?.props?.onTag)
 </script>
 

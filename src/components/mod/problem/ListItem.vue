@@ -42,7 +42,7 @@ defineEmits<{
   (e: 'tag', tag: ProblemItemTag): any
 }>()
 
-const uid = getCurrentInstance()?.uid
+const uid = useId()
 </script>
 
 <style lang="scss" module>
