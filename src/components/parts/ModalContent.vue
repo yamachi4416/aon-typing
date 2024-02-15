@@ -72,18 +72,21 @@ defineExpose({
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 1000px;
-  max-width: calc(100dvw - 20px);
-  height: 100%;
-  max-height: 100%;
-  padding: 0 5px;
-  overflow-y: hidden;
-  font-size: 1.1rem;
-  color: var(--color-3);
-  background: var(--color-f);
-  border: 2px solid var(--color-3);
-  border-radius: 8px;
-  box-shadow: var(--shadow-color-lg) 3px 3px 9px;
+
+  :where(&) {
+    width: 1000px;
+    max-width: calc(100dvw - 20px);
+    height: 100%;
+    max-height: 100%;
+    padding: 0 5px;
+    overflow-y: hidden;
+    font-size: 1.1rem;
+    color: var(--color-3);
+    background: var(--color-f);
+    border: 2px solid var(--color-3);
+    border-radius: 8px;
+    box-shadow: var(--shadow-color-lg) 3px 3px 9px;
+  }
 
   & > header,
   & > div,

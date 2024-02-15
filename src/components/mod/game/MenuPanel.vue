@@ -198,7 +198,6 @@ function randomProblemSelect() {
 
 .panel {
   width: 500px;
-  max-width: 100%;
   height: unset;
 }
 
