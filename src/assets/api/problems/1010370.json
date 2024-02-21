@@ -1,0 +1,26 @@
+{
+  "id": "1010370",
+  "title": "近鉄難波線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-02-21",
+  "updatedAt": "2024-02-21",
+  "optional": { "cd": "370" },
+  "words": [
+    { "info": "大阪難波", "info2": "おおさかなんば", "word": "oosakananba" },
+    {
+      "info": "近鉄日本橋",
+      "info2": "きんてつにっぽんばし",
+      "word": "kintetunipponbasi"
+    },
+    {
+      "info": "大阪上本町",
+      "info2": "おおさかうえほんまち",
+      "word": "oosakauehonmati"
+    }
+  ]
+}
