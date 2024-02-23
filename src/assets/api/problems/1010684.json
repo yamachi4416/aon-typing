@@ -1,0 +1,75 @@
+{
+  "id": "1010684",
+  "title": "えちぜん鉄道三国芦原線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-02-24",
+  "updatedAt": "2024-02-24",
+  "optional": { "cd": "684" },
+  "words": [
+    { "info": "三国港", "info2": "みくにみなと", "word": "mikuniminato" },
+    { "info": "三国", "info2": "みくに", "word": "mikuni" },
+    { "info": "三国神社", "info2": "みくにじんじゃ", "word": "mikunijinja" },
+    { "info": "水居", "info2": "みずい", "word": "mizui" },
+    {
+      "info": "あわら湯のまち",
+      "info2": "あわらゆのまち",
+      "word": "awarayunomati"
+    },
+    { "info": "番田", "info2": "ばんでん", "word": "bandenn" },
+    { "info": "本荘", "info2": "ほんじょう", "word": "honjou" },
+    { "info": "大関", "info2": "おおぜき", "word": "oozeki" },
+    {
+      "info": "下兵庫こうふく",
+      "info2": "しもひょうごこうふく",
+      "word": "simohyougokouhuku"
+    },
+    {
+      "info": "西長田ゆりの里",
+      "info2": "にしながたゆりのさと",
+      "word": "nisinagatayurinosato"
+    },
+    {
+      "info": "西春江ハートピア",
+      "info2": "にしはるえはーとぴあ",
+      "word": "nisiharueha-topia"
+    },
+    {
+      "info": "太郎丸エンゼルランド",
+      "info2": "たろうまるえんぜるらんど",
+      "word": "taroumaruenzerurando"
+    },
+    {
+      "info": "鷲塚針原",
+      "info2": "わしづかはりばら",
+      "word": "wasidukaharibara"
+    },
+    { "info": "中角", "info2": "なかつの", "word": "nakatuno" },
+    { "info": "新田塚", "info2": "にったづか", "word": "nittaduka" },
+    { "info": "八ツ島", "info2": "やつしま", "word": "yatusima" },
+    {
+      "info": "日華化学前",
+      "info2": "にっかかがくまえ",
+      "word": "nikkakagakumae"
+    },
+    {
+      "info": "福大前西福井",
+      "info2": "ふくだいまえにしふくい",
+      "word": "hukudaimaenisihukui"
+    },
+    { "info": "田原町", "info2": "たわらまち", "word": "tawaramati" },
+    { "info": "西別院", "info2": "にしべついん", "word": "nisibetuinn" },
+    {
+      "info": "まつもと町屋",
+      "info2": "まつもとまちや",
+      "word": "matumotomatiya"
+    },
+    { "info": "福井口", "info2": "ふくいぐち", "word": "hukuiguti" },
+    { "info": "新福井", "info2": "しんふくい", "word": "sinhukui" },
+    { "info": "福井", "info2": "ふくい", "word": "hukui" }
+  ]
+}
