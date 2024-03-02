@@ -1,0 +1,22 @@
+{
+  "id": "1010549",
+  "title": "近江鉄道多賀線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-03-02",
+  "updatedAt": "2024-03-02",
+  "optional": { "cd": "549" },
+  "words": [
+    {
+      "info": "多賀大社前",
+      "info2": "たがたいしゃまえ",
+      "word": "tagataisyamae"
+    },
+    { "info": "スクリーン", "info2": "すくりーん", "word": "sukuri-nn" },
+    { "info": "高宮", "info2": "たかみや", "word": "takamiya" }
+  ]
+}

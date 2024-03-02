@@ -1,0 +1,26 @@
+{
+  "id": "1010550",
+  "title": "近江鉄道八日市線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-03-02",
+  "updatedAt": "2024-03-02",
+  "optional": { "cd": "550" },
+  "words": [
+    { "info": "近江八幡", "info2": "おうみはちまん", "word": "oumihatimann" },
+    { "info": "武佐", "info2": "むさ", "word": "musa" },
+    { "info": "平田", "info2": "ひらた", "word": "hirata" },
+    { "info": "市辺", "info2": "いちのべ", "word": "itinobe" },
+    {
+      "info": "太郎坊宮前",
+      "info2": "たろぼうぐうまえ",
+      "word": "tarobouguumae"
+    },
+    { "info": "新八日市", "info2": "しんようかいち", "word": "sinyoukaiti" },
+    { "info": "八日市", "info2": "ようかいち", "word": "youkaiti" }
+  ]
+}
