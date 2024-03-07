@@ -1,0 +1,31 @@
+{
+  "id": "1010380",
+  "title": "近鉄生駒線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-03-07",
+  "updatedAt": "2024-03-07",
+  "optional": { "cd": "380" },
+  "words": [
+    { "info": "生駒", "info2": "いこま", "word": "ikoma" },
+    { "info": "菜畑", "info2": "なばた", "word": "nabata" },
+    { "info": "一分", "info2": "いちぶ", "word": "itibu" },
+    { "info": "南生駒", "info2": "みなみいこま", "word": "minamiikoma" },
+    { "info": "萩の台", "info2": "はぎのだい", "word": "haginodai" },
+    { "info": "東山", "info2": "ひがしやま", "word": "higasiyama" },
+    {
+      "info": "元山上口",
+      "info2": "もとさんじょうぐち",
+      "word": "motosanjouguti"
+    },
+    { "info": "平群", "info2": "へぐり", "word": "heguri" },
+    { "info": "竜田川", "info2": "たつたがわ", "word": "tatutagawa" },
+    { "info": "勢野北口", "info2": "せやきたぐち", "word": "seyakitaguti" },
+    { "info": "信貴山下", "info2": "しぎさんした", "word": "sigisansita" },
+    { "info": "王寺", "info2": "おうじ", "word": "ouji" }
+  ]
+}
