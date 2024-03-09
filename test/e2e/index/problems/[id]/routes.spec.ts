@@ -94,4 +94,9 @@ describe('問題の内容ページの画面遷移の確認', () => {
     await waitForRouterPath(page, `/problems/${problem.id}`)
     await expectLoadingHidden(page)
   })
+
+  it("存在しない問題のページにアクセスすると'404'ページに遷移する", async () => {
+    const page = await createPage('/problems/00000000')
+    expect(await page.title()).toMatch(/^ページが見つかりません/)
+  })
 })

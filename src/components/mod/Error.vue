@@ -28,7 +28,10 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  error: { message: string }
+  error: {
+    message: string
+    statusCode?: number
+  }
 }>()
 
 const error = computed(() => props.error)
@@ -53,8 +56,10 @@ const desc = computed(() => {
     return null
   }
 
-  const message = error.value?.message
-  if (/^(404|Page) Not Found/i.test(message)) {
+  if (
+    error.value?.statusCode === 404 ||
+    /^(404|Page) Not Found/i.test(error.value?.message)
+  ) {
     return 'notfound'
   } else {
     return 'error'

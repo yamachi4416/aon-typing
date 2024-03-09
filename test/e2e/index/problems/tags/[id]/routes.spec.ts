@@ -9,7 +9,8 @@ import tag from '~/assets/api/tags/00009.json'
 
 describe(`問題 タグ：${tag.name} ページの画面遷移の確認`, () => {
   const { id, problems } = tag
-  const tagPageUrl = `/problems/tags/${id}`
+  const toTagPageUrl = (id: string) => `/problems/tags/${id}`
+  const tagPageUrl = toTagPageUrl(id)
 
   it.each(problems.slice(0, 2))(
     "No.$idの問題の'内容を見る'ボタンをクリックすると'問題の内容'ページに遷移する",
@@ -98,4 +99,9 @@ describe(`問題 タグ：${tag.name} ページの画面遷移の確認`, () => 
       await expectLoadingHidden(page)
     },
   )
+
+  it("存在しないタグのページにアクセスすると'404'ページに遷移する", async () => {
+    const page = await createPage(toTagPageUrl('000000'))
+    expect(await page.title()).toMatch(/^ページが見つかりません/)
+  })
 })
