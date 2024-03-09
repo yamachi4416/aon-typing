@@ -1,0 +1,18 @@
+{
+  "id": "1010273",
+  "title": "東武小泉線(太田－東小泉)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-03-10",
+  "updatedAt": "2024-03-10",
+  "optional": { "cd": "273" },
+  "words": [
+    { "info": "東小泉", "info2": "ひがしこいずみ", "word": "higasikoizumi" },
+    { "info": "竜舞", "info2": "りゅうまい", "word": "ryuumai" },
+    { "info": "太田", "info2": "おおた", "word": "oota" }
+  ]
+}

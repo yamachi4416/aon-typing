@@ -1,0 +1,22 @@
+{
+  "id": "1010272",
+  "title": "東武小泉線(館林－西小泉)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-03-10",
+  "updatedAt": "2024-03-10",
+  "optional": { "cd": "272" },
+  "words": [
+    { "info": "西小泉", "info2": "にしこいずみ", "word": "nisikoizumi" },
+    { "info": "小泉町", "info2": "こいずみまち", "word": "koizumimati" },
+    { "info": "東小泉", "info2": "ひがしこいずみ", "word": "higasikoizumi" },
+    { "info": "篠塚", "info2": "しのづか", "word": "sinoduka" },
+    { "info": "本中野", "info2": "ほんなかの", "word": "honnnakano" },
+    { "info": "成島", "info2": "なるしま", "word": "narusima" },
+    { "info": "館林", "info2": "たてばやし", "word": "tatebayasi" }
+  ]
+}
