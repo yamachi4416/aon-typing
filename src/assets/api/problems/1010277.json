@@ -1,0 +1,43 @@
+{
+  "id": "1010277",
+  "title": "東武アーバンパークライン(大宮－柏)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-03-10",
+  "updatedAt": "2024-03-10",
+  "optional": { "cd": "277" },
+  "words": [
+    { "info": "柏", "info2": "かしわ", "word": "kasiwa" },
+    { "info": "豊四季", "info2": "とよしき", "word": "toyosiki" },
+    {
+      "info": "流山おおたかの森",
+      "info2": "ながれやまおおたかのもり",
+      "word": "nagareyamaootakanomori"
+    },
+    { "info": "初石", "info2": "はついし", "word": "hatuisi" },
+    { "info": "江戸川台", "info2": "えどがわだい", "word": "edogawadai" },
+    { "info": "運河", "info2": "うんが", "word": "unga" },
+    { "info": "梅郷", "info2": "うめさと", "word": "umesato" },
+    { "info": "野田市", "info2": "のだし", "word": "nodasi" },
+    { "info": "愛宕", "info2": "あたご", "word": "atago" },
+    { "info": "清水公園", "info2": "しみずこうえん", "word": "simizukouenn" },
+    { "info": "七光台", "info2": "ななこうだい", "word": "nanakoudai" },
+    { "info": "川間", "info2": "かわま", "word": "kawama" },
+    { "info": "南桜井", "info2": "みなみさくらい", "word": "minamisakurai" },
+    { "info": "藤の牛島", "info2": "ふじのうしじま", "word": "hujinousijima" },
+    { "info": "春日部", "info2": "かすかべ", "word": "kasukabe" },
+    { "info": "八木崎", "info2": "やぎさき", "word": "yagisaki" },
+    { "info": "豊春", "info2": "とよはる", "word": "toyoharu" },
+    { "info": "東岩槻", "info2": "ひがしいわつき", "word": "higasiiwatuki" },
+    { "info": "岩槻", "info2": "いわつき", "word": "iwatuki" },
+    { "info": "七里", "info2": "ななさと", "word": "nanasato" },
+    { "info": "大和田", "info2": "おおわだ", "word": "oowada" },
+    { "info": "大宮公園", "info2": "おおみやこうえん", "word": "oomiyakouenn" },
+    { "info": "北大宮", "info2": "きたおおみや", "word": "kitaoomiya" },
+    { "info": "大宮", "info2": "おおみや", "word": "oomiya" }
+  ]
+}

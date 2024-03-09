@@ -1,0 +1,27 @@
+{
+  "id": "1010278",
+  "title": "東武アーバンパークライン(柏－船橋)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-03-10",
+  "updatedAt": "2024-03-10",
+  "optional": { "cd": "278" },
+  "words": [
+    { "info": "船橋", "info2": "ふなばし", "word": "hunabasi" },
+    { "info": "新船橋", "info2": "しんふなばし", "word": "sinhunabasi" },
+    { "info": "塚田", "info2": "つかだ", "word": "tukada" },
+    { "info": "馬込沢", "info2": "まごめざわ", "word": "magomezawa" },
+    { "info": "鎌ケ谷", "info2": "かまがや", "word": "kamagaya" },
+    { "info": "新鎌ケ谷", "info2": "しんかまがや", "word": "sinkamagaya" },
+    { "info": "六実", "info2": "むつみ", "word": "mutumi" },
+    { "info": "高柳", "info2": "たかやなぎ", "word": "takayanagi" },
+    { "info": "逆井", "info2": "さかさい", "word": "sakasai" },
+    { "info": "増尾", "info2": "ますお", "word": "masuo" },
+    { "info": "新柏", "info2": "しんかしわ", "word": "sinkasiwa" },
+    { "info": "柏", "info2": "かしわ", "word": "kasiwa" }
+  ]
+}
