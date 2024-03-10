@@ -5,6 +5,10 @@ export function isNumber(num: any): num is number {
   return typeof num === 'number' && !isNaN(num)
 }
 
+export function isFunction(fn: any): fn is Function {
+  return typeof fn === 'function'
+}
+
 export function timerTicker(interval: number) {
   const state = {
     running: false,

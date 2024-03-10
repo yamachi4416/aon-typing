@@ -1,3 +1,5 @@
+import { isFunction } from '~~/libs/Util'
+
 export function useLoading() {
   const isLoading = useState(() => false)
 
@@ -12,7 +14,7 @@ export function useLoading() {
   async function wrapLoading<T>(fn: (() => Promise<T>) | Promise<T>) {
     try {
       startLoading()
-      if (typeof fn === 'function') {
+      if (isFunction(fn)) {
         return await fn()
       } else {
         return await fn
