@@ -1,5 +1,6 @@
 import http from 'http'
 import https from 'https'
+import fs from 'node:fs'
 import { createInterface } from 'node:readline'
 import type { CommandModule } from 'yargs'
 
@@ -86,4 +87,12 @@ export async function prompt(message: string) {
       resolve(answer)
     })
   })
+}
+
+export async function isPathExists(file: string) {
+  const exists = await fs.promises
+    .access(file, fs.constants.F_OK)
+    .then(() => true)
+    .catch(() => false)
+  return exists
 }

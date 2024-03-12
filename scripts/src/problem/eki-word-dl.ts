@@ -1,7 +1,7 @@
 import path from 'node:path'
 import fs from 'node:fs'
 import * as prettier from 'prettier'
-import { defineCommand, fmtDate, prompt } from '../lib/util'
+import { defineCommand, fmtDate, isPathExists, prompt } from '../lib/util'
 import { fetchOperationLine, fetchStations } from './ekispert/api'
 
 interface Data {
@@ -125,12 +125,7 @@ export default defineCommand({
       console.log(data)
     } else {
       if (!overwrite) {
-        if (
-          await fs.promises
-            .access(file, fs.constants.F_OK)
-            .then(() => true)
-            .catch(() => false)
-        ) {
+        if (await isPathExists(file)) {
           for (;;) {
             const ans = await prompt(
               `file "${file}" is exists.\noverwrite? [Y/n] > `,

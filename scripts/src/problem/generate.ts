@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import * as prettier from 'prettier'
-import { defineCommand } from '../lib/util'
+import { defineCommand, isPathExists } from '../lib/util'
 import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
 import type {
   ProblemDetail,
@@ -150,11 +150,29 @@ async function generateProblemData({
       ),
   )
 
+  const compareNewProblemsByExists = await (async () => {
+    if (await isPathExists(newProblemsFile)) {
+      const buffer = await fs.readFile(newProblemsFile)
+      const problems = JSON.parse(buffer.toString()) as { id: string }[]
+      const indexMap = new Map(problems.map(({ id }, i) => [id, i + 1]))
+      return (a: string, b: string) => {
+        const ai = indexMap.get(a)
+        const bi = indexMap.get(b)
+        if (ai && bi) return ai - bi
+        if (!ai) return -1
+        if (!bi) return 1
+        return 0
+      }
+    }
+    return () => 0
+  })()
+
   await writeJson(
     newProblemsFile,
     problems
       .sort(
         (a, b) =>
+          compareNewProblemsByExists(a.id, b.id) ||
           new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() ||
           new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
           b.birthtime - a.birthtime,
