@@ -99,7 +99,7 @@ export default defineCommand({
       const operationLines = await Promise.all(
         cds.map(async (code) => await fetchOperationLine({ key, code })),
       )
-      const titles = operationLines.map((lines) => lines[0]?.Name)
+      const titles = operationLines.map((lines) => lines[0]?.name)
       const coCd = [
         ...new Set(
           operationLines.flatMap((lines) =>

@@ -7,8 +7,11 @@ import type {
   ProblemDetail,
   ProblemListItem,
   ProblemTagSummary,
+  RailwayCorporation,
+  RailwayProblemDetail,
   TagInfo,
 } from '~~/types/problems'
+import { isFunction } from '~~/libs/Util'
 
 type ProblemDetailData = Omit<ProblemDetail, 'tags'> & { tags: string[] }
 
@@ -19,7 +22,8 @@ async function listJsonFiles(dir: string) {
     .map((entry) => path.resolve(dir, entry.name))
 }
 
-async function writeJson(file: string, data: any) {
+async function writeJson(file: string, input: any) {
+  const data = isFunction(input) ? await input() : input
   await fs.writeFile(
     file,
     await prettier.format(JSON.stringify(data), {
@@ -38,8 +42,12 @@ async function generateProblemData({
   const problemsDist = path.resolve(apiDir, 'problems')
   const problemsFile = path.join(apiDir, 'problems.json')
   const newProblemsFile = path.join(apiDir, 'newProblems.json')
+
   const tagsFile = path.join(apiDir, 'tags.json')
   const tagsDist = path.resolve(apiDir, 'tags')
+
+  const railwayDist = path.join(apiDir, 'railway')
+  const railwayCorporationsFile = path.join(railwayDist, 'corporations.json')
 
   await fs.rm(problemsDist, { recursive: true }).catch(() => {})
   await fs.mkdir(problemsDist, { recursive: true })
@@ -189,6 +197,33 @@ async function generateProblemData({
         tags: p.tags || [],
       })),
   )
+
+  await fs.rm(railwayDist, { recursive: true }).catch(() => {})
+  await fs.mkdir(railwayDist, { recursive: true })
+  await writeJson(railwayCorporationsFile, async () => {
+    const corporations = JSON.parse(
+      await fs
+        .readFile(path.join(dataDir, 'railway', 'corporations.json'))
+        .then((b) => b.toString()),
+    ) as RailwayCorporation[]
+    const railwayProblemMap = new Map<string, string>(
+      problems
+        .filter(({ id }) => id.startsWith('1010'))
+        .flatMap(
+          (p: RailwayProblemDetail) =>
+            p.optional?.cd?.map((cd: string) => [cd, p.id]) ?? [],
+        ),
+    )
+    return corporations.map((corporation) => {
+      corporation.operationLines = corporation.operationLines.map((line) => {
+        return {
+          id: railwayProblemMap.get(line.code) ?? undefined,
+          ...line,
+        }
+      })
+      return corporation
+    })
+  })
 }
 
 export default defineCommand({

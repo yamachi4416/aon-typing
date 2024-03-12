@@ -48,3 +48,21 @@ export interface ProblemDetail {
   words: ProblemDetailWord[]
   links?: ProblemDetailLink[]
 }
+
+export interface RailwayProblemDetail extends ProblemDetail {
+  optional?: {
+    cd?: string[]
+    coCd: string[]
+  }
+}
+
+export interface RailwayCorporation {
+  code: string
+  name: string
+  operationLines: {
+    id?: string | null
+    code: string
+    name: string
+    yomi: string
+  }[]
+}
