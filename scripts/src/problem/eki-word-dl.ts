@@ -11,7 +11,8 @@ interface Data {
   createdAt: string
   updatedAt: string
   optional?: {
-    cd: string[] | string
+    cd: string[]
+    coCd: string[]
   }
   words: Array<{ info: string; info2: string }>
 }
@@ -81,21 +82,33 @@ export default defineCommand({
           tags: ['日本語', '地理', '駅名'],
           createdAt: date,
           updatedAt: date,
-          optional: { cd: cds.length === 1 ? cds[0] : cds },
           words: [{ info: '', info2: '' }],
         }),
       )
 
+    data.optional = data.optional ?? {
+      cd: cds,
+      coCd: [],
+    }
+
+    if (typeof data.optional?.cd === 'string') {
+      data.optional.cd = [data.optional?.cd]
+    }
+
     if (!data.title) {
-      const titles = await Promise.all(
-        cds.map(
-          async (code) =>
-            await fetchOperationLine({ key, code }).then(
-              (op) => op.Line[0]?.Name,
-            ),
-        ),
+      const operationLines = await Promise.all(
+        cds.map(async (code) => await fetchOperationLine({ key, code })),
       )
+      const titles = operationLines.map((lines) => lines[0]?.Name)
+      const coCd = [
+        ...new Set(
+          operationLines.flatMap((lines) =>
+            lines.map(({ corporation }) => corporation.code),
+          ),
+        ),
+      ]
       data.title = `${titles[0]}の駅いちらん`
+      data.optional.coCd = coCd
     }
 
     data.words = await fetchStations({

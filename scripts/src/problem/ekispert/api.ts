@@ -42,6 +42,7 @@ export interface OperationLineApiResult {
     engineVersion: string
     max?: string
     offset?: string
+    Corporation: Corporation[]
     Line: Line[]
   }
 }
@@ -96,7 +97,7 @@ export async function fetchStation({
         info: p.Station.Name.replace(/\(.+?\)$/, '') as string,
         info2: p.Station.Yomi as string,
       }))
-      return { data, words }
+      return { points, words }
     })
 }
 

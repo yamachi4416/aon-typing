@@ -2,13 +2,14 @@ import { readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import * as prettier from 'prettier'
 import { defineCommand } from '../lib/util'
-import { fetchStations } from './ekispert/api'
+import { fetchOperationLine, fetchStations } from './ekispert/api'
 
 interface Data {
   title: string
   tags: string[]
   optional?: {
-    cd: string[] | string
+    cd: string[]
+    coCd: string[]
   }
   words: Array<{ info: string; info2: string }>
 }
@@ -27,6 +28,9 @@ async function loadInfoData({ file }: { file: string }) {
     file,
     text: content.toString(),
     data: JSON.parse(content.toString()),
+  }
+  if (typeof ret.data.optional?.cd === 'string') {
+    ret.data.optional.cd = [ret.data.optional?.cd]
   }
   return ret
 }
@@ -88,8 +92,20 @@ export default defineCommand({
         demandOption: false,
         requiresArg: false,
       })
+      .option('keep-words', {
+        type: 'boolean',
+        describe: 'words not update',
+        demandOption: false,
+        requiresArg: false,
+      })
       .coerce('pattern', (p) => RegExp(p)),
-  handler: async ({ dataDir, pattern, dryRun, ekispertApiKey: key }) => {
+  handler: async ({
+    dataDir,
+    pattern,
+    dryRun,
+    keepWords,
+    ekispertApiKey: key,
+  }) => {
     ;(await readdir(dataDir, { withFileTypes: true }))
       .filter((item) => item.isFile())
       .filter((item) => (pattern ? pattern.test(item.name) : true))
@@ -97,10 +113,27 @@ export default defineCommand({
       .map(async (file) => {
         const infoData = await loadInfoData({ file })
         if (infoData.data.tags.includes('駅名') && infoData.data.optional?.cd) {
-          infoData.data.words = await fetchStations({
-            key,
-            operationLineCodes: String(infoData.data.optional.cd).split(','),
-          }).then(({ words }) => words)
+          if (!keepWords) {
+            const stations = await fetchStations({
+              key,
+              operationLineCodes: String(infoData.data.optional.cd).split(','),
+            })
+            infoData.data.words = stations.words
+          }
+
+          const operationLines = await Promise.all(
+            infoData.data.optional.cd.map(
+              async (code) => await fetchOperationLine({ key, code }),
+            ),
+          )
+          infoData.data.optional.coCd = [
+            ...new Set(
+              operationLines.flatMap((lines) =>
+                lines.map(({ corporation }) => corporation.code),
+              ),
+            ),
+          ]
+
           await outProcess({ infoData, dryRun })
         }
       })
