@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-09",
   "updatedAt": "2022-07-09",
-  "optional": { "cd": "9" },
+  "optional": { "cd": ["9"], "coCd": ["1"] },
   "words": [
     { "info": "札幌", "info2": "さっぽろ", "word": "sapporo" },
     { "info": "苗穂", "info2": "なえぼ", "word": "naebo" },

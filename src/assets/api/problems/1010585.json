@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-01-18",
   "updatedAt": "2024-01-18",
-  "optional": { "cd": "585" },
+  "optional": { "cd": ["585"], "coCd": ["119"] },
   "words": [
     { "info": "粟生", "info2": "あお", "word": "ao" },
     { "info": "葉多", "info2": "はた", "word": "hata" },

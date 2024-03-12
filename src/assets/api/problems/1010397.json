@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-08-13",
   "updatedAt": "2023-08-13",
-  "optional": { "cd": "397" },
+  "optional": { "cd": ["397"], "coCd": ["23"] },
   "words": [
     { "info": "多奈川", "info2": "たながわ", "word": "tanagawa" },
     { "info": "深日港", "info2": "ふけこう", "word": "hukekou" },

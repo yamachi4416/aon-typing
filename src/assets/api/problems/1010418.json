@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-05-28",
   "updatedAt": "2023-05-28",
-  "optional": { "cd": "418" },
+  "optional": { "cd": ["418"], "coCd": ["25"] },
   "words": [
     { "info": "宝塚", "info2": "たからづか", "word": "takaraduka" },
     { "info": "清荒神", "info2": "きよしこうじん", "word": "kiyosikoujinn" },

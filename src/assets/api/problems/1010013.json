@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-17",
   "updatedAt": "2022-09-17",
-  "optional": { "cd": "13" },
+  "optional": { "cd": ["13"], "coCd": ["1"] },
   "words": [
     { "info": "岩見沢", "info2": "いわみざわ", "word": "iwamizawa" },
     { "info": "志文", "info2": "しぶん", "word": "sibunn" },

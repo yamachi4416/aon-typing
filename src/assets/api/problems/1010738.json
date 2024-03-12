@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-06",
   "updatedAt": "2022-07-06",
-  "optional": { "cd": "738" },
+  "optional": { "cd": ["738"], "coCd": ["133"] },
   "words": [
     {
       "info": "広電本社前",

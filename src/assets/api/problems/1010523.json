@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-27",
   "updatedAt": "2023-06-27",
-  "optional": { "cd": "523" },
+  "optional": { "cd": ["523"], "coCd": ["89"] },
   "words": [
     { "info": "北濃", "info2": "ほくのう", "word": "hokunou" },
     {

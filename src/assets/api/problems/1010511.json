@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-20",
   "updatedAt": "2023-06-20",
-  "optional": { "cd": "511" },
+  "optional": { "cd": ["511"], "coCd": ["80"] },
   "words": [
     { "info": "穴水", "info2": "あなみず", "word": "anamizu" },
     { "info": "能登鹿島", "info2": "のとかしま", "word": "notokasima" },

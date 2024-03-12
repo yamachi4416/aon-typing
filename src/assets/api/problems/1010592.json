@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-05-04",
   "updatedAt": "2023-05-04",
-  "optional": { "cd": "592" },
+  "optional": { "cd": ["592"], "coCd": ["123"] },
   "words": [
     { "info": "山陽姫路", "info2": "さんようひめじ", "word": "sanyouhimeji" },
     { "info": "手柄", "info2": "てがら", "word": "tegara" },

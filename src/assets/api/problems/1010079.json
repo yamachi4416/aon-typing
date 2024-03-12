@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-01",
   "updatedAt": "2022-07-01",
-  "optional": { "cd": "79" },
+  "optional": { "cd": ["79"], "coCd": ["1"] },
   "words": [
     { "info": "日光", "info2": "にっこう", "word": "nikkou" },
     { "info": "今市", "info2": "いまいち", "word": "imaiti" },

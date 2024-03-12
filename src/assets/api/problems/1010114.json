@@ -9,7 +9,7 @@
   ],
   "createdAt": "2021-05-31",
   "updatedAt": "2022-07-04",
-  "optional": { "cd": "114" },
+  "optional": { "cd": ["114"], "coCd": ["1"] },
   "words": [
     { "info": "品川", "info2": "しながわ", "word": "sinagawa" },
     {

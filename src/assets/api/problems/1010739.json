@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-06",
   "updatedAt": "2022-07-06",
-  "optional": { "cd": "739" },
+  "optional": { "cd": ["739"], "coCd": ["133"] },
   "words": [
     { "info": "江波", "info2": "えば", "word": "eba" },
     { "info": "舟入南", "info2": "ふないりみなみ", "word": "hunairiminami" },

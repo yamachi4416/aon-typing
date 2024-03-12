@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-19",
   "updatedAt": "2022-08-19",
-  "optional": { "cd": "151" },
+  "optional": { "cd": ["151"], "coCd": ["1"] },
   "words": [
     { "info": "富山", "info2": "とやま", "word": "toyama" },
     { "info": "西富山", "info2": "にしとやま", "word": "nisitoyama" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2021-05-31",
   "updatedAt": "2022-07-04",
-  "optional": { "cd": "113" },
+  "optional": { "cd": ["113"], "coCd": ["1"] },
   "words": [
     { "info": "五反田", "info2": "ごたんだ", "word": "gotanda" },
     { "info": "目黒", "info2": "めぐろ", "word": "meguro" },

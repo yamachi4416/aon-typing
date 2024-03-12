@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-07",
   "updatedAt": "2022-12-07",
-  "optional": { "cd": "57" },
+  "optional": { "cd": ["57"], "coCd": ["1"] },
   "words": [
     { "info": "左沢", "info2": "あてらざわ", "word": "aterazawa" },
     { "info": "柴橋", "info2": "しばはし", "word": "sibahasi" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-25",
   "updatedAt": "2022-10-25",
-  "optional": { "cd": "136" },
+  "optional": { "cd": ["136"], "coCd": ["1"] },
   "words": [
     { "info": "豊橋", "info2": "とよはし", "word": "toyohasi" },
     { "info": "二川", "info2": "ふたがわ", "word": "hutagawa" },

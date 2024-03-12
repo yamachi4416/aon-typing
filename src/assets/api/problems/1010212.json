@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-25",
   "updatedAt": "2023-02-25",
-  "optional": { "cd": "212" },
+  "optional": { "cd": ["212"], "coCd": ["1"] },
   "words": [
     { "info": "徳山", "info2": "とくやま", "word": "tokuyama" },
     { "info": "櫛ケ浜", "info2": "くしがはま", "word": "kusigahama" },

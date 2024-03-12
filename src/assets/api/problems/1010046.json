@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-26",
   "updatedAt": "2022-11-26",
-  "optional": { "cd": "46" },
+  "optional": { "cd": ["46"], "coCd": ["1"] },
   "words": [
     { "info": "横手", "info2": "よこて", "word": "yokote" },
     { "info": "相野々", "info2": "あいのの", "word": "ainono" },

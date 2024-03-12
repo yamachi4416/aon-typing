@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-25",
   "updatedAt": "2022-10-25",
-  "optional": { "cd": "138" },
+  "optional": { "cd": ["138"], "coCd": ["1"] },
   "words": [
     { "info": "美濃赤坂", "info2": "みのあかさか", "word": "minoakasaka" },
     { "info": "荒尾", "info2": "あらお", "word": "arao" },

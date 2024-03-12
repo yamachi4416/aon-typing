@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-11",
   "updatedAt": "2022-07-11",
-  "optional": { "cd": "203" },
+  "optional": { "cd": ["203"], "coCd": ["1"] },
   "words": [
     { "info": "総社", "info2": "そうじゃ", "word": "souja" },
     { "info": "東総社", "info2": "ひがしそうじゃ", "word": "higasisouja" },

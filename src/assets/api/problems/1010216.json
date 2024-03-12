@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-19",
   "updatedAt": "2022-12-19",
-  "optional": { "cd": "216" },
+  "optional": { "cd": ["216"], "coCd": ["1"] },
   "words": [
     { "info": "長門本山", "info2": "ながともとやま", "word": "nagatomotoyama" },
     { "info": "浜河内", "info2": "はまごうち", "word": "hamagouti" },

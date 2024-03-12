@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-03-07",
   "updatedAt": "2024-03-07",
-  "optional": { "cd": "380" },
+  "optional": { "cd": ["380"], "coCd": ["22"] },
   "words": [
     { "info": "生駒", "info2": "いこま", "word": "ikoma" },
     { "info": "菜畑", "info2": "なばた", "word": "nabata" },

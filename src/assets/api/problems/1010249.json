@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-26",
   "updatedAt": "2022-12-26",
-  "optional": { "cd": "249" },
+  "optional": { "cd": ["249"], "coCd": ["1"] },
   "words": [
     { "info": "伊万里", "info2": "いまり", "word": "imari" },
     { "info": "上伊万里", "info2": "かみいまり", "word": "kamiimari" },

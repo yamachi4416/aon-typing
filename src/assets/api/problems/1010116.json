@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-01",
   "updatedAt": "2022-07-01",
-  "optional": { "cd": "116" },
+  "optional": { "cd": ["116"], "coCd": ["1"] },
   "words": [
     { "info": "久里浜", "info2": "くりはま", "word": "kurihama" },
     { "info": "衣笠", "info2": "きぬがさ", "word": "kinugasa" },

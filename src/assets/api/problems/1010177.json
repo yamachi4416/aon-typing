@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-21",
   "updatedAt": "2022-08-21",
-  "optional": { "cd": "177" },
+  "optional": { "cd": ["177"], "coCd": ["1"] },
   "words": [
     { "info": "大阪", "info2": "おおさか", "word": "oosaka" },
     { "info": "新大阪", "info2": "しんおおさか", "word": "sinnoosaka" },

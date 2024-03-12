@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-07",
   "updatedAt": "2022-07-07",
-  "optional": { "cd": "93" },
+  "optional": { "cd": ["93"], "coCd": ["1"] },
   "words": [
     { "info": "銚子", "info2": "ちょうし", "word": "tyousi" },
     { "info": "松岸", "info2": "まつぎし", "word": "matugisi" },

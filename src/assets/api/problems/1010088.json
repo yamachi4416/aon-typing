@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-16",
   "updatedAt": "2022-08-16",
-  "optional": { "cd": "88" },
+  "optional": { "cd": ["88"], "coCd": ["1"] },
   "words": [
     { "info": "大前", "info2": "おおまえ", "word": "oomae" },
     {

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-24",
   "updatedAt": "2022-12-24",
-  "optional": { "cd": "240" },
+  "optional": { "cd": ["240"], "coCd": ["1"] },
   "words": [
     { "info": "博多", "info2": "はかた", "word": "hakata" },
     { "info": "吉塚", "info2": "よしづか", "word": "yosiduka" },

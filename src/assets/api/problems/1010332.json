@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-04-13",
   "updatedAt": "2023-04-13",
-  "optional": { "cd": "332" },
+  "optional": { "cd": ["332"], "coCd": ["18"] },
   "words": [
     { "info": "代々木上原", "info2": "よよぎうえはら", "word": "yoyogiuehara" },
     { "info": "代々木公園", "info2": "よよぎこうえん", "word": "yoyogikouenn" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-19",
   "updatedAt": "2022-11-19",
-  "optional": { "cd": "91" },
+  "optional": { "cd": ["91"], "coCd": ["1"] },
   "words": [
     { "info": "安房鴨川", "info2": "あわかもがわ", "word": "awakamogawa" },
     { "info": "太海", "info2": "ふとみ", "word": "hutomi" },

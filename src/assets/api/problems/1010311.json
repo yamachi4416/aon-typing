@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-04",
   "updatedAt": "2023-03-04",
-  "optional": { "cd": "311" },
+  "optional": { "cd": ["311"], "coCd": ["15"] },
   "words": [
     {
       "info": "片瀬江ノ島",

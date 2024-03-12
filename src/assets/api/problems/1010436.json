@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-11-02",
   "updatedAt": "2023-11-02",
-  "optional": { "cd": "436" },
+  "optional": { "cd": ["436"], "coCd": ["28"] },
   "words": [
     { "info": "大牟田", "info2": "おおむた", "word": "oomuta" },
     { "info": "新栄町", "info2": "しんさかえまち", "word": "sinsakaemati" },

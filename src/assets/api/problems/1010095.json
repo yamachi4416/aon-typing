@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-20",
   "updatedAt": "2022-10-20",
-  "optional": { "cd": "95" },
+  "optional": { "cd": ["95"], "coCd": ["1"] },
   "words": [
     { "info": "蘇我", "info2": "そが", "word": "soga" },
     { "info": "千葉みなと", "info2": "ちばみなと", "word": "tibaminato" },

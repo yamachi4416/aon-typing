@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-07-12",
   "updatedAt": "2023-07-12",
-  "optional": { "cd": "315" },
+  "optional": { "cd": ["315"], "coCd": ["16"] },
   "words": [
     { "info": "日吉", "info2": "ひよし", "word": "hiyosi" },
     { "info": "元住吉", "info2": "もとすみよし", "word": "motosumiyosi" },

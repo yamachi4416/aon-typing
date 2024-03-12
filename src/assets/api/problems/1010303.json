@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-04-25",
   "updatedAt": "2023-04-25",
-  "optional": { "cd": "303" },
+  "optional": { "cd": ["303"], "coCd": ["14"] },
   "words": [
     { "info": "笹塚", "info2": "ささづか", "word": "sasaduka" },
     { "info": "幡ケ谷", "info2": "はたがや", "word": "hatagaya" },

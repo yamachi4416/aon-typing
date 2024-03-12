@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-09",
   "updatedAt": "2022-12-09",
-  "optional": { "cd": "65" },
+  "optional": { "cd": ["65"], "coCd": ["1"] },
   "words": [
     { "info": "仙台", "info2": "せんだい", "word": "sendai" },
     { "info": "長町", "info2": "ながまち", "word": "nagamati" },

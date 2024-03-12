@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-01-13",
   "updatedAt": "2024-01-13",
-  "optional": { "cd": "460" },
+  "optional": { "cd": ["460"], "coCd": ["42"] },
   "words": [
     { "info": "矢島", "info2": "やしま", "word": "yasima" },
     { "info": "川辺", "info2": "かわべ", "word": "kawabe" },

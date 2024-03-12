@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-04-25",
   "updatedAt": "2023-04-25",
-  "optional": { "cd": "304" },
+  "optional": { "cd": ["304"], "coCd": ["14"] },
   "words": [
     { "info": "橋本", "info2": "はしもと", "word": "hasimoto" },
     { "info": "多摩境", "info2": "たまさかい", "word": "tamasakai" },

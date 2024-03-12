@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-04-04",
   "updatedAt": "2023-04-04",
-  "optional": { "cd": "267" },
+  "optional": { "cd": ["267"], "coCd": ["11"] },
   "words": [
     { "info": "押上", "info2": "おしあげ", "word": "osiage" },
     { "info": "曳舟", "info2": "ひきふね", "word": "hikihune" }

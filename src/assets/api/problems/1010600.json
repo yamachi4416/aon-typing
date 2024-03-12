@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-08-10",
   "updatedAt": "2023-08-10",
-  "optional": { "cd": "600" },
+  "optional": { "cd": ["600"], "coCd": ["130"] },
   "words": [
     {
       "info": "松江しんじ湖温泉",

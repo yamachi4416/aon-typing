@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-04-20",
   "updatedAt": "2023-04-20",
-  "optional": { "cd": "275" },
+  "optional": { "cd": ["275"], "coCd": ["11"] },
   "words": [
     {
       "info": "東武宇都宮",

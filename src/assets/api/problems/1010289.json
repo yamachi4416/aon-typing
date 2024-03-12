@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-09-02",
   "updatedAt": "2023-09-02",
-  "optional": { "cd": "289" },
+  "optional": { "cd": ["289"], "coCd": ["12"] },
   "words": [
     { "info": "西武園", "info2": "せいぶえん", "word": "seibuenn" },
     { "info": "東村山", "info2": "ひがしむらやま", "word": "higasimurayama" }

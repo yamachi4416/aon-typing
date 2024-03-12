@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-20",
   "updatedAt": "2023-06-20",
-  "optional": { "cd": "545" },
+  "optional": { "cd": ["545"], "coCd": ["103"] },
   "words": [
     { "info": "西藤原", "info2": "にしふじわら", "word": "nisihujiwara" },
     { "info": "西野尻", "info2": "にしのじり", "word": "nisinojiri" },

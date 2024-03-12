@@ -9,7 +9,7 @@
   ],
   "createdAt": "2021-08-21",
   "updatedAt": "2021-08-21",
-  "optional": { "cd": "106" },
+  "optional": { "cd": ["106"], "coCd": ["1"] },
   "words": [
     { "info": "大宮", "info2": "おおみや", "word": "oomiya" },
     { "info": "北与野", "info2": "きたよの", "word": "kitayono" },

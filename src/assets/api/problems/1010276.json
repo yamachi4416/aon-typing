@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-07-30",
   "updatedAt": "2023-07-30",
-  "optional": { "cd": "276" },
+  "optional": { "cd": ["276"], "coCd": ["11"] },
   "words": [
     { "info": "新藤原", "info2": "しんふじわら", "word": "sinhujiwara" },
     {

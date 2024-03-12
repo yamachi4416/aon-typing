@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-02",
   "updatedAt": "2023-02-02",
-  "optional": { "cd": "224" },
+  "optional": { "cd": ["224"], "coCd": ["1"] },
   "words": [
     { "info": "窪川", "info2": "くぼかわ", "word": "kubokawa" },
     { "info": "仁井田", "info2": "にいだ", "word": "niida" },

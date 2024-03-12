@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-08-19",
   "updatedAt": "2023-08-19",
-  "optional": { "cd": "351" },
+  "optional": { "cd": ["351"], "coCd": ["21"] },
   "words": [
     { "info": "津島", "info2": "つしま", "word": "tusima" },
     { "info": "藤浪", "info2": "ふじなみ", "word": "hujinami" },

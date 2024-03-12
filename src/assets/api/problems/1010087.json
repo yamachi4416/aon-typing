@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-18",
   "updatedAt": "2022-10-18",
-  "optional": { "cd": "87" },
+  "optional": { "cd": ["87"], "coCd": ["1"] },
   "words": [
     { "info": "長岡", "info2": "ながおか", "word": "nagaoka" },
     { "info": "宮内", "info2": "みやうち", "word": "miyauti" },

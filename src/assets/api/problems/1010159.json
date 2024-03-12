@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-27",
   "updatedAt": "2022-10-27",
-  "optional": { "cd": "159" },
+  "optional": { "cd": ["159"], "coCd": ["1"] },
   "words": [
     { "info": "京都", "info2": "きょうと", "word": "kyouto" },
     { "info": "山科", "info2": "やましな", "word": "yamasina" },

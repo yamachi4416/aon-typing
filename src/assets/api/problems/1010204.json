@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-24",
   "updatedAt": "2022-12-24",
-  "optional": { "cd": "204" },
+  "optional": { "cd": ["204"], "coCd": ["1"] },
   "words": [
     { "info": "米子", "info2": "よなご", "word": "yonago" },
     {

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-01",
   "updatedAt": "2022-11-01",
-  "optional": { "cd": "31" },
+  "optional": { "cd": ["31"], "coCd": ["1"] },
   "words": [
     { "info": "大湊", "info2": "おおみなと", "word": "oominato" },
     { "info": "下北", "info2": "しもきた", "word": "simokita" },

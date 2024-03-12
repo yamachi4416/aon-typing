@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-14",
   "updatedAt": "2022-09-14",
-  "optional": { "cd": "450" },
+  "optional": { "cd": ["450"], "coCd": ["32"] },
   "words": [
     { "info": "津軽中里", "info2": "つがるなかさと", "word": "tugarunakasato" },
     { "info": "深郷田", "info2": "ふこうだ", "word": "hukouda" },

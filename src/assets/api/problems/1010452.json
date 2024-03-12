@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-08-27",
   "updatedAt": "2023-08-27",
-  "optional": { "cd": "452" },
+  "optional": { "cd": ["452"], "coCd": ["33"] },
   "words": [
     { "info": "黒石", "info2": "くろいし", "word": "kuroisi" },
     { "info": "境松", "info2": "さかいまつ", "word": "sakaimatu" },

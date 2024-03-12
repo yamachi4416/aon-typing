@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-05",
   "updatedAt": "2022-11-05",
-  "optional": { "cd": "155" },
+  "optional": { "cd": ["155"], "coCd": ["1"] },
   "words": [
     { "info": "和倉温泉", "info2": "わくらおんせん", "word": "wakuraonsenn" },
     { "info": "七尾", "info2": "ななお", "word": "nanao" },

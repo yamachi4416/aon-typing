@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-05",
   "updatedAt": "2022-07-05",
-  "optional": { "cd": "105" },
+  "optional": { "cd": ["105"], "coCd": ["1"] },
   "words": [
     { "info": "大宮", "info2": "おおみや", "word": "oomiya" },
     { "info": "浦和", "info2": "うらわ", "word": "urawa" },

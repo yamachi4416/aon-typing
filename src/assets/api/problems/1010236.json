@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-19",
   "updatedAt": "2022-11-19",
-  "optional": { "cd": "236" },
+  "optional": { "cd": ["236"], "coCd": ["1"] },
   "words": [
     { "info": "鹿児島", "info2": "かごしま", "word": "kagosima" },
     {

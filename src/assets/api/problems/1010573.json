@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-10-17",
   "updatedAt": "2023-10-17",
-  "optional": { "cd": "573" },
+  "optional": { "cd": ["573"], "coCd": ["117"] },
   "words": [
     {
       "info": "日生中央",

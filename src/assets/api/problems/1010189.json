@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-06",
   "updatedAt": "2022-07-06",
-  "optional": { "cd": "189" },
+  "optional": { "cd": ["189"], "coCd": ["1"] },
   "words": [
     { "info": "鳥取", "info2": "とっとり", "word": "tottori" },
     { "info": "福部", "info2": "ふくべ", "word": "hukube" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-08",
   "updatedAt": "2022-07-08",
-  "optional": { "cd": "5" },
+  "optional": { "cd": ["5"], "coCd": ["1"] },
   "words": [
     { "info": "旭川", "info2": "あさひかわ", "word": "asahikawa" },
     { "info": "近文", "info2": "ちかぶみ", "word": "tikabumi" },

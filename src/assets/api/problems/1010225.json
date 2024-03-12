@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-01-14",
   "updatedAt": "2023-01-14",
-  "optional": { "cd": "225" },
+  "optional": { "cd": ["225"], "coCd": ["1"] },
   "words": [
     { "info": "海部", "info2": "かいふ", "word": "kaihu" },
     { "info": "阿波海南", "info2": "あわかいなん", "word": "awakainann" },

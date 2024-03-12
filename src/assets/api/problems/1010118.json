@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-07",
   "updatedAt": "2022-07-07",
-  "optional": { "cd": "118" },
+  "optional": { "cd": ["118"], "coCd": ["1"] },
   "words": [
     { "info": "扇町", "info2": "おうぎまち", "word": "ougimati" },
     { "info": "昭和", "info2": "しょうわ", "word": "syouwa" },

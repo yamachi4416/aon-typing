@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-15",
   "updatedAt": "2022-09-15",
-  "optional": { "cd": "76" },
+  "optional": { "cd": ["76"], "coCd": ["1"] },
   "words": [
     { "info": "長野", "info2": "ながの", "word": "nagano" },
     { "info": "安茂里", "info2": "あもり", "word": "amori" },

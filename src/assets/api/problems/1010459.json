@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-05-07",
   "updatedAt": "2023-05-07",
-  "optional": { "cd": "459" },
+  "optional": { "cd": ["459"], "coCd": ["41"] },
   "words": [
     { "info": "角館", "info2": "かくのだて", "word": "kakunodate" },
     { "info": "羽後太田", "info2": "うごおおた", "word": "ugooota" },

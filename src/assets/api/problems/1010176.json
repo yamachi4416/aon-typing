@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-01-30",
   "updatedAt": "2023-01-30",
-  "optional": { "cd": "176" },
+  "optional": { "cd": ["176"], "coCd": ["1"] },
   "words": [
     { "info": "尼崎", "info2": "あまがさき", "word": "amagasaki" },
     { "info": "加島", "info2": "かしま", "word": "kasima" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-01-28",
   "updatedAt": "2024-01-28",
-  "optional": { "cd": "535" },
+  "optional": { "cd": ["535"], "coCd": ["98"] },
   "words": [
     {
       "info": "運動公園前",

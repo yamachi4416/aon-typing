@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-07-11",
   "updatedAt": "2023-07-11",
-  "optional": { "cd": "348" },
+  "optional": { "cd": ["348"], "coCd": ["21"] },
   "words": [
     { "info": "江吉良", "info2": "えぎら", "word": "egira" },
     {

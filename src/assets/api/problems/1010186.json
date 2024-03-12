@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-15",
   "updatedAt": "2022-11-15",
-  "optional": { "cd": "186" },
+  "optional": { "cd": ["186"], "coCd": ["1"] },
   "words": [
     { "info": "東舞鶴", "info2": "ひがしまいづる", "word": "higasimaiduru" },
     { "info": "西舞鶴", "info2": "にしまいづる", "word": "nisimaiduru" },

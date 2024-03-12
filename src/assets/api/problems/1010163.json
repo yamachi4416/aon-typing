@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-14",
   "updatedAt": "2022-07-14",
-  "optional": { "cd": "163" },
+  "optional": { "cd": ["163"], "coCd": ["1"] },
   "words": [
     { "info": "奈良", "info2": "なら", "word": "nara" },
     { "info": "平城山", "info2": "ならやま", "word": "narayama" },

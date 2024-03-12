@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-14",
   "updatedAt": "2023-06-14",
-  "optional": { "cd": "474" },
+  "optional": { "cd": ["474"], "coCd": ["56"] },
   "words": [
     { "info": "下仁田", "info2": "しもにた", "word": "simonita" },
     { "info": "千平", "info2": "せんだいら", "word": "sendaira" },

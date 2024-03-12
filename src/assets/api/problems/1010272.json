@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-03-10",
   "updatedAt": "2024-03-10",
-  "optional": { "cd": "272" },
+  "optional": { "cd": ["272"], "coCd": ["11"] },
   "words": [
     { "info": "西小泉", "info2": "にしこいずみ", "word": "nisikoizumi" },
     { "info": "小泉町", "info2": "こいずみまち", "word": "koizumimati" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-22",
   "updatedAt": "2022-10-22",
-  "optional": { "cd": "214" },
+  "optional": { "cd": ["214"], "coCd": ["1"] },
   "words": [
     { "info": "宇部", "info2": "うべ", "word": "ube" },
     { "info": "岩鼻", "info2": "いわはな", "word": "iwahana" },

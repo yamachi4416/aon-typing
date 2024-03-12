@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-15",
   "updatedAt": "2022-12-15",
-  "optional": { "cd": "261" },
+  "optional": { "cd": ["261"], "coCd": ["1"] },
   "words": [
     { "info": "都城", "info2": "みやこのじょう", "word": "miyakonojou" },
     {

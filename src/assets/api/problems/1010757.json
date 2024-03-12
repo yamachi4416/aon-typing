@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-15",
   "updatedAt": "2023-06-15",
-  "optional": { "cd": "757" },
+  "optional": { "cd": ["757"], "coCd": ["19"] },
   "words": [
     { "info": "光が丘", "info2": "ひかりがおか", "word": "hikarigaoka" },
     {

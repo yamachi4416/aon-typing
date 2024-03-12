@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-06",
   "updatedAt": "2022-07-06",
-  "optional": { "cd": "740" },
+  "optional": { "cd": ["740"], "coCd": ["133"] },
   "words": [
     { "info": "白島", "info2": "はくしま", "word": "hakusima" },
     {

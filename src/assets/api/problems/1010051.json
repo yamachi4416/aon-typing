@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-01",
   "updatedAt": "2022-12-01",
-  "optional": { "cd": "51" },
+  "optional": { "cd": ["51"], "coCd": ["1"] },
   "words": [
     { "info": "新庄", "info2": "しんじょう", "word": "sinjou" },
     { "info": "南新庄", "info2": "みなみしんじょう", "word": "minamisinjou" },

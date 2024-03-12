@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-08-29",
   "updatedAt": "2023-08-29",
-  "optional": { "cd": "318" },
+  "optional": { "cd": ["318"], "coCd": ["16"] },
   "words": [
     { "info": "蒲田", "info2": "かまた", "word": "kamata" },
     { "info": "蓮沼", "info2": "はすぬま", "word": "hasunuma" },

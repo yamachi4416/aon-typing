@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-10",
   "updatedAt": "2023-03-10",
-  "optional": { "cd": "486" },
+  "optional": { "cd": ["486"], "coCd": ["65"] },
   "words": [
     { "info": "上総中野", "info2": "かずさなかの", "word": "kazusanakano" },
     { "info": "西畑", "info2": "にしはた", "word": "nisihata" },

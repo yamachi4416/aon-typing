@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-24",
   "updatedAt": "2022-09-24",
-  "optional": { "cd": "191" },
+  "optional": { "cd": ["191"], "coCd": ["1"] },
   "words": [
     { "info": "下関", "info2": "しものせき", "word": "simonoseki" },
     { "info": "幡生", "info2": "はたぶ", "word": "hatabu" },

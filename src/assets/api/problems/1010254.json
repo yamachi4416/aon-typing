@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-26",
   "updatedAt": "2022-12-26",
-  "optional": { "cd": "254" },
+  "optional": { "cd": ["254"], "coCd": ["1"] },
   "words": [
     { "info": "大分", "info2": "おおいた", "word": "ooita" },
     { "info": "滝尾", "info2": "たきお", "word": "takio" },

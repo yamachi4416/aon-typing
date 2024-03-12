@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-02-06",
   "updatedAt": "2022-02-06",
-  "optional": { "cd": "24" },
+  "optional": { "cd": ["24"], "coCd": ["1"] },
   "words": [
     { "info": "新潟", "info2": "にいがた", "word": "niigata" },
     { "info": "燕三条", "info2": "つばめさんじょう", "word": "tubamesanjou" },

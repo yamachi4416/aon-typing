@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-07",
   "updatedAt": "2022-11-07",
-  "optional": { "cd": "36" },
+  "optional": { "cd": ["36"], "coCd": ["1"] },
   "words": [
     { "info": "男鹿", "info2": "おが", "word": "oga" },
     { "info": "羽立", "info2": "はだち", "word": "hadati" },

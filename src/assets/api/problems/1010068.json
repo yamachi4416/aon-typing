@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-10",
   "updatedAt": "2022-12-10",
-  "optional": { "cd": "68" },
+  "optional": { "cd": ["68"], "coCd": ["1"] },
   "words": [
     { "info": "新津", "info2": "にいつ", "word": "niitu" },
     { "info": "東新津", "info2": "ひがしにいつ", "word": "higasiniitu" },

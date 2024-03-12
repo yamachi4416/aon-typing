@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-03",
   "updatedAt": "2022-11-03",
-  "optional": { "cd": "170" },
+  "optional": { "cd": ["170"], "coCd": ["1"] },
   "words": [
     { "info": "和歌山", "info2": "わかやま", "word": "wakayama" },
     { "info": "田井ノ瀬", "info2": "たいのせ", "word": "tainose" },

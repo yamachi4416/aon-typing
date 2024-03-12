@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-14",
   "updatedAt": "2023-02-14",
-  "optional": { "cd": "142" },
+  "optional": { "cd": ["142"], "coCd": ["1"] },
   "words": [
     { "info": "鳥羽", "info2": "とば", "word": "toba" },
     { "info": "松下", "info2": "まつした", "word": "matusita" },

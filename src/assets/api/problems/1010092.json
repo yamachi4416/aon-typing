@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-01",
   "updatedAt": "2022-07-01",
-  "optional": { "cd": "92" },
+  "optional": { "cd": ["92"], "coCd": ["1"] },
   "words": [
     { "info": "上総亀山", "info2": "かずさかめやま", "word": "kazusakameyama" },
     { "info": "上総松丘", "info2": "かずさまつおか", "word": "kazusamatuoka" },

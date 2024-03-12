@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-01-28",
   "updatedAt": "2023-01-28",
-  "optional": { "cd": "222" },
+  "optional": { "cd": ["222"], "coCd": ["1"] },
   "words": [
     { "info": "伊予大洲", "info2": "いよおおず", "word": "iyooozu" },
     { "info": "五郎", "info2": "ごろう", "word": "gorou" },

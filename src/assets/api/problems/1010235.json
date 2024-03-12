@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-19",
   "updatedAt": "2022-11-19",
-  "optional": { "cd": "235" },
+  "optional": { "cd": ["235"], "coCd": ["1"] },
   "words": [
     { "info": "八代", "info2": "やつしろ", "word": "yatusiro" },
     { "info": "新八代", "info2": "しんやつしろ", "word": "sinyatusiro" },

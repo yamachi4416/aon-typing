@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-02-06",
   "updatedAt": "2022-02-06",
-  "optional": { "cd": "27" },
+  "optional": { "cd": ["27"], "coCd": ["1"] },
   "words": [
     { "info": "新庄", "info2": "しんじょう", "word": "sinjou" },
     { "info": "大石田", "info2": "おおいしだ", "word": "ooisida" },

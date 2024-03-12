@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-16",
   "updatedAt": "2023-02-16",
-  "optional": { "cd": "144" },
+  "optional": { "cd": ["144"], "coCd": ["1"] },
   "words": [
     { "info": "伊勢奥津", "info2": "いせおきつ", "word": "iseokitu" },
     { "info": "比津", "info2": "ひつ", "word": "hitu" },

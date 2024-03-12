@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-29",
   "updatedAt": "2023-03-29",
-  "optional": { "cd": "344" },
+  "optional": { "cd": ["344"], "coCd": ["20"] },
   "words": [
     { "info": "海老名", "info2": "えびな", "word": "ebina" },
     { "info": "かしわ台", "info2": "かしわだい", "word": "kasiwadai" },

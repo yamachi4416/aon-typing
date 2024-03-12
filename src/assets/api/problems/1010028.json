@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-02-06",
   "updatedAt": "2022-02-06",
-  "optional": { "cd": "28" },
+  "optional": { "cd": ["28"], "coCd": ["1"] },
   "words": [
     { "info": "秋田", "info2": "あきた", "word": "akita" },
     { "info": "大曲", "info2": "おおまがり", "word": "oomagari" },

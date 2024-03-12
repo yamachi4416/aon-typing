@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-03-02",
   "updatedAt": "2024-03-02",
-  "optional": { "cd": "549" },
+  "optional": { "cd": ["549"], "coCd": ["105"] },
   "words": [
     {
       "info": "多賀大社前",

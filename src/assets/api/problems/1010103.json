@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-06",
   "updatedAt": "2022-07-06",
-  "optional": { "cd": "103" },
+  "optional": { "cd": ["103"], "coCd": ["1"] },
   "words": [
     { "info": "高崎", "info2": "たかさき", "word": "takasaki" },
     { "info": "倉賀野", "info2": "くらがの", "word": "kuragano" },

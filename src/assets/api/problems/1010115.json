@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-06-10",
   "updatedAt": "2022-06-10",
-  "optional": { "cd": "115" },
+  "optional": { "cd": ["115"], "coCd": ["1"] },
   "words": [
     { "info": "横浜", "info2": "よこはま", "word": "yokohama" },
     { "info": "東神奈川", "info2": "ひがしかながわ", "word": "higasikanagawa" },

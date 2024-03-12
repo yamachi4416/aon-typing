@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-01-03",
   "updatedAt": "2024-01-03",
-  "optional": { "cd": "494" },
+  "optional": { "cd": ["494"], "coCd": ["73"] },
   "words": [
     { "info": "修善寺", "info2": "しゅぜんじ", "word": "syuzenji" },
     { "info": "牧之郷", "info2": "まきのこう", "word": "makinokou" },

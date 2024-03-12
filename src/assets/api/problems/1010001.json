@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-27",
   "updatedAt": "2022-08-27",
-  "optional": { "cd": "1" },
+  "optional": { "cd": ["1"], "coCd": ["1"] },
   "words": [
     { "info": "長万部", "info2": "おしゃまんべ", "word": "osyamanbe" },
     { "info": "中ノ沢", "info2": "なかのさわ", "word": "nakanosawa" },

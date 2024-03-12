@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-09",
   "updatedAt": "2022-09-09",
-  "optional": { "cd": "198" },
+  "optional": { "cd": ["198"], "coCd": ["1"] },
   "words": [
     { "info": "三原", "info2": "みはら", "word": "mihara" },
     { "info": "糸崎", "info2": "いとざき", "word": "itozaki" },

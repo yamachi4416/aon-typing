@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-08",
   "updatedAt": "2022-07-08",
-  "optional": { "cd": "4" },
+  "optional": { "cd": ["4"], "coCd": ["1"] },
   "words": [
     { "info": "小樽", "info2": "おたる", "word": "otaru" },
     { "info": "塩谷", "info2": "しおや", "word": "sioya" },

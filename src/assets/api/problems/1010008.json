@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-09",
   "updatedAt": "2022-07-09",
-  "optional": { "cd": "8" },
+  "optional": { "cd": ["8"], "coCd": ["1"] },
   "words": [
     {
       "info": "北海道医療大学",

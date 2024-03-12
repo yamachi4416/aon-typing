@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-29",
   "updatedAt": "2022-09-29",
-  "optional": { "cd": "18" },
+  "optional": { "cd": ["18"], "coCd": ["1"] },
   "words": [
     { "info": "釧路", "info2": "くしろ", "word": "kusiro" },
     { "info": "新富士", "info2": "しんふじ", "word": "sinhuji" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-06",
   "updatedAt": "2022-07-06",
-  "optional": { "cd": "107" },
+  "optional": { "cd": ["107"], "coCd": ["1"] },
   "words": [
     { "info": "塩尻", "info2": "しおじり", "word": "siojiri" },
     { "info": "みどり湖", "info2": "みどりこ", "word": "midoriko" },

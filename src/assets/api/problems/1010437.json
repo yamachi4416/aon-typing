@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-11-02",
   "updatedAt": "2023-11-02",
-  "optional": { "cd": "437" },
+  "optional": { "cd": ["437"], "coCd": ["28"] },
   "words": [
     { "info": "太宰府", "info2": "だざいふ", "word": "dazaihu" },
     {

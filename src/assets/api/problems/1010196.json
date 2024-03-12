@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-20",
   "updatedAt": "2023-02-20",
-  "optional": { "cd": "196" },
+  "optional": { "cd": ["196"], "coCd": ["1"] },
   "words": [
     { "info": "岡山", "info2": "おかやま", "word": "okayama" },
     { "info": "法界院", "info2": "ほうかいいん", "word": "houkaiinn" },

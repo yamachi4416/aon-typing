@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-05-24",
   "updatedAt": "2023-05-24",
-  "optional": { "cd": "299" },
+  "optional": { "cd": ["299"], "coCd": ["13"] },
   "words": [
     { "info": "千葉中央", "info2": "ちばちゅうおう", "word": "tibatyuuou" },
     { "info": "京成千葉", "info2": "けいせいちば", "word": "keiseitiba" },

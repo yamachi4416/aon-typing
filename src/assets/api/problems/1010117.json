@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-07",
   "updatedAt": "2022-07-07",
-  "optional": { "cd": "117" },
+  "optional": { "cd": ["117"], "coCd": ["1"] },
   "words": [
     { "info": "熱海", "info2": "あたみ", "word": "atami" },
     { "info": "湯河原", "info2": "ゆがわら", "word": "yugawara" },

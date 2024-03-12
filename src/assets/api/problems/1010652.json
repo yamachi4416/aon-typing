@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-11-12",
   "updatedAt": "2023-11-12",
-  "optional": { "cd": "652" },
+  "optional": { "cd": ["652"], "coCd": ["147"] },
   "words": [
     {
       "info": "藤崎宮前",

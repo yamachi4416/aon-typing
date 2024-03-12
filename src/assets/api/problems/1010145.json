@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-18",
   "updatedAt": "2022-08-18",
-  "optional": { "cd": "145" },
+  "optional": { "cd": ["145"], "coCd": ["1"] },
   "words": [
     { "info": "猪谷", "info2": "いのたに", "word": "inotani" },
     { "info": "杉原", "info2": "すぎはら", "word": "sugihara" },

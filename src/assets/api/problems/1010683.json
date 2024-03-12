@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-02-24",
   "updatedAt": "2024-02-24",
-  "optional": { "cd": "683" },
+  "optional": { "cd": ["683"], "coCd": ["196"] },
   "words": [
     { "info": "勝山", "info2": "かつやま", "word": "katuyama" },
     { "info": "比島", "info2": "ひしま", "word": "hisima" },

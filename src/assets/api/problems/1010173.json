@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-04",
   "updatedAt": "2023-02-04",
-  "optional": { "cd": "173" },
+  "optional": { "cd": ["173"], "coCd": ["1"] },
   "words": [
     { "info": "東羽衣", "info2": "ひがしはごろも", "word": "higasihagoromo" },
     { "info": "鳳", "info2": "おおとり", "word": "ootori" }

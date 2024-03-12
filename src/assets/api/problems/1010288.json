@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-25",
   "updatedAt": "2023-03-25",
-  "optional": { "cd": "288" },
+  "optional": { "cd": ["288"], "coCd": ["12"] },
   "words": [
     { "info": "本川越", "info2": "ほんかわごえ", "word": "honkawagoe" },
     { "info": "南大塚", "info2": "みなみおおつか", "word": "minamiootuka" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-08",
   "updatedAt": "2022-07-08",
-  "optional": { "cd": "308" },
+  "optional": { "cd": ["308"], "coCd": ["14"] },
   "words": [
     { "info": "吉祥寺", "info2": "きちじょうじ", "word": "kitijouji" },
     {

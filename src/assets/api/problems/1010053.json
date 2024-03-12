@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-01",
   "updatedAt": "2022-12-01",
-  "optional": { "cd": "53" },
+  "optional": { "cd": ["53"], "coCd": ["1"] },
   "words": [
     { "info": "余目", "info2": "あまるめ", "word": "amarume" },
     { "info": "南野", "info2": "みなみの", "word": "minamino" },

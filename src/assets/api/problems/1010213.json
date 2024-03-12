@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-28",
   "updatedAt": "2022-08-28",
-  "optional": { "cd": "213" },
+  "optional": { "cd": ["213"], "coCd": ["1"] },
   "words": [
     { "info": "益田", "info2": "ますだ", "word": "masuda" },
     { "info": "本俣賀", "info2": "ほんまたが", "word": "honmataga" },

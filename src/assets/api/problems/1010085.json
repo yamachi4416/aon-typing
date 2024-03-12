@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-29",
   "updatedAt": "2022-10-29",
-  "optional": { "cd": "85" },
+  "optional": { "cd": ["85"], "coCd": ["1"] },
   "words": [
     { "info": "成田空港", "info2": "なりたくうこう", "word": "naritakuukou" },
     {

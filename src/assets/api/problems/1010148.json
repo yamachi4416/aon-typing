@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-06",
   "updatedAt": "2023-02-06",
-  "optional": { "cd": "148" },
+  "optional": { "cd": ["148"], "coCd": ["1"] },
   "words": [
     { "info": "糸魚川", "info2": "いといがわ", "word": "itoigawa" },
     { "info": "姫川", "info2": "ひめかわ", "word": "himekawa" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-09",
   "updatedAt": "2022-12-09",
-  "optional": { "cd": "66" },
+  "optional": { "cd": ["66"], "coCd": ["1"] },
   "words": [
     { "info": "郡山", "info2": "こおりやま", "word": "kooriyama" },
     { "info": "舞木", "info2": "もうぎ", "word": "mougi" },

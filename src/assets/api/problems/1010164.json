@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-14",
   "updatedAt": "2022-07-14",
-  "optional": { "cd": "164" },
+  "optional": { "cd": ["164"], "coCd": ["1"] },
   "words": [
     { "info": "和歌山", "info2": "わかやま", "word": "wakayama" },
     { "info": "宮前", "info2": "みやまえ", "word": "miyamae" },

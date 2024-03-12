@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-01",
   "updatedAt": "2022-07-01",
-  "optional": { "cd": "124" },
+  "optional": { "cd": ["124"], "coCd": ["1"] },
   "words": [
     { "info": "大船", "info2": "おおふな", "word": "oohuna" },
     { "info": "本郷台", "info2": "ほんごうだい", "word": "hongoudai" },

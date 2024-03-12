@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-12-18",
   "updatedAt": "2023-12-18",
-  "optional": { "cd": "439" },
+  "optional": { "cd": ["439"], "coCd": ["28"] },
   "words": [
     {
       "info": "西鉄新宮",

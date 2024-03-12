@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-26",
   "updatedAt": "2022-11-26",
-  "optional": { "cd": "50" },
+  "optional": { "cd": ["50"], "coCd": ["1"] },
   "words": [
     { "info": "女川", "info2": "おながわ", "word": "onagawa" },
     { "info": "浦宿", "info2": "うらしゅく", "word": "urasyuku" },

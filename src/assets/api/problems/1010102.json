@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-04",
   "updatedAt": "2022-07-04",
-  "optional": { "cd": "102" },
+  "optional": { "cd": ["102"], "coCd": ["1"] },
   "words": [
     { "info": "高麗川", "info2": "こまがわ", "word": "komagawa" },
     { "info": "東飯能", "info2": "ひがしはんのう", "word": "higasihannnou" },

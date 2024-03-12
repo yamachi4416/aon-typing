@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-12-03",
   "updatedAt": "2023-12-03",
-  "optional": { "cd": "528" },
+  "optional": { "cd": ["528"], "coCd": ["94"] },
   "words": [
     { "info": "新清水", "info2": "しんしみず", "word": "sinsimizu" },
     { "info": "入江岡", "info2": "いりえおか", "word": "irieoka" },

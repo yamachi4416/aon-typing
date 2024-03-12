@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-02-06",
   "updatedAt": "2022-02-06",
-  "optional": { "cd": "233" },
+  "optional": { "cd": ["233"], "coCd": ["1"] },
   "words": [
     {
       "info": "鹿児島中央",

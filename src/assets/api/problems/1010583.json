@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-09-24",
   "updatedAt": "2023-09-24",
-  "optional": { "cd": "583" },
+  "optional": { "cd": ["583"], "coCd": ["119"] },
   "words": [
     { "info": "三田", "info2": "さんだ", "word": "sanda" },
     { "info": "三田本町", "info2": "さんだほんまち", "word": "sandahonmati" },

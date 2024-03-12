@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-09",
   "updatedAt": "2022-10-09",
-  "optional": { "cd": "19" },
+  "optional": { "cd": ["19"], "coCd": ["1"] },
   "words": [
     { "info": "根室", "info2": "ねむろ", "word": "nemuro" },
     { "info": "東根室", "info2": "ひがしねむろ", "word": "higasinemuro" },

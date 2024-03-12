@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-15",
   "updatedAt": "2023-06-15",
-  "optional": { "cd": "687" },
+  "optional": { "cd": ["687"], "coCd": ["198"] },
   "words": [
     {
       "info": "元町・中華街",

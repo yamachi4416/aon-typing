@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-08-14",
   "updatedAt": "2023-08-14",
-  "optional": { "cd": "789" },
+  "optional": { "cd": ["789"], "coCd": ["219"] },
   "words": [
     { "info": "倶利伽羅", "info2": "くりから", "word": "kurikara" },
     { "info": "津幡", "info2": "つばた", "word": "tubata" },

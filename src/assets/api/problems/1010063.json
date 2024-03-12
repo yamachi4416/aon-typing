@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-13",
   "updatedAt": "2022-11-13",
-  "optional": { "cd": "63" },
+  "optional": { "cd": ["63"], "coCd": ["1"] },
   "words": [
     { "info": "利府", "info2": "りふ", "word": "rihu" },
     { "info": "新利府", "info2": "しんりふ", "word": "sinrihu" },

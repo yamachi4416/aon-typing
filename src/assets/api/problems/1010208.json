@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-09",
   "updatedAt": "2022-10-09",
-  "optional": { "cd": "208" },
+  "optional": { "cd": ["208"], "coCd": ["1"] },
   "words": [
     { "info": "境港", "info2": "さかいみなと", "word": "sakaiminato" },
     { "info": "馬場崎町", "info2": "ばばさきちょう", "word": "babasakityou" },

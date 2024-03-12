@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-12-10",
   "updatedAt": "2023-12-10",
-  "optional": { "cd": "525" },
+  "optional": { "cd": ["525"], "coCd": ["91"] },
   "words": [
     { "info": "明智", "info2": "あけち", "word": "aketi" },
     { "info": "野志", "info2": "のし", "word": "nosi" },

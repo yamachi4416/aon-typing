@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-11-16",
   "updatedAt": "2023-11-16",
-  "optional": { "cd": "551" },
+  "optional": { "cd": ["551"], "coCd": ["106"] },
   "words": [
     { "info": "信楽", "info2": "しがらき", "word": "sigaraki" },
     {

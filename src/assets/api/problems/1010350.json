@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-08-19",
   "updatedAt": "2023-08-19",
-  "optional": { "cd": "350" },
+  "optional": { "cd": ["350"], "coCd": ["21"] },
   "words": [
     { "info": "玉ノ井", "info2": "たまのい", "word": "tamanoi" },
     { "info": "奥町", "info2": "おくちょう", "word": "okutyou" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-12",
   "updatedAt": "2022-11-12",
-  "optional": { "cd": "227" },
+  "optional": { "cd": ["227"], "coCd": ["1"] },
   "words": [
     { "info": "阿波池田", "info2": "あわいけだ", "word": "awaikeda" },
     { "info": "佃", "info2": "つくだ", "word": "tukuda" },

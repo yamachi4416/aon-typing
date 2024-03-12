@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-24",
   "updatedAt": "2023-06-24",
-  "optional": { "cd": "386" },
+  "optional": { "cd": ["386"], "coCd": ["22"] },
   "words": [
     {
       "info": "橿原神宮前",

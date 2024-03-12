@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-02-21",
   "updatedAt": "2024-02-21",
-  "optional": { "cd": "379" },
+  "optional": { "cd": ["379"], "coCd": ["22"] },
   "words": [
     { "info": "近鉄奈良", "info2": "きんてつなら", "word": "kintetunara" },
     { "info": "新大宮", "info2": "しんおおみや", "word": "sinnoomiya" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-11",
   "updatedAt": "2023-03-11",
-  "optional": { "cd": "476" },
+  "optional": { "cd": ["476"], "coCd": ["58"] },
   "words": [
     { "info": "内宿", "info2": "うちじゅく", "word": "utijuku" },
     { "info": "羽貫", "info2": "はぬき", "word": "hanuki" },

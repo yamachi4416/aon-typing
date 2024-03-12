@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-02",
   "updatedAt": "2023-02-02",
-  "optional": { "cd": "223" },
+  "optional": { "cd": ["223"], "coCd": ["1"] },
   "words": [
     { "info": "高知", "info2": "こうち", "word": "kouti" },
     { "info": "薊野", "info2": "あぞうの", "word": "azouno" },

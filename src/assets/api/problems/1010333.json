@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-04-13",
   "updatedAt": "2023-04-13",
-  "optional": { "cd": "333" },
+  "optional": { "cd": ["333"], "coCd": ["18"] },
   "words": [
     { "info": "北綾瀬", "info2": "きたあやせ", "word": "kitaayase" },
     { "info": "綾瀬", "info2": "あやせ", "word": "ayase" }

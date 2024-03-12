@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-07-17",
   "updatedAt": "2023-07-17",
-  "optional": { "cd": "324" },
+  "optional": { "cd": ["324"], "coCd": ["17"] },
   "words": [
     { "info": "小島新田", "info2": "こじましんでん", "word": "kojimasindenn" },
     { "info": "大師橋", "info2": "だいしばし", "word": "daisibasi" },

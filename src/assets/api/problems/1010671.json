@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-10-29",
   "updatedAt": "2023-10-29",
-  "optional": { "cd": "671" },
+  "optional": { "cd": ["671"], "coCd": ["176"] },
   "words": [
     { "info": "篠ノ井", "info2": "しののい", "word": "sinonoi" },
     {

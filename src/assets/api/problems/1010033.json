@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-07",
   "updatedAt": "2022-11-07",
-  "optional": { "cd": "33" },
+  "optional": { "cd": ["33"], "coCd": ["1"] },
   "words": [
     { "info": "久慈", "info2": "くじ", "word": "kuji" },
     {

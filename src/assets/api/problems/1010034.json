@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-07",
   "updatedAt": "2022-11-07",
-  "optional": { "cd": "34" },
+  "optional": { "cd": ["34"], "coCd": ["1"] },
   "words": [
     { "info": "青森", "info2": "あおもり", "word": "aomori" },
     { "info": "新青森", "info2": "しんあおもり", "word": "sinnaomori" },

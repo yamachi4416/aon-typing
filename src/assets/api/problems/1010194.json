@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-18",
   "updatedAt": "2023-02-18",
-  "optional": { "cd": "194" },
+  "optional": { "cd": ["194"], "coCd": ["1"] },
   "words": [
     { "info": "津山", "info2": "つやま", "word": "tuyama" },
     { "info": "東津山", "info2": "ひがしつやま", "word": "higasituyama" },

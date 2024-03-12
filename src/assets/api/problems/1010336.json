@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-11",
   "updatedAt": "2023-06-11",
-  "optional": { "cd": "336" },
+  "optional": { "cd": ["336"], "coCd": ["18"] },
   "words": [
     {
       "info": "赤羽岩淵",

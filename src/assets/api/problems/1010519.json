@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-02",
   "updatedAt": "2023-06-02",
-  "optional": { "cd": "519" },
+  "optional": { "cd": ["519"], "coCd": ["85"] },
   "words": [
     { "info": "湯田中", "info2": "ゆだなか", "word": "yudanaka" },
     { "info": "上条", "info2": "かみじょう", "word": "kamijou" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-07-01",
   "updatedAt": "2023-07-01",
-  "optional": { "cd": "408" },
+  "optional": { "cd": ["408"], "coCd": ["24"] },
   "words": [
     { "info": "宇治", "info2": "うじ", "word": "uji" },
     { "info": "三室戸", "info2": "みむろど", "word": "mimurodo" },

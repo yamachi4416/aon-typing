@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-12-13",
   "updatedAt": "2023-12-13",
-  "optional": { "cd": "371" },
+  "optional": { "cd": ["371"], "coCd": ["22"] },
   "words": [
     { "info": "信貴山口", "info2": "しぎさんぐち", "word": "sigisanguti" },
     { "info": "服部川", "info2": "はっとりがわ", "word": "hattorigawa" },

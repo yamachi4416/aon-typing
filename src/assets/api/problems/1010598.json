@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-27",
   "updatedAt": "2022-08-27",
-  "optional": { "cd": "598" },
+  "optional": { "cd": ["598"], "coCd": ["128"] },
   "words": [
     { "info": "西御坊", "info2": "にしごぼう", "word": "nisigobou" },
     { "info": "市役所前", "info2": "しやくしょまえ", "word": "siyakusyomae" },

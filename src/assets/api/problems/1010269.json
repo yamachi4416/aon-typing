@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-25",
   "updatedAt": "2023-03-25",
-  "optional": { "cd": "269" },
+  "optional": { "cd": ["269"], "coCd": ["11"] },
   "words": [
     { "info": "大師前", "info2": "だいしまえ", "word": "daisimae" },
     { "info": "西新井", "info2": "にしあらい", "word": "nisiarai" }

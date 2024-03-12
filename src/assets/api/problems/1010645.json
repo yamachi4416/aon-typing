@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-03",
   "updatedAt": "2023-06-03",
-  "optional": { "cd": "645" },
+  "optional": { "cd": ["645"], "coCd": ["145"] },
   "words": [
     { "info": "島原港", "info2": "しまばらこう", "word": "simabarakou" },
     { "info": "島原船津", "info2": "しまばらふなつ", "word": "simabarahunatu" },

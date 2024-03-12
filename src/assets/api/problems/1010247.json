@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-30",
   "updatedAt": "2022-12-30",
-  "optional": { "cd": "247" },
+  "optional": { "cd": ["247"], "coCd": ["1"] },
   "words": [
     { "info": "西唐津", "info2": "にしからつ", "word": "nisikaratu" },
     { "info": "唐津", "info2": "からつ", "word": "karatu" },

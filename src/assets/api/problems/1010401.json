@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-08-22",
   "updatedAt": "2023-08-22",
-  "optional": { "cd": "401" },
+  "optional": { "cd": ["401"], "coCd": ["23"] },
   "words": [
     { "info": "極楽橋", "info2": "ごくらくばし", "word": "gokurakubasi" },
     { "info": "紀伊神谷", "info2": "きいかみや", "word": "kiikamiya" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-07-15",
   "updatedAt": "2023-07-15",
-  "optional": { "cd": "342" },
+  "optional": { "cd": ["342"], "coCd": ["19"] },
   "words": [
     { "info": "早稲田", "info2": "わせだ", "word": "waseda" },
     { "info": "面影橋", "info2": "おもかげばし", "word": "omokagebasi" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-28",
   "updatedAt": "2022-08-28",
-  "optional": { "cd": "11" },
+  "optional": { "cd": ["11"], "coCd": ["1"] },
   "words": [
     { "info": "新得", "info2": "しんとく", "word": "sintoku" },
     { "info": "トマム", "info2": "とまむ", "word": "tomamu" },

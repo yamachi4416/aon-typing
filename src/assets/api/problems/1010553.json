@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-01-23",
   "updatedAt": "2024-01-23",
-  "optional": { "cd": "553" },
+  "optional": { "cd": ["553"], "coCd": ["107"] },
   "words": [
     { "info": "鞍馬", "info2": "くらま", "word": "kurama" },
     { "info": "貴船口", "info2": "きぶねぐち", "word": "kibuneguti" },

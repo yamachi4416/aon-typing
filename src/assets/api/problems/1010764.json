@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-03",
   "updatedAt": "2022-09-03",
-  "optional": { "cd": "764" },
+  "optional": { "cd": ["764"], "coCd": ["1"] },
   "words": [
     { "info": "新潟", "info2": "にいがた", "word": "niigata" },
     { "info": "越後石山", "info2": "えちごいしやま", "word": "etigoisiyama" },

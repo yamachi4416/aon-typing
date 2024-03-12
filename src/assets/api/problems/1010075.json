@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-01-19",
   "updatedAt": "2023-01-19",
-  "optional": { "cd": "75" },
+  "optional": { "cd": ["75"], "coCd": ["1"] },
   "words": [
     { "info": "東三条", "info2": "ひがしさんじょう", "word": "higasisanjou" },
     { "info": "北三条", "info2": "きたさんじょう", "word": "kitasanjou" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-04",
   "updatedAt": "2022-12-04",
-  "optional": { "cd": "56" },
+  "optional": { "cd": ["56"], "coCd": ["1"] },
   "words": [
     { "info": "山形", "info2": "やまがた", "word": "yamagata" },
     { "info": "北山形", "info2": "きたやまがた", "word": "kitayamagata" },

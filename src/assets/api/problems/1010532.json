@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-27",
   "updatedAt": "2023-06-27",
-  "optional": { "cd": "532" },
+  "optional": { "cd": ["532"], "coCd": ["97"] },
   "words": [
     { "info": "西鹿島", "info2": "にしかじま", "word": "nisikajima" },
     {

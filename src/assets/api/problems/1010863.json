@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-07-22",
   "updatedAt": "2023-07-22",
-  "optional": { "cd": "863" },
+  "optional": { "cd": ["863"], "coCd": ["16"] },
   "words": [
     { "info": "新横浜", "info2": "しんよこはま", "word": "sinyokohama" },
     { "info": "新綱島", "info2": "しんつなしま", "word": "sintunasima" },

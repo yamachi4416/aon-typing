@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-01-21",
   "updatedAt": "2024-01-21",
-  "optional": { "cd": "468" },
+  "optional": { "cd": ["468"], "coCd": ["50"] },
   "words": [
     { "info": "竜ケ崎", "info2": "りゅうがさき", "word": "ryuugasaki" },
     { "info": "入地", "info2": "いれじ", "word": "ireji" },

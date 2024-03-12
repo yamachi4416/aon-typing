@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-01-20",
   "updatedAt": "2023-01-20",
-  "optional": { "cd": "86" },
+  "optional": { "cd": ["86"], "coCd": ["1"] },
   "words": [
     { "info": "越後川口", "info2": "えちごかわぐち", "word": "etigokawaguti" },
     { "info": "内ケ巻", "info2": "うちがまき", "word": "utigamaki" },

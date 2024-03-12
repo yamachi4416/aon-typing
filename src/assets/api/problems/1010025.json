@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-13",
   "updatedAt": "2022-10-13",
-  "optional": { "cd": "25" },
+  "optional": { "cd": ["25"], "coCd": ["1"] },
   "words": [
     { "info": "ガーラ湯沢", "info2": "がーらゆざわ", "word": "ga-rayuzawa" },
     { "info": "越後湯沢", "info2": "えちごゆざわ", "word": "etigoyuzawa" }

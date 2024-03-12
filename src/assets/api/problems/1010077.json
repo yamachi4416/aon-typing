@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-15",
   "updatedAt": "2022-09-15",
-  "optional": { "cd": "77" },
+  "optional": { "cd": ["77"], "coCd": ["1"] },
   "words": [
     { "info": "横川", "info2": "よこかわ", "word": "yokokawa" },
     { "info": "西松井田", "info2": "にしまついだ", "word": "nisimatuida" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-11-26",
   "updatedAt": "2023-11-26",
-  "optional": { "cd": "513" },
+  "optional": { "cd": ["513"], "coCd": ["81"] },
   "words": [
     { "info": "内灘", "info2": "うちなだ", "word": "utinada" },
     { "info": "粟ケ崎", "info2": "あわがさき", "word": "awagasaki" },

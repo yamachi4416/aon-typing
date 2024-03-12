@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-27",
   "updatedAt": "2023-03-27",
-  "optional": { "cd": "369" },
+  "optional": { "cd": ["369"], "coCd": ["22"] },
   "words": [
     { "info": "伊勢中川", "info2": "いせなかがわ", "word": "isenakagawa" },
     { "info": "川合高岡", "info2": "かわいたかおか", "word": "kawaitakaoka" },

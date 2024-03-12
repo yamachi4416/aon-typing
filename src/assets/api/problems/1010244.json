@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-30",
   "updatedAt": "2022-12-30",
-  "optional": { "cd": "244" },
+  "optional": { "cd": ["244"], "coCd": ["1"] },
   "words": [
     { "info": "枕崎", "info2": "まくらざき", "word": "makurazaki" },
     { "info": "薩摩板敷", "info2": "さつまいたしき", "word": "satumaitasiki" },

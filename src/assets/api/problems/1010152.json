@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-21",
   "updatedAt": "2022-08-21",
-  "optional": { "cd": "152" },
+  "optional": { "cd": ["152"], "coCd": ["1"] },
   "words": [
     { "info": "金沢", "info2": "かなざわ", "word": "kanazawa" },
     { "info": "西金沢", "info2": "にしかなざわ", "word": "nisikanazawa" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-03",
   "updatedAt": "2022-09-03",
-  "optional": { "cd": "763" },
+  "optional": { "cd": ["763"], "coCd": ["1"] },
   "words": [
     { "info": "一ノ関", "info2": "いちのせき", "word": "itinoseki" },
     { "info": "有壁", "info2": "ありかべ", "word": "arikabe" },

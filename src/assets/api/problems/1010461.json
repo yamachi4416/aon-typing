@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-09-17",
   "updatedAt": "2023-09-17",
-  "optional": { "cd": "461" },
+  "optional": { "cd": ["461"], "coCd": ["43"] },
   "words": [
     { "info": "荒砥", "info2": "あらと", "word": "arato" },
     { "info": "四季の郷", "info2": "しきのさと", "word": "sikinosato" },

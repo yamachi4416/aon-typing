@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-25",
   "updatedAt": "2023-06-25",
-  "optional": { "cd": "422" },
+  "optional": { "cd": ["422"], "coCd": ["25"] },
   "words": [
     { "info": "嵐山", "info2": "あらしやま", "word": "arasiyama" },
     { "info": "松尾大社", "info2": "まつおたいしゃ", "word": "matuotaisya" },

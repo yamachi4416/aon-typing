@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-09",
   "updatedAt": "2022-11-09",
-  "optional": { "cd": "38" },
+  "optional": { "cd": ["38"], "coCd": ["1"] },
   "words": [
     { "info": "大館", "info2": "おおだて", "word": "oodate" },
     { "info": "東大館", "info2": "ひがしおおだて", "word": "higasioodate" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-27",
   "updatedAt": "2022-08-27",
-  "optional": { "cd": "10" },
+  "optional": { "cd": ["10"], "coCd": ["1"] },
   "words": [
     { "info": "南千歳", "info2": "みなみちとせ", "word": "minamititose" },
     {

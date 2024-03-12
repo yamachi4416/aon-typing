@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-29",
   "updatedAt": "2022-10-29",
-  "optional": { "cd": "84" },
+  "optional": { "cd": ["84"], "coCd": ["1"] },
   "words": [
     { "info": "成田", "info2": "なりた", "word": "narita" },
     {

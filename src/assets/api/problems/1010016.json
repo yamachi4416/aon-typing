@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-18",
   "updatedAt": "2022-09-18",
-  "optional": { "cd": "16" },
+  "optional": { "cd": ["16"], "coCd": ["1"] },
   "words": [
     { "info": "留萌", "info2": "るもい", "word": "rumoi" },
     { "info": "大和田", "info2": "おおわだ", "word": "oowada" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-03",
   "updatedAt": "2022-07-03",
-  "optional": { "cd": "110" },
+  "optional": { "cd": ["110"], "coCd": ["1"] },
   "words": [
     { "info": "三鷹", "info2": "みたか", "word": "mitaka" },
     { "info": "吉祥寺", "info2": "きちじょうじ", "word": "kitijouji" },

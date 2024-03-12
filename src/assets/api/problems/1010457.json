@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-04-15",
   "updatedAt": "2023-04-15",
-  "optional": { "cd": "457" },
+  "optional": { "cd": ["457"], "coCd": ["39"] },
   "words": [
     { "info": "荒井", "info2": "あらい", "word": "arai" },
     { "info": "六丁の目", "info2": "ろくちょうのめ", "word": "rokutyounome" },

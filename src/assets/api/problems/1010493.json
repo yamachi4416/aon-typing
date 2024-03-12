@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-02",
   "updatedAt": "2023-03-02",
-  "optional": { "cd": "493" },
+  "optional": { "cd": ["493"], "coCd": ["72"] },
   "words": [
     { "info": "鎌倉", "info2": "かまくら", "word": "kamakura" },
     { "info": "和田塚", "info2": "わだづか", "word": "wadaduka" },

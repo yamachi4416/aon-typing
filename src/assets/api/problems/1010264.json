@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-15",
   "updatedAt": "2022-10-15",
-  "optional": { "cd": "264" },
+  "optional": { "cd": ["264"], "coCd": ["1"] },
   "words": [
     { "info": "原田", "info2": "はるだ", "word": "haruda" },
     { "info": "筑前山家", "info2": "ちくぜんやまえ", "word": "tikuzenyamae" },

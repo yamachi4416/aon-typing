@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-09",
   "updatedAt": "2022-10-09",
-  "optional": { "cd": "209" },
+  "optional": { "cd": ["209"], "coCd": ["1"] },
   "words": [
     { "info": "広島", "info2": "ひろしま", "word": "hirosima" },
     { "info": "天神川", "info2": "てんじんがわ", "word": "tenjingawa" },

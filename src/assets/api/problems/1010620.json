@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-11-17",
   "updatedAt": "2023-11-17",
-  "optional": { "cd": "620" },
+  "optional": { "cd": ["620"], "coCd": ["136"] },
   "words": [
     { "info": "郡中港", "info2": "ぐんちゅうこう", "word": "guntyuukou" },
     { "info": "郡中", "info2": "ぐんちゅう", "word": "guntyuu" },

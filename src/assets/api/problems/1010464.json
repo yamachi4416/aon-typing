@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-26",
   "updatedAt": "2022-07-26",
-  "optional": { "cd": "464" },
+  "optional": { "cd": ["464"], "coCd": ["46"] },
   "words": [
     {
       "info": "会津高原尾瀬口",

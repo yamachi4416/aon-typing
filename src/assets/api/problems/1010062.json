@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-13",
   "updatedAt": "2022-11-13",
-  "optional": { "cd": "62" },
+  "optional": { "cd": ["62"], "coCd": ["1"] },
   "words": [
     { "info": "盛岡", "info2": "もりおか", "word": "morioka" },
     { "info": "仙北町", "info2": "せんぼくちょう", "word": "senbokutyou" },

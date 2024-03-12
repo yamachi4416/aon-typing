@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-11-17",
   "updatedAt": "2023-11-17",
-  "optional": { "cd": "619" },
+  "optional": { "cd": ["619"], "coCd": ["136"] },
   "words": [
     { "info": "横河原", "info2": "よこがわら", "word": "yokogawara" },
     {

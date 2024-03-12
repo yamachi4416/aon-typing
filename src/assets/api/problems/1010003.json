@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-08",
   "updatedAt": "2022-07-08",
-  "optional": { "cd": "3" },
+  "optional": { "cd": ["3"], "coCd": ["1"] },
   "words": [
     { "info": "森", "info2": "もり", "word": "mori" },
     { "info": "東森", "info2": "ひがしもり", "word": "higasimori" },

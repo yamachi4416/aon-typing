@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-01-30",
   "updatedAt": "2023-01-30",
-  "optional": { "cd": "169" },
+  "optional": { "cd": ["169"], "coCd": ["1"] },
   "words": [
     { "info": "京橋", "info2": "きょうばし", "word": "kyoubasi" },
     { "info": "鴫野", "info2": "しぎの", "word": "sigino" },

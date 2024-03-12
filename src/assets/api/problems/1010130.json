@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-09",
   "updatedAt": "2023-02-09",
-  "optional": { "cd": "130" },
+  "optional": { "cd": ["130"], "coCd": ["1"] },
   "words": [
     { "info": "甲府", "info2": "こうふ", "word": "kouhu" },
     { "info": "金手", "info2": "かねんて", "word": "kanente" },

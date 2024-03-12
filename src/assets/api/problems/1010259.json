@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-16",
   "updatedAt": "2022-12-16",
-  "optional": { "cd": "259" },
+  "optional": { "cd": ["259"], "coCd": ["1"] },
   "words": [
     {
       "info": "宮崎空港",

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-04-15",
   "updatedAt": "2023-04-15",
-  "optional": { "cd": "329" },
+  "optional": { "cd": ["329"], "coCd": ["18"] },
   "words": [
     { "info": "方南町", "info2": "ほうなんちょう", "word": "hounantyou" },
     {

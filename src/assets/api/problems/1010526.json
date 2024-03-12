@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-04-22",
   "updatedAt": "2023-04-22",
-  "optional": { "cd": "526" },
+  "optional": { "cd": ["526"], "coCd": ["92"] },
   "words": [
     {
       "info": "伊豆急下田",

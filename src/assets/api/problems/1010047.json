@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-26",
   "updatedAt": "2022-11-26",
-  "optional": { "cd": "47" },
+  "optional": { "cd": ["47"], "coCd": ["1"] },
   "words": [
     { "info": "盛", "info2": "さかり", "word": "sakari" },
     { "info": "大船渡", "info2": "おおふなと", "word": "oohunato" },

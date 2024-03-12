@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-22",
   "updatedAt": "2022-12-22",
-  "optional": { "cd": "257" },
+  "optional": { "cd": ["257"], "coCd": ["1"] },
   "words": [
     { "info": "日田", "info2": "ひた", "word": "hita" },
     { "info": "光岡", "info2": "てるおか", "word": "teruoka" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-11-26",
   "updatedAt": "2023-11-26",
-  "optional": { "cd": "516" },
+  "optional": { "cd": ["516"], "coCd": ["83"] },
   "words": [
     { "info": "福井駅", "info2": "ふくいえき", "word": "hukuieki" },
     {

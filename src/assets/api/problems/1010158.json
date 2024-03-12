@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-17",
   "updatedAt": "2022-11-17",
-  "optional": { "cd": "158" },
+  "optional": { "cd": ["158"], "coCd": ["1"] },
   "words": [
     { "info": "敦賀", "info2": "つるが", "word": "turuga" },
     { "info": "西敦賀", "info2": "にしつるが", "word": "nisituruga" },

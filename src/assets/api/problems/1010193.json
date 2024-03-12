@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-18",
   "updatedAt": "2023-02-18",
-  "optional": { "cd": "193" },
+  "optional": { "cd": ["193"], "coCd": ["1"] },
   "words": [
     { "info": "和田山", "info2": "わだやま", "word": "wadayama" },
     { "info": "竹田", "info2": "たけだ", "word": "takeda" },

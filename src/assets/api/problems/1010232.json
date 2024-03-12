@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-01-10",
   "updatedAt": "2023-01-10",
-  "optional": { "cd": "232" },
+  "optional": { "cd": ["232"], "coCd": ["1"] },
   "words": [
     { "info": "徳島", "info2": "とくしま", "word": "tokusima" },
     { "info": "佐古", "info2": "さこ", "word": "sako" },

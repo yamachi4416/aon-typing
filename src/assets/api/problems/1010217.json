@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-27",
   "updatedAt": "2022-12-27",
-  "optional": { "cd": "217" },
+  "optional": { "cd": ["217"], "coCd": ["1"] },
   "words": [
     { "info": "長門市", "info2": "ながとし", "word": "nagatosi" },
     { "info": "板持", "info2": "いたもち", "word": "itamoti" },

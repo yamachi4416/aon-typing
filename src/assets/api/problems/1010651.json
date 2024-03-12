@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-11-12",
   "updatedAt": "2023-11-12",
-  "optional": { "cd": "651" },
+  "optional": { "cd": ["651"], "coCd": ["147"] },
   "words": [
     { "info": "御代志", "info2": "みよし", "word": "miyosi" },
     {

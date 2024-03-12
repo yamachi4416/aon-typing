@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-01",
   "updatedAt": "2023-03-01",
-  "optional": { "cd": "776" },
+  "optional": { "cd": ["776"], "coCd": ["1"] },
   "words": [
     { "info": "上鹿折", "info2": "かみししおり", "word": "kamisisiori" },
     {

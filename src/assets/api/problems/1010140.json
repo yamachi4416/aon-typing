@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-23",
   "updatedAt": "2022-11-23",
-  "optional": { "cd": "140" },
+  "optional": { "cd": ["140"], "coCd": ["1"] },
   "words": [
     { "info": "亀山", "info2": "かめやま", "word": "kameyama" },
     { "info": "井田川", "info2": "いだがわ", "word": "idagawa" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-14",
   "updatedAt": "2022-07-14",
-  "optional": { "cd": "162" },
+  "optional": { "cd": ["162"], "coCd": ["1"] },
   "words": [
     {
       "info": "ＪＲ難波",

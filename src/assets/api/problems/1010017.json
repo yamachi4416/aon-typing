@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-29",
   "updatedAt": "2022-09-29",
-  "optional": { "cd": "17" },
+  "optional": { "cd": ["17"], "coCd": ["1"] },
   "words": [
     { "info": "富良野", "info2": "ふらの", "word": "hurano" },
     { "info": "学田", "info2": "がくでん", "word": "gakudenn" },

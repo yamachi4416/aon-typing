@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-01-23",
   "updatedAt": "2023-01-23",
-  "optional": { "cd": "122" },
+  "optional": { "cd": ["122"], "coCd": ["1"] },
   "words": [
     { "info": "浜川崎", "info2": "はまかわさき", "word": "hamakawasaki" },
     { "info": "小田栄", "info2": "おださかえ", "word": "odasakae" },

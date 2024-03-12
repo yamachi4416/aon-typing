@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-07-22",
   "updatedAt": "2023-07-22",
-  "optional": { "cd": "794" },
+  "optional": { "cd": ["794"], "coCd": ["111"] },
   "words": [
     { "info": "宮津", "info2": "みやづ", "word": "miyadu" },
     { "info": "栗田", "info2": "くんだ", "word": "kunda" },

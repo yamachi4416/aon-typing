@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-02-10",
   "updatedAt": "2024-02-10",
-  "optional": { "cd": "629" },
+  "optional": { "cd": ["629"], "coCd": ["137"] },
   "words": [
     {
       "info": "桟橋通五丁目",

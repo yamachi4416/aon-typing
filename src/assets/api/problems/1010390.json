@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-10-26",
   "updatedAt": "2023-10-26",
-  "optional": { "cd": "390" },
+  "optional": { "cd": ["390"], "coCd": ["22"] },
   "words": [
     { "info": "吉野", "info2": "よしの", "word": "yosino" },
     { "info": "吉野神宮", "info2": "よしのじんぐう", "word": "yosinojinguu" },

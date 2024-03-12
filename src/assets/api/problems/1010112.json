@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-06",
   "updatedAt": "2022-07-06",
-  "optional": { "cd": "112" },
+  "optional": { "cd": ["112"], "coCd": ["1"] },
   "words": [
     {
       "info": "武蔵五日市",

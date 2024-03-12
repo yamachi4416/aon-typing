@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-04-02",
   "updatedAt": "2023-04-02",
-  "optional": { "cd": "472" },
+  "optional": { "cd": ["472"], "coCd": ["54"] },
   "words": [
     { "info": "間藤", "info2": "まとう", "word": "matou" },
     { "info": "足尾", "info2": "あしお", "word": "asio" },

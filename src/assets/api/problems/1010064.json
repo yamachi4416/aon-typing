@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-07",
   "updatedAt": "2022-12-07",
-  "optional": { "cd": "64" },
+  "optional": { "cd": ["64"], "coCd": ["1"] },
   "words": [
     { "info": "坂町", "info2": "さかまち", "word": "sakamati" },
     { "info": "越後大島", "info2": "えちごおおしま", "word": "etigooosima" },

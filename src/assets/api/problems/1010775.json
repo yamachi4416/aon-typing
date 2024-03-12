@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-01",
   "updatedAt": "2023-03-01",
-  "optional": { "cd": "775" },
+  "optional": { "cd": ["775"], "coCd": ["1"] },
   "words": [
     { "info": "盛", "info2": "さかり", "word": "sakari" },
     { "info": "田茂山", "info2": "たもやま", "word": "tamoyama" },

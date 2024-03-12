@@ -9,7 +9,7 @@
   ],
   "createdAt": "2021-08-21",
   "updatedAt": "2021-08-21",
-  "optional": { "cd": "109" },
+  "optional": { "cd": ["109"], "coCd": ["1"] },
   "words": [
     { "info": "高尾", "info2": "たかお", "word": "takao" },
     { "info": "西八王子", "info2": "にしはちおうじ", "word": "nisihatiouji" },

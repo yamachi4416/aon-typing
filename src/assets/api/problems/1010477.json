@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-12-21",
   "updatedAt": "2023-12-21",
-  "optional": { "cd": "477" },
+  "optional": { "cd": ["477"], "coCd": ["59"] },
   "words": [
     { "info": "流山", "info2": "ながれやま", "word": "nagareyama" },
     { "info": "平和台", "info2": "へいわだい", "word": "heiwadai" },

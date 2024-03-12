@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-09-24",
   "updatedAt": "2023-09-24",
-  "optional": { "cd": "582" },
+  "optional": { "cd": ["582"], "coCd": ["119"] },
   "words": [
     { "info": "有馬温泉", "info2": "ありまおんせん", "word": "arimaonsenn" },
     { "info": "有馬口", "info2": "ありまぐち", "word": "arimaguti" },

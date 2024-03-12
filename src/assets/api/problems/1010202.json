@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-21",
   "updatedAt": "2023-02-21",
-  "optional": { "cd": "202" },
+  "optional": { "cd": ["202"], "coCd": ["1"] },
   "words": [
     { "info": "宇野", "info2": "うの", "word": "uno" },
     { "info": "備前田井", "info2": "びぜんたい", "word": "bizentai" },

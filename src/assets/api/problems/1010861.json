@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-11",
   "updatedAt": "2022-12-11",
-  "optional": { "cd": "861" },
+  "optional": { "cd": ["861"], "coCd": ["1"] },
   "words": [
     { "info": "長崎", "info2": "ながさき", "word": "nagasaki" },
     { "info": "諫早", "info2": "いさはや", "word": "isahaya" },

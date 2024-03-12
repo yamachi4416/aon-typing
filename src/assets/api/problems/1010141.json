@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-11",
   "updatedAt": "2022-09-11",
-  "optional": { "cd": "141" },
+  "optional": { "cd": ["141"], "coCd": ["1"] },
   "words": [
     { "info": "新宮", "info2": "しんぐう", "word": "singuu" },
     { "info": "鵜殿", "info2": "うどの", "word": "udono" },

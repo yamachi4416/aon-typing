@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-05-16",
   "updatedAt": "2023-05-16",
-  "optional": { "cd": "478" },
+  "optional": { "cd": ["478"], "coCd": ["60"] },
   "words": [
     {
       "info": "京成津田沼",

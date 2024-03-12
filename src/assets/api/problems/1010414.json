@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-25",
   "updatedAt": "2023-06-25",
-  "optional": { "cd": "414" },
+  "optional": { "cd": ["414"], "coCd": ["25"] },
   "words": [
     { "info": "伊丹", "info2": "いたみ", "word": "itami" },
     { "info": "新伊丹", "info2": "しんいたみ", "word": "sinnitami" },

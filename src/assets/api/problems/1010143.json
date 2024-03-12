@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-14",
   "updatedAt": "2023-02-14",
-  "optional": { "cd": "143" },
+  "optional": { "cd": ["143"], "coCd": ["1"] },
   "words": [
     { "info": "大府", "info2": "おおぶ", "word": "oobu" },
     { "info": "尾張森岡", "info2": "おわりもりおか", "word": "owarimorioka" },

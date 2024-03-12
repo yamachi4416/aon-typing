@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-15",
   "updatedAt": "2022-10-15",
-  "optional": { "cd": "263" },
+  "optional": { "cd": ["263"], "coCd": ["1"] },
   "words": [
     { "info": "折尾", "info2": "おりお", "word": "orio" },
     { "info": "本城", "info2": "ほんじょう", "word": "honjou" },

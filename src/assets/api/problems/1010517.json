@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-27",
   "updatedAt": "2022-08-27",
-  "optional": { "cd": "517" },
+  "optional": { "cd": ["517"], "coCd": ["84"] },
   "words": [
     { "info": "河口湖", "info2": "かわぐちこ", "word": "kawagutiko" },
     {

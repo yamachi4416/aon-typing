@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-12",
   "updatedAt": "2022-11-12",
-  "optional": { "cd": "229" },
+  "optional": { "cd": ["229"], "coCd": ["1"] },
   "words": [
     { "info": "鳴門", "info2": "なると", "word": "naruto" },
     { "info": "撫養", "info2": "むや", "word": "muya" },

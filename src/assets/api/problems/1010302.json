@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-19",
   "updatedAt": "2023-03-19",
-  "optional": { "cd": "302" },
+  "optional": { "cd": ["302"], "coCd": ["14"] },
   "words": [
     {
       "info": "京王八王子",

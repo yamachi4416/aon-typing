@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-24",
   "updatedAt": "2022-12-24",
-  "optional": { "cd": "205" },
+  "optional": { "cd": ["205"], "coCd": ["1"] },
   "words": [
     { "info": "広島", "info2": "ひろしま", "word": "hirosima" },
     { "info": "矢賀", "info2": "やが", "word": "yaga" },

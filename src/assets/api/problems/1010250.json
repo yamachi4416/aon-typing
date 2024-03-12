@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-16",
   "updatedAt": "2022-12-16",
-  "optional": { "cd": "250" },
+  "optional": { "cd": ["250"], "coCd": ["1"] },
   "words": [
     { "info": "佐世保", "info2": "させぼ", "word": "sasebo" },
     { "info": "日宇", "info2": "ひう", "word": "hiu" },

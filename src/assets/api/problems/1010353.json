@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-05-23",
   "updatedAt": "2023-05-23",
-  "optional": { "cd": "353" },
+  "optional": { "cd": ["353"], "coCd": ["21"] },
   "words": [
     { "info": "新鵜沼", "info2": "しんうぬま", "word": "sinnunuma" },
     {

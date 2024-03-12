@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-08",
   "updatedAt": "2022-07-08",
-  "optional": { "cd": "309" },
+  "optional": { "cd": ["309"], "coCd": ["15"] },
   "words": [
     { "info": "小田原", "info2": "おだわら", "word": "odawara" },
     { "info": "足柄", "info2": "あしがら", "word": "asigara" },

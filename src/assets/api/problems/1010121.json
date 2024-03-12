@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-07",
   "updatedAt": "2022-07-07",
-  "optional": { "cd": "121" },
+  "optional": { "cd": ["121"], "coCd": ["1"] },
   "words": [
     { "info": "立川", "info2": "たちかわ", "word": "tatikawa" },
     { "info": "西国立", "info2": "にしくにたち", "word": "nisikunitati" },

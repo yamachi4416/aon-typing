@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-02-06",
   "updatedAt": "2022-02-06",
-  "optional": { "cd": "26" },
+  "optional": { "cd": ["26"], "coCd": ["1"] },
   "words": [
     { "info": "金沢", "info2": "かなざわ", "word": "kanazawa" },
     { "info": "新高岡", "info2": "しんたかおか", "word": "sintakaoka" },

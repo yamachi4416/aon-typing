@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-17",
   "updatedAt": "2023-02-17",
-  "optional": { "cd": "185" },
+  "optional": { "cd": ["185"], "coCd": ["1"] },
   "words": [
     { "info": "和田岬", "info2": "わだみさき", "word": "wadamisaki" },
     { "info": "兵庫", "info2": "ひょうご", "word": "hyougo" }

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-07-01",
   "updatedAt": "2023-07-01",
-  "optional": { "cd": "411" },
+  "optional": { "cd": ["411"], "coCd": ["24"] },
   "words": [
     {
       "info": "坂本比叡山口",

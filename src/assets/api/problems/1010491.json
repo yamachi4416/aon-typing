@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-09-07",
   "updatedAt": "2023-09-07",
-  "optional": { "cd": "491" },
+  "optional": { "cd": ["491"], "coCd": ["70"] },
   "words": [
     {
       "info": "金沢八景",

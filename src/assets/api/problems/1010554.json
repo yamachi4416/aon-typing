@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-10-08",
   "updatedAt": "2023-10-08",
-  "optional": { "cd": "554" },
+  "optional": { "cd": ["554"], "coCd": ["108"] },
   "words": [
     { "info": "嵐山", "info2": "あらしやま", "word": "arasiyama" },
     { "info": "嵐電嵯峨", "info2": "らんでんさが", "word": "randensaga" },

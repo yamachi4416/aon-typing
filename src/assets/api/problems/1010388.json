@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-05-10",
   "updatedAt": "2023-05-10",
-  "optional": { "cd": "388" },
+  "optional": { "cd": ["388"], "coCd": ["22"] },
   "words": [
     { "info": "河内長野", "info2": "かわちながの", "word": "kawatinagano" },
     { "info": "汐ノ宮", "info2": "しおのみや", "word": "sionomiya" },

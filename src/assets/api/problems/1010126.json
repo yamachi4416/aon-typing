@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-08",
   "updatedAt": "2023-02-08",
-  "optional": { "cd": "126" },
+  "optional": { "cd": ["126"], "coCd": ["1"] },
   "words": [
     { "info": "小諸", "info2": "こもろ", "word": "komoro" },
     { "info": "東小諸", "info2": "ひがしこもろ", "word": "higasikomoro" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-07-09",
   "updatedAt": "2023-07-09",
-  "optional": { "cd": "297" },
+  "optional": { "cd": ["297"], "coCd": ["13"] },
   "words": [
     { "info": "青砥", "info2": "あおと", "word": "aoto" },
     {

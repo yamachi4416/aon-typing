@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-26",
   "updatedAt": "2022-11-26",
-  "optional": { "cd": "49" },
+  "optional": { "cd": ["49"], "coCd": ["1"] },
   "words": [
     { "info": "気仙沼", "info2": "けせんぬま", "word": "kesennnuma" },
     { "info": "東新城", "info2": "ひがししんじょう", "word": "higasisinjou" },

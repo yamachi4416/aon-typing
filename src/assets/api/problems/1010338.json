@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-04-12",
   "updatedAt": "2023-04-12",
-  "optional": { "cd": "338" },
+  "optional": { "cd": ["338"], "coCd": ["19"] },
   "words": [
     { "info": "押上", "info2": "おしあげ", "word": "osiage" },
     {

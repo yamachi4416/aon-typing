@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-28",
   "updatedAt": "2022-08-28",
-  "optional": { "cd": "258" },
+  "optional": { "cd": ["258"], "coCd": ["1"] },
   "words": [
     { "info": "志布志", "info2": "しぶし", "word": "sibusi" },
     { "info": "大隅夏井", "info2": "おおすみなつい", "word": "oosuminatui" },

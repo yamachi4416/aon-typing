@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-03-09",
   "updatedAt": "2023-03-09",
-  "optional": { "cd": "667" },
+  "optional": { "cd": ["667"], "coCd": ["171"] },
   "words": [
     { "info": "豊洲", "info2": "とよす", "word": "toyosu" },
     { "info": "新豊洲", "info2": "しんとよす", "word": "sintoyosu" },

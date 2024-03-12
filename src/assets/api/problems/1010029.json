@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-10-31",
   "updatedAt": "2022-10-31",
-  "optional": { "cd": "29" },
+  "optional": { "cd": ["29"], "coCd": ["1"] },
   "words": [
     { "info": "弘前", "info2": "ひろさき", "word": "hirosaki" },
     { "info": "撫牛子", "info2": "ないじょうし", "word": "naijousi" },

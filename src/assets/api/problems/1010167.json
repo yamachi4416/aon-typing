@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-21",
   "updatedAt": "2022-12-21",
-  "optional": { "cd": "167" },
+  "optional": { "cd": ["167"], "coCd": ["1"] },
   "words": [
     { "info": "久宝寺", "info2": "きゅうほうじ", "word": "kyuuhouji" },
     { "info": "新加美", "info2": "しんかみ", "word": "sinkami" },

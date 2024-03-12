@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-19",
   "updatedAt": "2022-07-19",
-  "optional": { "cd": "180" },
+  "optional": { "cd": ["180"], "coCd": ["1"] },
   "words": [
     { "info": "姫路", "info2": "ひめじ", "word": "himeji" },
     { "info": "東姫路", "info2": "ひがしひめじ", "word": "higasihimeji" },

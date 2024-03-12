@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-07-02",
   "updatedAt": "2022-07-02",
-  "optional": { "cd": "161" },
+  "optional": { "cd": ["161"], "coCd": ["1"] },
   "words": [
     { "info": "草津", "info2": "くさつ", "word": "kusatu" },
     { "info": "手原", "info2": "てはら", "word": "tehara" },

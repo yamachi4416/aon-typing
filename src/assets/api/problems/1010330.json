@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-06-10",
   "updatedAt": "2023-06-10",
-  "optional": { "cd": "330" },
+  "optional": { "cd": ["330"], "coCd": ["18"] },
   "words": [
     { "info": "中目黒", "info2": "なかめぐろ", "word": "nakameguro" },
     { "info": "恵比寿", "info2": "えびす", "word": "ebisu" },

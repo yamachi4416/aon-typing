@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-22",
   "updatedAt": "2023-02-22",
-  "optional": { "cd": "207" },
+  "optional": { "cd": ["207"], "coCd": ["1"] },
   "words": [
     { "info": "三次", "info2": "みよし", "word": "miyosi" },
     { "info": "八次", "info2": "やつぎ", "word": "yatugi" },

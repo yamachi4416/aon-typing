@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-08-20",
   "updatedAt": "2022-08-20",
-  "optional": { "cd": "556" },
+  "optional": { "cd": ["556"], "coCd": ["109"] },
   "words": [
     { "info": "竹田", "info2": "たけだ", "word": "takeda" },
     { "info": "くいな橋", "info2": "くいなばし", "word": "kuinabasi" },

@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-01-28",
   "updatedAt": "2023-01-28",
-  "optional": { "cd": "220" },
+  "optional": { "cd": ["220"], "coCd": ["1"] },
   "words": [
     { "info": "松山", "info2": "まつやま", "word": "matuyama" },
     { "info": "三津浜", "info2": "みつはま", "word": "mituhama" },

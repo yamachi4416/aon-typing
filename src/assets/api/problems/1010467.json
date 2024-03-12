@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-01-21",
   "updatedAt": "2024-01-21",
-  "optional": { "cd": "467" },
+  "optional": { "cd": ["467"], "coCd": ["50"] },
   "words": [
     { "info": "下館", "info2": "しもだて", "word": "simodate" },
     { "info": "大田郷", "info2": "おおたごう", "word": "ootagou" },

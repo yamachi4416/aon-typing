@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-05-04",
   "updatedAt": "2023-05-04",
-  "optional": { "cd": "487" },
+  "optional": { "cd": ["487"], "coCd": ["66"] },
   "words": [
     { "info": "外川", "info2": "とかわ", "word": "tokawa" },
     { "info": "犬吠", "info2": "いぬぼう", "word": "inubou" },

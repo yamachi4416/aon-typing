@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-16",
   "updatedAt": "2022-11-16",
-  "optional": { "cd": "74" },
+  "optional": { "cd": ["74"], "coCd": ["1"] },
   "words": [
     { "info": "新潟", "info2": "にいがた", "word": "niigata" },
     { "info": "白山", "info2": "はくさん", "word": "hakusann" },

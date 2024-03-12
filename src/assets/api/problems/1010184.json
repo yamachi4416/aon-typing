@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-16",
   "updatedAt": "2023-02-16",
-  "optional": { "cd": "184" },
+  "optional": { "cd": ["184"], "coCd": ["1"] },
   "words": [
     { "info": "岡山", "info2": "おかやま", "word": "okayama" },
     { "info": "西川原", "info2": "にしがわら", "word": "nisigawara" },

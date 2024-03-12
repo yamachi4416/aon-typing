@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-12-04",
   "updatedAt": "2022-12-04",
-  "optional": { "cd": "55" },
+  "optional": { "cd": ["55"], "coCd": ["1"] },
   "words": [
     { "info": "石巻", "info2": "いしのまき", "word": "isinomaki" },
     {

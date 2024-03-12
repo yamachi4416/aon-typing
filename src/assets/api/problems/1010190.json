@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-24",
   "updatedAt": "2022-09-24",
-  "optional": { "cd": "190" },
+  "optional": { "cd": ["190"], "coCd": ["1"] },
   "words": [
     { "info": "益田", "info2": "ますだ", "word": "masuda" },
     { "info": "石見津田", "info2": "いわみつだ", "word": "iwamituda" },

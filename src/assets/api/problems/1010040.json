@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-09",
   "updatedAt": "2022-11-09",
-  "optional": { "cd": "40" },
+  "optional": { "cd": ["40"], "coCd": ["1"] },
   "words": [
     { "info": "秋田", "info2": "あきた", "word": "akita" },
     { "info": "羽後牛島", "info2": "うごうしじま", "word": "ugousijima" },

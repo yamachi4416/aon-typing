@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-09",
   "updatedAt": "2022-11-09",
-  "optional": { "cd": "41" },
+  "optional": { "cd": ["41"], "coCd": ["1"] },
   "words": [
     { "info": "大曲", "info2": "おおまがり", "word": "oomagari" },
     { "info": "北大曲", "info2": "きたおおまがり", "word": "kitaoomagari" },

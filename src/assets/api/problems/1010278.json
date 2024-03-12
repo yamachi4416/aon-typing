@@ -9,7 +9,7 @@
   ],
   "createdAt": "2024-03-10",
   "updatedAt": "2024-03-10",
-  "optional": { "cd": "278" },
+  "optional": { "cd": ["278"], "coCd": ["11"] },
   "words": [
     { "info": "船橋", "info2": "ふなばし", "word": "hunabasi" },
     { "info": "新船橋", "info2": "しんふなばし", "word": "sinhunabasi" },

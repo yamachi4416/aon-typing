@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-09-06",
   "updatedAt": "2022-09-06",
-  "optional": { "cd": "182" },
+  "optional": { "cd": ["182"], "coCd": ["1"] },
   "words": [
     { "info": "篠山口", "info2": "ささやまぐち", "word": "sasayamaguti" },
     { "info": "南矢代", "info2": "みなみやしろ", "word": "minamiyasiro" },

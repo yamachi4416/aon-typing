@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-08-19",
   "updatedAt": "2023-08-19",
-  "optional": { "cd": "349" },
+  "optional": { "cd": ["349"], "coCd": ["21"] },
   "words": [
     {
       "info": "名鉄一宮",

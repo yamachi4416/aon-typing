@@ -9,7 +9,7 @@
   ],
   "createdAt": "2021-06-13",
   "updatedAt": "2021-06-13",
-  "optional": { "cd": ["134", "146"] },
+  "optional": { "cd": ["134", "146"], "coCd": ["1"] },
   "words": [
     { "info": "博多", "info2": "はかた", "word": "hakata" },
     { "info": "小倉", "info2": "こくら", "word": "kokura" },

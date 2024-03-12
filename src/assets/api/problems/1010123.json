@@ -9,7 +9,7 @@
   ],
   "createdAt": "2022-11-04",
   "updatedAt": "2022-11-04",
-  "optional": { "cd": "123" },
+  "optional": { "cd": ["123"], "coCd": ["1"] },
   "words": [
     { "info": "八王子", "info2": "はちおうじ", "word": "hatiouji" },
     { "info": "片倉", "info2": "かたくら", "word": "katakura" },

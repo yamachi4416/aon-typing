@@ -9,7 +9,7 @@
   ],
   "createdAt": "2023-02-17",
   "updatedAt": "2023-02-17",
-  "optional": { "cd": "187" },
+  "optional": { "cd": ["187"], "coCd": ["1"] },
   "words": [
     { "info": "谷川", "info2": "たにかわ", "word": "tanikawa" },
     { "info": "久下村", "info2": "くげむら", "word": "kugemura" },
