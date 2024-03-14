@@ -7,28 +7,42 @@ import {
 } from '~~/test/e2e/util'
 
 describe('トップページのコンテンツの画面遷移の確認', () => {
-  it("'ローマ字タイピング入力表'リンクをクリックすると'ローマ字タイピング入力表'ページに遷移する", async () => {
-    const page = await createPage('/')
-
-    const container = page.getByRole('main').getByRole('region', {
-      name: 'その他',
-      exact: true,
-    })
-    const link = container.getByRole('link', {
+  it.each([
+    {
       name: 'ローマ字タイピング入力表',
-      exact: true,
-    })
+      path: '/contents/keymap',
+      title: 'ローマ字タイピング入力表',
+    },
+    {
+      name: '鉄道の会社いちらん',
+      path: '/railway/corporations',
+      title: '鉄道の会社いちらん',
+    },
+  ])(
+    "'$name'リンクをクリックすると'$title'ページに遷移する",
+    async ({ name, path, title }) => {
+      const page = await createPage('/')
 
-    expect(await link.isVisible()).toBeTruthy()
-    await link.click()
+      const container = page.getByRole('main').getByRole('region', {
+        name: 'その他',
+        exact: true,
+      })
+      const link = container.getByRole('link', {
+        name,
+        exact: true,
+      })
 
-    await waitForRouterPath(page, '/contents/keymap')
+      expect(await link.isVisible()).toBeTruthy()
+      await link.click()
 
-    await expectPageTitle(page, 'ローマ字タイピング入力表')
-    await expectLoadingHidden(page)
+      await waitForRouterPath(page, path)
 
-    await page.goBack()
-    await waitForRouterPath(page, '/')
-    await expectLoadingHidden(page)
-  })
+      await expectPageTitle(page, title)
+      await expectLoadingHidden(page)
+
+      await page.goBack()
+      await waitForRouterPath(page, '/')
+      await expectLoadingHidden(page)
+    },
+  )
 })

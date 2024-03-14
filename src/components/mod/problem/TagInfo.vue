@@ -1,10 +1,10 @@
 <template>
-  <PartsSection :class="$style.info">
+  <PartsSection :class="$style['page-header']">
     <header>
       <span>No.{{ tag.id }}</span>
       <h2>タグ：{{ tag.name }}</h2>
     </header>
-    <div>
+    <div :class="$style.tags">
       <label v-for="t in tags" :key="`tag-${t.id}`" :title="t.title">
         {{ t.name }}
         <input
@@ -82,36 +82,25 @@ onMounted(() => {
 <style lang="scss" module>
 @use '~/assets/css/cmps';
 
-.info {
-  & > header {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
+.page-header {
+  @include cmps.pageHeader;
+}
 
-  & > div {
-    @include cmps.buttons;
+.tags {
+  @include cmps.buttons;
 
-    justify-content: flex-start;
-    padding: 10px 0;
+  justify-content: flex-start;
+  padding: 10px 0;
 
-    label {
-      padding: 0 1em;
-      color: var(--color-6);
-      border: none;
+  & > :where(label) {
+    padding: 0 1em;
+    color: var(--color-6);
+    border: none;
 
-      &:has(input:checked) {
-        color: var(--color-f);
-        background: var(--color-p);
-      }
+    &:has(input:checked) {
+      color: var(--color-f);
+      background: var(--color-p);
     }
-  }
-
-  & > footer {
-    @include cmps.buttons;
-
-    justify-content: flex-start;
-    padding-top: 5px;
   }
 }
 </style>

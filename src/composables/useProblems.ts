@@ -1,13 +1,5 @@
 import type { ProblemListItem } from '~~/types/problems'
 
-function createNotFoundError() {
-  return createError({
-    statusCode: 404,
-    message: 'Page Not Found',
-    fatal: true,
-  })
-}
-
 export function useProblems() {
   const { value: problems, fetch: fetchProblems } = useFetchCache({
     path: '/api/problems.json',

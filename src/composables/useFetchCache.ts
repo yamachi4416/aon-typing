@@ -36,11 +36,7 @@ export function useFetchCache<
     }
 
     if (cache.data.value == null) {
-      throw createError({
-        statusCode: 404,
-        statusMessage: 'Page Not Found',
-        fatal: true,
-      })
+      throw createNotFoundError()
     } else {
       return ref(cache.data.value)
     }

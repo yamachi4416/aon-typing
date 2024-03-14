@@ -1,6 +1,9 @@
 <template>
-  <div :class="$style.detail">
-    <PartsSection :aria-labelledby="`title-${uid}`">
+  <div>
+    <PartsSection
+      :aria-labelledby="`title-${uid}`"
+      :class="$style['page-header']"
+    >
       <header>
         <span>No.{{ detail.id }}</span>
         <h2 :id="`title-${uid}`">{{ detail.title }}</h2>
@@ -21,11 +24,11 @@
           <tr v-if="detail.links && detail.links.length">
             <th>引用元</th>
             <td>
-              <ul>
+              <ul :class="$style['detail-links']">
                 <li v-for="(link, i) in detail.links" :key="`detail-link-${i}`">
-                  <a :href="link.link" target="_blank"
-                    >{{ link.site }}：{{ link.name }}</a
-                  >
+                  <a :href="link.link" target="_blank">
+                    {{ link.site }}：{{ link.name }}
+                  </a>
                 </li>
               </ul>
             </td>
@@ -41,7 +44,11 @@
         <slot name="right" />
       </template>
     </PartsSection>
-    <ol class="row" :aria-label="`「${detail.title}」の問題いちらん`">
+    <ol
+      class="row"
+      :aria-label="`「${detail.title}」の問題いちらん`"
+      :class="$style.words"
+    >
       <li
         v-for="(w, i) in detail.words"
         :key="i"
@@ -49,7 +56,7 @@
       >
         <div>
           <div>No.{{ i + 1 }}</div>
-          <div :id="`title-${uid}-${i}`">{{ w.info || w.info2 }}</div>
+          <div>{{ w.info || w.info2 }}</div>
           <div>{{ w.word }}</div>
         </div>
       </li>
@@ -75,39 +82,16 @@ const hasOnTag = computed(() => !!getCurrentInstance()?.vnode?.props?.onTag)
 <style lang="scss" module>
 @use '~/assets/css/cmps';
 
-.detail {
-  header {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
+.page-header {
+  @include cmps.pageHeader;
+}
 
-  ul {
-    list-style: none;
-  }
+.detail-links {
+  list-style: none;
+}
 
-  footer {
-    @include cmps.buttons;
-
-    justify-content: flex-start;
-    padding-top: 5px;
-  }
-
-  ol {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-
-    & > li {
-      @include cmps.card;
-
-      & > div {
-        @include cmps.paper;
-
-        word-break: break-all;
-      }
-    }
-  }
+.words {
+  @include cmps.listCard;
 }
 
 .tags {

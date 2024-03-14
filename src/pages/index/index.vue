@@ -76,6 +76,11 @@
       <h2 id="others-title">その他</h2>
       <ul>
         <li>
+          <NuxtLink :to="{ name: 'index-railway-corporations' }">
+            鉄道の会社いちらん
+          </NuxtLink>
+        </li>
+        <li>
           <NuxtLink :to="{ name: 'index-contents-keymap' }">
             ローマ字タイピング入力表
           </NuxtLink>

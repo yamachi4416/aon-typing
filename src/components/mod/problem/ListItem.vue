@@ -70,7 +70,7 @@ const uid = useId()
         text-align: left;
       }
 
-      h1 {
+      & > h1 {
         font-size: 1em;
         font-weight: normal;
         text-align: center;

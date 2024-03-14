@@ -1,6 +1,6 @@
 <template>
-  <div :class="$style.page">
-    <PartsSection v-if="kwds.length > 0">
+  <div>
+    <PartsSection v-if="kwds.length > 0" :class="$style['page-header']">
       <header>
         <h2>
           <span>{{ kwds.join(' ') }}</span>
@@ -72,16 +72,7 @@ await fetchProblems()
 <style lang="scss" module>
 @use '~/assets/css/cmps';
 
-.page {
-  header {
-    word-break: break-all;
-  }
-
-  footer {
-    @include cmps.buttons;
-
-    justify-content: flex-start;
-    padding-top: 5px;
-  }
+.page-header {
+  @include cmps.pageHeader;
 }
 </style>

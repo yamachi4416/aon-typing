@@ -32,6 +32,7 @@ export const routes = (() => {
     '/api/problems/news.json',
     '/api/problems/news/all.json',
     '/api/tags.json',
+    '/api/railway/corporations.json',
     ...problems.map((problem) => `/api/problems/${problem.id}.json`),
     ...tags.map((tag) => `/api/tags/${tag.id}.json`),
   ]

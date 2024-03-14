@@ -273,3 +273,39 @@
     }
   }
 }
+
+@mixin pageHeader {
+  & > :where(header) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  & > :where(:not(header, footer)) {
+    flex: 1;
+  }
+
+  & > :where(footer) {
+    @include buttons;
+
+    justify-content: flex-start;
+    padding-top: 5px;
+  }
+}
+
+@mixin listCard {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+  & > :where(li) {
+    @include card;
+
+    & > :where(*) {
+      @include paper;
+
+      text-decoration: none;
+      word-break: break-all;
+    }
+  }
+}
