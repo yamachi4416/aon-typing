@@ -12,7 +12,6 @@
   "optional": { "cd": ["15"], "coCd": ["1"] },
   "words": [
     { "info": "鵡川", "info2": "むかわ", "word": "mukawa" },
-    { "info": "浜田浦", "info2": "はまたうら", "word": "hamataura" },
     { "info": "浜厚真", "info2": "はまあつま", "word": "hamaatuma" },
     { "info": "勇払", "info2": "ゆうふつ", "word": "yuuhutu" },
     { "info": "苫小牧", "info2": "とまこまい", "word": "tomakomai" }

@@ -28,6 +28,11 @@
     { "info": "巽ケ丘", "info2": "たつみがおか", "word": "tatumigaoka" },
     { "info": "八幡新田", "info2": "やわたしんでん", "word": "yawatasindenn" },
     { "info": "南加木屋", "info2": "みなみかぎや", "word": "minamikagiya" },
+    {
+      "info": "加木屋中ノ池",
+      "info2": "かぎやなかのいけ",
+      "word": "kagiyanakanoike"
+    },
     { "info": "高横須賀", "info2": "たかよこすか", "word": "takayokosuka" },
     { "info": "太田川", "info2": "おおたがわ", "word": "ootagawa" }
   ]

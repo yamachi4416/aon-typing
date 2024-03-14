@@ -1,4 +1,4 @@
-import { httpFetch } from '../../lib/util'
+import { httpFetch, toArray } from '../../lib/util'
 
 interface PagingResult {
   ResultSet: {
@@ -170,7 +170,7 @@ export async function fetchOperationLines({
   key: string
   code?: string
 }) {
-  const lines: {
+  const allLines: {
     code: string
     name: string
     yomi: string
@@ -180,12 +180,10 @@ export async function fetchOperationLines({
   for await (const page of fetchPagingAll<OperationLineApiResult>({
     baseUrl: `https://api.ekispert.jp/v1/json/operationLine?key=${key}${code ? `&code=${code}` : ''}`,
   })) {
-    const result = page.ResultSet
-    const corporations = Array.isArray(result.Corporation)
-      ? result.Corporation
-      : [result.Corporation]
-    lines.push(
-      ...result.Line.map((line) => ({
+    const corporations = toArray(page.ResultSet.Corporation)
+    const lines = toArray(page.ResultSet.Line)
+    allLines.push(
+      ...lines.map((line) => ({
         code: line.code,
         name: line.Name,
         yomi: line.Yomi,
@@ -194,7 +192,7 @@ export async function fetchOperationLines({
     )
   }
 
-  return lines.toSorted((a, b) => Number(a.code) - Number(b.code))
+  return allLines.toSorted((a, b) => Number(a.code) - Number(b.code))
 }
 
 export async function fetchOperationLine({
@@ -208,7 +206,7 @@ export async function fetchOperationLine({
 }
 
 export async function fetchCorporations({ key }: { key: string }) {
-  const corporations: {
+  const allCorporations: {
     code: string
     name: string
   }[] = []
@@ -216,13 +214,13 @@ export async function fetchCorporations({ key }: { key: string }) {
   for await (const page of fetchPagingAll<CorporationApiResult>({
     baseUrl: `https://api.ekispert.jp/v1/json/corporation?key=${key}&type=train`,
   })) {
-    corporations.push(
-      ...page.ResultSet.Corporation.map((c) => ({
+    allCorporations.push(
+      ...toArray(page.ResultSet.Corporation).map((c) => ({
         code: c.code,
         name: c.Name,
       })),
     )
   }
 
-  return corporations
+  return allCorporations
 }

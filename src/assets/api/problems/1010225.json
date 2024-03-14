@@ -11,7 +11,6 @@
   "updatedAt": "2023-01-14",
   "optional": { "cd": ["225"], "coCd": ["1"] },
   "words": [
-    { "info": "海部", "info2": "かいふ", "word": "kaihu" },
     { "info": "阿波海南", "info2": "あわかいなん", "word": "awakainann" },
     { "info": "浅川", "info2": "あさかわ", "word": "asakawa" },
     { "info": "鯖瀬", "info2": "さばせ", "word": "sabase" },

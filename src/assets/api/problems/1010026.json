@@ -11,6 +11,12 @@
   "updatedAt": "2022-02-06",
   "optional": { "cd": ["26"], "coCd": ["1"] },
   "words": [
+    { "info": "敦賀", "info2": "つるが", "word": "turuga" },
+    { "info": "越前たけふ", "info2": "えちぜんたけふ", "word": "etizentakehu" },
+    { "info": "福井", "info2": "ふくい", "word": "hukui" },
+    { "info": "芦原温泉", "info2": "あわらおんせん", "word": "awaraonsenn" },
+    { "info": "加賀温泉", "info2": "かがおんせん", "word": "kagaonsenn" },
+    { "info": "小松", "info2": "こまつ", "word": "komatu" },
     { "info": "金沢", "info2": "かなざわ", "word": "kanazawa" },
     { "info": "新高岡", "info2": "しんたかおか", "word": "sintakaoka" },
     { "info": "富山", "info2": "とやま", "word": "toyama" },

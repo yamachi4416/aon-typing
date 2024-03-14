@@ -11,13 +11,6 @@
   "updatedAt": "2022-09-18",
   "optional": { "cd": ["16"], "coCd": ["1"] },
   "words": [
-    { "info": "留萌", "info2": "るもい", "word": "rumoi" },
-    { "info": "大和田", "info2": "おおわだ", "word": "oowada" },
-    { "info": "藤山", "info2": "ふじやま", "word": "hujiyama" },
-    { "info": "幌糠", "info2": "ほろぬか", "word": "horonuka" },
-    { "info": "峠下", "info2": "とうげした", "word": "tougesita" },
-    { "info": "恵比島", "info2": "えびしま", "word": "ebisima" },
-    { "info": "真布", "info2": "まっぷ", "word": "mappu" },
     { "info": "石狩沼田", "info2": "いしかりぬまた", "word": "isikarinumata" },
     { "info": "北秩父別", "info2": "きたちっぷべつ", "word": "kitatippubetu" },
     { "info": "秩父別", "info2": "ちっぷべつ", "word": "tippubetu" },

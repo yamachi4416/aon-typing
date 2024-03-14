@@ -11,21 +11,6 @@
   "updatedAt": "2022-12-22",
   "optional": { "cd": ["257"], "coCd": ["1"] },
   "words": [
-    { "info": "日田", "info2": "ひた", "word": "hita" },
-    { "info": "光岡", "info2": "てるおか", "word": "teruoka" },
-    { "info": "夜明", "info2": "よあけ", "word": "yoake" },
-    { "info": "今山", "info2": "いまやま", "word": "imayama" },
-    { "info": "大鶴", "info2": "おおつる", "word": "ooturu" },
-    { "info": "宝珠山", "info2": "ほうしゅやま", "word": "housyuyama" },
-    { "info": "大行司", "info2": "だいぎょうじ", "word": "daigyouji" },
-    { "info": "筑前岩屋", "info2": "ちくぜんいわや", "word": "tikuzenniwaya" },
-    { "info": "彦山", "info2": "ひこさん", "word": "hikosann" },
-    { "info": "豊前桝田", "info2": "ぶぜんますだ", "word": "buzenmasuda" },
-    {
-      "info": "歓遊舎ひこさん",
-      "info2": "かんゆうしゃひこさん",
-      "word": "kanyuusyahikosann"
-    },
     { "info": "添田", "info2": "そえだ", "word": "soeda" },
     { "info": "西添田", "info2": "にしそえだ", "word": "nisisoeda" },
     { "info": "豊前川崎", "info2": "ぶぜんかわさき", "word": "buzenkawasaki" },

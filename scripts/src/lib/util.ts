@@ -96,3 +96,9 @@ export async function isPathExists(file: string) {
     .catch(() => false)
   return exists
 }
+
+export function toArray<T>(value: T | T[] | undefined | null): T[] {
+  if (!value) return []
+  if (Array.isArray(value)) return value
+  return [value]
+}

@@ -11,26 +11,6 @@
   "updatedAt": "2022-11-20",
   "optional": { "cd": ["42"], "coCd": ["1"] },
   "words": [
-    { "info": "釜石", "info2": "かまいし", "word": "kamaisi" },
-    { "info": "両石", "info2": "りょういし", "word": "ryouisi" },
-    { "info": "鵜住居", "info2": "うのすまい", "word": "unosumai" },
-    { "info": "大槌", "info2": "おおつち", "word": "ootuti" },
-    { "info": "吉里吉里", "info2": "きりきり", "word": "kirikiri" },
-    {
-      "info": "浪板海岸",
-      "info2": "なみいたかいがん",
-      "word": "namiitakaigann"
-    },
-    { "info": "岩手船越", "info2": "いわてふなこし", "word": "iwatehunakosi" },
-    { "info": "織笠", "info2": "おりかさ", "word": "orikasa" },
-    {
-      "info": "陸中山田",
-      "info2": "りくちゅうやまだ",
-      "word": "rikutyuuyamada"
-    },
-    { "info": "豊間根", "info2": "とよまね", "word": "toyomane" },
-    { "info": "津軽石", "info2": "つがるいし", "word": "tugaruisi" },
-    { "info": "磯鶏", "info2": "そけい", "word": "sokei" },
     { "info": "宮古", "info2": "みやこ", "word": "miyako" },
     { "info": "千徳", "info2": "せんとく", "word": "sentoku" },
     { "info": "花原市", "info2": "けばらいち", "word": "kebaraiti" },
@@ -44,7 +24,6 @@
     },
     { "info": "箱石", "info2": "はこいし", "word": "hakoisi" },
     { "info": "川内", "info2": "かわうち", "word": "kawauti" },
-    { "info": "平津戸", "info2": "ひらつと", "word": "hiratuto" },
     { "info": "松草", "info2": "まつくさ", "word": "matukusa" },
     { "info": "区界", "info2": "くざかい", "word": "kuzakai" },
     { "info": "上米内", "info2": "かみよない", "word": "kamiyonai" },
