@@ -1,0 +1,75 @@
+{
+  "id": "1010865",
+  "title": "ＪＲ日田彦山線ＢＲＴの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-03-16",
+  "updatedAt": "2024-03-16",
+  "words": [
+    { "info": "日田", "info2": "ひた", "word": "hita" },
+    {
+      "info": "日田市役所前",
+      "info2": "ひたしやくしょまえ",
+      "word": "hitasiyakusyomae"
+    },
+    {
+      "info": "昭和学園前",
+      "info2": "しょうわがくえんまえ",
+      "word": "syouwagakuenmae"
+    },
+    {
+      "info": "林工西口",
+      "info2": "りんこうにしぐち",
+      "word": "rinkounisiguti"
+    },
+    { "info": "光岡", "info2": "てるおか", "word": "teruoka" },
+    { "info": "南友田", "info2": "みなみともだ", "word": "minamitomoda" },
+    { "info": "北友田", "info2": "きたともだ", "word": "kitatomoda" },
+    { "info": "夜明", "info2": "よあけ", "word": "yoake" },
+    { "info": "祝原", "info2": "いわいばる", "word": "iwaibaru" },
+    { "info": "上村", "info2": "かみむら", "word": "kamimura" },
+    { "info": "小鶴", "info2": "おづる", "word": "oduru" },
+    { "info": "釘原", "info2": "くぎわら", "word": "kugiwara" },
+    { "info": "今山", "info2": "いまやま", "word": "imayama" },
+    { "info": "伏尾", "info2": "ふしお", "word": "husio" },
+    { "info": "方司口", "info2": "ほうしぐち", "word": "housiguti" },
+    {
+      "info": "大明小中学校前",
+      "info2": "だいめいしょうちゅうがっこうまえ",
+      "word": "daimeisyoutyuugakkoumae"
+    },
+    { "info": "大鶴", "info2": "おおつる", "word": "ooturu" },
+    { "info": "名本", "info2": "なもと", "word": "namoto" },
+    { "info": "竹本", "info2": "たけもと", "word": "takemoto" },
+    { "info": "吉竹", "info2": "よしたけ", "word": "yositake" },
+    { "info": "宝珠山", "info2": "ほうしゅやま", "word": "housyuyama" },
+    { "info": "大行司", "info2": "だいぎょうじ", "word": "daigyouji" },
+    { "info": "筑前岩屋", "info2": "ちくぜんいわや", "word": "tikuzenniwaya" },
+    { "info": "深倉", "info2": "ふかくら", "word": "hukakura" },
+    { "info": "彦山", "info2": "ひこさん", "word": "hikosann" },
+    {
+      "info": "旧英彦中学校前",
+      "info2": "きゅうえひこちゅうがっこうまえ",
+      "word": "kyuuehikotyuugakkoumae"
+    },
+    { "info": "屋形原", "info2": "やかたばる", "word": "yakatabaru" },
+    { "info": "下落合", "info2": "しもおちあい", "word": "simootiai" },
+    { "info": "柳原", "info2": "やなばる", "word": "yanabaru" },
+    { "info": "豊前桝田", "info2": "ぶぜんますだ", "word": "buzenmasuda" },
+    { "info": "貴船橋", "info2": "きふねばし", "word": "kihunebasi" },
+    {
+      "info": "歓遊舎ひこさん",
+      "info2": "かんゆうしゃひこさん",
+      "word": "kanyuusyahikosann"
+    },
+    { "info": "野田", "info2": "のだ", "word": "noda" },
+    { "info": "塚原", "info2": "つかはら", "word": "tukahara" },
+    { "info": "畑川", "info2": "はたがわ", "word": "hatagawa" },
+    { "info": "添田", "info2": "そえだ", "word": "soeda" }
+  ],
+  "optional": { "cd": ["865"], "coCd": ["1"] }
+}
