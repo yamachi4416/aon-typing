@@ -1,0 +1,21 @@
+{
+  "id": "1010282",
+  "title": "西武池袋線(飯能－吾野)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-03-16",
+  "updatedAt": "2024-03-16",
+  "words": [
+    { "info": "吾野", "info2": "あがの", "word": "agano" },
+    { "info": "東吾野", "info2": "ひがしあがの", "word": "higasiagano" },
+    { "info": "武蔵横手", "info2": "むさしよこて", "word": "musasiyokote" },
+    { "info": "高麗", "info2": "こま", "word": "koma" },
+    { "info": "東飯能", "info2": "ひがしはんのう", "word": "higasihannnou" },
+    { "info": "飯能", "info2": "はんのう", "word": "hannnou" }
+  ],
+  "optional": { "cd": ["282"], "coCd": ["12"] }
+}
