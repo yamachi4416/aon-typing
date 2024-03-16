@@ -30,6 +30,7 @@
         v-for="({ id, name, yomi, to }, i) in operationLines"
         :key="i"
         class="col-s-12 col-m-6 col-4"
+        :aria-label="name"
       >
         <NuxtLink
           :to="to"
@@ -48,20 +49,21 @@
 <script setup lang="ts">
 const uid = useId()
 const route = useRoute()
-const code = computed(() => String(route.params.code))
+const code = String(route.params.code)
 const { findCorporation } = useRailways()
-const corporation = computed(() => findCorporation({ code: code.value }))
-const operationLines = computed(() =>
-  corporation.value?.operationLines.map(({ id, name, yomi }) => ({
-    id,
-    name,
-    yomi,
-    to: id ? { name: 'index-problems-id', params: { id } } : undefined,
-  })),
-)
+const corporation = findCorporation({ code })
+if (!corporation) {
+  throw createNotFoundError()
+}
+const operationLines = corporation.operationLines.map(({ id, name, yomi }) => ({
+  id,
+  name,
+  yomi,
+  to: id ? { name: 'index-problems-id', params: { id } } : undefined,
+}))
 
 useHead({
-  title: `${corporation.value?.name}の路線いちらん`,
+  title: `${corporation.name}の路線いちらん`,
 })
 </script>
 

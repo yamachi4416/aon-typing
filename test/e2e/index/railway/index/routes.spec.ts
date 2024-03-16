@@ -15,7 +15,7 @@ describe.each(
       code: corporation.code.padStart(4, '0'),
     }))
     .slice(0, 2),
-)('問題いちらんページの画面遷移の確認', (corporation) => {
+)('鉄道の会社いちらんページの画面遷移の確認', (corporation) => {
   it(`${corporation.name}をクリックすると'路線のいちらん'ページに遷移する`, async () => {
     const page = await createPage('/railway/corporations')
 
