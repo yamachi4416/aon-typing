@@ -48,9 +48,12 @@
 
 <script setup lang="ts">
 const uid = useId()
-const corporation = await useRailways().retrieveCorporation({
-  code: String(useRoute().params.code),
-})
+const { wrapLoading } = useLoading()
+const corporation = await wrapLoading(
+  useRailways().retrieveCorporation({
+    code: String(useRoute().params.code),
+  }),
+)
 const operationLines = computed(() =>
   corporation.value.operationLines.map(({ id, name, yomi }) => ({
     id,
