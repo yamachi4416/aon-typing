@@ -1,0 +1,36 @@
+{
+  "id": "1010326",
+  "title": "京急久里浜線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-03-16",
+  "updatedAt": "2024-03-16",
+  "words": [
+    { "info": "三崎口", "info2": "みさきぐち", "word": "misakiguti" },
+    { "info": "三浦海岸", "info2": "みうらかいがん", "word": "miurakaigann" },
+    { "info": "津久井浜", "info2": "つくいはま", "word": "tukuihama" },
+    {
+      "info": "京急長沢",
+      "info2": "けいきゅうながさわ",
+      "word": "keikyuunagasawa"
+    },
+    {
+      "info": "ＹＲＰ野比",
+      "info2": "わいあーるぴーのび",
+      "word": "waia-rupi-nobi"
+    },
+    {
+      "info": "京急久里浜",
+      "info2": "けいきゅうくりはま",
+      "word": "keikyuukurihama"
+    },
+    { "info": "北久里浜", "info2": "きたくりはま", "word": "kitakurihama" },
+    { "info": "新大津", "info2": "しんおおつ", "word": "sinnootu" },
+    { "info": "堀ノ内", "info2": "ほりのうち", "word": "horinouti" }
+  ],
+  "optional": { "cd": ["326"], "coCd": ["17"] }
+}
