@@ -48,22 +48,20 @@
 
 <script setup lang="ts">
 const uid = useId()
-const route = useRoute()
-const code = String(route.params.code)
-const { findCorporation } = useRailways()
-const corporation = findCorporation({ code })
-if (!corporation) {
-  throw createNotFoundError()
-}
-const operationLines = corporation.operationLines.map(({ id, name, yomi }) => ({
-  id,
-  name,
-  yomi,
-  to: id ? { name: 'index-problems-id', params: { id } } : undefined,
-}))
+const corporation = await useRailways().retrieveCorporation({
+  code: String(useRoute().params.code),
+})
+const operationLines = computed(() =>
+  corporation.value.operationLines.map(({ id, name, yomi }) => ({
+    id,
+    name,
+    yomi,
+    to: id ? { name: 'index-problems-id', params: { id } } : undefined,
+  })),
+)
 
 useHead({
-  title: `${corporation.name}の路線いちらん`,
+  title: `${corporation.value.name}の路線いちらん`,
 })
 </script>
 

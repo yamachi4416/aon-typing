@@ -1,31 +1,25 @@
 export function useRailways() {
-  const { value: corporationStore, fetch: fetchCorporations } = useFetchCache({
+  const { value: corporations, fetch: fetchCorporations } = useFetchCache({
     path: '/api/railway/corporations.json',
-    transform: (data) =>
-      data.value?.map(({ code, name, operationLines }) => ({
-        code: code.padStart(4, '0'),
-        name,
-        operationLines,
-      })),
+    transform: (data) => data.value,
   })
 
-  const corporations = computed(
-    () =>
-      corporationStore.value
-        ?.filter((c) => c.operationLines.length > 0)
-        .map(({ code, name }) => ({
-          code,
-          name,
-        })) ?? [],
-  )
-
-  function findCorporation({ code }: { code: string }) {
-    return corporationStore.value?.find((co) => co.code === code)
+  async function retrieveCorporation({ code }: { code: string }) {
+    const { fetch } = useFetchCache({
+      path: '/api/railway/corporations/:code',
+      key: `/api/railway/corporations/${code}.json`,
+      transform: (data) => data,
+    })
+    const corporation = await fetch()
+    if (!corporation.value.code) {
+      throw createNotFoundError()
+    }
+    return corporation
   }
 
   return {
     corporations,
     fetchCorporations,
-    findCorporation,
+    retrieveCorporation,
   }
 }

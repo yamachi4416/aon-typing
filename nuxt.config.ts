@@ -14,6 +14,12 @@ export const routes = (() => {
     JSON.parse(String(readFileSync('./src/assets/api/tags.json'))),
   )
 
+  const railwayCorpCodes = (
+    JSON.parse(
+      String(readFileSync('./src/assets/api/railway/corporations.json')),
+    ) as { code: string }[]
+  ).map(({ code }) => code.padStart(4, '0'))
+
   return [
     '/robots.txt',
     '/sitemap.xml',
@@ -28,6 +34,7 @@ export const routes = (() => {
     '/contents/keymap',
     ...problems.map((problem) => `/problems/${problem.id}`),
     ...tags.map((tag) => `/problems/tags/${tag.id}`),
+    ...railwayCorpCodes.map((code) => `/railway/corporations/${code}`),
     '/api/problems.json',
     '/api/problems/news.json',
     '/api/problems/news/all.json',
@@ -35,6 +42,7 @@ export const routes = (() => {
     '/api/railway/corporations.json',
     ...problems.map((problem) => `/api/problems/${problem.id}.json`),
     ...tags.map((tag) => `/api/tags/${tag.id}.json`),
+    ...railwayCorpCodes.map((code) => `/api/railway/corporations/${code}.json`),
   ]
 })()
 
