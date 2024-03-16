@@ -12,7 +12,7 @@
     "preview": "nuxt preview",
     "preview:dist": "node ./scripts/dist/preview-server.js -d ./dist",
     "generate": "nuxt generate",
-    "generate:problem": "node ./scripts/dist/problem.js generate -i ./data/problems -o ./src/assets/api",
+    "generate:problem": "node ./scripts/dist/problem.js generate -i ./data/ -o ./src/assets/api",
     "lint": "run-p 'lint:*'",
     "lint:typecheck": "nuxt typecheck",
     "lint:scripts": "eslint .",

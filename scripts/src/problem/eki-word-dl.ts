@@ -69,7 +69,7 @@ export default defineCommand({
     }
 
     const id = `1010${cds[0].padStart(3, '0')}`
-    const file = path.join(dataDir, `${id}.json`)
+    const file = path.join(dataDir, 'problems', `${id}.json`)
     const date = fmtDate(({ yyyy, MM, dd }) => `${yyyy}-${MM}-${dd}`)
 
     const data = await fs.promises

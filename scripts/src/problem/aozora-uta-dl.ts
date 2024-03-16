@@ -266,7 +266,7 @@ export default defineCommand({
     await aozoraDL({
       url: aororaUtaUrl,
       word: wordCount,
-      dist: dataDir,
+      dist: path.join(dataDir, 'problems'),
     })
   },
 })

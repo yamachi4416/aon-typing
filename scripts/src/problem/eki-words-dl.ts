@@ -43,6 +43,18 @@ async function outProcess({
   dryRun?: boolean
 }) {
   const { id, file, text, data } = infoData
+
+  if (text) {
+    const saved = JSON.parse(text) as typeof data
+    const wordMap = new Map(saved.words.map((word) => [word.info, word.info2]))
+    for (const word of data.words) {
+      const savedWord = wordMap.get(word.info)
+      if (savedWord) {
+        word.info2 = savedWord
+      }
+    }
+  }
+
   const json = await prettier.format(JSON.stringify(data), {
     parser: 'json',
   })
@@ -106,36 +118,39 @@ export default defineCommand({
     keepWords,
     ekispertApiKey: key,
   }) => {
-    ;(await readdir(dataDir, { withFileTypes: true }))
-      .filter((item) => item.isFile())
+    const dir = path.join(dataDir, 'problems')
+    const allFiles = await readdir(dir, { withFileTypes: true })
+    const targetFiles = allFiles
+      .filter((file) => file.isFile())
       .filter((item) => (pattern ? pattern.test(item.name) : true))
-      .map((item) => path.join(dataDir, item.name))
-      .map(async (file) => {
-        const infoData = await loadInfoData({ file })
-        if (infoData.data.tags.includes('駅名') && infoData.data.optional?.cd) {
-          if (!keepWords) {
-            const stations = await fetchStations({
-              key,
-              operationLineCodes: String(infoData.data.optional.cd).split(','),
-            })
-            infoData.data.words = stations.words
-          }
-
-          const operationLines = await Promise.all(
-            infoData.data.optional.cd.map(
-              async (code) => await fetchOperationLine({ key, code }),
-            ),
-          )
-          infoData.data.optional.coCd = [
-            ...new Set(
-              operationLines.flatMap((lines) =>
-                lines.map(({ corporation }) => corporation.code),
-              ),
-            ),
-          ]
-
-          await outProcess({ infoData, dryRun })
+      .map((item) => path.join(dir, item.name))
+    for (const file of targetFiles) {
+      const infoData = await loadInfoData({ file })
+      if (infoData.data.tags.includes('駅名') && infoData.data.optional?.cd) {
+        if (!keepWords) {
+          const stations = await fetchStations({
+            key,
+            operationLineCodes: String(infoData.data.optional.cd).split(','),
+          })
+          infoData.data.words = stations.words
         }
-      })
+
+        const operationLines = await Promise.all(
+          infoData.data.optional.cd.map(
+            async (code) => await fetchOperationLine({ key, code }),
+          ),
+        )
+
+        infoData.data.optional.coCd = [
+          ...new Set(
+            operationLines.flatMap((lines) =>
+              lines.map(({ corporation }) => corporation.code),
+            ),
+          ),
+        ]
+
+        await outProcess({ infoData, dryRun })
+      }
+    }
   },
 })

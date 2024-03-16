@@ -37,7 +37,7 @@ export default defineCommand({
         default: false,
       }),
   async handler(args) {
-    const dir = path.resolve(args.dataDir)
+    const dir = path.join(path.resolve(args.dataDir), 'problems')
     const files = await readdir(dir, { withFileTypes: true }).then((items) =>
       items
         .filter((item) => item.isFile())

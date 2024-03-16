@@ -63,7 +63,7 @@ async function generateProblemData({
   })
 
   const problems = await Promise.all(
-    (await listJsonFiles(dataDir)).map(async (p) => {
+    (await listJsonFiles(path.join(dataDir, 'problems'))).map(async (p) => {
       const dataObj: ProblemDetailData = JSON.parse(
         (await fs.readFile(p)).toString(),
       )
