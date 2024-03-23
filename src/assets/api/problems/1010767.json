@@ -1,0 +1,45 @@
+{
+  "id": "1010767",
+  "title": "東武伊勢崎線(東武動物公園－伊勢崎)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-03-24",
+  "updatedAt": "2024-03-24",
+  "words": [
+    { "info": "伊勢崎", "info2": "いせさき", "word": "isesaki" },
+    { "info": "新伊勢崎", "info2": "しんいせさき", "word": "sinnisesaki" },
+    { "info": "剛志", "info2": "ごうし", "word": "gousi" },
+    { "info": "境町", "info2": "さかいまち", "word": "sakaimati" },
+    { "info": "世良田", "info2": "せらだ", "word": "serada" },
+    { "info": "木崎", "info2": "きざき", "word": "kizaki" },
+    { "info": "細谷", "info2": "ほそや", "word": "hosoya" },
+    { "info": "太田", "info2": "おおた", "word": "oota" },
+    { "info": "韮川", "info2": "にらがわ", "word": "niragawa" },
+    { "info": "野州山辺", "info2": "やしゅうやまべ", "word": "yasyuuyamabe" },
+    { "info": "足利市", "info2": "あしかがし", "word": "asikagasi" },
+    { "info": "東武和泉", "info2": "とうぶいずみ", "word": "toubuizumi" },
+    { "info": "福居", "info2": "ふくい", "word": "hukui" },
+    { "info": "県", "info2": "あがた", "word": "agata" },
+    { "info": "多々良", "info2": "たたら", "word": "tatara" },
+    { "info": "館林", "info2": "たてばやし", "word": "tatebayasi" },
+    { "info": "茂林寺前", "info2": "もりんじまえ", "word": "morinjimae" },
+    { "info": "川俣", "info2": "かわまた", "word": "kawamata" },
+    { "info": "羽生", "info2": "はにゅう", "word": "hanyuu" },
+    { "info": "南羽生", "info2": "みなみはにゅう", "word": "minamihanyuu" },
+    { "info": "加須", "info2": "かぞ", "word": "kazo" },
+    { "info": "花崎", "info2": "はなさき", "word": "hanasaki" },
+    { "info": "鷲宮", "info2": "わしのみや", "word": "wasinomiya" },
+    { "info": "久喜", "info2": "くき", "word": "kuki" },
+    { "info": "和戸", "info2": "わど", "word": "wado" },
+    {
+      "info": "東武動物公園",
+      "info2": "とうぶどうぶつこうえん",
+      "word": "toubudoubutukouenn"
+    }
+  ],
+  "optional": { "cd": ["767"], "coCd": ["11"] }
+}
