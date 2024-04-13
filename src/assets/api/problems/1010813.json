@@ -1,0 +1,22 @@
+{
+  "id": "1010813",
+  "title": "相鉄新横浜線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-04-13",
+  "updatedAt": "2024-04-13",
+  "words": [
+    { "info": "西谷", "info2": "にしや", "word": "nisiya" },
+    {
+      "info": "羽沢横浜国大",
+      "info2": "はざわよこはまこくだい",
+      "word": "hazawayokohamakokudai"
+    },
+    { "info": "新横浜", "info2": "しんよこはま", "word": "sinyokohama" }
+  ],
+  "optional": { "cd": ["813"], "coCd": ["20"] }
+}
