@@ -1,0 +1,36 @@
+{
+  "id": "1010471",
+  "title": "真岡鐵道真岡線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-04-20",
+  "updatedAt": "2024-04-20",
+  "words": [
+    { "info": "茂木", "info2": "もてぎ", "word": "motegi" },
+    { "info": "天矢場", "info2": "てんやば", "word": "tenyaba" },
+    { "info": "笹原田", "info2": "ささはらだ", "word": "sasaharada" },
+    { "info": "市塙", "info2": "いちはな", "word": "itihana" },
+    { "info": "多田羅", "info2": "たたら", "word": "tatara" },
+    { "info": "七井", "info2": "なない", "word": "nanai" },
+    { "info": "益子", "info2": "ましこ", "word": "masiko" },
+    { "info": "北山", "info2": "きたやま", "word": "kitayama" },
+    { "info": "西田井", "info2": "にしだい", "word": "nisidai" },
+    { "info": "北真岡", "info2": "きたもおか", "word": "kitamooka" },
+    { "info": "真岡", "info2": "もおか", "word": "mooka" },
+    { "info": "寺内", "info2": "てらうち", "word": "terauti" },
+    { "info": "久下田", "info2": "くげた", "word": "kugeta" },
+    { "info": "ひぐち", "info2": "ひぐち", "word": "higuti" },
+    { "info": "折本", "info2": "おりもと", "word": "orimoto" },
+    {
+      "info": "下館二高前",
+      "info2": "しもだてにこうまえ",
+      "word": "simodatenikoumae"
+    },
+    { "info": "下館", "info2": "しもだて", "word": "simodate" }
+  ],
+  "optional": { "cd": ["471"], "coCd": ["53"] }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "1010469",
+  "title": "鹿島臨海鉄道大洗鹿島線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-04-20",
+  "updatedAt": "2024-04-20",
+  "words": [
+    {
+      "info": "鹿島サッカースタジアム",
+      "info2": "かしまさっかーすたじあむ",
+      "word": "kasimasakka-sutajiamu"
+    },
+    { "info": "荒野台", "info2": "こうやだい", "word": "kouyadai" },
+    {
+      "info": "長者ケ浜潮騒はまなす公園前",
+      "info2": "ちょうじゃがはましおさいはまなすこうえんまえ",
+      "word": "tyoujagahamasiosaihamanasukouenmae"
+    },
+    { "info": "鹿島大野", "info2": "かしまおおの", "word": "kasimaoono" },
+    { "info": "鹿島灘", "info2": "かしまなだ", "word": "kasimanada" },
+    { "info": "大洋", "info2": "たいよう", "word": "taiyou" },
+    { "info": "北浦湖畔", "info2": "きたうらこはん", "word": "kitaurakohann" },
+    { "info": "新鉾田", "info2": "しんほこた", "word": "sinhokota" },
+    { "info": "徳宿", "info2": "とくしゅく", "word": "tokusyuku" },
+    { "info": "鹿島旭", "info2": "かしまあさひ", "word": "kasimaasahi" },
+    { "info": "涸沼", "info2": "ひぬま", "word": "hinuma" },
+    { "info": "大洗", "info2": "おおあらい", "word": "ooarai" },
+    { "info": "常澄", "info2": "つねずみ", "word": "tunezumi" },
+    { "info": "東水戸", "info2": "ひがしみと", "word": "higasimito" },
+    { "info": "水戸", "info2": "みと", "word": "mito" }
+  ],
+  "optional": { "cd": ["469"], "coCd": ["51"] }
+}

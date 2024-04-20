@@ -1,0 +1,40 @@
+{
+  "id": "1010470",
+  "title": "野岩鉄道会津鬼怒川線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-04-20",
+  "updatedAt": "2024-04-20",
+  "words": [
+    {
+      "info": "会津高原尾瀬口",
+      "info2": "あいづこうげんおぜぐち",
+      "word": "aidukougennozeguti"
+    },
+    { "info": "男鹿高原", "info2": "おじかこうげん", "word": "ojikakougenn" },
+    {
+      "info": "上三依塩原温泉口",
+      "info2": "かみみよりしおばらおんせんぐち",
+      "word": "kamimiyorisiobaraonsenguti"
+    },
+    {
+      "info": "中三依温泉",
+      "info2": "なかみよりおんせん",
+      "word": "nakamiyorionsenn"
+    },
+    {
+      "info": "湯西川温泉",
+      "info2": "ゆにしがわおんせん",
+      "word": "yunisigawaonsenn"
+    },
+    { "info": "川治湯元", "info2": "かわじゆもと", "word": "kawajiyumoto" },
+    { "info": "川治温泉", "info2": "かわじおんせん", "word": "kawajionsenn" },
+    { "info": "龍王峡", "info2": "りゅうおうきょう", "word": "ryuuoukyou" },
+    { "info": "新藤原", "info2": "しんふじわら", "word": "sinhujiwara" }
+  ],
+  "optional": { "cd": ["470"], "coCd": ["52"] }
+}
