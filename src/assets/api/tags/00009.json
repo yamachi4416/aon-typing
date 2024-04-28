@@ -4438,6 +4438,42 @@
       ]
     },
     {
+      "id": "1010427",
+      "title": "OsakaMetro御堂筋線の駅いちらん",
+      "type": "japanese",
+      "words": 20,
+      "chars": 182,
+      "tags": [
+        { "id": "00009", "name": "日本語" },
+        { "id": "00007", "name": "地理" },
+        { "id": "00019", "name": "駅名" }
+      ]
+    },
+    {
+      "id": "1010428",
+      "title": "OsakaMetro谷町線の駅いちらん",
+      "type": "japanese",
+      "words": 26,
+      "chars": 308,
+      "tags": [
+        { "id": "00009", "name": "日本語" },
+        { "id": "00007", "name": "地理" },
+        { "id": "00019", "name": "駅名" }
+      ]
+    },
+    {
+      "id": "1010429",
+      "title": "OsakaMetro四つ橋線の駅いちらん",
+      "type": "japanese",
+      "words": 11,
+      "chars": 99,
+      "tags": [
+        { "id": "00009", "name": "日本語" },
+        { "id": "00007", "name": "地理" },
+        { "id": "00019", "name": "駅名" }
+      ]
+    },
+    {
       "id": "1010436",
       "title": "西鉄天神大牟田線の駅いちらん",
       "type": "japanese",

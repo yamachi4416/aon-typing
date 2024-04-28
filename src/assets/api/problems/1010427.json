@@ -1,0 +1,39 @@
+{
+  "id": "1010427",
+  "title": "OsakaMetro御堂筋線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-04-29",
+  "updatedAt": "2024-04-29",
+  "words": [
+    { "info": "なかもず", "info2": "なかもず", "word": "nakamozu" },
+    { "info": "新金岡", "info2": "しんかなおか", "word": "sinkanaoka" },
+    { "info": "北花田", "info2": "きたはなだ", "word": "kitahanada" },
+    { "info": "あびこ", "info2": "あびこ", "word": "abiko" },
+    { "info": "長居", "info2": "ながい", "word": "nagai" },
+    { "info": "西田辺", "info2": "にしたなべ", "word": "nisitanabe" },
+    { "info": "昭和町", "info2": "しょうわちょう", "word": "syouwatyou" },
+    { "info": "天王寺", "info2": "てんのうじ", "word": "tennnouji" },
+    { "info": "動物園前", "info2": "どうぶつえんまえ", "word": "doubutuenmae" },
+    { "info": "大国町", "info2": "だいこくちょう", "word": "daikokutyou" },
+    { "info": "なんば", "info2": "なんば", "word": "nanba" },
+    { "info": "心斎橋", "info2": "しんさいばし", "word": "sinsaibasi" },
+    { "info": "本町", "info2": "ほんまち", "word": "honmati" },
+    { "info": "淀屋橋", "info2": "よどやばし", "word": "yodoyabasi" },
+    { "info": "梅田", "info2": "うめだ", "word": "umeda" },
+    { "info": "中津", "info2": "なかつ", "word": "nakatu" },
+    {
+      "info": "西中島南方",
+      "info2": "にしなかじまみなみがた",
+      "word": "nisinakajimaminamigata"
+    },
+    { "info": "新大阪", "info2": "しんおおさか", "word": "sinnoosaka" },
+    { "info": "東三国", "info2": "ひがしみくに", "word": "higasimikuni" },
+    { "info": "江坂", "info2": "えさか", "word": "esaka" }
+  ],
+  "optional": { "cd": ["427"], "coCd": ["27"] }
+}

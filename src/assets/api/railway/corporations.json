@@ -2464,16 +2464,19 @@
     "name": "大阪市高速電気軌道",
     "operationLines": [
       {
+        "id": "1010427",
         "code": "427",
         "name": "OsakaMetro御堂筋線",
         "yomi": "おおさかめとろみどうすじせん"
       },
       {
+        "id": "1010428",
         "code": "428",
         "name": "OsakaMetro谷町線",
         "yomi": "おおさかめとろたにまちせん"
       },
       {
+        "id": "1010429",
         "code": "429",
         "name": "OsakaMetro四つ橋線",
         "yomi": "おおさかめとろよつばしせん"

@@ -1,0 +1,30 @@
+{
+  "id": "1010429",
+  "title": "OsakaMetro四つ橋線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-04-29",
+  "updatedAt": "2024-04-29",
+  "words": [
+    {
+      "info": "住之江公園",
+      "info2": "すみのえこうえん",
+      "word": "suminoekouenn"
+    },
+    { "info": "北加賀屋", "info2": "きたかがや", "word": "kitakagaya" },
+    { "info": "玉出", "info2": "たまで", "word": "tamade" },
+    { "info": "岸里", "info2": "きしのさと", "word": "kisinosato" },
+    { "info": "花園町", "info2": "はなぞのちょう", "word": "hanazonotyou" },
+    { "info": "大国町", "info2": "だいこくちょう", "word": "daikokutyou" },
+    { "info": "なんば", "info2": "なんば", "word": "nanba" },
+    { "info": "四ツ橋", "info2": "よつばし", "word": "yotubasi" },
+    { "info": "本町", "info2": "ほんまち", "word": "honmati" },
+    { "info": "肥後橋", "info2": "ひごばし", "word": "higobasi" },
+    { "info": "西梅田", "info2": "にしうめだ", "word": "nisiumeda" }
+  ],
+  "optional": { "cd": ["429"], "coCd": ["27"] }
+}
