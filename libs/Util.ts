@@ -154,7 +154,7 @@ export function pagenate<T>({
   const start = (pages - 1) * pageSize
   const end = pages * pageSize
   return {
-    items: Array.prototype.slice.call(items, start, end),
+    items: Array.prototype.slice.call(items, start, end) as T[],
     pages: lastPage,
     count: items.length,
   }
