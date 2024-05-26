@@ -1,0 +1,29 @@
+{
+  "id": "1010366",
+  "title": "名鉄蒲郡線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-05-27",
+  "updatedAt": "2024-05-27",
+  "words": [
+    { "info": "蒲郡", "info2": "がまごおり", "word": "gamagoori" },
+    {
+      "info": "蒲郡競艇場前",
+      "info2": "がまごおりきょうていじょうまえ",
+      "word": "gamagoorikyouteijoumae"
+    },
+    { "info": "三河鹿島", "info2": "みかわかしま", "word": "mikawakasima" },
+    { "info": "形原", "info2": "かたはら", "word": "katahara" },
+    { "info": "西浦", "info2": "にしうら", "word": "nisiura" },
+    { "info": "こどもの国", "info2": "こどものくに", "word": "kodomonokuni" },
+    { "info": "東幡豆", "info2": "ひがしはず", "word": "higasihazu" },
+    { "info": "西幡豆", "info2": "にしはず", "word": "nisihazu" },
+    { "info": "三河鳥羽", "info2": "みかわとば", "word": "mikawatoba" },
+    { "info": "吉良吉田", "info2": "きらよしだ", "word": "kirayosida" }
+  ],
+  "optional": { "cd": ["366"], "coCd": ["21"] }
+}
