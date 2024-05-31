@@ -1,0 +1,23 @@
+{
+  "id": "1010407",
+  "title": "京阪交野線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-06-01",
+  "updatedAt": "2024-06-01",
+  "words": [
+    { "info": "私市", "info2": "きさいち", "word": "kisaiti" },
+    { "info": "河内森", "info2": "かわちもり", "word": "kawatimori" },
+    { "info": "交野市", "info2": "かたのし", "word": "katanosi" },
+    { "info": "郡津", "info2": "こうづ", "word": "koudu" },
+    { "info": "村野", "info2": "むらの", "word": "murano" },
+    { "info": "星ケ丘", "info2": "ほしがおか", "word": "hosigaoka" },
+    { "info": "宮之阪", "info2": "みやのさか", "word": "miyanosaka" },
+    { "info": "枚方市", "info2": "ひらかたし", "word": "hirakatasi" }
+  ],
+  "optional": { "cd": ["407"], "coCd": ["24"] }
+}
