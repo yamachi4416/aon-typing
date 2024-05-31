@@ -90,7 +90,7 @@ export default defineNuxtConfig({
       routes,
     },
     public: {
-      gtagId: process.env.APP_G_TAGID,
+      gtagId: process.env.APP_G_TAGID ?? '',
       baseUrl: process.env.APP_BASE_URL ?? 'http://localhost:3000',
       contactUrl: process.env.APP_CONTACT_URL ?? '/api/contact',
       pageSize: 30,
