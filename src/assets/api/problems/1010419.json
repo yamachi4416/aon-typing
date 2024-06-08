@@ -1,0 +1,23 @@
+{
+  "id": "1010419",
+  "title": "阪急箕面線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-06-08",
+  "updatedAt": "2024-06-08",
+  "words": [
+    { "info": "箕面", "info2": "みのお", "word": "minoo" },
+    { "info": "牧落", "info2": "まきおち", "word": "makioti" },
+    { "info": "桜井", "info2": "さくらい", "word": "sakurai" },
+    {
+      "info": "石橋阪大前",
+      "info2": "いしばしはんだいまえ",
+      "word": "isibasihandaimae"
+    }
+  ],
+  "optional": { "cd": ["419"], "coCd": ["25"] }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "1010387",
+  "title": "近鉄道明寺線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-06-08",
+  "updatedAt": "2024-06-08",
+  "words": [
+    { "info": "柏原", "info2": "かしわら", "word": "kasiwara" },
+    {
+      "info": "柏原南口",
+      "info2": "かしわらみなみぐち",
+      "word": "kasiwaraminamiguti"
+    },
+    { "info": "道明寺", "info2": "どうみょうじ", "word": "doumyouji" }
+  ],
+  "optional": { "cd": ["387"], "coCd": ["22"] }
+}
