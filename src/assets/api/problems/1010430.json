@@ -1,0 +1,41 @@
+{
+  "id": "1010430",
+  "title": "OsakaMetro中央線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-06-16",
+  "updatedAt": "2024-06-16",
+  "words": [
+    { "info": "長田", "info2": "ながた", "word": "nagata" },
+    { "info": "高井田", "info2": "たかいだ", "word": "takaida" },
+    { "info": "深江橋", "info2": "ふかえばし", "word": "hukaebasi" },
+    { "info": "緑橋", "info2": "みどりばし", "word": "midoribasi" },
+    { "info": "森ノ宮", "info2": "もりのみや", "word": "morinomiya" },
+    {
+      "info": "谷町四丁目",
+      "info2": "たにまちよんちょうめ",
+      "word": "tanimatiyontyoume"
+    },
+    {
+      "info": "堺筋本町",
+      "info2": "さかいすじほんまち",
+      "word": "sakaisujihonmati"
+    },
+    { "info": "本町", "info2": "ほんまち", "word": "honmati" },
+    { "info": "阿波座", "info2": "あわざ", "word": "awaza" },
+    { "info": "九条", "info2": "くじょう", "word": "kujou" },
+    { "info": "弁天町", "info2": "べんてんちょう", "word": "bententyou" },
+    { "info": "朝潮橋", "info2": "あさしおばし", "word": "asasiobasi" },
+    { "info": "大阪港", "info2": "おおさかこう", "word": "oosakakou" },
+    {
+      "info": "コスモスクエア",
+      "info2": "こすもすくえあ",
+      "word": "kosumosukuea"
+    }
+  ],
+  "optional": { "cd": ["430"], "coCd": ["27"] }
+}

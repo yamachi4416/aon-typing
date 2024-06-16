@@ -4546,6 +4546,42 @@
       ]
     },
     {
+      "id": "1010430",
+      "title": "OsakaMetro中央線の駅いちらん",
+      "type": "japanese",
+      "words": 14,
+      "chars": 133,
+      "tags": [
+        { "id": "00009", "name": "日本語" },
+        { "id": "00007", "name": "地理" },
+        { "id": "00019", "name": "駅名" }
+      ]
+    },
+    {
+      "id": "1010431",
+      "title": "OsakaMetro千日前線の駅いちらん",
+      "type": "japanese",
+      "words": 14,
+      "chars": 130,
+      "tags": [
+        { "id": "00009", "name": "日本語" },
+        { "id": "00007", "name": "地理" },
+        { "id": "00019", "name": "駅名" }
+      ]
+    },
+    {
+      "id": "1010432",
+      "title": "OsakaMetro堺筋線の駅いちらん",
+      "type": "japanese",
+      "words": 10,
+      "chars": 123,
+      "tags": [
+        { "id": "00009", "name": "日本語" },
+        { "id": "00007", "name": "地理" },
+        { "id": "00019", "name": "駅名" }
+      ]
+    },
+    {
       "id": "1010436",
       "title": "西鉄天神大牟田線の駅いちらん",
       "type": "japanese",

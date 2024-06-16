@@ -1,0 +1,33 @@
+{
+  "id": "1010432",
+  "title": "OsakaMetro堺筋線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-06-16",
+  "updatedAt": "2024-06-16",
+  "words": [
+    { "info": "天下茶屋", "info2": "てんがちゃや", "word": "tengatyaya" },
+    { "info": "動物園前", "info2": "どうぶつえんまえ", "word": "doubutuenmae" },
+    { "info": "恵美須町", "info2": "えびすちょう", "word": "ebisutyou" },
+    { "info": "日本橋", "info2": "にっぽんばし", "word": "nipponbasi" },
+    { "info": "長堀橋", "info2": "ながほりばし", "word": "nagahoribasi" },
+    {
+      "info": "堺筋本町",
+      "info2": "さかいすじほんまち",
+      "word": "sakaisujihonmati"
+    },
+    { "info": "北浜", "info2": "きたはま", "word": "kitahama" },
+    { "info": "南森町", "info2": "みなみもりまち", "word": "minamimorimati" },
+    { "info": "扇町", "info2": "おうぎまち", "word": "ougimati" },
+    {
+      "info": "天神橋筋六丁目",
+      "info2": "てんじんばしすじろくちょうめ",
+      "word": "tenjinbasisujirokutyoume"
+    }
+  ],
+  "optional": { "cd": ["432"], "coCd": ["27"] }
+}
