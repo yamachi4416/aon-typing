@@ -1,0 +1,46 @@
+{
+  "id": "1010434",
+  "title": "OsakaMetro今里筋線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-06-24",
+  "updatedAt": "2024-06-24",
+  "words": [
+    { "info": "今里", "info2": "いまざと", "word": "imazato" },
+    { "info": "緑橋", "info2": "みどりばし", "word": "midoribasi" },
+    { "info": "鴫野", "info2": "しぎの", "word": "sigino" },
+    {
+      "info": "蒲生四丁目",
+      "info2": "がもうよんちょうめ",
+      "word": "gamouyontyoume"
+    },
+    { "info": "関目成育", "info2": "せきめせいいく", "word": "sekimeseiiku" },
+    {
+      "info": "新森古市",
+      "info2": "しんもりふるいち",
+      "word": "sinmorihuruiti"
+    },
+    { "info": "清水", "info2": "しみず", "word": "simizu" },
+    {
+      "info": "太子橋今市",
+      "info2": "たいしばしいまいち",
+      "word": "taisibasiimaiti"
+    },
+    {
+      "info": "だいどう豊里",
+      "info2": "だいどうとよさと",
+      "word": "daidoutoyosato"
+    },
+    {
+      "info": "瑞光四丁目",
+      "info2": "ずいこうよんちょうめ",
+      "word": "zuikouyontyoume"
+    },
+    { "info": "井高野", "info2": "いたかの", "word": "itakano" }
+  ],
+  "optional": { "cd": ["434"], "coCd": ["27"] }
+}

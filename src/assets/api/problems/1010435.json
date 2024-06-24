@@ -1,0 +1,49 @@
+{
+  "id": "1010435",
+  "title": "OsakaMetroニュートラムの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-06-24",
+  "updatedAt": "2024-06-24",
+  "words": [
+    {
+      "info": "住之江公園",
+      "info2": "すみのえこうえん",
+      "word": "suminoekouenn"
+    },
+    { "info": "平林", "info2": "ひらばやし", "word": "hirabayasi" },
+    { "info": "南港口", "info2": "なんこうぐち", "word": "nankouguti" },
+    { "info": "南港東", "info2": "なんこうひがし", "word": "nankouhigasi" },
+    {
+      "info": "フェリーターミナル",
+      "info2": "ふぇりーたーみなる",
+      "word": "feri-ta-minaru"
+    },
+    {
+      "info": "ポートタウン東",
+      "info2": "ぽーとたうんひがし",
+      "word": "po-totaunhigasi"
+    },
+    {
+      "info": "ポートタウン西",
+      "info2": "ぽーとたうんにし",
+      "word": "po-totaunnnisi"
+    },
+    { "info": "中ふ頭", "info2": "なかふとう", "word": "nakahutou" },
+    {
+      "info": "トレードセンター前",
+      "info2": "とれーどせんたーまえ",
+      "word": "tore-dosenta-mae"
+    },
+    {
+      "info": "コスモスクエア",
+      "info2": "こすもすくえあ",
+      "word": "kosumosukuea"
+    }
+  ],
+  "optional": { "cd": ["435"], "coCd": ["27"] }
+}
