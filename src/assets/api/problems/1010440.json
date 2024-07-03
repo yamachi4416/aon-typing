@@ -1,0 +1,51 @@
+{
+  "id": "1010440",
+  "title": "札幌市営地下鉄南北線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-07-04",
+  "updatedAt": "2024-07-04",
+  "words": [
+    { "info": "真駒内", "info2": "まこまない", "word": "makomanai" },
+    { "info": "自衛隊前", "info2": "じえいたいまえ", "word": "jieitaimae" },
+    { "info": "澄川", "info2": "すみかわ", "word": "sumikawa" },
+    { "info": "南平岸", "info2": "みなみひらぎし", "word": "minamihiragisi" },
+    { "info": "平岸", "info2": "ひらぎし", "word": "hiragisi" },
+    { "info": "中の島", "info2": "なかのしま", "word": "nakanosima" },
+    { "info": "幌平橋", "info2": "ほろひらばし", "word": "horohirabasi" },
+    {
+      "info": "中島公園",
+      "info2": "なかじまこうえん",
+      "word": "nakajimakouenn"
+    },
+    { "info": "すすきの", "info2": "すすきの", "word": "susukino" },
+    { "info": "大通", "info2": "おおどおり", "word": "oodoori" },
+    { "info": "さっぽろ", "info2": "さっぽろ", "word": "sapporo" },
+    {
+      "info": "北１２条",
+      "info2": "きたじゅうにじょう",
+      "word": "kitajuunijou"
+    },
+    {
+      "info": "北１８条",
+      "info2": "きたじゅうはちじょう",
+      "word": "kitajuuhatijou"
+    },
+    {
+      "info": "北２４条",
+      "info2": "きたにじゅうよじょう",
+      "word": "kitanijuuyojou"
+    },
+    {
+      "info": "北３４条",
+      "info2": "きたさんじゅうよじょう",
+      "word": "kitasanjuuyojou"
+    },
+    { "info": "麻生", "info2": "あさぶ", "word": "asabu" }
+  ],
+  "optional": { "cd": ["440"], "coCd": ["30"] }
+}

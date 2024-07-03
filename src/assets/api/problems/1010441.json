@@ -1,0 +1,66 @@
+{
+  "id": "1010441",
+  "title": "札幌市営地下鉄東西線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-07-04",
+  "updatedAt": "2024-07-04",
+  "words": [
+    { "info": "新さっぽろ", "info2": "しんさっぽろ", "word": "sinsapporo" },
+    { "info": "ひばりが丘", "info2": "ひばりがおか", "word": "hibarigaoka" },
+    { "info": "大谷地", "info2": "おおやち", "word": "ooyati" },
+    {
+      "info": "南郷１８丁目",
+      "info2": "なんごうじゅうはっちょうめ",
+      "word": "nangoujuuhattyoume"
+    },
+    {
+      "info": "南郷１３丁目",
+      "info2": "なんごうじゅうさんちょうめ",
+      "word": "nangoujuusantyoume"
+    },
+    {
+      "info": "南郷７丁目",
+      "info2": "なんごうななちょうめ",
+      "word": "nangounanatyoume"
+    },
+    { "info": "白石", "info2": "しろいし", "word": "siroisi" },
+    { "info": "東札幌", "info2": "ひがしさっぽろ", "word": "higasisapporo" },
+    { "info": "菊水", "info2": "きくすい", "word": "kikusui" },
+    {
+      "info": "バスセンター前",
+      "info2": "ばすせんたーまえ",
+      "word": "basusenta-mae"
+    },
+    { "info": "大通", "info2": "おおどおり", "word": "oodoori" },
+    {
+      "info": "西１１丁目",
+      "info2": "にしじゅういっちょうめ",
+      "word": "nisijuuittyoume"
+    },
+    {
+      "info": "西１８丁目",
+      "info2": "にしじゅうはっちょうめ",
+      "word": "nisijuuhattyoume"
+    },
+    {
+      "info": "円山公園",
+      "info2": "まるやまこうえん",
+      "word": "maruyamakouenn"
+    },
+    {
+      "info": "西２８丁目",
+      "info2": "にしにじゅうはっちょうめ",
+      "word": "nisinijuuhattyoume"
+    },
+    { "info": "二十四軒", "info2": "にじゅうよんけん", "word": "nijuuyonkenn" },
+    { "info": "琴似", "info2": "ことに", "word": "kotoni" },
+    { "info": "発寒南", "info2": "はっさむみなみ", "word": "hassamuminami" },
+    { "info": "宮の沢", "info2": "みやのさわ", "word": "miyanosawa" }
+  ],
+  "optional": { "cd": ["441"], "coCd": ["30"] }
+}
