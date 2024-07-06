@@ -38,6 +38,8 @@ describe.each([
       exact: true,
     })
 
+  const getPageListbox = (page: Page) => page.getByTitle('表示するページを選択')
+
   const pagenateUrl = (n: number) =>
     pageUrl.includes('?') ? `${pageUrl}&page=${n}` : `${pageUrl}?page=${n}`
 
@@ -46,6 +48,7 @@ describe.each([
 
     const { pageSize } = await publicConfig(page)
 
+    expect(await getPageListbox(page).inputValue()).toBe('1')
     expect(await getItem(page, 0).isVisible()).toBeTruthy()
 
     await getPageLink(page, 2).click()
@@ -54,12 +57,14 @@ describe.each([
     await expectLoadingHidden(page)
 
     expect(await getItem(page, pageSize).isVisible()).toBeTruthy()
+    expect(await getPageListbox(page).inputValue()).toBe('2')
 
     await getPageLink(page, 3).click()
 
     await waitForRouterPath(page, pagenateUrl(3))
     await expectLoadingHidden(page)
 
+    expect(await getPageListbox(page).inputValue()).toBe('3')
     expect(await getItem(page, pageSize * 2).isVisible()).toBeTruthy()
   })
 
@@ -75,6 +80,36 @@ describe.each([
     await waitForRouterPath(page, pagenateUrl(lastPage))
     await expectLoadingHidden(page)
 
+    expect(await getPageListbox(page).inputValue()).toBe(String(lastPage))
     expect(await getItem(page, problems.length - 1).isVisible()).toBeTruthy()
+  })
+
+  it('プルダウンのページの選択肢の確認', async () => {
+    const page = await createPage(pageUrl)
+
+    const { pageSize } = await publicConfig(page)
+
+    const lastPage = Math.ceil(problems.length / pageSize)
+    const listbox = getPageListbox(page)
+
+    expect(await listbox.getByRole('option').allTextContents()).toEqual(
+      [...Array(lastPage)].map((_, i) => String(i + 1)),
+    )
+
+    await listbox.selectOption('2')
+
+    await waitForRouterPath(page, pagenateUrl(2))
+    await expectLoadingHidden(page)
+
+    expect(await getItem(page, pageSize).isVisible()).toBeTruthy()
+    expect(await getPageListbox(page).inputValue()).toBe('2')
+
+    await listbox.selectOption(String(lastPage))
+
+    await waitForRouterPath(page, pagenateUrl(lastPage))
+    await expectLoadingHidden(page)
+
+    expect(await getItem(page, problems.length - 1).isVisible()).toBeTruthy()
+    expect(await getPageListbox(page).inputValue()).toBe(String(lastPage))
   })
 })
