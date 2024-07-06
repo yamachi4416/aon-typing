@@ -33,7 +33,7 @@ useHead({
 
 const { problems, fetchProblems } = useProblems()
 
-const kwds = ref([] as string[])
+const kwds = computed(() => convertKwds(useRoute().query.kwd))
 const kwdsProblems = computed(() => {
   if (kwds.value?.length) {
     return (
@@ -43,17 +43,6 @@ const kwdsProblems = computed(() => {
     )
   }
   return problems.value
-})
-
-onMounted(() => {
-  kwds.value = convertKwds(useRoute().query.kwd)
-  const unwatchQuery = watch(
-    () => useRoute().query,
-    () => {
-      kwds.value = convertKwds(useRoute().query.kwd)
-    },
-  )
-  onBeforeRouteLeave(() => unwatchQuery())
 })
 
 function convertKwds(val: string | null | (string | null)[]) {

@@ -145,18 +145,28 @@ export function pagenate<T>({
   items: ArrayLike<T>
   page: number
   pageSize: number
-}) {
+}): { items: T[]; pagenate: number[]; last: number } {
   if (!items || items.length === 0) {
-    return { items: [], pages: 0, count: 0 }
+    return { items: [], pagenate: [], last: 0 }
   }
-  const lastPage = Math.ceil(items.length / pageSize)
-  const pages = Math.min(page, lastPage)
+  const last = Math.ceil(items.length / pageSize)
+  const pages = Math.min(page, last)
   const start = (pages - 1) * pageSize
   const end = pages * pageSize
+  const pagenate = () => {
+    const [lp, cp] = [last, page]
+    const wp =
+      cp <= 2
+        ? [2, 3, 4]
+        : lp - 1 <= cp
+          ? [lp - 3, lp - 2, lp - 1]
+          : [cp - 1, cp, cp + 1]
+    return new Set([1, ...wp, lp].filter((p) => p >= 1 && p <= lp))
+  }
   return {
     items: Array.prototype.slice.call(items, start, end) as T[],
-    pages: lastPage,
-    count: items.length,
+    pagenate: [...pagenate()],
+    last,
   }
 }
 

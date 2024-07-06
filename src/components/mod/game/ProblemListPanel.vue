@@ -15,27 +15,24 @@
         {{ t.name }}
       </button>
     </div>
-    <ModProblemList :problems="pages.items" @tag="addTag">
-      <template #default="{ problem }">
+    <PartsPagenate
+      v-slot="{ items }"
+      :model-value="page"
+      :items="filterProblems"
+      :page-size="pageSize"
+      @update:model-value="selcet"
+    >
+      <ModProblemList v-slot="{ problem }" :problems="items" @tag="addTag">
         <button @click.self="$emit('detail', problem)">内容を見る</button>
         <button @click.self="$emit('select', problem)">選択する</button>
-      </template>
-    </ModProblemList>
-    <template v-if="pages.pages > 1" #footer>
-      <PartsPagenate
-        :record-count="pages.count"
-        :page="page"
-        :page-size="pageSize"
-        @select="selcet"
-      />
-    </template>
+      </ModProblemList>
+    </PartsPagenate>
   </PartsModalContent>
 </template>
 
 <script setup lang="ts">
 import ModalContentVue from '~/components/parts/ModalContent.vue'
 import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
-import { pagenate } from '~~/libs/Util'
 
 defineEmits<{
   (e: 'select', item: ProblemListItem): any
@@ -53,13 +50,6 @@ const filterProblems = filterTagProblems({
   problems,
   tags: computed(() => tags.value.keys()),
 })
-const pages = computed(() =>
-  pagenate({
-    items: filterProblems.value,
-    page: page.value,
-    pageSize,
-  }),
-)
 
 const content = ref<InstanceType<typeof ModalContentVue>>()
 

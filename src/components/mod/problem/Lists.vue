@@ -1,21 +1,23 @@
 <template>
-  <ModProblemList :problems="pages.items" @tag="(tag) => emit('tag', tag)">
-    <template #default="{ problem }">
+  <PartsPagenate
+    v-slot="{ items }"
+    v-model="page"
+    :items="problems"
+    :page-size="props.pageSize"
+  >
+    <ModProblemList
+      v-slot="{ problem }"
+      :problems="items"
+      @tag="(tag) => emit('tag', tag)"
+    >
       <button @click="$emit('detail', problem)">内容を見る</button>
       <button @click="$emit('play', problem)">プレイする</button>
-    </template>
-  </ModProblemList>
-  <PartsPagenate
-    :page="page"
-    :page-size="props.pageSize"
-    :record-count="pages.count"
-    @select="select"
-  />
+    </ModProblemList>
+  </PartsPagenate>
 </template>
 
 <script setup lang="ts">
 import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
-import { pagenate } from '~~/libs/Util'
 
 const props = withDefaults(
   defineProps<{
@@ -37,30 +39,13 @@ const emit = defineEmits<{
 
 const route = useRoute()
 
-const path = ref(route.path?.replace(/\/$/, ''))
-const page = ref(Number(route.query.page || 1))
-const pages = computed(() =>
-  pagenate({
-    items: props.problems,
-    page: page.value,
-    pageSize: props.pageSize,
-  }),
-)
-
-watch(
-  () => route.query.page,
-  (to, from) => {
-    if (path.value === route.path && to !== from) {
-      const nextPage = Number(to) || 1
-      if (page.value !== nextPage) {
-        page.value = nextPage
-        emit('page', page.value)
-      }
-    }
+const page = computed<number>({
+  get() {
+    return Number(route.query.page || 1)
   },
-)
-
-function select(p: number) {
-  navigateTo({ query: { ...route.query, page: String(p) } })
-}
+  async set(value) {
+    await navigateTo({ query: { ...route.query, page: String(value) } })
+    emit('page', value)
+  },
+})
 </script>
