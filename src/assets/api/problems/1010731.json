@@ -1,0 +1,62 @@
+{
+  "id": "1010731",
+  "title": "函館市電２系統の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-07-15",
+  "updatedAt": "2024-07-15",
+  "words": [
+    { "info": "谷地頭", "info2": "やちがしら", "word": "yatigasira" },
+    { "info": "青柳町", "info2": "あおやぎちょう", "word": "aoyagityou" },
+    { "info": "宝来町", "info2": "ほうらいちょう", "word": "houraityou" },
+    { "info": "十字街", "info2": "じゅうじがい", "word": "juujigai" },
+    { "info": "魚市場通", "info2": "うおいちばどおり", "word": "uoitibadoori" },
+    { "info": "市役所前", "info2": "しやくしょまえ", "word": "siyakusyomae" },
+    {
+      "info": "函館駅前",
+      "info2": "はこだてえきまえ",
+      "word": "hakodateekimae"
+    },
+    { "info": "松風町", "info2": "まつかぜちょう", "word": "matukazetyou" },
+    { "info": "新川町", "info2": "しんかわちょう", "word": "sinkawatyou" },
+    { "info": "千歳町", "info2": "ちとせちょう", "word": "titosetyou" },
+    { "info": "昭和橋", "info2": "しょうわばし", "word": "syouwabasi" },
+    { "info": "堀川町", "info2": "ほりかわちょう", "word": "horikawatyou" },
+    { "info": "千代台", "info2": "ちよがだい", "word": "tiyogadai" },
+    {
+      "info": "中央病院前",
+      "info2": "ちゅうおうびょういんまえ",
+      "word": "tyuuoubyouinmae"
+    },
+    {
+      "info": "五稜郭公園前",
+      "info2": "ごりょうかくこうえんまえ",
+      "word": "goryoukakukouenmae"
+    },
+    { "info": "杉並町", "info2": "すぎなみちょう", "word": "suginamityou" },
+    { "info": "柏木町", "info2": "かしわぎちょう", "word": "kasiwagityou" },
+    { "info": "深堀町", "info2": "ふかぼりちょう", "word": "hukaborityou" },
+    { "info": "競馬場前", "info2": "けいばじょうまえ", "word": "keibajoumae" },
+    {
+      "info": "駒場車庫前",
+      "info2": "こまばしゃこまえ",
+      "word": "komabasyakomae"
+    },
+    {
+      "info": "函館アリーナ前",
+      "info2": "はこだてありーなまえ",
+      "word": "hakodateari-namae"
+    },
+    {
+      "info": "湯の川温泉",
+      "info2": "ゆのかわおんせん",
+      "word": "yunokawaonsenn"
+    },
+    { "info": "湯の川", "info2": "ゆのかわ", "word": "yunokawa" }
+  ],
+  "optional": { "cd": ["731"], "coCd": ["31"] }
+}
