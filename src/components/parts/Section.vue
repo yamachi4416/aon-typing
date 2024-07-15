@@ -42,6 +42,7 @@ withDefaults(
   width: 20%;
   max-width: 150px;
   overflow: hidden;
+  @content;
 
   @include vars.media_s {
     display: none;
@@ -85,9 +86,9 @@ withDefaults(
 }
 
 .left {
-  @include side;
-
-  transform: scale(-1, 1);
+  @include side {
+    transform: scale(-1, 1);
+  }
 }
 
 .fuki {

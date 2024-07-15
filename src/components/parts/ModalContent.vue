@@ -125,7 +125,9 @@ defineExpose({
           content: '';
         }
 
-        grid-template-columns: 42px 1fr 42px;
+        & {
+          grid-template-columns: 42px 1fr 42px;
+        }
       }
     }
 
@@ -151,12 +153,12 @@ defineExpose({
   }
 
   & > footer {
-    @include cmps.buttons;
-
-    width: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-top: 1px solid var(--color-9);
+    @include cmps.buttons {
+      width: 100%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-top: 1px solid var(--color-9);
+    }
   }
 }
 </style>

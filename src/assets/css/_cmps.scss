@@ -9,6 +9,7 @@
   justify-content: center;
   max-width: 100%;
   padding: 3px;
+  @content;
 }
 
 @mixin button {
@@ -22,6 +23,7 @@
   background: var(--color-e);
   border: 1px solid var(--color-9);
   border-radius: 10px;
+  @content;
 
   &:disabled {
     color: var(--color-a);
@@ -53,13 +55,16 @@
 }
 
 @mixin button-big {
-  @include button;
-
-  line-height: 2.5;
+  @include button {
+    line-height: 2.5;
+    @content;
+  }
 }
 
 @mixin buttons {
-  @include items;
+  @include items {
+    @content;
+  }
 
   :where(button, input, select, label, a) {
     @include button;
@@ -78,16 +83,18 @@
 }
 
 @mixin buttons-big {
-  @include buttons;
-
-  line-height: 2.5;
+  @include buttons {
+    line-height: 2.5;
+    @content;
+  }
 }
 
 @mixin buttons-tight {
-  @include buttons;
-
-  gap: 3px;
-  padding: 3px 0;
+  @include buttons {
+    gap: 3px;
+    padding: 3px 0;
+    @content;
+  }
 
   :where(button, a, label) {
     padding: 0 10px;
@@ -98,6 +105,7 @@
   width: fit-content;
   margin: 0 auto;
   border-collapse: collapse;
+  @content;
 
   th {
     padding: 2px 20px;
@@ -129,12 +137,13 @@
   background: var(--background-90);
   border-radius: 20px;
   box-shadow: var(--shadow-color-md) 0 1px 3px 0;
+  @content;
 
-  :where(h1, h2, h3) {
+  & :where(h1, h2, h3) {
     color: var(--color-6);
   }
 
-  :where(p) {
+  & :where(p) {
     padding: 10px;
     line-height: 1.8;
   }
@@ -147,6 +156,7 @@
   justify-content: center;
   padding: 10px;
   page-break-inside: avoid;
+  @content;
 
   &:hover {
     z-index: 1;
@@ -184,6 +194,7 @@
 @mixin placeholder {
   z-index: 1;
   background: transparent;
+  @content;
 
   & + label {
     position: absolute;
@@ -206,6 +217,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  @content;
 
   @for $i from 1 to 13 {
     & > .col-#{$i} {
@@ -275,6 +287,8 @@
 }
 
 @mixin pageHeader {
+  @content;
+
   & > :where(header) {
     display: flex;
     flex-direction: column;
@@ -286,10 +300,10 @@
   }
 
   & > :where(footer) {
-    @include buttons;
-
-    justify-content: flex-start;
-    padding-top: 5px;
+    @include buttons {
+      justify-content: flex-start;
+      padding-top: 5px;
+    }
   }
 }
 
@@ -297,15 +311,16 @@
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+  @content;
 
   & > :where(li) {
     @include card;
 
     & > :where(*) {
-      @include paper;
-
-      text-decoration: none;
-      word-break: break-all;
+      @include paper {
+        text-decoration: none;
+        word-break: break-all;
+      }
     }
   }
 }

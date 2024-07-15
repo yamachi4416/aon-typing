@@ -211,12 +211,12 @@ function randomProblemSelect() {
 
   & > table:nth-of-type(1) {
     td:has(> button) {
-      @include cmps.buttons-tight;
-
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      padding: 8px;
-      padding-left: 10px;
+      @include cmps.buttons-tight {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 8px;
+        padding-left: 10px;
+      }
     }
   }
 

@@ -148,11 +148,11 @@ await Promise.all([fetchTopNewsProblems(), fetchTags()])
 
 @mixin tag-clound($color) {
   ul {
-    @include cmps.buttons;
-
-    justify-content: flex-start;
-    padding: 10px;
-    list-style: none;
+    @include cmps.buttons {
+      justify-content: flex-start;
+      padding: 10px;
+      list-style: none;
+    }
 
     a {
       display: flex;
@@ -202,9 +202,9 @@ await Promise.all([fetchTopNewsProblems(), fetchTags()])
     }
 
     button {
-      @include cmps.button-big;
-
-      align-self: center;
+      @include cmps.button-big {
+        align-self: center;
+      }
     }
   }
 }

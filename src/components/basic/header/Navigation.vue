@@ -20,13 +20,13 @@ const menus = [
 
 <style lang="scss" module>
 .nav {
-  @media print {
-    display: none;
-  }
-
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+
+  @media print {
+    display: none;
+  }
 
   ul {
     display: flex;

@@ -36,21 +36,21 @@ defineEmits<{
 @use '~/assets/css/cmps';
 
 .tags {
-  @include cmps.buttons;
-
-  flex-wrap: wrap;
-  gap: 3px;
-  justify-content: flex-start;
+  @include cmps.buttons {
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: flex-start;
+  }
 
   span,
   button {
-    @include cmps.button;
-
-    padding: 0 1em;
-    font-size: 0.85em;
-    color: var(--color-f);
-    background: var(--color-p);
-    border: none;
+    @include cmps.button {
+      padding: 0 1em;
+      font-size: 0.85em;
+      color: var(--color-f);
+      background: var(--color-p);
+      border: none;
+    }
   }
 }
 </style>

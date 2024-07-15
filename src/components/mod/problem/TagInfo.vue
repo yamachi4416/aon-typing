@@ -87,10 +87,10 @@ onMounted(() => {
 }
 
 .tags {
-  @include cmps.buttons;
-
-  justify-content: flex-start;
-  padding: 10px 0;
+  @include cmps.buttons {
+    justify-content: flex-start;
+    padding: 10px 0;
+  }
 
   & > :where(label) {
     padding: 0 1em;

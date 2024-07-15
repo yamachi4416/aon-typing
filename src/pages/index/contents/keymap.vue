@@ -59,9 +59,9 @@ function print() {
 }
 
 .footer {
-  @include cmps.buttons;
-
-  justify-content: flex-start;
-  padding-top: 5px;
+  @include cmps.buttons {
+    justify-content: flex-start;
+    padding-top: 5px;
+  }
 }
 </style>

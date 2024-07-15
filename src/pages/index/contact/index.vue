@@ -117,20 +117,20 @@ async function submitPost() {
   }
 
   [role='alert']:not([aria-hidden='true']) {
-    @include cmps.paper;
-
-    margin: 0 10px;
-    color: var(--input-error-message);
+    @include cmps.paper {
+      margin: 0 10px;
+      color: var(--input-error-message);
+    }
   }
 
   form {
     button {
-      @include cmps.button-big;
-
-      display: block;
-      width: 300px;
-      max-width: 50%;
-      margin: 10px auto;
+      @include cmps.button-big {
+        display: block;
+        width: 300px;
+        max-width: 50%;
+        margin: 10px auto;
+      }
     }
 
     textarea {

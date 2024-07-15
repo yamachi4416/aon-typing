@@ -274,7 +274,7 @@ function orDefaultComputed<T>(source: () => T, defaultValue: any) {
 
 .typing-hands {
   display: flex;
-  gap: 20px 20px;
+  gap: 20px;
   width: 90%;
   height: 15px;
 

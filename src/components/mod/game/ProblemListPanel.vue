@@ -76,15 +76,15 @@ function removeTag(tag: ProblemItemTag) {
 @use '~/assets/css/cmps';
 
 .tags {
-  @include cmps.buttons;
-
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  justify-content: flex-start;
-  padding: 10px;
-  font-size: 0.8rem;
-  background-color: var(--color-f);
-  border-bottom: 1px solid var(--color-9);
+  @include cmps.buttons {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    justify-content: flex-start;
+    padding: 10px;
+    font-size: 0.8rem;
+    background-color: var(--color-f);
+    border-bottom: 1px solid var(--color-9);
+  }
 }
 </style>

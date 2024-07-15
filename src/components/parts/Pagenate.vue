@@ -62,10 +62,10 @@ watch(
 @use '~/assets/css/cmps';
 
 .pagenate {
-  @include cmps.buttons;
-
-  padding-top: 5px;
-  padding-bottom: 8px;
+  @include cmps.buttons {
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
 
   a,
   label {
