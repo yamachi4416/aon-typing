@@ -47,14 +47,13 @@ export interface ProblemDetail {
   updatedAt: string
   words: ProblemDetailWord[]
   links?: ProblemDetailLink[]
-}
-
-export interface RailwayProblemDetail extends ProblemDetail {
   optional?: {
     cd?: string[]
     coCd: string[]
   }
 }
+
+export interface RailwayProblemDetail extends ProblemDetail {}
 
 export interface RailwayCorporation {
   code: string

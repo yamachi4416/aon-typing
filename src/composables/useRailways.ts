@@ -4,6 +4,13 @@ export function useRailways() {
     transform: (data) => data.value,
   })
 
+  const corporationsIdMap = computed(
+    () =>
+      new Map(
+        corporations.value?.map(({ code, name }) => [code, { code, name }]),
+      ),
+  )
+
   async function retrieveCorporation({ code }: { code: string }) {
     const { fetch } = useFetchCache({
       path: '/api/railway/corporations/:code',
@@ -17,9 +24,14 @@ export function useRailways() {
     return corporation
   }
 
+  function getCorporation(code: string) {
+    return corporationsIdMap.value.get(code?.padStart(4, '0'))
+  }
+
   return {
     corporations,
     fetchCorporations,
     retrieveCorporation,
+    getCorporation,
   }
 }

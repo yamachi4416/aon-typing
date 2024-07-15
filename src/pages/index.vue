@@ -12,4 +12,6 @@ onBeforeMount(() => {
 onBeforeUnmount(() => {
   document.body.classList.remove('scroll-y')
 })
+
+await useRailways().fetchCorporations()
 </script>

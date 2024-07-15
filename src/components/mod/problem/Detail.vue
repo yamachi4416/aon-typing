@@ -33,6 +33,19 @@
               </ul>
             </td>
           </tr>
+          <tr v-if="railway">
+            <th>鉄道会社</th>
+            <td>
+              <a
+                v-if="hasOnRailway"
+                :class="$style['railway-link']"
+                @click.prevent="$emit('railway', railway)"
+              >
+                {{ railway.name }}
+              </a>
+              <span v-else>{{ railway.name }}</span>
+            </td>
+          </tr>
         </tbody>
       </table>
 
@@ -67,16 +80,26 @@
 <script setup lang="ts">
 import type { ProblemDetail, ProblemItemTag } from '~~/types/problems'
 
-defineProps<{
+const props = defineProps<{
   detail: ProblemDetail
 }>()
 
 defineEmits<{
   (e: 'tag', tag: ProblemItemTag): any
+  (e: 'railway', railway: { code: string }): any
 }>()
 
 const uid = useId()
 const hasOnTag = computed(() => !!getCurrentInstance()?.vnode?.props?.onTag)
+const hasOnRailway = computed(
+  () => !!getCurrentInstance()?.vnode?.props?.onRailway,
+)
+const { getCorporation } = useRailways()
+const railway = computed(() =>
+  props.detail.optional?.coCd?.[0]
+    ? getCorporation(props.detail.optional.coCd[0])
+    : undefined,
+)
 </script>
 
 <style lang="scss" module>
@@ -96,5 +119,9 @@ const hasOnTag = computed(() => !!getCurrentInstance()?.vnode?.props?.onTag)
 
 .tags {
   padding: 3px 0;
+}
+
+.railway-link {
+  cursor: pointer;
 }
 </style>

@@ -33,6 +33,13 @@ function newNavigator() {
     })
   }
 
+  async function indexRailwayCorporation({ code }: { code: string }) {
+    await navigateTo({
+      name: 'index-railway-corporations-code',
+      params: { code },
+    })
+  }
+
   async function gameTagDetail({ id }: { id: string }) {
     await navigateTo({
       name: 'game-menu-problems-tags-id',
@@ -116,6 +123,7 @@ function newNavigator() {
     staticPath,
     replaceQuery,
     indexProblemDetail,
+    indexRailwayCorporation,
     indexTagDetail,
     gameTagDetail,
     gameProblemDetail,

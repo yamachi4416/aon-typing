@@ -1,6 +1,10 @@
 <template>
   <div>
-    <ModProblemDetail :detail="detail" @tag="$navigator.indexTagDetail">
+    <ModProblemDetail
+      :detail="detail"
+      @tag="$navigator.indexTagDetail"
+      @railway="$navigator.indexRailwayCorporation"
+    >
       <button v-show="$navigator.enable" @click="$navigator.backOrIndex">
         もどる
       </button>
