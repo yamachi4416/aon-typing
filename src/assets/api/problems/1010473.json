@@ -1,0 +1,50 @@
+{
+  "id": "1010473",
+  "title": "上毛電気鉄道上毛線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-09-01",
+  "updatedAt": "2024-09-01",
+  "words": [
+    { "info": "西桐生", "info2": "にしきりゅう", "word": "nisikiryuu" },
+    { "info": "丸山下", "info2": "まるやました", "word": "maruyamasita" },
+    { "info": "富士山下", "info2": "ふじやました", "word": "hujiyamasita" },
+    { "info": "天王宿", "info2": "てんのうじゅく", "word": "tennnoujuku" },
+    {
+      "info": "桐生球場前",
+      "info2": "きりゅうきゅうじょうまえ",
+      "word": "kiryuukyuujoumae"
+    },
+    { "info": "赤城", "info2": "あかぎ", "word": "akagi" },
+    { "info": "東新川", "info2": "ひがしにっかわ", "word": "higasinikkawa" },
+    { "info": "新川", "info2": "にっかわ", "word": "nikkawa" },
+    { "info": "新里", "info2": "にいさと", "word": "niisato" },
+    { "info": "膳", "info2": "ぜん", "word": "zenn" },
+    { "info": "粕川", "info2": "かすかわ", "word": "kasukawa" },
+    { "info": "新屋", "info2": "あらや", "word": "araya" },
+    { "info": "北原", "info2": "きたはら", "word": "kitahara" },
+    { "info": "樋越", "info2": "ひごし", "word": "higosi" },
+    { "info": "大胡", "info2": "おおご", "word": "oogo" },
+    { "info": "江木", "info2": "えぎ", "word": "egi" },
+    {
+      "info": "心臓血管センター",
+      "info2": "しんぞうけっかんせんたー",
+      "word": "sinzoukekkansenta-"
+    },
+    { "info": "赤坂", "info2": "あかさか", "word": "akasaka" },
+    { "info": "上泉", "info2": "かみいずみ", "word": "kamiizumi" },
+    { "info": "片貝", "info2": "かたかい", "word": "katakai" },
+    { "info": "三俣", "info2": "みつまた", "word": "mitumata" },
+    { "info": "城東", "info2": "じょうとう", "word": "joutou" },
+    {
+      "info": "中央前橋",
+      "info2": "ちゅうおうまえばし",
+      "word": "tyuuoumaebasi"
+    }
+  ],
+  "optional": { "cd": ["473"], "coCd": ["55"] }
+}

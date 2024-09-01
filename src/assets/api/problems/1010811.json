@@ -1,0 +1,80 @@
+{
+  "id": "1010811",
+  "title": "三陸鉄道リアス線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-09-01",
+  "updatedAt": "2024-09-01",
+  "words": [
+    { "info": "久慈", "info2": "くじ", "word": "kuji" },
+    { "info": "陸中宇部", "info2": "りくちゅううべ", "word": "rikutyuuube" },
+    { "info": "陸中野田", "info2": "りくちゅうのだ", "word": "rikutyuunoda" },
+    {
+      "info": "十府ケ浦海岸",
+      "info2": "とふがうらかいがん",
+      "word": "tohugaurakaigann"
+    },
+    { "info": "野田玉川", "info2": "のだたまがわ", "word": "nodatamagawa" },
+    { "info": "堀内", "info2": "ほりない", "word": "horinai" },
+    { "info": "白井海岸", "info2": "しらいかいがん", "word": "siraikaigann" },
+    { "info": "普代", "info2": "ふだい", "word": "hudai" },
+    { "info": "田野畑", "info2": "たのはた", "word": "tanohata" },
+    { "info": "島越", "info2": "しまのこし", "word": "simanokosi" },
+    {
+      "info": "岩泉小本",
+      "info2": "いわいずみおもと",
+      "word": "iwaizumiomoto"
+    },
+    { "info": "摂待", "info2": "せったい", "word": "settai" },
+    { "info": "新田老", "info2": "しんたろう", "word": "sintarou" },
+    { "info": "田老", "info2": "たろう", "word": "tarou" },
+    { "info": "佐羽根", "info2": "さばね", "word": "sabane" },
+    { "info": "一の渡", "info2": "いちのわたり", "word": "itinowatari" },
+    { "info": "山口団地", "info2": "やまぐちだんち", "word": "yamagutidanti" },
+    { "info": "宮古", "info2": "みやこ", "word": "miyako" },
+    { "info": "磯鶏", "info2": "そけい", "word": "sokei" },
+    {
+      "info": "八木沢・宮古短大",
+      "info2": "やぎさわ・みやこたんだい",
+      "word": "yagisawa/miyakotandai"
+    },
+    { "info": "津軽石", "info2": "つがるいし", "word": "tugaruisi" },
+    { "info": "払川", "info2": "はらいがわ", "word": "haraigawa" },
+    { "info": "豊間根", "info2": "とよまね", "word": "toyomane" },
+    {
+      "info": "陸中山田",
+      "info2": "りくちゅうやまだ",
+      "word": "rikutyuuyamada"
+    },
+    { "info": "織笠", "info2": "おりかさ", "word": "orikasa" },
+    { "info": "岩手船越", "info2": "いわてふなこし", "word": "iwatehunakosi" },
+    {
+      "info": "浪板海岸",
+      "info2": "なみいたかいがん",
+      "word": "namiitakaigann"
+    },
+    { "info": "吉里吉里", "info2": "きりきり", "word": "kirikiri" },
+    { "info": "大槌", "info2": "おおつち", "word": "ootuti" },
+    { "info": "鵜住居", "info2": "うのすまい", "word": "unosumai" },
+    { "info": "両石", "info2": "りょういし", "word": "ryouisi" },
+    { "info": "釜石", "info2": "かまいし", "word": "kamaisi" },
+    { "info": "平田", "info2": "へいた", "word": "heita" },
+    { "info": "唐丹", "info2": "とうに", "word": "touni" },
+    { "info": "吉浜", "info2": "よしはま", "word": "yosihama" },
+    { "info": "三陸", "info2": "さんりく", "word": "sanriku" },
+    { "info": "甫嶺", "info2": "ほれい", "word": "horei" },
+    { "info": "恋し浜", "info2": "こいしはま", "word": "koisihama" },
+    { "info": "綾里", "info2": "りょうり", "word": "ryouri" },
+    {
+      "info": "陸前赤崎",
+      "info2": "りくぜんあかさき",
+      "word": "rikuzennakasaki"
+    },
+    { "info": "盛", "info2": "さかり", "word": "sakari" }
+  ],
+  "optional": { "cd": ["811"], "coCd": ["37"] }
+}
