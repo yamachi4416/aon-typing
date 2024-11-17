@@ -48,6 +48,10 @@ export interface StationApiResult {
     apiVersion: string
     engineVersion: string
     Point: Point[]
+    Error?: {
+      code: string
+      Message: string
+    }
   }
 }
 
@@ -133,6 +137,11 @@ export async function fetchStation({
   )
     .then(({ data }) => JSON.parse(data.toString()) as StationApiResult)
     .then((data) => {
+      if (data.ResultSet.Error) {
+        throw new Error(
+          `Error: station(${operationLineCode}) code=${data.ResultSet.Error.code} Message=${data.ResultSet.Error.Message}`,
+        )
+      }
       const points = Array.isArray(data.ResultSet.Point)
         ? data.ResultSet.Point
         : [data.ResultSet.Point]

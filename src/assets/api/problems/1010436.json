@@ -44,7 +44,11 @@
     { "info": "大善寺", "info2": "だいぜんじ", "word": "daizenji" },
     { "info": "安武", "info2": "やすたけ", "word": "yasutake" },
     { "info": "津福", "info2": "つぶく", "word": "tubuku" },
-    { "info": "試験場前", "info2": "しけんじょうまえ", "word": "sikenjoumae" },
+    {
+      "info": "聖マリア病院前",
+      "info2": "せいまりあびょういんまえ",
+      "word": "seimariabyouinmae"
+    },
     { "info": "花畑", "info2": "はなばたけ", "word": "hanabatake" },
     {
       "info": "西鉄久留米",

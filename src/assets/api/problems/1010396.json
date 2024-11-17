@@ -12,11 +12,7 @@
   "optional": { "cd": ["396"], "coCd": ["23"] },
   "words": [
     { "info": "高師浜", "info2": "たかしのはま", "word": "takasinohama" },
-    {
-      "info": "伽羅橋・南",
-      "info2": "きゃらばし・みなみ",
-      "word": "kyarabasi/minami"
-    },
+    { "info": "伽羅橋", "info2": "きゃらばし", "word": "kyarabasi" },
     {
       "info": "伽羅橋・北",
       "info2": "きゃらばし・きた",

@@ -35,22 +35,6 @@
     { "info": "芽室", "info2": "めむろ", "word": "memuro" },
     { "info": "御影", "info2": "みかげ", "word": "mikage" },
     { "info": "十勝清水", "info2": "とかちしみず", "word": "tokatisimizu" },
-    { "info": "新得", "info2": "しんとく", "word": "sintoku" },
-    { "info": "落合", "info2": "おちあい", "word": "otiai" },
-    { "info": "幾寅", "info2": "いくとら", "word": "ikutora" },
-    { "info": "東鹿越", "info2": "ひがししかごえ", "word": "higasisikagoe" },
-    { "info": "金山", "info2": "かなやま", "word": "kanayama" },
-    { "info": "下金山", "info2": "しもかなやま", "word": "simokanayama" },
-    { "info": "山部", "info2": "やまべ", "word": "yamabe" },
-    { "info": "布部", "info2": "ぬのべ", "word": "nunobe" },
-    { "info": "富良野", "info2": "ふらの", "word": "hurano" },
-    { "info": "野花南", "info2": "のかなん", "word": "nokanann" },
-    { "info": "上芦別", "info2": "かみあしべつ", "word": "kamiasibetu" },
-    { "info": "芦別", "info2": "あしべつ", "word": "asibetu" },
-    { "info": "平岸", "info2": "ひらぎし", "word": "hiragisi" },
-    { "info": "茂尻", "info2": "もしり", "word": "mosiri" },
-    { "info": "赤平", "info2": "あかびら", "word": "akabira" },
-    { "info": "東滝川", "info2": "ひがしたきかわ", "word": "higasitakikawa" },
-    { "info": "滝川", "info2": "たきかわ", "word": "takikawa" }
+    { "info": "新得", "info2": "しんとく", "word": "sintoku" }
   ]
 }

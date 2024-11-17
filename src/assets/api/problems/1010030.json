@@ -11,7 +11,17 @@
   "updatedAt": "2022-10-31",
   "optional": { "cd": ["30"], "coCd": ["1"] },
   "words": [
+    {
+      "info": "三厩体育館",
+      "info2": "みんまやたいいくかん",
+      "word": "minmayataiikukann"
+    },
     { "info": "三厩", "info2": "みんまや", "word": "minmaya" },
+    {
+      "info": "浜名五十嵐理容院",
+      "info2": "はまないがらしりよういん",
+      "word": "hamanaigarasiriyouinn"
+    },
     { "info": "津軽浜名", "info2": "つがるはまな", "word": "tugaruhamana" },
     { "info": "今別", "info2": "いまべつ", "word": "imabetu" },
     { "info": "大川平", "info2": "おおかわだい", "word": "ookawadai" },
