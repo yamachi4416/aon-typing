@@ -10,7 +10,7 @@
       <p v-if="kwdsProblems.length == 0">検索結果はありません</p>
       <p v-else>{{ kwdsProblems.length }} 件の検索結果があります</p>
       <footer>
-        <button v-show="$navigator.enable" @click="$router.back">もどる</button>
+        <button v-show="navigator.enable" @click="router.back">もどる</button>
       </footer>
       <template #right>
         <ImgNekoUserKeyboard />
@@ -18,10 +18,10 @@
     </PartsSection>
     <ModProblemLists
       :problems="kwdsProblems"
-      @tag="$navigator.indexTagDetail"
-      @detail="$navigator.indexProblemDetail"
-      @play="$navigator.gameMenu"
-      @page="$navigator.scrollTop"
+      @tag="navigator.indexTagDetail"
+      @detail="navigator.indexProblemDetail"
+      @play="navigator.gameMenu"
+      @page="navigator.scrollTop"
     />
   </div>
 </template>
@@ -30,6 +30,9 @@
 useHead({
   title: '問題いちらん',
 })
+
+const router = useRouter()
+const navigator = useNavigator()
 
 const { problems, fetchProblems } = useProblems()
 

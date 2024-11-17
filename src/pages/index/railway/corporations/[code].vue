@@ -13,7 +13,7 @@
         が表示されている路線はクリックするとタイピングの問題を表示します。
       </p>
       <footer>
-        <button v-show="$navigator.enable" @click="$navigator.backOrIndex">
+        <button v-show="navigator.enable" @click="navigator.backOrIndex">
           もどる
         </button>
       </footer>
@@ -47,8 +47,11 @@
 </template>
 
 <script setup lang="ts">
-const uid = useId()
 const { wrapLoading } = useLoading()
+
+const navigator = useNavigator()
+
+const uid = useId()
 const corporation = await wrapLoading(
   useRailways().retrieveCorporation({
     code: String(useRoute().params.code),

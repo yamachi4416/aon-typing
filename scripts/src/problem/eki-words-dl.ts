@@ -1,6 +1,6 @@
 import { readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
-import * as prettier from 'prettier'
+import { format as prettier } from 'prettier'
 import { defineCommand } from '../lib/util'
 import { fetchOperationLine, fetchStations } from './ekispert/api'
 
@@ -55,7 +55,7 @@ async function outProcess({
     }
   }
 
-  const json = await prettier.format(JSON.stringify(data), {
+  const json = await prettier(JSON.stringify(data), {
     parser: 'json',
   })
 

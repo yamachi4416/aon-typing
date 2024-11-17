@@ -1,41 +1,6 @@
-import { resolve } from 'node:path'
-import { createTestContext, exposeContextToEnv } from '@nuxt/test-utils'
-import { previewServer } from '~~/scripts/src/lib/preview'
+import { setup } from '@nuxt/test-utils'
+import { beforeAll } from 'vitest'
 
-const { close, url } = await getEndpoint()
-
-async function getEndpoint() {
-  const ctx = createTestContext({})
-  if (ctx.url) {
-    return {
-      close: async () => {},
-      url: ctx.url,
-    }
-  }
-
-  if (process.env.TEST_ENDPOINT) {
-    return {
-      close: async () => {},
-      url: process.env.TEST_ENDPOINT,
-    }
-  }
-
-  const { close, address: url } = await previewServer({
-    distDir: resolve(process.cwd(), 'dist'),
-  })
-
-  return {
-    close,
-    url,
-  }
-}
-
-export function setup() {
-  const ctx = createTestContext({ server: false })
-  ctx.url = url
-  exposeContextToEnv()
-}
-
-export async function teardown() {
-  await close()
-}
+beforeAll(() => {
+  setup({ host: process.env.TEST_ENDPOINT, browser: true })
+})

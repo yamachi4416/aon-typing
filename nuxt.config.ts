@@ -108,6 +108,16 @@ export default defineNuxtConfig({
     },
   },
 
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
+      },
+    },
+  },
+
   hooks: {
     'pages:extend'(pages) {
       pages.push({

@@ -2,15 +2,17 @@
   <div>
     <ModProblemLists
       :problems="allNewProblems"
-      @tag="$navigator.indexTagDetail"
-      @detail="$navigator.indexProblemDetail"
-      @play="$navigator.gameMenu"
-      @page="$navigator.scrollTop"
+      @tag="navigator.indexTagDetail"
+      @detail="navigator.indexProblemDetail"
+      @play="navigator.gameMenu"
+      @page="navigator.scrollTop"
     />
   </div>
 </template>
 
 <script setup lang="ts">
+const navigator = useNavigator()
+
 const { allNewProblems, fetchAllNewProblems } = useProblems()
 
 useHead({

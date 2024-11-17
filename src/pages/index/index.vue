@@ -40,9 +40,9 @@
       <h2 id="news-title">新着の問題</h2>
       <ModProblemLists
         :problems="newProblems"
-        @tag="$navigator.indexTagDetail"
-        @detail="$navigator.indexProblemDetail"
-        @play="$navigator.gameMenu"
+        @tag="navigator.indexTagDetail"
+        @detail="navigator.indexProblemDetail"
+        @play="navigator.gameMenu"
       />
       <footer>
         <NuxtLink :to="{ name: 'index-problems-news' }">
@@ -97,6 +97,8 @@
 useHead({
   title: 'トップページ',
 })
+
+const navigator = useNavigator()
 
 const { newProblems, tagSummary, fetchTopNewsProblems, fetchTags } =
   useProblems()

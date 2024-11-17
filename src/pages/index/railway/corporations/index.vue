@@ -12,7 +12,7 @@
         クリックするとその会社の路線のいちらんを表示します。
       </p>
       <footer>
-        <button v-show="$navigator.enable" @click="$navigator.backOrIndex">
+        <button v-show="navigator.enable" @click="navigator.backOrIndex">
           もどる
         </button>
       </footer>
@@ -41,6 +41,8 @@
 </template>
 
 <script setup lang="ts">
+const navigator = useNavigator()
+
 const uid = useId()
 const { corporations } = useRailways()
 

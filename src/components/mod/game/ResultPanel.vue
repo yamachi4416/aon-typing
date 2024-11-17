@@ -22,7 +22,7 @@
       <tbody>
         <tr>
           <th>入力時間</th>
-          <td>{{ $filters.dispTime(result.time) }}</td>
+          <td>{{ fmtDispTime(result.time) }}</td>
         </tr>
         <tr>
           <th>タイプ数</th>
@@ -38,7 +38,7 @@
         </tr>
         <tr>
           <th>正確タイプ率</th>
-          <td>{{ $filters.percent(result.correctRate) }}%</td>
+          <td>{{ fmtPercent(result.correctRate) }}%</td>
         </tr>
       </tbody>
     </table>
@@ -66,6 +66,7 @@
 </template>
 
 <script setup lang="ts">
+import { fmtDispTime, fmtPercent } from '~/utils/filters'
 import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
 import type { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
 

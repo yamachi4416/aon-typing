@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import * as prettier from 'prettier'
+import { format as prettier } from 'prettier'
 import { defineCommand, isPathExists } from '../lib/util'
 import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
 import type {
@@ -26,7 +26,7 @@ async function writeJson(file: string, input: any) {
   const data = isFunction(input) ? await input() : input
   await fs.writeFile(
     file,
-    await prettier.format(JSON.stringify(data), {
+    await prettier(JSON.stringify(data), {
       parser: 'json',
     }),
   )

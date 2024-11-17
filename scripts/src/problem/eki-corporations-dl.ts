@@ -1,6 +1,6 @@
 import path from 'node:path'
 import { mkdir, writeFile } from 'node:fs/promises'
-import * as prettier from 'prettier'
+import { format as prettier } from 'prettier'
 import { defineCommand, isPathExists } from '../lib/util'
 import { fetchCorporations, fetchOperationLines } from './ekispert/api'
 
@@ -54,7 +54,7 @@ export default defineCommand({
 
     await writeFile(
       path.join(distDir, 'corporations.json'),
-      await prettier.format(JSON.stringify(corporations), {
+      await prettier(JSON.stringify(corporations), {
         parser: 'json',
       }),
     )

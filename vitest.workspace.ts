@@ -19,7 +19,8 @@ const unitConfig = mergeConfig<UserConfig, UserConfig>(sharedConfig, {
 const e2eConfig = mergeConfig<UserConfig, UserConfig>(sharedConfig, {
   test: {
     dir: './test/e2e',
-    globalSetup: ['./test/e2e/setup.ts'],
+    globalSetup: ['./test/e2e/globalSetup.ts'],
+    setupFiles: ['./test/e2e/setup.ts'],
     testTimeout: 30_000,
   },
 })

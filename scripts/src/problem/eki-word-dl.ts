@@ -1,6 +1,6 @@
 import path from 'node:path'
 import fs from 'node:fs'
-import * as prettier from 'prettier'
+import { format as prettier } from 'prettier'
 import { defineCommand, fmtDate, isPathExists, prompt } from '../lib/util'
 import { fetchOperationLine, fetchStations } from './ekispert/api'
 
@@ -116,7 +116,7 @@ export default defineCommand({
       operationLineCodes: cds,
     }).then(({ words }) => words)
 
-    const json = await prettier.format(JSON.stringify(data), {
+    const json = await prettier(JSON.stringify(data), {
       parser: 'json',
     })
 

@@ -1,4 +1,5 @@
 function newNavigator() {
+  const router = useRouter()
   const path = ref<string | undefined>()
   const enable = computed(() => !!path.value)
 
@@ -8,7 +9,6 @@ function newNavigator() {
   }
 
   function replaceQuery(query: Record<string, string | string[]>, keep = true) {
-    const router = useRouter()
     const repQuery = keep ? { ...useRoute().query, ...query } : { ...query }
     Object.keys(repQuery).forEach((key) => {
       if (!repQuery[key]) {
@@ -138,7 +138,7 @@ function newNavigator() {
 export default defineNuxtPlugin((_) => {
   const navigator = newNavigator()
 
-  if (process.client) {
+  if (import.meta.client) {
     useRouter().afterEach(() => {
       navigator.path.value = useRouter().options.history.state.back as string
     })
