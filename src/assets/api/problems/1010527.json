@@ -1,0 +1,33 @@
+{
+  "id": "1010527",
+  "title": "岳南鉄道線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-11-17",
+  "updatedAt": "2024-11-17",
+  "words": [
+    { "info": "岳南江尾", "info2": "がくなんえのお", "word": "gakunannenoo" },
+    { "info": "神谷", "info2": "かみや", "word": "kamiya" },
+    { "info": "須津", "info2": "すど", "word": "sudo" },
+    {
+      "info": "岳南富士岡",
+      "info2": "がくなんふじおか",
+      "word": "gakunanhujioka"
+    },
+    { "info": "比奈", "info2": "ひな", "word": "hina" },
+    { "info": "岳南原田", "info2": "がくなんはらだ", "word": "gakunanharada" },
+    { "info": "本吉原", "info2": "ほんよしわら", "word": "honyosiwara" },
+    {
+      "info": "吉原本町",
+      "info2": "よしわらほんちょう",
+      "word": "yosiwarahontyou"
+    },
+    { "info": "ジヤトコ前", "info2": "じゃとこまえ", "word": "jatokomae" },
+    { "info": "吉原", "info2": "よしわら", "word": "yosiwara" }
+  ],
+  "optional": { "cd": ["527"], "coCd": ["93"] }
+}
