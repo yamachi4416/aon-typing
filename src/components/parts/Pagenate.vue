@@ -52,7 +52,7 @@ watch(
   () => pages.value.last,
   (last) => {
     if (page.value > last) {
-      page.value = last
+      page.value = last || 1
     }
   },
 )

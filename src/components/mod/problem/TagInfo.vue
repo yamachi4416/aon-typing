@@ -68,13 +68,12 @@ const tags = computed(() => {
     }))
 })
 
-onMounted(() => {
+onMounted(async () => {
   const idsHas = new Set(tags.value.map(({ id }) => id))
   const ids = tagIds.value.filter(idsHas.has.bind(idsHas))
   if (tagIds.value.length !== ids.length) {
-    nextTick().then(() => {
-      tagIds.value = ids
-    })
+    await nextTick()
+    tagIds.value = ids
   }
 })
 </script>
