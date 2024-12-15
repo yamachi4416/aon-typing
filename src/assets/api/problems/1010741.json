@@ -1,0 +1,46 @@
+{
+  "id": "1010741",
+  "title": "富山地方鉄道１系統の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2024-12-15",
+  "updatedAt": "2024-12-15",
+  "words": [
+    { "info": "富山駅", "info2": "とやまえき", "word": "toyamaeki" },
+    {
+      "info": "電鉄富山駅・エスタ前",
+      "info2": "でんてつとやまえき・えすたまえ",
+      "word": "dentetutoyamaeki/esutamae"
+    },
+    {
+      "info": "地鉄ビル前",
+      "info2": "ちてつびるまえ",
+      "word": "titetubirumae"
+    },
+    { "info": "電気ビル前", "info2": "でんきびるまえ", "word": "denkibirumae" },
+    { "info": "桜橋", "info2": "さくらばし", "word": "sakurabasi" },
+    { "info": "荒町", "info2": "あらまち", "word": "aramati" },
+    { "info": "中町", "info2": "なかまち", "word": "nakamati" },
+    { "info": "西町", "info2": "にしちょう", "word": "nisityou" },
+    { "info": "上本町", "info2": "かみほんまち", "word": "kamihonmati" },
+    { "info": "広貫堂前", "info2": "こうかんどうまえ", "word": "koukandoumae" },
+    { "info": "西中野", "info2": "にしなかの", "word": "nisinakano" },
+    { "info": "小泉町", "info2": "こいずみちょう", "word": "koizumityou" },
+    {
+      "info": "堀川小泉",
+      "info2": "ほりかわこいずみ",
+      "word": "horikawakoizumi"
+    },
+    { "info": "大町", "info2": "おおまち", "word": "oomati" },
+    {
+      "info": "南富山駅前",
+      "info2": "みなみとやまえきまえ",
+      "word": "minamitoyamaekimae"
+    }
+  ],
+  "optional": { "cd": ["741"], "coCd": ["77"] }
+}
