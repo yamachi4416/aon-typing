@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest'
+import news from '~/assets/api/newProblems.json'
 import {
   createPage,
   expectLoadingHidden,
   expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
-import news from '~/assets/api/newProblems.json'
 
 describe('新着の問題の画面遷移の確認', () => {
   it("'新着の問題をもっと見る'リンクをクリックすると'問題いちらん（新着順）'ページに遷移する", async () => {

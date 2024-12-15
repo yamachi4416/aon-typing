@@ -139,8 +139,11 @@ function pauseToggle() {
   }
 }
 
-function orDefaultComputed<T>(source: () => T, defaultValue: any) {
-  return computed<Exclude<T, undefined>>(() => source() ?? defaultValue)
+function orDefaultComputed<T>(
+  source: () => T,
+  defaultValue: Exclude<Partial<T>, undefined>,
+) {
+  return computed(() => source() ?? (defaultValue as Exclude<T, undefined>))
 }
 </script>
 

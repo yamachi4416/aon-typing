@@ -22,8 +22,8 @@
 
 <script setup lang="ts">
 import ModalPanel from '~/components/parts/ModalPanel.vue'
-import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
 import { TypingGame } from '~~/libs/TypingGame'
+import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
 import { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
 import { countDown } from '~~/libs/Util'
 
@@ -62,7 +62,7 @@ onMounted(async () => {
 
   state.problem = new TypingProblemQuestioner({
     problem,
-    setting,
+    setting: setting.value,
   })
 
   startTyping()

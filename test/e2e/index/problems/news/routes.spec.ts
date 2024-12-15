@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest'
+import problems from '~/assets/api/newProblems.json'
 import {
   createPage,
   expectLoadingHidden,
   expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
-import problems from '~/assets/api/newProblems.json'
 
 describe.each(problems.slice(0, 2))(
   '問題いちらん（新着順）いちらんページの画面遷移の確認',

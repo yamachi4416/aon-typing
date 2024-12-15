@@ -1,5 +1,5 @@
-import type { AvailableRouterMethod, NitroFetchRequest } from 'nitropack'
 import type { FetchResult } from '#app'
+import type { AvailableRouterMethod, NitroFetchRequest } from 'nitropack'
 
 export function useFetchCache<
   K extends NitroFetchRequest,
@@ -7,7 +7,7 @@ export function useFetchCache<
     ? 'get'
     : AvailableRouterMethod<K>,
   R extends FetchResult<K, M> = FetchResult<K, M>,
-  T = any,
+  T = unknown,
 >({
   path,
   key,

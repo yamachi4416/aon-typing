@@ -74,8 +74,7 @@ export interface OperationLineApiResult {
   }
 }
 
-type FetchStationResult =
-  ReturnType<typeof fetchStation> extends Promise<infer T> ? T : any
+type FetchStationResult = Awaited<ReturnType<typeof fetchStation>>
 
 function joinWords(pages: Array<FetchStationResult['words']>) {
   let words = [...pages[0]]
@@ -145,7 +144,7 @@ export async function fetchStation({
       const points = Array.isArray(data.ResultSet.Point)
         ? data.ResultSet.Point
         : [data.ResultSet.Point]
-      const words = points.map((p: any) => ({
+      const words = points.map((p) => ({
         info: p.Station.Name.replace(/\(.+?\)$/, '') as string,
         info2: p.Station.Yomi as string,
       }))

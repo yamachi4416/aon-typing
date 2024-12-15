@@ -18,7 +18,7 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits<{
-  (e: 'click', start: boolean): any
+  (e: 'click', start: boolean): unknown
 }>()
 
 const clicked = ref(false)

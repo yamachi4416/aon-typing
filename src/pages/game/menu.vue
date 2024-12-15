@@ -28,8 +28,8 @@
 </template>
 
 <script setup lang="ts">
-import ModalPanel from '~/components/parts/ModalPanel.vue'
 import ProblemDetailPanel from '~/components/mod/game/ProblemDetailPanel.vue'
+import ModalPanel from '~/components/parts/ModalPanel.vue'
 import type { ProblemListItem } from '~~/types/problems'
 
 type Modal = InstanceType<typeof ModalPanel>

@@ -17,9 +17,8 @@ import type {
 } from '~~/types/problems'
 
 defineEmits<{
-  (e: 'select', detail: ProblemDetail): any
-  (e: 'back'): any
-  (e: 'close'): any
+  (e: 'select', detail: ProblemDetail): unknown
+  (e: 'back' | 'close'): unknown
 }>()
 
 const showSelect = ref(true)

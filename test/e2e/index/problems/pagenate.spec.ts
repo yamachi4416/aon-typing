@@ -7,8 +7,8 @@ import {
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
-import { problems } from '~/assets/api/problems.json'
 import newProblems from '~/assets/api/newProblems.json'
+import { problems } from '~/assets/api/problems.json'
 import tag from '~/assets/api/tags/00009.json'
 
 describe.each([

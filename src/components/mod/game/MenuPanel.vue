@@ -127,11 +127,8 @@ import { helpAnimals } from '~~/libs/TypingGameInfo'
 import type { ProblemListItem } from '~~/types/problems'
 
 const emit = defineEmits<{
-  (e: 'openProblemSelect'): any
-  (e: 'start'): any
-  (e: 'cancel'): any
-  (e: 'close'): any
-  (e: 'detail', problem?: ProblemListItem): any
+  (e: 'openProblemSelect' | 'start' | 'cancel' | 'close'): unknown
+  (e: 'detail', problem?: ProblemListItem): unknown
 }>()
 
 const { problems } = useProblems()

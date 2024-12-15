@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest'
+import corporations from '~/assets/api/railway/corporations.json'
 import {
   createPage,
   expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
-import corporations from '~/assets/api/railway/corporations.json'
 
 describe('鉄道の会社の路線のいちらんページの画面遷移の確認', () => {
   it("存在しない鉄道の会社のページにアクセスすると'404'ページに遷移する", async () => {

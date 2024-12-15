@@ -85,8 +85,8 @@ const props = defineProps<{
 }>()
 
 defineEmits<{
-  (e: 'tag', tag: ProblemItemTag): any
-  (e: 'railway', railway: { code: string }): any
+  (e: 'tag', tag: ProblemItemTag): unknown
+  (e: 'railway', railway: { code: string }): unknown
 }>()
 
 const uid = useId()

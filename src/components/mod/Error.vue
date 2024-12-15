@@ -41,7 +41,7 @@ onBeforeMount(() => {
 })
 
 const offline = computed(() => {
-  if (!process.client) {
+  if (!import.meta.client) {
     return false
   }
   return !window.navigator.onLine

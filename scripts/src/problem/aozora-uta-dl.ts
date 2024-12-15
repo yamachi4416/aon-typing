@@ -1,9 +1,9 @@
+import { JSDOM } from 'jsdom'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { TextDecoder } from 'node:util'
-import { JSDOM } from 'jsdom'
-import { defineCommand, httpFetch } from '../lib/util'
 import { kana2Hira } from '~~/libs/TypingJapaneseChars'
+import { defineCommand, httpFetch } from '../lib/util'
 
 const normalizeMap: Record<string, string> = {
   一: '１',

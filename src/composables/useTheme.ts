@@ -11,11 +11,13 @@ export function useTheme() {
 
     try {
       localStorage.setItem(themeKey, theme)
-    } catch (e) {}
+    } catch {
+      // ignore
+    }
   }
 
   function changeTheme(theme: ThemeValues) {
-    if (process.server) {
+    if (import.meta.server) {
       return
     }
 

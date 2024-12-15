@@ -76,9 +76,7 @@ defineProps<{
 }>()
 
 defineEmits<{
-  (e: 'retry'): any
-  (e: 'next'): any
-  (e: 'menu'): any
+  (e: 'retry' | 'next' | 'menu'): unknown
 }>()
 </script>
 

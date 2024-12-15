@@ -1,7 +1,7 @@
+import * as esbuild from 'esbuild'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import url from 'node:url'
-import * as esbuild from 'esbuild'
 import yargs from 'yargs'
 ;(async function main() {
   const basedir = path.dirname(url.fileURLToPath(import.meta.url))
@@ -62,7 +62,7 @@ import yargs from 'yargs'
     .command({
       command: 'clean',
       describe: 'clean outdir',
-      handler: async (_) => {
+      handler: async () => {
         await fs.rm(outdir, { recursive: true })
       },
     })

@@ -17,7 +17,7 @@ useHead({
 })
 
 onErrorCaptured((err) => {
-  if (process.client) {
+  if (import.meta.client) {
     healthcheck().then((ok) => {
       stopLoading()
       if (!ok) {

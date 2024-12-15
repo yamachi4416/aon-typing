@@ -1,5 +1,5 @@
 // prettier-ignore
-const KeyValues = [
+const _KeyValues = [
 'zh', 'ctrl', 'bs', 'cap', 'shiftL', 'shiftR', ' ', '\t', '\\', '\n',
 '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '^',
 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '@', '[',
@@ -11,7 +11,7 @@ const KeyValues = [
 'Z', 'X', 'C', 'V', 'B', 'N', 'M',  '<', '>', '?', '_'
 ] as const
 
-type KeyValue = (typeof KeyValues)[number]
+type KeyValue = (typeof _KeyValues)[number]
 
 export type Key = Readonly<[KeyValue, KeyValue]>
 

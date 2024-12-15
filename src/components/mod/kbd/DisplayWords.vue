@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { TypingGameWordState } from '~~/libs/TypingGameWordStates'
+import type { TypingGameWordState } from '~~/libs/TypingGameWordStates'
 
 const props = withDefaults(
   defineProps<{

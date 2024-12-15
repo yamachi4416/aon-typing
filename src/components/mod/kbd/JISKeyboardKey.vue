@@ -80,9 +80,9 @@
 </template>
 
 <script setup lang="ts">
+import type { Key } from '~~/libs/Keys'
 import Kbd from './parts/Kbd.vue'
 import KeyboardKey from './parts/KeyboardKey.vue'
-import type { Key } from '~~/libs/Keys'
 
 const props = withDefaults(
   defineProps<{
@@ -106,7 +106,7 @@ const text = computed(
 )
 
 const emit = defineEmits<{
-  (e: 'click', kbd: Key, start: boolean): any
+  (e: 'click', kbd: Key, start: boolean): unknown
 }>()
 
 function onClick(start: boolean) {

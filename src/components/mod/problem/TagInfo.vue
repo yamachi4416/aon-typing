@@ -40,7 +40,7 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{
-  (e: 'tag', tags: string[]): any
+  (e: 'tag', tags: string[]): unknown
 }>()
 
 const tagIds = computed({

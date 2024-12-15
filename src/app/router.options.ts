@@ -1,6 +1,6 @@
-import type { RouterConfig } from 'nuxt/schema'
 import { isChangingPage } from '#app/components/utils'
 import type { RouteLocationNormalized, RouterScrollBehavior } from '#vue-router'
+import type { RouterConfig } from 'nuxt/schema'
 // @ts-expect-error virtual file
 import { appPageTransition as defaultPageTransition } from '#build/nuxt.config'
 

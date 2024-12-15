@@ -1,7 +1,7 @@
+import { createResolver } from '@nuxt/kit'
 import { readFileSync } from 'node:fs'
 import qs from 'node:querystring'
 import { defineNuxtConfig } from 'nuxt/config'
-import { createResolver } from '@nuxt/kit'
 
 const resolver = createResolver(import.meta.url)
 
@@ -46,6 +46,11 @@ export const routes = (() => {
   ]
 })()
 
+const fontUrl = `https://fonts.googleapis.com/css2?${qs.encode({
+  family: ['Itim', 'Noto Sans JP:wght@400'],
+  display: 'swap',
+})}`
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   components: true,
@@ -78,7 +83,14 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        ...googleFont(),
+        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com/' },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com/',
+          crossorigin: '',
+        },
+        { rel: 'preload', as: 'style', href: fontUrl },
+        { rel: 'stylesheet', href: fontUrl },
       ],
       script: [{ src: '/static/js/index.js' }],
     },
@@ -130,17 +142,3 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-07-06',
 })
-
-function googleFont() {
-  const fontUrl = `https://fonts.googleapis.com/css2?${qs.encode({
-    family: ['Itim', 'Noto Sans JP:wght@400'],
-    display: 'swap',
-  })}`
-
-  return [
-    { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com/' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com/', crossorigin: '' },
-    { rel: 'preload', as: 'style', href: fontUrl },
-    { rel: 'stylesheet', href: fontUrl },
-  ] as any[]
-}

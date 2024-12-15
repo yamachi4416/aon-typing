@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest'
+import tag from '~/assets/api/tags/00009.json'
 import {
   createPage,
   expectLoadingHidden,
   expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
-import tag from '~/assets/api/tags/00009.json'
 
 describe(`問題 タグ：${tag.name} ページの画面遷移の確認`, () => {
   const { id, problems } = tag

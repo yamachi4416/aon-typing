@@ -1,11 +1,11 @@
+import type { TypingGameWordData } from './TypingGameWordData'
+import type { TypingGamer } from './TypingGamer'
 import {
   allowDoubleN,
   typeCharsFindJapaneseChars,
   typeCharsToJapaneseChars,
   typeJapaneseChars,
 } from './TypingJapaneseChars'
-import type { TypingGameWordData } from './TypingGameWordData'
-import type { TypingGamer } from './TypingGamer'
 
 export class TypingGamerJapanese implements TypingGamer {
   init(word?: TypingGameWordData) {

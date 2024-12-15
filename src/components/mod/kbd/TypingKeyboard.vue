@@ -9,9 +9,9 @@
 </template>
 
 <script setup lang="ts">
+import JISKeyboard from '~/components/mod/kbd/JISKeyboard.vue'
 import type { Keys } from '~~/libs/Keys'
 import type { GameSetting } from '~~/libs/TypingGame'
-import JISKeyboard from '~/components/mod/kbd/JISKeyboard.vue'
 
 const props = defineProps<{
   typeKey?: string

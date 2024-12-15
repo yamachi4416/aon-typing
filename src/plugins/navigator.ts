@@ -9,12 +9,11 @@ function newNavigator() {
   }
 
   function replaceQuery(query: Record<string, string | string[]>, keep = true) {
-    const repQuery = keep ? { ...useRoute().query, ...query } : { ...query }
-    Object.keys(repQuery).forEach((key) => {
-      if (!repQuery[key]) {
-        delete repQuery[key]
-      }
-    })
+    const repQuery = Object.fromEntries(
+      Object.entries(
+        keep ? { ...useRoute().query, ...query } : { ...query },
+      ).filter(([_, val]) => val),
+    )
     const to = router.resolve({ query: repQuery }, router.currentRoute.value)
     router.options.history.replace(to.fullPath)
   }

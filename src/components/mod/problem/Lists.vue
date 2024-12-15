@@ -31,10 +31,9 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{
-  (e: 'tag', tag: ProblemItemTag): any
-  (e: 'detail', p: ProblemListItem): any
-  (e: 'play', p: ProblemListItem): any
-  (e: 'page', page: number): any
+  (e: 'tag', tag: ProblemItemTag): unknown
+  (e: 'detail' | 'play', p: ProblemListItem): unknown
+  (e: 'page', page: number): unknown
 }>()
 
 const route = useRoute()

@@ -41,9 +41,9 @@
 </template>
 
 <script setup lang="ts">
-import KbdKey from './JISKeyboardKey.vue'
 import type { Key, Keys } from '~~/libs/Keys'
 import type { GameSetting } from '~~/libs/TypingGame'
+import KbdKey from './JISKeyboardKey.vue'
 
 const props = defineProps<{
   typeKey?: string

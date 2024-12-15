@@ -53,7 +53,7 @@ export interface ProblemDetail {
   }
 }
 
-export interface RailwayProblemDetail extends ProblemDetail {}
+export type RailwayProblemDetail = ProblemDetail
 
 export interface RailwayCorporation {
   code: string

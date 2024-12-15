@@ -1,11 +1,11 @@
-export function isNumber(num: any): num is number {
+export function isNumber(num: unknown): num is number {
   if (num == null) {
     return false
   }
   return typeof num === 'number' && !isNaN(num)
 }
 
-export function isFunction(fn: any): fn is Function {
+export function isFunction<T extends () => void>(fn: unknown): fn is T {
   return typeof fn === 'function'
 }
 
@@ -90,9 +90,9 @@ async function intervalTimer(
     const timer = timerTicker(fps)
 
     if (options.abort) {
-      options.abort.signal?.addEventListener('abort', function () {
-        options?.rejectOnAbort ? reject(new Error('abort')) : resolve(count)
-      })
+      options.abort.signal?.addEventListener('abort', () =>
+        options?.rejectOnAbort ? reject(new Error('abort')) : resolve(count),
+      )
     }
 
     const entry = timerEntry(() => {
@@ -128,7 +128,7 @@ export async function wait(
   time: number,
   options: { abort?: AbortController; rejectOnAbort?: boolean } = {},
 ) {
-  if (process.client) {
+  if (import.meta.client) {
     return await intervalTimer(1, () => {}, {
       ...options,
       interval: time,
@@ -175,7 +175,7 @@ export async function healthcheck() {
     const time = new Date().getTime()
     const res = await fetch(`/favicon.ico?t=${time}`)
     return res.status >= 200 && res.status < 300
-  } catch (err) {
+  } catch {
     return false
   }
 }

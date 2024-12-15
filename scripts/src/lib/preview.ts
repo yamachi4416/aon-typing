@@ -1,5 +1,5 @@
+import contentDisposition from 'content-disposition'
 import fs from 'node:fs/promises'
-import { createGzip } from 'node:zlib'
 import {
   type IncomingMessage,
   type ServerResponse,
@@ -7,7 +7,7 @@ import {
 } from 'node:http'
 import type { AddressInfo } from 'node:net'
 import path from 'node:path'
-import contentDisposition from 'content-disposition'
+import { createGzip } from 'node:zlib'
 
 type Logger = Pick<Console, 'info' | 'error'>
 

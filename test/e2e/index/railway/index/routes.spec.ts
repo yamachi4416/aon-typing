@@ -1,11 +1,11 @@
 import { describe, it } from 'vitest'
+import corporations from '~/assets/api/railway/corporations.json'
 import {
   createPage,
   expectLoadingHidden,
   expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
-import corporations from '~/assets/api/railway/corporations.json'
 
 describe.each(
   corporations

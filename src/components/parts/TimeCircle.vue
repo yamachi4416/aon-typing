@@ -29,7 +29,7 @@
 
 <script setup lang="ts">
 defineEmits<{
-  (e: 'click'): any
+  (e: 'click'): void
 }>()
 
 const props = withDefaults(

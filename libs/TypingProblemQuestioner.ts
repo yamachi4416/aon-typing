@@ -1,8 +1,8 @@
+import type { GameSetting } from '~~/libs/TypingGame'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
 import type { ProblemDetail } from '~~/types/problems'
-import type { GameSetting } from '~~/libs/TypingGame'
 
-const shuffle = (array: any[]) => {
+const shuffle = <T>(array: T[]) => {
   for (let i = array.length - 1; i > 0; i--) {
     const r = Math.floor(Math.random() * (i + 1))
     const tmp = array[i]
@@ -12,21 +12,29 @@ const shuffle = (array: any[]) => {
 }
 
 export class TypingProblemQuestioner {
-  problem?: ProblemDetail
+  problem: ProblemDetail
   words: TypingGameWordData[] = []
   endWords: TypingGameWordData[] = []
-  setting: any
+  setting: GameSetting
 
-  constructor({ problem, setting }: { problem: ProblemDetail; setting: any }) {
+  constructor({
+    problem,
+    setting,
+  }: {
+    problem: ProblemDetail
+    setting: GameSetting
+  }) {
+    this.problem = problem
+    this.setting = setting
     this.init({ problem, setting })
   }
 
   get id() {
-    return this.problem?.id
+    return this.problem.id
   }
 
   get type() {
-    return this.problem?.type
+    return this.problem.type
   }
 
   get hasNext() {
@@ -44,18 +52,12 @@ export class TypingProblemQuestioner {
     return this.words[0]
   }
 
-  init({
-    problem,
-    setting,
-  }: {
-    problem?: ProblemDetail
-    setting: GameSetting
-  }) {
+  init({ problem, setting }: { problem: ProblemDetail; setting: GameSetting }) {
     this.problem = problem
+    this.setting = setting
     this.words =
       problem?.words.map((w, i) => new TypingGameWordData(i, w)) ?? []
     this.endWords = []
-    this.setting = setting
 
     switch (setting.problemOrder) {
       case 'random':

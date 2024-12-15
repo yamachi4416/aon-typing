@@ -1,8 +1,8 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { format as prettier } from 'prettier'
-import { defineCommand, isPathExists } from '../lib/util'
 import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
+import { isFunction } from '~~/libs/Util'
 import type {
   ProblemDetail,
   ProblemListItem,
@@ -11,7 +11,7 @@ import type {
   RailwayProblemDetail,
   TagInfo,
 } from '~~/types/problems'
-import { isFunction } from '~~/libs/Util'
+import { defineCommand, isPathExists } from '../lib/util'
 
 type ProblemDetailData = Omit<ProblemDetail, 'tags'> & { tags: string[] }
 
@@ -22,8 +22,8 @@ async function listJsonFiles(dir: string) {
     .map((entry) => path.resolve(dir, entry.name))
 }
 
-async function writeJson(file: string, input: any) {
-  const data = isFunction(input) ? await input() : input
+async function writeJson(file: string, input: unknown) {
+  const data = isFunction<() => Promise<void>>(input) ? await input() : input
   await fs.writeFile(
     file,
     await prettier(JSON.stringify(data), {
@@ -52,13 +52,16 @@ async function generateProblemData({
   await fs.rm(problemsDist, { recursive: true }).catch(() => {})
   await fs.mkdir(problemsDist, { recursive: true })
 
-  const tags = await fs
+  const tags: Record<
+    string,
+    { id: string; count?: number; problems: ProblemListItem[] }
+  > = await fs
     .readFile(tagsFile, { flag: 'r' })
     .then((buf) => JSON.parse(buf.toString()))
     .catch(() => ({}))
 
   let tagId = Object.values(tags).length + 1
-  Object.values(tags).forEach((m: any) => {
+  Object.values(tags).forEach((m) => {
     m.problems = []
   })
 

@@ -31,14 +31,13 @@
 </template>
 
 <script setup lang="ts">
-import ModalContentVue from '~/components/parts/ModalContent.vue'
+import type ModalContentVue from '~/components/parts/ModalContent.vue'
 import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 
 defineEmits<{
-  (e: 'select', item: ProblemListItem): any
-  (e: 'detail', item: ProblemListItem): any
-  (e: 'tag', item: ProblemItemTag): any
-  (e: 'close'): any
+  (e: 'select' | 'detail', item: ProblemListItem): unknown
+  (e: 'tag', item: ProblemItemTag): unknown
+  (e: 'close'): unknown
 }>()
 
 const { problems, filterTagProblems } = useProblems()

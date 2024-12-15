@@ -29,10 +29,10 @@ export class TypingGameInfo {
     this.totalTypeCorrect = game.totalTypeCorrect
     this.endWords = []
     if (game.problem?.endWords) {
-      this.endWords.push(...game.problem?.endWords)
+      this.endWords.push(...game.problem.endWords)
     }
     if (game.problem?.current) {
-      this.endWords.push(game.problem?.current)
+      this.endWords.push(game.problem.current)
     }
   }
 

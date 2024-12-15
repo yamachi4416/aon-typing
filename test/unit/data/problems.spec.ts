@@ -1,11 +1,11 @@
-import { it, assert, expect } from 'vitest'
+import { readdir, readFile } from 'node:fs/promises'
 import { cpus } from 'node:os'
 import { resolve } from 'node:path'
-import { readdir, readFile } from 'node:fs/promises'
-import type { ProblemDetail } from '~~/types/problems'
+import { assert, expect, it } from 'vitest'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
 import { useTypingGamer } from '~~/libs/TypingGamer'
 import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
+import type { ProblemDetail } from '~~/types/problems'
 
 async function listFiles() {
   const dir = './src/assets/api/problems'

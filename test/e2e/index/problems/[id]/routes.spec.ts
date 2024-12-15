@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest'
+import problem from '~/assets/api/problems/1000001.json'
 import {
   createPage,
   expectLoadingHidden,
   expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
-import problem from '~/assets/api/problems/1000001.json'
 
 describe('問題の内容ページの画面遷移の確認', () => {
   it("'プレイする'ボタンをクリックすると'タイピングメニュー'ページに遷移する", async () => {

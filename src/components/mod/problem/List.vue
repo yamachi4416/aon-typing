@@ -27,6 +27,6 @@ withDefaults(
 )
 
 defineEmits<{
-  (e: 'tag', tag: ProblemItemTag): any
+  (e: 'tag', tag: ProblemItemTag): unknown
 }>()
 </script>
