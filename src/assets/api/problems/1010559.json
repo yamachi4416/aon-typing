@@ -1,0 +1,45 @@
+{
+  "id": "1010559",
+  "title": "京都丹後鉄道宮福線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-01-05",
+  "updatedAt": "2025-01-05",
+  "words": [
+    { "info": "福知山", "info2": "ふくちやま", "word": "hukutiyama" },
+    {
+      "info": "福知山市民病院口",
+      "info2": "ふくちやましみんびょういんぐち",
+      "word": "hukutiyamasiminbyouinguti"
+    },
+    {
+      "info": "荒河かしの木台",
+      "info2": "あらがかしのきだい",
+      "word": "aragakasinokidai"
+    },
+    { "info": "牧", "info2": "まき", "word": "maki" },
+    { "info": "下天津", "info2": "しもあまづ", "word": "simoamadu" },
+    { "info": "公庄", "info2": "ぐじょう", "word": "gujou" },
+    { "info": "大江", "info2": "おおえ", "word": "ooe" },
+    {
+      "info": "大江高校前",
+      "info2": "おおえこうこうまえ",
+      "word": "ooekoukoumae"
+    },
+    { "info": "二俣", "info2": "ふたまた", "word": "hutamata" },
+    {
+      "info": "大江山口内宮",
+      "info2": "おおえやまぐちないく",
+      "word": "ooeyamagutinaiku"
+    },
+    { "info": "辛皮", "info2": "からかわ", "word": "karakawa" },
+    { "info": "喜多", "info2": "きた", "word": "kita" },
+    { "info": "宮村", "info2": "みやむら", "word": "miyamura" },
+    { "info": "宮津", "info2": "みやづ", "word": "miyadu" }
+  ],
+  "optional": { "cd": ["559"], "coCd": ["111"] }
+}
