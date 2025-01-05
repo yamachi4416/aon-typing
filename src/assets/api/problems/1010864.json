@@ -1,0 +1,94 @@
+{
+  "id": "1010864",
+  "title": "宇都宮ライトレールの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-01-05",
+  "updatedAt": "2025-01-05",
+  "words": [
+    {
+      "info": "芳賀・高根沢工業団地",
+      "info2": "はが・たかねざわこうぎょうだんち",
+      "word": "haga/takanezawakougyoudanti"
+    },
+    {
+      "info": "かしの森公園前",
+      "info2": "かしのもりこうえんまえ",
+      "word": "kasinomorikouenmae"
+    },
+    {
+      "info": "芳賀町工業団地管理センター前",
+      "info2": "はがまちこうぎょうだんちかんりせんたーまえ",
+      "word": "hagamatikougyoudantikanrisenta-mae"
+    },
+    { "info": "芳賀台", "info2": "はがだい", "word": "hagadai" },
+    {
+      "info": "ゆいの杜東",
+      "info2": "ゆいのもりひがし",
+      "word": "yuinomorihigasi"
+    },
+    {
+      "info": "ゆいの杜中央",
+      "info2": "ゆいのもりちゅうおう",
+      "word": "yuinomorityuuou"
+    },
+    {
+      "info": "ゆいの杜西",
+      "info2": "ゆいのもりにし",
+      "word": "yuinomorinisi"
+    },
+    {
+      "info": "グリーンスタジアム前",
+      "info2": "ぐりーんすたじあむまえ",
+      "word": "guri-nsutajiamumae"
+    },
+    {
+      "info": "清原地区市民センター前",
+      "info2": "きよはらちくしみんせんたーまえ",
+      "word": "kiyoharatikusiminsenta-mae"
+    },
+    {
+      "info": "清陵高校前",
+      "info2": "せいりょうこうこうまえ",
+      "word": "seiryoukoukoumae"
+    },
+    {
+      "info": "飛山城跡",
+      "info2": "とびやまじょうあと",
+      "word": "tobiyamajouato"
+    },
+    {
+      "info": "平石中央小学校前",
+      "info2": "ひらいしちゅうおうしょうがっこうまえ",
+      "word": "hiraisityuuousyougakkoumae"
+    },
+    { "info": "平石", "info2": "ひらいし", "word": "hiraisi" },
+    {
+      "info": "宇都宮大学陽東キャンパス",
+      "info2": "うつのみやだいがくようとうきゃんぱす",
+      "word": "utunomiyadaigakuyoutoukyanpasu"
+    },
+    {
+      "info": "陽東３丁目",
+      "info2": "ようとうさんちょうめ",
+      "word": "youtousantyoume"
+    },
+    { "info": "峰", "info2": "みね", "word": "mine" },
+    {
+      "info": "駅東公園前",
+      "info2": "えきひがしこうえんまえ",
+      "word": "ekihigasikouenmae"
+    },
+    { "info": "東宿郷", "info2": "ひがししゅくごう", "word": "higasisyukugou" },
+    {
+      "info": "宇都宮駅東口",
+      "info2": "うつのみやえきひがしぐち",
+      "word": "utunomiyaekihigasiguti"
+    }
+  ],
+  "optional": { "cd": ["864"], "coCd": ["251"] }
+}
