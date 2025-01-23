@@ -1,0 +1,90 @@
+{
+  "id": "1010531",
+  "title": "天竜浜名湖鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-01-23",
+  "updatedAt": "2025-01-23",
+  "words": [
+    { "info": "新所原", "info2": "しんじょはら", "word": "sinjohara" },
+    { "info": "アスモ前", "info2": "あすもまえ", "word": "asumomae" },
+    { "info": "大森", "info2": "おおもり", "word": "oomori" },
+    { "info": "知波田", "info2": "ちばた", "word": "tibata" },
+    { "info": "尾奈", "info2": "おな", "word": "ona" },
+    { "info": "奥浜名湖", "info2": "おくはまなこ", "word": "okuhamanako" },
+    { "info": "三ケ日", "info2": "みっかび", "word": "mikkabi" },
+    { "info": "都筑", "info2": "つづき", "word": "tuduki" },
+    { "info": "東都筑", "info2": "ひがしつづき", "word": "higasituduki" },
+    {
+      "info": "浜名湖佐久米",
+      "info2": "はまなこさくめ",
+      "word": "hamanakosakume"
+    },
+    { "info": "寸座", "info2": "すんざ", "word": "sunza" },
+    { "info": "西気賀", "info2": "にしきが", "word": "nisikiga" },
+    { "info": "気賀", "info2": "きが", "word": "kiga" },
+    { "info": "岡地", "info2": "おかじ", "word": "okaji" },
+    { "info": "金指", "info2": "かなさし", "word": "kanasasi" },
+    {
+      "info": "常葉大学前",
+      "info2": "とこはだいがくまえ",
+      "word": "tokohadaigakumae"
+    },
+    { "info": "都田", "info2": "みやこだ", "word": "miyakoda" },
+    {
+      "info": "フルーツパーク",
+      "info2": "ふるーつぱーく",
+      "word": "huru-tupa-ku"
+    },
+    { "info": "宮口", "info2": "みやぐち", "word": "miyaguti" },
+    { "info": "岩水寺", "info2": "がんすいじ", "word": "gansuiji" },
+    { "info": "西鹿島", "info2": "にしかじま", "word": "nisikajima" },
+    {
+      "info": "二俣本町",
+      "info2": "ふたまたほんまち",
+      "word": "hutamatahonmati"
+    },
+    {
+      "info": "天竜二俣",
+      "info2": "てんりゅうふたまた",
+      "word": "tenryuuhutamata"
+    },
+    { "info": "上野部", "info2": "かみのべ", "word": "kaminobe" },
+    { "info": "豊岡", "info2": "とよおか", "word": "toyooka" },
+    { "info": "敷地", "info2": "しきじ", "word": "sikiji" },
+    {
+      "info": "遠江一宮",
+      "info2": "とおとうみいちのみや",
+      "word": "tootoumiitinomiya"
+    },
+    { "info": "円田", "info2": "えんでん", "word": "endenn" },
+    {
+      "info": "森町病院前",
+      "info2": "もりまちびょういんまえ",
+      "word": "morimatibyouinmae"
+    },
+    { "info": "遠州森", "info2": "えんしゅうもり", "word": "ensyuumori" },
+    { "info": "戸綿", "info2": "とわた", "word": "towata" },
+    { "info": "原田", "info2": "はらだ", "word": "harada" },
+    { "info": "原谷", "info2": "はらのや", "word": "haranoya" },
+    { "info": "細谷", "info2": "ほそや", "word": "hosoya" },
+    {
+      "info": "いこいの広場",
+      "info2": "いこいのひろば",
+      "word": "ikoinohiroba"
+    },
+    { "info": "桜木", "info2": "さくらぎ", "word": "sakuragi" },
+    { "info": "西掛川", "info2": "にしかけがわ", "word": "nisikakegawa" },
+    {
+      "info": "掛川市役所前",
+      "info2": "かけがわしやくしょまえ",
+      "word": "kakegawasiyakusyomae"
+    },
+    { "info": "掛川", "info2": "かけがわ", "word": "kakegawa" }
+  ],
+  "optional": { "cd": ["531"], "coCd": ["96"] }
+}

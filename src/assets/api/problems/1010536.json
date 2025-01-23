@@ -1,0 +1,42 @@
+{
+  "id": "1010536",
+  "title": "愛知環状鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-01-23",
+  "updatedAt": "2025-01-23",
+  "words": [
+    { "info": "高蔵寺", "info2": "こうぞうじ", "word": "kouzouji" },
+    { "info": "中水野", "info2": "なかみずの", "word": "nakamizuno" },
+    { "info": "瀬戸市", "info2": "せとし", "word": "setosi" },
+    { "info": "瀬戸口", "info2": "せとぐち", "word": "setoguti" },
+    { "info": "山口", "info2": "やまぐち", "word": "yamaguti" },
+    { "info": "八草", "info2": "やくさ", "word": "yakusa" },
+    { "info": "篠原", "info2": "ささばら", "word": "sasabara" },
+    { "info": "保見", "info2": "ほみ", "word": "homi" },
+    { "info": "貝津", "info2": "かいづ", "word": "kaidu" },
+    { "info": "四郷", "info2": "しごう", "word": "sigou" },
+    {
+      "info": "愛環梅坪",
+      "info2": "あいかんうめつぼ",
+      "word": "aikannumetubo"
+    },
+    { "info": "新豊田", "info2": "しんとよた", "word": "sintoyota" },
+    { "info": "新上挙母", "info2": "しんうわごろも", "word": "sinnuwagoromo" },
+    { "info": "三河豊田", "info2": "みかわとよた", "word": "mikawatoyota" },
+    { "info": "末野原", "info2": "すえのはら", "word": "suenohara" },
+    { "info": "永覚", "info2": "えかく", "word": "ekaku" },
+    { "info": "三河上郷", "info2": "みかわかみごう", "word": "mikawakamigou" },
+    { "info": "北野桝塚", "info2": "きたのますづか", "word": "kitanomasuduka" },
+    { "info": "大門", "info2": "だいもん", "word": "daimonn" },
+    { "info": "北岡崎", "info2": "きたおかざき", "word": "kitaokazaki" },
+    { "info": "中岡崎", "info2": "なかおかざき", "word": "nakaokazaki" },
+    { "info": "六名", "info2": "むつな", "word": "mutuna" },
+    { "info": "岡崎", "info2": "おかざき", "word": "okazaki" }
+  ],
+  "optional": { "cd": ["536"], "coCd": ["99"] }
+}
