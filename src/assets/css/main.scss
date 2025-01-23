@@ -131,8 +131,8 @@ form > div {
 
     &:focus,
     &:active {
-      border-color: var(--color-p);
       outline: 0;
+      border-color: var(--color-p);
       box-shadow: 0 0 0 0.2rem var(--input-active-outine);
     }
   }
