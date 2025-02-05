@@ -1,0 +1,24 @@
+{
+  "id": "1010873",
+  "title": "ＪＲ根室本線(滝川－富良野)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-02-05",
+  "updatedAt": "2025-02-05",
+  "words": [
+    { "info": "富良野", "info2": "ふらの", "word": "hurano" },
+    { "info": "野花南", "info2": "のかなん", "word": "nokanann" },
+    { "info": "上芦別", "info2": "かみあしべつ", "word": "kamiasibetu" },
+    { "info": "芦別", "info2": "あしべつ", "word": "asibetu" },
+    { "info": "平岸", "info2": "ひらぎし", "word": "hiragisi" },
+    { "info": "茂尻", "info2": "もしり", "word": "mosiri" },
+    { "info": "赤平", "info2": "あかびら", "word": "akabira" },
+    { "info": "東滝川", "info2": "ひがしたきかわ", "word": "higasitakikawa" },
+    { "info": "滝川", "info2": "たきかわ", "word": "takikawa" }
+  ],
+  "optional": { "cd": ["873"], "coCd": ["1"] }
+}

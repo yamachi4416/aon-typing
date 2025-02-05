@@ -1,0 +1,25 @@
+{
+  "id": "1010294",
+  "title": "西武多摩川線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-02-05",
+  "updatedAt": "2025-02-05",
+  "words": [
+    { "info": "是政", "info2": "これまさ", "word": "koremasa" },
+    {
+      "info": "競艇場前",
+      "info2": "きょうていじょうまえ",
+      "word": "kyouteijoumae"
+    },
+    { "info": "白糸台", "info2": "しらいとだい", "word": "siraitodai" },
+    { "info": "多磨", "info2": "たま", "word": "tama" },
+    { "info": "新小金井", "info2": "しんこがねい", "word": "sinkoganei" },
+    { "info": "武蔵境", "info2": "むさしさかい", "word": "musasisakai" }
+  ],
+  "optional": { "cd": ["294"], "coCd": ["12"] }
+}
