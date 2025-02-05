@@ -3,7 +3,7 @@
   "engines": {
     "node": "22.x"
   },
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@10.0.0",
   "scripts": {
     "postinstall": "nuxt prepare",
     "build": "nuxt generate",
@@ -25,29 +25,29 @@
     "@nuxt/test-utils": "^3.15.4",
     "@types/content-disposition": "^0.5.8",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^22.10.9",
+    "@types/node": "^22.13.1",
     "@types/yargs": "^17.0.33",
     "concurrently": "^9.1.2",
     "content-disposition": "^0.5.4",
-    "eslint": "^9.18.0",
+    "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-promise": "^7.2.1",
     "jsdom": "^26.0.0",
-    "nuxt": "^3.15.2",
-    "playwright-core": "^1.49.1",
+    "nuxt": "^3.15.4",
+    "playwright-core": "^1.50.1",
     "prettier": "^3.4.2",
     "prettier-plugin-organize-imports": "^4.1.0",
     "sass": "^1.83.4",
-    "stylelint": "^16.13.2",
+    "stylelint": "^16.14.1",
     "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-recommended-vue": "^1.6.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "^5.7.3",
-    "vitest": "^3.0.3",
+    "vitest": "^3.0.5",
     "vue-tsc": "^2.2.0"
   },
   "dependencies": {
-    "@nuxt/eslint-config": "^0.7.5",
+    "@nuxt/eslint-config": "^1.0.0",
     "vue-gtag-next": "^1.14.0"
   }
 }
