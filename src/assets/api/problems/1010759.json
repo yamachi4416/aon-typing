@@ -1,0 +1,60 @@
+{
+  "id": "1010759",
+  "title": "万葉線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-03-08",
+  "updatedAt": "2025-03-08",
+  "words": [
+    { "info": "越ノ潟", "info2": "こしのかた", "word": "kosinokata" },
+    { "info": "海王丸", "info2": "かいおうまる", "word": "kaioumaru" },
+    {
+      "info": "東新湊",
+      "info2": "ひがししんみなと",
+      "word": "higasisinminato"
+    },
+    { "info": "中新湊", "info2": "なかしんみなと", "word": "nakasinminato" },
+    { "info": "新町口", "info2": "しんまちぐち", "word": "sinmatiguti" },
+    {
+      "info": "クロスベイ前",
+      "info2": "くろすべいまえ",
+      "word": "kurosubeimae"
+    },
+    { "info": "庄川口", "info2": "しょうがわぐち", "word": "syougawaguti" },
+    { "info": "六渡寺", "info2": "ろくどうじ", "word": "rokudouji" },
+    { "info": "中伏木", "info2": "なかふしき", "word": "nakahusiki" },
+    { "info": "吉久", "info2": "よしひさ", "word": "yosihisa" },
+    { "info": "新吉久", "info2": "しんよしひさ", "word": "sinyosihisa" },
+    { "info": "能町口", "info2": "のうまちぐち", "word": "noumatiguti" },
+    { "info": "米島口", "info2": "よねじまぐち", "word": "yonejimaguti" },
+    { "info": "新能町", "info2": "しんのうまち", "word": "sinnnoumati" },
+    { "info": "荻布", "info2": "おぎの", "word": "ogino" },
+    { "info": "旭ケ丘", "info2": "あさひがおか", "word": "asahigaoka" },
+    { "info": "江尻", "info2": "えじり", "word": "ejiri" },
+    {
+      "info": "市民病院前",
+      "info2": "しみんびょういんまえ",
+      "word": "siminbyouinmae"
+    },
+    {
+      "info": "志貴野中学校前",
+      "info2": "しきのちゅうがっこうまえ",
+      "word": "sikinotyuugakkoumae"
+    },
+    { "info": "広小路", "info2": "ひろこうじ", "word": "hirokouji" },
+    {
+      "info": "急患医療センター前",
+      "info2": "きゅうかんいりょうせんたーまえ",
+      "word": "kyuukanniryousenta-mae"
+    },
+    { "info": "坂下町", "info2": "さかしたまち", "word": "sakasitamati" },
+    { "info": "片原町", "info2": "かたはらまち", "word": "kataharamati" },
+    { "info": "末広町", "info2": "すえひろちょう", "word": "suehirotyou" },
+    { "info": "高岡駅", "info2": "たかおかえき", "word": "takaokaeki" }
+  ],
+  "optional": { "cd": ["759"], "coCd": ["79"] }
+}
