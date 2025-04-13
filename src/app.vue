@@ -11,13 +11,13 @@
 import { healthcheck } from '~~/libs/Util'
 
 const { isLoading, stopLoading } = useLoading()
-const { url } = useSiteConfig()
+const site = useSiteConfig()
 
 useSeoMeta({
-  titleTemplate: (title) => `${title ? `${title} | ` : ''}あぉ～ん タイピング`,
-  description: 'あぉ～ん タイピングは無料のタイピング練習サイトです。',
+  titleTemplate: (title) => `${title ? `${title} | ` : ''}${site.name}`,
+  description: `${site.name}は無料のタイピング練習サイトです。`,
   ogImage: {
-    url: `${url}/ogp-top.png`,
+    url: `${site.url}/ogp-top.png`,
     height: 315,
     width: 600,
   },

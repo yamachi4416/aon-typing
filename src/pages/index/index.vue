@@ -1,10 +1,11 @@
 <template>
   <div>
     <PartsSection aria-labelledby="hello-title">
-      <h2 id="hello-title">ようこそ「あぉ～ん タイピング」へ</h2>
+      <h2 id="hello-title">ようこそ「{{ site.name }}」へ</h2>
       <p>
-        あぉ～ん
-        タイピングはインターネット上でタイピングの練習ができる無料のタイピング練習サイトです。
+        {{
+          site.name
+        }}はインターネット上でタイピングの練習ができる無料のタイピング練習サイトです。
         パソコンを使いはじめた初心者さんや、タイピングがもっと早くなりたい中級者さんにおすすめです。
         たのしくタイピングを練習しましょう。
       </p>
@@ -98,6 +99,7 @@ useHead({
   title: 'トップページ',
 })
 
+const site = useSiteConfig()
 const navigator = useNavigator()
 
 const { newProblems, tagSummary, fetchTopNewsProblems, fetchTags } =

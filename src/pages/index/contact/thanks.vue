@@ -5,7 +5,7 @@
     <p>
       お問い合わせ内容によっては、お返事を差し上げるまでにお時間をいただく場合やお返事を差し上げられない場合もございますことをあらかじめご了承ください。
     </p>
-    <p>今後とも引き続き「あぉ～ん タイピング」をよろしくお願いいたします。</p>
+    <p>今後とも引き続き「{{ site.name }}」をよろしくお願いいたします。</p>
   </PartsSection>
 </template>
 
@@ -14,6 +14,8 @@ useHead({
   title: 'お問い合わせありがとうございます',
   meta: [{ name: 'robots', content: 'noindex' }],
 })
+
+const site = useSiteConfig()
 
 const { isPosted } = useContactPosted()
 

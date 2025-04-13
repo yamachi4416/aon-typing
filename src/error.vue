@@ -3,7 +3,7 @@
     <ModError :error="error">
       <template #default="{ title }">
         <Head>
-          <Title>{{ title }} | あぉ～ん タイピング</Title>
+          <Title>{{ title }} | {{ site.name }}</Title>
           <Meta name="robots" content="noindex" />
         </Head>
         <Body class="scrol-y" />
@@ -19,4 +19,5 @@ const error = computed(
       message: 'Page Not Found',
     },
 )
+const site = useSiteConfig()
 </script>

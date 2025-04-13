@@ -26,7 +26,8 @@ const props = withDefaults(
   },
 )
 
-const titleText = 'あぉ～ん タイピング'
+const site = useSiteConfig()
+const titleText = site.name
 const startAnim = ref(false)
 const titleChars = ref([] as string[])
 const title = computed(() =>

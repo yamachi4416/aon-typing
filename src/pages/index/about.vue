@@ -1,14 +1,14 @@
 <template>
   <div>
     <PartsSection aria-labelledby="intro-title">
-      <h2 id="intro-title">あぉ～ん タイピングとは？</h2>
+      <h2 id="intro-title">{{ site.name }}とは？</h2>
       <p>
-        あぉ～ん タイピングは無料のタイピング練習サイトです。<br />
+        {{ site.name }}は無料のタイピング練習サイトです。<br />
         タッチ操作に対応しているのでキーボードがない時でもタブレットなどで練習することができます。
       </p>
       <p>
         インターネット上でタイピングを練習できるサイトはたくさんあります。<br />
-        あぉ～ん タイピングは他のサイトよりも機能が少ないですが、<br />
+        {{ site.name }}は他のサイトよりも機能が少ないですが、<br />
         他のサイトにはないおもしろ機能もあるのでいちど遊んでみてください。
       </p>
       <template #right>
@@ -116,6 +116,8 @@
 
 <script setup lang="ts">
 import { helpAnimals, rankList } from '~~/libs/TypingGameInfo'
+
+const site = useSiteConfig()
 
 const animals = helpAnimals()
   .map(({ name }) => name)
