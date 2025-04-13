@@ -21,7 +21,7 @@ import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 
 const props = withDefaults(
   defineProps<{
-    problems: ProblemListItem[]
+    problems?: ProblemListItem[]
     pageSize?: number
   }>(),
   {

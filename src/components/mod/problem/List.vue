@@ -19,7 +19,7 @@ import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 
 withDefaults(
   defineProps<{
-    problems: ProblemListItem[]
+    problems?: ProblemListItem[]
   }>(),
   {
     problems: () => [],

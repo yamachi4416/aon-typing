@@ -30,7 +30,7 @@ import type { TagInfo } from '~~/types/problems'
 
 const props = withDefaults(
   defineProps<{
-    tag: TagInfo
+    tag?: TagInfo
     qtags?: string[]
   }>(),
   {

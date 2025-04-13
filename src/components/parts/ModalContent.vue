@@ -33,7 +33,7 @@ export default defineComponent({
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    title: string
+    title?: string
     is?: string
     panelClass?: string
     showClose?: boolean

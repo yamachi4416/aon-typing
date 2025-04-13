@@ -1,6 +1,5 @@
 import { createResolver } from '@nuxt/kit'
 import { readFileSync } from 'node:fs'
-import qs from 'node:querystring'
 import { defineNuxtConfig } from 'nuxt/config'
 
 const resolver = createResolver(import.meta.url)
@@ -46,11 +45,6 @@ export const routes = (() => {
   ]
 })()
 
-const fontUrl = `https://fonts.googleapis.com/css2?${qs.encode({
-  family: ['Itim', 'Noto Sans JP:wght@400'],
-  display: 'swap',
-})}`
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   components: true,
@@ -58,13 +52,14 @@ export default defineNuxtConfig({
   ssr: true,
   srcDir: 'src',
 
+  modules: ['@nuxtjs/seo', '@nuxtjs/google-fonts'],
+
   routeRules: {
     '/game/play': { ssr: false },
   },
 
   experimental: {
     payloadExtraction: false,
-    headNext: true,
   },
 
   app: {
@@ -74,38 +69,48 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'ja',
       },
-      meta: [
-        {
-          name: 'description',
-          content: 'あぉ～ん タイピングは無料のタイピング練習サイトです。',
-        },
-        { name: 'google', content: 'notranslate' },
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com/' },
-        {
-          rel: 'preconnect',
-          href: 'https://fonts.gstatic.com/',
-          crossorigin: '',
-        },
-        { rel: 'preload', as: 'style', href: fontUrl },
-        { rel: 'stylesheet', href: fontUrl },
-      ],
+      meta: [{ name: 'google', content: 'notranslate' }],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
       script: [{ src: '/static/js/index.js' }],
+    },
+  },
+
+  site: {
+    defaultLocale: 'ja',
+  },
+
+  sitemap: {
+    credits: false,
+    xsl: false,
+    include: routes,
+  },
+
+  ogImage: {
+    enabled: false,
+  },
+
+  googleFonts: {
+    display: 'swap',
+    preload: true,
+    download: false,
+    families: {
+      Itim: true,
+      'Noto Sans JP': {
+        wght: 400,
+      },
     },
   },
 
   runtimeConfig: {
     apiDir: resolver.resolve('./src/assets/api'),
-    sitemap: {
-      routes,
-    },
     public: {
       gtagId: process.env.APP_G_TAGID ?? '',
-      baseUrl: process.env.APP_BASE_URL ?? 'http://localhost:3000',
       contactUrl: process.env.APP_CONTACT_URL ?? '/api/contact',
       pageSize: 30,
+      site: {
+        url: 'http://localhost:3000',
+        name: 'あぉ～ん タイピング',
+      },
     },
   },
 

@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <Teleport to="body">
+    <Teleport to="#teleports">
       <PartsLoading v-show="isLoading" />
     </Teleport>
   </NuxtLayout>
@@ -11,9 +11,16 @@
 import { healthcheck } from '~~/libs/Util'
 
 const { isLoading, stopLoading } = useLoading()
+const { url } = useSiteConfig()
 
-useHead({
+useSeoMeta({
   titleTemplate: (title) => `${title ? `${title} | ` : ''}あぉ～ん タイピング`,
+  description: 'あぉ～ん タイピングは無料のタイピング練習サイトです。',
+  ogImage: {
+    url: `${url}/ogp-top.png`,
+    height: 315,
+    width: 600,
+  },
 })
 
 onErrorCaptured((err) => {
