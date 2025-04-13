@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.theme">
-    <a href="#" @click.prevent="changeTheme('light')">light</a> /
-    <a href="#" @click.prevent="changeTheme('dark')">dark</a>
+    <button @click.prevent="changeTheme('light')">light</button> /
+    <button @click.prevent="changeTheme('dark')">dark</button>
   </div>
 </template>
 
@@ -11,9 +11,13 @@ const { changeTheme } = useTheme()
 
 <style lang="scss" module>
 .theme {
-  a {
+  button {
+    font-size: inherit;
     color: var(--color-3);
-    text-decoration: none;
+    appearance: none;
+    cursor: pointer;
+    background: none;
+    border: none;
 
     &:hover,
     &:focus {
