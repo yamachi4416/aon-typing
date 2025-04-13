@@ -1,0 +1,33 @@
+{
+  "id": "1010786",
+  "title": "えちごトキめき鉄道妙高はねうまラインの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-04-13",
+  "updatedAt": "2025-04-13",
+  "words": [
+    { "info": "直江津", "info2": "なおえつ", "word": "naoetu" },
+    { "info": "春日山", "info2": "かすがやま", "word": "kasugayama" },
+    { "info": "高田", "info2": "たかだ", "word": "takada" },
+    { "info": "南高田", "info2": "みなみたかだ", "word": "minamitakada" },
+    {
+      "info": "上越妙高",
+      "info2": "じょうえつみょうこう",
+      "word": "jouetumyoukou"
+    },
+    { "info": "北新井", "info2": "きたあらい", "word": "kitaarai" },
+    { "info": "新井", "info2": "あらい", "word": "arai" },
+    { "info": "二本木", "info2": "にほんぎ", "word": "nihongi" },
+    { "info": "関山", "info2": "せきやま", "word": "sekiyama" },
+    {
+      "info": "妙高高原",
+      "info2": "みょうこうこうげん",
+      "word": "myoukoukougenn"
+    }
+  ],
+  "optional": { "cd": ["786"], "coCd": ["217"] }
+}
