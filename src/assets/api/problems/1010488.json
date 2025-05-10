@@ -1,0 +1,50 @@
+{
+  "id": "1010488",
+  "title": "東京モノレール羽田空港線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-05-10",
+  "updatedAt": "2025-05-10",
+  "words": [
+    {
+      "info": "羽田空港第２ターミナル",
+      "info2": "はねだくうこうだいにたーみなる",
+      "word": "hanedakuukoudainita-minaru"
+    },
+    {
+      "info": "羽田空港第１ターミナル",
+      "info2": "はねだくうこうだいいちたーみなる",
+      "word": "hanedakuukoudaiitita-minaru"
+    },
+    { "info": "新整備場", "info2": "しんせいびじょう", "word": "sinseibijou" },
+    {
+      "info": "羽田空港第３ターミナル",
+      "info2": "はねだくうこうだいさんたーみなる",
+      "word": "hanedakuukoudaisanta-minaru"
+    },
+    { "info": "天空橋", "info2": "てんくうばし", "word": "tenkuubasi" },
+    { "info": "整備場", "info2": "せいびじょう", "word": "seibijou" },
+    { "info": "昭和島", "info2": "しょうわじま", "word": "syouwajima" },
+    {
+      "info": "流通センター",
+      "info2": "りゅうつうせんたー",
+      "word": "ryuutuusenta-"
+    },
+    {
+      "info": "大井競馬場前",
+      "info2": "おおいけいばじょうまえ",
+      "word": "ooikeibajoumae"
+    },
+    {
+      "info": "天王洲アイル",
+      "info2": "てんのうずあいる",
+      "word": "tennnouzuairu"
+    },
+    { "info": "浜松町", "info2": "はままつちょう", "word": "hamamatutyou" }
+  ],
+  "optional": { "cd": ["488"], "coCd": ["68"] }
+}

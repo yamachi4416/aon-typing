@@ -1,0 +1,25 @@
+{
+  "id": "1010483",
+  "title": "千葉都市モノレール１号線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-05-10",
+  "updatedAt": "2025-05-10",
+  "words": [
+    { "info": "県庁前", "info2": "けんちょうまえ", "word": "kentyoumae" },
+    {
+      "info": "葭川公園",
+      "info2": "よしかわこうえん",
+      "word": "yosikawakouenn"
+    },
+    { "info": "栄町", "info2": "さかえちょう", "word": "sakaetyou" },
+    { "info": "千葉", "info2": "ちば", "word": "tiba" },
+    { "info": "市役所前", "info2": "しやくしょまえ", "word": "siyakusyomae" },
+    { "info": "千葉みなと", "info2": "ちばみなと", "word": "tibaminato" }
+  ],
+  "optional": { "cd": ["483"], "coCd": ["63"] }
+}
