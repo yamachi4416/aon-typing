@@ -1,0 +1,17 @@
+{
+  "id": "1010724",
+  "title": "秩父鉄道(西武秩父－影森)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-06-02",
+  "updatedAt": "2025-06-02",
+  "words": [
+    { "info": "影森", "info2": "かげもり", "word": "kagemori" },
+    { "info": "西武秩父", "info2": "せいぶちちぶ", "word": "seibutitibu" }
+  ],
+  "optional": { "cd": ["724"], "coCd": ["57"] }
+}

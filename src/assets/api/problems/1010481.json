@@ -1,0 +1,23 @@
+{
+  "id": "1010481",
+  "title": "山万ユーカリが丘線(ユーカリが丘－女子大)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-06-02",
+  "updatedAt": "2025-06-02",
+  "words": [
+    { "info": "女子大", "info2": "じょしだい", "word": "josidai" },
+    { "info": "公園", "info2": "こうえん", "word": "kouenn" },
+    { "info": "地区センター", "info2": "ちくせんたー", "word": "tikusenta-" },
+    {
+      "info": "ユーカリが丘",
+      "info2": "ゆーかりがおか",
+      "word": "yu-karigaoka"
+    }
+  ],
+  "optional": { "cd": ["481"], "coCd": ["62"] }
+}
