@@ -95,7 +95,7 @@ const table = [
     ['リャ', 'リィ', 'リュ', 'リェ', 'リョ'],
   ],
   [['ワ', '', 'ヲ', '', 'ン'], ['ヮ']],
-]
+] as const
 
 const chars = japaneseToTypeCharList()
   .map((c) => ({

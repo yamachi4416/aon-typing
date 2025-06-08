@@ -180,7 +180,7 @@ function randomProblemSelect() {
   const length = problems.value.length
   if (length > 0) {
     const idx = Math.floor(Math.random() * length)
-    const problemId = problems.value[idx].id
+    const problemId = problems.value[idx]!.id
     if (setting.value.problemId !== problemId) {
       setting.value.problemId = problemId
     } else if (length > 1) {

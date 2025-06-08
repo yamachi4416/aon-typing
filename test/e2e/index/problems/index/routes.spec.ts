@@ -64,7 +64,8 @@ describe.each(problems.slice(0, 2))(
     })
 
     it(`No.${problem.id}の問題の'タグ'ボタンをクリックすると'タグ'ページに遷移する`, async () => {
-      const tag = problem.tags[0]
+      const tag = problem.tags[0]!
+      expect(tag).toBeTruthy()
 
       const page = await createPage('/problems')
 

@@ -47,6 +47,9 @@ export const routes = (() => {
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  future: {
+    compatibilityVersion: 4,
+  },
   components: true,
   css: ['~/assets/css/main.scss'],
   ssr: true,
@@ -60,6 +63,9 @@ export default defineNuxtConfig({
 
   experimental: {
     payloadExtraction: false,
+    purgeCachedData: false,
+    sharedPrerenderData: false,
+    alwaysRunFetchOnKeyChange: true,
   },
 
   app: {
@@ -136,7 +142,7 @@ export default defineNuxtConfig({
   },
 
   hooks: {
-    'pages:extend'(pages) {
+    'pages:resolved'(pages) {
       pages.push({
         name: '404',
         path: '/404.html',

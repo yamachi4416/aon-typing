@@ -87,16 +87,13 @@ export const Kana2HiraMap: Record<string, string> = {
   ヶ: 'が',
 }
 
-export const Hira2KanaMap = Object.keys(Kana2HiraMap).reduce<
-  Record<string, string>
->((a, h) => {
-  if (!a[Kana2HiraMap[h]]) {
-    a[Kana2HiraMap[h]] = h
-  }
-  return a
-}, {})
+export const Hira2KanaMap = Object.freeze(
+  Object.fromEntries(
+    Object.entries(Kana2HiraMap).map(([kana, hira]) => [hira, kana]),
+  ),
+)
 
-export const JapaneseToTypeCharList1 = [
+export const JapaneseToTypeCharList1: [string, string][] = [
   ['ぁ', 'la,xa'],
   ['あ', 'a'],
   ['ぃ', 'li,xi'],
@@ -291,7 +288,7 @@ export const JapaneseToTypeCharList1 = [
   ['ヴぉ', 'vo'],
 ]
 
-export const JapaneseToTypeCharList2 = [
+export const JapaneseToTypeCharList2: [string, string][] = [
   ['。', '.'],
   ['ー', '-'],
   ['～', '~'],
@@ -339,18 +336,18 @@ export const JapaneseToTypeCharList2 = [
   ['》', ']'],
 ]
 
-const JapaneseToTypeCharList = [
+const JapaneseToTypeCharList: [string, string][] = [
   ...JapaneseToTypeCharList1,
-  ...JapaneseToTypeCharList1.slice(0, JapaneseToTypeCharList1.length - 1)
-    .map((v) => {
-      const cs = v[1].split(',').filter((c) => !'aiueon'.includes(c[0]))
-      return cs.length > 0
+  ...JapaneseToTypeCharList1.map((v) => {
+    const cs = v[1].split(',').filter((c) => !'aiueon'.includes(c[0]!))
+    const result: [string, string] =
+      cs.length > 0
         ? [`っ${v[0]}`, cs.map((s) => s[0] + s).join(',')]
-        : null
-    })
-    .filter((v) => v),
+        : ['', '']
+    return result
+  }).filter(([a, b]) => a && b),
   ...JapaneseToTypeCharList2,
-] as string[][]
+]
 
 const TypeCharToJapaneseMap: Record<string, string> =
   JapaneseToTypeCharList.reduce(
@@ -416,14 +413,14 @@ export function typeJapaneseCharsMap(
 
   length = length ?? text?.length ?? 0
   for (let i = 0; i < length; i++) {
-    const c1 = chars[i]
+    const c1 = chars[i]!
     const c2 = c1 + (chars[i + 1] || '')
     const c3 = c2 + (chars[i + 2] || '')
 
     const { d1, d2, d3 } = toHira({ c1, c2, c3 })
 
     if (d1 === 'ん') {
-      if (d1 === d2 || 'あいうえおなにぬねのん'.includes(d2[1])) {
+      if (d1 === d2 || 'あいうえおなにぬねのん'.includes(d2?.[1] ?? '')) {
         maps.push({ jc: c1, ec: 'nn' })
       } else {
         maps.push({ jc: c1, ec: 'n' })
@@ -451,7 +448,7 @@ export function typeJapaneseChars(text?: string, length?: number) {
 }
 
 export function typeCharsToJapaneseChars(typeChars: string, jpChars: string) {
-  const c1 = typeChars[0]
+  const c1 = typeChars[0] || ''
   const c2 = c1 + (typeChars[1] || '')
   const c3 = c2 + (typeChars[2] || '')
   const c4 = c3 + (typeChars[3] || '')
@@ -475,9 +472,8 @@ export function typeCharsToJapaneseChars(typeChars: string, jpChars: string) {
 }
 
 export function typeCharsFindJapaneseChars(typeChars: string, jpChars: string) {
-  for (const key of Object.keys(TypeCharToJapaneseMap)) {
+  for (const [key, val] of Object.entries(TypeCharToJapaneseMap)) {
     if (key.startsWith(typeChars)) {
-      const val = TypeCharToJapaneseMap[key]
       if (jpChars.startsWith(val)) {
         return { jc: val, ec: key }
       }

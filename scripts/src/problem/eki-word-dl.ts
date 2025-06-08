@@ -68,7 +68,7 @@ export default defineCommand({
       throw new Error('operationLineCode must not be null.')
     }
 
-    const id = `1010${cds[0].padStart(3, '0')}`
+    const id = `1010${cds[0]!.padStart(3, '0')}`
     const file = path.join(dataDir, 'problems', `${id}.json`)
     const date = fmtDate(({ yyyy, MM, dd }) => `${yyyy}-${MM}-${dd}`)
 

@@ -21,7 +21,7 @@ export function useTheme() {
       return
     }
 
-    const html = document.getElementsByTagName('html')?.[0]
+    const html = document.getElementsByTagName('html')![0]!
 
     if (theme === 'light') {
       html.classList.remove('dark')

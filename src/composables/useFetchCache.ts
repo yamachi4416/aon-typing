@@ -16,7 +16,7 @@ export function useFetchCache<
   path: K
   method?: M
   key?: string
-  transform: (data: Ref<R | null>) => T
+  transform: (data: Ref<R | undefined>) => T
 }) {
   const cacheKey = key ?? (path as string)
   const cache = useNuxtData<R>(cacheKey)

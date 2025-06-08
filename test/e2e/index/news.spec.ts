@@ -34,7 +34,8 @@ describe('新着の問題の画面遷移の確認', () => {
   })
 
   it("'内容を見る'ボタンをクリックすると'問題の内容'ページに遷移する", async () => {
-    const problem = news[0]
+    const problem = news[0]!
+    expect(problem).toBeTruthy()
 
     const page = await createPage('/')
 
@@ -64,7 +65,8 @@ describe('新着の問題の画面遷移の確認', () => {
   })
 
   it("'プレイする'ボタンをクリックすると'タイピングメニュー'ページに遷移する", async () => {
-    const problem = news[0]
+    const problem = news[0]!
+    expect(problem).toBeTruthy()
 
     const page = await createPage('/')
 
@@ -94,8 +96,11 @@ describe('新着の問題の画面遷移の確認', () => {
   })
 
   it("'タグ'ボタンをクリックすると'タグ'ページに遷移する", async () => {
-    const problem = news[0]
-    const tag = problem.tags[0]
+    const problem = news[0]!
+    expect(problem).toBeTruthy()
+
+    const tag = problem.tags[0]!
+    expect(tag).toBeTruthy()
 
     const page = await createPage('/')
 

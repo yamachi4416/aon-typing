@@ -64,8 +64,8 @@ export class TypingGameInfo {
         return a
       }, {})
 
-    return Object.keys(sums)
-      .map((w) => ({ w, c: sums[w] }))
+    return Object.entries(sums)
+      .map(([w, c]) => ({ w, c }))
       .sort((a, b) => a.c - b.c)
   }
 

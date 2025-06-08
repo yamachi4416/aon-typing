@@ -23,8 +23,8 @@
           <KbdKey :transform="`translate(${66 * 1})`" />
           <KbdKey :transform="`translate(${66 * 2})`" />
           <KbdKey
-            :kbd="keyboard[4][0]"
-            :highlight="hi(keyboard[4][0])"
+            :kbd="keyboard[4]![0]"
+            :highlight="hi(keyboard[4]![0]!)"
             :transform="`translate(${66 * 3})`"
             @click="keydown"
           />

@@ -77,13 +77,14 @@ export interface OperationLineApiResult {
 type FetchStationResult = Awaited<ReturnType<typeof fetchStation>>
 
 function joinWords(pages: Array<FetchStationResult['words']>) {
-  let words = [...pages[0]]
-  for (let i = 1; i < pages.length; i++) {
-    const page = pages[i]
+  if (pages.length === 0) return []
+
+  let words = [...pages[0]!]
+  for (const page of pages.slice(1)) {
     const pstart = page.shift()
     const plast = page.pop()
-    const wstart = words[0]
-    const wlast = words[words.length - 1]
+    const wstart = words[0]!
+    const wlast = words[words.length - 1]!
     if (!pstart || !plast) {
       throw new Error(`illegal page state ${pstart ? 'plast' : 'pstart'}`)
     }
@@ -195,7 +196,7 @@ export async function fetchOperationLines({
         code: line.code,
         name: line.Name,
         yomi: line.Yomi,
-        corporation: corporations[Number(line.corporationIndex) - 1],
+        corporation: corporations[Number(line.corporationIndex) - 1]!,
       })),
     )
   }

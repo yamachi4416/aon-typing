@@ -108,7 +108,7 @@ export function defineKeys({
     },
     getKeys(): Readonly<Key[][]> {
       return normalKeys.map((keys, i) =>
-        keys.map((k, j) => [k, shiftKeys[i][j]]),
+        keys.map((k, j) => [k, shiftKeys[i]![j]!]),
       )
     },
     getCapsLockKeys() {

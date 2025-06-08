@@ -71,7 +71,8 @@ describe('問題の内容ページの画面遷移の確認', () => {
   })
 
   it("'タグ'ボタンをクリックすると'タグ'ページに遷移する", async () => {
-    const tag = problem.tags[0]
+    const tag = problem.tags[0]!
+    expect(tag).toBeTruthy()
 
     const page = await createPage(`/problems/${problem.id}`)
 

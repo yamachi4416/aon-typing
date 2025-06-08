@@ -36,8 +36,7 @@ function touchmove(e: TouchEvent) {
     return
   }
 
-  for (let i = 0; i < e.changedTouches.length; ++i) {
-    const touch = e.changedTouches[i]
+  for (const touch of e.changedTouches) {
     const target = touch.target as HTMLElement
     const bounds = target.getBoundingClientRect()
     const x = touch.clientX - bounds.left

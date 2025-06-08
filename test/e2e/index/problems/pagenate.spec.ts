@@ -30,7 +30,7 @@ describe.each([
   },
 ])('$nameのページングの確認', ({ pageUrl, problems }) => {
   const getItem = (page: Page, i: number) =>
-    page.getByRole('article', { name: problems[i].title }).first()
+    page.getByRole('article', { name: problems[i]!.title }).first()
 
   const getPageLink = (page: Page, i: number) =>
     page.getByRole('link', {

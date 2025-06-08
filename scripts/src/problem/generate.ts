@@ -119,7 +119,7 @@ async function generateProblemData({
       }
 
       problem.tags.forEach((m) => {
-        tags[m.name].problems.push(problem)
+        tags[m.name]!.problems.push(problem)
       })
 
       return problem
@@ -131,7 +131,7 @@ async function generateProblemData({
 
   const tagSummary: ProblemTagSummary[] = await Promise.all(
     Object.keys(tags).map(async (tagName) => {
-      const tag = tags[tagName]
+      const tag = tags[tagName]!
       const tagInfo: TagInfo = {
         id: tag.id,
         name: tagName,

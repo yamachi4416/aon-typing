@@ -42,7 +42,7 @@ async function fetchCard(cardUrl: string) {
       document.querySelectorAll('[summary="タイトルデータ"] td'),
     )
     for (let i = 0; i < tds.length; i++) {
-      const c = tds[i].textContent
+      const c = tds[i]!.textContent
       if (c?.startsWith('作品名：')) {
         info.title = tds[++i]?.textContent?.trim() ?? ''
       } else if (c?.startsWith('作品名読み：')) {
@@ -57,7 +57,7 @@ async function fetchCard(cardUrl: string) {
       document.querySelectorAll('[summary="作家データ"] td'),
     )
     for (let i = 0; i < tds.length; i++) {
-      const c = tds[i].textContent
+      const c = tds[i]!.textContent
       if (c?.startsWith('作家名読み：')) {
         info.authorKana = normalizeKana(tds[++i]?.textContent?.trim())
       }
@@ -89,7 +89,7 @@ async function fetchDocument(url: string) {
       return
     }
 
-    const word = words[words.length - 1]
+    const word = words[words.length - 1]!
     if (node instanceof Element && node.nodeName === 'RUBY') {
       const rb = Array.from(node.getElementsByTagName('rb'))
         .map((r) => r.textContent)
@@ -142,7 +142,7 @@ function splitWords(
           a.push(
             ...i1.map((v, i) => ({
               info: v,
-              info2: i2[i],
+              info2: i2[i]!,
             })),
           )
         }
