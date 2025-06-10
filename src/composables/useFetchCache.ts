@@ -1,49 +1,44 @@
-import type { FetchResult } from '#app'
-import type { AvailableRouterMethod, NitroFetchRequest } from 'nitropack'
+import type { NitroFetchRequest, TypedInternalResponse } from 'nitropack'
 
 export function useFetchCache<
   K extends NitroFetchRequest,
-  M extends AvailableRouterMethod<K> = 'get' extends AvailableRouterMethod<K>
-    ? 'get'
-    : AvailableRouterMethod<K>,
-  R extends FetchResult<K, M> = FetchResult<K, M>,
-  T = unknown,
+  R extends TypedInternalResponse<K, unknown, 'get'>,
+  T = R,
 >({
   path,
   key,
-  transform,
+  transform = (v) => v as T,
 }: {
   path: K
-  method?: M
   key?: string
-  transform: (data: Ref<R | undefined>) => T
+  transform?: (data: R | undefined) => T
 }) {
   const cacheKey = key ?? (path as string)
-  const cache = useNuxtData<R>(cacheKey)
-  const value = computed(() => transform(cache.data))
+  const cache = useState<R>(cacheKey)
+  const value = computed(() => transform(cache.value))
 
   async function fetch() {
-    if (cache.data.value == null) {
-      clearNuxtData(cacheKey)
+    if (cache.value == null) {
+      clearNuxtState(cacheKey)
 
-      const { error } = await useFetch(key ?? path, {
-        key: cacheKey,
-      })
-
-      if (error.value instanceof Error) {
-        throw createError({ ...error.value, fatal: true })
+      try {
+        const res = await $fetch(key ?? path)
+        cache.value = res as R
+      } catch (error) {
+        if (error instanceof Error) {
+          throw createFetchError(error)
+        }
       }
     }
 
-    if (cache.data.value == null) {
+    if (cache.value == null) {
       throw createNotFoundError()
-    } else {
-      return ref(cache.data.value)
     }
+
+    return cache.value
   }
 
   return {
-    cache,
     value,
     fetch,
   }

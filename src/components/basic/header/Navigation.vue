@@ -15,7 +15,7 @@ const menus = [
   { route: { name: 'game-menu' }, label: 'プレイする' },
   { route: { name: 'index-problems' }, label: '問題いちらん' },
   { route: { name: 'index-about' }, label: 'サイト説明' },
-]
+] as const
 </script>
 
 <style lang="scss" module>

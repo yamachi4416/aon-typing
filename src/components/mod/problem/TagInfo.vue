@@ -43,13 +43,14 @@ const emit = defineEmits<{
   (e: 'tag', tags: string[]): unknown
 }>()
 
+const { replaceQuery } = useNavigator()
 const tagIds = computed({
   get() {
     return props.qtags ?? []
   },
   set(value) {
     const tags = [...value].sort()
-    useNavigator().replaceQuery({ tags: tags.join(',') })
+    replaceQuery({ tags: tags.join(',') })
     emit('tag', tags)
   },
 })

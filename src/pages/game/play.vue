@@ -53,7 +53,7 @@ onMounted(async () => {
   }
 
   setting.value.problemId = id
-  const problem = unref(await retrieveProblemDetail({ id }).catch(() => null))
+  const problem = await retrieveProblemDetail({ id }).catch(() => null)
 
   if (!problem) {
     await navigateTo({ name: 'game-menu', replace: true })

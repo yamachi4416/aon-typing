@@ -20,14 +20,16 @@
 const { wrapLoading } = useLoading()
 const { retrieveTag, filterTagProblems } = useProblems()
 
+const route = useRoute()
 const router = useRouter()
 const navigator = useNavigator()
 
 const tag = await wrapLoading(retrieveTag({ id: String(useRoute().params.id) }))
+
 const tags = ref(queryTags())
 const problems = filterTagProblems({
-  problems: computed(() => tag.value.problems),
-  tagId: computed(() => tag.value.id),
+  problems: tag.problems,
+  tagId: tag.id,
   tags,
 })
 
@@ -36,11 +38,14 @@ onMounted(() => {
 })
 
 useHead({
-  title: `問題 タグ：${tag.value.name}`,
+  title: `問題 タグ：${tag.name}`,
 })
 
 function queryTags() {
-  return (useRoute().query.tags as string)?.split(',') ?? []
+  const tags = route.query.tags
+  if (!tags) return []
+  const all = Array.isArray(tags) ? tags.join(',') : tags
+  return !all ? [] : all.split(',')
 }
 
 function changeTags(stags: string[]) {

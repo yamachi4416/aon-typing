@@ -1,7 +1,8 @@
+import { toValueIfFound } from './utils'
+
 export function useRailways() {
   const { value: corporations, fetch: fetchCorporations } = useFetchCache({
     path: '/api/railway/corporations.json',
-    transform: (data) => data.value,
   })
 
   const corporationsIdMap = computed(
@@ -12,20 +13,16 @@ export function useRailways() {
   )
 
   async function retrieveCorporation({ code }: { code: string }) {
-    const { fetch } = useFetchCache({
-      path: '/api/railway/corporations/:code',
-      key: `/api/railway/corporations/${code}.json`,
-      transform: (data) => data,
+    const data = await fetchWithCache({
+      path: `/api/railway/corporations/${code}.json`,
     })
-    const corporation = await fetch()
-    if (!corporation.value.code) {
-      throw createNotFoundError()
-    }
-    return corporation
+    return toValueIfFound(data.code, data)
   }
 
-  function getCorporation(code: string) {
-    return corporationsIdMap.value.get(code?.padStart(4, '0'))
+  function getCorporation(code?: string) {
+    if (code) {
+      return corporationsIdMap.value.get(code.padStart(4, '0'))
+    }
   }
 
   return {

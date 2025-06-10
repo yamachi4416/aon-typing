@@ -7,7 +7,7 @@
     <header>
       <h1 :id="titleId">{{ title }}</h1>
       <span v-if="showClose">
-        <CloseCircle
+        <PartsCloseCircle
           :title="`${title}ダイアログを閉じる`"
           @click="$emit('close')"
         />
@@ -22,15 +22,11 @@
   </section>
 </template>
 
-<script lang="ts">
-import CloseCircle from '~/components/parts/CloseCircle.vue'
-
-export default defineComponent({
+<script setup lang="ts">
+defineOptions({
   inheritAttrs: false,
 })
-</script>
 
-<script setup lang="ts">
 withDefaults(
   defineProps<{
     title?: string

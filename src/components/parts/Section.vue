@@ -14,13 +14,11 @@
   </div>
 </template>
 
-<script lang="ts">
-export default defineComponent({
+<script setup lang="ts">
+defineOptions({
   inheritAttrs: false,
 })
-</script>
 
-<script setup lang="ts">
 withDefaults(
   defineProps<{
     is?: string

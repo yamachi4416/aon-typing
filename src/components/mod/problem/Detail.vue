@@ -90,16 +90,11 @@ defineEmits<{
 }>()
 
 const uid = useId()
-const hasOnTag = computed(() => !!getCurrentInstance()?.vnode?.props?.onTag)
-const hasOnRailway = computed(
-  () => !!getCurrentInstance()?.vnode?.props?.onRailway,
-)
+const vnodeProps = computed(() => getCurrentInstance()?.vnode?.props)
+const hasOnTag = computed(() => !!vnodeProps.value?.onTag)
+const hasOnRailway = computed(() => !!vnodeProps.value?.onRailway)
 const { getCorporation } = useRailways()
-const railway = computed(() =>
-  props.detail.optional?.coCd?.[0]
-    ? getCorporation(props.detail.optional.coCd[0])
-    : undefined,
-)
+const railway = computed(() => getCorporation(props.detail.optional?.coCd?.[0]))
 </script>
 
 <style lang="scss" module>

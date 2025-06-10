@@ -1,56 +1,44 @@
 import type { ProblemListItem } from '~~/types/problems'
+import { toValueIfFound } from './utils'
 
 export function useProblems() {
   const { value: problems, fetch: fetchProblems } = useFetchCache({
     path: '/api/problems.json',
-    transform: (data) => data.value?.problems ?? [],
+    transform: (data) => data?.problems ?? [],
   })
 
   const { value: newProblems, fetch: fetchTopNewsProblems } = useFetchCache({
     path: '/api/problems/news.json',
-    transform: (data) => data.value ?? [],
+    transform: (data) => data ?? [],
   })
 
   const { value: tagSummary, fetch: fetchTags } = useFetchCache({
     path: '/api/tags.json',
-    transform: (data) => {
-      const tags = data.value ?? {}
-      return Object.entries(tags).map(([name, tag]) => ({
+    transform: (data) =>
+      Object.entries(data ?? {}).map(([name, tag]) => ({
         ...tag,
         name,
-      }))
-    },
+      })),
   })
 
   const { value: allNewProblems, fetch: fetchAllNewProblems } = useFetchCache({
     path: '/api/problems/news/all.json',
-    transform: (data) => data.value ?? [],
+    transform: (data) => data ?? [],
   })
 
   async function retrieveTag({ id }: { id: string }) {
-    const { fetch } = useFetchCache({
-      path: '/api/tags/:id',
-      key: `/api/tags/${id}.json`,
-      transform: (data) => data,
+    const data = await fetchWithCache({
+      path: `/api/tags/${id}.json`,
     })
-    const tag = await fetch()
-    if (!tag.value.id) {
-      throw createNotFoundError()
-    }
-    return tag
+    return toValueIfFound(data.id, data)
   }
 
   async function retrieveProblemDetail({ id }: { id: string }) {
-    const { fetch } = useFetchCache({
+    const data = await fetchWithCache({
       path: '/api/problems/:id',
       key: `/api/problems/${id}.json`,
-      transform: (data) => data,
     })
-    const detail = await fetch()
-    if (!detail.value.id) {
-      throw createNotFoundError()
-    }
-    return detail
+    return toValueIfFound(data.id, data)
   }
 
   function findProblemItem({ id }: { id: string }) {
@@ -61,26 +49,24 @@ export function useProblems() {
 
   function filterTagProblems({
     problems,
-    tagId = ref(''),
-    tags = ref([]),
+    tagId = '',
+    tags = [],
   }: {
-    problems: Ref<ProblemListItem[]>
-    tagId?: Ref<string> | string
-    tags?:
-      | Ref<string[] | IterableIterator<string>>
-      | string[]
-      | IterableIterator<string>
+    problems: MaybeRefOrGetter<ProblemListItem[]>
+    tagId?: MaybeRefOrGetter<string>
+    tags?: MaybeRefOrGetter<string[] | IterableIterator<string>>
   }) {
     return computed(() => {
-      const ids = [unref(tagId), ...unref(tags)].filter(Boolean)
-      if (ids.length === 0) {
-        return problems.value
+      const ids = new Set([toValue(tagId), ...toValue(tags)].filter(Boolean))
+      const items = toValue(problems)
+
+      if (ids.size === 0) {
+        return items
       }
 
-      return problems.value.filter((p) => {
-        const pTags = new Set(p.tags.map((tag) => tag.id))
-        return ids.every((id) => pTags.has(id))
-      })
+      return items.filter(({ tags }) =>
+        ids.isSubsetOf(new Set(tags.map(({ id }) => id))),
+      )
     })
   }
 

@@ -34,7 +34,7 @@ const props = defineProps<{
   }
 }>()
 
-const error = computed(() => props.error)
+const error = toRef(props, 'error')
 
 onBeforeMount(() => {
   useLoading().stopLoading()

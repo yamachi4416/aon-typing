@@ -12,10 +12,8 @@ export function useFlashing<S, V>({
   defaultValue: V
   timeout: number
 }) {
-  const flash = ref<V>()
+  const flash = ref<V>(defaultValue)
   const abortRef = shallowRef<AbortController>(new AbortController())
-
-  flash.value = defaultValue
 
   const unwatch = watch(watchSource, (source) => {
     abort()

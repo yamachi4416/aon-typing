@@ -25,6 +25,6 @@ const id = String(route.params.id)
 const detail = await wrapLoading(useProblems().retrieveProblemDetail({ id }))
 
 useHead({
-  title: `問題 No.${id} ${detail.value.title}`,
+  title: `問題 No.${id} ${detail.title}`,
 })
 </script>

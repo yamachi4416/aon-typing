@@ -63,9 +63,6 @@ export default defineNuxtConfig({
 
   experimental: {
     payloadExtraction: false,
-    purgeCachedData: false,
-    sharedPrerenderData: false,
-    alwaysRunFetchOnKeyChange: true,
   },
 
   app: {

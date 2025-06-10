@@ -10,9 +10,6 @@ export function fmtDispTime(time: number) {
 }
 
 export function fmtPercent(value: number, length = 1) {
-  if (value == null) {
-    return ''
-  }
   const n = Number(value) * 100
   const m = Math.pow(10, length)
   return Math.round(n * m) / m

@@ -25,7 +25,7 @@ export function useLoading() {
   }
 
   return {
-    isLoading: computed(() => isLoading.value),
+    isLoading: readonly(isLoading),
     startLoading,
     stopLoading,
     wrapLoading,

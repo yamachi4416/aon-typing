@@ -140,7 +140,7 @@ const problem = computed(() => {
 })
 
 const problemType = computed(() => {
-  switch (problem.value?.type ?? '') {
+  switch (problem.value?.type) {
     case 'japanese':
       return '日本語'
     case 'english':
@@ -166,11 +166,12 @@ const HelpAnimals = [
 
 const goalCharCounts = [0, 100, 250, 450, 700, 1000]
 
-const problemOrders = {
-  first: '前から',
-  last: '後から',
-  random: 'ランダム',
-} as Record<(typeof setting)['value']['problemOrder'], string>
+const problemOrders: Record<(typeof setting)['value']['problemOrder'], string> =
+  {
+    first: '前から',
+    last: '後から',
+    random: 'ランダム',
+  }
 
 function openProblemSelect() {
   emit('openProblemSelect')

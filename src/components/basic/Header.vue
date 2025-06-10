@@ -29,15 +29,15 @@ const props = withDefaults(
 const site = useSiteConfig()
 const titleText = site.name
 const startAnim = ref(false)
-const titleChars = ref([] as string[])
+const titleChars = ref<string[]>([])
 const title = computed(() =>
   props.anim ? titleChars.value.join('') : titleText,
 )
 
 onMounted(() => typing(titleText))
 
-function typing(text: string) {
-  if (!props.anim) return Promise.resolve()
+async function typing(text: string) {
+  if (!props.anim) return
   return new Promise((resolve) => {
     const types = typeJapaneseCharsMap(text, undefined, true).map((v) => ({
       jc: v.jc,

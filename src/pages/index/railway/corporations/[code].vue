@@ -57,17 +57,15 @@ const corporation = await wrapLoading(
     code: String(useRoute().params.code),
   }),
 )
-const operationLines = computed(() =>
-  corporation.value.operationLines.map(({ id, name, yomi }) => ({
-    id,
-    name,
-    yomi,
-    to: id ? { name: 'index-problems-id', params: { id } } : undefined,
-  })),
-)
+const operationLines = corporation.operationLines.map(({ id, name, yomi }) => ({
+  id,
+  name,
+  yomi,
+  to: id ? { name: 'index-problems-id', params: { id } } : undefined,
+}))
 
 useHead({
-  title: `${corporation.value.name}の路線いちらん`,
+  title: `${corporation.name}の路線いちらん`,
 })
 </script>
 
