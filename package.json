@@ -12,11 +12,11 @@
     "preview": "nuxt preview",
     "preview:dist": "node ./scripts/dist/preview-server.js -d ./dist",
     "generate": "nuxt generate",
-    "generate:problem": "node ./scripts/dist/problem.js generate -i ./data/ -o ./src/assets/api",
+    "generate:problem": "node ./scripts/dist/problem.js generate -i ./data/ -o ./app/assets/api",
     "lint": "concurrently 'pnpm:lint:*'",
     "lint:typecheck": "nuxt typecheck",
     "lint:scripts": "eslint .",
-    "lint:styles": "stylelint src/**/*.{scss,vue}",
+    "lint:styles": "stylelint app/**/*.{scss,vue}",
     "lint:format": "prettier . -c",
     "test": "vitest",
     "test:ci": "vitest run"

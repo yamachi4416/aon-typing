@@ -4,7 +4,7 @@ import { defineWorkspace, mergeConfig } from 'vitest/config'
 const sharedConfig: UserConfig = {
   resolve: {
     alias: {
-      '~': new URL('./src', import.meta.url).pathname,
+      '~': new URL('./app', import.meta.url).pathname,
       '~~': new URL('./', import.meta.url).pathname,
     },
   },

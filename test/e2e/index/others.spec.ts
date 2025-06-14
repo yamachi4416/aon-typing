@@ -19,7 +19,7 @@ describe('トップページのコンテンツの画面遷移の確認', () => {
       title: '鉄道の会社いちらん',
     },
   ])(
-    "'$name'リンクをクリックすると'$title'ページに遷移する",
+    '$nameリンクをクリックすると$titleページに遷移する',
     async ({ name, path, title }) => {
       const page = await createPage('/')
 

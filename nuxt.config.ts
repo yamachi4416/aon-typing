@@ -6,16 +6,16 @@ const resolver = createResolver(import.meta.url)
 
 export const routes = (() => {
   const { problems } = JSON.parse(
-    String(readFileSync('./src/assets/api/problems.json')),
+    String(readFileSync('./app/assets/api/problems.json')),
   ) as { problems: Array<{ id: string }> }
 
   const tags: Array<{ id: string }> = Object.values(
-    JSON.parse(String(readFileSync('./src/assets/api/tags.json'))),
+    JSON.parse(String(readFileSync('./app/assets/api/tags.json'))),
   )
 
   const railwayCorpCodes = (
     JSON.parse(
-      String(readFileSync('./src/assets/api/railway/corporations.json')),
+      String(readFileSync('./app/assets/api/railway/corporations.json')),
     ) as { code: string }[]
   ).map(({ code }) => code.padStart(4, '0'))
 
@@ -62,7 +62,6 @@ export default defineNuxtConfig({
   components: true,
   css: ['~/assets/css/main.scss'],
   ssr: true,
-  srcDir: 'src',
 
   modules: ['@nuxtjs/seo', '@nuxtjs/google-fonts'],
 
@@ -113,7 +112,7 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    apiDir: resolver.resolve('./src/assets/api'),
+    apiDir: resolver.resolve('./app/assets/api'),
     public: {
       gtagId: process.env.APP_G_TAGID ?? '',
       contactUrl: process.env.APP_CONTACT_URL ?? '/api/contact',
@@ -151,7 +150,7 @@ export default defineNuxtConfig({
       pages.push({
         name: '404',
         path: '/404.html',
-        file: resolver.resolve('src/error.vue'),
+        file: resolver.resolve('app/error.vue'),
       })
     },
   },

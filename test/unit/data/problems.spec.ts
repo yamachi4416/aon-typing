@@ -8,7 +8,7 @@ import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
 import type { ProblemDetail } from '~~/types/problems'
 
 async function listFiles() {
-  const dir = './src/assets/api/problems'
+  const dir = './app/assets/api/problems'
   const paths = await readdir(dir, { withFileTypes: true })
 
   return paths
