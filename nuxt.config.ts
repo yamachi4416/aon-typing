@@ -50,6 +50,15 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+
+  features: {
+    inlineStyles: false,
+  },
+
+  unhead: {
+    legacy: true,
+  },
+
   components: true,
   css: ['~/assets/css/main.scss'],
   ssr: true,
@@ -94,7 +103,6 @@ export default defineNuxtConfig({
 
   googleFonts: {
     display: 'swap',
-    preload: true,
     download: false,
     families: {
       Itim: true,
