@@ -12,6 +12,7 @@
   "optional": { "cd": ["74"], "coCd": ["1"] },
   "words": [
     { "info": "新潟", "info2": "にいがた", "word": "niigata" },
+    { "info": "上所", "info2": "かみところ", "word": "kamitokoro" },
     { "info": "白山", "info2": "はくさん", "word": "hakusann" },
     { "info": "関屋", "info2": "せきや", "word": "sekiya" },
     { "info": "青山", "info2": "あおやま", "word": "aoyama" },

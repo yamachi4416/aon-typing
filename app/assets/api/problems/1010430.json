@@ -35,7 +35,8 @@
       "info": "コスモスクエア",
       "info2": "こすもすくえあ",
       "word": "kosumosukuea"
-    }
+    },
+    { "info": "夢洲", "info2": "ゆめしま", "word": "yumesima" }
   ],
   "optional": { "cd": ["430"], "coCd": ["27"] }
 }

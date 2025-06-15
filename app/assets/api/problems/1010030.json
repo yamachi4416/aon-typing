@@ -23,11 +23,43 @@
       "word": "hamanaigarasiriyouinn"
     },
     { "info": "津軽浜名", "info2": "つがるはまな", "word": "tugaruhamana" },
+    {
+      "info": "ふれあい文庫",
+      "info2": "ふれあいぶんこ",
+      "word": "hureaibunko"
+    },
+    {
+      "info": "オリオン美容院",
+      "info2": "おりおんびよういん",
+      "word": "orionbiyouinn"
+    },
     { "info": "今別", "info2": "いまべつ", "word": "imabetu" },
+    {
+      "info": "北大川平",
+      "info2": "きたおおかわだい",
+      "word": "kitaookawadai"
+    },
     { "info": "大川平", "info2": "おおかわだい", "word": "ookawadai" },
     { "info": "津軽二股", "info2": "つがるふたまた", "word": "tugaruhutamata" },
+    { "info": "与四郎沢", "info2": "よしろうさわ", "word": "yosirousawa" },
+    { "info": "母沢", "info2": "もさわ", "word": "mosawa" },
     { "info": "大平", "info2": "おおだい", "word": "oodai" },
+    {
+      "info": "山本会館",
+      "info2": "やまもとかいかん",
+      "word": "yamamotokaikann"
+    },
+    {
+      "info": "上小国会館",
+      "info2": "かみおぐにかいかん",
+      "word": "kamiogunikaikann"
+    },
     { "info": "中小国", "info2": "なかおぐに", "word": "nakaoguni" },
+    {
+      "info": "下小国会館",
+      "info2": "しもおぐにかいかん",
+      "word": "simoogunikaikann"
+    },
     { "info": "蟹田", "info2": "かにた", "word": "kanita" },
     { "info": "瀬辺地", "info2": "せへじ", "word": "seheji" },
     { "info": "郷沢", "info2": "ごうさわ", "word": "gousawa" },
