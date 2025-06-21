@@ -1,0 +1,44 @@
+{
+  "id": "1010756",
+  "title": "富山地方鉄道３系統環状線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-06-21",
+  "updatedAt": "2025-06-21",
+  "words": [
+    {
+      "info": "地鉄ビル前",
+      "info2": "ちてつびるまえ",
+      "word": "titetubirumae"
+    },
+    { "info": "電気ビル前", "info2": "でんきびるまえ", "word": "denkibirumae" },
+    { "info": "桜橋", "info2": "さくらばし", "word": "sakurabasi" },
+    { "info": "荒町", "info2": "あらまち", "word": "aramati" },
+    { "info": "中町", "info2": "なかまち", "word": "nakamati" },
+    {
+      "info": "グランドプラザ前",
+      "info2": "ぐらんどぷらざまえ",
+      "word": "gurandopurazamae"
+    },
+    { "info": "大手モール", "info2": "おおてもーる", "word": "ootemo-ru" },
+    {
+      "info": "国際会議場前",
+      "info2": "こくさいかいぎじょうまえ",
+      "word": "kokusaikaigijoumae"
+    },
+    { "info": "丸の内", "info2": "まるのうち", "word": "marunouti" },
+    { "info": "県庁前", "info2": "けんちょうまえ", "word": "kentyoumae" },
+    { "info": "新富町", "info2": "しんとみちょう", "word": "sintomityou" },
+    { "info": "富山駅", "info2": "とやまえき", "word": "toyamaeki" },
+    {
+      "info": "電鉄富山駅・エスタ前",
+      "info2": "でんてつとやまえき・えすたまえ",
+      "word": "dentetutoyamaeki/esutamae"
+    }
+  ],
+  "optional": { "cd": ["756"], "coCd": ["77"] }
+}

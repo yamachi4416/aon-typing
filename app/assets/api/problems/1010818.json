@@ -1,0 +1,62 @@
+{
+  "id": "1010818",
+  "title": "富山地方鉄道富山港線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-06-21",
+  "updatedAt": "2025-06-21",
+  "words": [
+    { "info": "岩瀬浜", "info2": "いわせはま", "word": "iwasehama" },
+    {
+      "info": "競輪場前",
+      "info2": "けいりんじょうまえ",
+      "word": "keirinjoumae"
+    },
+    { "info": "東岩瀬", "info2": "ひがしいわせ", "word": "higasiiwase" },
+    {
+      "info": "萩浦小学校前",
+      "info2": "はぎうらしょうがっこうまえ",
+      "word": "hagiurasyougakkoumae"
+    },
+    { "info": "蓮町", "info2": "はすまち", "word": "hasumati" },
+    {
+      "info": "犬島新町",
+      "info2": "いぬじましんまち",
+      "word": "inujimasinmati"
+    },
+    { "info": "城川原", "info2": "じょうがわら", "word": "jougawara" },
+    {
+      "info": "越中中島",
+      "info2": "えっちゅうなかじま",
+      "word": "ettyuunakajima"
+    },
+    { "info": "粟島", "info2": "あわじま", "word": "awajima" },
+    { "info": "下奥井", "info2": "しもおくい", "word": "simookui" },
+    {
+      "info": "奥田中学校前",
+      "info2": "おくだちゅうがっこうまえ",
+      "word": "okudatyuugakkoumae"
+    },
+    {
+      "info": "龍谷富山高校前",
+      "info2": "りゅうこくとやまこうこうまえ",
+      "word": "ryuukokutoyamakoukoumae"
+    },
+    {
+      "info": "インテック本社前",
+      "info2": "いんてっくほんしゃまえ",
+      "word": "intekkuhonsyamae"
+    },
+    {
+      "info": "オークスカナルパークホテル富山前",
+      "info2": "おーくすかなるぱーくほてるとやままえ",
+      "word": "o-kusukanarupa-kuhoterutoyamamae"
+    },
+    { "info": "富山駅", "info2": "とやまえき", "word": "toyamaeki" }
+  ],
+  "optional": { "cd": ["818"], "coCd": ["77"] }
+}
