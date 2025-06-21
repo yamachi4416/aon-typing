@@ -1,6 +1,7 @@
 import type { Argv } from 'yargs'
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
+import { yargsFailHandler } from '../util.mjs'
 import { previewServer } from './lib/preview'
 import { defineCommand } from './lib/util'
 
@@ -32,10 +33,7 @@ function builder(yargs: Argv) {
 
 yargs(hideBin(process.argv))
   .locale('en')
-  .fail((msg, err) => {
-    console.error(msg ?? '', err)
-    process.exit(1)
-  })
+  .fail(yargsFailHandler)
   .help()
   .alias('h', 'help')
   .command(

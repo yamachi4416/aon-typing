@@ -3,6 +3,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import url from 'node:url'
 import yargs from 'yargs'
+import { yargsFailHandler } from './util.mjs'
 ;(async function main() {
   const basedir = path.dirname(url.fileURLToPath(import.meta.url))
   const outdir = path.resolve(basedir, 'dist')
@@ -25,10 +26,7 @@ import yargs from 'yargs'
 
   yargs(process.argv.splice(2))
     .locale('en')
-    .fail((msg, err) => {
-      console.error(msg ?? '', err)
-      process.exit(1)
-    })
+    .fail(yargsFailHandler)
     .command({
       command: '$0 [build..]',
       describe: 'build script files',

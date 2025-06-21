@@ -118,7 +118,9 @@ export default defineCommand({
       ).then((lines) => lines.flat())
 
       if (!lines.length || !lines[0]) {
-        throw new Error(`No operation lines found for codes: ${cds.join(', ')}.`)
+        throw new Error(
+          `No operation lines found for codes: ${cds.join(', ')}.`,
+        )
       }
 
       data.title = `${lines[0].name}の駅いちらん`

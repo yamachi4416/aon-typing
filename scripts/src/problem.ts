@@ -1,5 +1,6 @@
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
+import { yargsFailHandler } from '../util.mjs'
 import aozoraUtaDL from './problem/aozora-uta-dl'
 import ekiCorporationsDL from './problem/eki-corporations-dl'
 import ekiListProblems from './problem/eki-ls-problems'
@@ -9,10 +10,7 @@ import generate from './problem/generate'
 
 yargs(hideBin(process.argv))
   .locale('en')
-  .fail((msg, err) => {
-    console.error(msg ?? '', err)
-    process.exit(1)
-  })
+  .fail(yargsFailHandler)
   .command(generate)
   .command(aozoraUtaDL)
   .command(ekiListProblems)
