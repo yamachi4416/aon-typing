@@ -1,5 +1,5 @@
-import type { UserConfig } from 'vitest/config'
-import { defineWorkspace, mergeConfig } from 'vitest/config'
+import type { ViteUserConfig as UserConfig } from 'vitest/config'
+import { defineConfig, mergeConfig } from 'vitest/config'
 
 const sharedConfig: UserConfig = {
   resolve: {
@@ -25,4 +25,8 @@ const e2eConfig = mergeConfig<UserConfig, UserConfig>(sharedConfig, {
   },
 })
 
-export default defineWorkspace([unitConfig, e2eConfig])
+export default defineConfig({
+  test: {
+    projects: [unitConfig, e2eConfig],
+  },
+})
