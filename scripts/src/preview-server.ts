@@ -32,6 +32,10 @@ function builder(yargs: Argv) {
 
 yargs(hideBin(process.argv))
   .locale('en')
+  .fail((msg, err) => {
+    console.error(msg ?? '', err)
+    process.exit(1)
+  })
   .help()
   .alias('h', 'help')
   .command(

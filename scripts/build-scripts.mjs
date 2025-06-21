@@ -25,6 +25,10 @@ import yargs from 'yargs'
 
   yargs(process.argv.splice(2))
     .locale('en')
+    .fail((msg, err) => {
+      console.error(msg ?? '', err)
+      process.exit(1)
+    })
     .command({
       command: '$0 [build..]',
       describe: 'build script files',

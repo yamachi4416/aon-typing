@@ -1,6 +1,6 @@
 import http from 'http'
 import https from 'https'
-import fs from 'node:fs'
+import fs from 'node:fs/promises'
 import { createInterface } from 'node:readline'
 import type { CommandModule } from 'yargs'
 
@@ -32,12 +32,12 @@ export async function httpFetch(url: string, options: HttpRequestOptions = {}) {
           },
         },
         async (response) => {
-          const buffers = []
+          const chunks: Buffer[] = []
           for await (const chunk of response) {
-            buffers.push(chunk)
+            chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk))
           }
           resolve({
-            data: Buffer.concat(buffers),
+            data: Buffer.concat(chunks),
             response,
           })
         },
@@ -85,16 +85,42 @@ export async function prompt(message: string) {
   })
 }
 
+export async function confirm(
+  message: string,
+  maxAttempts: number = Number.MAX_VALUE,
+  defaultValue: boolean = false,
+) {
+  for (let i = 0; i < maxAttempts; i++) {
+    const input = await prompt(message)
+    const answer = input.trim().toLowerCase()
+    if (answer === 'y') return true
+    if (answer === 'n') return false
+  }
+  return defaultValue
+}
+
 export async function isPathExists(file: string) {
-  const exists = await fs.promises
-    .access(file, fs.constants.F_OK)
-    .then(() => true)
-    .catch(() => false)
-  return exists
+  try {
+    await fs.access(file, fs.constants.F_OK)
+    return true
+  } catch (e: unknown) {
+    if (isFileNotFoundError(e)) {
+      return false
+    }
+    throw e
+  }
 }
 
 export function toArray<T>(value: T | T[] | undefined | null): T[] {
   if (!value) return []
   if (Array.isArray(value)) return value
   return [value]
+}
+
+export function isEqualErrorCode<T>(error: unknown, code: T) {
+  return error instanceof Error && 'code' in error && error.code === code
+}
+
+export function isFileNotFoundError(error: unknown) {
+  return isEqualErrorCode(error, 'ENOENT')
 }

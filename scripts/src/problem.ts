@@ -9,6 +9,10 @@ import generate from './problem/generate'
 
 yargs(hideBin(process.argv))
   .locale('en')
+  .fail((msg, err) => {
+    console.error(msg ?? '', err)
+    process.exit(1)
+  })
   .command(generate)
   .command(aozoraUtaDL)
   .command(ekiListProblems)

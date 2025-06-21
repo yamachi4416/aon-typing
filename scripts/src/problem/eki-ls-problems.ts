@@ -45,21 +45,19 @@ export default defineCommand({
     )
 
     const dataset = await Promise.all(
-      files.map(
-        async (file) =>
-          await readFile(file, { flag: 'r' }).then(
-            (b): InfoData => ({
-              id: path.basename(file, path.extname(file)),
-              file,
-              data: JSON.parse(b.toString()),
-            }),
-          ),
-      ),
+      files.map(async (file) => {
+        const buffer = await readFile(file, { flag: 'r' })
+        return {
+          id: path.basename(file, path.extname(file)),
+          file,
+          data: JSON.parse(buffer.toString()),
+        } satisfies InfoData
+      }),
     )
 
     const lines = dataset
       .filter((info) => info.data.tags.includes('駅名'))
-      .sort((a, b) => Number(a.id) - Number(b.id))
+      .toSorted((a, b) => Number(a.id) - Number(b.id))
       .map(({ id, file, data: { title, createdAt, optional } }) =>
         [id, title, String(optional?.cd ?? ''), createdAt, file].join('\t'),
       )
