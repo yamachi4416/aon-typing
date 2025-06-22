@@ -1,150 +1,97 @@
-import type { KeyLayoutName } from './Keys'
+import { EventManager, TypingEvent } from './EventManager'
+import { TimerManager } from './TimerManager'
 import { TypingGameInfo } from './TypingGameInfo'
-import type { TypingGamer } from './TypingGamer'
-import { useTypingGamer } from './TypingGamer'
+import { TypingGamer } from './TypingGamer'
+import type { GameSetting } from './TypingGameSetting'
+import type { TypingGameState } from './TypingGameState'
 import type { TypingGameWordData } from './TypingGameWordData'
-import type { TypingProblemQuestioner } from './TypingProblemQuestioner'
-import { timerEntry, timerTicker } from './Util'
 
-type ProblemOrder = 'first' | 'last' | 'random'
+export abstract class TypingGame {
+  abstract start(): Promise<TypingGameInfo | undefined>
+  abstract cancel(): TypingGameInfo
+  abstract pause(): boolean
+  abstract resume(): boolean
+  abstract toggle(): unknown
+  abstract dispose(): unknown
 
-type TypingEvent = CustomEvent<{
-  char?: string
-  shiftKey?: boolean
-  capsLock?: boolean
-}>
-
-declare global {
-  interface WindowEventMap {
-    'c:typing': TypingEvent
+  static create({
+    state,
+    setting,
+    eventManager = EventManager.create(),
+    timerManager = TimerManager.create(),
+  }: {
+    state: TypingGameState
+    setting: GameSetting
+    eventManager?: EventManager
+    timerManager?: TimerManager
+  }): TypingGame {
+    return new TypingGameImpl(state, setting, eventManager, timerManager)
   }
 }
 
-export interface GameSetting {
-  timeLimit: number
-  autoMode: number
-  problemOrder: ProblemOrder
-  goalCharCount: number
-  problemId: string
-  keyLayout: KeyLayoutName
-}
-
-export interface CurrentTypingState {
-  detail?: TypingEvent['detail']
-  mistake: boolean
-}
-
-export class TypingGame {
-  problem?: TypingProblemQuestioner
-  tick = 0
-  pausing = false
-  canceled = false
-  running = false
-  timeLimit = 0
-  timeUse = 0
-  goalCharCount = 0
-  totalTypeCount = 0
-  totalTypeCorrect = 0
-  totalTypeMiss = 0
-  currentTypingState: CurrentTypingState = { mistake: false }
-
-  private readonly eventManager
-  private readonly timerManager
-
+class TypingGameImpl implements TypingGame {
   private _stop?: () => void
 
-  constructor() {
-    this.eventManager = new EventManager()
-    this.timerManager = new TimerManager()
-    this._initData()
-  }
+  constructor(
+    private readonly state: TypingGameState,
+    private readonly setting: GameSetting,
+    private readonly eventManager: EventManager,
+    private readonly timerManager: TimerManager,
+  ) {}
 
-  private _initData() {
-    this.problem = undefined
-    this.tick = 0
-    this.pausing = false
-    this.canceled = false
-    this.running = false
-    this.timeLimit = 0
-    this.timeUse = 0
-    this.goalCharCount = 0
-    this.totalTypeCount = 0
-    this.totalTypeCorrect = 0
-    this.totalTypeMiss = 0
-    this.currentTypingState = { mistake: false }
-  }
-
-  init({
-    problem,
-    setting,
-  }: {
-    problem?: TypingProblemQuestioner
-    setting?: GameSetting
-  }) {
-    this._initData()
-    this.problem = problem
-    this.timeLimit = setting?.timeLimit ?? 0
-    this.timeUse = 0
-    this.goalCharCount = setting?.goalCharCount ?? 0
-    this._stop = undefined
-  }
-
-  get current() {
-    return this.problem?.current
-  }
-
-  get totalCharCount() {
-    return this.problem?.totalCharCount
-  }
-
-  private _typing({ gamer }: { gamer: TypingGamer }) {
-    gamer.init(this.current)
+  private _createTypingHandler({ gamer }: { gamer: TypingGamer }) {
+    gamer.init(this.state.current)
 
     return (event: TypingEvent) => {
-      if (this.pausing) {
+      const state = this.state
+
+      if (state.pausing) {
         return
       }
 
       const detail = event.detail
       const char = detail.char
-      const word = this.current
+      const word = state.current
 
-      if (char) {
-        this.totalTypeCount += 1
+      if (!char) {
+        state.currentTypingState = { detail, mistake: false }
+        return
+      }
 
-        if (gamer.expect(char, word)) {
-          this.currentTypingState = { detail, mistake: false }
-          this.totalTypeCorrect += 1
-        } else {
-          this.currentTypingState = { detail, mistake: true }
-          this.totalTypeMiss += 1
-        }
+      state.totalTypeCount += 1
 
-        if (this.goalCharCount > 0) {
-          if (this.totalTypeCorrect >= this.goalCharCount && this._stop) {
-            this._stop()
-            return
-          }
-        }
-
-        if (word?.success) {
-          word.endTime = this.tick
-          this.problem?.nextWord()
-
-          if (this.current) {
-            this.current.startTime = word.endTime
-            gamer.init(this.current)
-          } else if (this._stop) {
-            this._stop()
-          }
-        }
+      if (gamer.expect(char, word)) {
+        state.currentTypingState = { detail, mistake: false }
+        state.totalTypeCorrect += 1
       } else {
-        this.currentTypingState = { detail, mistake: false }
+        state.currentTypingState = { detail, mistake: true }
+        state.totalTypeMiss += 1
+      }
+
+      if (
+        state.goalCharCount > 0 &&
+        state.totalTypeCorrect >= state.goalCharCount &&
+        this._stop
+      ) {
+        this._stop()
+        return
+      }
+
+      if (word?.success) {
+        word.endTime = state.tick
+        state.problem?.nextWord()
+
+        if (state.current) {
+          state.current.startTime = word.endTime
+          gamer.init(state.current)
+        } else if (this._stop) {
+          this._stop()
+        }
       }
     }
   }
 
-  private _keydown() {
+  private _createKeydownHandler() {
     return (e: KeyboardEvent) => {
       e.preventDefault()
       if (e.repeat) {
@@ -160,39 +107,45 @@ export class TypingGame {
         detail.char = ''
       }
 
-      const event = new CustomEvent('c:typing', { detail })
-      this.eventManager.dispatch(event)
+      this.eventManager.dispatch(new TypingEvent(detail))
     }
   }
 
-  private visibleChange() {
-    if (document.hidden) {
-      this.timerManager.pause()
-    } else {
-      this.timerManager.resume()
+  private _createVisibleChangeHandler() {
+    return () => {
+      if (document.hidden) {
+        this.timerManager.pause()
+      } else {
+        this.timerManager.resume()
+      }
     }
   }
 
-  private addTickTimer(timeLimit: number) {
+  private _info() {
+    return TypingGameInfo.create(this.state)
+  }
+
+  private _addTickTimer(timeLimit: number) {
     const interval = 60
-    this.timerManager.create({
+    this.timerManager.add({
       handler: () => {
-        if (timeLimit > 0 && this.timeUse >= timeLimit) {
+        const state = this.state
+        if (timeLimit > 0 && state.timeUse >= timeLimit) {
           this.cancel()
-        } else if (this.isRunning) {
-          this.tick += interval
-          this.timeUse += interval
+        } else if (this.state.isRunning) {
+          state.tick += interval
+          state.timeUse += interval
         }
       },
       interval,
     })
   }
 
-  private addAutoTyping({
+  private _addAutoTyping({
     words,
     autoMode,
   }: {
-    words: TypingGameWordData[]
+    words: ReadonlyArray<TypingGameWordData>
     autoMode: number
   }) {
     if (!autoMode) {
@@ -201,17 +154,15 @@ export class TypingGame {
 
     const xs = Array.from(words.reduce((a, w) => a + w.wordState.remaining, ''))
 
-    this.timerManager.create({
+    this.timerManager.add({
       handler: () => {
-        if (!this.isRunning) {
+        if (!this.state.isRunning) {
           return
         }
 
         const char = xs.shift()
         if (char) {
-          const detail = { char }
-          const event = new CustomEvent('c:typing', { detail })
-          this.eventManager.dispatch(event)
+          this.eventManager.dispatch(new TypingEvent({ char }))
         } else {
           this.timerManager.stop()
         }
@@ -220,72 +171,64 @@ export class TypingGame {
     })
   }
 
-  async start({
-    problem,
-    setting,
-  }: {
-    problem: TypingProblemQuestioner
-    setting: GameSetting
-  }): Promise<TypingGameInfo | undefined> {
+  async start(): Promise<TypingGameInfo | undefined> {
     this.cancel()
 
-    const { words, type } = problem ?? {}
-    const { timeLimit, autoMode } = setting
-    const gamer = useTypingGamer(type)
+    this._stop = undefined
 
-    if (!gamer) {
-      return undefined
-    }
+    const { words, type } = this.state.problem!
+    const { timeLimit, autoMode } = this.setting
 
-    this.init({ problem, setting })
+    const gamer = TypingGamer.of(type)
+    if (!gamer) return undefined
+
+    const keydown = autoMode ? () => {} : this._createKeydownHandler()
+    const typing = this._createTypingHandler({ gamer })
+    const visibleChange = this._createVisibleChangeHandler()
 
     return await new Promise((resolve) => {
-      const keydown = autoMode ? () => {} : this._keydown()
-      const typing = this._typing({ gamer })
-
       this._stop = () => {
-        this._stop = undefined
-        this.running = false
+        const state = this.state
 
-        if (this.current && !this.current.endTime) {
-          this.current.endTime = this.tick
+        this._stop = undefined
+        state.running = false
+
+        if (state.current && !state.current.endTime) {
+          state.current.endTime = state.tick
         }
 
         this.eventManager.clear()
         this.timerManager.clear()
 
-        resolve(this.info())
+        resolve(this._info())
       }
 
-      this.eventManager.add('keydown', keydown as EventListener)
-      this.eventManager.add('c:typing', typing as EventListener)
-      this.eventManager.add(
-        'visibilitychange',
-        this.visibleChange.bind(this),
-        document,
-      )
+      this.eventManager.add('keydown', keydown)
+      this.eventManager.add('c:typing', typing)
+      this.eventManager.add('visibilitychange', visibleChange, document)
 
-      this.addTickTimer(timeLimit)
-      this.addAutoTyping({ words, autoMode })
+      this._addTickTimer(timeLimit)
+      this._addAutoTyping({ words, autoMode })
       this.timerManager.start()
-      this.running = true
-      this.visibleChange()
+      this.state.running = true
+      visibleChange()
     })
   }
 
   cancel() {
     if (this._stop) {
-      this.canceled = true
+      this.state.canceled = true
       this._stop()
     }
     this.eventManager.clear()
     this.timerManager.clear()
-    return this.info()
+    return this._info()
   }
 
   pause() {
-    if (this.isRunning) {
-      this.pausing = true
+    const state = this.state
+    if (state.isRunning) {
+      state.pausing = true
       this.timerManager.pause()
       return true
     }
@@ -293,131 +236,26 @@ export class TypingGame {
   }
 
   resume() {
-    if (this.isPausing) {
-      this.pausing = false
+    const state = this.state
+    if (state.isPausing) {
+      state.pausing = false
       this.timerManager.resume()
       return true
     }
     return false
   }
 
-  get isPausing() {
-    return this.running && this.pausing
-  }
-
-  get isRunning() {
-    return this.running && !this.pausing
-  }
-
-  info() {
-    return new TypingGameInfo(this)
+  toggle() {
+    const state = this.state
+    if (state.isRunning) {
+      this.pause()
+    } else if (state.isPausing) {
+      this.resume()
+    }
   }
 
   dispose() {
     this.eventManager.clear()
     this.timerManager.clear()
-  }
-}
-
-class EventManager {
-  private listeners: Array<{
-    eventName: string
-    handler: EventListener
-    target: Document | Element | Window
-    active: boolean
-  }> = []
-
-  add(
-    eventName: string,
-    handler: EventListener,
-    target?: Document | Element | Window,
-  ) {
-    target = target ?? window
-    target.addEventListener(eventName, handler)
-    this.listeners.push({
-      eventName,
-      handler,
-      target,
-      active: true,
-    })
-  }
-
-  remove(
-    eventName: string,
-    handler: EventListener,
-    target?: Document | Element | Window,
-  ) {
-    target = target ?? window
-
-    const targets = this.listeners.filter((it) => {
-      it.active =
-        it.eventName !== eventName ||
-        it.handler !== handler ||
-        it.target !== target
-      return !it.active
-    })
-
-    this.listeners = this.listeners.filter((it) => it.active)
-
-    targets.forEach((it) => {
-      it.target.removeEventListener(it.eventName, it.handler)
-    })
-  }
-
-  dispatch(event: Event, target?: Document | Element | Window) {
-    target = target ?? window
-    target.dispatchEvent(event)
-  }
-
-  clear() {
-    const targets = [...this.listeners]
-    this.listeners = []
-    targets.forEach((it) => {
-      it.target.removeEventListener(it.eventName, it.handler)
-    })
-  }
-}
-
-class TimerManager {
-  private timer = timerTicker(30)
-  private timers: ReturnType<typeof timerEntry>[] = []
-
-  create({
-    handler,
-    interval,
-  }: {
-    handler: () => void
-    interval: (() => number) | number
-  }) {
-    this.timers.push(timerEntry(handler, interval))
-  }
-
-  async start() {
-    for (const entry of this.timers) {
-      entry.setup(Date.now())
-    }
-
-    for await (const time of this.timer.start()) {
-      for (const entry of this.timers) {
-        entry.handle(time)
-      }
-    }
-  }
-
-  stop() {
-    this.timer.stop()
-  }
-
-  pause() {
-    this.stop()
-  }
-
-  resume() {
-    this.start()
-  }
-
-  clear() {
-    this.timer.stop()
-    this.timers = []
   }
 }

@@ -12,8 +12,8 @@
   >
     <PartsLineGauge
       :class="$style['line-gauge']"
-      :limit="typing.goalCharCount || typing.totalCharCount || 0"
-      :used="typing.totalTypeCorrect"
+      :limit="state.goalCharCount || state.totalCharCount || 0"
+      :used="state.totalTypeCorrect"
     />
     <foreignObject :class="$style.typing" width="1000" height="470">
       <div>
@@ -21,20 +21,20 @@
           <div>
             <div :class="$style['typing-display-left']">
               <PartsTimeCircle
-                v-if="typing.timeLimit > 0"
-                :total-time="typing.timeLimit"
-                :time="typing.timeUse"
+                v-if="state.timeLimit > 0"
+                :total-time="state.timeLimit"
+                :time="state.timeUse"
                 :text="
-                  typing.timeLimit - typing.timeUse
-                    ? ~~((typing.timeLimit - typing.timeUse) / 1000 + 1)
+                  state.timeLimit - state.timeUse
+                    ? ~~((state.timeLimit - state.timeUse) / 1000 + 1)
                     : 'END'
                 "
-                @click="pauseToggle"
+                @click="emit('toggle')"
               />
               <PartsTimeClock
                 v-else
-                :time="typing.timeUse"
-                @click="pauseToggle"
+                :time="state.timeUse"
+                @click="emit('toggle')"
               />
             </div>
             <div :class="$style['typing-display-center']">
@@ -60,7 +60,7 @@
             </div>
             <div :class="$style['typing-display-right']">
               <div :class="$style['close-circle']">
-                <PartsCloseCircle tabindex="-1" @click="cancel" />
+                <PartsCloseCircle tabindex="-1" @click="emit('cancel')" />
               </div>
             </div>
           </div>
@@ -84,16 +84,20 @@
 
 <script setup lang="ts">
 import { getKeyLayout } from '~~/libs/Keys'
-import type { TypingGame } from '~~/libs/TypingGame'
+import type { TypingGameState } from '~~/libs/TypingGameState'
 
 const props = defineProps<{
-  typing: Readonly<TypingGame>
+  state: Readonly<TypingGameState>
 }>()
 
-const typingState = computed(() => props.typing.currentTypingState)
-const problem = orDefaultComputed(() => props.typing.problem, {})
-const setting = orDefaultComputed(() => problem.value.setting, {})
-const current = orDefaultComputed(() => props.typing.current, {})
+const emit = defineEmits<{
+  (e: 'toggle' | 'cancel' | 'dispose'): unknown
+}>()
+
+const typingState = computed(() => props.state.currentTypingState)
+const problem = orDefaultComputed(() => props.state.problem, {})
+const setting = orDefaultComputed(() => props.state.setting, {})
+const current = orDefaultComputed(() => props.state.current, {})
 const infoState = orDefaultComputed(() => current.value.infoState, {})
 const typeKey = orDefaultComputed(() => current.value.wordState?.current, '')
 
@@ -125,19 +129,7 @@ const wordInfo1 = computed(() => {
   return { count, type }
 })
 
-onBeforeUnmount(() => props.typing.dispose())
-
-function cancel() {
-  props.typing.cancel()
-}
-
-function pauseToggle() {
-  if (props.typing.isRunning) {
-    props.typing.pause()
-  } else if (props.typing.isPausing) {
-    props.typing.resume()
-  }
-}
+onBeforeUnmount(() => emit('dispose'))
 
 function orDefaultComputed<T>(
   source: () => T,

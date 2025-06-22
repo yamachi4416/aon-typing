@@ -1,4 +1,4 @@
-import type { TypingGame } from './TypingGame'
+import type { TypingGameState } from './TypingGameState'
 import type { TypingGameWordData } from './TypingGameWordData'
 
 export const rankList = () => {
@@ -16,23 +16,20 @@ export const rankList = () => {
 export const helpAnimals = () => rankList().slice(2, 6)
 
 export class TypingGameInfo {
-  tick: number
-  totalTypeCount: number
-  totalTypeMiss: number
-  totalTypeCorrect: number
-  endWords: TypingGameWordData[]
+  readonly tick: number
+  readonly totalTypeCount: number
+  readonly totalTypeMiss: number
+  readonly totalTypeCorrect: number
+  readonly endWords: TypingGameWordData[]
 
-  constructor(game: TypingGame) {
-    this.tick = game.tick
-    this.totalTypeCount = game.totalTypeCount
-    this.totalTypeMiss = game.totalTypeMiss
-    this.totalTypeCorrect = game.totalTypeCorrect
-    this.endWords = []
-    if (game.problem?.endWords) {
-      this.endWords.push(...game.problem.endWords)
-    }
-    if (game.problem?.current) {
-      this.endWords.push(game.problem.current)
+  private constructor(state: Readonly<TypingGameState>) {
+    this.tick = state.tick
+    this.totalTypeCount = state.totalTypeCount
+    this.totalTypeMiss = state.totalTypeMiss
+    this.totalTypeCorrect = state.totalTypeCorrect
+    this.endWords = state.problem?.endWords.slice(0) ?? []
+    if (state.problem?.current) {
+      this.endWords.push(state.problem.current)
     }
   }
 
@@ -57,22 +54,22 @@ export class TypingGameInfo {
   }
 
   get missKeys() {
-    const sums = this.endWords
-      .reduce<string[]>((a, w) => a.concat(w.misses), [])
-      .reduce<Record<string, number>>((a, w) => {
-        a[w] = Number(a[w] || 0) + 1
-        return a
-      }, {})
-
-    return Object.entries(sums)
-      .map(([w, c]) => ({ w, c }))
-      .sort((a, b) => a.c - b.c)
+    const misses = this.endWords.flatMap(({ misses }) => misses)
+    return Map.groupBy(misses, (s) => s)
+      .entries()
+      .map(([char, chars]) => ({ char, count: chars.length }))
+      .toArray()
+      .toSorted((a, b) => a.count - b.count)
   }
 
   get rank() {
-    const s = this.score || 0
+    const s = this.score
     return rankList().find((r) => {
       return r.start <= s && s <= (r.end ?? Infinity)
     })
+  }
+
+  static create(state: Readonly<TypingGameState>): TypingGameInfo {
+    return new TypingGameInfo(state)
   }
 }

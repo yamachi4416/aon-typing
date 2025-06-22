@@ -2,14 +2,20 @@
   <div :class="$style.content">
     <div :class="$style.main">
       <div :class="$style.keyboard">
-        <ModGameTypingPanel :class="$style.svg" :typing="state.typing" />
+        <ModGameTypingPanel
+          :class="$style.svg"
+          :state="state"
+          @toggle="typing.toggle()"
+          @cancel="typing.cancel()"
+          @dispose="typing.dispose()"
+        />
       </div>
     </div>
     <div>
-      <PartsCountDown v-show="state.isCountDownShow" :count="state.countDown" />
+      <PartsCountDown v-show="counter.isShow" :count="counter.count" />
       <ModalPanel ref="modalGameResult">
         <ModGameResultPanel
-          :result="state.result"
+          :result
           :problem="state.problem"
           @menu="menu"
           @next="next"
@@ -24,110 +30,91 @@
 import ModalPanel from '~/components/parts/ModalPanel.vue'
 import { TypingGame } from '~~/libs/TypingGame'
 import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
-import { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
+import { TypingGameState } from '~~/libs/TypingGameState'
 import { countDown } from '~~/libs/Util'
 
-let abort: AbortController
-
-const state = reactive({
-  typing: new TypingGame(),
-  result: undefined as TypingGameInfo | undefined,
-  countDown: 0,
-  problem: undefined as TypingProblemQuestioner | undefined,
-  isCountDownShow: true,
+const { setting } = useGameSetting()
+const state = reactive(TypingGameState.create(setting.value))
+const typing = TypingGame.create({ state, setting: setting.value })
+const result = ref<TypingGameInfo>()
+const counter = shallowReactive({
+  count: 0,
+  isShow: true,
+  abort: new AbortController(),
 })
 
 const id = useRoute().query.id as string
 const modalGameResult = ref<InstanceType<typeof ModalPanel>>()
 const { retrieveProblemDetail, findProblemItem } = useProblems()
-const { setting } = useGameSetting()
 
 onBeforeUnmount(() => {
-  abort?.abort()
+  counter.abort.abort()
 })
 
-onMounted(async () => {
+onMounted(newTyping)
+
+async function newTyping() {
   if (!findProblemItem({ id })) {
-    await navigateTo({ name: 'game-menu', replace: true })
-    return
+    return await navigateTo({ name: 'game-menu', replace: true })
   }
 
   setting.value.problemId = id
   const problem = await retrieveProblemDetail({ id }).catch(() => null)
 
   if (!problem) {
-    await navigateTo({ name: 'game-menu', replace: true })
-    return
+    return await navigateTo({ name: 'game-menu', replace: true })
   }
 
-  state.problem = new TypingProblemQuestioner({
-    problem,
-    setting: setting.value,
-  })
+  state.init({ problem })
 
   startTyping()
-})
+}
+
+async function showCountDown(count = 3) {
+  try {
+    counter.abort.abort()
+
+    const abort = new AbortController()
+    abort.signal.addEventListener('abort', () => typing.dispose())
+
+    counter.abort = abort
+    counter.count = count
+    counter.isShow = true
+
+    await countDown(count, (c) => (counter.count = c), {
+      abort: counter.abort,
+    })
+
+    return !abort.signal.aborted
+  } finally {
+    counter.count = 0
+    counter.isShow = false
+  }
+}
 
 async function startTyping() {
-  stopTyping()
-  state.typing.init({})
+  result.value = undefined
+  typing.cancel()
 
-  if (!state.problem) {
-    return
-  }
-
-  abort?.abort()
-  abort = new AbortController()
-  abort.signal.addEventListener('abort', function () {
-    state.typing?.dispose()
-  })
-
-  state.countDown = 3
-  state.isCountDownShow = true
-  await countDown(
-    state.countDown,
-    (c: number) => {
-      state.countDown = c
-      if (c === 0) {
-        state.isCountDownShow = false
-      }
-    },
-    { abort },
-  )
-
-  if (abort.signal.aborted) {
-    return
-  }
-
-  state.result = await state.typing.start({
-    problem: state.problem,
-    setting: setting.value,
-  })
-
+  if (!(await showCountDown())) return
+  result.value = await typing.start()
   await modalGameResult.value?.open()
 }
 
-function stopTyping() {
-  state.result = undefined
-  state.countDown = 0
-  state.isCountDownShow = false
-  return state.typing.cancel()
-}
-
 async function retry() {
-  state.problem?.reset()
+  state.reset()
   await modalGameResult.value?.close()
   await startTyping()
 }
 
 async function menu() {
-  state.problem?.reset()
+  state.reset()
   await modalGameResult.value?.close()
   await useNavigator().backOrGameMenu()
 }
 
 async function next() {
-  state.problem?.continue()
+  state.continue()
   await modalGameResult.value?.close()
   await startTyping()
 }

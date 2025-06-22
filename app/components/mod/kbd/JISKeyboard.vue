@@ -41,8 +41,9 @@
 </template>
 
 <script setup lang="ts">
+import { TypingEvent } from '~~/libs/EventManager'
 import type { Key, Keys } from '~~/libs/Keys'
-import type { GameSetting } from '~~/libs/TypingGame'
+import type { GameSetting } from '~~/libs/TypingGameSetting'
 import KbdKey from './JISKeyboardKey.vue'
 
 const props = defineProps<{
@@ -87,9 +88,9 @@ function keydown([normal, shift]: Key, start: boolean) {
   }
 
   if (start) {
-    const detail = { char: shiftKey.value ? shift : normal }
-    const event = new CustomEvent('c:typing', { detail })
-    window.dispatchEvent(event)
+    window.dispatchEvent(
+      new TypingEvent({ char: shiftKey.value ? shift : normal }),
+    )
   }
 }
 </script>

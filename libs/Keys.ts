@@ -28,7 +28,7 @@ export interface Keys {
   getCapsLockKeys(): Keys | null
 }
 
-export function defineKeys({
+function defineKeys({
   name,
   normalKeys,
   shiftKeys,
@@ -94,17 +94,17 @@ export function defineKeys({
     get isCapsLock() {
       return isCapsLock ?? false
     },
-    isShiftKey(key: string): boolean {
+    isShiftKey(key: string) {
       return shiftKeySet.has(key)
     },
-    isShiftLeftKey(key: string): boolean {
+    isShiftLeftKey(key: string) {
       return shiftLeftKeySet.has(key)
     },
-    isShiftRightKey(key: string): boolean {
+    isShiftRightKey(key: string) {
       return shiftRightKeySet.has(key)
     },
-    getHandIdx(key: string): number {
-      return handMap.get(key) || 0
+    getHandIdx(key: string) {
+      return handMap.get(key) ?? 0
     },
     getKeys(): Readonly<Key[][]> {
       return normalKeys.map((keys, i) =>

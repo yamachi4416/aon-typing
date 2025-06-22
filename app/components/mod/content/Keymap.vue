@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { hira2Kana, japaneseToTypeCharList } from '~~/libs/TypingJapaneseChars'
+import { japaneseToMinTypeCharList } from '~~/libs/TypingJapaneseChars'
 
 const table = [
   [
@@ -97,22 +97,13 @@ const table = [
   [['ワ', '', 'ヲ', '', 'ン'], ['ヮ']],
 ] as const
 
-const chars = japaneseToTypeCharList()
-  .map((c) => ({
-    jc: hira2Kana(c[0]),
-    keys: c[1].split(','),
-  }))
-  .reduce(
-    (a, c) => {
-      const m = c.keys.reduce((n, k) => Math.min(n, k.length), Infinity)
-      a[c.jc] = c.keys
-        .filter((k) => k.length === m)
-        .map((s) => s.toUpperCase())
-        .join('/')
-      return a
-    },
-    {} as Record<string, string>,
-  )
+const chars = Object.freeze(
+  Object.fromEntries(
+    japaneseToMinTypeCharList({ useKana: true }).map(([kana, types]) => {
+      return [kana, types.join('/').toUpperCase()]
+    }),
+  ),
+)
 </script>
 
 <style lang="scss" module>

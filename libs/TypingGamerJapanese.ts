@@ -23,52 +23,57 @@ export class TypingGamerJapanese implements TypingGamer {
   expect(char: string, word?: TypingGameWordData): boolean {
     if (!word) return true
 
-    const expected = word.wordState.current
+    const { wordState, infoState } = word
+
+    const expected = wordState.current
 
     if (expected === char) {
-      word.wordState.shift(1)
+      wordState.shift(1)
 
-      if (word.wordState.currentWordFinished) {
-        word.wordState.shiftAll()
-        word.infoState.shiftAll()
+      if (wordState.currentWordFinished) {
+        wordState.shiftAll()
+        infoState.shiftAll()
 
-        if (word.wordState.rightWord) {
+        if (wordState.rightWord) {
           const { jc, ec } = typeCharsToJapaneseChars(
-            word.wordState.rightWord,
-            word.infoState.rightWord,
+            wordState.rightWord,
+            infoState.rightWord,
           )
-          word.infoState.push(jc?.length)
-          word.wordState.push(ec?.length)
+          infoState.push(jc.length)
+          wordState.push(ec.length)
         }
       }
 
       return true
     }
 
-    if (allowDoubleN(char, word.wordState.leftWord, word.infoState.leftWord)) {
-      word.wordState.pushLeft(char)
+    if (allowDoubleN(char, wordState.leftWord, infoState.leftWord)) {
+      wordState.pushLeft(char)
       return true
     }
 
     const { jc, ec } = typeCharsFindJapaneseChars(
-      word.wordState.buffer + char,
-      word.infoState.currentWord,
+      wordState.buffer + char,
+      infoState.currentWord,
     )
 
-    if (jc) {
-      if (jc.length < word.infoState.currentWord.length) {
-        const njc = word.infoState.currentWord.substring(jc.length)
-        word.infoState.currentWord = jc
-        word.infoState.pushRight(njc)
-        word.wordState.currentWord = ec
-        word.wordState.pushRight(
-          typeJapaneseChars(word.infoState.rightWord, njc.length),
-        )
-        return this.expect(char, word)
-      } else if (jc.length === word.infoState.currentWord.length) {
-        word.wordState.currentWord = ec
-        return this.expect(char, word)
-      }
+    if (!jc) {
+      word.misses.push(expected)
+      return false
+    }
+
+    if (jc.length < infoState.currentWord.length) {
+      const njc = infoState.currentWord.substring(jc.length)
+      infoState.currentWord = jc
+      infoState.pushRight(njc)
+      wordState.currentWord = ec
+      wordState.pushRight(typeJapaneseChars(infoState.rightWord, njc))
+      return this.expect(char, word)
+    }
+
+    if (jc.length === infoState.currentWord.length) {
+      wordState.currentWord = ec
+      return this.expect(char, word)
     }
 
     word.misses.push(expected)

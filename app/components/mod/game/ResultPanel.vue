@@ -48,7 +48,7 @@
           <th>ミスしたキー</th>
           <td>
             <kbd v-for="(k, i) in result.missKeys" :key="`miss-key-${i}`">
-              {{ k.w }}
+              {{ k.char }}
             </kbd>
           </td>
         </tr>

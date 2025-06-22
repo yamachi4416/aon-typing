@@ -1,15 +1,46 @@
-export class TypingGameWordState {
-  word: string
-  _leftWords: string[]
-  _buffer: string[]
-  _currentWords: string[]
-  _rightWords: string[]
+abstract class BaseTypingGameWordState {
+  abstract get word(): string
+  abstract get buffer(): string
+  abstract get left(): string
+  abstract get leftWord(): string
+  abstract get currentWord(): string
+  abstract set currentWord(value)
+  abstract get current(): string
+  abstract get right(): string
+  abstract get rightWord(): string
+  abstract get currentWordFinished(): boolean
+  abstract get finished(): boolean
+  abstract get words(): string
+  abstract get remaining(): string
+  abstract push(n?: number): unknown
+  abstract pushLeft(s: string): unknown
+  abstract pushRight(s: string): unknown
+  abstract shift(n?: number): unknown
+  abstract shiftAll(): unknown
+  abstract next(n?: number): unknown
+}
 
-  constructor(word: string) {
-    this.word = word
-    this._leftWords = []
-    this._buffer = []
-    this._currentWords = []
+export abstract class TypingGameWordState extends BaseTypingGameWordState {
+  static create(word: string): TypingGameWordState {
+    return new TypingGameWordStateImpl(word)
+  }
+}
+
+export abstract class TypingGameWordInfoState extends BaseTypingGameWordState {
+  abstract get info(): string
+
+  static create(info: string, word: string): TypingGameWordInfoState {
+    return new TypingGameWordInfoStateImpl(info, word)
+  }
+}
+
+class TypingGameWordStateImpl implements TypingGameWordState {
+  protected _leftWords: string[] = []
+  protected _buffer: string[] = []
+  protected _currentWords: string[] = []
+  protected _rightWords: string[]
+
+  constructor(public word: string) {
     this._rightWords = Array.from(word)
   }
 
@@ -18,7 +49,7 @@ export class TypingGameWordState {
   }
 
   get left() {
-    return this._leftWords.join('') + this._buffer.join('')
+    return this.leftWord + this.buffer
   }
 
   get leftWord() {
@@ -26,26 +57,19 @@ export class TypingGameWordState {
   }
 
   get currentWord() {
-    return this._buffer.join('') + this._currentWords.join('')
+    return this.buffer + this._currentWords.join('')
   }
 
   set currentWord(value) {
-    const bf = this._buffer.join('')
-    if (bf) {
-      value = value.substring(bf.length)
-    }
-    this._currentWords.splice(0)
-    if (value) {
-      this._currentWords.push(...Array.from(value))
-    }
+    this._currentWords = Array.from(value.substring(this.buffer.length))
   }
 
   get current() {
-    return this._currentWords[0] || ''
+    return this._currentWords[0] ?? ''
   }
 
   get right() {
-    return this._currentWords.slice(1).join('') + this._rightWords.join('')
+    return this._currentWords.slice(1).join('') + this.rightWord
   }
 
   get rightWord() {
@@ -57,7 +81,7 @@ export class TypingGameWordState {
   }
 
   get finished() {
-    return this._currentWords.length === 0 && this._rightWords.length === 0
+    return this.currentWordFinished && this.rightWord.length === 0
   }
 
   get words() {
@@ -68,42 +92,29 @@ export class TypingGameWordState {
     return this.current + this.right
   }
 
-  push(n?: number) {
-    const v = this._rightWords.splice(0, n ?? 1)
-    if (v.length > 0) {
-      this._currentWords.push(...v)
-    }
+  push(n: number = 1) {
+    this._currentWords.push(...this._rightWords.splice(0, n))
   }
 
   pushLeft(s: string) {
-    if (s) {
-      this._leftWords.push(...Array.from(s))
-    }
+    this._leftWords.push(...Array.from(s))
   }
 
   pushRight(s: string) {
-    if (s) {
-      this._rightWords.unshift(...Array.from(s))
-    }
+    this._rightWords.unshift(...Array.from(s))
   }
 
-  shift(n?: number) {
-    const v = this._currentWords.splice(0, n ?? 1)
-    if (v.length > 0) {
-      this._buffer.push(...v)
-    }
+  shift(n: number = 1) {
+    this._buffer.push(...this._currentWords.splice(0, n))
   }
 
   shiftAll() {
     this.shift(this._currentWords.length)
-    if (this._buffer.length > 0) {
-      this._leftWords.push(...this._buffer.splice(0))
-    }
+    this._leftWords.push(...this._buffer.splice(0))
   }
 
-  next(n?: number) {
-    const l = n ?? 1
-    for (let i = 0; i < l; i++) {
+  next(n: number = 1) {
+    for (let i = 0; i < n; i++) {
       const c = this._currentWords.shift()
       if (c) {
         this._leftWords.push(c)
@@ -116,10 +127,11 @@ export class TypingGameWordState {
   }
 }
 
-export class TypingGameWordInfoState extends TypingGameWordState {
-  info: string
-  constructor(info: string, word: string) {
+class TypingGameWordInfoStateImpl extends TypingGameWordStateImpl {
+  constructor(
+    public info: string,
+    word: string,
+  ) {
     super(word)
-    this.info = info
   }
 }

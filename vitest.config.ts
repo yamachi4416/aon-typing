@@ -12,12 +12,14 @@ const sharedConfig: UserConfig = {
 
 const unitConfig = mergeConfig<UserConfig, UserConfig>(sharedConfig, {
   test: {
+    name: 'unit',
     dir: './test/unit',
   },
 })
 
 const e2eConfig = mergeConfig<UserConfig, UserConfig>(sharedConfig, {
   test: {
+    name: 'e2e',
     dir: './test/e2e',
     globalSetup: ['./test/e2e/globalSetup.ts'],
     setupFiles: ['./test/e2e/setup.ts'],

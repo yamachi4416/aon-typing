@@ -1,13 +1,10 @@
-export const Kana2HiraMap: Record<string, string> = {
-  ァ: 'ぁ',
+import { toInvertRecord } from './Util'
+
+const Kana2HiraMap = {
   ア: 'あ',
-  ィ: 'ぃ',
   イ: 'い',
-  ゥ: 'ぅ',
   ウ: 'う',
-  ェ: 'ぇ',
   エ: 'え',
-  ォ: 'ぉ',
   オ: 'お',
   カ: 'か',
   ガ: 'が',
@@ -33,7 +30,6 @@ export const Kana2HiraMap: Record<string, string> = {
   ダ: 'だ',
   チ: 'ち',
   ヂ: 'ぢ',
-  ッ: 'っ',
   ツ: 'つ',
   ヅ: 'づ',
   テ: 'て',
@@ -65,49 +61,54 @@ export const Kana2HiraMap: Record<string, string> = {
   ム: 'む',
   メ: 'め',
   モ: 'も',
-  ャ: 'ゃ',
   ヤ: 'や',
-  ュ: 'ゅ',
   ユ: 'ゆ',
-  ョ: 'ょ',
   ヨ: 'よ',
   ラ: 'ら',
   リ: 'り',
   ル: 'る',
   レ: 'れ',
   ロ: 'ろ',
-  ヮ: 'ゎ',
   ワ: 'わ',
   ヰ: 'ゐ',
   ヱ: 'ゑ',
   ヲ: 'を',
   ン: 'ん',
   ヴ: 'ヴ',
-  ヵ: 'か',
-  ヶ: 'が',
-}
+  ァ: 'ぁ',
+  ィ: 'ぃ',
+  ゥ: 'ぅ',
+  ェ: 'ぇ',
+  ォ: 'ぉ',
+  ヵ: 'ゕ',
+  ヶ: 'ゖ',
+  ッ: 'っ',
+  ヮ: 'ゎ',
+  ャ: 'ゃ',
+  ュ: 'ゅ',
+  ョ: 'ょ',
+} as const
 
-export const Hira2KanaMap = Object.freeze(
-  Object.fromEntries(
-    Object.entries(Kana2HiraMap).map(([kana, hira]) => [hira, kana]),
-  ),
-)
+const Hira2KanaMap = Object.freeze(toInvertRecord(Kana2HiraMap))
 
-export const JapaneseToTypeCharList1: [string, string][] = [
-  ['ぁ', 'la,xa'],
+type KanaChars = keyof typeof Kana2HiraMap
+type HiraChars = keyof typeof Hira2KanaMap
+
+const JapaneseToTypeCharList1 = [
+  ['ぁ', 'la\txa'],
   ['あ', 'a'],
-  ['ぃ', 'li,xi'],
+  ['ぃ', 'li\txi'],
   ['い', 'i'],
   ['いぇ', 'ye'],
-  ['ぅ', 'lu,xu'],
+  ['ぅ', 'lu\txu'],
   ['う', 'u'],
   ['うぁ', 'wha'],
   ['うぃ', 'wi'],
   ['うぇ', 'we'],
   ['うぉ', 'who'],
-  ['ぇ', 'le,xe'],
+  ['ぇ', 'le\txe'],
   ['え', 'e'],
-  ['ぉ', 'lo,xo'],
+  ['ぉ', 'lo\txo'],
   ['お', 'o'],
   ['か', 'ka'],
   ['が', 'ga'],
@@ -131,18 +132,18 @@ export const JapaneseToTypeCharList1: [string, string][] = [
   ['ご', 'go'],
   ['さ', 'sa'],
   ['ざ', 'za'],
-  ['し', 'si,shi'],
+  ['し', 'si\tshi'],
   ['しぃ', 'syi'],
-  ['しぇ', 'sye,she'],
-  ['しゃ', 'sya,sha'],
-  ['しゅ', 'syu,shu'],
-  ['しょ', 'syo,sho'],
-  ['じ', 'ji,zi'],
+  ['しぇ', 'sye\tshe'],
+  ['しゃ', 'sya\tsha'],
+  ['しゅ', 'syu\tshu'],
+  ['しょ', 'syo\tsho'],
+  ['じ', 'ji\tzi'],
   ['じぃ', 'jyi'],
-  ['じぇ', 'je,jye,zye'],
-  ['じゃ', 'ja,jya,zya'],
-  ['じゅ', 'ju,jyu,zyu'],
-  ['じょ', 'jo,jyo,zyo'],
+  ['じぇ', 'je\tjye\tzye'],
+  ['じゃ', 'ja\tjya\tzya'],
+  ['じゅ', 'ju\tjyu\tzyu'],
+  ['じょ', 'jo\tjyo\tzyo'],
   ['す', 'su'],
   ['すぁ', 'swa'],
   ['すぃ', 'swi'],
@@ -156,20 +157,20 @@ export const JapaneseToTypeCharList1: [string, string][] = [
   ['ぞ', 'zo'],
   ['た', 'ta'],
   ['だ', 'da'],
-  ['ち', 'ti,chi'],
-  ['ちゃ', 'tya,cha'],
+  ['ち', 'ti\tchi'],
+  ['ちゃ', 'tya\tcha'],
   ['ちぃ', 'tyi'],
-  ['ちゅ', 'tyu,chu'],
-  ['ちぇ', 'tye,che'],
-  ['ちょ', 'tyo,cho'],
+  ['ちゅ', 'tyu\tchu'],
+  ['ちぇ', 'tye\tche'],
+  ['ちょ', 'tyo\tcho'],
   ['ぢ', 'di'],
   ['ぢゃ', 'dya'],
   ['ぢぃ', 'dyi'],
   ['ぢゅ', 'dyu'],
   ['ぢぇ', 'dye'],
   ['ぢょ', 'dyo'],
-  ['っ', 'ltu,ltsu,xtu,xtsu'],
-  ['つ', 'tu,tsu'],
+  ['っ', 'ltu\tltsu\txtu\txtsu'],
+  ['つ', 'tu\ttsu'],
   ['つぁ', 'tsa'],
   ['つぃ', 'tsi'],
   ['つぇ', 'tse'],
@@ -230,7 +231,7 @@ export const JapaneseToTypeCharList1: [string, string][] = [
   ['ぴゅ', 'pyu'],
   ['ぴぇ', 'pye'],
   ['ぴょ', 'pyo'],
-  ['ふ', 'hu,fu'],
+  ['ふ', 'hu\tfu'],
   ['ふぁ', 'fa'],
   ['ふぃ', 'fi'],
   ['ふぇ', 'fe'],
@@ -256,11 +257,11 @@ export const JapaneseToTypeCharList1: [string, string][] = [
   ['む', 'mu'],
   ['め', 'me'],
   ['も', 'mo'],
-  ['ゃ', 'lya,xya'],
+  ['ゃ', 'lya\txya'],
   ['や', 'ya'],
-  ['ゅ', 'lyu,xyu'],
+  ['ゅ', 'lyu\txyu'],
   ['ゆ', 'yu'],
-  ['ょ', 'lyo,xyo'],
+  ['ょ', 'lyo\txyo'],
   ['よ', 'yo'],
   ['ら', 'ra'],
   ['り', 'ri'],
@@ -272,10 +273,10 @@ export const JapaneseToTypeCharList1: [string, string][] = [
   ['る', 'ru'],
   ['れ', 're'],
   ['ろ', 'ro'],
-  ['ゎ', 'lwa,xwa'],
+  ['ゎ', 'lwa\txwa'],
   ['わ', 'wa'],
   ['を', 'wo'],
-  ['ん', 'nn,xn'],
+  ['ん', 'nn\txn'],
   ['ヴァ', 'va'],
   ['ヴぁ', 'va'],
   ['ヴィ', 'vi'],
@@ -286,9 +287,9 @@ export const JapaneseToTypeCharList1: [string, string][] = [
   ['ヴぇ', 've'],
   ['ヴォ', 'vo'],
   ['ヴぉ', 'vo'],
-]
+] as const
 
-export const JapaneseToTypeCharList2: [string, string][] = [
+const JapaneseToTypeCharList2 = [
   ['。', '.'],
   ['ー', '-'],
   ['～', '~'],
@@ -334,152 +335,124 @@ export const JapaneseToTypeCharList2: [string, string][] = [
   ['』', ']'],
   ['《', '['],
   ['》', ']'],
-]
+  ['、', ','],
+] as const
 
-const JapaneseToTypeCharList: [string, string][] = [
+const JapaneseToTypeCharList = Object.freeze([
   ...JapaneseToTypeCharList1,
-  ...JapaneseToTypeCharList1.map((v) => {
-    const cs = v[1].split(',').filter((c) => !'aiueon'.includes(c[0]!))
-    const result: [string, string] =
-      cs.length > 0
-        ? [`っ${v[0]}`, cs.map((s) => s[0] + s).join(',')]
-        : ['', '']
-    return result
-  }).filter(([a, b]) => a && b),
+  ...JapaneseToTypeCharList1.map<[string, string]>(([hira, types]) => [
+    `っ${hira}`,
+    types
+      .split('\t')
+      .filter((c) => !'aiueon'.includes(c[0]!))
+      .map((s) => s[0] + s)
+      .join('\t'),
+  ]).filter(([a, b]) => a && b),
   ...JapaneseToTypeCharList2,
-]
+])
 
-const TypeCharToJapaneseMap: Record<string, string> =
-  JapaneseToTypeCharList.reduce(
-    (a, v) => a.concat(v[1].split(',').map((s) => ({ key: s, val: v[0] }))),
-    [{ key: ',', val: '、' }],
-  )
-    .sort((a, b) => {
-      if (a.val.length === b.val.length) {
-        return a.val === b.val ? 0 : a.val > b.val ? -1 : 1
-      }
-      return b.val.length - a.val.length
-    })
-    .reduce(
-      (a, v) => ({
-        ...a,
-        [v.key]: v.val,
-      }),
-      {},
-    )
+const TypeCharToJapaneseMap = Object.freeze(
+  Object.fromEntries(
+    JapaneseToTypeCharList.flatMap(([hira, types]) =>
+      types.split('\t').map<[string, string]>((type) => [type, hira]),
+    ).toSorted(([_, a], [__, b]) => b.localeCompare(a)),
+  ),
+)
 
-const TypeCharMap = JapaneseToTypeCharList.reduce(
-  (a, v) => {
-    return { ...a, [v[0]]: v[1].split(',') }
-  },
-  { '、': ',' },
-) as Record<string, string>
+const TypeCharMap = Object.freeze(
+  Object.fromEntries(
+    JapaneseToTypeCharList.map(([hira, types]) => [
+      hira,
+      types.split('\t')[0] ?? '',
+    ]),
+  ),
+)
 
 export function kana2Hira(text: string) {
-  return Array.from(text || '')
-    .map((s) => Kana2HiraMap[s] || s)
+  return Array.from(text)
+    .map((s) => Kana2HiraMap[s as KanaChars] || s)
     .join('')
 }
 
 export function hira2Kana(text: string) {
-  return Array.from(text || '')
-    .map((s) => Hira2KanaMap[s] || s)
+  return Array.from(text)
+    .map((s) => Hira2KanaMap[s as HiraChars] || s)
     .join('')
 }
 
-type ToHiraFunction = (opts: { c1: string; c2: string; c3: string }) => {
-  d1: string
-  d2: string
-  d3: string
-}
+export function typeJapaneseCharsMap(text = '', { length = 0 } = {}) {
+  const maps: { jc: string; ec: string }[] = []
+  if (!text) return maps
 
-export function typeJapaneseCharsMap(
-  text?: string,
-  length?: number,
-  useKana = false,
-) {
-  const maps = [] as Array<{ jc?: string; ec?: string }>
   const charMap = TypeCharMap
-  const chars = Array.from(text ?? '')
+  const chars = Array.from(text)
 
-  const toHira: ToHiraFunction = useKana
-    ? ({ c1, c2, c3 }) => {
-        const d1 = kana2Hira(c1)
-        const d2 = kana2Hira(c2)
-        const d3 = kana2Hira(c3)
-        return { d1, d2, d3 }
+  const toMap = (i: number) => {
+    for (const j of [3, 2, 1]) {
+      const jc = chars.slice(i, i + j).join('')
+      const hira = kana2Hira(jc)
+      if (hira[0] === 'ん') {
+        return {
+          jc: jc[0] ?? '',
+          ec: needDoubleN(hira) ? 'nn' : 'n',
+        }
       }
-    : ({ c1, c2, c3 }) => ({ d1: c1, d2: c2, d3: c3 })
-
-  length = length ?? text?.length ?? 0
-  for (let i = 0; i < length; i++) {
-    const c1 = chars[i]!
-    const c2 = c1 + (chars[i + 1] || '')
-    const c3 = c2 + (chars[i + 2] || '')
-
-    const { d1, d2, d3 } = toHira({ c1, c2, c3 })
-
-    if (d1 === 'ん') {
-      if (d1 === d2 || 'あいうえおなにぬねのん'.includes(d2?.[1] ?? '')) {
-        maps.push({ jc: c1, ec: 'nn' })
-      } else {
-        maps.push({ jc: c1, ec: 'n' })
-      }
-    } else if (charMap[d3]) {
-      i += c3.length - 1
-      maps.push({ jc: c3, ec: charMap[d3][0] })
-    } else if (charMap[d2]) {
-      i += c2.length - 1
-      maps.push({ jc: c2, ec: charMap[d2][0] })
-    } else if (charMap[d1]) {
-      maps.push({ jc: c1, ec: charMap[d1][0] })
-    } else {
-      maps.push({ jc: c1, ec: c1 })
+      const ec = charMap[hira]
+      if (ec) return { jc, ec }
     }
+
+    return { jc: chars[i] ?? '', ec: chars[i] ?? '' }
+  }
+
+  for (let i = 0, l = length || chars.length; i < l; i++) {
+    const map = toMap(i)
+    maps.push(map)
+    i += map.jc.length - 1
   }
 
   return maps
 }
 
-export function typeJapaneseChars(text?: string, length?: number) {
-  return typeJapaneseCharsMap(text, length)
-    .map((v) => v.ec)
+export function typeJapaneseChars(
+  text = '',
+  options: { length?: number } = {},
+) {
+  if (!text) return ''
+  return typeJapaneseCharsMap(text, options)
+    .map(({ ec }) => ec)
     .join('')
 }
 
 export function typeCharsToJapaneseChars(typeChars: string, jpChars: string) {
-  const c1 = typeChars[0] || ''
-  const c2 = c1 + (typeChars[1] || '')
-  const c3 = c2 + (typeChars[2] || '')
-  const c4 = c3 + (typeChars[3] || '')
+  const chars = Array.from(typeChars)
 
   if (jpChars[0] === 'ん') {
-    if (!jpChars[1] || 'あいうえおなにぬねのん'.includes(jpChars[1])) {
-      return { jc: 'ん', ec: 'nn' }
-    } else {
-      return { jc: 'ん', ec: 'n' }
-    }
+    return { jc: 'ん', ec: needDoubleN(jpChars) ? 'nn' : 'n' }
   }
 
-  for (const c of [c4, c3, c2, c1]) {
-    const jc = TypeCharToJapaneseMap[c]
-    if (jc) {
-      return { jc, ec: c }
-    }
+  for (const i of [4, 3, 2, 1]) {
+    const ec = chars.slice(0, i).join('')
+    const jc = TypeCharToJapaneseMap[ec]
+    if (jc) return { jc, ec }
   }
 
-  return { jc: null, ec: null }
+  return { jc: '', ec: '' }
 }
 
 export function typeCharsFindJapaneseChars(typeChars: string, jpChars: string) {
-  for (const [key, val] of Object.entries(TypeCharToJapaneseMap)) {
-    if (key.startsWith(typeChars)) {
-      if (jpChars.startsWith(val)) {
-        return { jc: val, ec: key }
-      }
+  for (const [ec, jc] of Object.entries(TypeCharToJapaneseMap)) {
+    if (ec.startsWith(typeChars) && jpChars.startsWith(jc)) {
+      return { jc, ec }
     }
   }
-  return { jc: null, ec: null }
+  return { jc: '', ec: '' }
+}
+
+export function needDoubleN(jpChars: string | string[]) {
+  return (
+    jpChars[0] === 'ん' &&
+    (!jpChars[1] || 'あいうえおなにぬねのんnN'.includes(jpChars[1]))
+  )
 }
 
 export function allowDoubleN(
@@ -487,28 +460,24 @@ export function allowDoubleN(
   typeChars: string,
   jpChars: string,
 ) {
-  if (typeChar === 'n') {
-    if (jpChars.endsWith('ん')) {
-      const m = (typeChars || '').match(/n+$/)
-      if (m && m[0].length % 2 === 1) {
-        return true
-      }
+  if (typeChar === 'n' && jpChars.endsWith('ん')) {
+    const m = typeChars.match(/n+$/)
+    if (m && m[0].length % 2 === 1) {
+      return true
     }
   }
   return false
 }
 
-export function japaneseToTypeCharList() {
-  return JapaneseToTypeCharList1.slice(0)
-}
-
-export default {
-  kana2Hira,
-  hira2Kana,
-  typeJapaneseChars,
-  typeJapaneseCharsMap,
-  typeCharsToJapaneseChars,
-  typeCharsFindJapaneseChars,
-  allowDoubleN,
-  japaneseToTypeCharList,
+export function japaneseToMinTypeCharList({
+  useKana,
+}: { useKana?: boolean } = {}): [string, string[]][] {
+  const chars = JapaneseToTypeCharList.map<[string, string[]]>(
+    ([hira, types]) => {
+      const keys = types.split('\t')
+      const min = keys.reduce((min, key) => Math.min(min, key.length), Infinity)
+      return [hira, keys.filter(({ length }) => length === min)]
+    },
+  )
+  return useKana ? chars.map(([hira, keys]) => [hira2Kana(hira), keys]) : chars
 }

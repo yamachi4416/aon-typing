@@ -3,8 +3,7 @@
     <section>
       <h1>
         <NuxtLink :to="{ name: 'index' }">
-          <span v-if="startAnim">{{ title }}</span>
-          <span v-show="!startAnim">{{ titleText }}</span>
+          {{ chars.title }}
         </NuxtLink>
       </h1>
       <BasicHeaderThemeChagne />
@@ -27,55 +26,33 @@ const props = withDefaults(
 )
 
 const site = useSiteConfig()
-const titleText = site.name
-const startAnim = ref(false)
-const titleChars = ref<string[]>([])
-const title = computed(() =>
-  props.anim ? titleChars.value.join('') : titleText,
-)
+const chars = reactive({
+  fins: [site.name] as string[],
+  bufs: [] as string[],
+  get title() {
+    return [...chars.fins, ...chars.bufs].join('')
+  },
+})
 
-onMounted(() => typing(titleText))
+onMounted(typing)
 
-async function typing(text: string) {
+async function typing() {
   if (!props.anim) return
-  return new Promise((resolve) => {
-    const types = typeJapaneseCharsMap(text, undefined, true).map((v) => ({
-      jc: v.jc,
-      ec: v.ec?.split(''),
-    }))
 
-    const fins: string[] = []
-    const bufs: string[] = []
-    const type = async () => {
-      startAnim.value = true
+  const { title } = chars
 
-      const val = types.shift()
-      if (val && val.ec && val.jc) {
-        if (val.ec.length > 1) {
-          types.unshift(val)
-        }
+  chars.fins = []
 
-        const buf = val.ec.shift()
-        if (buf) {
-          bufs.push(buf)
-        }
+  const types = typeJapaneseCharsMap(title)
 
-        titleChars.value = [...fins, ...bufs]
-        if (val.ec.length === 0) {
-          bufs.splice(0)
-          fins.push(val.jc)
-        }
-        await wait(100)
-        requestAnimationFrame(type)
-      } else {
-        titleChars.value = Array.from(text)
-        await wait(300)
-        requestAnimationFrame(resolve)
-      }
+  for (const { jc, ec } of types) {
+    for (const c of Array.from(ec)) {
+      chars.bufs.push(c)
+      await wait(100)
     }
-
-    requestAnimationFrame(type)
-  })
+    chars.bufs = []
+    chars.fins.push(jc)
+  }
 }
 </script>
 

@@ -1,33 +1,28 @@
-import type { GameSetting } from '~~/libs/TypingGame'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
 import type { ProblemDetail } from '~~/types/problems'
+import type { GameSetting } from './TypingGameSetting'
 
-const shuffle = <T>(array: T[]) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const r = Math.floor(Math.random() * (i + 1))
-    const tmp = array[i]
-    array[i] = array[r]!
-    array[r] = tmp!
-  }
+const problemSorters: Record<
+  GameSetting['problemOrder'],
+  (words: ReadonlyArray<TypingGameWordData>) => TypingGameWordData[]
+> = {
+  first: (words) => [...words],
+  random: (words) =>
+    words
+      .map((word) => ({ word, order: Math.random() }))
+      .toSorted((a, b) => a.order - b.order)
+      .map(({ word }) => word),
+  last: (words) => words.toReversed(),
 }
 
-export class TypingProblemQuestioner {
-  problem: ProblemDetail
-  words: TypingGameWordData[] = []
-  endWords: TypingGameWordData[] = []
-  setting: GameSetting
+export abstract class TypingProblemQuestioner {
+  abstract readonly words: ReadonlyArray<TypingGameWordData>
+  abstract readonly endWords: ReadonlyArray<TypingGameWordData>
 
-  constructor({
-    problem,
-    setting,
-  }: {
-    problem: ProblemDetail
-    setting: GameSetting
-  }) {
-    this.problem = problem
-    this.setting = setting
-    this.init({ problem, setting })
-  }
+  constructor(
+    public readonly problem: Readonly<ProblemDetail>,
+    public readonly setting: Readonly<GameSetting>,
+  ) {}
 
   get id() {
     return this.problem.id
@@ -52,38 +47,49 @@ export class TypingProblemQuestioner {
     return this.words[0]
   }
 
-  init({ problem, setting }: { problem: ProblemDetail; setting: GameSetting }) {
-    this.problem = problem
-    this.setting = setting
-    this.words =
-      problem?.words.map((w, i) => new TypingGameWordData(i, w)) ?? []
-    this.endWords = []
+  abstract init(): unknown
+  abstract nextWord(): unknown
+  abstract continue(): unknown
+  abstract reset(): unknown
 
-    switch (setting.problemOrder) {
-      case 'random':
-        shuffle(this.words)
-        break
-      case 'last':
-        this.words.reverse()
-        break
-    }
+  static create(
+    problem: Readonly<ProblemDetail>,
+    setting: Readonly<GameSetting>,
+  ): TypingProblemQuestioner {
+    return new TypingProblemQuestionerImpl(problem, setting)
+  }
+}
+
+class TypingProblemQuestionerImpl extends TypingProblemQuestioner {
+  readonly words: TypingGameWordData[] = []
+  readonly endWords: TypingGameWordData[] = []
+
+  constructor(
+    problem: Readonly<ProblemDetail>,
+    setting: Readonly<GameSetting>,
+  ) {
+    super(problem, setting)
+    this.init()
+  }
+
+  init() {
+    const words = TypingGameWordData.fromDetailWords(this.problem.words)
+    const sorter = problemSorters[this.setting.problemOrder]
+    this.words.splice(0)
+    this.words.push(...sorter(words))
+    this.endWords.splice(0)
   }
 
   nextWord() {
-    const word = this.words.shift()
-    if (word) {
-      this.endWords.push(word)
-    }
+    this.endWords.push(...this.words.splice(0, 1))
   }
 
   reset() {
-    this.init({ problem: this.problem, setting: this.setting })
+    this.init()
   }
 
   continue() {
     this.endWords.splice(0)
-    this.words.forEach((w, i) => {
-      w.continue(i)
-    })
+    this.words.forEach((w, i) => w.continue(i))
   }
 }

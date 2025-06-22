@@ -56,7 +56,7 @@ async function setProblem(item: ProblemListItem) {
 }
 
 defineExpose({
-  setDetail({
+  async setDetail({
     problem,
     selectable,
   }: {
@@ -64,7 +64,7 @@ defineExpose({
     selectable: boolean
   }) {
     showSelect.value = selectable
-    setProblem(problem)
+    await setProblem(problem)
   },
 })
 </script>

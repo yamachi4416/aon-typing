@@ -1,12 +1,17 @@
 export function isNumber(num: unknown): num is number {
-  if (num == null) {
-    return false
-  }
   return typeof num === 'number' && !isNaN(num)
 }
 
-export function isFunction<T extends () => void>(fn: unknown): fn is T {
+export function isFunction<T extends () => unknown>(fn: unknown): fn is T {
   return typeof fn === 'function'
+}
+
+export function toInvertRecord<K extends PropertyKey, V extends PropertyKey>(
+  record: Readonly<Record<K, V>>,
+): Record<V, K> {
+  return Object.fromEntries(
+    Object.entries(record).map(([key, value]) => [value, key]),
+  )
 }
 
 export function timerTicker(interval: number) {
@@ -49,7 +54,7 @@ export function timerEntry(
   handler: () => void,
   timespan: (() => number) | number,
 ) {
-  const interval = typeof timespan === 'function' ? timespan : () => timespan
+  const interval = isFunction(timespan) ? timespan : () => timespan
 
   let next = Number.MAX_VALUE
 
@@ -74,7 +79,7 @@ export function timerEntry(
 
 async function intervalTimer(
   count: number,
-  tick: (count: number) => void,
+  tick: (count: number) => unknown,
   options: {
     abort?: AbortController
     rejectOnAbort?: boolean
@@ -142,29 +147,29 @@ export function pagenate<T>({
   page,
   pageSize,
 }: {
-  items: ArrayLike<T>
+  items: Readonly<ArrayLike<T>>
   page: number
   pageSize: number
 }): { items: T[]; pagenate: number[]; last: number } {
-  if (!items || items.length === 0) {
+  if (!items?.length) {
     return { items: [], pagenate: [], last: 0 }
   }
   const last = Math.ceil(items.length / pageSize)
   const pages = Math.min(page, last)
   const start = (pages - 1) * pageSize
   const end = pages * pageSize
-  const pagenate = () => {
-    const [lp, cp] = [last, page]
-    const wp =
-      cp <= 2
-        ? [2, 3, 4]
-        : lp - 1 <= cp
-          ? [lp - 3, lp - 2, lp - 1]
-          : [cp - 1, cp, cp + 1]
-    return new Set([1, ...wp, lp].filter((p) => p >= 1 && p <= lp))
+
+  const wkpage = () => {
+    if (page <= 2) return [2, 3, 4]
+    if (last - 1 <= page) return [last - 3, last - 2, last - 1]
+    return [page - 1, page, page + 1]
   }
+
+  const pagenate = () =>
+    new Set([1, ...wkpage(), last].filter((p) => p >= 1 && p <= last))
+
   return {
-    items: Array.prototype.slice.call(items, start, end) as T[],
+    items: Array.prototype.slice.call(items, start, end),
     pagenate: [...pagenate()],
     last,
   }
@@ -172,7 +177,7 @@ export function pagenate<T>({
 
 export async function healthcheck() {
   try {
-    const time = new Date().getTime()
+    const time = Date.now()
     const res = await fetch(`/favicon.ico?t=${time}`)
     return res.status >= 200 && res.status < 300
   } catch {

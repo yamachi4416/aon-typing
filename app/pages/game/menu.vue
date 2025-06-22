@@ -103,11 +103,13 @@ async function openProblemDetailShow(
   selectable: boolean,
 ) {
   if (hasPendingModal.value) return
-  const tasks = []
-  tasks.push(modalProblemDetail.value?.open())
-  await nextTick()
-  tasks.push(problemDetailPanel.value?.setDetail({ problem, selectable }))
-  await wrapLoading(Promise.all(tasks))
+  await wrapLoading(
+    Promise.all([
+      modalProblemDetail.value?.open(),
+      await nextTick(),
+      problemDetailPanel.value?.setDetail({ problem, selectable }),
+    ]),
+  )
 }
 
 async function onEscapeKey(e: KeyboardEvent) {

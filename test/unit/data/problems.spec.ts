@@ -3,7 +3,7 @@ import { cpus } from 'node:os'
 import { resolve } from 'node:path'
 import { assert, expect, it } from 'vitest'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
-import { useTypingGamer } from '~~/libs/TypingGamer'
+import { TypingGamer } from '~~/libs/TypingGamer'
 import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
 import type { ProblemDetail } from '~~/types/problems'
 
@@ -23,7 +23,7 @@ async function testTyping(file: string) {
 
   const id = problem.id
 
-  const gamer = useTypingGamer(problem.type)
+  const gamer = TypingGamer.of(problem.type)
 
   if (gamer === undefined) {
     return {
@@ -32,7 +32,7 @@ async function testTyping(file: string) {
     }
   }
 
-  const words = problem.words.map((w, i) => new TypingGameWordData(i, w))
+  const words = TypingGameWordData.fromDetailWords(problem.words)
   const chars =
     problem.type === 'japanese'
       ? problem.words.map((word) => typeJapaneseChars(word.info2)).join('')
