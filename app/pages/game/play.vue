@@ -102,20 +102,19 @@ async function startTyping() {
 }
 
 async function retry() {
-  state.reset()
   await modalGameResult.value?.close()
+  state.reset()
   await startTyping()
 }
 
 async function menu() {
-  state.reset()
   await modalGameResult.value?.close()
   await useNavigator().backOrGameMenu()
 }
 
 async function next() {
-  state.continue()
   await modalGameResult.value?.close()
+  state.continue()
   await startTyping()
 }
 

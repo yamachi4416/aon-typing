@@ -26,8 +26,7 @@ export class TypingGameState extends TypingGameStateValue {
     public problem?: TypingProblemQuestioner,
   ) {
     super()
-    this.timeLimit = setting.timeLimit ?? 0
-    this.goalCharCount = setting.goalCharCount ?? 0
+    this.clear()
   }
 
   get current() {
@@ -48,6 +47,8 @@ export class TypingGameState extends TypingGameStateValue {
 
   clear() {
     Object.assign(this, new TypingGameStateValue())
+    this.timeLimit = this.setting.timeLimit ?? 0
+    this.goalCharCount = this.setting.goalCharCount ?? 0
   }
 
   reset() {

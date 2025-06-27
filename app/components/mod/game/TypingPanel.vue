@@ -24,11 +24,7 @@
                 v-if="state.timeLimit > 0"
                 :total-time="state.timeLimit"
                 :time="state.timeUse"
-                :text="
-                  state.timeLimit - state.timeUse
-                    ? ~~((state.timeLimit - state.timeUse) / 1000 + 1)
-                    : 'END'
-                "
+                :text="remainingTime || 'END'"
                 @click="emit('toggle')"
               />
               <PartsTimeClock
@@ -40,13 +36,13 @@
             <div :class="$style['typing-display-center']">
               <div
                 :class="$style['typing-display-info1']"
-                :data-word-count="wordInfo1.count"
-                :data-word-type="wordInfo1.type"
+                :data-type="problem.type"
+                :data-scale="infoScale"
               >
                 <span v-text="infoState.info" />
               </div>
               <ModKbdDisplayWords
-                v-if="!!infoState.word"
+                v-if="infoState.word"
                 width="100%"
                 :class="$style['typing-display-info2']"
                 :word="infoState"
@@ -107,6 +103,12 @@ const keys = computed(() => {
   return isCapsLock ? layout.getCapsLockKeys()! : layout
 })
 
+const remainingTime = computed(() =>
+  props.state.timeLimit - props.state.timeUse
+    ? Math.trunc((props.state.timeLimit - props.state.timeUse) / 1000 + 1)
+    : 0,
+)
+
 const handNumbers = computed(() => {
   const handNumber = keys.value.getHandIdx(typeKey.value)
   return {
@@ -122,11 +124,9 @@ const { flash: flashTypingMistake } = useFlashing({
   timeout: 120,
 })
 
-const wordInfo1 = computed(() => {
-  const chars = infoState.value.info?.length || 0
-  const count = [10, 20, 30, 40, 50, 100, 200, 300].find((c) => chars <= c) || 0
-  const type = problem.value.type
-  return { count, type }
+const infoScale = computed(() => {
+  const chars = Array.from(infoState.value.info ?? []).length
+  return [10, 20, 30, 40, 50, 100, 200, 300].find((c) => chars <= c) || 0
 })
 
 onBeforeUnmount(() => emit('dispose'))
@@ -229,22 +229,22 @@ function orDefaultComputed<T>(
     white-space: pre-wrap;
   }
 
-  &[data-word-type='english'] {
+  &[data-type='english'] {
     font-size: 1.2em;
     line-height: 1.4;
   }
 
-  $word-counts: 10, 20, 30, 40, 50, 100, 200, 300;
+  $scales: 10, 20, 30, 40, 50, 100, 200, 300;
 
-  @each $count in $word-counts {
-    $index: list.index($word-counts, $count);
-    $size-diff: ($index - 1) * 0.1em;
+  @each $scale in $scales {
+    $index: list.index($scales, $scale);
+    $diff: ($index - 1) * 0.1em;
 
-    &[data-word-count='#{$count}'] {
-      font-size: 1.5em - $size-diff;
+    &[data-scale='#{$scale}'] {
+      font-size: 1.5em - $diff;
 
-      &[data-word-type='english'] {
-        font-size: 1.6em - $size-diff;
+      &[data-type='english'] {
+        font-size: 1.6em - $diff;
       }
     }
   }
