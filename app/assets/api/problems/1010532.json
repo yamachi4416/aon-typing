@@ -11,11 +11,11 @@
   "updatedAt": "2023-06-27",
   "optional": { "cd": ["532"], "coCd": ["97"] },
   "words": [
-    { "info": "西鹿島", "info2": "にしかじま", "word": "nisikajima" },
+    { "info": "西鹿島", "info2": "にしかじま", "word": "nisikazima" },
     {
       "info": "遠州岩水寺",
       "info2": "えんしゅうがんすいじ",
-      "word": "ensyuugansuiji"
+      "word": "ensyuugansuizi"
     },
     {
       "info": "遠州芝本",
@@ -44,9 +44,9 @@
     {
       "info": "自動車学校前",
       "info2": "じどうしゃがっこうまえ",
-      "word": "jidousyagakkoumae"
+      "word": "zidousyagakkoumae"
     },
-    { "info": "上島", "info2": "かみじま", "word": "kamijima" },
+    { "info": "上島", "info2": "かみじま", "word": "kamizima" },
     { "info": "曳馬", "info2": "ひくま", "word": "hikuma" },
     { "info": "助信", "info2": "すけのぶ", "word": "sukenobu" },
     { "info": "八幡", "info2": "はちまん", "word": "hatimann" },

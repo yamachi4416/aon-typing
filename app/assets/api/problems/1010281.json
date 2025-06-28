@@ -12,7 +12,7 @@
   "optional": { "cd": ["281"], "coCd": ["12"] },
   "words": [
     { "info": "飯能", "info2": "はんのう", "word": "hannnou" },
-    { "info": "元加治", "info2": "もとかじ", "word": "motokaji" },
+    { "info": "元加治", "info2": "もとかじ", "word": "motokazi" },
     { "info": "仏子", "info2": "ぶし", "word": "busi" },
     { "info": "入間市", "info2": "いるまし", "word": "irumasi" },
     {
@@ -20,7 +20,7 @@
       "info2": "いなりやまこうえん",
       "word": "inariyamakouenn"
     },
-    { "info": "武蔵藤沢", "info2": "むさしふじさわ", "word": "musasihujisawa" },
+    { "info": "武蔵藤沢", "info2": "むさしふじさわ", "word": "musasihuzisawa" },
     { "info": "狭山ケ丘", "info2": "さやまがおか", "word": "sayamagaoka" },
     { "info": "小手指", "info2": "こてさし", "word": "kotesasi" },
     { "info": "西所沢", "info2": "にしところざわ", "word": "nisitokorozawa" },
@@ -38,14 +38,14 @@
     {
       "info": "石神井公園",
       "info2": "しゃくじいこうえん",
-      "word": "syakujiikouenn"
+      "word": "syakuziikouenn"
     },
     {
       "info": "練馬高野台",
       "info2": "ねりまたかのだい",
       "word": "nerimatakanodai"
     },
-    { "info": "富士見台", "info2": "ふじみだい", "word": "hujimidai" },
+    { "info": "富士見台", "info2": "ふじみだい", "word": "huzimidai" },
     { "info": "中村橋", "info2": "なかむらばし", "word": "nakamurabasi" },
     { "info": "練馬", "info2": "ねりま", "word": "nerima" },
     { "info": "桜台", "info2": "さくらだい", "word": "sakuradai" },

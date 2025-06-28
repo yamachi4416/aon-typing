@@ -27,7 +27,7 @@
     },
     { "info": "汐入", "info2": "しおいり", "word": "sioiri" },
     { "info": "逸見", "info2": "へみ", "word": "hemi" },
-    { "info": "安針塚", "info2": "あんじんづか", "word": "anjinduka" },
+    { "info": "安針塚", "info2": "あんじんづか", "word": "anzinduka" },
     { "info": "京急田浦", "info2": "けいきゅうたうら", "word": "keikyuutaura" },
     { "info": "追浜", "info2": "おっぱま", "word": "oppama" },
     {
@@ -45,7 +45,7 @@
     { "info": "杉田", "info2": "すぎた", "word": "sugita" },
     { "info": "屏風浦", "info2": "びょうぶがうら", "word": "byoubugaura" },
     { "info": "上大岡", "info2": "かみおおおか", "word": "kamioooka" },
-    { "info": "弘明寺", "info2": "ぐみょうじ", "word": "gumyouji" },
+    { "info": "弘明寺", "info2": "ぐみょうじ", "word": "gumyouzi" },
     { "info": "井土ケ谷", "info2": "いどがや", "word": "idogaya" },
     { "info": "南太田", "info2": "みなみおおた", "word": "minamioota" },
     { "info": "黄金町", "info2": "こがねちょう", "word": "koganetyou" },
@@ -73,7 +73,7 @@
     {
       "info": "花月総持寺",
       "info2": "かげつそうじじ",
-      "word": "kagetusoujiji"
+      "word": "kagetusouzizi"
     },
     {
       "info": "京急鶴見",
@@ -96,7 +96,7 @@
     },
     { "info": "梅屋敷", "info2": "うめやしき", "word": "umeyasiki" },
     { "info": "大森町", "info2": "おおもりまち", "word": "oomorimati" },
-    { "info": "平和島", "info2": "へいわじま", "word": "heiwajima" },
+    { "info": "平和島", "info2": "へいわじま", "word": "heiwazima" },
     {
       "info": "大森海岸",
       "info2": "おおもりかいがん",
@@ -112,6 +112,6 @@
     { "info": "新馬場", "info2": "しんばんば", "word": "sinbanba" },
     { "info": "北品川", "info2": "きたしながわ", "word": "kitasinagawa" },
     { "info": "品川", "info2": "しながわ", "word": "sinagawa" },
-    { "info": "泉岳寺", "info2": "せんがくじ", "word": "sengakuji" }
+    { "info": "泉岳寺", "info2": "せんがくじ", "word": "sengakuzi" }
   ]
 }

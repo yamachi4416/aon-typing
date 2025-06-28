@@ -19,11 +19,11 @@
     { "info": "田辺", "info2": "たなべ", "word": "tanabe" },
     { "info": "文の里", "info2": "ふみのさと", "word": "huminosato" },
     { "info": "阿倍野", "info2": "あべの", "word": "abeno" },
-    { "info": "天王寺", "info2": "てんのうじ", "word": "tennnouji" },
+    { "info": "天王寺", "info2": "てんのうじ", "word": "tennnouzi" },
     {
       "info": "四天王寺前夕陽ケ丘",
       "info2": "してんのうじまえゆうひがおか",
-      "word": "sitennnoujimaeyuuhigaoka"
+      "word": "sitennnouzimaeyuuhigaoka"
     },
     {
       "info": "谷町九丁目",
@@ -47,9 +47,9 @@
     {
       "info": "天神橋筋六丁目",
       "info2": "てんじんばしすじろくちょうめ",
-      "word": "tenjinbasisujirokutyoume"
+      "word": "tenzinbasisuzirokutyoume"
     },
-    { "info": "都島", "info2": "みやこじま", "word": "miyakojima" },
+    { "info": "都島", "info2": "みやこじま", "word": "miyakozima" },
     { "info": "野江内代", "info2": "のえうちんだい", "word": "noeutindai" },
     { "info": "関目高殿", "info2": "せきめたかどの", "word": "sekimetakadono" },
     {

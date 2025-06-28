@@ -14,7 +14,7 @@
     {
       "info": "橿原神宮前",
       "info2": "かしはらじんぐうまえ",
-      "word": "kasiharajinguumae"
+      "word": "kasiharazinguumae"
     },
     {
       "info": "畝傍御陵前",
@@ -42,11 +42,11 @@
     },
     { "info": "九条", "info2": "くじょう", "word": "kujou" },
     { "info": "西ノ京", "info2": "にしのきょう", "word": "nisinokyou" },
-    { "info": "尼ケ辻", "info2": "あまがつじ", "word": "amagatuji" },
+    { "info": "尼ケ辻", "info2": "あまがつじ", "word": "amagatuzi" },
     {
       "info": "大和西大寺",
       "info2": "やまとさいだいじ",
-      "word": "yamatosaidaiji"
+      "word": "yamatosaidaizi"
     }
   ]
 }

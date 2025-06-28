@@ -11,13 +11,13 @@
   "updatedAt": "2022-07-19",
   "optional": { "cd": ["179"], "coCd": ["1"] },
   "words": [
-    { "info": "桜島", "info2": "さくらじま", "word": "sakurajima" },
+    { "info": "桜島", "info2": "さくらじま", "word": "sakurazima" },
     {
       "info": "ユニバーサルシティ",
       "info2": "ゆにばーさるしてぃ",
       "word": "yuniba-sarusithi"
     },
-    { "info": "安治川口", "info2": "あじかわぐち", "word": "ajikawaguti" },
+    { "info": "安治川口", "info2": "あじかわぐち", "word": "azikawaguti" },
     { "info": "西九条", "info2": "にしくじょう", "word": "nisikujou" }
   ]
 }

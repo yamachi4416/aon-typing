@@ -11,7 +11,7 @@
   "updatedAt": "2022-12-21",
   "optional": { "cd": ["167"], "coCd": ["1"] },
   "words": [
-    { "info": "久宝寺", "info2": "きゅうほうじ", "word": "kyuuhouji" },
+    { "info": "久宝寺", "info2": "きゅうほうじ", "word": "kyuuhouzi" },
     { "info": "新加美", "info2": "しんかみ", "word": "sinkami" },
     {
       "info": "衣摺加美北",
@@ -49,7 +49,7 @@
     {
       "info": "ＪＲ淡路",
       "info2": "じぇいあーるあわじ",
-      "word": "jeia-ruawaji"
+      "word": "jeia-ruawazi"
     },
     { "info": "南吹田", "info2": "みなみすいた", "word": "minamisuita" },
     { "info": "新大阪", "info2": "しんおおさか", "word": "sinnoosaka" },

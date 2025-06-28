@@ -19,12 +19,12 @@
     { "info": "豊津", "info2": "とよつ", "word": "toyotu" },
     { "info": "吹田", "info2": "すいた", "word": "suita" },
     { "info": "下新庄", "info2": "しもしんじょう", "word": "simosinjou" },
-    { "info": "淡路", "info2": "あわじ", "word": "awaji" },
-    { "info": "柴島", "info2": "くにじま", "word": "kunijima" },
+    { "info": "淡路", "info2": "あわじ", "word": "awazi" },
+    { "info": "柴島", "info2": "くにじま", "word": "kunizima" },
     {
       "info": "天神橋筋六丁目",
       "info2": "てんじんばしすじろくちょうめ",
-      "word": "tenjinbasisujirokutyoume"
+      "word": "tenzinbasisuzirokutyoume"
     }
   ]
 }

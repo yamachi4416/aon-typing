@@ -15,7 +15,7 @@
     {
       "info": "ある男と無花果",
       "info2": "あるおとこといちじく",
-      "word": "aruotokotoitijiku"
+      "word": "aruotokotoitiziku"
     },
     { "info": "小川 未明", "info2": "おがわ みめい", "word": "ogawa mimei" },
     {
@@ -26,7 +26,7 @@
     {
       "info": "そして、無花果の鉢植えを買いました。「いつになったら、実がなるだろう。」",
       "info2": "そして、いちじくのはちうえをかいました。「いつになったら、みがなるだろう。」",
-      "word": "sosite,itijikunohatiuewokaimasita.[ituninattara,miganarudarou.]"
+      "word": "sosite,itizikunohatiuewokaimasita.[ituninattara,miganarudarou.]"
     },
     {
       "info": "「来年はなります。」と、植木屋は答えました。しかしその木は、小さくありました。",
@@ -41,7 +41,7 @@
     {
       "info": "木などは、どうでもよかったのです。友だちの家に頼って、雨のやむまで待って、帰りには、その無花果の鉢を預けてゆきました。",
       "info2": "きなどは、どうでもよかったのです。ともだちのうちにたよって、あめのやむまでまって、かえりには、そのいちじくのはちをあずけてゆきました。",
-      "word": "kinadoha,doudemoyokattanodesu.tomodatinoutinitayotte,amenoyamumadematte,kaeriniha,sonoitijikunohatiwoazuketeyukimasita."
+      "word": "kinadoha,doudemoyokattanodesu.tomodatinoutinitayotte,amenoyamumadematte,kaeriniha,sonoitizikunohatiwoazuketeyukimasita."
     },
     {
       "info": "幾月も、幾年もたちましたけれど、男は、忘れたものか、友だちの家へあずけた木を取りにゆきませんでした。",
@@ -56,7 +56,7 @@
     {
       "info": "五、六年もたって、ふと、いつか自分は無花果の木を友だちのもとにあずけておいたことを思い出しました。",
       "info2": "ご、ろくねんもたって、ふと、いつかじぶんはいちじくのきをともだちのもとにあずけておいたことをおもいだしました。",
-      "word": "go,rokunenmotatte,huto,itukajibunhaitijikunokiwotomodatinomotoniazuketeoitakotowoomoidasimasita."
+      "word": "go,rokunenmotatte,huto,itukazibunhaitizikunokiwotomodatinomotoniazuketeoitakotowoomoidasimasita."
     },
     {
       "info": "さっそく取りにゆきました。",
@@ -66,12 +66,12 @@
     {
       "info": "「あなたが、きっと取りにおいでなさると思って、大事に育てておきました。」と、その家の人はいって、裏庭に案内しました。",
       "info2": "「あなたが、きっととりにおいでなさるとおもって、だいじにそだてておきました。」と、そのいえのひとはいって、うらにわにあんないしました。",
-      "word": "[anataga,kittotorinioidenasarutoomotte,daijinisodateteokimasita.]to,sonoienohitohaitte,uraniwaniannnaisimasita."
+      "word": "[anataga,kittotorinioidenasarutoomotte,daizinisodateteokimasita.]to,sonoienohitohaitte,uraniwaniannnaisimasita."
     },
     {
       "info": "大きな無花果の木に、実がいっぱいなっていたのです。男は、驚きました。",
       "info2": "おおきないちじくのきに、みがいっぱいなっていたのです。おとこは、おどろきました。",
-      "word": "ookinaitijikunokini,migaippainatteitanodesu.otokoha,odorokimasita."
+      "word": "ookinaitizikunokini,migaippainatteitanodesu.otokoha,odorokimasita."
     },
     {
       "info": "かつ当惑しました。しかたがなく、掘って、車に載せて帰りました。",
@@ -81,7 +81,7 @@
     {
       "info": "しかし、それは、木を移す時期でなかったので、実もしなびてしまえば、木も枯れてしまいました。",
       "info2": "しかし、それは、きをうつすじきでなかったので、みもしなびてしまえば、きもかれてしまいました。",
-      "word": "sikasi,soreha,kiwoutusujikidenakattanode,mimosinabitesimaeba,kimokaretesimaimasita."
+      "word": "sikasi,soreha,kiwoutusuzikidenakattanode,mimosinabitesimaeba,kimokaretesimaimasita."
     },
     {
       "info": "けっきょく、男は、ほねおり損に終わったわけです。",

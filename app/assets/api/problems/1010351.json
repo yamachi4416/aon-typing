@@ -12,12 +12,12 @@
   "optional": { "cd": ["351"], "coCd": ["21"] },
   "words": [
     { "info": "津島", "info2": "つしま", "word": "tusima" },
-    { "info": "藤浪", "info2": "ふじなみ", "word": "hujinami" },
+    { "info": "藤浪", "info2": "ふじなみ", "word": "huzinami" },
     { "info": "勝幡", "info2": "しょばた", "word": "syobata" },
     { "info": "青塚", "info2": "あおつか", "word": "aotuka" },
     { "info": "木田", "info2": "きだ", "word": "kida" },
     { "info": "七宝", "info2": "しっぽう", "word": "sippou" },
-    { "info": "甚目寺", "info2": "じもくじ", "word": "jimokuji" },
+    { "info": "甚目寺", "info2": "じもくじ", "word": "zimokuzi" },
     { "info": "須ケ口", "info2": "すかぐち", "word": "sukaguti" }
   ]
 }

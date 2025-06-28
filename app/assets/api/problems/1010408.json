@@ -11,17 +11,17 @@
   "updatedAt": "2023-07-01",
   "optional": { "cd": ["408"], "coCd": ["24"] },
   "words": [
-    { "info": "宇治", "info2": "うじ", "word": "uji" },
+    { "info": "宇治", "info2": "うじ", "word": "uzi" },
     { "info": "三室戸", "info2": "みむろど", "word": "mimurodo" },
     { "info": "黄檗", "info2": "おうばく", "word": "oubaku" },
     { "info": "木幡", "info2": "こわた", "word": "kowata" },
-    { "info": "六地蔵", "info2": "ろくじぞう", "word": "rokujizou" },
+    { "info": "六地蔵", "info2": "ろくじぞう", "word": "rokuzizou" },
     {
       "info": "桃山南口",
       "info2": "ももやまみなみぐち",
       "word": "momoyamaminamiguti"
     },
     { "info": "観月橋", "info2": "かんげつきょう", "word": "kangetukyou" },
-    { "info": "中書島", "info2": "ちゅうしょじま", "word": "tyuusyojima" }
+    { "info": "中書島", "info2": "ちゅうしょじま", "word": "tyuusyozima" }
   ]
 }

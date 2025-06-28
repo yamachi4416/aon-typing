@@ -14,12 +14,12 @@
     {
       "info": "橿原神宮前",
       "info2": "かしはらじんぐうまえ",
-      "word": "kasiharajinguumae"
+      "word": "kasiharazinguumae"
     },
     {
       "info": "橿原神宮西口",
       "info2": "かしはらじんぐうにしぐち",
-      "word": "kasiharajinguunisiguti"
+      "word": "kasiharazinguunisiguti"
     },
     { "info": "坊城", "info2": "ぼうじょう", "word": "boujou" },
     { "info": "浮孔", "info2": "うきあな", "word": "ukiana" },
@@ -30,15 +30,15 @@
     {
       "info": "二上神社口",
       "info2": "にじょうじんじゃぐち",
-      "word": "nijoujinjaguti"
+      "word": "nijouzinjaguti"
     },
     { "info": "二上山", "info2": "にじょうざん", "word": "nijouzann" },
     { "info": "上ノ太子", "info2": "かみのたいし", "word": "kaminotaisi" },
     { "info": "駒ケ谷", "info2": "こまがたに", "word": "komagatani" },
     { "info": "古市", "info2": "ふるいち", "word": "huruiti" },
-    { "info": "道明寺", "info2": "どうみょうじ", "word": "doumyouji" },
-    { "info": "土師ノ里", "info2": "はじのさと", "word": "hajinosato" },
-    { "info": "藤井寺", "info2": "ふじいでら", "word": "hujiidera" },
+    { "info": "道明寺", "info2": "どうみょうじ", "word": "doumyouzi" },
+    { "info": "土師ノ里", "info2": "はじのさと", "word": "hazinosato" },
+    { "info": "藤井寺", "info2": "ふじいでら", "word": "huziidera" },
     { "info": "高鷲", "info2": "たかわし", "word": "takawasi" },
     { "info": "恵我ノ荘", "info2": "えがのしょう", "word": "eganosyou" },
     { "info": "河内松原", "info2": "かわちまつばら", "word": "kawatimatubara" },

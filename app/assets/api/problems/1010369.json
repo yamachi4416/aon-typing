@@ -58,7 +58,7 @@
     { "info": "河内国分", "info2": "かわちこくぶ", "word": "kawatikokubu" },
     { "info": "安堂", "info2": "あんどう", "word": "andou" },
     { "info": "堅下", "info2": "かたしも", "word": "katasimo" },
-    { "info": "法善寺", "info2": "ほうぜんじ", "word": "houzenji" },
+    { "info": "法善寺", "info2": "ほうぜんじ", "word": "houzenzi" },
     { "info": "恩智", "info2": "おんぢ", "word": "ondi" },
     { "info": "高安", "info2": "たかやす", "word": "takayasu" },
     { "info": "河内山本", "info2": "かわちやまもと", "word": "kawatiyamamoto" },
@@ -66,7 +66,7 @@
     {
       "info": "久宝寺口",
       "info2": "きゅうほうじぐち",
-      "word": "kyuuhoujiguti"
+      "word": "kyuuhouziguti"
     },
     { "info": "弥刀", "info2": "みと", "word": "mito" },
     { "info": "長瀬", "info2": "ながせ", "word": "nagase" },

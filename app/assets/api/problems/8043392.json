@@ -65,7 +65,7 @@
     {
       "info": "コトリト　イフ　ヤサシイ　イキモノノ　ヰルト　イフ　コトモ、マタ　ツボミタチジシンガ、",
       "info2": "ことりと　いふ　やさしい　いきものの　ゐると　いふ　ことも、また　つぼみたちじしんが、",
-      "word": "kotorito ihu yasasii ikimonono iruto ihu kotomo,mata tubomitatijisinga,"
+      "word": "kotorito ihu yasasii ikimonono iruto ihu kotomo,mata tubomitatizisinga,"
     },
     {
       "info": "花ト　イフ　ウツクシイ　モノニ　ナルノダト　イフ　コトモ　シツテ　ヰマセン。ソレデ、「オンモハ　ドンナ　トコロデセウ」",
@@ -80,12 +80,12 @@
     {
       "info": "ソノ　トキ　ムカウノ　ムギバタケカラ　コトシニ　ナツテカラ　ハジメテノ　ヒバリガ　ソラニ　マヒアガリマシタ。",
       "info2": "その　とき　むかうの　むぎばたけから　ことしに　なつてから　はじめての　ひばりが　そらに　まひあがりました。",
-      "word": "sono toki mukauno mugibatakekara kotosini natutekara hajimeteno hibariga sorani mahiagarimasita."
+      "word": "sono toki mukauno mugibatakekara kotosini natutekara hazimeteno hibariga sorani mahiagarimasita."
     },
     {
       "info": "ソシテ　ヒバリハ　スガタガ　ミエナク　ナルホド　タカク　ノボツタ　トキ　ウツクシイ　コヱデ　ウタヒハジメマシタ。",
       "info2": "そして　ひばりは　すがたが　みえなく　なるほど　たかく　のぼつた　とき　うつくしい　こゑで　うたひはじめました。",
-      "word": "sosite hibariha sugataga mienaku naruhodo takaku nobotuta toki utukusii koede utahihajimemasita."
+      "word": "sosite hibariha sugataga mienaku naruhodo takaku nobotuta toki utukusii koede utahihazimemasita."
     },
     {
       "info": "「ピイチク　ピイチク　ピイチク　ピイチク」ヒバリノ　コヱハ　タカイ　ソラカラ　キンノ　アメノヤウニ　フツテ　キテ、",
@@ -155,12 +155,12 @@
     {
       "info": "「オオ　マブシイ」ト　ドノ　ツボミモ　ハジメハ　サケビマシタ。",
       "info2": "「おお　まぶしい」と　どの　つぼみも　はじめは　さけびました。",
-      "word": "[oo mabusii]to dono tubomimo hajimeha sakebimasita."
+      "word": "[oo mabusii]to dono tubomimo hazimeha sakebimasita."
     },
     {
       "info": "ソレハ　ハジメテ　ミル　セカイガ　イママデト　チガツテ　ピカピカ　ヒカツテ　ヰタカラデ　アリマス。",
       "info2": "それは　はじめて　みる　せかいが　いままでと　ちがつて　ぴかぴか　ひかつて　ゐたからで　あります。",
-      "word": "soreha hajimete miru sekaiga imamadeto tigatute pikapika hikatute itakarade arimasu."
+      "word": "soreha hazimete miru sekaiga imamadeto tigatute pikapika hikatute itakarade arimasu."
     },
     {
       "info": "ヤガテ　ツヨイ　ヒカリニ　ナレテ　クルト　ナタネノ　花タチハ　アタリヲ　ミマハシテ、",
@@ -180,12 +180,12 @@
     {
       "info": "ソレカラ　花タチハ　ジブンタチノ　スガタヲ　ナガメアヒ、ジブンタチカラ　ナガレデル　ニホヒヲバ　カギアツテ、",
       "info2": "それから　はなたちは　じぶんたちの　すがたを　ながめあひ、じぶんたちから　ながれでる　にほひをば　かぎあつて、",
-      "word": "sorekara hanatatiha jibuntatino sugatawo nagameahi,jibuntatikara nagarederu nihohiwoba kagiatute,"
+      "word": "sorekara hanatatiha zibuntatino sugatawo nagameahi,zibuntatikara nagarederu nihohiwoba kagiatute,"
     },
     {
       "info": "ジブンタチガ　ミナ　オナジヤウニ　キイロイ　キモノヲ　キテ　ヲリ、",
       "info2": "じぶんたちが　みな　おなじやうに　きいろい　きものを　きて　をり、",
-      "word": "jibuntatiga mina onajiyauni kiiroi kimonowo kite wori,"
+      "word": "zibuntatiga mina onaziyauni kiiroi kimonowo kite wori,"
     },
     {
       "info": "ホカノ　木ヤ　クサニ　マケナイホド　ウツクシイノヲ　シツテ　イツソウ　ヨロコビアヒマシタ。",
@@ -315,7 +315,7 @@
     {
       "info": "サテ　コノ　テフテフモ　オハネガ　ジヨウブニ　ナルト　カゼニ　ノツテ　ウマヤノ　ヤネヲ　コエタリ、",
       "info2": "さて　この　てふてふも　おはねが　じようぶに　なると　かぜに　のつて　うまやの　やねを　こえたり、",
-      "word": "sate kono tehutehumo ohanega jiyoubuni naruto kazeni notute umayano yanewo koetari,"
+      "word": "sate kono tehutehumo ohanega ziyoubuni naruto kazeni notute umayano yanewo koetari,"
     },
     {
       "info": "ヲガハノ　ウエニ　イツテ　ミタリ　シマシタ。",

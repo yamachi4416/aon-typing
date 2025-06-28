@@ -10,8 +10,8 @@
   "createdAt": "2021-05-31",
   "updatedAt": "2021-05-31",
   "words": [
-    { "info": "青紫蘇", "info2": "あおじそ", "word": "aojiso" },
-    { "info": "赤紫蘇", "info2": "あかじそ", "word": "akajiso" },
+    { "info": "青紫蘇", "info2": "あおじそ", "word": "aoziso" },
+    { "info": "赤紫蘇", "info2": "あかじそ", "word": "akaziso" },
     { "info": "浅葱", "info2": "あさつき", "word": "asatuki" },
     { "info": "薊", "info2": "あざみ", "word": "azami" },
     { "info": "石勺柏", "info2": "あすぱらがす", "word": "asuparagasu" },
@@ -47,6 +47,6 @@
     { "info": "里芋", "info2": "さといも", "word": "satoimo" },
     { "info": "椎茸", "info2": "しいたけ", "word": "siitake" },
     { "info": "紫蘇", "info2": "しそ", "word": "siso" },
-    { "info": "占地", "info2": "しめじ", "word": "simeji" }
+    { "info": "占地", "info2": "しめじ", "word": "simezi" }
   ]
 }

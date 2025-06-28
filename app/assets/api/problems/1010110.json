@@ -12,11 +12,11 @@
   "optional": { "cd": ["110"], "coCd": ["1"] },
   "words": [
     { "info": "三鷹", "info2": "みたか", "word": "mitaka" },
-    { "info": "吉祥寺", "info2": "きちじょうじ", "word": "kitijouji" },
+    { "info": "吉祥寺", "info2": "きちじょうじ", "word": "kitijouzi" },
     { "info": "西荻窪", "info2": "にしおぎくぼ", "word": "nisiogikubo" },
     { "info": "荻窪", "info2": "おぎくぼ", "word": "ogikubo" },
     { "info": "阿佐ケ谷", "info2": "あさがや", "word": "asagaya" },
-    { "info": "高円寺", "info2": "こうえんじ", "word": "kouenji" },
+    { "info": "高円寺", "info2": "こうえんじ", "word": "kouenzi" },
     { "info": "中野", "info2": "なかの", "word": "nakano" },
     { "info": "東中野", "info2": "ひがしなかの", "word": "higasinakano" },
     { "info": "大久保", "info2": "おおくぼ", "word": "ookubo" },

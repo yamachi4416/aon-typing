@@ -41,7 +41,7 @@
     { "info": "大溝", "info2": "おおみぞ", "word": "oomizo" },
     { "info": "犬塚", "info2": "いぬづか", "word": "inuduka" },
     { "info": "三潴", "info2": "みずま", "word": "mizuma" },
-    { "info": "大善寺", "info2": "だいぜんじ", "word": "daizenji" },
+    { "info": "大善寺", "info2": "だいぜんじ", "word": "daizenzi" },
     { "info": "安武", "info2": "やすたけ", "word": "yasutake" },
     { "info": "津福", "info2": "つぶく", "word": "tubuku" },
     {
@@ -56,8 +56,8 @@
       "word": "nisitetukurume"
     },
     { "info": "櫛原", "info2": "くしわら", "word": "kusiwara" },
-    { "info": "宮の陣", "info2": "みやのじん", "word": "miyanojinn" },
-    { "info": "味坂", "info2": "あじさか", "word": "ajisaka" },
+    { "info": "宮の陣", "info2": "みやのじん", "word": "miyanozinn" },
+    { "info": "味坂", "info2": "あじさか", "word": "azisaka" },
     { "info": "端間", "info2": "はたま", "word": "hatama" },
     {
       "info": "西鉄小郡",
@@ -87,7 +87,7 @@
     { "info": "春日原", "info2": "かすがばる", "word": "kasugabaru" },
     { "info": "桜並木", "info2": "さくらなみき", "word": "sakuranamiki" },
     { "info": "雑餉隈", "info2": "ざっしょのくま", "word": "zassyonokuma" },
-    { "info": "井尻", "info2": "いじり", "word": "ijiri" },
+    { "info": "井尻", "info2": "いじり", "word": "iziri" },
     { "info": "大橋", "info2": "おおはし", "word": "oohasi" },
     { "info": "高宮", "info2": "たかみや", "word": "takamiya" },
     { "info": "西鉄平尾", "info2": "にしてつひらお", "word": "nisitetuhirao" },

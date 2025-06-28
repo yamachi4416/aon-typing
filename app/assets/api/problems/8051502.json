@@ -21,7 +21,7 @@
     {
       "info": "姉さんは、庭前のつつじの枝に、はちの巣を見つけました。",
       "info2": "ねえさんは、にわさきのつつじのえだに、はちのすをみつけました。",
-      "word": "neesanha,niwasakinotutujinoedani,hatinosuwomitukemasita."
+      "word": "neesanha,niwasakinotutuzinoedani,hatinosuwomitukemasita."
     },
     {
       "info": "「まあ、こんなところへ巣を造って、あぶないから落としてしまおうか。」",
@@ -56,12 +56,12 @@
     {
       "info": "そして、同じようなことをうまずに繰り返していました。「このはち一ぴきだけだろうか。」",
       "info2": "そして、おなじようなことをうまずにくりかえしていました。「このはち１ぴきだけだろうか。」",
-      "word": "sosite,onajiyounakotowoumazunikurikaesiteimasita.[konohati1pikidakedarouka.]"
+      "word": "sosite,onaziyounakotowoumazunikurikaesiteimasita.[konohati1pikidakedarouka.]"
     },
     {
       "info": "彼女は、同じ一ぴきのはちが、往ったり返ったりして、働いているのしか見なかったからです。",
       "info2": "かのじょは、おなじ１ぴきのはちが、いったりかえったりして、はたらいているのしかみなかったからです。",
-      "word": "kanojoha,onaji1pikinohatiga,ittarikaettarisite,hataraiteirunosikaminakattakaradesu."
+      "word": "kanojoha,onazi1pikinohatiga,ittarikaettarisite,hataraiteirunosikaminakattakaradesu."
     },
     {
       "info": "「勇ちゃんに、だまっていよう。」見つけたら、きっと巣を取るであろうと思いました。",
@@ -91,7 +91,7 @@
     {
       "info": "目をはなさずに見ていると、はちは、しばらくたって、つつじの枝の方へ飛んでいきました。",
       "info2": "めをはなさずにみていると、はちは、しばらくたって、つつじのえだのほうへとんでいきました。",
-      "word": "mewohanasazunimiteiruto,hatiha,sibarakutatte,tutujinoedanohouhetondeikimasita."
+      "word": "mewohanasazunimiteiruto,hatiha,sibarakutatte,tutuzinoedanohouhetondeikimasita."
     },
     {
       "info": "「やはりそうだわ。水を飲みにきたんでしょう。」",
@@ -101,7 +101,7 @@
     {
       "info": "翌朝、庭をそうじするときに、姉さんは、はちがどうしているだろうとわざわざつつじの木のところへいって、巣をのぞいてみました。",
       "info2": "よくあさ、にわをそうじするときに、ねえさんは、はちがどうしているだろうとわざわざつつじのきのところへいって、すをのぞいてみました。",
-      "word": "yokuasa,niwawosoujisurutokini,neesanha,hatigadousiteirudaroutowazawazatutujinokinotokoroheitte,suwonozoitemimasita."
+      "word": "yokuasa,niwawosouzisurutokini,neesanha,hatigadousiteirudaroutowazawazatutuzinokinotokoroheitte,suwonozoitemimasita."
     },
     {
       "info": "そこには、昨日の親ばちが、やはり一ぴきで、いっしょうけんめいに巣を大きくしようとしていました。",
@@ -111,7 +111,7 @@
     {
       "info": "彼女は、はじめてそのとき、一ぴきのはちの力で造られた巣に注意を向けたのです。",
       "info2": "かのじょは、はじめてそのとき、１ぴきのはちのちからでつくられたすにちゅういをむけたのです。",
-      "word": "kanojoha,hajimetesonotoki,1pikinohatinotikaradetukuraretasunityuuiwomuketanodesu."
+      "word": "kanojoha,hazimetesonotoki,1pikinohatinotikaradetukuraretasunityuuiwomuketanodesu."
     },
     {
       "info": "なんと並々ならぬ心遣いと、努力が、その巣に傾けられていることか。",
@@ -166,7 +166,7 @@
     {
       "info": "「姉さん、つつじの木だろう。お母さんばちがひとりで巣を造っているのだよ。」「ええ、そうなの。」",
       "info2": "「ねえさん、つつじのきだろう。おかあさんばちがひとりですをつくっているのだよ。」「ええ、そうなの。」",
-      "word": "[neesan,tutujinokidarou.okaasanbatigahitoridesuwotukutteirunodayo.][ee,sounano.]"
+      "word": "[neesan,tutuzinokidarou.okaasanbatigahitoridesuwotukutteirunodayo.][ee,sounano.]"
     },
     {
       "info": "「このあいだから見ると、だいぶ大きくなった。あの穴の中に子供がいるんだね。",
@@ -211,7 +211,7 @@
     {
       "info": "このごろ母ばちの片方の羽がすこし破れているのを考えると、胸が痛くなるのを感じました。",
       "info2": "このごろははばちのかたほうのはねがすこしやぶれているのをかんがえると、むねがいたくなるのをかんじました。",
-      "word": "konogorohahabatinokatahounohanegasukosiyabureteirunowokangaeruto,munegaitakunarunowokanjimasita."
+      "word": "konogorohahabatinokatahounohanegasukosiyabureteirunowokangaeruto,munegaitakunarunowokanzimasita."
     },
     {
       "info": "ほかの子供は、どこからか、はちの子をさがして持っていくことがあったが、",

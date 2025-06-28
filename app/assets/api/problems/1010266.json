@@ -37,7 +37,7 @@
     { "info": "谷塚", "info2": "やつか", "word": "yatuka" },
     { "info": "竹ノ塚", "info2": "たけのつか", "word": "takenotuka" },
     { "info": "西新井", "info2": "にしあらい", "word": "nisiarai" },
-    { "info": "梅島", "info2": "うめじま", "word": "umejima" },
+    { "info": "梅島", "info2": "うめじま", "word": "umezima" },
     { "info": "五反野", "info2": "ごたんの", "word": "gotannno" },
     { "info": "小菅", "info2": "こすげ", "word": "kosuge" },
     { "info": "北千住", "info2": "きたせんじゅ", "word": "kitasenju" },
@@ -47,7 +47,7 @@
     {
       "info": "東向島",
       "info2": "ひがしむこうじま",
-      "word": "higasimukoujima"
+      "word": "higasimukouzima"
     },
     { "info": "曳舟", "info2": "ひきふね", "word": "hikihune" },
     {

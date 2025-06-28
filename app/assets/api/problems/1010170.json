@@ -26,7 +26,7 @@
     { "info": "西笠田", "info2": "にしかせだ", "word": "nisikaseda" },
     { "info": "笠田", "info2": "かせだ", "word": "kaseda" },
     { "info": "大谷", "info2": "おおたに", "word": "ootani" },
-    { "info": "妙寺", "info2": "みょうじ", "word": "myouji" },
+    { "info": "妙寺", "info2": "みょうじ", "word": "myouzi" },
     { "info": "中飯降", "info2": "なかいぶり", "word": "nakaiburi" },
     { "info": "高野口", "info2": "こうやぐち", "word": "kouyaguti" },
     { "info": "紀伊山田", "info2": "きいやまだ", "word": "kiiyamada" },
@@ -50,6 +50,6 @@
     { "info": "香芝", "info2": "かしば", "word": "kasiba" },
     { "info": "志都美", "info2": "しずみ", "word": "sizumi" },
     { "info": "畠田", "info2": "はたけだ", "word": "hatakeda" },
-    { "info": "王寺", "info2": "おうじ", "word": "ouji" }
+    { "info": "王寺", "info2": "おうじ", "word": "ouzi" }
   ]
 }

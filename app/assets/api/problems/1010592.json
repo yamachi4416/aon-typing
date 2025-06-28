@@ -11,7 +11,7 @@
   "updatedAt": "2023-05-04",
   "optional": { "cd": ["592"], "coCd": ["123"] },
   "words": [
-    { "info": "山陽姫路", "info2": "さんようひめじ", "word": "sanyouhimeji" },
+    { "info": "山陽姫路", "info2": "さんようひめじ", "word": "sanyouhimezi" },
     { "info": "手柄", "info2": "てがら", "word": "tegara" },
     { "info": "亀山", "info2": "かめやま", "word": "kameyama" },
     { "info": "飾磨", "info2": "しかま", "word": "sikama" },
@@ -34,7 +34,7 @@
     { "info": "西江井ケ島", "info2": "にしえいがしま", "word": "nisieigasima" },
     { "info": "江井ケ島", "info2": "えいがしま", "word": "eigasima" },
     { "info": "中八木", "info2": "なかやぎ", "word": "nakayagi" },
-    { "info": "藤江", "info2": "ふじえ", "word": "hujie" },
+    { "info": "藤江", "info2": "ふじえ", "word": "huzie" },
     {
       "info": "林崎松江海岸",
       "info2": "はやしさきまつえかいがん",

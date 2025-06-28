@@ -15,7 +15,7 @@
     { "info": "和田塚", "info2": "わだづか", "word": "wadaduka" },
     { "info": "由比ケ浜", "info2": "ゆいがはま", "word": "yuigahama" },
     { "info": "長谷", "info2": "はせ", "word": "hase" },
-    { "info": "極楽寺", "info2": "ごくらくじ", "word": "gokurakuji" },
+    { "info": "極楽寺", "info2": "ごくらくじ", "word": "gokurakuzi" },
     { "info": "稲村ケ崎", "info2": "いなむらがさき", "word": "inamuragasaki" },
     { "info": "七里ケ浜", "info2": "しちりがはま", "word": "sitirigahama" },
     {
@@ -31,8 +31,8 @@
       "word": "syounankaigankouenn"
     },
     { "info": "鵠沼", "info2": "くげぬま", "word": "kugenuma" },
-    { "info": "柳小路", "info2": "やなぎこうじ", "word": "yanagikouji" },
+    { "info": "柳小路", "info2": "やなぎこうじ", "word": "yanagikouzi" },
     { "info": "石上", "info2": "いしがみ", "word": "isigami" },
-    { "info": "藤沢", "info2": "ふじさわ", "word": "hujisawa" }
+    { "info": "藤沢", "info2": "ふじさわ", "word": "huzisawa" }
   ]
 }

@@ -11,7 +11,7 @@
   "updatedAt": "2023-10-08",
   "optional": { "cd": ["555"], "coCd": ["108"] },
   "words": [
-    { "info": "帷子ノ辻", "info2": "かたびらのつじ", "word": "katabiranotuji" },
+    { "info": "帷子ノ辻", "info2": "かたびらのつじ", "word": "katabiranotuzi" },
     { "info": "撮影所前", "info2": "さつえいしょまえ", "word": "satueisyomae" },
     { "info": "常盤", "info2": "ときわ", "word": "tokiwa" },
     { "info": "鳴滝", "info2": "なるたき", "word": "narutaki" },
@@ -19,14 +19,14 @@
     {
       "info": "御室仁和寺",
       "info2": "おむろにんなじ",
-      "word": "omuroninnnaji"
+      "word": "omuroninnnazi"
     },
-    { "info": "妙心寺", "info2": "みょうしんじ", "word": "myousinji" },
-    { "info": "龍安寺", "info2": "りょうあんじ", "word": "ryouanji" },
+    { "info": "妙心寺", "info2": "みょうしんじ", "word": "myousinzi" },
+    { "info": "龍安寺", "info2": "りょうあんじ", "word": "ryouanzi" },
     {
       "info": "等持院・立命館大学衣笠キャンパス前",
       "info2": "とうじいん・りつめいかんだいがくきぬがさきゃんぱすまえ",
-      "word": "toujiin/ritumeikandaigakukinugasakyanpasumae"
+      "word": "touziin/ritumeikandaigakukinugasakyanpasumae"
     },
     {
       "info": "北野白梅町",

@@ -11,7 +11,7 @@
   "updatedAt": "2023-07-17",
   "optional": { "cd": ["324"], "coCd": ["17"] },
   "words": [
-    { "info": "小島新田", "info2": "こじましんでん", "word": "kojimasindenn" },
+    { "info": "小島新田", "info2": "こじましんでん", "word": "kozimasindenn" },
     { "info": "大師橋", "info2": "だいしばし", "word": "daisibasi" },
     { "info": "東門前", "info2": "ひがしもんぜん", "word": "higasimonzenn" },
     { "info": "川崎大師", "info2": "かわさきだいし", "word": "kawasakidaisi" },

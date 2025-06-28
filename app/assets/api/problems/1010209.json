@@ -12,7 +12,7 @@
   "optional": { "cd": ["209"], "coCd": ["1"] },
   "words": [
     { "info": "広島", "info2": "ひろしま", "word": "hirosima" },
-    { "info": "天神川", "info2": "てんじんがわ", "word": "tenjingawa" },
+    { "info": "天神川", "info2": "てんじんがわ", "word": "tenzingawa" },
     { "info": "向洋", "info2": "むかいなだ", "word": "mukainada" },
     { "info": "海田市", "info2": "かいたいち", "word": "kaitaiti" },
     { "info": "矢野", "info2": "やの", "word": "yano" },
@@ -33,7 +33,7 @@
     { "info": "新広", "info2": "しんひろ", "word": "sinhiro" },
     { "info": "広", "info2": "ひろ", "word": "hiro" },
     { "info": "仁方", "info2": "にがた", "word": "nigata" },
-    { "info": "安芸川尻", "info2": "あきかわじり", "word": "akikawajiri" },
+    { "info": "安芸川尻", "info2": "あきかわじり", "word": "akikawaziri" },
     { "info": "安登", "info2": "あと", "word": "ato" },
     { "info": "安浦", "info2": "やすうら", "word": "yasuura" },
     { "info": "風早", "info2": "かざはや", "word": "kazahaya" },

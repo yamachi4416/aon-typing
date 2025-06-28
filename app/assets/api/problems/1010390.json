@@ -12,7 +12,7 @@
   "optional": { "cd": ["390"], "coCd": ["22"] },
   "words": [
     { "info": "吉野", "info2": "よしの", "word": "yosino" },
-    { "info": "吉野神宮", "info2": "よしのじんぐう", "word": "yosinojinguu" },
+    { "info": "吉野神宮", "info2": "よしのじんぐう", "word": "yosinozinguu" },
     { "info": "大和上市", "info2": "やまとかみいち", "word": "yamatokamiiti" },
     { "info": "六田", "info2": "むだ", "word": "muda" },
     { "info": "越部", "info2": "こしべ", "word": "kosibe" },
@@ -29,7 +29,7 @@
     {
       "info": "橿原神宮前",
       "info2": "かしはらじんぐうまえ",
-      "word": "kasiharajinguumae"
+      "word": "kasiharazinguumae"
     }
   ]
 }

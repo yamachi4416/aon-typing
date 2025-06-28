@@ -11,10 +11,10 @@
   "updatedAt": "2022-07-19",
   "optional": { "cd": ["180"], "coCd": ["1"] },
   "words": [
-    { "info": "姫路", "info2": "ひめじ", "word": "himeji" },
-    { "info": "東姫路", "info2": "ひがしひめじ", "word": "higasihimeji" },
+    { "info": "姫路", "info2": "ひめじ", "word": "himezi" },
+    { "info": "東姫路", "info2": "ひがしひめじ", "word": "higasihimezi" },
     { "info": "御着", "info2": "ごちゃく", "word": "gotyaku" },
-    { "info": "ひめじ別所", "info2": "ひめじべっしょ", "word": "himejibessyo" },
+    { "info": "ひめじ別所", "info2": "ひめじべっしょ", "word": "himezibessyo" },
     { "info": "曽根", "info2": "そね", "word": "sone" },
     { "info": "宝殿", "info2": "ほうでん", "word": "houdenn" },
     { "info": "加古川", "info2": "かこがわ", "word": "kakogawa" },

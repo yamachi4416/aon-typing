@@ -11,7 +11,7 @@
   "updatedAt": "2022-11-15",
   "optional": { "cd": ["234"], "coCd": ["1"] },
   "words": [
-    { "info": "門司", "info2": "もじ", "word": "moji" },
+    { "info": "門司", "info2": "もじ", "word": "mozi" },
     { "info": "下関", "info2": "しものせき", "word": "simonoseki" }
   ]
 }

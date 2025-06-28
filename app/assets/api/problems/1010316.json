@@ -27,7 +27,7 @@
     { "info": "長津田", "info2": "ながつた", "word": "nagatuta" },
     { "info": "田奈", "info2": "たな", "word": "tana" },
     { "info": "青葉台", "info2": "あおばだい", "word": "aobadai" },
-    { "info": "藤が丘", "info2": "ふじがおか", "word": "hujigaoka" },
+    { "info": "藤が丘", "info2": "ふじがおか", "word": "huzigaoka" },
     { "info": "市が尾", "info2": "いちがお", "word": "itigao" },
     { "info": "江田", "info2": "えだ", "word": "eda" },
     { "info": "あざみ野", "info2": "あざみの", "word": "azamino" },
@@ -35,7 +35,7 @@
     { "info": "鷺沼", "info2": "さぎぬま", "word": "saginuma" },
     { "info": "宮前平", "info2": "みやまえだいら", "word": "miyamaedaira" },
     { "info": "宮崎台", "info2": "みやざきだい", "word": "miyazakidai" },
-    { "info": "梶が谷", "info2": "かじがや", "word": "kajigaya" },
+    { "info": "梶が谷", "info2": "かじがや", "word": "kazigaya" },
     { "info": "溝の口", "info2": "みぞのくち", "word": "mizonokuti" },
     { "info": "高津", "info2": "たかつ", "word": "takatu" },
     { "info": "二子新地", "info2": "ふたこしんち", "word": "hutakosinti" },
@@ -51,7 +51,7 @@
     {
       "info": "池尻大橋",
       "info2": "いけじりおおはし",
-      "word": "ikejirioohasi"
+      "word": "ikezirioohasi"
     },
     { "info": "渋谷", "info2": "しぶや", "word": "sibuya" }
   ]

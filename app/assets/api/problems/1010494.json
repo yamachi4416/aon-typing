@@ -11,7 +11,7 @@
   "updatedAt": "2024-01-03",
   "optional": { "cd": ["494"], "coCd": ["73"] },
   "words": [
-    { "info": "修善寺", "info2": "しゅぜんじ", "word": "syuzenji" },
+    { "info": "修善寺", "info2": "しゅぜんじ", "word": "syuzenzi" },
     { "info": "牧之郷", "info2": "まきのこう", "word": "makinokou" },
     { "info": "大仁", "info2": "おおひと", "word": "oohito" },
     { "info": "田京", "info2": "たきょう", "word": "takyou" },
@@ -29,7 +29,7 @@
     {
       "info": "三島広小路",
       "info2": "みしまひろこうじ",
-      "word": "misimahirokouji"
+      "word": "misimahirokouzi"
     },
     { "info": "三島", "info2": "みしま", "word": "misima" }
   ]

@@ -14,7 +14,7 @@
     {
       "info": "大和西大寺",
       "info2": "やまとさいだいじ",
-      "word": "yamatosaidaiji"
+      "word": "yamatosaidaizi"
     },
     { "info": "平城", "info2": "へいじょう", "word": "heijou" },
     { "info": "高の原", "info2": "たかのはら", "word": "takanohara" },
@@ -32,7 +32,7 @@
     { "info": "大久保", "info2": "おおくぼ", "word": "ookubo" },
     { "info": "伊勢田", "info2": "いせだ", "word": "iseda" },
     { "info": "小倉", "info2": "おぐら", "word": "ogura" },
-    { "info": "向島", "info2": "むかいじま", "word": "mukaijima" },
+    { "info": "向島", "info2": "むかいじま", "word": "mukaizima" },
     {
       "info": "桃山御陵前",
       "info2": "ももやまごりょうまえ",
@@ -47,7 +47,7 @@
     { "info": "竹田", "info2": "たけだ", "word": "takeda" },
     { "info": "上鳥羽口", "info2": "かみとばぐち", "word": "kamitobaguti" },
     { "info": "十条", "info2": "じゅうじょう", "word": "juujou" },
-    { "info": "東寺", "info2": "とうじ", "word": "touji" },
+    { "info": "東寺", "info2": "とうじ", "word": "touzi" },
     { "info": "京都", "info2": "きょうと", "word": "kyouto" }
   ]
 }

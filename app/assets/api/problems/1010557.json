@@ -14,12 +14,12 @@
     {
       "info": "太秦天神川",
       "info2": "うずまさてんじんがわ",
-      "word": "uzumasatenjingawa"
+      "word": "uzumasatenzingawa"
     },
     {
       "info": "西大路御池",
       "info2": "にしおおじおいけ",
-      "word": "nisioojioike"
+      "word": "nisioozioike"
     },
     { "info": "二条", "info2": "にじょう", "word": "nijou" },
     {
@@ -43,10 +43,10 @@
     { "info": "御陵", "info2": "みささぎ", "word": "misasagi" },
     { "info": "山科", "info2": "やましな", "word": "yamasina" },
     { "info": "東野", "info2": "ひがしの", "word": "higasino" },
-    { "info": "椥辻", "info2": "なぎつじ", "word": "nagituji" },
+    { "info": "椥辻", "info2": "なぎつじ", "word": "nagituzi" },
     { "info": "小野", "info2": "おの", "word": "ono" },
     { "info": "醍醐", "info2": "だいご", "word": "daigo" },
     { "info": "石田", "info2": "いしだ", "word": "isida" },
-    { "info": "六地蔵", "info2": "ろくじぞう", "word": "rokujizou" }
+    { "info": "六地蔵", "info2": "ろくじぞう", "word": "rokuzizou" }
   ]
 }

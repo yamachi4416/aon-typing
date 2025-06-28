@@ -24,9 +24,9 @@
     { "info": "山王", "info2": "さんのう", "word": "sannnou" },
     { "info": "越前野中", "info2": "えちぜんのなか", "word": "etizennnonaka" },
     { "info": "轟", "info2": "どめき", "word": "domeki" },
-    { "info": "光明寺", "info2": "こうみょうじ", "word": "koumyouji" },
+    { "info": "光明寺", "info2": "こうみょうじ", "word": "koumyouzi" },
     { "info": "下志比", "info2": "しもしい", "word": "simosii" },
-    { "info": "永平寺口", "info2": "えいへいじぐち", "word": "eiheijiguti" },
+    { "info": "永平寺口", "info2": "えいへいじぐち", "word": "eiheiziguti" },
     { "info": "志比堺", "info2": "しいざかい", "word": "siizakai" },
     { "info": "松岡", "info2": "まつおか", "word": "matuoka" },
     { "info": "観音町", "info2": "かんのんまち", "word": "kannnonmati" },
@@ -35,7 +35,7 @@
       "info2": "えちぜんしまばし",
       "word": "etizensimabasi"
     },
-    { "info": "東藤島", "info2": "ひがしふじしま", "word": "higasihujisima" },
+    { "info": "東藤島", "info2": "ひがしふじしま", "word": "higasihuzisima" },
     { "info": "追分口", "info2": "おいわけぐち", "word": "oiwakeguti" },
     { "info": "越前新保", "info2": "えちぜんしんぼ", "word": "etizensinbo" },
     {

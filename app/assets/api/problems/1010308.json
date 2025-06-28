@@ -11,7 +11,7 @@
   "updatedAt": "2022-07-08",
   "optional": { "cd": ["308"], "coCd": ["14"] },
   "words": [
-    { "info": "吉祥寺", "info2": "きちじょうじ", "word": "kitijouji" },
+    { "info": "吉祥寺", "info2": "きちじょうじ", "word": "kitijouzi" },
     {
       "info": "井の頭公園",
       "info2": "いのかしらこうえん",
@@ -19,7 +19,7 @@
     },
     { "info": "三鷹台", "info2": "みたかだい", "word": "mitakadai" },
     { "info": "久我山", "info2": "くがやま", "word": "kugayama" },
-    { "info": "富士見ケ丘", "info2": "ふじみがおか", "word": "hujimigaoka" },
+    { "info": "富士見ケ丘", "info2": "ふじみがおか", "word": "huzimigaoka" },
     { "info": "高井戸", "info2": "たかいど", "word": "takaido" },
     { "info": "浜田山", "info2": "はまだやま", "word": "hamadayama" },
     { "info": "西永福", "info2": "にしえいふく", "word": "nisieihuku" },

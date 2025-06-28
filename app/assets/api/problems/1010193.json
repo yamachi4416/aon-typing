@@ -20,7 +20,7 @@
     { "info": "寺前", "info2": "てらまえ", "word": "teramae" },
     { "info": "新野", "info2": "にいの", "word": "niino" },
     { "info": "鶴居", "info2": "つるい", "word": "turui" },
-    { "info": "甘地", "info2": "あまじ", "word": "amaji" },
+    { "info": "甘地", "info2": "あまじ", "word": "amazi" },
     { "info": "福崎", "info2": "ふくさき", "word": "hukusaki" },
     { "info": "溝口", "info2": "みぞぐち", "word": "mizoguti" },
     { "info": "香呂", "info2": "こうろ", "word": "kouro" },
@@ -28,6 +28,6 @@
     { "info": "砥堀", "info2": "とほり", "word": "tohori" },
     { "info": "野里", "info2": "のざと", "word": "nozato" },
     { "info": "京口", "info2": "きょうぐち", "word": "kyouguti" },
-    { "info": "姫路", "info2": "ひめじ", "word": "himeji" }
+    { "info": "姫路", "info2": "ひめじ", "word": "himezi" }
   ]
 }

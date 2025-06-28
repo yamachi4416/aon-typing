@@ -17,11 +17,11 @@
       "info2": "みなみあさがや",
       "word": "minamiasagaya"
     },
-    { "info": "新高円寺", "info2": "しんこうえんじ", "word": "sinkouenji" },
+    { "info": "新高円寺", "info2": "しんこうえんじ", "word": "sinkouenzi" },
     {
       "info": "東高円寺",
       "info2": "ひがしこうえんじ",
-      "word": "higasikouenji"
+      "word": "higasikouenzi"
     },
     { "info": "新中野", "info2": "しんなかの", "word": "sinnnakano" },
     { "info": "中野坂上", "info2": "なかのさかうえ", "word": "nakanosakaue" },
@@ -47,13 +47,13 @@
     {
       "info": "国会議事堂前",
       "info2": "こっかいぎじどうまえ",
-      "word": "kokkaigijidoumae"
+      "word": "kokkaigizidoumae"
     },
     { "info": "霞ケ関", "info2": "かすみがせき", "word": "kasumigaseki" },
     { "info": "銀座", "info2": "ぎんざ", "word": "ginza" },
     { "info": "東京", "info2": "とうきょう", "word": "toukyou" },
     { "info": "大手町", "info2": "おおてまち", "word": "ootemati" },
-    { "info": "淡路町", "info2": "あわじちょう", "word": "awajityou" },
+    { "info": "淡路町", "info2": "あわじちょう", "word": "awazityou" },
     { "info": "御茶ノ水", "info2": "おちゃのみず", "word": "otyanomizu" },
     {
       "info": "本郷三丁目",

@@ -10,7 +10,7 @@
   "createdAt": "2024-11-17",
   "updatedAt": "2024-11-17",
   "words": [
-    { "info": "枇杷島", "info2": "びわじま", "word": "biwajima" },
+    { "info": "枇杷島", "info2": "びわじま", "word": "biwazima" },
     {
       "info": "尾張星の宮",
       "info2": "おわりほしのみや",
@@ -18,7 +18,7 @@
     },
     { "info": "小田井", "info2": "おたい", "word": "otai" },
     { "info": "比良", "info2": "ひら", "word": "hira" },
-    { "info": "味美", "info2": "あじよし", "word": "ajiyosi" },
+    { "info": "味美", "info2": "あじよし", "word": "aziyosi" },
     { "info": "勝川", "info2": "かちがわ", "word": "katigawa" }
   ],
   "optional": { "cd": ["544"], "coCd": ["102"] }

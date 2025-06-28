@@ -26,7 +26,7 @@
     { "info": "布袋", "info2": "ほてい", "word": "hotei" },
     { "info": "石仏", "info2": "いしぼとけ", "word": "isibotoke" },
     { "info": "岩倉", "info2": "いわくら", "word": "iwakura" },
-    { "info": "大山寺", "info2": "たいさんじ", "word": "taisanji" },
+    { "info": "大山寺", "info2": "たいさんじ", "word": "taisanzi" },
     {
       "info": "徳重・名古屋芸大",
       "info2": "とくしげ・なごやげいだい",
@@ -36,7 +36,7 @@
     { "info": "上小田井", "info2": "かみおたい", "word": "kamiotai" },
     { "info": "中小田井", "info2": "なかおたい", "word": "nakaotai" },
     { "info": "下小田井", "info2": "しもおたい", "word": "simootai" },
-    { "info": "東枇杷島", "info2": "ひがしびわじま", "word": "higasibiwajima" },
+    { "info": "東枇杷島", "info2": "ひがしびわじま", "word": "higasibiwazima" },
     { "info": "栄生", "info2": "さこう", "word": "sakou" },
     { "info": "名鉄名古屋", "info2": "めいてつなごや", "word": "meitetunagoya" }
   ]

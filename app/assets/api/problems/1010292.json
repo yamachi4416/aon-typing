@@ -14,7 +14,7 @@
     { "info": "小川", "info2": "おがわ", "word": "ogawa" },
     { "info": "鷹の台", "info2": "たかのだい", "word": "takanodai" },
     { "info": "恋ケ窪", "info2": "こいがくぼ", "word": "koigakubo" },
-    { "info": "国分寺", "info2": "こくぶんじ", "word": "kokubunji" }
+    { "info": "国分寺", "info2": "こくぶんじ", "word": "kokubunzi" }
   ],
   "optional": { "cd": ["292"], "coCd": ["12"] }
 }

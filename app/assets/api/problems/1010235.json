@@ -101,7 +101,7 @@
     { "info": "遠賀川", "info2": "おんががわ", "word": "ongagawa" },
     { "info": "水巻", "info2": "みずまき", "word": "mizumaki" },
     { "info": "折尾", "info2": "おりお", "word": "orio" },
-    { "info": "陣原", "info2": "じんのはる", "word": "jinnnoharu" },
+    { "info": "陣原", "info2": "じんのはる", "word": "zinnnoharu" },
     { "info": "黒崎", "info2": "くろさき", "word": "kurosaki" },
     { "info": "八幡", "info2": "やはた", "word": "yahata" },
     {
@@ -118,8 +118,8 @@
     },
     { "info": "西小倉", "info2": "にしこくら", "word": "nisikokura" },
     { "info": "小倉", "info2": "こくら", "word": "kokura" },
-    { "info": "門司", "info2": "もじ", "word": "moji" },
+    { "info": "門司", "info2": "もじ", "word": "mozi" },
     { "info": "小森江", "info2": "こもりえ", "word": "komorie" },
-    { "info": "門司港", "info2": "もじこう", "word": "mojikou" }
+    { "info": "門司港", "info2": "もじこう", "word": "mozikou" }
   ]
 }

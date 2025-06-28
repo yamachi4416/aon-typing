@@ -11,8 +11,8 @@
   "updatedAt": "2023-01-28",
   "optional": { "cd": ["221"], "coCd": ["1"] },
   "words": [
-    { "info": "宇和島", "info2": "うわじま", "word": "uwajima" },
-    { "info": "北宇和島", "info2": "きたうわじま", "word": "kitauwajima" },
+    { "info": "宇和島", "info2": "うわじま", "word": "uwazima" },
+    { "info": "北宇和島", "info2": "きたうわじま", "word": "kitauwazima" },
     { "info": "高光", "info2": "たかみつ", "word": "takamitu" },
     { "info": "伊予吉田", "info2": "いよよしだ", "word": "iyoyosida" },
     { "info": "立間", "info2": "たちま", "word": "tatima" },

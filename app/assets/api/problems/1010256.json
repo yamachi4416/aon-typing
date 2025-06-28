@@ -23,13 +23,13 @@
     { "info": "姶良", "info2": "あいら", "word": "aira" },
     { "info": "帖佐", "info2": "ちょうさ", "word": "tyousa" },
     { "info": "錦江", "info2": "きんこう", "word": "kinkou" },
-    { "info": "加治木", "info2": "かじき", "word": "kajiki" },
+    { "info": "加治木", "info2": "かじき", "word": "kaziki" },
     { "info": "隼人", "info2": "はやと", "word": "hayato" },
     { "info": "国分", "info2": "こくぶ", "word": "kokubu" },
     {
       "info": "霧島神宮",
       "info2": "きりしまじんぐう",
-      "word": "kirisimajinguu"
+      "word": "kirisimazinguu"
     },
     { "info": "北永野田", "info2": "きたながのだ", "word": "kitanaganoda" },
     {
@@ -63,7 +63,7 @@
     {
       "info": "宮崎神宮",
       "info2": "みやざきじんぐう",
-      "word": "miyazakijinguu"
+      "word": "miyazakizinguu"
     },
     { "info": "蓮ケ池", "info2": "はすがいけ", "word": "hasugaike" },
     {
@@ -83,7 +83,7 @@
     { "info": "東都農", "info2": "ひがしつの", "word": "higasituno" },
     { "info": "美々津", "info2": "みみつ", "word": "mimitu" },
     { "info": "南日向", "info2": "みなみひゅうが", "word": "minamihyuuga" },
-    { "info": "財光寺", "info2": "ざいこうじ", "word": "zaikouji" },
+    { "info": "財光寺", "info2": "ざいこうじ", "word": "zaikouzi" },
     { "info": "日向市", "info2": "ひゅうがし", "word": "hyuugasi" },
     { "info": "門川", "info2": "かどがわ", "word": "kadogawa" },
     { "info": "土々呂", "info2": "ととろ", "word": "totoro" },
@@ -124,7 +124,7 @@
     { "info": "亀川", "info2": "かめがわ", "word": "kamegawa" },
     { "info": "豊後豊岡", "info2": "ぶんごとよおか", "word": "bungotoyooka" },
     { "info": "暘谷", "info2": "ようこく", "word": "youkoku" },
-    { "info": "日出", "info2": "ひじ", "word": "hiji" },
+    { "info": "日出", "info2": "ひじ", "word": "hizi" },
     { "info": "大神", "info2": "おおが", "word": "ooga" },
     { "info": "杵築", "info2": "きつき", "word": "kituki" },
     { "info": "中山香", "info2": "なかやまが", "word": "nakayamaga" },
@@ -136,7 +136,7 @@
     {
       "info": "豊前善光寺",
       "info2": "ぶぜんぜんこうじ",
-      "word": "buzenzenkouji"
+      "word": "buzenzenkouzi"
     },
     { "info": "天津", "info2": "あまつ", "word": "amatu" },
     { "info": "今津", "info2": "いまづ", "word": "imadu" },

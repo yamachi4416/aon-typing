@@ -15,7 +15,7 @@
       "info2": "あいづこうげんおぜぐち",
       "word": "aidukougennozeguti"
     },
-    { "info": "男鹿高原", "info2": "おじかこうげん", "word": "ojikakougenn" },
+    { "info": "男鹿高原", "info2": "おじかこうげん", "word": "ozikakougenn" },
     {
       "info": "上三依塩原温泉口",
       "info2": "かみみよりしおばらおんせんぐち",
@@ -31,10 +31,10 @@
       "info2": "ゆにしがわおんせん",
       "word": "yunisigawaonsenn"
     },
-    { "info": "川治湯元", "info2": "かわじゆもと", "word": "kawajiyumoto" },
-    { "info": "川治温泉", "info2": "かわじおんせん", "word": "kawajionsenn" },
+    { "info": "川治湯元", "info2": "かわじゆもと", "word": "kawaziyumoto" },
+    { "info": "川治温泉", "info2": "かわじおんせん", "word": "kawazionsenn" },
     { "info": "龍王峡", "info2": "りゅうおうきょう", "word": "ryuuoukyou" },
-    { "info": "新藤原", "info2": "しんふじわら", "word": "sinhujiwara" }
+    { "info": "新藤原", "info2": "しんふじわら", "word": "sinhuziwara" }
   ],
   "optional": { "cd": ["470"], "coCd": ["52"] }
 }

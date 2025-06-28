@@ -11,7 +11,7 @@
   "updatedAt": "2023-12-18",
   "optional": { "cd": ["438"], "coCd": ["28"] },
   "words": [
-    { "info": "宮の陣", "info2": "みやのじん", "word": "miyanojinn" },
+    { "info": "宮の陣", "info2": "みやのじん", "word": "miyanozinn" },
     { "info": "五郎丸", "info2": "ごろうまる", "word": "goroumaru" },
     { "info": "学校前", "info2": "がっこうまえ", "word": "gakkoumae" },
     { "info": "古賀茶屋", "info2": "こがんちゃや", "word": "kogantyaya" },

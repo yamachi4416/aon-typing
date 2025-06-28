@@ -11,8 +11,8 @@
   "updatedAt": "2023-01-14",
   "optional": { "cd": ["230"], "coCd": ["1"] },
   "words": [
-    { "info": "宇和島", "info2": "うわじま", "word": "uwajima" },
-    { "info": "北宇和島", "info2": "きたうわじま", "word": "kitauwajima" },
+    { "info": "宇和島", "info2": "うわじま", "word": "uwazima" },
+    { "info": "北宇和島", "info2": "きたうわじま", "word": "kitauwazima" },
     { "info": "務田", "info2": "むでん", "word": "mudenn" },
     {
       "info": "伊予宮野下",

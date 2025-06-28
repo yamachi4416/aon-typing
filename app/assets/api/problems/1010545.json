@@ -11,9 +11,9 @@
   "updatedAt": "2023-06-20",
   "optional": { "cd": ["545"], "coCd": ["103"] },
   "words": [
-    { "info": "西藤原", "info2": "にしふじわら", "word": "nisihujiwara" },
-    { "info": "西野尻", "info2": "にしのじり", "word": "nisinojiri" },
-    { "info": "東藤原", "info2": "ひがしふじわら", "word": "higasihujiwara" },
+    { "info": "西藤原", "info2": "にしふじわら", "word": "nisihuziwara" },
+    { "info": "西野尻", "info2": "にしのじり", "word": "nisinoziri" },
+    { "info": "東藤原", "info2": "ひがしふじわら", "word": "higasihuziwara" },
     { "info": "伊勢治田", "info2": "いせはった", "word": "isehatta" },
     { "info": "丹生川", "info2": "にゅうがわ", "word": "nyuugawa" },
     { "info": "三里", "info2": "みさと", "word": "misato" },

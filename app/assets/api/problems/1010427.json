@@ -17,7 +17,7 @@
     { "info": "長居", "info2": "ながい", "word": "nagai" },
     { "info": "西田辺", "info2": "にしたなべ", "word": "nisitanabe" },
     { "info": "昭和町", "info2": "しょうわちょう", "word": "syouwatyou" },
-    { "info": "天王寺", "info2": "てんのうじ", "word": "tennnouji" },
+    { "info": "天王寺", "info2": "てんのうじ", "word": "tennnouzi" },
     { "info": "動物園前", "info2": "どうぶつえんまえ", "word": "doubutuenmae" },
     { "info": "大国町", "info2": "だいこくちょう", "word": "daikokutyou" },
     { "info": "なんば", "info2": "なんば", "word": "nanba" },
@@ -29,7 +29,7 @@
     {
       "info": "西中島南方",
       "info2": "にしなかじまみなみがた",
-      "word": "nisinakajimaminamigata"
+      "word": "nisinakazimaminamigata"
     },
     { "info": "新大阪", "info2": "しんおおさか", "word": "sinnoosaka" },
     { "info": "東三国", "info2": "ひがしみくに", "word": "higasimikuni" },

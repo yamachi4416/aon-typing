@@ -13,7 +13,7 @@
   "words": [
     { "info": "福知山", "info2": "ふくちやま", "word": "hukutiyama" },
     { "info": "丹波竹田", "info2": "たんばたけだ", "word": "tanbatakeda" },
-    { "info": "市島", "info2": "いちじま", "word": "itijima" },
+    { "info": "市島", "info2": "いちじま", "word": "itizima" },
     { "info": "黒井", "info2": "くろい", "word": "kuroi" },
     { "info": "石生", "info2": "いそう", "word": "isou" },
     { "info": "柏原", "info2": "かいばら", "word": "kaibara" },
@@ -34,7 +34,7 @@
     {
       "info": "西宮名塩",
       "info2": "にしのみやなじお",
-      "word": "nisinomiyanajio"
+      "word": "nisinomiyanazio"
     },
     { "info": "生瀬", "info2": "なまぜ", "word": "namaze" },
     { "info": "宝塚", "info2": "たからづか", "word": "takaraduka" },

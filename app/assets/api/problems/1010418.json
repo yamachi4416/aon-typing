@@ -12,8 +12,8 @@
   "optional": { "cd": ["418"], "coCd": ["25"] },
   "words": [
     { "info": "宝塚", "info2": "たからづか", "word": "takaraduka" },
-    { "info": "清荒神", "info2": "きよしこうじん", "word": "kiyosikoujinn" },
-    { "info": "売布神社", "info2": "めふじんじゃ", "word": "mehujinja" },
+    { "info": "清荒神", "info2": "きよしこうじん", "word": "kiyosikouzinn" },
+    { "info": "売布神社", "info2": "めふじんじゃ", "word": "mehuzinja" },
     {
       "info": "中山観音",
       "info2": "なかやまかんのん",
@@ -43,7 +43,7 @@
     {
       "info": "服部天神",
       "info2": "はっとりてんじん",
-      "word": "hattoritenjinn"
+      "word": "hattoritenzinn"
     },
     { "info": "庄内", "info2": "しょうない", "word": "syounai" },
     { "info": "三国", "info2": "みくに", "word": "mikuni" },

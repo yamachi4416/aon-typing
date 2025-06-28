@@ -11,12 +11,12 @@
   "updatedAt": "2022-11-04",
   "optional": { "cd": ["123"], "coCd": ["1"] },
   "words": [
-    { "info": "八王子", "info2": "はちおうじ", "word": "hatiouji" },
+    { "info": "八王子", "info2": "はちおうじ", "word": "hatiouzi" },
     { "info": "片倉", "info2": "かたくら", "word": "katakura" },
     {
       "info": "八王子みなみ野",
       "info2": "はちおうじみなみの",
-      "word": "hatioujiminamino"
+      "word": "hatiouziminamino"
     },
     { "info": "相原", "info2": "あいはら", "word": "aihara" },
     { "info": "橋本", "info2": "はしもと", "word": "hasimoto" },
