@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { format as prettier } from 'prettier'
-import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
+import { toTypeJapaneseChars } from '~~/libs/TypingUtil'
 import { isFunction } from '~~/libs/Util'
 import type {
   ProblemDetail,
@@ -79,7 +79,7 @@ async function generateProblemData({
 
       if (problem.type === 'japanese') {
         for (const word of problem.words) {
-          word.word = typeJapaneseChars(word.info2)
+          word.word = toTypeJapaneseChars(word.info2)
         }
       }
 

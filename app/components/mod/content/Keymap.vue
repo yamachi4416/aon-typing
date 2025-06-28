@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { japaneseToMinTypeCharList } from '~~/libs/TypingJapaneseChars'
+import { japaneseTypeCharsList } from '~~/libs/TypingUtil'
 
 const table = [
   [
@@ -99,9 +99,11 @@ const table = [
 
 const chars = Object.freeze(
   Object.fromEntries(
-    japaneseToMinTypeCharList({ useKana: true }).map(([kana, types]) => {
-      return [kana, types.join('/').toUpperCase()]
-    }),
+    japaneseTypeCharsList({ useKana: true, shortest: true }).map(
+      ([kana, types]) => {
+        return [kana, types.join('/').toUpperCase()]
+      },
+    ),
   ),
 )
 </script>

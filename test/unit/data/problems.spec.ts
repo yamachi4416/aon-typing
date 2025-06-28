@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 import { assert, expect, it } from 'vitest'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
 import { TypingGamer } from '~~/libs/TypingGamer'
-import { typeJapaneseChars } from '~~/libs/TypingJapaneseChars'
+import { toTypeJapaneseChars } from '~~/libs/TypingUtil'
 import type { ProblemDetail } from '~~/types/problems'
 
 async function listFiles() {
@@ -35,7 +35,7 @@ async function testTyping(file: string) {
   const words = TypingGameWordData.fromDetailWords(problem.words)
   const chars =
     problem.type === 'japanese'
-      ? problem.words.map((word) => typeJapaneseChars(word.info2)).join('')
+      ? problem.words.map((word) => toTypeJapaneseChars(word.info2)).join('')
       : problem.words.map((word) => word.word).join('')
 
   let word = words.shift()

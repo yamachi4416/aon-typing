@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { typeJapaneseCharsMap } from '~~/libs/TypingJapaneseChars'
+import { toTypeJapaneseCharsMap } from '~~/libs/TypingUtil'
 import { wait } from '~~/libs/Util'
 
 const props = withDefaults(
@@ -43,7 +43,7 @@ async function typing() {
 
   chars.fins = []
 
-  const types = typeJapaneseCharsMap(title)
+  const types = toTypeJapaneseCharsMap(title)
 
   for (const { jc, ec } of types) {
     for (const c of Array.from(ec)) {

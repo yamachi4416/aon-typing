@@ -2,7 +2,7 @@ import { JSDOM } from 'jsdom'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { TextDecoder } from 'node:util'
-import { kana2Hira } from '~~/libs/TypingJapaneseChars'
+import { kana2Hira } from '~~/libs/TypingUtil'
 import { defineCommand, httpFetch } from '../lib/util'
 
 const normalizeMap: Record<string, string> = {

@@ -2,16 +2,16 @@ import type { TypingGameWordData } from './TypingGameWordData'
 import type { TypingGamer } from './TypingGamer'
 import {
   allowDoubleN,
-  typeCharsFindJapaneseChars,
-  typeCharsToJapaneseChars,
-  typeJapaneseChars,
-} from './TypingJapaneseChars'
+  findFirstEqualJapaneseChar,
+  findFirstMatchJapaneseChar,
+  toTypeJapaneseChars,
+} from './TypingUtil'
 
 export class TypingGamerJapanese implements TypingGamer {
   init(word?: TypingGameWordData) {
     if (!word) return
     if (!word.wordState.current) {
-      const { jc, ec } = typeCharsToJapaneseChars(
+      const { jc, ec } = findFirstEqualJapaneseChar(
         word.wordState.word,
         word.infoState.word,
       )
@@ -30,19 +30,19 @@ export class TypingGamerJapanese implements TypingGamer {
     if (expected === char) {
       wordState.shift()
 
-      if (wordState.currentWordFinished) {
-        wordState.shiftAll()
-        infoState.shiftAll()
+      if (!wordState.currentWordFinished) return true
 
-        if (wordState.rightWord) {
-          const { jc, ec } = typeCharsToJapaneseChars(
-            wordState.rightWord,
-            infoState.rightWord,
-          )
-          infoState.push(jc.length)
-          wordState.push(ec.length)
-        }
-      }
+      wordState.shiftAll()
+      infoState.shiftAll()
+
+      if (!wordState.rightWord) return true
+
+      const { jc, ec } = findFirstEqualJapaneseChar(
+        wordState.rightWord,
+        infoState.rightWord,
+      )
+      infoState.push(jc.length)
+      wordState.push(ec.length)
 
       return true
     }
@@ -52,7 +52,7 @@ export class TypingGamerJapanese implements TypingGamer {
       return true
     }
 
-    const { jc, ec } = typeCharsFindJapaneseChars(
+    const { jc, ec } = findFirstMatchJapaneseChar(
       wordState.buffer + char,
       infoState.currentWord,
     )
@@ -67,7 +67,7 @@ export class TypingGamerJapanese implements TypingGamer {
       infoState.currentWord = jc
       infoState.pushRight(remInfo)
 
-      const remWord = typeJapaneseChars(infoState.rightWord, remInfo)
+      const remWord = toTypeJapaneseChars(infoState.rightWord, remInfo)
       wordState.currentWord = ec
       wordState.pushRight(remWord)
 

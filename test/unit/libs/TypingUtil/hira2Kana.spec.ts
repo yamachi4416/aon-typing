@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { hira2Kana } from '~~/libs/TypingJapaneseChars'
+import { hira2Kana } from '~~/libs/TypingUtil'
 
 describe('hira2Kana', () => {
   it.each([
