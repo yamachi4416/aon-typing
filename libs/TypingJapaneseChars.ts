@@ -141,7 +141,7 @@ const JapaneseToTypeCharList1 = [
   ['しゅ', 'syu\tshu'],
   ['しょ', 'syo\tsho'],
   ['じ', 'zi\tji'],
-  ['じぃ', 'jyi\tzyi'],
+  ['じぃ', 'zyi\tjyi'],
   ['じぇ', 'je\tjye\tzye'],
   ['じゃ', 'ja\tjya\tzya'],
   ['じゅ', 'ju\tjyu\tzyu'],
