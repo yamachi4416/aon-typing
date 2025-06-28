@@ -110,6 +110,7 @@ const JapaneseToTypeCharList1 = [
   ['え', 'e'],
   ['ぉ', 'lo\txo'],
   ['お', 'o'],
+  ['ゕ', 'lka'],
   ['か', 'ka'],
   ['が', 'ga'],
   ['き', 'ki'],
@@ -126,6 +127,7 @@ const JapaneseToTypeCharList1 = [
   ['ぎょ', 'gyo'],
   ['く', 'ku'],
   ['ぐ', 'gu'],
+  ['ゖ', 'lke'],
   ['け', 'ke'],
   ['げ', 'ge'],
   ['こ', 'ko'],
@@ -138,8 +140,8 @@ const JapaneseToTypeCharList1 = [
   ['しゃ', 'sya\tsha'],
   ['しゅ', 'syu\tshu'],
   ['しょ', 'syo\tsho'],
-  ['じ', 'ji\tzi'],
-  ['じぃ', 'jyi'],
+  ['じ', 'zi\tji'],
+  ['じぃ', 'jyi\tzyi'],
   ['じぇ', 'je\tjye\tzye'],
   ['じゃ', 'ja\tjya\tzya'],
   ['じゅ', 'ju\tjyu\tzyu'],
@@ -355,7 +357,7 @@ const TypeCharToJapaneseMap = Object.freeze(
   Object.fromEntries(
     JapaneseToTypeCharList.flatMap(([hira, types]) =>
       types.split('\t').map<[string, string]>((type) => [type, hira]),
-    ).toSorted(([_, a], [__, b]) => b.localeCompare(a)),
+    ).toSorted(([a], [b]) => a.length - b.length),
   ),
 )
 
@@ -384,7 +386,6 @@ export function typeJapaneseCharsMap(text = '', { length = 0 } = {}) {
   const maps: { jc: string; ec: string }[] = []
   if (!text) return maps
 
-  const charMap = TypeCharMap
   const chars = Array.from(text)
 
   const toMap = (i: number) => {
@@ -397,7 +398,7 @@ export function typeJapaneseCharsMap(text = '', { length = 0 } = {}) {
           ec: needDoubleN(hira) ? 'nn' : 'n',
         }
       }
-      const ec = charMap[hira]
+      const ec = TypeCharMap[hira]
       if (ec) return { jc, ec }
     }
 
@@ -413,12 +414,9 @@ export function typeJapaneseCharsMap(text = '', { length = 0 } = {}) {
   return maps
 }
 
-export function typeJapaneseChars(
-  text = '',
-  options: { length?: number } = {},
-) {
+export function typeJapaneseChars(text = '', { length = 0 } = {}) {
   if (!text) return ''
-  return typeJapaneseCharsMap(text, options)
+  return typeJapaneseCharsMap(text, { length })
     .map(({ ec }) => ec)
     .join('')
 }
@@ -448,19 +446,23 @@ export function typeCharsFindJapaneseChars(typeChars: string, jpChars: string) {
   return { jc: '', ec: '' }
 }
 
-export function needDoubleN(jpChars: string | string[]) {
-  return (
-    jpChars[0] === 'ん' &&
-    (!jpChars[1] || 'あいうえおなにぬねのんnN'.includes(jpChars[1]))
+export function needDoubleN(infoChars: string | string[]) {
+  if (!(infoChars[0] === 'ん' || infoChars[0] === 'ン')) return false
+  if (!infoChars[1]) return true
+  return 'aiueon'.includes(
+    typeJapaneseChars(infoChars[1])[0]?.toLocaleLowerCase() ?? '',
   )
 }
 
 export function allowDoubleN(
   typeChar: string,
   typeChars: string,
-  jpChars: string,
+  infoChars: string,
 ) {
-  if (typeChar === 'n' && jpChars.endsWith('ん')) {
+  if (
+    typeChar === 'n' &&
+    (infoChars.endsWith('ん') || infoChars.endsWith('ン'))
+  ) {
     const m = typeChars.match(/n+$/)
     if (m && m[0].length % 2 === 1) {
       return true

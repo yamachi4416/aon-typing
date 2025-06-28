@@ -15,8 +15,8 @@ export class TypingGamerJapanese implements TypingGamer {
         word.wordState.word,
         word.infoState.word,
       )
-      word.infoState.push(jc?.length)
-      word.wordState.push(ec?.length)
+      word.infoState.push(jc.length)
+      word.wordState.push(ec.length)
     }
   }
 
@@ -28,7 +28,7 @@ export class TypingGamerJapanese implements TypingGamer {
     const expected = wordState.current
 
     if (expected === char) {
-      wordState.shift(1)
+      wordState.shift()
 
       if (wordState.currentWordFinished) {
         wordState.shiftAll()
@@ -63,11 +63,14 @@ export class TypingGamerJapanese implements TypingGamer {
     }
 
     if (jc.length < infoState.currentWord.length) {
-      const njc = infoState.currentWord.substring(jc.length)
+      const remInfo = infoState.currentWord.substring(jc.length)
       infoState.currentWord = jc
-      infoState.pushRight(njc)
+      infoState.pushRight(remInfo)
+
+      const remWord = typeJapaneseChars(infoState.rightWord, remInfo)
       wordState.currentWord = ec
-      wordState.pushRight(typeJapaneseChars(infoState.rightWord, njc))
+      wordState.pushRight(remWord)
+
       return this.expect(char, word)
     }
 

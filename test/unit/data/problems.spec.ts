@@ -51,32 +51,30 @@ async function testTyping(file: string) {
     }
 
     if (!gamer.expect(char, word)) {
-      const info = word?.infoState.info
       return {
         id,
-        err: `No.${problem.id} typing check failure. word "${info}", char "${char}"`,
+        err: `No.${problem.id} typing check failure. word "${word.infoState.info}", char "${char}"`,
       }
     }
 
-    if (word?.success) {
+    if (word.success) {
       word = words.shift()
       gamer.init(word)
     }
   }
 
   if (word !== undefined) {
-    const info = word?.infoState.info
     return {
       id,
-      err: `No.${problem.id} typing check failure. word "${info}"`,
+      err: `No.${problem.id} typing check failure. word "${word.infoState.info}"`,
     }
   }
 
   if (words.length !== 0) {
-    const infos = words.map((word) => word.infoState.info)
+    const infos = words.map((word) => word.infoState.info).join(',')
     return {
       id,
-      err: `No.${problem.id} typing check failure. words "${infos.join(',')}"`,
+      err: `No.${problem.id} typing check failure. words "${infos}"`,
     }
   }
 
@@ -103,7 +101,7 @@ async function testTypings(files: string[]) {
     }
   })
 
-  await Promise.all(tasks)
+  await Promise.allSettled(tasks)
 
   return { success, errors }
 }
