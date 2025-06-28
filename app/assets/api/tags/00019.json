@@ -91,7 +91,7 @@
       "title": "ＪＲ石勝線(南千歳－新得)の駅いちらん",
       "type": "japanese",
       "words": 8,
-      "chars": 66,
+      "chars": 67,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -163,7 +163,7 @@
       "title": "ＪＲ根室本線の駅いちらん",
       "type": "japanese",
       "words": 25,
-      "chars": 193,
+      "chars": 194,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -439,7 +439,7 @@
       "title": "ＪＲ大船渡線の駅いちらん",
       "type": "japanese",
       "words": 25,
-      "chars": 228,
+      "chars": 229,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -451,7 +451,7 @@
       "title": "ＪＲ気仙沼線の駅いちらん",
       "type": "japanese",
       "words": 33,
-      "chars": 364,
+      "chars": 365,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -475,7 +475,7 @@
       "title": "ＪＲ陸羽東線の駅いちらん",
       "type": "japanese",
       "words": 27,
-      "chars": 261,
+      "chars": 263,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -499,7 +499,7 @@
       "title": "ＪＲ仙石線の駅いちらん",
       "type": "japanese",
       "words": 32,
-      "chars": 334,
+      "chars": 335,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -523,7 +523,7 @@
       "title": "ＪＲ左沢線の駅いちらん",
       "type": "japanese",
       "words": 12,
-      "chars": 120,
+      "chars": 121,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -763,7 +763,7 @@
       "title": "ＪＲ両毛線の駅いちらん",
       "type": "japanese",
       "words": 22,
-      "chars": 178,
+      "chars": 179,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -835,7 +835,7 @@
       "title": "ＪＲ上越線の駅いちらん",
       "type": "japanese",
       "words": 36,
-      "chars": 320,
+      "chars": 321,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -847,7 +847,7 @@
       "title": "ＪＲ吾妻線の駅いちらん",
       "type": "japanese",
       "words": 24,
-      "chars": 227,
+      "chars": 228,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -967,7 +967,7 @@
       "title": "ＪＲ武蔵野線の駅いちらん",
       "type": "japanese",
       "words": 26,
-      "chars": 296,
+      "chars": 297,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1255,7 +1255,7 @@
       "title": "ＪＲ横浜線の駅いちらん",
       "type": "japanese",
       "words": 21,
-      "chars": 169,
+      "chars": 170,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1375,7 +1375,7 @@
       "title": "ＪＲ東海道・山陽新幹線の駅いちらん",
       "type": "japanese",
       "words": 35,
-      "chars": 282,
+      "chars": 284,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1519,7 +1519,7 @@
       "title": "ＪＲ山陽新幹線の駅いちらん",
       "type": "japanese",
       "words": 19,
-      "chars": 160,
+      "chars": 161,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1627,7 +1627,7 @@
       "title": "ＪＲ九頭竜線の駅いちらん",
       "type": "japanese",
       "words": 22,
-      "chars": 218,
+      "chars": 219,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -1867,7 +1867,7 @@
       "title": "ＪＲ神戸線の駅いちらん",
       "type": "japanese",
       "words": 39,
-      "chars": 317,
+      "chars": 318,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -2083,7 +2083,7 @@
       "title": "ＪＲ山陽本線(岩国－下関)の駅いちらん",
       "type": "japanese",
       "words": 36,
-      "chars": 243,
+      "chars": 246,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -2215,7 +2215,7 @@
       "title": "ＪＲ山口線の駅いちらん",
       "type": "japanese",
       "words": 28,
-      "chars": 224,
+      "chars": 225,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -2227,7 +2227,7 @@
       "title": "ＪＲ宇部線の駅いちらん",
       "type": "japanese",
       "words": 18,
-      "chars": 133,
+      "chars": 134,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -2347,7 +2347,7 @@
       "title": "ＪＲ牟岐線の駅いちらん",
       "type": "japanese",
       "words": 29,
-      "chars": 231,
+      "chars": 232,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -2407,7 +2407,7 @@
       "title": "ＪＲ九州新幹線の駅いちらん",
       "type": "japanese",
       "words": 12,
-      "chars": 107,
+      "chars": 108,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -2431,7 +2431,7 @@
       "title": "ＪＲ鹿児島本線(門司港－八代)の駅いちらん",
       "type": "japanese",
       "words": 82,
-      "chars": 651,
+      "chars": 652,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -2467,7 +2467,7 @@
       "title": "ＪＲ福北ゆたか線の駅いちらん",
       "type": "japanese",
       "words": 29,
-      "chars": 241,
+      "chars": 242,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -2599,7 +2599,7 @@
       "title": "ＪＲ久大本線の駅いちらん",
       "type": "japanese",
       "words": 37,
-      "chars": 314,
+      "chars": 315,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -2695,7 +2695,7 @@
       "title": "ＪＲ原田線の駅いちらん",
       "type": "japanese",
       "words": 5,
-      "chars": 48,
+      "chars": 49,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -3043,7 +3043,7 @@
       "title": "西武山口線の駅いちらん",
       "type": "japanese",
       "words": 3,
-      "chars": 35,
+      "chars": 36,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -3151,7 +3151,7 @@
       "title": "京王線の駅いちらん",
       "type": "japanese",
       "words": 32,
-      "chars": 326,
+      "chars": 327,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -3235,7 +3235,7 @@
       "title": "小田急小田原線の駅いちらん",
       "type": "japanese",
       "words": 47,
-      "chars": 458,
+      "chars": 459,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -3259,7 +3259,7 @@
       "title": "小田急多摩線の駅いちらん",
       "type": "japanese",
       "words": 8,
-      "chars": 85,
+      "chars": 86,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -3271,7 +3271,7 @@
       "title": "東急東横線の駅いちらん",
       "type": "japanese",
       "words": 21,
-      "chars": 200,
+      "chars": 201,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -3643,7 +3643,7 @@
       "title": "名鉄名古屋本線の駅いちらん",
       "type": "japanese",
       "words": 60,
-      "chars": 518,
+      "chars": 519,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -3907,7 +3907,7 @@
       "title": "名鉄瀬戸線の駅いちらん",
       "type": "japanese",
       "words": 20,
-      "chars": 181,
+      "chars": 182,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4027,7 +4027,7 @@
       "title": "近鉄奈良線の駅いちらん",
       "type": "japanese",
       "words": 24,
-      "chars": 235,
+      "chars": 236,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4255,7 +4255,7 @@
       "title": "京阪本線の駅いちらん",
       "type": "japanese",
       "words": 40,
-      "chars": 366,
+      "chars": 367,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4315,7 +4315,7 @@
       "title": "京阪京津線の駅いちらん",
       "type": "japanese",
       "words": 7,
-      "chars": 69,
+      "chars": 70,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4783,7 +4783,7 @@
       "title": "山形鉄道フラワー長井線の駅いちらん",
       "type": "japanese",
       "words": 17,
-      "chars": 140,
+      "chars": 141,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -4891,7 +4891,7 @@
       "title": "真岡鐵道真岡線の駅いちらん",
       "type": "japanese",
       "words": 17,
-      "chars": 126,
+      "chars": 127,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -5371,7 +5371,7 @@
       "title": "岳南鉄道線の駅いちらん",
       "type": "japanese",
       "words": 10,
-      "chars": 96,
+      "chars": 97,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -5527,7 +5527,7 @@
       "title": "近江鉄道八日市線の駅いちらん",
       "type": "japanese",
       "words": 7,
-      "chars": 61,
+      "chars": 62,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -5719,7 +5719,7 @@
       "title": "山陽電鉄本線の駅いちらん",
       "type": "japanese",
       "words": 43,
-      "chars": 400,
+      "chars": 407,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -5779,7 +5779,7 @@
       "title": "広島電鉄宮島線の駅いちらん",
       "type": "japanese",
       "words": 21,
-      "chars": 299,
+      "chars": 300,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -6079,7 +6079,7 @@
       "title": "広島電鉄２号線の駅いちらん",
       "type": "japanese",
       "words": 40,
-      "chars": 510,
+      "chars": 511,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -6211,7 +6211,7 @@
       "title": "万葉線の駅いちらん",
       "type": "japanese",
       "words": 25,
-      "chars": 283,
+      "chars": 284,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -6271,7 +6271,7 @@
       "title": "ＪＲ気仙沼線(BRT)の駅いちらん",
       "type": "japanese",
       "words": 25,
-      "chars": 297,
+      "chars": 298,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -6307,7 +6307,7 @@
       "title": "ＪＲ大船渡線ＢＲＴ(陸前矢作－陸前高田)の駅いちらん",
       "type": "japanese",
       "words": 4,
-      "chars": 50,
+      "chars": 51,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -6451,7 +6451,7 @@
       "title": "相鉄新横浜線の駅いちらん",
       "type": "japanese",
       "words": 3,
-      "chars": 38,
+      "chars": 39,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -6499,7 +6499,7 @@
       "title": "東急新横浜線の駅いちらん",
       "type": "japanese",
       "words": 3,
-      "chars": 28,
+      "chars": 29,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },
@@ -6523,7 +6523,7 @@
       "title": "ＪＲ日田彦山線ＢＲＴの駅いちらん",
       "type": "japanese",
       "words": 36,
-      "chars": 344,
+      "chars": 345,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00007", "name": "地理" },

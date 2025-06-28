@@ -15,7 +15,7 @@
     { "info": "小倉", "info2": "こくら", "word": "kokura" },
     { "info": "新下関", "info2": "しんしものせき", "word": "sinsimonoseki" },
     { "info": "厚狭", "info2": "あさ", "word": "asa" },
-    { "info": "新山口", "info2": "しんやまぐち", "word": "sinyamaguti" },
+    { "info": "新山口", "info2": "しんやまぐち", "word": "sinnyamaguti" },
     { "info": "徳山", "info2": "とくやま", "word": "tokuyama" },
     { "info": "新岩国", "info2": "しんいわくに", "word": "sinniwakuni" },
     { "info": "広島", "info2": "ひろしま", "word": "hirosima" },
@@ -43,7 +43,7 @@
     { "info": "三島", "info2": "みしま", "word": "misima" },
     { "info": "熱海", "info2": "あたみ", "word": "atami" },
     { "info": "小田原", "info2": "おだわら", "word": "odawara" },
-    { "info": "新横浜", "info2": "しんよこはま", "word": "sinyokohama" },
+    { "info": "新横浜", "info2": "しんよこはま", "word": "sinnyokohama" },
     { "info": "品川", "info2": "しながわ", "word": "sinagawa" },
     { "info": "東京", "info2": "とうきょう", "word": "toukyou" }
   ]

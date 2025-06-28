@@ -51,7 +51,11 @@
     },
     { "info": "鶴川", "info2": "つるかわ", "word": "turukawa" },
     { "info": "柿生", "info2": "かきお", "word": "kakio" },
-    { "info": "新百合ケ丘", "info2": "しんゆりがおか", "word": "sinyurigaoka" },
+    {
+      "info": "新百合ケ丘",
+      "info2": "しんゆりがおか",
+      "word": "sinnyurigaoka"
+    },
     { "info": "百合ケ丘", "info2": "ゆりがおか", "word": "yurigaoka" },
     {
       "info": "読売ランド前",

@@ -29,7 +29,7 @@
       "title": "あんたがたどこさ",
       "type": "japanese",
       "words": 18,
-      "chars": 208,
+      "chars": 209,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }
@@ -40,7 +40,7 @@
       "title": "うさぎとかめ",
       "type": "japanese",
       "words": 16,
-      "chars": 392,
+      "chars": 393,
       "tags": [
         { "id": "00009", "name": "日本語" },
         { "id": "00014", "name": "童謡" }

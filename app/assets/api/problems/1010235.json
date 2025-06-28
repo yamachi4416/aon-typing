@@ -12,7 +12,7 @@
   "optional": { "cd": ["235"], "coCd": ["1"] },
   "words": [
     { "info": "八代", "info2": "やつしろ", "word": "yatusiro" },
-    { "info": "新八代", "info2": "しんやつしろ", "word": "sinyatusiro" },
+    { "info": "新八代", "info2": "しんやつしろ", "word": "sinnyatusiro" },
     { "info": "千丁", "info2": "せんちょう", "word": "sentyou" },
     { "info": "有佐", "info2": "ありさ", "word": "arisa" },
     { "info": "小川", "info2": "おがわ", "word": "ogawa" },

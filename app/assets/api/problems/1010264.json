@@ -12,7 +12,7 @@
   "optional": { "cd": ["264"], "coCd": ["1"] },
   "words": [
     { "info": "原田", "info2": "はるだ", "word": "haruda" },
-    { "info": "筑前山家", "info2": "ちくぜんやまえ", "word": "tikuzenyamae" },
+    { "info": "筑前山家", "info2": "ちくぜんやまえ", "word": "tikuzennyamae" },
     { "info": "筑前内野", "info2": "ちくぜんうちの", "word": "tikuzennutino" },
     { "info": "上穂波", "info2": "かみほなみ", "word": "kamihonami" },
     { "info": "桂川", "info2": "けいせん", "word": "keisenn" }
