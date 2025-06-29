@@ -2,16 +2,16 @@ import {
   $fetch,
   createPage as _createPage,
   url as _url,
+  waitForHydration,
 } from '@nuxt/test-utils'
 import { assert, expect } from 'vitest'
 
 type PageOptions = Parameters<typeof _createPage>[1]
-export type Page =
-  ReturnType<typeof _createPage> extends Promise<infer P> ? P : unknown
+export type Page = Awaited<ReturnType<typeof _createPage>>
 
 export async function createPage(path: string, options?: PageOptions) {
   const page = await _createPage(path, options)
-  await page.waitForLoadState('networkidle')
+  // await page.route('**/*.{png,jpg,jpeg,css,woff2}', (route) => route.abort())
   return page
 }
 
@@ -36,22 +36,8 @@ export async function contactUrl(page: Page) {
   return url(config.contactUrl)
 }
 
-export async function waitForRouterPath(
-  page: Page,
-  path: string,
-  timeout = 3000,
-) {
-  try {
-    await page.waitForFunction(
-      (path: string) =>
-        window.useNuxtApp?.()?.$router?.currentRoute?.value?.fullPath === path,
-      path,
-      { timeout },
-    )
-    await page.waitForLoadState('networkidle')
-  } catch (err) {
-    assert(false, `${path} ${err}`)
-  }
+export async function waitForRouterPath(page: Page, path: string) {
+  await waitForHydration(page, path, 'route')
 }
 
 export async function expectPageTitle(
@@ -59,19 +45,16 @@ export async function expectPageTitle(
   title: string,
   timeout = 3000,
 ) {
-  if (!(await page.title()).includes(title)) {
-    try {
-      await page.waitForFunction(
-        (title: string) => document.title.includes(title),
-        title,
-        {
-          timeout,
-        },
-      )
-    } catch (err) {
-      assert(false, `${title} ${err}`)
-    }
-    expect(await page.title()).toContain(title)
+  try {
+    await page.waitForFunction(
+      (title) => document.title.includes(title),
+      title,
+      {
+        timeout,
+      },
+    )
+  } catch (err) {
+    assert(false, `${title} ${err}`)
   }
 }
 
