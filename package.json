@@ -1,5 +1,6 @@
 {
   "private": true,
+  "type": "module",
   "engines": {
     "node": "22.x"
   },
@@ -28,7 +29,6 @@
     "@types/node": "^22.15.32",
     "@types/yargs": "^17.0.33",
     "concurrently": "^9.1.2",
-    "content-disposition": "^0.5.4",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-promise": "^7.2.1",
@@ -50,6 +50,7 @@
     "@nuxt/eslint-config": "^1.4.1",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/seo": "^3.0.3",
+    "happy-dom": "^18.0.1",
     "vue-gtag-next": "^1.14.0"
   }
 }

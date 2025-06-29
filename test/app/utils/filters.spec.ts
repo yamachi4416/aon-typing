@@ -1,0 +1,30 @@
+import { describe, expect, it } from 'vitest'
+
+describe('filters', () => {
+  describe('fmtDispTime', () => {
+    it.each([
+      [1, '0 秒 00'],
+      [12, '0 秒 01'],
+      [123, '0 秒 12'],
+      [1234, '1 秒 23'],
+      [12345, '12 秒 34'],
+      [83450, '1 分 23 秒 45'],
+      [154560, '2 分 34 秒 56'],
+      [754560, '12 分 34 秒 56'],
+      [7425600, '123 分 45 秒 60'],
+    ])('$0 = $1', (time, expected) => {
+      expect(fmtDispTime(time)).toBe(expected)
+    })
+
+    it.each([
+      [0, '0 秒 00'],
+      [-1, '0 秒 00'],
+      [999, '0 秒 99'],
+      [60000, '1 分 0 秒 00'],
+      [3599999, '59 分 59 秒 99'],
+      [36000000, '600 分 0 秒 00'],
+    ])('$0 = $1', (time, expected) => {
+      expect(fmtDispTime(time)).toBe(expected)
+    })
+  })
+})

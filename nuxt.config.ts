@@ -63,7 +63,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.scss'],
   ssr: true,
 
-  modules: ['@nuxtjs/seo', '@nuxtjs/google-fonts'],
+  modules: ['@nuxtjs/seo', '@nuxtjs/google-fonts', '@nuxt/test-utils/module'],
 
   routeRules: {
     '/game/play': { ssr: false },

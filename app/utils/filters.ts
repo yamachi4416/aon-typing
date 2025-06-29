@@ -1,5 +1,5 @@
 export function fmtDispTime(time: number) {
-  const t = Math.floor(time / 10)
+  const t = Math.floor(Math.max(time, 0) / 10)
   const m = Math.floor(t / 100 / 60)
   const s = Math.floor((t / 100) % 60)
   const ss = ('0' + String(t % 100)).slice(-2)
@@ -10,7 +10,7 @@ export function fmtDispTime(time: number) {
 }
 
 export function fmtPercent(value: number, length = 1) {
-  const n = Number(value) * 100
+  const n = value * 100
   const m = Math.pow(10, length)
   return Math.round(n * m) / m
 }

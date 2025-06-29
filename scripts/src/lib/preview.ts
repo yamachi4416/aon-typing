@@ -1,4 +1,3 @@
-import contentDisposition from 'content-disposition'
 import fs from 'node:fs/promises'
 import {
   type IncomingMessage,
@@ -79,10 +78,6 @@ function sendFileHandler({ distDir }: { distDir: string; logger?: Logger }) {
 
       res.statusCode = 200
       res.setHeader('Content-Type', mimetype(file))
-      res.setHeader(
-        'Content-Disposition',
-        contentDisposition(file, { type: 'inline' }),
-      )
 
       if (req.headers['accept-encoding']?.includes('gzip')) {
         res.setHeader('Content-Encoding', 'gzip')
