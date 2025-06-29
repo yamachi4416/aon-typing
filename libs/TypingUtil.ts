@@ -94,7 +94,7 @@ const Hira2KanaMap = Object.freeze(toInvertRecord(Kana2HiraMap))
 type KanaChars = keyof typeof Kana2HiraMap
 type HiraChars = keyof typeof Hira2KanaMap
 
-const JapaneseToTypeCharList1 = [
+const JapaneseToTypeCharsList1 = [
   ['ぁ', 'la\txa'],
   ['あ', 'a'],
   ['ぃ', 'li\txi'],
@@ -395,9 +395,9 @@ const JapaneseToTypeCharList2 = [
   ['、', ','],
 ] as const
 
-const JapaneseToTypeCharList = Object.freeze([
-  ...JapaneseToTypeCharList1,
-  ...JapaneseToTypeCharList1.map<[string, string]>(([hira, types]) => [
+const JapaneseToTypeCharsList = Object.freeze([
+  ...JapaneseToTypeCharsList1,
+  ...JapaneseToTypeCharsList1.map<[string, string]>(([hira, types]) => [
     `っ${hira}`,
     types
       .split('\t')
@@ -408,11 +408,15 @@ const JapaneseToTypeCharList = Object.freeze([
   ...JapaneseToTypeCharList2,
 ])
 
+const TypeCharToJapaneseList = Object.freeze(
+  JapaneseToTypeCharsList.flatMap(([hira, types]) =>
+    types.split('\t').map<[string, string]>((type) => [type, hira]),
+  ),
+)
+
 const TypeCharToJapaneseMap = Object.freeze(
   Object.fromEntries(
-    JapaneseToTypeCharList.flatMap(([hira, types]) =>
-      types.split('\t').map<[string, string]>((type) => [type, hira]),
-    ).toSorted(([a], [b]) => a.length - b.length),
+    TypeCharToJapaneseList.toSorted(([a], [b]) => a.length - b.length),
   ),
 )
 
@@ -422,7 +426,7 @@ const TypeCharToJapaneseMapMaxKeySize = Object.keys(
 
 const TypeCharMap = Object.freeze(
   Object.fromEntries(
-    JapaneseToTypeCharList.map(([hira, types]) => [
+    JapaneseToTypeCharsList.map(([hira, types]) => [
       hira,
       types.split('\t')[0] ?? '',
     ]),
@@ -506,16 +510,19 @@ export function findFirstEqualJapaneseChar(
 }
 
 export function findFirstMatchJapaneseChar(typeChars: string, jpChars: string) {
-  for (const [ec, jc] of Object.entries(TypeCharToJapaneseMap)) {
-    if (ec.startsWith(typeChars) && jpChars.startsWith(jc)) {
-      return { jc, ec }
-    }
-  }
-  return { jc: '', ec: '' }
+  return TypeCharToJapaneseList.reduce(
+    (longest, [ec, jc]) =>
+      ec.startsWith(typeChars) &&
+      jpChars.startsWith(jc) &&
+      jc.length > longest.jc.length
+        ? { jc, ec }
+        : longest,
+    { jc: '', ec: '' },
+  )
 }
 
-export function needDoubleN(infoChars: string | string[]) {
-  const [char1, char2] = Array.from(infoChars)
+export function needDoubleN(infoChars: string) {
+  const [char1, char2] = infoChars
   if (char1 !== 'ん' && char1 !== 'ン') return false
   if (!char2) return true
   return 'aiueony'.includes(
@@ -544,14 +551,11 @@ export function japaneseTypeCharsList({
   useKana,
   shortest,
 }: { useKana?: boolean; shortest?: boolean } = {}): [string, string[]][] {
-  const chars = JapaneseToTypeCharList.map<[string, string[]]>(
-    ([hira, types]) => {
-      const key = useKana ? hira2Kana(hira) : hira
-      const keys = types.split('\t')
-      if (!shortest) return [key, keys]
-      const min = keys.reduce((min, key) => Math.min(min, key.length), Infinity)
-      return [key, keys.filter(({ length }) => length === min)]
-    },
-  )
-  return useKana ? chars.map(([hira, keys]) => [hira2Kana(hira), keys]) : chars
+  return JapaneseToTypeCharsList.map<[string, string[]]>(([hira, types]) => {
+    const key = useKana ? hira2Kana(hira) : hira
+    const keys = types.split('\t')
+    if (!shortest) return [key, keys]
+    const min = keys.reduce((min, key) => Math.min(min, key.length), Infinity)
+    return [key, keys.filter(({ length }) => length === min)]
+  })
 }
