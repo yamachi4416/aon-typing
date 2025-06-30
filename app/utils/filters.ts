@@ -12,5 +12,5 @@ export function fmtDispTime(time: number) {
 export function fmtPercent(value: number, length = 1) {
   const n = value * 100
   const m = Math.pow(10, length)
-  return Math.round(n * m) / m
+  return String(Math.round(n * m) / m)
 }
