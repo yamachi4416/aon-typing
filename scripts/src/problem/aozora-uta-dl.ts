@@ -1,4 +1,4 @@
-import { JSDOM } from 'jsdom'
+import { Element, Window } from 'happy-dom'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { TextDecoder } from 'node:util'
@@ -27,8 +27,7 @@ function normalizeKana(text?: string) {
 }
 
 async function fetchCard(cardUrl: string) {
-  const { data } = await httpFetch(cardUrl)
-  const document = new JSDOM(data).window.document
+  const { document } = new Window({ url: cardUrl })
   const info = {
     title: '',
     titleKana: '',
@@ -37,7 +36,7 @@ async function fetchCard(cardUrl: string) {
     dlUrl: '',
   }
 
-  ;(() => {
+  {
     const tds = Array.from(
       document.querySelectorAll('[summary="タイトルデータ"] td'),
     )
@@ -51,8 +50,9 @@ async function fetchCard(cardUrl: string) {
         info.author = tds[++i]?.textContent?.trim() ?? ''
       }
     }
-  })()
-  ;(() => {
+  }
+
+  {
     const tds = Array.from(
       document.querySelectorAll('[summary="作家データ"] td'),
     )
@@ -62,7 +62,7 @@ async function fetchCard(cardUrl: string) {
         info.authorKana = normalizeKana(tds[++i]?.textContent?.trim())
       }
     }
-  })()
+  }
 
   const dlLink = document
     .querySelector('[summary="ダウンロードデータ"] a[href$=".html"]')
@@ -76,14 +76,15 @@ async function fetchCard(cardUrl: string) {
 }
 
 async function fetchDocument(url: string) {
-  const res = new TextDecoder('sjis').decode(
+  const { document } = new Window()
+  document.documentElement.innerHTML = new TextDecoder('sjis').decode(
     await httpFetch(url).then(({ data }) => data),
   )
-  const document = new JSDOM(res).window.document
+
   const mainText = document.querySelector('.main_text')
   const words = [{ info: '', info2: '' }]
 
-  Array.from(mainText?.childNodes.values() ?? []).forEach((node: ChildNode) => {
+  Array.from(mainText?.childNodes.values() ?? []).forEach((node) => {
     if (node.nodeName === 'BR') {
       words.push({ info: '', info2: '' })
       return

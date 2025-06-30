@@ -32,7 +32,6 @@
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-promise": "^7.2.1",
-    "jsdom": "^26.1.0",
     "nuxt": "^3.17.5",
     "playwright-core": "^1.53.1",
     "prettier": "^3.5.3",

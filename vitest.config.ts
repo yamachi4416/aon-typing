@@ -30,7 +30,6 @@ export default defineConfig({
         test: {
           name: 'app',
           dir: './test/app',
-          environment: 'jsdom',
         },
       }),
       mergeConfig(reolveAliasConfig, {
