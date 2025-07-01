@@ -10,7 +10,7 @@ env:
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
 jobs:
-  lint:
+  verify:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,7 +27,10 @@ jobs:
       - name: Lint
         run: pnpm run lint
 
-  test:
+      - name: Run unit test
+        run: pnpm run test:ci --project libs --project app
+
+  e2e:
     runs-on: ubuntu-latest
 
     steps:
@@ -68,4 +71,4 @@ jobs:
         run: pnpm run generate
 
       - name: Run e2e test
-        run: pnpm run test:ci
+        run: pnpm run test:ci --project e2e
