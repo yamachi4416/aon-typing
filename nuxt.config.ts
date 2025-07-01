@@ -101,8 +101,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiDir: resolver.resolve('./app/assets/api'),
     public: {
-      gtagId: process.env.APP_G_TAGID ?? '',
-      contactUrl: process.env.APP_CONTACT_URL ?? '/api/contact',
+      gtagId: '',
+      contactUrl: '/api/contact',
       pageSize: 30,
       site: {
         url: 'http://localhost:3000',
