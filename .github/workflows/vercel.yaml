@@ -36,7 +36,7 @@ jobs:
         run: pnpm install
 
       - name: Run generate
-        run: pnpm run generate
+        run: pnpm run generate --preset vercel
 
       - name: Deploy to vercel
         run: |
