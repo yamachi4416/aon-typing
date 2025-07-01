@@ -39,20 +39,6 @@ function newNavigator() {
     })
   }
 
-  async function gameTagDetail({ id }: { id: string }) {
-    await navigateTo({
-      name: 'game-menu-problems-tags-id',
-      params: { id },
-    })
-  }
-
-  async function gameProblemDetail({ id }: { id: string }) {
-    await navigateTo({
-      name: 'game-menu-problems-id',
-      params: { id },
-    })
-  }
-
   async function gameMenu({ id }: { id: string }) {
     useGameSetting().setting.value.problemId = id
     await navigateTo({ name: 'game-menu' })
@@ -124,8 +110,6 @@ function newNavigator() {
     indexProblemDetail,
     indexRailwayCorporation,
     indexTagDetail,
-    gameTagDetail,
-    gameProblemDetail,
     gameMenu,
     backOrIndex,
     backOrGameMenu,

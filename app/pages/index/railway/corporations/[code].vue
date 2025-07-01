@@ -27,14 +27,14 @@
       :aria-label="`${corporation?.name}の路線いちらん`"
     >
       <li
-        v-for="({ id, name, yomi, to }, i) in operationLines"
+        v-for="({ id, name, yomi }, i) in corporation.operationLines"
         :key="i"
         class="col-s-12 col-m-6 col-4"
         :aria-label="name"
       >
         <NuxtLink
-          :to="to"
-          :title="to ? `${name}の駅いちらんのタイピング問題を表示` : undefined"
+          :to="id ? { name: 'index-problems-id', params: { id } } : undefined"
+          :title="id ? `${name}の駅いちらんのタイピング問題を表示` : undefined"
         >
           <span v-if="id" :class="$style.code">No.{{ id }}</span>
           <span v-else :class="$style.code">(問題未作成)</span>
@@ -49,20 +49,14 @@
 <script setup lang="ts">
 const { wrapLoading } = useLoading()
 
+const route = useRoute('index-railway-corporations-code')
 const navigator = useNavigator()
+const { retrieveCorporation } = useRailways()
 
 const uid = useId()
 const corporation = await wrapLoading(
-  useRailways().retrieveCorporation({
-    code: String(useRoute().params.code),
-  }),
+  retrieveCorporation({ code: route.params.code }),
 )
-const operationLines = corporation.operationLines.map(({ id, name, yomi }) => ({
-  id,
-  name,
-  yomi,
-  to: id ? { name: 'index-problems-id', params: { id } } : undefined,
-}))
 
 useHead({
   title: `${corporation.name}の路線いちらん`,

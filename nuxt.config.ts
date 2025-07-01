@@ -1,49 +1,39 @@
 import { createResolver } from '@nuxt/kit'
-import { readFileSync } from 'node:fs'
 import { defineNuxtConfig } from 'nuxt/config'
+import { problems } from './app/assets/api/problems.json'
+import corporations from './app/assets/api/railway/corporations.json'
+import tags from './app/assets/api/tags.json'
 
 const resolver = createResolver(import.meta.url)
 
-export const routes = (() => {
-  const { problems } = JSON.parse(
-    String(readFileSync('./app/assets/api/problems.json')),
-  ) as { problems: Array<{ id: string }> }
-
-  const tags: Array<{ id: string }> = Object.values(
-    JSON.parse(String(readFileSync('./app/assets/api/tags.json'))),
-  )
-
-  const railwayCorpCodes = (
-    JSON.parse(
-      String(readFileSync('./app/assets/api/railway/corporations.json')),
-    ) as { code: string }[]
-  ).map(({ code }) => code.padStart(4, '0'))
-
-  return [
-    '/robots.txt',
-    '/sitemap.xml',
-    '/problems',
-    '/problems/news',
-    '/game',
-    '/game/play',
-    '/game/menu',
-    '/about',
-    '/policy',
-    '/contact',
-    '/contents/keymap',
-    ...problems.map((problem) => `/problems/${problem.id}`),
-    ...tags.map((tag) => `/problems/tags/${tag.id}`),
-    ...railwayCorpCodes.map((code) => `/railway/corporations/${code}`),
-    '/api/problems.json',
-    '/api/problems/news.json',
-    '/api/problems/news/all.json',
-    '/api/tags.json',
-    '/api/railway/corporations.json',
-    ...problems.map((problem) => `/api/problems/${problem.id}.json`),
-    ...tags.map((tag) => `/api/tags/${tag.id}.json`),
-    ...railwayCorpCodes.map((code) => `/api/railway/corporations/${code}.json`),
-  ]
-})()
+const routes: ReadonlyArray<string> = [
+  '/robots.txt',
+  '/sitemap.xml',
+  '/problems',
+  '/problems/news',
+  '/game',
+  '/game/play',
+  '/game/menu',
+  '/about',
+  '/policy',
+  '/contact',
+  '/contents/keymap',
+  ...problems.map(({ id }) => `/problems/${id}`),
+  ...Object.values(tags).map(({ id }) => `/problems/tags/${id}`),
+  ...corporations.map(
+    ({ code }) => `/railway/corporations/${code.padStart(4, '0')}`,
+  ),
+  '/api/problems.json',
+  '/api/problems/news.json',
+  '/api/problems/news/all.json',
+  '/api/tags.json',
+  '/api/railway/corporations.json',
+  ...problems.map(({ id }) => `/api/problems/${id}.json`),
+  ...Object.values(tags).map(({ id }) => `/api/tags/${id}.json`),
+  ...corporations.map(
+    ({ code }) => `/api/railway/corporations/${code.padStart(4, '0')}.json`,
+  ),
+]
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -65,12 +55,9 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/seo', '@nuxtjs/google-fonts', '@nuxt/test-utils/module'],
 
-  routeRules: {
-    '/game/play': { ssr: false },
-  },
-
   experimental: {
     payloadExtraction: false,
+    typedPages: true,
   },
 
   app: {
@@ -93,7 +80,7 @@ export default defineNuxtConfig({
   sitemap: {
     credits: false,
     xsl: false,
-    include: routes,
+    include: [...routes],
   },
 
   ogImage: {

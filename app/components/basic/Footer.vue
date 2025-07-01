@@ -2,10 +2,8 @@
   <footer :class="$style.footer" role="contentinfo">
     <nav>
       <ul>
-        <li v-for="(menu, i) in menus" :key="`footer-menu-${i}`">
-          <NuxtLink :to="menu.route">
-            {{ menu.label }}
-          </NuxtLink>
+        <li v-for="({ to, label }, i) in menus" :key="i">
+          <NuxtLink :to>{{ label }}</NuxtLink>
         </li>
       </ul>
     </nav>
@@ -16,10 +14,10 @@
 </template>
 
 <script setup lang="ts">
-const menus = [
-  { route: { name: 'index-policy' }, label: 'サイトポリシー' },
-  { route: { name: 'index-contact' }, label: 'お問い合わせ' },
-]
+const menus = routeRecords([
+  { to: { name: 'index-policy' }, label: 'サイトポリシー' },
+  { to: { name: 'index-contact' }, label: 'お問い合わせ' },
+])
 </script>
 
 <style lang="scss" module>

@@ -100,6 +100,7 @@ useHead({
 })
 
 const site = useSiteConfig()
+const route = useRoute()
 const navigator = useNavigator()
 
 const { newProblems, tagSummary, fetchTopNewsProblems, fetchTags } =
@@ -112,10 +113,10 @@ const state = reactive({
 const enableSearch = computed(() => !!normalizedKwd(state.kwd))
 
 onMounted(() => {
-  state.kwd = normalizedKwd((useRoute().query.kwd as string) ?? '')
+  state.kwd = normalizedKwd(route.query.kwd)
 })
 
-function normalizedKwd(val: string) {
+function normalizedKwd(val: string | null | (string | null)[] = '') {
   const kwd = val ? Array.from(val).slice(0, 100).join('') : ''
   return kwd.trim()
 }
@@ -138,8 +139,8 @@ async function searchEnterProblems() {
 
 function changeKwds() {
   const kwd = normalizedKwd(state.kwd)
-  if (kwd !== (useRoute().query.kwd ?? '')) {
-    useNavigator().replaceQuery({ kwd })
+  if (kwd !== (route.query.kwd ?? '')) {
+    navigator.replaceQuery({ kwd })
   }
 }
 

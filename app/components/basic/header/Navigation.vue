@@ -1,21 +1,19 @@
 <template>
   <nav :class="$style.nav" role="navigation">
     <ul>
-      <li v-for="(menu, i) in menus" :key="`menu-${i}`">
-        <NuxtLink :to="menu.route">
-          {{ menu.label }}
-        </NuxtLink>
+      <li v-for="({ to, label }, i) in menus" :key="i">
+        <NuxtLink :to>{{ label }}</NuxtLink>
       </li>
     </ul>
   </nav>
 </template>
 
 <script setup lang="ts">
-const menus = [
-  { route: { name: 'game-menu' }, label: 'プレイする' },
-  { route: { name: 'index-problems' }, label: '問題いちらん' },
-  { route: { name: 'index-about' }, label: 'サイト説明' },
-] as const
+const menus = routeRecords([
+  { to: { name: 'game-menu' }, label: 'プレイする' },
+  { to: { name: 'index-problems' }, label: '問題いちらん' },
+  { to: { name: 'index-about' }, label: 'サイト説明' },
+])
 </script>
 
 <style lang="scss" module>

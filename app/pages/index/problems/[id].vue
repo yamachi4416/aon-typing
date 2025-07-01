@@ -19,9 +19,9 @@
 <script setup lang="ts">
 const { wrapLoading } = useLoading()
 
-const route = useRoute()
+const route = useRoute('index-problems-id')
 const navigator = useNavigator()
-const id = String(route.params.id)
+const id = route.params.id
 const detail = await wrapLoading(useProblems().retrieveProblemDetail({ id }))
 
 useHead({

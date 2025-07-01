@@ -20,11 +20,11 @@
 const { wrapLoading } = useLoading()
 const { retrieveTag, filterTagProblems } = useProblems()
 
-const route = useRoute()
+const route = useRoute('index-problems-tags-id')
 const router = useRouter()
 const navigator = useNavigator()
 
-const tag = await wrapLoading(retrieveTag({ id: String(useRoute().params.id) }))
+const tag = await wrapLoading(retrieveTag({ id: route.params.id }))
 
 const tags = ref(queryTags())
 const problems = filterTagProblems({
