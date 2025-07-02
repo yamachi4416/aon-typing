@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
+import type { Page } from '~~/test/e2e/util'
 import {
-  type Page,
   createPage,
   expectLoadingHidden,
   publicConfig,

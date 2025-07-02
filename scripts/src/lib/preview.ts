@@ -1,9 +1,6 @@
 import fs from 'node:fs/promises'
-import {
-  type IncomingMessage,
-  type ServerResponse,
-  createServer,
-} from 'node:http'
+import type { IncomingMessage, ServerResponse } from 'node:http'
+import { createServer } from 'node:http'
 import type { AddressInfo } from 'node:net'
 import path from 'node:path'
 import { createGzip } from 'node:zlib'
