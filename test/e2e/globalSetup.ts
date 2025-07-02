@@ -1,5 +1,5 @@
 import { resolve } from 'node:path'
-import { previewServer } from '~~/scripts/src/lib/preview'
+import { previewServer } from '~~/scripts/lib/preview'
 
 const { close, url } = await getEndpoint()
 

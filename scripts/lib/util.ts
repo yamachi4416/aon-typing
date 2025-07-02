@@ -2,7 +2,7 @@ import http from 'http'
 import https from 'https'
 import fs from 'node:fs/promises'
 import { createInterface } from 'node:readline'
-import type { CommandModule } from 'yargs'
+import type { Argv, CommandModule } from 'yargs'
 
 interface HttpRequestOptions {
   method?: string
@@ -13,6 +13,20 @@ interface HttpRequestOptions {
 interface HttpResponse {
   data: Buffer
   response: http.IncomingMessage
+}
+
+export function yargsFailHandler(msg: string, err: Error, yargs: Argv) {
+  if (msg) {
+    console.error(msg)
+    console.error()
+    yargs.showHelp()
+  }
+
+  if (err) {
+    console.error(err)
+  }
+
+  process.exit(1)
 }
 
 export async function httpFetch(url: string, options: HttpRequestOptions = {}) {

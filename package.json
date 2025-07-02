@@ -8,12 +8,11 @@
   "scripts": {
     "postinstall": "nuxt prepare",
     "build": "nuxt generate",
-    "build:scripts": "node scripts/build-scripts.mjs",
     "dev": "nuxt dev",
     "preview": "nuxt preview",
-    "preview:dist": "node ./scripts/dist/preview-server.js -d ./dist",
+    "preview:dist": "tsx ./scripts/preview-server -d ./dist",
     "generate": "nuxt generate",
-    "generate:problem": "node ./scripts/dist/problem.js generate -i ./data/ -o ./app/assets/api",
+    "generate:problem": "tsx ./scripts/problem generate -i ./data/ -o ./app/assets/api",
     "lint": "concurrently 'pnpm:lint:*'",
     "lint:typecheck": "nuxt typecheck",
     "lint:scripts": "eslint .",
@@ -43,6 +42,7 @@
     "stylelint-config-recess-order": "^7.1.0",
     "stylelint-config-recommended-vue": "^1.6.1",
     "stylelint-config-standard-scss": "^15.0.1",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4",
     "vue-tsc": "^3.0.1"

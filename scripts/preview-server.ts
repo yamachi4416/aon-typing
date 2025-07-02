@@ -1,9 +1,8 @@
 import type { Argv } from 'yargs'
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
-import { yargsFailHandler } from '../util.mjs'
 import { previewServer } from './lib/preview'
-import { defineCommand } from './lib/util'
+import { defineCommand, yargsFailHandler } from './lib/util'
 
 function builder(yargs: Argv) {
   return yargs
