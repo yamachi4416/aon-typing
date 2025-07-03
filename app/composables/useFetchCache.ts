@@ -31,11 +31,11 @@ export function useFetchCache<
       }
     }
 
-    if (cache.value == null) {
+    if (value.value == null) {
       throw createNotFoundError()
     }
 
-    return cache.value
+    return value.value
   }
 
   return {

@@ -1,12 +1,10 @@
-import type { NitroFetchRequest } from 'nitropack'
+import type { NitroFetchRequest, TypedInternalResponse } from 'nitropack'
 
-export async function fetchWithCache<K extends NitroFetchRequest>({
-  path,
-  key,
-}: {
-  path: K
-  key?: string
-}) {
-  const { fetch } = useFetchCache({ path, key })
+export async function fetchWithCache<
+  K extends NitroFetchRequest,
+  R extends TypedInternalResponse<K, unknown, 'get'>,
+  T = R,
+>(...args: Parameters<typeof useFetchCache<K, R, T>>) {
+  const { fetch } = useFetchCache(...args)
   return await fetch()
 }
