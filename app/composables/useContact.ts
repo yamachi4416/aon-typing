@@ -1,21 +1,3 @@
-export function useContactPosted() {
-  const isPosted = useState(() => false)
-
-  function setIsPosted() {
-    isPosted.value = true
-  }
-
-  function clearIsPosted() {
-    isPosted.value = false
-  }
-
-  return {
-    isPosted: readonly(isPosted),
-    setIsPosted,
-    clearIsPosted,
-  }
-}
-
 export function useContact() {
   const form = ref({
     name: '',
