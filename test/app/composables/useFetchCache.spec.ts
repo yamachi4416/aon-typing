@@ -1,13 +1,13 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { problems } from '~/assets/api/problems.json'
-import { endpointSubscriber } from '../utils'
+import { endpointRegister } from '../utils'
 
 describe('useFetchCache', () => {
-  const { registerEndpoint, unSubscribeEndpoints } = endpointSubscriber()
+  const { registerEndpoint, unregisterEndpoints } = endpointRegister()
 
   beforeEach(() => {
     vi.resetAllMocks()
-    unSubscribeEndpoints()
+    unregisterEndpoints()
     clearNuxtState()
   })
 
@@ -94,6 +94,8 @@ describe('useFetchCache', () => {
   })
 
   it('リソースが存在しない場合は404エラーをスローする', async () => {
+    registerEndpoint('/404', () => new Response(null, { status: 404 }))
+
     const { fetch } = useFetchCache({ path: '/404' })
 
     await expect(fetch).rejects.toMatchObject({

@@ -1,20 +1,20 @@
 import { registerEndpoint as _registerEndpoint } from '@nuxt/test-utils/runtime'
 
-export function endpointSubscriber() {
-  const unSubscribes: (() => void)[] = []
+export function endpointRegister() {
+  const unregisters: (() => void)[] = []
 
   const registerEndpoint: typeof _registerEndpoint = (...args) => {
-    const unSubscribe = _registerEndpoint(...args)
-    unSubscribes.push(unSubscribe)
-    return unSubscribe
+    const unregister = _registerEndpoint(...args)
+    unregisters.push(unregister)
+    return unregister
   }
 
-  const unSubscribeEndpoints = () => {
-    unSubscribes.splice(0).forEach((unSubscribe) => unSubscribe())
+  const unregisterEndpoints = () => {
+    unregisters.splice(0).forEach((unregister) => unregister())
   }
 
   return {
     registerEndpoint,
-    unSubscribeEndpoints,
+    unregisterEndpoints,
   }
 }
