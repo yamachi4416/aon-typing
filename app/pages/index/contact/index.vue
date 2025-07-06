@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.page">
-    <div role="alert" :aria-hidden="!gError" v-text="gError" />
+    <div role="alert" :aria-hidden="!globalError" v-text="globalError" />
     <PartsSection
       is="form"
       :aria-labelledby="`form-title-${uid}`"
@@ -14,7 +14,7 @@
         <span>
           <input
             :id="`name-${uid}`"
-            v-model="name"
+            v-model="form.name"
             required
             @change="validate"
           />
@@ -32,7 +32,7 @@
         <span>
           <input
             :id="`email-${uid}`"
-            v-model="email"
+            v-model="form.email"
             type="email"
             required
             @change="validate"
@@ -51,7 +51,7 @@
         <span>
           <textarea
             :id="`message-${uid}`"
-            v-model="message"
+            v-model="form.message"
             required
             @change="validate"
           />
@@ -75,31 +75,29 @@ useHead({
   meta: [{ name: 'robots', content: 'noindex' }],
 })
 
-const gError = ref('')
+const globalError = ref('')
 const uid = useId()
 
-const { name, email, message, errors, hasErrors, validate, postContact } =
-  useContact()
+const { form, errors, hasErrors, validate, postContact } = useContact()
+const { setIsPosted, clearIsPosted } = useContactPosted()
+const { wrapLoading } = useLoading()
 
-onMounted(() => {
-  useContactPosted().clearIsPosted()
-})
+onMounted(clearIsPosted)
 
 async function submit() {
-  if (validate()) {
-    await useLoading().wrapLoading(submitPost)
-  }
+  if (!validate()) return
+  await wrapLoading(submitPost)
 }
 
 async function submitPost() {
   try {
-    gError.value = ''
+    globalError.value = ''
     await postContact()
-    useContactPosted().setIsPosted()
-    navigateTo({ name: 'index-contact-thanks', replace: true })
+    setIsPosted()
+    await navigateTo({ name: 'index-contact-thanks', replace: true })
   } catch (err) {
     console.log(err)
-    gError.value = '申し訳ありません。お問い合わせを送信できませんでした。'
+    globalError.value = '申し訳ありません。お問い合わせを送信できませんでした。'
     window.scroll({ top: 0, behavior: 'smooth' })
   }
 }

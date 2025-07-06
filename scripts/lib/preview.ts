@@ -31,7 +31,7 @@ function contactHandler({ logger }: { logger?: Logger }) {
         buffers.push(buffer)
       }
 
-      const data = Buffer.concat(buffers).toJSON()
+      const data = Buffer.concat(buffers).toString('utf8')
       logger?.info(data)
 
       await new Promise((resolve) => setTimeout(resolve, 1000))

@@ -14,9 +14,9 @@ export function toValueIfFound<B, T>(found: B, value: T) {
   return value
 }
 
-export function createFetchError(error: Error) {
+export function createFetchError(error: Error, fatal = true) {
   if ('status' in error && typeof error.status === 'number') {
-    return createError({ statusCode: error.status, ...error, fatal: true })
+    return createError({ statusCode: error.status, ...error, fatal })
   }
-  return createError({ ...error, fatal: true })
+  return createError({ ...error, fatal })
 }
