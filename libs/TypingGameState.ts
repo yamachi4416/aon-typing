@@ -1,6 +1,6 @@
 import type { ProblemDetail } from '~~/types/problems'
 import type { TypingEventDetail } from './EventManager'
-import type { GameSetting } from './TypingGameSetting'
+import type { TypingGameSetting } from './TypingGameSetting'
 import { TypingProblemQuestioner } from './TypingProblemQuestioner'
 
 class TypingGameStateValue {
@@ -22,7 +22,7 @@ class TypingGameStateValue {
 
 export class TypingGameState extends TypingGameStateValue {
   private constructor(
-    public readonly setting: GameSetting,
+    public readonly setting: TypingGameSetting,
     public problem?: TypingProblemQuestioner,
   ) {
     super()
@@ -66,7 +66,7 @@ export class TypingGameState extends TypingGameStateValue {
     this.problem = TypingProblemQuestioner.create(problem, this.setting)
   }
 
-  static create(setting: GameSetting): TypingGameState {
+  static create(setting: TypingGameSetting): TypingGameState {
     return new TypingGameState(setting)
   }
 }

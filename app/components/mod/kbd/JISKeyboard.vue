@@ -43,12 +43,12 @@
 <script setup lang="ts">
 import { TypingEvent } from '~~/libs/EventManager'
 import type { Key, Keys } from '~~/libs/Keys'
-import type { GameSetting } from '~~/libs/TypingGameSetting'
+import type { TypingGameSetting } from '~~/libs/TypingGameSetting'
 import KbdKey from './JISKeyboardKey.vue'
 
 const props = defineProps<{
   typeKey?: string
-  setting: GameSetting
+  setting: TypingGameSetting
   keys: Keys
 }>()
 

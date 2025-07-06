@@ -1,7 +1,7 @@
-import { GameSetting } from '~~/libs/TypingGameSetting'
+import { TypingGameSetting } from '~~/libs/TypingGameSetting'
 
 export function useGameSetting() {
-  const setting = useState(GameSetting.create)
+  const setting = useState(TypingGameSetting.create)
 
   return {
     setting,

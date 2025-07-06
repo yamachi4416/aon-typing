@@ -1,9 +1,9 @@
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
 import type { ProblemDetail } from '~~/types/problems'
-import type { GameSetting } from './TypingGameSetting'
+import type { TypingGameSetting } from './TypingGameSetting'
 
 const problemSorters: Record<
-  GameSetting['problemOrder'],
+  TypingGameSetting['problemOrder'],
   (words: ReadonlyArray<TypingGameWordData>) => TypingGameWordData[]
 > = {
   first: (words) => [...words],
@@ -21,7 +21,7 @@ export abstract class TypingProblemQuestioner {
 
   constructor(
     public readonly problem: Readonly<ProblemDetail>,
-    public readonly setting: Readonly<GameSetting>,
+    public readonly setting: Readonly<TypingGameSetting>,
   ) {}
 
   get id() {
@@ -54,7 +54,7 @@ export abstract class TypingProblemQuestioner {
 
   static create(
     problem: Readonly<ProblemDetail>,
-    setting: Readonly<GameSetting>,
+    setting: Readonly<TypingGameSetting>,
   ): TypingProblemQuestioner {
     return new TypingProblemQuestionerImpl(problem, setting)
   }
@@ -66,7 +66,7 @@ class TypingProblemQuestionerImpl extends TypingProblemQuestioner {
 
   constructor(
     problem: Readonly<ProblemDetail>,
-    setting: Readonly<GameSetting>,
+    setting: Readonly<TypingGameSetting>,
   ) {
     super(problem, setting)
     this.init()

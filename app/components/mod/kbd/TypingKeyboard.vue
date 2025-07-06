@@ -11,11 +11,11 @@
 <script setup lang="ts">
 import JISKeyboard from '~/components/mod/kbd/JISKeyboard.vue'
 import type { Keys } from '~~/libs/Keys'
-import type { GameSetting } from '~~/libs/TypingGameSetting'
+import type { TypingGameSetting } from '~~/libs/TypingGameSetting'
 
 const props = defineProps<{
   typeKey?: string
-  setting: GameSetting
+  setting: TypingGameSetting
   keys: Keys
 }>()
 

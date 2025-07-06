@@ -1,6 +1,6 @@
 import type { KeyLayoutName } from './Keys'
 
-export abstract class GameSetting {
+export abstract class TypingGameSetting {
   abstract timeLimit: number
   abstract autoMode: number
   abstract problemOrder: 'first' | 'last' | 'random'
@@ -8,7 +8,7 @@ export abstract class GameSetting {
   abstract problemId: string
   abstract keyLayout: KeyLayoutName
 
-  static create(): GameSetting {
+  static create(): TypingGameSetting {
     return {
       autoMode: 0,
       goalCharCount: 0,

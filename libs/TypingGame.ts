@@ -2,7 +2,7 @@ import { EventManager, TypingEvent } from './EventManager'
 import { TimerManager } from './TimerManager'
 import { TypingGameInfo } from './TypingGameInfo'
 import { TypingGamer } from './TypingGamer'
-import type { GameSetting } from './TypingGameSetting'
+import type { TypingGameSetting } from './TypingGameSetting'
 import type { TypingGameState } from './TypingGameState'
 import type { TypingGameWordData } from './TypingGameWordData'
 
@@ -21,7 +21,7 @@ export abstract class TypingGame {
     timerManager = TimerManager.create(),
   }: {
     state: TypingGameState
-    setting: GameSetting
+    setting: TypingGameSetting
     eventManager?: EventManager
     timerManager?: TimerManager
   }): TypingGame {
@@ -34,7 +34,7 @@ class TypingGameImpl implements TypingGame {
 
   constructor(
     private readonly state: TypingGameState,
-    private readonly setting: GameSetting,
+    private readonly setting: TypingGameSetting,
     private readonly eventManager: EventManager,
     private readonly timerManager: TimerManager,
   ) {}
