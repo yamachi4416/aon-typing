@@ -8,10 +8,14 @@ export function isFunction<T extends () => unknown>(fn: unknown): fn is T {
 
 export function toInvertRecord<K extends PropertyKey, V extends PropertyKey>(
   record: Readonly<Record<K, V>>,
-): Record<V, K> {
+): Record<V extends number ? `${V}` : V, K extends number ? `${K}` : K> {
+  const propertyIsEnumerable =
+    Object.prototype.propertyIsEnumerable.bind(record)
   return Object.fromEntries(
-    Object.entries(record).map(([key, value]) => [value, key]),
-  )
+    Reflect.ownKeys(record)
+      .filter(propertyIsEnumerable)
+      .map((key) => [record[key as K], key]),
+  ) as Record<V extends number ? `${V}` : V, K extends number ? `${K}` : K>
 }
 
 export function timerTicker(interval: number) {
