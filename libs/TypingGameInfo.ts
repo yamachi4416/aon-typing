@@ -54,12 +54,13 @@ export class TypingGameInfo {
   }
 
   get missKeys() {
-    const misses = this.endWords.flatMap(({ misses }) => misses)
-    return Map.groupBy(misses, (s) => s)
-      .entries()
-      .map(([char, chars]) => ({ char, count: chars.length }))
-      .toArray()
-      .toSorted((a, b) => a.count - b.count)
+    const missChars = this.endWords.flatMap(({ misses }) => misses)
+    const missCharsMap: Record<string, { char: string; count: number }> = {}
+    for (const char of missChars) {
+      missCharsMap[char] ??= { char, count: 0 }
+      missCharsMap[char].count += 1
+    }
+    return Object.values(missCharsMap).sort((a, b) => a.count - b.count)
   }
 
   get rank() {
