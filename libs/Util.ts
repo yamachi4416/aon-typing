@@ -18,10 +18,42 @@ export function toInvertRecord<K extends PropertyKey, V extends PropertyKey>(
   ) as Record<V extends number ? `${V}` : V, K extends number ? `${K}` : K>
 }
 
-export function timerTicker(interval: number) {
+function callDefer(
+  callback: (value?: unknown) => unknown,
+  timeout: number,
+): number {
+  if (isFunction(globalThis.requestIdleCallback)) {
+    return requestIdleCallback(callback, { timeout })
+  }
+  return Number(setTimeout(callback, timeout))
+}
+
+function cancelCallDefer(id: number) {
+  if (isFunction(globalThis.cancelIdleCallback)) {
+    cancelIdleCallback(id)
+  } else {
+    clearTimeout(id)
+  }
+}
+
+export function timerTicker(
+  interval: number,
+  options: {
+    abort?: AbortController
+    rejectOnAbort?: boolean
+  } = {},
+) {
   const state = {
     running: false,
     timerId: 0,
+  }
+
+  function abort() {
+    if (!options.abort?.signal.aborted) return false
+    if (options.rejectOnAbort) {
+      throw new DOMException('This operation was aborted', 'AbortError')
+    }
+    return true
   }
 
   function stop() {
@@ -29,15 +61,14 @@ export function timerTicker(interval: number) {
     if (state.timerId) {
       const { timerId } = state
       state.timerId = 0
-      cancelIdleCallback(timerId)
+      cancelCallDefer(timerId)
     }
   }
 
   async function* ticker() {
     while (state.running) {
-      await new Promise((resolve) => {
-        requestIdleCallback(resolve, { timeout: interval })
-      })
+      if (abort()) return
+      await new Promise((resolve) => callDefer(resolve, interval))
       yield Date.now()
     }
   }
@@ -84,7 +115,12 @@ export function timerEntry(
 async function intervalTimer(
   count: number,
   tick: (count: number) => unknown,
-  options: {
+  {
+    interval,
+    fps,
+    abort,
+    rejectOnAbort,
+  }: {
     abort?: AbortController
     rejectOnAbort?: boolean
     interval: number
@@ -93,32 +129,25 @@ async function intervalTimer(
     interval: 1000,
     fps: 100,
   },
-) {
-  const { interval, fps } = options
-  return await new Promise((resolve, reject) => {
-    const timer = timerTicker(fps)
-
-    if (options.abort) {
-      options.abort.signal?.addEventListener('abort', () =>
-        options?.rejectOnAbort ? reject(new Error('abort')) : resolve(count),
-      )
-    }
-
-    const entry = timerEntry(() => {
-      tick(--count)
-      if (count <= 0) {
-        timer.stop()
-        resolve(count)
-      }
-    }, interval)
-
-    requestIdleCallback(async () => {
-      entry.setup(Date.now())
-      for await (const time of timer.start()) {
-        entry.handle(time)
-      }
-    })
+): Promise<number> {
+  const timer = timerTicker(fps, {
+    abort,
+    rejectOnAbort,
   })
+
+  const entry = timerEntry(() => {
+    tick(--count)
+    if (count <= 0) {
+      timer.stop()
+    }
+  }, interval)
+
+  entry.setup(Date.now())
+  for await (const time of timer.start()) {
+    entry.handle(time)
+  }
+
+  return count
 }
 
 export async function countDown(
