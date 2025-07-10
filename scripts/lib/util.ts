@@ -1,6 +1,6 @@
-import http from 'http'
-import https from 'https'
 import fs from 'node:fs/promises'
+import http from 'node:http'
+import https from 'node:https'
 import { createInterface } from 'node:readline'
 import type { Argv, CommandModule } from 'yargs'
 
