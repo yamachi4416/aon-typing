@@ -15,13 +15,12 @@ export function useFlashing<S, V>({
   const flash = ref<V>(defaultValue)
   const abortRef = shallowRef<AbortController>(new AbortController())
 
-  const unwatch = watch(watchSource, (source) => {
+  const unwatch = watch(watchSource, async (source) => {
     abort()
     flash.value = valueGetter(source)
     if (flash.value !== defaultValue) {
-      wait(timeout, { abort: abortRef.value }).then(() => {
-        flash.value = defaultValue
-      })
+      await wait(timeout, { abort: abortRef.value })
+      flash.value = defaultValue
     }
   })
 

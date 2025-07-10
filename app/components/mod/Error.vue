@@ -34,10 +34,11 @@ const props = defineProps<{
   }
 }>()
 
+const { stopLoading } = useLoading()
 const error = toRef(props, 'error')
 
 onBeforeMount(() => {
-  useLoading().stopLoading()
+  stopLoading()
 })
 
 const offline = computed(() => {

@@ -1,4 +1,5 @@
 import { createResolver } from '@nuxt/kit'
+import legacy from '@vitejs/plugin-legacy'
 import { defineNuxtConfig } from 'nuxt/config'
 import { problems } from './app/assets/api/problems.json'
 import corporations from './app/assets/api/railway/corporations.json'
@@ -113,6 +114,10 @@ export default defineNuxtConfig({
 
   typescript: {
     // typeCheck: 'build',
+  },
+
+  vite: {
+    plugins: [legacy()],
   },
 
   nitro: {

@@ -8,9 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { healthcheck } from '~~/libs/Util'
-
-const { isLoading, stopLoading } = useLoading()
+const { isLoading } = useLoading()
 const site = useSiteConfig()
 
 useSeoMeta({
@@ -24,17 +22,6 @@ useSeoMeta({
 })
 
 onErrorCaptured((err) => {
-  if (import.meta.client) {
-    healthcheck().then((ok) => {
-      stopLoading()
-      if (!ok) {
-        window.location.reload()
-      } else {
-        showError(err)
-      }
-    })
-  } else {
-    throw err
-  }
+  showError(err)
 })
 </script>

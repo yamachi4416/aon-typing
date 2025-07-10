@@ -1,10 +1,14 @@
 import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
 import eslintConfigPrettier from 'eslint-config-prettier'
+import eslintPluginCompat from 'eslint-plugin-compat'
 import eslintPluginPromise from 'eslint-plugin-promise'
 
 export default createConfigForNuxt({})
-  .prepend({
-    plugins: [eslintPluginPromise],
+  .prepend(eslintPluginPromise.configs['flat/recommended'], {
+    ...eslintPluginCompat.configs['flat/recommended'],
+    settings: {
+      polyfills: ['es:all'],
+    },
   })
   .append(eslintConfigPrettier)
   .overrideRules({
