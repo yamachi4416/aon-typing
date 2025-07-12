@@ -67,7 +67,6 @@ describe('countDown', () => {
     const promise = countDown(3, tick, { abort, rejectOnAbort: true })
 
     abort.abort()
-    vi.advanceTimersByTimeAsync(1000)
 
     await expect(promise).rejects.toMatchObject({
       name: 'AbortError',

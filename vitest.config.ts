@@ -12,12 +12,6 @@ const reolveAliasConfig: UserConfig = {
 }
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      '~': new URL('./app', import.meta.url).pathname,
-      '~~': new URL('./', import.meta.url).pathname,
-    },
-  },
   test: {
     projects: [
       mergeConfig(reolveAliasConfig, {

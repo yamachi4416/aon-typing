@@ -6,6 +6,7 @@ import eslintPluginPromise from 'eslint-plugin-promise'
 export default createConfigForNuxt({})
   .prepend(eslintPluginPromise.configs['flat/recommended'], {
     ...eslintPluginCompat.configs['flat/recommended'],
+    ignores: ['./test/**/*', './scripts/**/*'],
     settings: {
       polyfills: ['es:all'],
     },

@@ -36,6 +36,49 @@ function cancelCallDefer(id: number) {
   }
 }
 
+class TimerTickerState {
+  public running: boolean = false
+  private _timerId?: number
+  private _resolve?: () => void
+  private _reject?: (reson: unknown) => void
+
+  constructor(public interval: number) {}
+
+  public async defer() {
+    return await new Promise<void>((resolve, reject) => {
+      this._resolve = resolve
+      this._reject = reject
+      this._timerId = callDefer(() => this.resolve(), this.interval)
+    })
+  }
+
+  public cancel(thrown?: boolean) {
+    this.running = false
+    if (this._timerId) {
+      cancelCallDefer(this._timerId)
+    }
+    if (thrown) {
+      this.reject(new DOMException('This operation was aborted', 'AbortError'))
+    } else {
+      this.resolve()
+    }
+  }
+
+  public reject(reson: unknown) {
+    this._timerId = undefined
+    this._reject?.(reson)
+    this._resolve = undefined
+    this._reject = undefined
+  }
+
+  public resolve() {
+    this._timerId = undefined
+    this._resolve?.()
+    this._resolve = undefined
+    this._reject = undefined
+  }
+}
+
 export function timerTicker(
   interval: number,
   options: {
@@ -43,32 +86,20 @@ export function timerTicker(
     rejectOnAbort?: boolean
   } = {},
 ) {
-  const state = {
-    running: false,
-    timerId: 0,
-  }
+  const state = new TimerTickerState(interval)
 
-  function abort() {
-    if (!options.abort?.signal.aborted) return false
-    if (options.rejectOnAbort) {
-      throw new DOMException('This operation was aborted', 'AbortError')
-    }
-    return true
-  }
+  options.abort?.signal.addEventListener('abort', () =>
+    state.cancel(options.rejectOnAbort),
+  )
 
   function stop() {
-    state.running = false
-    if (state.timerId) {
-      const { timerId } = state
-      state.timerId = 0
-      cancelCallDefer(timerId)
-    }
+    state.cancel()
   }
 
   async function* ticker() {
     while (state.running) {
-      if (abort()) return
-      await new Promise((resolve) => callDefer(resolve, interval))
+      await state.defer()
+      if (!state.running) return
       yield Date.now()
     }
   }
