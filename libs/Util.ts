@@ -215,7 +215,7 @@ export function pagenate<T>({
   page: number
   pageSize: number
 }): { items: T[]; pagenate: number[]; last: number } {
-  if (!items?.length) {
+  if (!items.length) {
     return { items: [], pagenate: [], last: 0 }
   }
   const last = Math.ceil(items.length / pageSize)

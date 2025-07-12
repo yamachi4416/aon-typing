@@ -61,6 +61,13 @@ describe('findFirstEqualJapaneseChar', () => {
     })
   })
 
+  it.each([
+    [' ', ''],
+    ['$', ''],
+  ])(`($0, $1) = { jc: '', ec: '' }`, () => {
+    expect(findFirstEqualJapaneseChar('', '')).toEqual({ jc: '', ec: '' })
+  })
+
   it.each(
     japaneseTypeCharsList().flatMap(([jc, ecs]) => ecs.map((ec) => [ec, jc])),
   )('($0, $1) = { jc: $1, ec: $0 }', (typeChars, jpChars) => {

@@ -12,8 +12,8 @@ describe('needDoubleN', () => {
       ...Array.from('ゐゑんヰヱン'),
       ...Array.from('auieony'),
     ].map((s) => `ん${s}`),
-  )('$0 is true', (input) => {
-    expect(needDoubleN(input)).toBeTruthy()
+  )('$0 は true', (input) => {
+    expect(needDoubleN(input)).toBe(true)
   })
 
   it.each(
@@ -27,7 +27,11 @@ describe('needDoubleN', () => {
       ...Array.from('わを　'),
       ...Array.from(`qwrtpsdfghjklzxcvbm!"#$%&'()-~=^~|1234567890 `),
     ].map((s) => `ん${s}`),
-  )('$0 is false', (input) => {
-    expect(needDoubleN(input)).toBeFalsy()
+  )('$0 は false', (input) => {
+    expect(needDoubleN(input)).toBe(false)
+  })
+
+  it('最初の文字が「ん」でも「ン」でもない場合 は false', () => {
+    expect(needDoubleN('あん')).toBe(false)
   })
 })
