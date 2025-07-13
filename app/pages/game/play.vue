@@ -44,7 +44,7 @@ const counter = shallowReactive({
 })
 
 const id = useRoute().query.id as string
-const modalGameResult = ref<InstanceType<typeof ModalPanel>>()
+const modalGameResult = useTemplateRef('modalGameResult')
 const { retrieveProblemDetail, findProblemItem } = useProblems()
 
 onBeforeUnmount(() => {

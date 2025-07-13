@@ -1,5 +1,5 @@
 <template>
-  <div v-if="show" ref="modal" :class="[$style.modal, $style.hide]">
+  <div v-if="show" ref="modal" :class="$style.modal">
     <div :class="$style.contents">
       <slot />
     </div>
@@ -7,13 +7,69 @@
 </template>
 
 <script setup lang="ts">
-import { wait } from '~~/libs/Util'
-
 const pending = ref(false)
 const show = ref(false)
 const modal = ref<HTMLElement>()
 const prevActive = ref<HTMLElement>()
-const styles = useCssModule()
+
+async function animate(forward = true) {
+  const element = modal.value
+  if (!element) return
+  const keyframes = [
+    { transform: 'translateY(-100%)' },
+    { transform: 'translateY(0)' },
+  ]
+  const animation = element.animate(
+    forward ? keyframes : [...keyframes].reverse(),
+    {
+      duration: 300,
+      easing: 'ease-in',
+    },
+  )
+  animation.play()
+  return await animation.finished
+}
+
+async function open(anim = true) {
+  if (show.value || pending.value) return
+  pending.value = true
+  show.value = true
+  await nextTick()
+  if (document.activeElement instanceof HTMLElement) {
+    prevActive.value = document.activeElement
+  }
+  if (anim) {
+    await animate(true)
+  }
+  pending.value = false
+}
+
+async function close(anim = true) {
+  if (!show.value || pending.value) return
+  pending.value = true
+  if (anim) {
+    await animate(false)
+  }
+
+  show.value = false
+  await nextTick()
+  pending.value = false
+
+  const prev = prevActive.value
+  prevActive.value = undefined
+
+  const focus = () => {
+    if (prev && document.contains(prev)) {
+      prev.focus()
+    }
+  }
+
+  focus()
+
+  return {
+    focus,
+  }
+}
 
 defineExpose({
   get isOpen() {
@@ -22,52 +78,8 @@ defineExpose({
   get isPending() {
     return pending.value
   },
-  async open(anim = true) {
-    if (show.value || pending.value) return
-    pending.value = true
-    show.value = true
-    if (document.activeElement instanceof HTMLElement) {
-      prevActive.value = document.activeElement
-    }
-    await nextTick()
-    modal.value?.classList.remove(styles.hide)
-    if (anim) {
-      if (modal.value) {
-        modal.value.classList.add(styles.open)
-        await wait(300)
-        modal.value.classList.remove(styles.open)
-      }
-    }
-    pending.value = false
-  },
-  async close(anim = true) {
-    if (!show.value || pending.value) return
-    pending.value = true
-    if (anim && modal.value) {
-      modal.value.classList.add(styles.close)
-      await wait(300)
-      modal.value.classList.remove(styles.close)
-    }
-
-    show.value = false
-    await nextTick()
-    pending.value = false
-
-    const prev = prevActive.value
-    prevActive.value = undefined
-
-    const focus = () => {
-      if (prev && document.contains(prev)) {
-        prev.focus()
-      }
-    }
-
-    focus()
-
-    return {
-      focus,
-    }
-  },
+  open,
+  close,
 })
 </script>
 
@@ -86,16 +98,6 @@ defineExpose({
   padding: 10px;
   overflow: auto;
   background: transparent;
-
-  @keyframes modal {
-    0% {
-      transform: translateY(-100%);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
-  }
 }
 
 .contents {
@@ -115,17 +117,5 @@ defineExpose({
     width: 100%;
     content: ' ';
   }
-}
-
-.hide {
-  display: none;
-}
-
-.open {
-  animation: modal 0.3s ease-in forwards;
-}
-
-.close {
-  animation: modal 0.3s ease-out reverse forwards;
 }
 </style>

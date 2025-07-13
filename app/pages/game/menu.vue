@@ -32,21 +32,19 @@ import ProblemDetailPanel from '~/components/mod/game/ProblemDetailPanel.vue'
 import ModalPanel from '~/components/parts/ModalPanel.vue'
 import type { ProblemListItem } from '~~/types/problems'
 
-type Modal = InstanceType<typeof ModalPanel>
-
 useHead({
   title: 'タイピングメニュー',
 })
 
-const modalMenu = ref<Modal>()
-const modalProblemList = ref<Modal>()
-const modalProblemDetail = ref<Modal>()
+const modalMenu = useTemplateRef('modalMenu')
+const modalProblemList = useTemplateRef('modalProblemList')
+const modalProblemDetail = useTemplateRef('modalProblemDetail')
 const modals = () =>
-  [modalProblemDetail.value, modalProblemList.value].filter((m) => m) as Modal[]
+  [modalProblemDetail.value, modalProblemList.value].filter((m) => !!m)
 
 const { setting } = useGameSetting()
 const { wrapLoading } = useLoading()
-const problemDetailPanel = ref<InstanceType<typeof ProblemDetailPanel>>()
+const problemDetailPanel = useTemplateRef('problemDetailPanel')
 
 const hasPendingModal = computed(() =>
   modals().some((modal) => modal.isPending),
