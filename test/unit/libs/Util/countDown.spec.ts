@@ -1,4 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { AbortManager } from '~~/libs/AbortManager'
 import { countDown } from '~~/libs/Util'
 
 describe('countDown', () => {
@@ -46,12 +47,12 @@ describe('countDown', () => {
 
   it('abortで中止できる', async () => {
     const tick = vi.fn()
-    const abort = new AbortController()
+    const abortManager = AbortManager.create()
 
-    const promise = countDown(3, tick, { abort })
+    const promise = countDown(3, tick, { abortManager })
 
     await vi.advanceTimersByTimeAsync(1000)
-    abort.abort()
+    abortManager.abort()
 
     await vi.advanceTimersByTimeAsync(1000)
 
@@ -62,11 +63,11 @@ describe('countDown', () => {
 
   it('rejectOnAbortにtrueを指定すると中止時にエラーをスローする', async () => {
     const tick = vi.fn()
-    const abort = new AbortController()
+    const abortManager = AbortManager.create()
 
-    const promise = countDown(3, tick, { abort, rejectOnAbort: true })
+    const promise = countDown(3, tick, { abortManager, rejectOnAbort: true })
 
-    abort.abort()
+    abortManager.abort()
 
     await expect(promise).rejects.toMatchObject({
       name: 'AbortError',

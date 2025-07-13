@@ -1,3 +1,4 @@
+import { AbortManager } from './AbortManager'
 import { TimeProvider } from './TimeProvider'
 import { TimerEntry } from './TimerEntry'
 import { TimerTicker } from './TimerTicker'
@@ -20,13 +21,16 @@ export abstract class TimerManager {
     interval: number,
     {
       timeProvider = TimeProvider.default(),
+      abortManager = AbortManager.create(),
       ...options
     }: Parameters<typeof TimerTicker.create>[1] = {},
   ): TimerManager {
     return new TimerManagerImpl(
       timeProvider,
+      abortManager,
       TimerTicker.create(interval, {
         timeProvider,
+        abortManager,
         ...options,
       }),
     )
@@ -39,11 +43,17 @@ class TimerManagerImpl implements TimerManager {
   }
 
   private readonly timeProvider: TimeProvider
+  private readonly abortManager: AbortManager
   private readonly timerTicker: TimerTicker
   private entries: TimerEntry[] = []
 
-  constructor(timeProvider: TimeProvider, timerTicker: TimerTicker) {
+  constructor(
+    timeProvider: TimeProvider,
+    abortManager: AbortManager,
+    timerTicker: TimerTicker,
+  ) {
     this.timeProvider = timeProvider
+    this.abortManager = abortManager
     this.timerTicker = timerTicker
   }
 
@@ -59,6 +69,8 @@ class TimerManagerImpl implements TimerManager {
   }
 
   async start() {
+    this.abortManager.throwIfAborted()
+
     this.timerTicker.stop()
 
     const startTime = this.timeProvider.now()

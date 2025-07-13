@@ -1,9 +1,11 @@
+import { AbortManager } from './AbortManager'
 import { TimeProvider } from './TimeProvider'
 import { TimerTickExecutor } from './TimerTickExecutor'
 
 export type TimerTickerOptions = TimerTickerImpl['options'] & {
   executor?: TimerTickExecutor
   timeProvider?: TimeProvider
+  abortManager?: AbortManager
 }
 
 export abstract class TimerTicker {
@@ -16,10 +18,13 @@ export abstract class TimerTicker {
     {
       executor = TimerTickExecutor.default(),
       timeProvider = TimeProvider.default(),
-      ...options
-    }: TimerTickerOptions = {},
+      abortManager = AbortManager.create(),
+      rejectOnAbort = false,
+    } = {},
   ): TimerTicker {
-    return new TimerTickerImpl(interval, options, executor, timeProvider)
+    return new TimerTickerImpl(interval, executor, timeProvider, abortManager, {
+      rejectOnAbort,
+    })
   }
 }
 
@@ -27,28 +32,30 @@ class TimerTickerImpl implements TimerTicker {
   public readonly interval: number
   private readonly state: TimerTickerState
   private readonly timeProvider: TimeProvider
+  private readonly abortManager: AbortManager
 
   private readonly options: {
-    abort?: AbortController
     rejectOnAbort?: boolean
   }
 
   constructor(
     interval: number,
-    options: typeof this.options,
     executor: TimerTickExecutor,
     timeProvider: TimeProvider,
+    abortManager: AbortManager,
+    options: typeof this.options,
   ) {
     this.interval = interval
     this.options = options
     this.state = new TimerTickerState(interval, executor)
     this.timeProvider = timeProvider
+    this.abortManager = abortManager
     this.cancel = this.cancel.bind(this)
   }
 
   private cancel() {
     this.state.cancel(this.options.rejectOnAbort)
-    this.options?.abort?.signal.removeEventListener('abort', this.cancel)
+    this.abortManager.removeListener(this.cancel)
   }
 
   private async *ticker() {
@@ -61,7 +68,8 @@ class TimerTickerImpl implements TimerTicker {
 
   start(): AsyncGenerator<number, void, unknown> {
     this.stop()
-    this.options.abort?.signal.addEventListener('abort', this.cancel)
+    this.abortManager.throwIfAborted()
+    this.abortManager.addListener(this.cancel)
     this.state.running = true
     return this.ticker()
   }
@@ -103,7 +111,7 @@ class TimerTickerState {
       this.executor.cancel(this._timerId)
     }
     if (thrown) {
-      this.reject(new DOMException('This operation was aborted', 'AbortError'))
+      this.reject(AbortManager.createAbortError())
     } else {
       this.resolve()
     }

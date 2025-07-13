@@ -1,4 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { AbortManager } from '~~/libs/AbortManager'
 import { timerTicker } from '~~/libs/Util'
 
 describe('timerTicker', () => {
@@ -71,8 +72,8 @@ describe('timerTicker', () => {
   it('abortで中止できる', async () => {
     const tick = vi.fn()
 
-    const abort = new AbortController()
-    const ticker = timerTicker(500, { abort })
+    const abortManager = AbortManager.create()
+    const ticker = timerTicker(500, { abortManager })
     const promise = (async () => {
       for await (const time of ticker.start()) {
         tick(time)
@@ -83,7 +84,7 @@ describe('timerTicker', () => {
     await vi.advanceTimersByTimeAsync(500)
     expect(tick).toBeCalledTimes(1)
 
-    abort.abort()
+    abortManager.abort()
     await vi.advanceTimersByTimeAsync(500)
 
     expect(tick).toBeCalledTimes(1)
@@ -94,8 +95,8 @@ describe('timerTicker', () => {
   it('rejectOnAbortにtrueを指定すると中止時にエラーをスローする', async () => {
     const tick = vi.fn()
 
-    const abort = new AbortController()
-    const ticker = timerTicker(500, { abort, rejectOnAbort: true })
+    const abortManager = AbortManager.create()
+    const ticker = timerTicker(500, { abortManager, rejectOnAbort: true })
     const promise = (async () => {
       for await (const time of ticker.start()) {
         tick(time)
@@ -103,7 +104,7 @@ describe('timerTicker', () => {
       return true
     })()
 
-    abort.abort()
+    abortManager.abort()
 
     await expect(promise).rejects.toMatchObject({
       name: 'AbortError',

@@ -28,6 +28,7 @@
 
 <script setup lang="ts">
 import ModalPanel from '~/components/parts/ModalPanel.vue'
+import { AbortManager } from '~~/libs/AbortManager'
 import { TypingGame } from '~~/libs/TypingGame'
 import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
 import { TypingGameState } from '~~/libs/TypingGameState'
@@ -40,7 +41,7 @@ const result = ref<TypingGameInfo>()
 const counter = shallowReactive({
   count: 0,
   isShow: true,
-  abort: new AbortController(),
+  abort: AbortManager.create(),
 })
 
 const id = useRoute().query.id as string
@@ -49,6 +50,7 @@ const { retrieveProblemDetail, findProblemItem } = useProblems()
 
 onBeforeUnmount(() => {
   counter.abort.abort()
+  typing.dispose()
 })
 
 onMounted(newTyping)
@@ -73,19 +75,15 @@ async function newTyping() {
 async function showCountDown(count = 3) {
   try {
     counter.abort.abort()
-
-    const abort = new AbortController()
-    abort.signal.addEventListener('abort', () => typing.dispose())
-
-    counter.abort = abort
+    counter.abort.reset()
     counter.count = count
     counter.isShow = true
 
     await countDown(count, (c) => (counter.count = c), {
-      abort: counter.abort,
+      abortManager: counter.abort,
     })
 
-    return !abort.signal.aborted
+    return !counter.abort.isAborted
   } finally {
     counter.count = 0
     counter.isShow = false

@@ -1,4 +1,5 @@
 import type { WatchSource } from 'vue-demi'
+import { AbortManager } from '~~/libs/AbortManager'
 import { wait } from '~~/libs/Util'
 
 export function useFlashing<S, V>({
@@ -13,20 +14,20 @@ export function useFlashing<S, V>({
   timeout: number
 }) {
   const flash = ref<V>(defaultValue)
-  const abortRef = shallowRef<AbortController>(new AbortController())
+  const abortManager = AbortManager.create()
 
   const unwatch = watch(watchSource, async (source) => {
     abort()
     flash.value = valueGetter(source)
     if (flash.value !== defaultValue) {
-      await wait(timeout, { abort: abortRef.value })
+      await wait(timeout, { abortManager })
       flash.value = defaultValue
     }
   })
 
   function abort() {
-    abortRef.value.abort()
-    abortRef.value = new AbortController()
+    abortManager.abort()
+    abortManager.reset()
   }
 
   function stop() {
