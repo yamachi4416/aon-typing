@@ -100,13 +100,3 @@ export function pagenate<T>({
     last,
   }
 }
-
-export async function healthcheck() {
-  try {
-    const time = Date.now()
-    const res = await fetch(`/favicon.ico?t=${time}`)
-    return res.status >= 200 && res.status < 300
-  } catch {
-    return false
-  }
-}
