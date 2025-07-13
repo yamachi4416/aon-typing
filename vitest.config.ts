@@ -17,13 +17,13 @@ export default defineConfig({
       mergeConfig(reolveAliasConfig, {
         test: {
           name: 'libs',
-          dir: './test/libs',
+          include: ['./test/unit/{data,libs}/**/*.spec.ts'],
         },
       } satisfies UserConfig),
       await defineVitestProject({
         test: {
           name: 'app',
-          dir: './test/app',
+          dir: './test/unit/app',
         },
       }),
       mergeConfig(reolveAliasConfig, {
