@@ -17,8 +17,8 @@ export abstract class TypingGame {
   static create({
     state,
     setting,
-    eventManager = EventManager.create(),
-    timerManager = TimerManager.create(),
+    eventManager,
+    timerManager,
   }: {
     state: TypingGameState
     setting: TypingGameSetting
@@ -35,8 +35,8 @@ class TypingGameImpl implements TypingGame {
   constructor(
     private readonly state: TypingGameState,
     private readonly setting: TypingGameSetting,
-    private readonly eventManager: EventManager,
-    private readonly timerManager: TimerManager,
+    private readonly eventManager = EventManager.create(),
+    private readonly timerManager = TimerManager.create(30),
   ) {}
 
   private _createTypingHandler({ gamer }: { gamer: TypingGamer }) {
@@ -126,7 +126,7 @@ class TypingGameImpl implements TypingGame {
   }
 
   private _addTickTimer(timeLimit: number) {
-    const interval = 60
+    const interval = this.timerManager.interval * 2
     this.timerManager.add({
       handler: () => {
         const state = this.state

@@ -1,3 +1,7 @@
+import { TimerManager } from './TimerManager'
+import type { TimerTickerOptions } from './TimerTicker'
+import { TimerTicker } from './TimerTicker'
+
 export function isNumber(num: unknown): num is number {
   return typeof num === 'number' && !isNaN(num)
 }
@@ -18,165 +22,28 @@ export function toInvertRecord<K extends PropertyKey, V extends PropertyKey>(
   ) as Record<V extends number ? `${V}` : V, K extends number ? `${K}` : K>
 }
 
-function callDefer(
-  callback: (value?: unknown) => unknown,
-  timeout: number,
-): number {
-  if (isFunction(globalThis.requestIdleCallback)) {
-    return requestIdleCallback(callback, { timeout })
-  }
-  return Number(setTimeout(callback, timeout))
-}
-
-function cancelCallDefer(id: number) {
-  if (isFunction(globalThis.cancelIdleCallback)) {
-    cancelIdleCallback(id)
-  } else {
-    clearTimeout(id)
-  }
-}
-
-class TimerTickerState {
-  public running: boolean = false
-  private _timerId?: number
-  private _resolve?: () => void
-  private _reject?: (reson: unknown) => void
-
-  constructor(public interval: number) {}
-
-  public async defer() {
-    return await new Promise<void>((resolve, reject) => {
-      this._resolve = resolve
-      this._reject = reject
-      this._timerId = callDefer(() => this.resolve(), this.interval)
-    })
-  }
-
-  public cancel(thrown?: boolean) {
-    this.running = false
-    if (this._timerId) {
-      cancelCallDefer(this._timerId)
-    }
-    if (thrown) {
-      this.reject(new DOMException('This operation was aborted', 'AbortError'))
-    } else {
-      this.resolve()
-    }
-  }
-
-  public reject(reson: unknown) {
-    this._timerId = undefined
-    this._reject?.(reson)
-    this._resolve = undefined
-    this._reject = undefined
-  }
-
-  public resolve() {
-    this._timerId = undefined
-    this._resolve?.()
-    this._resolve = undefined
-    this._reject = undefined
-  }
-}
-
-export function timerTicker(
-  interval: number,
-  options: {
-    abort?: AbortController
-    rejectOnAbort?: boolean
-  } = {},
-) {
-  const state = new TimerTickerState(interval)
-
-  options.abort?.signal.addEventListener('abort', () =>
-    state.cancel(options.rejectOnAbort),
-  )
-
-  function stop() {
-    state.cancel()
-  }
-
-  async function* ticker() {
-    while (state.running) {
-      await state.defer()
-      if (!state.running) return
-      yield Date.now()
-    }
-  }
-
-  function start() {
-    stop()
-    state.running = true
-    return ticker()
-  }
-
-  return {
-    stop,
-    start,
-  }
-}
-
-export function timerEntry(
-  handler: () => void,
-  timespan: (() => number) | number,
-) {
-  const interval = isFunction(timespan) ? timespan : () => timespan
-
-  let next = Number.MAX_VALUE
-
-  function setup(current: number) {
-    next = current + interval()
-  }
-
-  function handle(current: number) {
-    if (next <= current) {
-      next += interval()
-      handler()
-      return true
-    }
-    return false
-  }
-
-  return {
-    setup,
-    handle,
-  }
-}
+export const timerTicker = TimerTicker.create
 
 async function intervalTimer(
   count: number,
+  interval: number,
   tick: (count: number) => unknown,
   {
-    interval,
-    fps,
-    abort,
-    rejectOnAbort,
-  }: {
-    abort?: AbortController
-    rejectOnAbort?: boolean
-    interval: number
-    fps: number
-  } = {
-    interval: 1000,
-    fps: 100,
+    tickInterval,
+    ...options
+  }: TimerTickerOptions & {
+    tickInterval: number
   },
 ): Promise<number> {
-  const timer = timerTicker(fps, {
-    abort,
-    rejectOnAbort,
+  const timer = TimerManager.create(tickInterval, options).add({
+    handler: () => {
+      tick(--count)
+      if (count <= 0) timer.stop()
+    },
+    interval,
   })
 
-  const entry = timerEntry(() => {
-    tick(--count)
-    if (count <= 0) {
-      timer.stop()
-    }
-  }, interval)
-
-  entry.setup(Date.now())
-  for await (const time of timer.start()) {
-    entry.handle(time)
-  }
+  await timer.start()
 
   return count
 }
@@ -184,24 +51,19 @@ async function intervalTimer(
 export async function countDown(
   count: number,
   tick: (count: number) => void,
-  options: { abort?: AbortController; rejectOnAbort?: boolean } = {},
+  options: TimerTickerOptions = {},
 ) {
-  return await intervalTimer(count, tick, {
+  return await intervalTimer(count, 1000, tick, {
     ...options,
-    interval: 1000,
-    fps: 100,
+    tickInterval: 100,
   })
 }
 
-export async function wait(
-  time: number,
-  options: { abort?: AbortController; rejectOnAbort?: boolean } = {},
-) {
+export async function wait(time: number, options: TimerTickerOptions = {}) {
   if (import.meta.client) {
-    return await intervalTimer(1, () => {}, {
+    return await intervalTimer(1, time, () => {}, {
       ...options,
-      interval: time,
-      fps: Math.trunc(time / 2),
+      tickInterval: Math.trunc(time / 2),
     })
   }
 }
