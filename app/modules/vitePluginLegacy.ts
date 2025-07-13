@@ -12,6 +12,8 @@ export default defineNuxtModule<Options>({
     nuxt.options.vite.plugins.push(vitePluginLegacy(options))
 
     nuxt.hook('build:manifest', (manifest) => {
+      if (nuxt.options.dev) return
+
       const entries = Object.entries(manifest)
       const targetEntry = entries.find(([key]) =>
         key.includes('/vite/legacy-polyfills'),
