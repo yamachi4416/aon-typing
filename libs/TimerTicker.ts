@@ -90,7 +90,10 @@ class TimerTickerState {
     return await new Promise<void>((resolve, reject) => {
       this._resolve = resolve
       this._reject = reject
-      this._timerId = this.executor.defer(() => this.resolve(), this.interval)
+      this._timerId = this.executor.defer(
+        this.resolve.bind(this),
+        this.interval,
+      )
     })
   }
 

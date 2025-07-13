@@ -59,6 +59,8 @@ class TimerManagerImpl implements TimerManager {
   }
 
   async start() {
+    this.timerTicker.stop()
+
     const startTime = this.timeProvider.now()
 
     for (const entry of this.entries) {
