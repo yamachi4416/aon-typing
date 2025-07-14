@@ -1,0 +1,31 @@
+{
+  "id": "1010676",
+  "title": "埼玉高速鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-07-14",
+  "updatedAt": "2025-07-14",
+  "words": [
+    { "info": "浦和美園", "info2": "うらわみその", "word": "urawamisono" },
+    { "info": "東川口", "info2": "ひがしかわぐち", "word": "higasikawaguti" },
+    { "info": "戸塚安行", "info2": "とづかあんぎょう", "word": "todukaangyou" },
+    { "info": "新井宿", "info2": "あらいじゅく", "word": "araijuku" },
+    { "info": "鳩ケ谷", "info2": "はとがや", "word": "hatogaya" },
+    { "info": "南鳩ケ谷", "info2": "みなみはとがや", "word": "minamihatogaya" },
+    {
+      "info": "川口元郷",
+      "info2": "かわぐちもとごう",
+      "word": "kawagutimotogou"
+    },
+    {
+      "info": "赤羽岩淵",
+      "info2": "あかばねいわぶち",
+      "word": "akabaneiwabuti"
+    }
+  ],
+  "optional": { "cd": ["676"], "coCd": ["187"] }
+}

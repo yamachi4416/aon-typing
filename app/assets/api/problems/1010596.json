@@ -1,0 +1,23 @@
+{
+  "id": "1010596",
+  "title": "北条鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-07-14",
+  "updatedAt": "2025-07-14",
+  "words": [
+    { "info": "北条町", "info2": "ほうじょうまち", "word": "houjoumati" },
+    { "info": "播磨横田", "info2": "はりまよこた", "word": "harimayokota" },
+    { "info": "長", "info2": "おさ", "word": "osa" },
+    { "info": "播磨下里", "info2": "はりましもさと", "word": "harimasimosato" },
+    { "info": "法華口", "info2": "ほっけぐち", "word": "hokkeguti" },
+    { "info": "田原", "info2": "たはら", "word": "tahara" },
+    { "info": "網引", "info2": "あびき", "word": "abiki" },
+    { "info": "粟生", "info2": "あお", "word": "ao" }
+  ],
+  "optional": { "cd": ["596"], "coCd": ["125"] }
+}
