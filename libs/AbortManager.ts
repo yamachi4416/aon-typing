@@ -2,14 +2,18 @@ type Handler = () => unknown
 
 export abstract class AbortManager {
   abstract get isAborted(): boolean
-  abstract abort(): void
-  abstract throwIfAborted(): void
-  abstract reset(): void
+  abstract abort(): AbortManager
+  abstract throwIfAborted(): AbortManager
+  abstract reset(): AbortManager
   abstract addListener(handler: Handler): AbortManager
   abstract removeListener(handler: Handler): AbortManager
 
-  static create(): AbortManager {
-    return new AbortManagerImpl()
+  static create(...handlers: Handler[]): AbortManager {
+    const abort = new AbortManagerImpl()
+    for (const handler of handlers) {
+      abort.addListener(handler)
+    }
+    return abort
   }
 
   static createAbortError(): Error {
@@ -18,39 +22,32 @@ export abstract class AbortManager {
 }
 
 class AbortManagerImpl implements AbortManager {
-  public get isAborted() {
-    return this.controller.signal.aborted
+  public isAborted: boolean = false
+  private readonly handlers: Handler[] = []
+
+  abort() {
+    if (this.isAborted) return this
+    this.isAborted = true
+    this.handlers.forEach((handler) => handler())
+    return this
   }
 
-  private controller: AbortController
-  private readonly handlers: Handler[]
-
-  constructor() {
-    this.controller = new AbortController()
-    this.handlers = []
-  }
-
-  abort(): void {
-    this.controller.abort()
-  }
-
-  throwIfAborted(): void {
-    if (this.controller.signal.aborted) {
+  throwIfAborted() {
+    if (this.isAborted) {
       throw AbortManager.createAbortError()
     }
+    return this
   }
 
-  reset(): void {
-    for (const handler of this.handlers.splice(0)) {
-      this.controller.signal.removeEventListener('abort', handler)
-    }
-    this.controller = new AbortController()
+  reset() {
+    this.isAborted = false
+    this.handlers.splice(0)
+    return this
   }
 
   addListener(handler: Handler) {
     if (this.handlers.indexOf(handler) === -1) {
       this.handlers.push(handler)
-      this.controller.signal.addEventListener('abort', handler)
     }
     return this
   }
@@ -59,7 +56,6 @@ class AbortManagerImpl implements AbortManager {
     const index = this.handlers.indexOf(handler)
     if (index !== -1) {
       this.handlers.splice(index, 1)
-      this.controller.signal.removeEventListener('abort', handler)
     }
     return this
   }
