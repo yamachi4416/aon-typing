@@ -1,7 +1,14 @@
 import type { TypingGameState } from './TypingGameState'
 import type { TypingGameWordData } from './TypingGameWordData'
 
-export const rankList = () => {
+type Rank = {
+  id: number
+  name: string
+  start: number
+  end: number | null
+}
+
+export const rankList = (): ReadonlyArray<Rank> => {
   return [
     { id: 1, start: 0, end: 55, name: 'ねずみ' },
     { id: 2, start: 56, end: 106, name: 'いぬ' },
@@ -13,63 +20,104 @@ export const rankList = () => {
   ]
 }
 
-export const helpAnimals = () => rankList().slice(2, 6)
+export const helpAnimals = (): ReadonlyArray<Rank> => rankList().slice(2, 6)
 
-export class TypingGameInfo {
-  readonly tick: number
-  readonly totalTypeCount: number
-  readonly totalTypeMiss: number
-  readonly totalTypeCorrect: number
-  readonly endWords: TypingGameWordData[]
-
-  private constructor(state: Readonly<TypingGameState>) {
-    this.tick = state.tick
-    this.totalTypeCount = state.totalTypeCount
-    this.totalTypeMiss = state.totalTypeMiss
-    this.totalTypeCorrect = state.totalTypeCorrect
-    this.endWords = state.problem?.endWords.slice(0) ?? []
-    if (state.problem?.current) {
-      this.endWords.push(state.problem.current)
-    }
+type State = Readonly<
+  Pick<
+    TypingGameState,
+    'tick' | 'totalTypeCount' | 'totalTypeMiss' | 'totalTypeCorrect'
+  > & {
+    problem?: Readonly<{
+      current?: Readonly<Pick<TypingGameWordData, 'misses'>>
+      endWords: ReadonlyArray<Pick<TypingGameWordData, 'misses'>>
+    }>
   }
+>
+
+export abstract class TypingGameInfo {
+  abstract readonly time: number
+  abstract readonly totalTypeCount: number
+  abstract readonly missCount: number
+  abstract readonly correctRate: number
+  abstract readonly wordPerMinute: number
+  abstract readonly score: number
+  abstract readonly missKeys: { char: string; count: number }[]
+  abstract readonly rank: string
+
+  static create(state: State): TypingGameInfoImpl
+  static create(state: State, fixed: true): TypingGameInfo
+  static create(state: State, fixed?: true) {
+    const info = new TypingGameInfoImpl(state)
+    return fixed ? info.toFixed() : info
+  }
+}
+
+class TypingGameInfoImpl implements TypingGameInfo {
+  constructor(private readonly state: State) {}
 
   get time() {
-    return this.tick
+    return this.state.tick
+  }
+
+  get totalTypeCount() {
+    return this.state.totalTypeCount
   }
 
   get missCount() {
-    return this.totalTypeMiss
+    return this.state.totalTypeMiss
   }
 
   get correctRate() {
-    return this.totalTypeCount ? this.totalTypeCorrect / this.totalTypeCount : 0
+    const { totalTypeCount, state } = this
+    if (totalTypeCount <= 0) return 0
+    return state.totalTypeCorrect / totalTypeCount
   }
 
-  get wordPerMin() {
-    return Math.round((this.totalTypeCount / this.time) * 60000)
+  get wordPerMinute() {
+    const { time, totalTypeCount } = this
+    if (time <= 0) return 0
+    return Math.round((totalTypeCount / time) * 60000)
   }
 
   get score() {
-    return Math.round(this.wordPerMin * Math.pow(this.correctRate, 3))
+    const { wordPerMinute, correctRate } = this
+    return Math.round(wordPerMinute * Math.pow(correctRate, 3))
   }
 
   get missKeys() {
-    const misses = this.endWords.flatMap(({ misses }) => misses)
+    const { problem } = this.state
+    if (!problem) return []
+
+    const misses = [
+      ...problem.endWords,
+      ...(problem.current ? [problem.current] : []),
+    ].flatMap(({ misses }) => misses)
+
     return Map.groupBy(misses, (char) => char)
       .entries()
       .map(([char, chars]) => ({ char, count: chars.length }))
       .toArray()
-      .sort((a, b) => a.count - b.count)
+      .sort((a, b) => b.count - a.count)
   }
 
   get rank() {
-    const s = this.score
-    return rankList().find((r) => {
-      return r.start <= s && s <= (r.end ?? Infinity)
-    })
+    const { score } = this
+    const rank = rankList().find(
+      (r) => r.start <= score && score <= (r.end ?? Infinity),
+    )
+    return rank?.name ?? ''
   }
 
-  static create(state: Readonly<TypingGameState>): TypingGameInfo {
-    return new TypingGameInfo(state)
+  toFixed(): TypingGameInfo {
+    return {
+      time: this.time,
+      totalTypeCount: this.totalTypeCount,
+      missCount: this.missCount,
+      correctRate: this.correctRate,
+      wordPerMinute: this.wordPerMinute,
+      score: this.score,
+      missKeys: this.missKeys,
+      rank: this.rank,
+    }
   }
 }

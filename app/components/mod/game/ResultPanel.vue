@@ -10,7 +10,7 @@
       <tbody>
         <tr>
           <th>ランク</th>
-          <td>{{ result.rank?.name }}</td>
+          <td>{{ result.rank }}</td>
         </tr>
         <tr>
           <th>スコア</th>
@@ -30,7 +30,7 @@
         </tr>
         <tr>
           <th>タイプ数（分）</th>
-          <td>{{ result.wordPerMin }}</td>
+          <td>{{ result.wordPerMinute }}</td>
         </tr>
         <tr>
           <th>ミスタイプ数</th>
