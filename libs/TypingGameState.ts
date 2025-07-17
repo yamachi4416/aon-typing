@@ -8,9 +8,7 @@ class TypingGameStateValue {
   pausing = false
   canceled = false
   running = false
-  timeLimit = 0
   timeUse = 0
-  goalCharCount = 0
   totalTypeCount = 0
   totalTypeCorrect = 0
   totalTypeMiss = 0
@@ -21,12 +19,17 @@ class TypingGameStateValue {
 }
 
 export class TypingGameState extends TypingGameStateValue {
+  public readonly goalCharCount: number
+  public readonly timeLimit: number
+
   private constructor(
-    public readonly setting: TypingGameSetting,
+    public readonly setting: Readonly<TypingGameSetting>,
     public problem?: TypingProblemQuestioner,
   ) {
     super()
     this.clear()
+    this.timeLimit = setting.timeLimit
+    this.goalCharCount = setting.goalCharCount
   }
 
   get current() {
@@ -34,7 +37,7 @@ export class TypingGameState extends TypingGameStateValue {
   }
 
   get totalCharCount() {
-    return this.problem?.totalCharCount
+    return this.problem?.totalCharCount ?? 0
   }
 
   get isPausing() {
@@ -47,8 +50,6 @@ export class TypingGameState extends TypingGameStateValue {
 
   clear() {
     Object.assign(this, new TypingGameStateValue())
-    this.timeLimit = this.setting.timeLimit ?? 0
-    this.goalCharCount = this.setting.goalCharCount ?? 0
   }
 
   reset() {
@@ -61,7 +62,7 @@ export class TypingGameState extends TypingGameStateValue {
     this.problem?.continue()
   }
 
-  init({ problem }: { problem: ProblemDetail }) {
+  init({ problem }: { problem: Readonly<ProblemDetail> }) {
     this.clear()
     this.problem = TypingProblemQuestioner.create(problem, this.setting)
   }

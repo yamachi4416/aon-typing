@@ -18,6 +18,7 @@ const problemSorters: Record<
 export abstract class TypingProblemQuestioner {
   abstract readonly words: ReadonlyArray<TypingGameWordData>
   abstract readonly endWords: ReadonlyArray<TypingGameWordData>
+  abstract readonly totalCharCount: number
 
   constructor(
     public readonly problem: Readonly<ProblemDetail>,
@@ -34,13 +35,6 @@ export abstract class TypingProblemQuestioner {
 
   get hasNext() {
     return this.words.length > 0
-  }
-
-  get totalCharCount() {
-    return (
-      this.words.reduce((a, w) => a + w.wordState.words.length, 0) +
-      this.endWords.reduce((a, w) => a + w.wordState.words.length, 0)
-    )
   }
 
   get current() {
@@ -63,6 +57,7 @@ export abstract class TypingProblemQuestioner {
 class TypingProblemQuestionerImpl extends TypingProblemQuestioner {
   readonly words: TypingGameWordData[] = []
   readonly endWords: TypingGameWordData[] = []
+  readonly totalCharCount: number
 
   constructor(
     problem: Readonly<ProblemDetail>,
@@ -70,6 +65,9 @@ class TypingProblemQuestionerImpl extends TypingProblemQuestioner {
   ) {
     super(problem, setting)
     this.init()
+    this.totalCharCount =
+      this.words.reduce((a, w) => a + w.wordState.words.length, 0) +
+      this.endWords.reduce((a, w) => a + w.wordState.words.length, 0)
   }
 
   init() {
