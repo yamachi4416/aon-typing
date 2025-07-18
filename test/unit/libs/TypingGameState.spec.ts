@@ -68,10 +68,10 @@ describe('TypingGameState', () => {
 
     state.init({ problem })
 
-    expect(state.problem).toBeDefined()
+    expect(state.problem).toBeTruthy()
     expect(state.problem?.id).toBe(problem.id)
     expect(state.totalCharCount).toBe(2)
-    expect(state.current).toBeDefined()
+    expect(state.current).toBeTruthy()
   })
 
   it.each([

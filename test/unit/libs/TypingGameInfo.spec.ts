@@ -16,17 +16,24 @@ describe('TypingGameInfo', () => {
 
   const toInfo = (state: State = {}) => create(toState(state))
 
-  it('create(state) は toFixed() を持つ', () => {
+  it('create(state) は toFixedメソッドを持つ', () => {
     const info = create(toState())
 
-    expect(info.toFixed).toBeTypeOf('function')
+    const proto = Reflect.getPrototypeOf(info)
+    expect(proto).toBeTruthy()
+
+    const prop = Reflect.getOwnPropertyDescriptor(proto!, 'toFixed')
+    expect(prop?.value).toBeTypeOf('function')
   })
 
-  it('create(state, true) は toFixed() を持たない', () => {
+  it('create(state, true) は toFixed メソッドを持たない', () => {
     const info = create(toState(), true)
 
-    // @ts-expect-error-next-line
-    expect(info.toFixed).toBeUndefined()
+    const proto = Reflect.getPrototypeOf(info)
+    expect(proto).toBeTruthy()
+
+    const prop = Reflect.getOwnPropertyDescriptor(proto!, 'toFixed')
+    expect(prop).toBeFalsy()
   })
 
   it.each([100, 200, 0])('time: tick が設定される %d', (tick) => {

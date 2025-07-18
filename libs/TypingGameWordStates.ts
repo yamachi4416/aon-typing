@@ -97,7 +97,7 @@ class TypingGameWordStateImpl implements TypingGameWordState {
   }
 
   get finished() {
-    return this.currentCharsFinished && this.rightChars.length === 0
+    return this.remaining.length === 0
   }
 
   get words() {
@@ -129,8 +129,8 @@ class TypingGameWordStateImpl implements TypingGameWordState {
   }
 
   shiftAll() {
-    this.shift(this._currentChars.length)
     this._leftChars.push(...this._buffer.splice(0))
+    this._leftChars.push(...this._currentChars.splice(0))
     return this
   }
 
