@@ -36,22 +36,21 @@
             <div :class="$style['typing-display-center']">
               <div
                 :class="$style['typing-display-info1']"
-                :data-type="problem.type"
+                :data-type="problem?.type"
                 :data-scale="infoScale"
               >
-                <span v-text="infoState.info" />
+                <span v-text="infoState?.info" />
               </div>
               <ModKbdDisplayWords
-                v-if="infoState.word"
+                v-if="infoState?.word"
                 width="100%"
                 :class="$style['typing-display-info2']"
                 :word="infoState"
-                :char-mode="false"
               />
               <ModKbdDisplayWords
                 width="100%"
                 :class="$style['typing-display-words']"
-                :word="current.wordState"
+                :word="current?.wordState"
               />
             </div>
             <div :class="$style['typing-display-right']">
@@ -91,11 +90,11 @@ const emit = defineEmits<{
 }>()
 
 const typingState = computed(() => props.state.currentTypingState)
-const problem = orDefaultComputed(() => props.state.problem, {})
-const setting = orDefaultComputed(() => props.state.setting, {})
-const current = orDefaultComputed(() => props.state.current, {})
-const infoState = orDefaultComputed(() => current.value.infoState, {})
-const typeKey = orDefaultComputed(() => current.value.wordState?.current, '')
+const problem = computed(() => props.state.problem)
+const setting = computed(() => props.state.setting)
+const current = computed(() => props.state.current)
+const infoState = computed(() => current.value?.infoState)
+const typeKey = computed(() => current.value?.wordState.current ?? '')
 
 const keys = computed(() => {
   const isCapsLock = typingState.value.detail?.capsLock ?? false
@@ -125,18 +124,11 @@ const { flash: flashTypingMistake } = useFlashing({
 })
 
 const infoScale = computed(() => {
-  const chars = Array.from(infoState.value.info ?? []).length
+  const chars = Array.from(infoState.value?.info ?? []).length
   return [10, 20, 30, 40, 50, 100, 200, 300].find((c) => chars <= c) || 0
 })
 
 onBeforeUnmount(() => emit('dispose'))
-
-function orDefaultComputed<T>(
-  source: () => T,
-  defaultValue: Exclude<Partial<T>, undefined>,
-) {
-  return computed(() => source() ?? (defaultValue as Exclude<T, undefined>))
-}
 </script>
 
 <style lang="scss" module>

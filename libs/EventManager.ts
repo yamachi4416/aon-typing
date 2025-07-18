@@ -39,9 +39,9 @@ export abstract class EventManager {
     eventName: K,
     handler: Handler<K>,
     target?: Target<K>,
-  ): unknown
-  abstract dispatch(event: Event, target?: Document | Element | Window): unknown
-  abstract clear(): unknown
+  ): this
+  abstract dispatch(event: Event, target?: Document | Element | Window): this
+  abstract clear(): this
 
   static create(): EventManager {
     return new EventManagerImpl()
@@ -66,10 +66,12 @@ class EventManagerImpl implements EventManager {
       handler: handler as EventListener,
       target,
     })
+    return this
   }
 
   dispatch(event: Event, target: Document | Element | Window = window) {
     target.dispatchEvent(event)
+    return this
   }
 
   clear() {
@@ -77,5 +79,6 @@ class EventManagerImpl implements EventManager {
     targets.forEach(({ eventName, handler, target }) =>
       target.removeEventListener(eventName, handler),
     )
+    return this
   }
 }

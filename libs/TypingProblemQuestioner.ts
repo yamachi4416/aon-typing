@@ -41,10 +41,10 @@ export abstract class TypingProblemQuestioner {
     return this.words[0]
   }
 
-  abstract init(): unknown
-  abstract nextWord(): unknown
-  abstract continue(): unknown
-  abstract reset(): unknown
+  abstract init(): this
+  abstract nextWord(): this
+  abstract continue(): this
+  abstract reset(): this
 
   static create(
     problem: Readonly<ProblemDetail>,
@@ -76,18 +76,22 @@ class TypingProblemQuestionerImpl extends TypingProblemQuestioner {
     this.words.splice(0)
     this.words.push(...sorter(words))
     this.endWords.splice(0)
+    return this
   }
 
   nextWord() {
     this.endWords.push(...this.words.splice(0, 1))
+    return this
   }
 
   reset() {
     this.init()
+    return this
   }
 
   continue() {
     this.endWords.splice(0)
     this.words.forEach((w, i) => w.continue(i))
+    return this
   }
 }

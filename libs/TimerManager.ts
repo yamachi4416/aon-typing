@@ -12,10 +12,10 @@ export abstract class TimerManager {
   }): TimerManager
 
   abstract start(): Promise<number>
-  abstract stop(): unknown
-  abstract pause(): unknown
-  abstract resume(): unknown
-  abstract clear(): unknown
+  abstract stop(): this
+  abstract pause(): this
+  abstract resume(): this
+  abstract clear(): this
 
   static create(
     interval: number,
@@ -88,18 +88,22 @@ class TimerManagerImpl implements TimerManager {
 
   stop() {
     this.timerTicker.stop()
+    return this
   }
 
   pause() {
     this.entries.forEach((entry) => entry.pause())
+    return this
   }
 
   resume() {
     this.entries.forEach((entry) => entry.resume())
+    return this
   }
 
   clear() {
     this.timerTicker.stop()
     this.entries = []
+    return this
   }
 }

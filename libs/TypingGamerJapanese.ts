@@ -30,16 +30,16 @@ export class TypingGamerJapanese implements TypingGamer {
     if (expected === char) {
       wordState.shift()
 
-      if (!wordState.currentWordFinished) return true
+      if (!wordState.currentCharsFinished) return true
 
       wordState.shiftAll()
       infoState.shiftAll()
 
-      if (!wordState.rightWord) return true
+      if (!wordState.rightChars) return true
 
       const { jc, ec } = findFirstEqualJapaneseChar(
-        wordState.rightWord,
-        infoState.rightWord,
+        wordState.rightChars,
+        infoState.rightChars,
       )
       infoState.push(jc.length)
       wordState.push(ec.length)
@@ -47,14 +47,14 @@ export class TypingGamerJapanese implements TypingGamer {
       return true
     }
 
-    if (allowDoubleN(char, wordState.leftWord, infoState.leftWord)) {
+    if (allowDoubleN(char, wordState.leftChars, infoState.leftChars)) {
       wordState.pushLeft(char)
       return true
     }
 
     const { jc, ec } = findFirstMatchJapaneseChar(
       wordState.buffer + char,
-      infoState.currentWord,
+      infoState.currentChars,
     )
 
     if (!jc) {
@@ -62,20 +62,20 @@ export class TypingGamerJapanese implements TypingGamer {
       return false
     }
 
-    if (jc.length < infoState.currentWord.length) {
-      const remInfo = infoState.currentWord.substring(jc.length)
-      infoState.currentWord = jc
+    if (jc.length < infoState.currentChars.length) {
+      const remInfo = infoState.currentChars.substring(jc.length)
+      infoState.currentChars = jc
       infoState.pushRight(remInfo)
 
-      const remWord = toTypeJapaneseChars(infoState.rightWord, remInfo)
-      wordState.currentWord = ec
+      const remWord = toTypeJapaneseChars(infoState.rightChars, remInfo)
+      wordState.currentChars = ec
       wordState.pushRight(remWord)
 
       return this.expect(char, word)
     }
 
-    if (jc.length === infoState.currentWord.length) {
-      wordState.currentWord = ec
+    if (jc.length === infoState.currentChars.length) {
+      wordState.currentChars = ec
       return this.expect(char, word)
     }
 

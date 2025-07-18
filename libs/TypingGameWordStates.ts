@@ -1,47 +1,61 @@
-abstract class BaseTypingGameWordState {
+export abstract class TypingGameWordState {
   abstract get word(): string
+  abstract get words(): string
   abstract get buffer(): string
   abstract get left(): string
-  abstract get leftWord(): string
-  abstract get currentWord(): string
-  abstract set currentWord(value)
+  abstract get leftChars(): string
   abstract get current(): string
+  abstract get currentChars(): string
+  abstract set currentChars(value)
+  abstract get currentCharsFinished(): boolean
   abstract get right(): string
-  abstract get rightWord(): string
-  abstract get currentWordFinished(): boolean
+  abstract get rightChars(): string
   abstract get finished(): boolean
-  abstract get words(): string
   abstract get remaining(): string
-  abstract push(n?: number): unknown
-  abstract pushLeft(s: string): unknown
-  abstract pushRight(s: string): unknown
-  abstract shift(n?: number): unknown
-  abstract shiftAll(): unknown
-  abstract next(n?: number): unknown
-}
+  abstract push(n?: number): this
+  abstract pushLeft(s: string): this
+  abstract pushRight(s: string): this
+  abstract shift(n?: number): this
+  abstract shiftAll(): this
+  abstract next(n?: number): this
 
-export abstract class TypingGameWordState extends BaseTypingGameWordState {
-  static create(word: string): TypingGameWordState {
-    return new TypingGameWordStateImpl(word)
+  static create(word: string): TypingGameWordState
+  static create(word: string, info: string): TypingGameWordInfoState
+  static create(word: string, info?: string) {
+    return info === undefined
+      ? createTypingGameWordState(word)
+      : createTypingGameWordInfoState(word, info)
   }
 }
 
-export abstract class TypingGameWordInfoState extends BaseTypingGameWordState {
-  abstract get info(): string
+export interface TypingGameWordInfoState extends TypingGameWordState {
+  get info(): string
+}
 
-  static create(info: string, word: string): TypingGameWordInfoState {
-    return new TypingGameWordInfoStateImpl(info, word)
-  }
+function createTypingGameWordState(word: string): TypingGameWordState {
+  return new TypingGameWordStateImpl(word)
+}
+
+function createTypingGameWordInfoState(
+  word: string,
+  info: string,
+): TypingGameWordInfoState {
+  return new TypingGameWordInfoStateImpl(word, info)
 }
 
 class TypingGameWordStateImpl implements TypingGameWordState {
-  protected _leftWords: string[] = []
-  protected _buffer: string[] = []
-  protected _currentWords: string[] = []
-  protected _rightWords: string[]
+  public readonly word: string
+  protected readonly _leftChars: string[]
+  protected readonly _buffer: string[]
+  protected readonly _rightChars: string[]
+  protected readonly _currentChars: string[]
 
-  constructor(public word: string) {
-    this._rightWords = Array.from(word)
+  constructor(word: string) {
+    this.word = word
+    this._leftChars = []
+    this._buffer = []
+    this._rightChars = Array.from(word)
+    this._currentChars = []
   }
 
   get buffer() {
@@ -49,39 +63,41 @@ class TypingGameWordStateImpl implements TypingGameWordState {
   }
 
   get left() {
-    return this.leftWord + this.buffer
+    return this.leftChars + this.buffer
   }
 
-  get leftWord() {
-    return this._leftWords.join('')
+  get leftChars() {
+    return this._leftChars.join('')
   }
 
-  get currentWord() {
-    return this.buffer + this._currentWords.join('')
+  get currentChars() {
+    return this.buffer + this._currentChars.join('')
   }
 
-  set currentWord(value) {
-    this._currentWords = Array.from(value.substring(this.buffer.length))
+  set currentChars(value) {
+    const newValues = Array.from(value.substring(this.buffer.length))
+    this._currentChars.splice(0)
+    this._currentChars.push(...newValues)
   }
 
   get current() {
-    return this._currentWords[0] ?? ''
+    return this._currentChars[0] ?? ''
   }
 
   get right() {
-    return this._currentWords.slice(1).join('') + this.rightWord
+    return this._currentChars.slice(1).join('') + this.rightChars
   }
 
-  get rightWord() {
-    return this._rightWords.join('')
+  get rightChars() {
+    return this._rightChars.join('')
   }
 
-  get currentWordFinished() {
-    return this._currentWords.length === 0
+  get currentCharsFinished() {
+    return this._currentChars.length === 0
   }
 
   get finished() {
-    return this.currentWordFinished && this.rightWord.length === 0
+    return this.currentCharsFinished && this.rightChars.length === 0
   }
 
   get words() {
@@ -93,45 +109,54 @@ class TypingGameWordStateImpl implements TypingGameWordState {
   }
 
   push(n: number = 1) {
-    this._currentWords.push(...this._rightWords.splice(0, n))
+    this._currentChars.push(...this._rightChars.splice(0, n))
+    return this
   }
 
   pushLeft(s: string) {
-    this._leftWords.push(...Array.from(s))
+    this._leftChars.push(...Array.from(s))
+    return this
   }
 
   pushRight(s: string) {
-    this._rightWords.unshift(...Array.from(s))
+    this._rightChars.unshift(...Array.from(s))
+    return this
   }
 
   shift(n: number = 1) {
-    this._buffer.push(...this._currentWords.splice(0, n))
+    this._buffer.push(...this._currentChars.splice(0, n))
+    return this
   }
 
   shiftAll() {
-    this.shift(this._currentWords.length)
-    this._leftWords.push(...this._buffer.splice(0))
+    this.shift(this._currentChars.length)
+    this._leftChars.push(...this._buffer.splice(0))
+    return this
   }
 
-  next(n: number = 1) {
+  next(n = 1) {
     for (let i = 0; i < n; i++) {
-      const c = this._currentWords.shift()
+      const c = this._currentChars.shift()
       if (c) {
-        this._leftWords.push(c)
+        this._leftChars.push(c)
       }
-      const d = this._rightWords.shift()
+      const d = this._rightChars.shift()
       if (d) {
-        this._currentWords.push(d)
+        this._currentChars.push(d)
       }
     }
+    return this
   }
 }
 
-class TypingGameWordInfoStateImpl extends TypingGameWordStateImpl {
-  constructor(
-    public info: string,
-    word: string,
-  ) {
+class TypingGameWordInfoStateImpl
+  extends TypingGameWordStateImpl
+  implements TypingGameWordInfoState
+{
+  public readonly info: string
+
+  constructor(word: string, info: string) {
     super(word)
+    this.info = info
   }
 }

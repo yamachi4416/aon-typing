@@ -1,8 +1,6 @@
 import type { ProblemDetailWord } from '~~/types/problems'
-import {
-  TypingGameWordInfoState,
-  TypingGameWordState,
-} from './TypingGameWordStates'
+import type { TypingGameWordInfoState } from './TypingGameWordStates'
+import { TypingGameWordState } from './TypingGameWordStates'
 
 export abstract class TypingGameWordData {
   abstract get index(): number
@@ -14,11 +12,7 @@ export abstract class TypingGameWordData {
   endTime = 0
   count = 0
 
-  abstract continue(index: number): unknown
-
-  get mistake() {
-    return this.misses.length
-  }
+  abstract continue(index: number): this
 
   get success() {
     return this.wordState.finished
@@ -35,7 +29,7 @@ class TypingGameWordDataImpl extends TypingGameWordData {
     { word = '', info = '', info2 = '' }: ProblemDetailWord,
     public readonly misses: string[] = [],
     public readonly wordState = TypingGameWordState.create(word),
-    public readonly infoState = TypingGameWordInfoState.create(info, info2),
+    public readonly infoState = TypingGameWordState.create(info2, info),
   ) {
     super()
     this.continue(index)
@@ -47,5 +41,6 @@ class TypingGameWordDataImpl extends TypingGameWordData {
     this.endTime = 0
     this.count = 0
     this.misses.splice(0)
+    return this
   }
 }

@@ -2,11 +2,11 @@ type Handler = () => unknown
 
 export abstract class AbortManager {
   abstract get isAborted(): boolean
-  abstract abort(): AbortManager
-  abstract throwIfAborted(): AbortManager
-  abstract reset(): AbortManager
-  abstract addListener(handler: Handler): AbortManager
-  abstract removeListener(handler: Handler): AbortManager
+  abstract abort(): this
+  abstract throwIfAborted(): this
+  abstract reset(): this
+  abstract addListener(handler: Handler): this
+  abstract removeListener(handler: Handler): this
 
   static create(...handlers: Handler[]): AbortManager {
     const abort = new AbortManagerImpl()
