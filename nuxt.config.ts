@@ -35,12 +35,7 @@ const routes: ReadonlyArray<string> = [
   ),
 ]
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  future: {
-    compatibilityVersion: 4,
-  },
-
   features: {
     inlineStyles: false,
   },
@@ -137,5 +132,5 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2024-07-06',
+  compatibilityDate: '2025-07-15',
 })
