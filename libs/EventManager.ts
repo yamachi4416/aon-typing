@@ -35,6 +35,7 @@ interface Add<This> {
     target: Element,
   ): This
   add(name: string, handler: EventListener, target: EventTarget): This
+  add(name: string, handler: EventListener, target?: EventTarget): This
 }
 
 interface Dispatch<This> {

@@ -1,5 +1,5 @@
-import { EventManager, TypingEvent } from './EventManager'
 import { TimerManager } from './TimerManager'
+import { TypingGameEventManager } from './TypingGameEventManager'
 import { TypingGameInfo } from './TypingGameInfo'
 import { TypingGamer } from './TypingGamer'
 import type { TypingGameSetting } from './TypingGameSetting'
@@ -22,7 +22,7 @@ export abstract class TypingGame {
   }: {
     state: TypingGameState
     setting: TypingGameSetting
-    eventManager?: EventManager
+    eventManager?: TypingGameEventManager
     timerManager?: TimerManager
   }): TypingGame {
     return new TypingGameImpl(state, setting, eventManager, timerManager)
@@ -35,19 +35,17 @@ class TypingGameImpl implements TypingGame {
   constructor(
     private readonly state: TypingGameState,
     private readonly setting: TypingGameSetting,
-    private readonly eventManager = EventManager.create(),
+    private readonly eventManager = TypingGameEventManager.create(),
     private readonly timerManager = TimerManager.create(30),
   ) {}
 
-  private _createTypingHandler({ gamer }: { gamer: TypingGamer }) {
+  private _addTypingHandler({ gamer }: { gamer: TypingGamer }) {
     gamer.init(this.state.current)
 
-    return (event: TypingEvent) => {
+    return this.eventManager.addTyping((event) => {
       const state = this.state
 
-      if (state.pausing) {
-        return
-      }
+      if (state.pausing) return
 
       const detail = event.detail
       const char = detail.char
@@ -77,26 +75,27 @@ class TypingGameImpl implements TypingGame {
         return
       }
 
-      if (word?.success) {
-        word.endTime = state.tick
-        state.problem?.nextWord()
+      if (!word?.success) return
 
-        if (state.current) {
-          state.current.startTime = word.endTime
-          gamer.init(state.current)
-        } else if (this._stop) {
-          this._stop()
-        }
-      }
-    }
-  }
+      word.endTime = state.tick
+      state.problem?.nextWord()
 
-  private _createKeydownHandler() {
-    return (e: KeyboardEvent) => {
-      e.preventDefault()
-      if (e.repeat) {
+      if (state.current) {
+        state.current.startTime = word.endTime
+        gamer.init(state.current)
         return
       }
+
+      this._stop?.()
+    })
+  }
+
+  private _addKeydownHandler({ autoMode }: { autoMode: number }) {
+    if (autoMode) return
+
+    return this.eventManager.addKeydown((e) => {
+      e.preventDefault()
+      if (e.repeat) return
 
       const shiftKey = e.shiftKey
       const char = { Enter: '\n', Tab: '\t' }[e.key] ?? e.key ?? ''
@@ -107,18 +106,16 @@ class TypingGameImpl implements TypingGame {
         detail.char = ''
       }
 
-      this.eventManager.dispatch(new TypingEvent(detail))
-    }
+      this.eventManager.dispatchTyping(detail)
+    })
   }
 
-  private _createVisibleChangeHandler() {
-    return () => {
-      if (document.hidden) {
-        this.timerManager.pause()
-      } else {
-        this.timerManager.resume()
-      }
-    }
+  private _addVisibleChangeHandler() {
+    return this.eventManager.addVisibilitychange(() =>
+      document.visibilityState === 'hidden'
+        ? this.timerManager.pause()
+        : this.timerManager.resume(),
+    )
   }
 
   private _info() {
@@ -132,7 +129,7 @@ class TypingGameImpl implements TypingGame {
         const state = this.state
         if (timeLimit > 0 && state.timeUse >= timeLimit) {
           this.cancel()
-        } else if (this.state.isRunning) {
+        } else if (state.isRunning) {
           state.tick += interval
           state.timeUse += interval
         }
@@ -141,28 +138,24 @@ class TypingGameImpl implements TypingGame {
     })
   }
 
-  private _addAutoTyping({
+  private _addAutoTypingTimer({
     words,
     autoMode,
   }: {
     words: ReadonlyArray<TypingGameWordData>
     autoMode: number
   }) {
-    if (!autoMode) {
-      return
-    }
+    if (!autoMode) return
 
     const xs = Array.from(words.reduce((a, w) => a + w.wordState.remaining, ''))
 
     this.timerManager.add({
       handler: () => {
-        if (!this.state.isRunning) {
-          return
-        }
+        if (!this.state.isRunning) return
 
         const char = xs.shift()
         if (char) {
-          this.eventManager.dispatch(new TypingEvent({ char }))
+          this.eventManager.dispatchTyping({ char })
         } else {
           this.timerManager.stop()
         }
@@ -171,7 +164,29 @@ class TypingGameImpl implements TypingGame {
     })
   }
 
-  async start(): Promise<TypingGameInfo | undefined> {
+  private _setStopPromise() {
+    const { resolve, promise } = Promise.withResolvers<TypingGameInfo>()
+
+    this._stop = () => {
+      const state = this.state
+
+      this._stop = undefined
+      state.running = false
+
+      if (state.current && !state.current.endTime) {
+        state.current.endTime = state.tick
+      }
+
+      this.eventManager.clear()
+      this.timerManager.clear()
+
+      resolve(this._info())
+    }
+
+    return promise
+  }
+
+  async start() {
     this.cancel()
 
     this._stop = undefined
@@ -182,37 +197,19 @@ class TypingGameImpl implements TypingGame {
     const gamer = TypingGamer.of(type)
     if (!gamer) return undefined
 
-    const keydown = autoMode ? () => {} : this._createKeydownHandler()
-    const typing = this._createTypingHandler({ gamer })
-    const visibleChange = this._createVisibleChangeHandler()
+    const visibleChange = this._addVisibleChangeHandler()
+    this._addKeydownHandler({ autoMode })
+    this._addTypingHandler({ gamer })
+    this._addTickTimer(timeLimit)
+    this._addAutoTypingTimer({ words, autoMode })
 
-    return await new Promise((resolve) => {
-      this._stop = () => {
-        const state = this.state
+    const promise = this._setStopPromise()
 
-        this._stop = undefined
-        state.running = false
+    this.timerManager.start()
+    this.state.running = true
+    visibleChange()
 
-        if (state.current && !state.current.endTime) {
-          state.current.endTime = state.tick
-        }
-
-        this.eventManager.clear()
-        this.timerManager.clear()
-
-        resolve(this._info())
-      }
-
-      this.eventManager.add('keydown', keydown)
-      this.eventManager.add('c:typing', typing)
-      this.eventManager.add('visibilitychange', visibleChange, document)
-
-      this._addTickTimer(timeLimit)
-      this._addAutoTyping({ words, autoMode })
-      this.timerManager.start()
-      this.state.running = true
-      visibleChange()
-    })
+    return await promise
   }
 
   cancel() {
