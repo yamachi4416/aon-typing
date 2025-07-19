@@ -30,7 +30,7 @@ export abstract class TypingGame {
 }
 
 class TypingGameImpl implements TypingGame {
-  private _stop?: () => void
+  private _stop: () => void = () => {}
 
   constructor(
     private readonly state: TypingGameState,
@@ -66,11 +66,7 @@ class TypingGameImpl implements TypingGame {
         state.totalTypeMiss += 1
       }
 
-      if (
-        state.goalCharCount > 0 &&
-        state.totalTypeCorrect >= state.goalCharCount &&
-        this._stop
-      ) {
+      if (state.isGoalReached) {
         this._stop()
         return
       }
@@ -86,7 +82,7 @@ class TypingGameImpl implements TypingGame {
         return
       }
 
-      this._stop?.()
+      this._stop()
     })
   }
 
@@ -170,7 +166,7 @@ class TypingGameImpl implements TypingGame {
     this._stop = () => {
       const state = this.state
 
-      this._stop = undefined
+      this._stop = () => {}
       state.running = false
 
       if (state.current && !state.current.endTime) {
@@ -189,7 +185,7 @@ class TypingGameImpl implements TypingGame {
   async start() {
     this.cancel()
 
-    this._stop = undefined
+    this._stop = () => {}
 
     const { words, type } = this.state.problem!
     const { timeLimit, autoMode } = this.setting
@@ -213,8 +209,9 @@ class TypingGameImpl implements TypingGame {
   }
 
   cancel() {
-    if (this._stop) {
-      this.state.canceled = true
+    const state = this.state
+    if (state.isRunning) {
+      state.canceled = true
       this._stop()
     }
     this.eventManager.clear()

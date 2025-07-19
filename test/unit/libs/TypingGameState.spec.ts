@@ -75,6 +75,28 @@ describe('TypingGameState', () => {
   })
 
   it.each([
+    [0, 0, false],
+    [0, 1, false],
+    [1, 0, false],
+    [10, 1, false],
+    [10, 2, false],
+    [10, 9, false],
+    [10, 10, true],
+    [10, 11, true],
+  ])(
+    'isGoalReached (goalCharCount=%s, totalTypeCorrect=%s) => %s',
+    (goalCharCount, totalTypeCorrect, expected) => {
+      const setting = TypingGameSetting.create()
+      setting.goalCharCount = goalCharCount
+      const state = TypingGameState.create(setting)
+
+      state.totalTypeCorrect = totalTypeCorrect
+
+      expect(state.isGoalReached).toBe(expected)
+    },
+  )
+
+  it.each([
     [false, false, false],
     [false, true, false],
     [true, false, false],
