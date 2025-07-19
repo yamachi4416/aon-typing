@@ -112,7 +112,10 @@ export default defineNuxtConfig({
   },
 
   typescript: {
-    // typeCheck: 'build',
+    strict: true,
+    tsConfig: {
+      include: ['../test/**/*.ts'],
+    },
   },
 
   nitro: {

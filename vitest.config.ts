@@ -18,6 +18,7 @@ export default defineConfig({
         test: {
           name: 'libs',
           include: ['./test/unit/{data,libs}/**/*.spec.ts'],
+          environment: 'happy-dom',
         },
       } satisfies UserConfig),
       await defineVitestProject({
