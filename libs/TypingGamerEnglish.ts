@@ -10,15 +10,14 @@ export class TypingGamerEnglish implements TypingGamer {
 
   expect(char: string, word?: TypingGameWordData) {
     const expected = word?.wordState.current
+    if (!expected) return false
+
     if (expected === char) {
       word?.wordState.next(1)
       return true
-    }
-
-    if (expected) {
+    } else {
       word?.misses.push(expected)
+      return false
     }
-
-    return false
   }
 }

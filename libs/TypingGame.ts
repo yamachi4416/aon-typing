@@ -190,12 +190,9 @@ class TypingGameImpl implements TypingGame {
     const { words, type } = this.state.problem!
     const { timeLimit, autoMode } = this.setting
 
-    const gamer = TypingGamer.of(type)
-    if (!gamer) return undefined
-
     const visibleChange = this._addVisibleChangeHandler()
     this._addKeydownHandler({ autoMode })
-    this._addTypingHandler({ gamer })
+    this._addTypingHandler({ gamer: TypingGamer.of(type) })
     this._addTickTimer(timeLimit)
     this._addAutoTypingTimer({ words, autoMode })
 
