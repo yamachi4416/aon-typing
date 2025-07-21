@@ -21,11 +21,10 @@ export class TypingGamerJapanese implements TypingGamer {
   }
 
   expect(char: string, word?: TypingGameWordData): boolean {
-    if (!word) return true
+    const expected = word?.wordState.current
+    if (!expected) return false
 
     const { wordState, infoState } = word
-
-    const expected = wordState.current
 
     if (expected === char) {
       wordState.shift()
