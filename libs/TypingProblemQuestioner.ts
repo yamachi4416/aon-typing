@@ -1,9 +1,12 @@
-import { TypingGameWordData } from '~~/libs/TypingGameWordData'
 import type { ProblemDetail } from '~~/types/problems'
 import type { TypingGameSetting } from './TypingGameSetting'
+import { TypingGameWordData } from './TypingGameWordData'
+
+type Problem = Readonly<Pick<ProblemDetail, 'id' | 'type' | 'words'>>
+type Setting = Readonly<Pick<TypingGameSetting, 'problemOrder'>>
 
 const problemSorters: Record<
-  TypingGameSetting['problemOrder'],
+  Setting['problemOrder'],
   (words: ReadonlyArray<TypingGameWordData>) => TypingGameWordData[]
 > = {
   first: (words) => [...words],
@@ -21,8 +24,8 @@ export abstract class TypingProblemQuestioner {
   abstract readonly totalCharCount: number
 
   constructor(
-    public readonly problem: Readonly<ProblemDetail>,
-    public readonly setting: Readonly<TypingGameSetting>,
+    public readonly problem: Problem,
+    public readonly setting: Setting,
   ) {}
 
   get id() {
@@ -46,10 +49,7 @@ export abstract class TypingProblemQuestioner {
   abstract continue(): this
   abstract reset(): this
 
-  static create(
-    problem: Readonly<ProblemDetail>,
-    setting: Readonly<TypingGameSetting>,
-  ): TypingProblemQuestioner {
+  static create(problem: Problem, setting: Setting): TypingProblemQuestioner {
     return new TypingProblemQuestionerImpl(problem, setting)
   }
 }
@@ -59,10 +59,7 @@ class TypingProblemQuestionerImpl extends TypingProblemQuestioner {
   readonly endWords: TypingGameWordData[] = []
   readonly totalCharCount: number
 
-  constructor(
-    problem: Readonly<ProblemDetail>,
-    setting: Readonly<TypingGameSetting>,
-  ) {
+  constructor(problem: Problem, setting: Setting) {
     super(problem, setting)
     this.init()
     this.totalCharCount =
@@ -85,8 +82,7 @@ class TypingProblemQuestionerImpl extends TypingProblemQuestioner {
   }
 
   reset() {
-    this.init()
-    return this
+    return this.init()
   }
 
   continue() {

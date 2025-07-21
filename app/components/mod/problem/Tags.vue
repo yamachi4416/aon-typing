@@ -18,7 +18,7 @@ import type { ProblemItemTag } from '~~/types/problems'
 
 withDefaults(
   defineProps<{
-    tags?: ProblemItemTag[]
+    tags?: ReadonlyArray<ProblemItemTag>
     clickable?: boolean
   }>(),
   {

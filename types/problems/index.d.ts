@@ -11,7 +11,7 @@ export interface ProblemListItem {
   words: number
   chars: number
   type: ProblemType
-  tags: ProblemItemTag[]
+  tags: ReadonlyArray<ProblemItemTag>
 }
 
 export interface ProblemTagSummary {
@@ -42,14 +42,14 @@ export interface ProblemDetail {
   id: string
   title: string
   type: ProblemType
-  tags: ProblemItemTag[]
+  tags: ReadonlyArray<ProblemItemTag>
   createdAt: string
   updatedAt: string
-  words: ProblemDetailWord[]
-  links?: ProblemDetailLink[]
+  words: ReadonlyArray<ProblemDetailWord>
+  links?: ReadonlyArray<ProblemDetailLink>
   optional?: {
-    cd?: string[]
-    coCd: string[]
+    cd?: ReadonlyArray<string>
+    coCd: ReadonlyArray<string>
   }
 }
 
@@ -58,10 +58,10 @@ export type RailwayProblemDetail = ProblemDetail
 export interface RailwayCorporation {
   code: string
   name: string
-  operationLines: {
+  operationLines: ReadonlyArray<{
     id?: string | null
     code: string
     name: string
     yomi: string
-  }[]
+  }>
 }

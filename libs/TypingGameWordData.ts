@@ -18,7 +18,9 @@ export abstract class TypingGameWordData {
     return this.wordState.finished
   }
 
-  static fromDetailWords(words: ProblemDetailWord[]): TypingGameWordData[] {
+  static fromDetailWords(
+    words: ReadonlyArray<ProblemDetailWord>,
+  ): TypingGameWordData[] {
     return words.map((word, index) => new TypingGameWordDataImpl(index, word))
   }
 }
