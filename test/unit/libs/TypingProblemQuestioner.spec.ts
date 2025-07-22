@@ -97,9 +97,9 @@ describe('TypingProblemQuestioner', () => {
     const init = structuredClone(problem)
 
     problem.nextWord()
-    problem.current.startTime = 1
-    problem.current.endTime = 10
-    problem.current.count = 20
+    problem.current!.startTime = 1
+    problem.current!.endTime = 10
+    problem.current!.count = 20
 
     problem.init()
 
@@ -118,9 +118,9 @@ describe('TypingProblemQuestioner', () => {
     const init = structuredClone(problem)
 
     problem.nextWord()
-    problem.current.startTime = 1
-    problem.current.endTime = 10
-    problem.current.count = 20
+    problem.current!.startTime = 1
+    problem.current!.endTime = 10
+    problem.current!.count = 20
 
     problem.reset()
 
@@ -137,9 +137,9 @@ describe('TypingProblemQuestioner', () => {
     })
 
     problem.nextWord()
-    problem.current.startTime = 1
-    problem.current.endTime = 10
-    problem.current.count = 20
+    problem.current!.startTime = 1
+    problem.current!.endTime = 10
+    problem.current!.count = 20
 
     problem.continue()
 

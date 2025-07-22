@@ -1,10 +1,12 @@
 import { describe, expect, it } from 'vitest'
 import { TypingGamer } from '~~/libs/TypingGamer'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
+import type { ProblemDetailWord } from '~~/types/problems'
 
 describe('TypingGamerJapanese', () => {
   const gamer = TypingGamer.of('japanese')
-  const words = TypingGameWordData.fromDetailWords
+  const toWordData = (word: ProblemDetailWord) =>
+    TypingGameWordData.fromDetailWords([word])[0]!
 
   describe('init', () => {
     it('init(undefined)', () => {
@@ -12,7 +14,7 @@ describe('TypingGamerJapanese', () => {
     })
 
     it('init(word) current が未設定', () => {
-      const [word] = words([{ word: 'sasisuseso', info2: 'さしすせそ' }])
+      const word = toWordData({ word: 'sasisuseso', info2: 'さしすせそ' })
 
       gamer.init(word)
 
@@ -22,7 +24,7 @@ describe('TypingGamerJapanese', () => {
     })
 
     it('init(word) current が設定済み', () => {
-      const [word] = words([{ word: 'sasisuseso', info2: 'さしすせそ' }])
+      const word = toWordData({ word: 'sasisuseso', info2: 'さしすせそ' })
 
       word.wordState.next(2)
       word.infoState.next(2)
@@ -37,7 +39,7 @@ describe('TypingGamerJapanese', () => {
 
   describe('expect', () => {
     it('current が未設定', () => {
-      const [word] = words([{ word: 'sasisuseso', info2: 'さしすせそ' }])
+      const word = toWordData({ word: 'sasisuseso', info2: 'さしすせそ' })
 
       expect(gamer.expect('s', word)).toBe(false)
       expect(word.wordState.current).toBe('')
@@ -47,7 +49,7 @@ describe('TypingGamerJapanese', () => {
     })
 
     it('char が不一致', () => {
-      const [word] = words([{ word: 'sasisuseso', info2: 'さしすせそ' }])
+      const word = toWordData({ word: 'sasisuseso', info2: 'さしすせそ' })
 
       gamer.init(word)
 
@@ -81,7 +83,7 @@ describe('TypingGamerJapanese', () => {
       ['yatta', 'やった', 'yalt', 'u', true, 't'],
       ['yatta', 'やった', 'yalt', 's', true, 'u'],
     ])('Case %$', (chars, info2, inputs, char, expected, current) => {
-      const [word] = words([{ word: chars, info2 }])
+      const word = toWordData({ word: chars, info2 })
 
       gamer.init(word)
 

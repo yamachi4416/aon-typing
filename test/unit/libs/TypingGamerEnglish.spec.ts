@@ -1,10 +1,12 @@
 import { describe, expect, it } from 'vitest'
 import { TypingGamer } from '~~/libs/TypingGamer'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
+import type { ProblemDetailWord } from '~~/types/problems'
 
 describe('TypingGamerEnglish', () => {
   const gamer = TypingGamer.of('english')
-  const words = TypingGameWordData.fromDetailWords
+  const toWordData = (word: ProblemDetailWord) =>
+    TypingGameWordData.fromDetailWords([word])[0]!
 
   describe('init', () => {
     it('init(undefined)', () => {
@@ -12,7 +14,7 @@ describe('TypingGamerEnglish', () => {
     })
 
     it('init(word) current が未設定', () => {
-      const [word] = words([{ word: '0123456789' }])
+      const word = toWordData({ word: '0123456789' })
 
       gamer.init(word)
 
@@ -20,7 +22,7 @@ describe('TypingGamerEnglish', () => {
     })
 
     it('init(word) current が設定済', () => {
-      const [word] = words([{ word: '0123456789' }])
+      const word = toWordData({ word: '0123456789' })
 
       word.wordState.next(2)
 
@@ -32,7 +34,7 @@ describe('TypingGamerEnglish', () => {
 
   describe('expect', () => {
     it('current が未設定', () => {
-      const [word] = words([{ word: '0123456789' }])
+      const word = toWordData({ word: '0123456789' })
 
       expect(gamer.expect('0', word)).toBe(false)
       expect(word.wordState.current).toBe('')
@@ -40,7 +42,7 @@ describe('TypingGamerEnglish', () => {
     })
 
     it('char が不一致', () => {
-      const [word] = words([{ word: '0123456789' }])
+      const word = toWordData({ word: '0123456789' })
 
       gamer.init(word)
 
@@ -50,7 +52,7 @@ describe('TypingGamerEnglish', () => {
     })
 
     it('char が一致', () => {
-      const [word] = words([{ word: '0123456789' }])
+      const word = toWordData({ word: '0123456789' })
 
       gamer.init(word)
 
