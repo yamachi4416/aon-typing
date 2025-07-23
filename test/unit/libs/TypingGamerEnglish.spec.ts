@@ -9,10 +9,6 @@ describe('TypingGamerEnglish', () => {
     TypingGameWordData.fromDetailWords([word])[0]!
 
   describe('init', () => {
-    it('init(undefined)', () => {
-      gamer.init()
-    })
-
     it('init(word) current が未設定', () => {
       const word = toWordData({ word: '0123456789' })
 

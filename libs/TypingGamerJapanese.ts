@@ -8,8 +8,7 @@ import {
 } from './TypingUtil'
 
 export class TypingGamerJapanese implements TypingGamer {
-  init(word?: TypingGameWordData) {
-    if (!word) return
+  init(word: TypingGameWordData) {
     if (!word.wordState.current) {
       const { jc, ec } = findFirstEqualJapaneseChar(
         word.wordState.word,
@@ -20,8 +19,8 @@ export class TypingGamerJapanese implements TypingGamer {
     }
   }
 
-  expect(char: string, word?: TypingGameWordData): boolean {
-    const expected = word?.wordState.current
+  expect(char: string, word: TypingGameWordData): boolean {
+    const expected = word.wordState.current
     if (!expected) return false
 
     const { wordState, infoState } = word

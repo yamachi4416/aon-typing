@@ -40,7 +40,9 @@ async function testTyping(file: string) {
 
   let word = words.shift()
 
-  gamer.init(word)
+  if (word) {
+    gamer.init(word)
+  }
 
   for (const char of chars) {
     if (word === undefined) {
@@ -59,7 +61,9 @@ async function testTyping(file: string) {
 
     if (word.success) {
       word = words.shift()
-      gamer.init(word)
+      if (word) {
+        gamer.init(word)
+      }
     }
   }
 

@@ -45,7 +45,7 @@ describe('TypingGameState', () => {
     expect(state.totalTypeMiss).toBe(0)
     expect(state.currentTypingState).toEqual({ mistake: false })
     expect(state.problem).toBeUndefined()
-    expect(state.current).toBeUndefined()
+    expect(state.currentWord).toBeUndefined()
     expect(state.totalCharCount).toBe(0)
   })
 
@@ -71,7 +71,7 @@ describe('TypingGameState', () => {
     expect(state.problem).toBeTruthy()
     expect(state.problem?.id).toBe(problem.id)
     expect(state.totalCharCount).toBe(2)
-    expect(state.current).toBeTruthy()
+    expect(state.currentWord).toBeTruthy()
   })
 
   it.each([

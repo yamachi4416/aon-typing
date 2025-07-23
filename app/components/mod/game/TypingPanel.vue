@@ -92,7 +92,7 @@ const emit = defineEmits<{
 const typingState = computed(() => props.state.currentTypingState)
 const problem = computed(() => props.state.problem)
 const setting = computed(() => props.state.setting)
-const current = computed(() => props.state.current)
+const current = computed(() => props.state.currentWord)
 const infoState = computed(() => current.value?.infoState)
 const typeKey = computed(() => current.value?.wordState.current ?? '')
 

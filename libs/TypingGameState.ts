@@ -32,7 +32,7 @@ export class TypingGameState extends TypingGameStateValue {
     this.goalCharCount = setting.goalCharCount
   }
 
-  get current() {
+  get currentWord() {
     return this.problem?.current
   }
 
@@ -69,6 +69,10 @@ export class TypingGameState extends TypingGameStateValue {
   init({ problem }: { problem: Readonly<ProblemDetail> }) {
     this.clear()
     this.problem = TypingProblemQuestioner.create(problem, this.setting)
+  }
+
+  nextWord() {
+    return this.problem?.nextWord().current
   }
 
   static create(setting: TypingGameSetting): TypingGameState {

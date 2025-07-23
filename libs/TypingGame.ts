@@ -40,7 +40,9 @@ class TypingGameImpl implements TypingGame {
   ) {}
 
   private _addTypingHandler({ gamer }: { gamer: TypingGamer }) {
-    gamer.init(this.state.current)
+    if (this.state.currentWord) {
+      gamer.init(this.state.currentWord)
+    }
 
     return this.eventManager.addTyping((event) => {
       const state = this.state
@@ -49,7 +51,12 @@ class TypingGameImpl implements TypingGame {
 
       const detail = event.detail
       const char = detail.char
-      const word = state.current
+      const currentWord = state.currentWord
+
+      if (!currentWord) {
+        this._stop()
+        return
+      }
 
       if (!char) {
         state.currentTypingState = { detail, mistake: false }
@@ -58,7 +65,7 @@ class TypingGameImpl implements TypingGame {
 
       state.totalTypeCount += 1
 
-      if (gamer.expect(char, word)) {
+      if (gamer.expect(char, currentWord)) {
         state.currentTypingState = { detail, mistake: false }
         state.totalTypeCorrect += 1
       } else {
@@ -71,14 +78,14 @@ class TypingGameImpl implements TypingGame {
         return
       }
 
-      if (!word?.success) return
+      if (!currentWord.success) return
 
-      word.endTime = state.tick
-      state.problem?.nextWord()
+      currentWord.endTime = state.tick
+      const nextWord = state.nextWord()
 
-      if (state.current) {
-        state.current.startTime = word.endTime
-        gamer.init(state.current)
+      if (nextWord) {
+        nextWord.startTime = currentWord.endTime
+        gamer.init(nextWord)
         return
       }
 
@@ -94,7 +101,7 @@ class TypingGameImpl implements TypingGame {
       if (e.repeat) return
 
       const shiftKey = e.shiftKey
-      const char = { Enter: '\n', Tab: '\t' }[e.key] ?? e.key ?? ''
+      const char = { Enter: '\n', Tab: '\t' }[e.key] ?? e.key
       const capsLock = e.getModifierState?.('CapsLock')
       const detail = { char, shiftKey, capsLock }
 
@@ -169,8 +176,8 @@ class TypingGameImpl implements TypingGame {
       this._stop = () => {}
       state.running = false
 
-      if (state.current && !state.current.endTime) {
-        state.current.endTime = state.tick
+      if (state.currentWord && !state.currentWord.endTime) {
+        state.currentWord.endTime = state.tick
       }
 
       this.eventManager.clear()
@@ -185,7 +192,7 @@ class TypingGameImpl implements TypingGame {
   async start() {
     this.cancel()
 
-    this._stop = () => {}
+    if (!this.state.problem) return
 
     const { words, type } = this.state.problem!
     const { timeLimit, autoMode } = this.setting
@@ -206,11 +213,8 @@ class TypingGameImpl implements TypingGame {
   }
 
   cancel() {
-    const state = this.state
-    if (state.isRunning) {
-      state.canceled = true
-      this._stop()
-    }
+    this._stop()
+    this.state.canceled = true
     this.eventManager.clear()
     this.timerManager.clear()
     return this._info()
@@ -246,6 +250,7 @@ class TypingGameImpl implements TypingGame {
   }
 
   dispose() {
+    this._stop()
     this.eventManager.clear()
     this.timerManager.clear()
   }
