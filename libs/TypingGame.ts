@@ -36,7 +36,7 @@ class TypingGameImpl implements TypingGame {
     private readonly state: TypingGameState,
     private readonly setting: TypingGameSetting,
     private readonly eventManager = TypingGameEventManager.create(),
-    private readonly timerManager = TimerManager.create(30),
+    private readonly timerManager = TimerManager.create(20),
   ) {}
 
   private _addTypingHandler({ gamer }: { gamer: TypingGamer }) {
