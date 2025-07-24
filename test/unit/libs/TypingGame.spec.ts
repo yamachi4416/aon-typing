@@ -24,6 +24,17 @@ describe('TypingGame', () => {
     options: Omit<KeyboardEventInit, 'key'> = {},
   ) => window.dispatchEvent(new KeyboardEvent('keydown', { key, ...options }))
 
+  async function typing(
+    keys: string | string[],
+    interval: number,
+    options: Omit<KeyboardEventInit, 'key'> = {},
+  ) {
+    for (const key of keys) {
+      await vi.advanceTimersByTimeAsync(interval)
+      dispatchKeydownEvent(key, options)
+    }
+  }
+
   beforeEach(() => {
     vi.resetAllMocks()
     vi.useFakeTimers()
@@ -57,9 +68,7 @@ describe('TypingGame', () => {
     const promise = game.start()
 
     state.nextWord()
-    await vi.advanceTimersByTimeAsync(1000)
-    dispatchKeydownEvent('1')
-    await vi.advanceTimersToNextTimerAsync()
+    await typing(['1'], 1000)
 
     const info = await promise
     expect(info).toBeDefined()
@@ -80,12 +89,7 @@ describe('TypingGame', () => {
     state.init({ problem })
 
     const promise = game.start()
-
-    for (const key of [...'12345', ...'67890']) {
-      await vi.advanceTimersByTimeAsync(1000)
-      dispatchKeydownEvent(key)
-    }
-    await vi.advanceTimersToNextTimerAsync()
+    await typing([...'12345', ...'67890'], 1000)
 
     const info = await promise
     expect(info).toBeDefined()
@@ -107,11 +111,7 @@ describe('TypingGame', () => {
 
     const promise = game.start()
 
-    for (const key of [...'12345', ...['0', 'Enter', 'Tab'], ...'67890']) {
-      await vi.advanceTimersByTimeAsync(1000)
-      dispatchKeydownEvent(key)
-    }
-    await vi.advanceTimersToNextTimerAsync()
+    await typing([...'12345', ...['0', 'Enter', 'Tab'], ...'67890'], 1000)
 
     const info = await promise
     expect(info).toBeDefined()
@@ -131,19 +131,9 @@ describe('TypingGame', () => {
 
     const promise = game.start()
 
-    await vi.advanceTimersByTimeAsync(1000)
-    dispatchKeydownEvent('1')
-
-    await vi.advanceTimersByTimeAsync(1000)
-    dispatchKeydownEvent('1', { repeat: true })
-
-    await vi.advanceTimersByTimeAsync(1000)
-    dispatchKeydownEvent('2')
-
-    await vi.advanceTimersByTimeAsync(1000)
-    dispatchKeydownEvent('3')
-
-    await vi.advanceTimersToNextTimerAsync()
+    await typing('1', 1000)
+    await typing('1', 1000, { repeat: true })
+    await typing('23', 1000)
 
     const info = await promise
     expect(info).toBeDefined()
@@ -163,11 +153,7 @@ describe('TypingGame', () => {
 
     const promise = game.start()
 
-    for (const key of ['CapsLock', 'Shift', '', '1']) {
-      await vi.advanceTimersByTimeAsync(1000)
-      dispatchKeydownEvent(key)
-    }
-    await vi.advanceTimersToNextTimerAsync()
+    await typing(['CapsLock', 'Shift', '', '1'], 1000)
 
     const info = await promise
     expect(info).toBeDefined()
@@ -186,11 +172,7 @@ describe('TypingGame', () => {
 
     const promise = game.start()
 
-    for (const key of [...'1'.repeat(20)]) {
-      await vi.advanceTimersByTimeAsync(1000)
-      dispatchKeydownEvent(key)
-    }
-    await vi.advanceTimersToNextTimerAsync()
+    await typing('1'.repeat(20), 1000)
 
     const info = await promise
     expect(info).toBeDefined()
@@ -209,11 +191,7 @@ describe('TypingGame', () => {
 
     const promise = game.start()
 
-    for (const key of [...'1'.repeat(20)]) {
-      await vi.advanceTimersByTimeAsync(1000)
-      dispatchKeydownEvent(key)
-    }
-    await vi.advanceTimersToNextTimerAsync()
+    await typing('1'.repeat(20), 1000)
 
     const info = await promise
     expect(info).toBeDefined()
@@ -229,22 +207,15 @@ describe('TypingGame', () => {
 
     state.init({ problem: toProblem({ words: [{ word: '1'.repeat(20) }] }) })
 
-    const typing = async () => {
-      for (const key of [...'1'.repeat(10)]) {
-        await vi.advanceTimersByTimeAsync(1000)
-        dispatchKeydownEvent(key)
-      }
-    }
-
     const promise = game.start()
 
-    await typing()
+    await typing('1'.repeat(10), 1000)
     game.toggle()
 
-    await typing()
+    await typing('1'.repeat(10), 1000)
     game.toggle()
 
-    await typing()
+    await typing('1'.repeat(10), 1000)
 
     const info = await promise
     expect(info).toBeDefined()
@@ -260,24 +231,17 @@ describe('TypingGame', () => {
 
     state.init({ problem: toProblem({ words: [{ word: '1'.repeat(20) }] }) })
 
-    const typing = async () => {
-      for (const key of [...'1'.repeat(10)]) {
-        await vi.advanceTimersByTimeAsync(1000)
-        dispatchKeydownEvent(key)
-      }
-    }
-
     const promise = game.start()
 
-    await typing()
+    await typing('1'.repeat(10), 1000)
     expect(game.pause()).toBe(true)
     expect(game.pause()).toBe(false)
 
-    await typing()
+    await typing('1'.repeat(10), 1000)
     expect(game.resume()).toBe(true)
     expect(game.resume()).toBe(false)
 
-    await typing()
+    await typing('1'.repeat(10), 1000)
 
     const info = await promise
     expect(info).toBeDefined()
@@ -293,18 +257,11 @@ describe('TypingGame', () => {
 
     state.init({ problem: toProblem({ words: [{ word: '1'.repeat(20) }] }) })
 
-    const typing = async () => {
-      for (const key of [...'1'.repeat(10)]) {
-        await vi.advanceTimersByTimeAsync(1000)
-        dispatchKeydownEvent(key)
-      }
-    }
-
     const promise = game.start()
 
-    await typing()
+    await typing('1'.repeat(10), 1000)
     game.dispose()
-    await typing()
+    await typing('1'.repeat(10), 1000)
 
     const info = await promise
     expect(info).toBeDefined()
@@ -330,5 +287,56 @@ describe('TypingGame', () => {
     expect(info).toBeDefined()
     expect(info?.time).toBe(100)
     expect(info?.totalTypeCount).toBe(10)
+  })
+
+  it('オートモード（一時停止）', async () => {
+    const setting = TypingGameSetting.create()
+    setting.autoMode = 10
+
+    const state = TypingGameState.create(setting)
+    const timerManager = TimerManager.create(10)
+    const game = TypingGame.create({ state, setting, timerManager })
+
+    state.init({ problem: toProblem({ words: [{ word: '1'.repeat(20) }] }) })
+
+    const promise = game.start()
+    await vi.advanceTimersByTimeAsync(100)
+
+    game.pause()
+    await vi.advanceTimersByTimeAsync(100)
+
+    game.resume()
+    await vi.advanceTimersByTimeAsync(100)
+
+    const info = await promise
+    expect(info).toBeDefined()
+    expect(info?.time).toBe(200)
+    expect(info?.totalTypeCount).toBe(20)
+  })
+
+  it('Visibilitychange', async () => {
+    const setting = TypingGameSetting.create()
+    const state = TypingGameState.create(setting)
+    const timerManager = TimerManager.create(10)
+    const game = TypingGame.create({ state, setting, timerManager })
+
+    state.init({ problem: toProblem({ words: [{ word: '1'.repeat(20) }] }) })
+
+    const promise = game.start()
+    await typing('1'.repeat(10), 100)
+
+    vi.spyOn(document, 'visibilityState', 'get').mockReturnValue('hidden')
+    document.dispatchEvent(new Event('visibilitychange'))
+    await vi.advanceTimersByTimeAsync(100000)
+
+    vi.spyOn(document, 'visibilityState', 'get').mockReturnValue('visible')
+    document.dispatchEvent(new Event('visibilitychange'))
+    await vi.advanceTimersByTimeAsync(500)
+    await typing('1'.repeat(10), 100)
+
+    const info = await promise
+    expect(info).toBeDefined()
+    expect(info?.time).toBe(2500)
+    expect(info?.totalTypeCount).toBe(20)
   })
 })
