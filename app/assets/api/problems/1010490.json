@@ -1,0 +1,33 @@
+{
+  "id": "1010490",
+  "title": "横浜市営地下鉄グリーンラインの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-07-25",
+  "updatedAt": "2025-07-25",
+  "words": [
+    { "info": "中山", "info2": "なかやま", "word": "nakayama" },
+    { "info": "川和町", "info2": "かわわちょう", "word": "kawawatyou" },
+    {
+      "info": "都筑ふれあいの丘",
+      "info2": "つづきふれあいのおか",
+      "word": "tudukihureainooka"
+    },
+    { "info": "センター南", "info2": "せんたーみなみ", "word": "senta-minami" },
+    { "info": "センター北", "info2": "せんたーきた", "word": "senta-kita" },
+    { "info": "北山田", "info2": "きたやまた", "word": "kitayamata" },
+    { "info": "東山田", "info2": "ひがしやまた", "word": "higasiyamata" },
+    { "info": "高田", "info2": "たかた", "word": "takata" },
+    {
+      "info": "日吉本町",
+      "info2": "ひよしほんちょう",
+      "word": "hiyosihontyou"
+    },
+    { "info": "日吉", "info2": "ひよし", "word": "hiyosi" }
+  ],
+  "optional": { "cd": ["490"], "coCd": ["69"] }
+}
