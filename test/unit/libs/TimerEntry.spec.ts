@@ -53,7 +53,7 @@ describe('TimerEntry', () => {
     expect(entry.handle(100)).toBe(true)
     expect(handler).toBeCalledTimes(1)
 
-    entry.pause()
+    entry.pause(150)
 
     expect(entry.handle(200)).toBe(false)
     expect(handler).toBeCalledTimes(1)
@@ -70,12 +70,12 @@ describe('TimerEntry', () => {
     expect(entry.handle(100)).toBe(true)
     expect(handler).toBeCalledTimes(1)
 
-    entry.pause()
+    entry.pause(150)
 
     expect(entry.handle(200)).toBe(false)
     expect(handler).toBeCalledTimes(1)
 
-    entry.resume()
+    entry.resume(250)
 
     expect(entry.handle(300)).toBe(true)
     expect(handler).toBeCalledTimes(2)

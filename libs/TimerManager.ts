@@ -45,6 +45,7 @@ class TimerManagerImpl implements TimerManager {
   private readonly timeProvider: TimeProvider
   private readonly abortManager: AbortManager
   private readonly timerTicker: TimerTicker
+  private paused: boolean = false
   private entries: TimerEntry[] = []
 
   constructor(
@@ -57,6 +58,10 @@ class TimerManagerImpl implements TimerManager {
     this.timerTicker = timerTicker
   }
 
+  private getTime() {
+    return this.timeProvider.now()
+  }
+
   add({
     handler,
     interval,
@@ -64,7 +69,11 @@ class TimerManagerImpl implements TimerManager {
     handler: () => void
     interval: (() => number) | number
   }) {
-    this.entries.push(TimerEntry.create(handler, interval))
+    const entry = TimerEntry.create(handler, interval)
+    if (this.paused) {
+      entry.pause(this.getTime())
+    }
+    this.entries.push(entry)
     return this
   }
 
@@ -73,36 +82,44 @@ class TimerManagerImpl implements TimerManager {
 
     this.timerTicker.stop()
 
-    const startTime = this.timeProvider.now()
+    const startTime = this.getTime()
 
     for (const entry of this.entries) {
-      entry.setup(startTime)
+      entry.resume(startTime).setup(startTime)
     }
 
     for await (const time of this.timerTicker.start()) {
+      if (this.paused) continue
       this.entries.forEach((entry) => entry.handle(time))
     }
 
-    return this.timeProvider.now() - startTime
+    return this.getTime() - startTime
   }
 
   stop() {
     this.timerTicker.stop()
+    this.paused = false
     return this
   }
 
   pause() {
-    this.entries.forEach((entry) => entry.pause())
+    if (this.paused) return this
+    this.paused = true
+    const time = this.getTime()
+    this.entries.forEach((entry) => entry.pause(time))
     return this
   }
 
   resume() {
-    this.entries.forEach((entry) => entry.resume())
+    if (!this.paused) return this
+    this.paused = false
+    const time = this.getTime()
+    this.entries.forEach((entry) => entry.resume(time))
     return this
   }
 
   clear() {
-    this.timerTicker.stop()
+    this.stop()
     this.entries = []
     return this
   }
