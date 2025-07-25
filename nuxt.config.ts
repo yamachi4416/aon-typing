@@ -111,12 +111,6 @@ export default defineNuxtConfig({
     },
   },
 
-  typescript: {
-    tsConfig: {
-      include: ['../libs/**/*', '../test/**/*', '../scripts/**/*'],
-    },
-  },
-
   nitro: {
     minify: true,
     prerender: {
