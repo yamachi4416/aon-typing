@@ -28,7 +28,7 @@ jobs:
         run: pnpm run lint
 
       - name: Run unit test
-        run: pnpm run test:ci --project libs --project app
+        run: pnpm run test:unit
 
   e2e:
     runs-on: ubuntu-latest
@@ -71,4 +71,4 @@ jobs:
         run: pnpm run generate
 
       - name: Run e2e test
-        run: pnpm run test:ci --project e2e
+        run: pnpm run test:e2e
