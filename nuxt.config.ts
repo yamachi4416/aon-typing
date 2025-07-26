@@ -74,6 +74,8 @@ export default defineNuxtConfig({
   },
 
   site: {
+    name: 'あぉ～ん タイピング',
+    copyright: '2021 Studio AON',
     defaultLocale: 'ja',
   },
 
@@ -106,7 +108,6 @@ export default defineNuxtConfig({
       pageSize: 30,
       site: {
         url: 'http://localhost:3000',
-        name: 'あぉ～ん タイピング',
       },
     },
   },

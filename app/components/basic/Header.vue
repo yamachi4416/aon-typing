@@ -1,11 +1,7 @@
 <template>
   <header :class="$style.header" role="banner">
     <section>
-      <h1>
-        <NuxtLink :to="{ name: 'index' }">
-          {{ chars.title }}
-        </NuxtLink>
-      </h1>
+      <BasicHeaderTitle :name :anim />
       <BasicHeaderThemeChagne />
     </section>
     <BasicHeaderNavigation />
@@ -13,47 +9,15 @@
 </template>
 
 <script setup lang="ts">
-import { toTypeJapaneseCharsMap } from '~~/libs/TypingUtil'
-import { wait } from '~~/libs/Util'
-
-const props = withDefaults(
+withDefaults(
   defineProps<{
+    name: string
     anim?: boolean
   }>(),
   {
     anim: true,
   },
 )
-
-const site = useSiteConfig()
-const chars = reactive({
-  fins: [site.name] as string[],
-  bufs: [] as string[],
-  get title() {
-    return [...chars.fins, ...chars.bufs].join('')
-  },
-})
-
-onMounted(typing)
-
-async function typing() {
-  if (!props.anim) return
-
-  const { title } = chars
-
-  chars.fins = []
-
-  const types = toTypeJapaneseCharsMap(title)
-
-  for (const { jc, ec } of types) {
-    for (const c of Array.from(ec)) {
-      chars.bufs.push(c)
-      await wait(100)
-    }
-    chars.bufs = []
-    chars.fins.push(jc)
-  }
-}
 </script>
 
 <style lang="scss" module>

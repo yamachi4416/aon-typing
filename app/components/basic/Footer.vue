@@ -8,12 +8,15 @@
       </ul>
     </nav>
     <div :class="$style.copy">
-      <p>&copy; 2021 Studio AON</p>
+      <p>&copy; {{ copyright }}</p>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
+defineProps<{
+  copyright: string
+}>()
 const menus = routeRecords([
   { to: { name: 'index-policy' }, label: 'サイトポリシー' },
   { to: { name: 'index-contact' }, label: 'お問い合わせ' },

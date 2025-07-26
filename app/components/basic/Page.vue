@@ -1,10 +1,10 @@
 <template>
   <section :class="$style.page">
-    <BasicHeader v-if="showHeader" :anim="anim" />
+    <BasicHeader v-if="showHeader" :name :anim />
     <main>
       <slot />
     </main>
-    <BasicFooter v-if="showFooter" />
+    <BasicFooter v-if="showFooter" :copyright />
   </section>
 </template>
 
@@ -21,6 +21,8 @@ withDefaults(
     showFooter: true,
   },
 )
+
+const { name, copyright } = useSiteConfig()
 </script>
 
 <style lang="scss" module>
