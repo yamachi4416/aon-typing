@@ -1,0 +1,22 @@
+{
+  "id": "1010681",
+  "title": "青い森鉄道(目時－八戸)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-07-27",
+  "updatedAt": "2025-07-27",
+  "words": [
+    { "info": "八戸", "info2": "はちのへ", "word": "hatinohe" },
+    { "info": "北高岩", "info2": "きたたかいわ", "word": "kitatakaiwa" },
+    { "info": "苫米地", "info2": "とまべち", "word": "tomabeti" },
+    { "info": "剣吉", "info2": "けんよし", "word": "kennyosi" },
+    { "info": "諏訪ノ平", "info2": "すわのたいら", "word": "suwanotaira" },
+    { "info": "三戸", "info2": "さんのへ", "word": "sannnohe" },
+    { "info": "目時", "info2": "めとき", "word": "metoki" }
+  ],
+  "optional": { "cd": ["681"], "coCd": ["195"] }
+}

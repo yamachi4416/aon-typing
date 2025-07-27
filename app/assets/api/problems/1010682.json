@@ -1,0 +1,40 @@
+{
+  "id": "1010682",
+  "title": "青い森鉄道(八戸－青森)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-07-27",
+  "updatedAt": "2025-07-27",
+  "words": [
+    { "info": "青森", "info2": "あおもり", "word": "aomori" },
+    { "info": "筒井", "info2": "つつい", "word": "tutui" },
+    { "info": "東青森", "info2": "ひがしあおもり", "word": "higasiaomori" },
+    { "info": "小柳", "info2": "こやなぎ", "word": "koyanagi" },
+    { "info": "矢田前", "info2": "やだまえ", "word": "yadamae" },
+    { "info": "野内", "info2": "のない", "word": "nonai" },
+    {
+      "info": "浅虫温泉",
+      "info2": "あさむしおんせん",
+      "word": "asamusionsenn"
+    },
+    { "info": "西平内", "info2": "にしひらない", "word": "nisihiranai" },
+    { "info": "小湊", "info2": "こみなと", "word": "kominato" },
+    { "info": "清水川", "info2": "しみずがわ", "word": "simizugawa" },
+    { "info": "狩場沢", "info2": "かりばさわ", "word": "karibasawa" },
+    { "info": "野辺地", "info2": "のへじ", "word": "nohezi" },
+    { "info": "千曳", "info2": "ちびき", "word": "tibiki" },
+    { "info": "乙供", "info2": "おっとも", "word": "ottomo" },
+    { "info": "上北町", "info2": "かみきたちょう", "word": "kamikitatyou" },
+    { "info": "小川原", "info2": "こがわら", "word": "kogawara" },
+    { "info": "三沢", "info2": "みさわ", "word": "misawa" },
+    { "info": "向山", "info2": "むかいやま", "word": "mukaiyama" },
+    { "info": "下田", "info2": "しもだ", "word": "simoda" },
+    { "info": "陸奥市川", "info2": "むついちかわ", "word": "mutuitikawa" },
+    { "info": "八戸", "info2": "はちのへ", "word": "hatinohe" }
+  ],
+  "optional": { "cd": ["682"], "coCd": ["195"] }
+}
