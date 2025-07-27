@@ -1,13 +1,12 @@
-import { readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
-import { format as prettier } from 'prettier'
 import {
-  confirm,
-  defineCommand,
   fmtDate,
   isFileNotFoundError,
   isPathExists,
-} from '../lib/util'
+  readJson,
+  writeJson,
+} from '../_util'
+import { confirm, defineCommand } from '../_util/cli'
 import { fetchOperationLine, fetchStations } from './ekispert/api'
 
 interface Data {
@@ -38,10 +37,9 @@ function defaultData(): Data {
   }
 }
 
-async function readFileOrDefaultData(file: string): Promise<Data> {
+async function readFileOrDefaultData(file: string) {
   try {
-    const buffer = await readFile(file)
-    return JSON.parse(buffer.toString())
+    return await readJson<Data>(file)
   } catch (e: unknown) {
     if (isFileNotFoundError(e)) return defaultData()
     throw e
@@ -49,53 +47,54 @@ async function readFileOrDefaultData(file: string): Promise<Data> {
 }
 
 export default defineCommand({
-  command: 'eki-word-dl',
-  describe: 'eki word data download from api',
-  builder: (argv) =>
-    argv
-      .option('data-dir', {
-        alias: 'i',
-        type: 'string',
-        describe: 'input data directory',
-        demandOption: true,
-        requiresArg: true,
-      })
-      .option('ekispert-api-key', {
-        alias: 'k',
-        type: 'string',
-        describe: 'api key',
-        demandOption: true,
-        requiresArg: true,
-      })
-      .option('operation-line-code', {
-        alias: 'c',
-        type: 'array',
-        describe: 'operation line codes',
-        demandOption: true,
-        requiresArg: true,
-      })
-      .option('dry-run', {
-        type: 'boolean',
-        describe: 'dry run show stdout',
-        demandOption: false,
-        requiresArg: false,
-      })
-      .option('overwrite', {
-        alias: 'f',
-        type: 'boolean',
-        describe: 'overwrite if exists',
-        demandOption: false,
-        requiresArg: false,
-      })
-      .coerce('operation-line-code', (cds) => String(cds).split(',')),
-  handler: async ({
-    dataDir,
-    operationLineCode: cds,
-    dryRun,
-    ekispertApiKey: key,
-    overwrite,
-  }) => {
-    if (!cds?.length) {
+  meta: {
+    name: 'eki-word-dl',
+    description: 'download station word data from the api',
+  },
+  args: {
+    dataDir: {
+      alias: 'i',
+      type: 'string',
+      description: 'input data directory',
+      required: true,
+    },
+    ekispertApiKey: {
+      alias: 'k',
+      type: 'string',
+      description: 'api key',
+      required: true,
+    },
+    operationLineCode: {
+      alias: 'c',
+      type: 'string',
+      description: 'operation line codes (comma-separated)',
+      required: true,
+    },
+    dryRun: {
+      type: 'boolean',
+      description: 'dry run (show output to stdout only)',
+      required: false,
+      default: false,
+    },
+    overwrite: {
+      alias: 'f',
+      type: 'boolean',
+      description: 'overwrite if file exists',
+      required: false,
+      default: false,
+    },
+  },
+  async run({
+    args: {
+      dataDir,
+      operationLineCode,
+      dryRun,
+      ekispertApiKey: key,
+      overwrite,
+    },
+  }) {
+    const cds = operationLineCode.split(',')
+    if (!cds.length) {
       throw new Error('operationLineCode must not be empty.')
     }
 
@@ -147,11 +146,7 @@ export default defineCommand({
         if (!confirmed) return
       }
 
-      const json = await prettier(JSON.stringify(data), {
-        parser: 'json',
-      })
-
-      await writeFile(file, json)
+      await writeJson(file, data)
       console.log(data.title, file, isExists ? 'Updated' : 'Added')
     }
   },

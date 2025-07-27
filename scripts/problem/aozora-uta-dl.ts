@@ -3,7 +3,8 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { TextDecoder } from 'node:util'
 import { kana2Hira } from '~~/libs/TypingUtil'
-import { defineCommand, httpFetch } from '../lib/util'
+import { defineCommand } from '../_util/cli'
+import { httpFetch } from '../_util/http'
 
 const normalizeMap: Record<string, string> = {
   一: '１',
@@ -226,7 +227,9 @@ async function aozoraDL(args: { url: string; dist: string; word: number }) {
       return
     }
     const dist = path.resolve(distDir, `${page.id}.json`)
-    const temp = JSON.parse((await fs.readFile(dist)).toString())
+    const temp = JSON.parse(
+      await fs.readFile(dist, { flag: 'r', encoding: 'utf8' }),
+    )
     if (temp.skip) {
       console.info(`skip write: ${dist}`)
       return
@@ -238,32 +241,33 @@ async function aozoraDL(args: { url: string; dist: string; word: number }) {
 }
 
 export default defineCommand({
-  command: 'aozora',
-  describe: 'download uta info for typing problem json',
-  builder: (argv) =>
-    argv
-      .options('aorora-uta-url', {
-        alias: 'u',
-        type: 'string',
-        description: 'request url',
-        demandOption: true,
-        requiresArg: true,
-      })
-      .options('data-dir', {
-        alias: 'o',
-        type: 'string',
-        description: 'data directory',
-        requiresArg: true,
-      })
-      .options('word-count', {
-        alias: 'W',
-        type: 'number',
-        description: 'word max',
-        default: 40,
-        requiresArg: true,
-      }),
-  handler: async ({ aororaUtaUrl, wordCount, dataDir }) => {
-    if (!dataDir) throw new Error('dataDir is required.')
+  meta: {
+    name: 'aozora',
+    description: 'download uta info for typing problem json',
+  },
+  args: {
+    aororaUtaUrl: {
+      alias: 'u',
+      type: 'string',
+      description: 'request url',
+      required: true,
+    },
+    dataDir: {
+      alias: 'o',
+      type: 'string',
+      description: 'data directory',
+      required: true,
+    },
+    wordCount: {
+      alias: 'W',
+      type: 'string',
+      description: 'word max',
+      default: '40',
+    },
+  },
+  async run({ args: { aororaUtaUrl, wordCount: _wordCount, dataDir } }) {
+    const wordCount = parseInt(_wordCount, 10)
+    if (Number.isNaN(wordCount)) throw new Error('wordCount is not number')
     await aozoraDL({
       url: aororaUtaUrl,
       word: wordCount,

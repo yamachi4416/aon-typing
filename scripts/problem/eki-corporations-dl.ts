@@ -1,29 +1,29 @@
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir } from 'node:fs/promises'
 import path from 'node:path'
-import { format as prettier } from 'prettier'
-import { defineCommand, isPathExists } from '../lib/util'
+import { isPathExists, writeJson } from '../_util'
+import { defineCommand } from '../_util/cli'
 import { fetchCorporations, fetchOperationLines } from './ekispert/api'
 
 export default defineCommand({
-  command: 'eki-corporations-dl',
-  describe: 'eki corporations data download from api',
-  builder: (argv) =>
-    argv
-      .option('data-dir', {
-        alias: 'i',
-        type: 'string',
-        describe: 'input data directory',
-        demandOption: true,
-        requiresArg: true,
-      })
-      .option('ekispert-api-key', {
-        alias: 'k',
-        type: 'string',
-        describe: 'api key',
-        demandOption: true,
-        requiresArg: true,
-      }),
-  handler: async ({ dataDir, ekispertApiKey: key }) => {
+  meta: {
+    name: 'eki-corporations-dl',
+    description: 'eki corporations data download from api',
+  },
+  args: {
+    dataDir: {
+      alias: 'i',
+      type: 'string',
+      description: 'input data directory',
+      required: true,
+    },
+    ekispertApiKey: {
+      alias: 'k',
+      type: 'string',
+      description: 'api key',
+      required: true,
+    },
+  },
+  async run({ args: { dataDir, ekispertApiKey: key } }) {
     const distDir = path.join(dataDir, 'railway')
 
     if (!(await isPathExists(distDir))) {
@@ -52,11 +52,6 @@ export default defineCommand({
         .toSorted((a, b) => Number(a.code) - Number(b.code)),
     )
 
-    await writeFile(
-      path.join(distDir, 'corporations.json'),
-      await prettier(JSON.stringify(corporations), {
-        parser: 'json',
-      }),
-    )
+    await writeJson(path.join(distDir, 'corporations.json'), corporations)
   },
 })

@@ -6,7 +6,7 @@ export function isNumber(num: unknown): num is number {
   return typeof num === 'number' && !isNaN(num)
 }
 
-export function isFunction<T extends () => unknown>(fn: unknown): fn is T {
+export function isFunction(fn: unknown) {
   return typeof fn === 'function'
 }
 
@@ -60,12 +60,10 @@ export async function countDown(
 }
 
 export async function wait(time: number, options: TimerTickerOptions = {}) {
-  if (import.meta.client) {
-    return await intervalTimer(1, time, () => {}, {
-      ...options,
-      tickInterval: Math.trunc(time / 2),
-    })
-  }
+  return await intervalTimer(1, time, () => {}, {
+    ...options,
+    tickInterval: Math.trunc(time / 2),
+  })
 }
 
 export function pagenate<T>({

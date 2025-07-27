@@ -1,53 +1,45 @@
-import type { Argv } from 'yargs'
-import yargs from 'yargs'
-import { hideBin } from 'yargs/helpers'
+import { defineCommand, runMain } from './_util/cli'
 import { previewServer } from './lib/preview'
-import { defineCommand, yargsFailHandler } from './lib/util'
 
-function builder(yargs: Argv) {
-  return yargs
-    .options('dir', {
+const command = defineCommand({
+  meta: {
+    name: 'preview-server',
+    description: 'preview server',
+  },
+  args: {
+    dir: {
       alias: 'd',
       type: 'string',
-      description: 'static file root directory',
+      description: 'serve file directory',
       default: '.',
-      requiresArg: true,
-    })
-    .options('host', {
+      required: true,
+    },
+    host: {
       alias: 'H',
       type: 'string',
-      description: 'listen host default',
+      description: 'listen host',
       default: 'localhost',
-      requiresArg: true,
-    })
-    .options('port', {
+      required: true,
+    },
+    port: {
       alias: 'p',
-      type: 'number',
-      description:
-        "listen host default. that in directory of specify by '--dir'",
-      default: 3000,
-      requiresArg: true,
+      type: 'string',
+      description: 'listen port',
+      default: '3000',
+    },
+  },
+  async run({ args: { dir: distDir, host, port: _port } }) {
+    const port = parseInt(_port, 10)
+    if (Number.isNaN(port)) {
+      throw new Error('port must be a number')
+    }
+    await previewServer({
+      host,
+      port,
+      distDir,
+      logger: console,
     })
-}
+  },
+})
 
-yargs(hideBin(process.argv))
-  .locale('en')
-  .fail(yargsFailHandler)
-  .help()
-  .alias('h', 'help')
-  .command(
-    defineCommand({
-      command: 'preview',
-      describe: 'generate preview server',
-      aliases: '$0',
-      builder,
-      handler: async (args) => {
-        await previewServer({
-          ...args,
-          distDir: args.dir,
-          logger: console,
-        })
-      },
-    }),
-  )
-  .parse()
+runMain(command)

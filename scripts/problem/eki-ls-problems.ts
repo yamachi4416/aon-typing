@@ -1,7 +1,8 @@
-import { mkdtemp, readFile, readdir, writeFile } from 'node:fs/promises'
+import { mkdtemp, readdir, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
-import { defineCommand, toArray } from '../lib/util'
+import { readJson, toArray } from '../_util'
+import { defineCommand } from '../_util/cli'
 
 async function getTaggedProblems({ dataDir }: { dataDir: string }) {
   const dir = path.join(path.resolve(dataDir), 'problems')
@@ -13,17 +14,16 @@ async function getTaggedProblems({ dataDir }: { dataDir: string }) {
 
   const dataset = await Promise.all(
     files.map(async (file) => {
-      const buffer = await readFile(file, { flag: 'r' })
       return {
         id: path.basename(file, path.extname(file)),
         file,
-        data: JSON.parse(buffer.toString()) as {
+        data: await readJson<{
           title: string
           tags: string[]
           optional: {
             cd: string[] | string
           }
-        },
+        }>(file),
       }
     }),
   )
@@ -43,9 +43,10 @@ async function getOperationLines({ dataDir }: { dataDir: string }) {
     'railway',
     'corporations.json',
   )
-  const buffer = await readFile(filePath, { flag: 'r' })
+
   const data: { operationLines: { code: string; name: string }[] }[] =
-    JSON.parse(buffer.toString())
+    await readJson(filePath)
+
   return new Map(
     data.flatMap(({ operationLines }) =>
       operationLines.map(({ code, name }) => [Number(code), name]),
@@ -54,30 +55,31 @@ async function getOperationLines({ dataDir }: { dataDir: string }) {
 }
 
 export default defineCommand({
-  command: 'eki-ls',
-  describe: 'eki list info',
-  builder: (argv) =>
-    argv
-      .option('data-dir', {
-        alias: 'i',
-        type: 'string',
-        describe: 'input data directory',
-        demandOption: true,
-        requiresArg: true,
-      })
-      .option('delimiter', {
-        alias: 'd',
-        type: 'string',
-        describe: 'field delimiter',
-        default: ' ',
-      })
-      .option('outfile', {
-        alias: 'o',
-        type: 'boolean',
-        describe: 'output to file',
-        default: false,
-      }),
-  async handler(args) {
+  meta: {
+    name: 'eki-ls',
+    description: 'eki list info',
+  },
+  args: {
+    dataDir: {
+      alias: 'i',
+      type: 'string',
+      description: 'input data directory',
+      required: true,
+    },
+    delimiter: {
+      alias: 'd',
+      type: 'string',
+      description: 'field delimiter',
+      default: ' ',
+    },
+    outfile: {
+      alias: 'o',
+      type: 'boolean',
+      description: 'output to file',
+      default: false,
+    },
+  },
+  async run({ args }) {
     const problems = await getTaggedProblems(args)
     const operationLines = await getOperationLines(args)
 
