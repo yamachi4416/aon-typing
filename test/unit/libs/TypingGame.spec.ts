@@ -48,7 +48,7 @@ describe('TypingGame', () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     const info = await game.start()
 
@@ -59,7 +59,7 @@ describe('TypingGame', () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     const problem = toProblem({ words: [{ word: '12345' }] })
 
@@ -80,7 +80,7 @@ describe('TypingGame', () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     const problem = toProblem({
       words: [{ word: '12345' }, { word: '67890' }],
@@ -101,7 +101,7 @@ describe('TypingGame', () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     const problem = toProblem({
       words: [{ word: '12345' }, { word: '67890' }],
@@ -123,7 +123,7 @@ describe('TypingGame', () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     const problem = toProblem({ words: [{ word: '123' }] })
 
@@ -145,7 +145,7 @@ describe('TypingGame', () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     const problem = toProblem({ words: [{ word: '1' }] })
 
@@ -166,7 +166,7 @@ describe('TypingGame', () => {
     setting.goalCharCount = 10
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     state.init({ problem: toProblem({ words: [{ word: '1'.repeat(100) }] }) })
 
@@ -185,7 +185,7 @@ describe('TypingGame', () => {
     setting.timeLimit = 10000
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     state.init({ problem: toProblem({ words: [{ word: '1'.repeat(100) }] }) })
 
@@ -203,7 +203,7 @@ describe('TypingGame', () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     state.init({ problem: toProblem({ words: [{ word: '1'.repeat(20) }] }) })
 
@@ -227,7 +227,7 @@ describe('TypingGame', () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     state.init({ problem: toProblem({ words: [{ word: '1'.repeat(20) }] }) })
 
@@ -253,7 +253,7 @@ describe('TypingGame', () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     state.init({ problem: toProblem({ words: [{ word: '1'.repeat(20) }] }) })
 
@@ -275,7 +275,7 @@ describe('TypingGame', () => {
 
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     state.init({ problem: toProblem({ words: [{ word: '1'.repeat(10) }] }) })
 
@@ -295,7 +295,7 @@ describe('TypingGame', () => {
 
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     state.init({ problem: toProblem({ words: [{ word: '1'.repeat(20) }] }) })
 
@@ -318,7 +318,7 @@ describe('TypingGame', () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
-    const game = TypingGame.create({ state, setting, timerManager })
+    const game = TypingGame.create({ state, timerManager })
 
     state.init({ problem: toProblem({ words: [{ word: '1'.repeat(20) }] }) })
 

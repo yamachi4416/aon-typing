@@ -36,7 +36,7 @@ import { countDown } from '~~/libs/Util'
 
 const { setting } = useGameSetting()
 const state = reactive(TypingGameState.create(setting.value))
-const typing = TypingGame.create({ state, setting: setting.value })
+const typing = TypingGame.create({ state })
 const result = ref<TypingGameInfo>()
 const counter = shallowReactive({
   count: 0,

@@ -16,16 +16,14 @@ export abstract class TypingGame {
 
   static create({
     state,
-    setting,
     eventManager,
     timerManager,
   }: {
     state: TypingGameState
-    setting: TypingGameSetting
     eventManager?: TypingGameEventManager
     timerManager?: TimerManager
   }): TypingGame {
-    return new TypingGameImpl(state, setting, eventManager, timerManager)
+    return new TypingGameImpl(state, state.setting, eventManager, timerManager)
   }
 }
 
