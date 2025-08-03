@@ -24,7 +24,9 @@ export abstract class BaseDialogModel {
   }
 
   get isActive() {
-    return this.isExists && this.dialog?.attributes('inert') === undefined
+    if (!this.isExists) return false
+    const inert = this.dialog?.attributes('inert')
+    return inert === undefined || inert === 'false'
   }
 
   get isInactive() {

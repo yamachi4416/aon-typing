@@ -24,12 +24,15 @@ export class PageModelUtility {
   async waitForPageFinished(timeout: number) {
     const { resolve, promise } = Promise.withResolvers<boolean>()
 
+    const nuxt = tryUseNuxtApp()
+    if (!nuxt) return false
+
     const cancel = setTimeout(() => {
       unsubscribe()
       resolve(false)
     }, timeout)
 
-    const unsubscribe = useNuxtApp().hook('page:finish', () => {
+    const unsubscribe = nuxt.hook('page:finish', () => {
       clearTimeout(cancel)
       unsubscribe()
       resolve(true)

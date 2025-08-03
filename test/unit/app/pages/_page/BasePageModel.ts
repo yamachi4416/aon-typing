@@ -3,10 +3,19 @@ import type { AppPage } from '../../_utils'
 import { PageModelUtility } from './PageModelUtility'
 
 export abstract class BasePageModel {
-  constructor(
-    protected readonly page: AppPage,
-    protected readonly utility = new PageModelUtility(page),
-  ) {}
+  protected readonly utility: PageModelUtility
+
+  protected constructor(protected readonly page: AppPage) {
+    this.utility = new PageModelUtility(page)
+  }
+
+  get nuxt() {
+    return this.page.vm.$nuxt
+  }
+
+  get router() {
+    return this.page.vm.$router
+  }
 
   get pathname() {
     return location.pathname
@@ -20,9 +29,18 @@ export abstract class BasePageModel {
     return this.page.html()
   }
 
-  async keydownEscape() {
-    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }))
+  async keydown(init: KeyboardEventInit | string) {
+    window.dispatchEvent(
+      new KeyboardEvent(
+        'keydown',
+        typeof init === 'string' ? { key: init } : init,
+      ),
+    )
     await flushPromises()
+  }
+
+  async keydownEscape() {
+    await this.keydown('Escape')
   }
 
   async navigateTo(...args: Parameters<typeof navigateTo>) {

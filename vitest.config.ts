@@ -25,6 +25,13 @@ export default defineConfig({
         test: {
           name: 'app',
           dir: './test/unit/app',
+          environmentOptions: {
+            nuxt: {
+              overrides: {
+                sourcemap: true,
+              },
+            },
+          },
         },
       }),
       mergeConfig(reolveAliasConfig, {

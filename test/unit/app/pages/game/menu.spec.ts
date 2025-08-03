@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest'
+import problems from '~/assets/api/problems.json'
+import problem1000001 from '~/assets/api/problems/1000001.json'
 import { TypingGameSetting } from '~~/libs/TypingGameSetting'
-import type { ProblemDetail, ProblemListItem } from '~~/types/problems'
 import { MenuPageModel } from './_page/MenuPageModel'
 
 function setupRoute() {
@@ -12,51 +13,34 @@ function setupRoute() {
     path: '/',
     name: 'index',
     component: defineComponent({
-      render: () => <>index</>,
+      template: '/',
     }),
   })
   router.addRoute({
     path: '/game/play',
     name: 'game-play',
     component: defineComponent({
-      render: () => <>game/play</>,
+      template: '/game/play',
     }),
   })
 }
 
 function setupState() {
   useGameSetting().setting.value = TypingGameSetting.create()
-
-  useState<Partial<ProblemDetail>>('/api/problems/0000001.json').value = {
-    id: '0000001',
-    type: 'japanese',
-    title: '問題のタイトル',
-    tags: [],
-    words: [],
-  }
-
-  useState<{ problems: ProblemListItem[] }>('/api/problems.json').value = {
-    problems: [
-      {
-        id: '0000001',
-        title: '問題のタイトル',
-        tags: [],
-        type: 'japanese',
-        chars: 0,
-        words: 0,
-      },
-    ],
-  }
+  useState('/api/problems/1000001.json').value = problem1000001
+  useState('/api/problems.json').value = problems
 }
 
-describe('page/game/menu', () => {
+const createPage = MenuPageModel.create
+
+describe('pages/game/menu', () => {
   beforeEach(() => {
     setupRoute()
     setupState()
   })
 
   describe('メニューダイアログ', () => {
-    const setupPage = MenuPageModel.create
+    const setupPage = createPage
 
     it('初期表示で表示される', async () => {
       const page = await setupPage()
@@ -72,15 +56,14 @@ describe('page/game/menu', () => {
       const page = await setupPage()
       await page.navigateTo('/')
       expect(page.pathname).toBe('/')
-      expect(page.textContent).toBe('index')
+      expect(page.textContent).toBe('/')
     })
 
-    it('ダイアログを閉じる（やめる）', async ({ skip }) => {
+    it('ダイアログを閉じる（やめる）', async () => {
       const page = await setupPage()
       expect(await page.menuDialog.clickCancel()).toBe(true)
       expect(page.pathname).toBe('/')
-      skip('TODO: router.back() fails to trigger page navigation')
-      expect(page.textContent).toBe('index')
+      expect(page.textContent).toBe('/')
     })
 
     it('ダイアログを閉じない（ESC）', async () => {
@@ -88,7 +71,7 @@ describe('page/game/menu', () => {
       await page.keydownEscape()
       expect(page.menuDialog.isActive).toBe(true)
       expect(page.pathname).not.toBe('/')
-      expect(page.textContent).not.toBe('index')
+      expect(page.textContent).not.toBe('/')
     })
 
     it('タイピング問題の選択ダイアログを開く', async () => {
@@ -99,26 +82,25 @@ describe('page/game/menu', () => {
     })
 
     it('タイピング問題の内容ダイアログを開く', async () => {
-      const page = await setupPage()
-      await page.setProblemId('0000001')
+      const page = await setupPage({ problemId: problem1000001.id })
       expect(await page.menuDialog.clickProblemDetail()).toBe(true)
       expect(page.menuDialog.isInactive).toBe(true)
       expect(page.problemDetailDialog.isActive).toBe(true)
     })
 
     it('ゲームをスタートする', async () => {
-      const page = await setupPage({ problemId: '0000001' })
+      const page = await setupPage({ problemId: problem1000001.id })
       expect(await page.menuDialog.clickStart()).toBe(true)
       expect(page.menuDialog.isActive).toBe(false)
       expect(page.pathname).toBe('/game/play')
-      expect(page.textContent).toBe('game/play')
+      expect(page.textContent).toBe('/game/play')
     })
   })
 
   describe('タイピング問題の選択ダイアログ', () => {
     const setupPage = async () => {
-      const page = await MenuPageModel.create()
-      await page.menuDialog.clickProblemSelect()
+      const page = await createPage()
+      expect(await page.menuDialog.clickProblemSelect()).toBe(true)
       return page
     }
 
@@ -148,7 +130,7 @@ describe('page/game/menu', () => {
       expect(await page.problemListDialog.clickSelect()).toBe(true)
       expect(page.menuDialog.isActive).toBe(true)
       expect(page.problemListDialog.isExists).toBe(false)
-      expect(page.problemId).toBe('0000001')
+      expect(page.problemId).toBe(problem1000001.id)
     })
 
     it('内容を見る', async () => {
@@ -162,8 +144,8 @@ describe('page/game/menu', () => {
 
   describe('タイピング問題の内容ダイアログ（メニューダイアログから）', () => {
     const setupPage = async () => {
-      const page = await MenuPageModel.create({ problemId: '0000001' })
-      await page.menuDialog.clickProblemDetail()
+      const page = await createPage({ problemId: problem1000001.id })
+      expect(await page.menuDialog.clickProblemDetail()).toBe(true)
       return page
     }
 
@@ -196,9 +178,9 @@ describe('page/game/menu', () => {
 
   describe('タイピング問題の内容ダイアログ（タイピング問題の選択ダイアログから）', () => {
     const setupPage = async () => {
-      const page = await MenuPageModel.create()
-      await page.menuDialog.clickProblemSelect()
-      await page.problemListDialog.clickDetail()
+      const page = await createPage()
+      expect(await page.menuDialog.clickProblemSelect()).toBe(true)
+      expect(await page.problemListDialog.clickDetail()).toBe(true)
       return page
     }
 

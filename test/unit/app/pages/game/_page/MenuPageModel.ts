@@ -1,14 +1,22 @@
-import { mountAppSuspended } from '../../../_utils'
+import type { TypingGameSetting } from '~~/libs/TypingGameSetting'
+import { mountAppSuspended, type AppPage } from '../../../_utils'
 import { BaseDialogModel } from '../../_page/BaseDialogModel'
 import { BasePageModel } from '../../_page/BasePageModel'
 
 export class MenuPageModel extends BasePageModel {
+  private constructor(
+    page: AppPage,
+    private readonly gameSetting: Ref<TypingGameSetting>,
+  ) {
+    super(page)
+  }
+
   get problemId() {
-    return useGameSetting().setting.value.problemId
+    return this.gameSetting.value.problemId
   }
 
   async setProblemId(value: string) {
-    useGameSetting().setting.value.problemId = value
+    this.gameSetting.value.problemId = value
     await nextTick()
   }
 
@@ -32,13 +40,15 @@ export class MenuPageModel extends BasePageModel {
   }: {
     problemId?: string
   } = {}) {
-    await navigateTo('/')
-    const page = new MenuPageModel(
-      await mountAppSuspended({ route: '/game/menu' }),
-    )
+    const { setting } = useGameSetting()
+
     if (problemId) {
-      await page.setProblemId(problemId)
+      setting.value.problemId = problemId
     }
+
+    const wrapper = await mountAppSuspended({ route: '/game/menu' })
+    const page = new MenuPageModel(wrapper, setting)
+
     return page
   }
 }
@@ -48,7 +58,10 @@ class MenuDialogModel extends BaseDialogModel {
     const el = this.content
       ?.findAll('footer button')
       .find((e) => e.text() === 'やめる')
-    return await this.utility.click(el)
+    if (await this.utility.click(el)) {
+      return await this.utility.waitForPageFinished(1000)
+    }
+    return false
   }
 
   async clickStart(timeout = 100) {

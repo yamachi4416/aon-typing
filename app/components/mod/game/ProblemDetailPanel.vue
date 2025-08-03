@@ -1,6 +1,6 @@
 <template>
-  <PartsModalContent :show-close="true" :title="title" @close="$emit('close')">
-    <ModProblemDetail v-if="detail" :detail="detail">
+  <PartsModalContent :title @close="$emit('close')">
+    <ModProblemDetail v-if="detail" :detail>
       <button @click.self="$emit('back')">もどる</button>
       <button v-if="showSelect" @click.self="$emit('select', detail)">
         選択する

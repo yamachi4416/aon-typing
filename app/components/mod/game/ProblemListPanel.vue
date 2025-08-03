@@ -2,7 +2,6 @@
   <PartsModalContent
     ref="content"
     title="タイピング問題の選択"
-    :show-close="true"
     @close="$emit('close')"
   >
     <div v-show="tags.size > 0" :class="$style.tags">

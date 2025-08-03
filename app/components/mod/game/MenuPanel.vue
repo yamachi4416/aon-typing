@@ -128,7 +128,7 @@ import type { ProblemListItem } from '~~/types/problems'
 
 const emit = defineEmits<{
   (e: 'openProblemSelect' | 'start' | 'cancel' | 'close'): unknown
-  (e: 'detail', problem?: ProblemListItem): unknown
+  (e: 'detail', problem: ProblemListItem): unknown
 }>()
 
 const { problems } = useProblems()

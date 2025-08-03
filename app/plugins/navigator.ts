@@ -2,6 +2,7 @@ function newNavigator() {
   const router = useRouter()
   const path = ref<string | undefined>()
   const enable = computed(() => !!path.value)
+  const { setting: gameSetting } = useGameSetting()
 
   function staticPath(filename: string): string {
     const path = useRoute().path.replace(/\/$/, '').replace(/^\//, '')
@@ -40,8 +41,18 @@ function newNavigator() {
   }
 
   async function gameMenu({ id }: { id: string }) {
-    useGameSetting().setting.value.problemId = id
+    gameSetting.value.problemId = id
     await navigateTo({ name: 'game-menu' })
+  }
+
+  async function gamePlay(id?: string) {
+    if (id) {
+      gameSetting.value.problemId = id
+    }
+    await navigateTo({
+      name: 'game-play',
+      query: { id: gameSetting.value.problemId },
+    })
   }
 
   async function backOrIndex() {
@@ -111,6 +122,7 @@ function newNavigator() {
     indexRailwayCorporation,
     indexTagDetail,
     gameMenu,
+    gamePlay,
     backOrIndex,
     backOrGameMenu,
     download,
