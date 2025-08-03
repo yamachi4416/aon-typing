@@ -21,50 +21,53 @@ defineEmits<{
   (e: 'back' | 'close'): unknown
 }>()
 
+const { wrapLoading } = useLoading()
+const { retrieveProblemDetail } = useProblems()
+
 const showSelect = ref(true)
-const problem = ref({} as ProblemListItem)
-const problemDetail = ref<ProblemDetail | null>(null)
+const problem = ref<ProblemListItem>()
+const problemDetail = ref<ProblemDetail>()
 const detail = computed(() => {
-  if (problemDetail.value) {
-    return problemDetail.value
-  }
-  const words = [] as ProblemDetailWord[]
-  for (let i = 0, l = problem.value.words; i < l; i++) {
-    words.push({
-      info: '〇'.repeat(10),
-      word: 'ab cd ef gh ij',
-    })
+  if (problemDetail.value) return problemDetail.value
+  if (!problem.value) return undefined
+  const word: ProblemDetailWord = {
+    info: '〇'.repeat(10),
+    word: 'ab cd ef gh ij',
   }
   return {
     ...problem.value,
-    words,
+    words: Array(problem.value.words).fill(word),
     createdAt: null as never,
     updatedAt: null as never,
-  } as ProblemDetail
+  }
 })
-const title = computed(
-  () =>
-    `No.${detail.value?.id ?? problem.value?.id} ${
-      detail.value?.title ?? problem.value?.title
-    }`,
-)
+
+const title = computed(() => {
+  const id = detail.value?.id ?? problem.value?.id ?? ''
+  const title = detail.value?.title ?? problem.value?.title ?? ''
+  return `No.${id} ${title}`
+})
 
 async function setProblem(item: ProblemListItem) {
   problem.value = item
-  problemDetail.value = null
-  problemDetail.value = await useProblems().retrieveProblemDetail(item)
+  problemDetail.value = undefined
+  problemDetail.value = await retrieveProblemDetail(item)
 }
 
-defineExpose({
+const expose = {
   async setDetail({
     problem,
-    selectable,
+    selectable = true,
   }: {
     problem: ProblemListItem
-    selectable: boolean
+    selectable?: boolean
   }) {
     showSelect.value = selectable
-    await setProblem(problem)
+    await wrapLoading(setProblem(problem))
   },
-})
+}
+
+export type ProblemDetailPanel = typeof expose
+
+defineExpose(expose)
 </script>

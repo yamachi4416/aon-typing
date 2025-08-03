@@ -1,81 +1,69 @@
 <template>
   <div>
-    <ModalPanel ref="modalMenu" :inert="!!currentModal">
+    <PartsModalPanel ref="menuModal" title="タイピングメニューダイアログ">
       <ModGameMenuPanel
-        :show-close="false"
         @start="startTyping"
-        @cancel="cancel"
-        @detail="openProblemDetail"
-        @open-problem-select="modalProblemList?.open"
+        @cancel="navigator.backOrIndex"
+        @detail="(item) => openProblemDetailModal(item, false)"
+        @open-problem-select="openProblemListModal"
       />
-    </ModalPanel>
-    <ModalPanel ref="modalProblemList" :inert="modalProblemDetail?.isOpen">
+    </PartsModalPanel>
+    <PartsModalPanel
+      ref="problemListModal"
+      v-slot="{ close }"
+      title="タイピング問題の選択ダイアログ"
+    >
       <ModGameProblemListPanel
-        @close="modalProblemList?.close"
-        @select="selcetProblem"
-        @detail="openProblemSelectDetail"
+        @close="close"
+        @select="selcetProblemId"
+        @detail="(item) => openProblemDetailModal(item, true)"
       />
-    </ModalPanel>
-    <ModalPanel ref="modalProblemDetail">
-      <ProblemDetailPanel
+    </PartsModalPanel>
+    <PartsModalPanel
+      ref="problemDetailModal"
+      v-slot="{ close }"
+      title="タイピング問題の内容ダイアログ"
+    >
+      <ModGameProblemDetailPanel
         ref="problemDetailPanel"
-        @close="modalProblemDetail?.close"
-        @back="modalProblemDetail?.close"
-        @select="selcetProblem"
+        @close="close"
+        @back="close"
+        @select="selcetProblemId"
       />
-    </ModalPanel>
+    </PartsModalPanel>
   </div>
 </template>
 
 <script setup lang="ts">
-import ProblemDetailPanel from '~/components/mod/game/ProblemDetailPanel.vue'
-import ModalPanel from '~/components/parts/ModalPanel.vue'
+import { useModals } from '~/composables/useModals'
 import type { ProblemListItem } from '~~/types/problems'
 
 useHead({
   title: 'タイピングメニュー',
 })
 
-const modalMenu = useTemplateRef('modalMenu')
-const modalProblemList = useTemplateRef('modalProblemList')
-const modalProblemDetail = useTemplateRef('modalProblemDetail')
-const modals = () =>
-  [modalProblemDetail.value, modalProblemList.value].filter((m) => !!m)
+const navigator = useNavigator()
 
 const { setting } = useGameSetting()
-const { wrapLoading } = useLoading()
+
+const menuModal = useTemplateRef('menuModal')
+const problemListModal = useTemplateRef('problemListModal')
+const problemDetailModal = useTemplateRef('problemDetailModal')
 const problemDetailPanel = useTemplateRef('problemDetailPanel')
 
-const hasPendingModal = computed(() =>
-  modals().some((modal) => modal.isPending),
+const { hasPendingModal, closeOpenedModals, closeModalsNavigation } = useModals(
+  {
+    useMain: true,
+    models: [menuModal, problemListModal, problemDetailModal],
+  },
 )
 
-const currentModal = computed(() => modals().find((modal) => modal.isOpen))
-
 onMounted(() => {
-  modalMenu.value?.open()
-  window.addEventListener('keydown', onEscapeKey)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('keydown', onEscapeKey)
+  menuModal.value?.open()
 })
 
 onBeforeRouteLeave(async (_to, _from, next) => {
-  if (hasPendingModal.value) {
-    next(false)
-    return false
-  }
-
-  if (currentModal.value) {
-    next(false)
-    await currentModal.value.close()
-    return false
-  }
-
-  await modalMenu.value?.close()
-  next()
-  return true
+  return await closeModalsNavigation(next)
 })
 
 async function startTyping() {
@@ -86,60 +74,26 @@ async function startTyping() {
   })
 }
 
-async function openProblemSelectDetail(problem: ProblemListItem) {
-  await openProblemDetailShow(problem, true)
+async function openProblemListModal() {
+  await problemListModal.value?.open()
 }
 
-async function openProblemDetail(problem?: ProblemListItem) {
-  if (problem) {
-    await openProblemDetailShow(problem, false)
-  }
-}
-
-async function openProblemDetailShow(
-  problem: ProblemListItem,
+async function openProblemDetailModal(
+  problem: ProblemListItem | undefined,
   selectable: boolean,
 ) {
+  if (!problem) return
   if (hasPendingModal.value) return
-  await wrapLoading(
-    Promise.all([
-      modalProblemDetail.value?.open(),
-      await nextTick(),
-      problemDetailPanel.value?.setDetail({ problem, selectable }),
-    ]),
-  )
+  await Promise.all([
+    problemDetailModal.value?.open(),
+    await nextTick(),
+    problemDetailPanel.value?.setDetail({ problem, selectable }),
+  ])
 }
 
-async function onEscapeKey(e: KeyboardEvent) {
-  if (e.key !== 'Escape') {
-    return
-  }
-
-  if (hasPendingModal.value) {
-    return
-  }
-
-  if (currentModal.value) {
-    await currentModal.value.close()
-  }
-}
-
-async function selcetProblem({ id }: { id: string }) {
+async function selcetProblemId({ id }: { id: string }) {
   if (hasPendingModal.value) return
   setting.value.problemId = id
-
-  const closes = await Promise.all(
-    modals()
-      .filter((m) => m.isOpen && m !== currentModal.value)
-      .map((m) => m.close(false)),
-  )
-
-  await currentModal.value?.close()
-
-  closes?.pop()?.focus()
-}
-
-function cancel() {
-  useNavigator().backOrIndex()
+  await closeOpenedModals()
 }
 </script>

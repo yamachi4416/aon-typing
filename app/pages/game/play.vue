@@ -13,7 +13,7 @@
     </div>
     <div>
       <PartsCountDown v-show="counter.isShow" :count="counter.count" />
-      <ModalPanel ref="modalGameResult">
+      <ModalPanel ref="modalGameResult" title="タイピング結果ダイアログ">
         <ModGameResultPanel
           :result
           :problem="state.problem"

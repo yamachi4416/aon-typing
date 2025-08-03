@@ -1,4 +1,9 @@
 {
   "extends": "../.nuxt/tsconfig.app.json",
-  "include": ["./**/*"]
+  "include": [
+    "./**/*",
+    "../.nuxt/types/nitro-routes.d.ts",
+    "../.nuxt/types/typed-router.d.ts",
+    "../.nuxt/types/imports.d.ts"
+  ]
 }

@@ -1,33 +1,50 @@
 <template>
-  <div v-if="show" ref="modal" :class="$style.modal">
+  <div
+    v-if="show"
+    ref="modal"
+    role="dialog"
+    aria-modal="true"
+    :aria-label="title"
+    :aria-disabled="inert"
+    :class="$style.modal"
+    :inert
+  >
     <div :class="$style.contents">
-      <slot />
+      <slot :close />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { isFunction } from '~~/libs/Util'
+
+defineProps<{
+  title?: string
+}>()
+
+const inert = ref(false)
 const pending = ref(false)
 const show = ref(false)
-const modal = ref<HTMLElement>()
-const prevActive = ref<HTMLElement>()
+const modal = useTemplateRef('modal')
+const prevActive = shallowRef<HTMLElement>()
 
 async function animate(forward = true) {
   const element = modal.value
   if (!element) return
+  if (!isFunction(element.animate)) return
   const keyframes = [
     { transform: 'translateY(-100%)' },
     { transform: 'translateY(0)' },
   ]
   const animation = element.animate(
-    forward ? keyframes : [...keyframes].reverse(),
+    forward ? keyframes : keyframes.toReversed(),
     {
       duration: 300,
       easing: 'ease-in',
     },
   )
   animation.play()
-  return await animation.finished
+  await animation.finished
 }
 
 async function open(anim = true) {
@@ -71,16 +88,26 @@ async function close(anim = true) {
   }
 }
 
-defineExpose({
+const exposes = {
   get isOpen() {
     return show.value
   },
   get isPending() {
     return pending.value
   },
+  get inert() {
+    return inert.value
+  },
+  set inert(value) {
+    inert.value = value
+  },
   open,
   close,
-})
+}
+
+export type Modal = typeof exposes
+
+defineExpose(exposes)
 </script>
 
 <style lang="scss" module>

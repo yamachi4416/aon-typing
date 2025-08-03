@@ -49,7 +49,7 @@ function newNavigator() {
       if (path.value?.startsWith('/game')) {
         await navigateTo({ name: 'index' })
       } else {
-        useRouter().back()
+        router.back()
       }
     } else {
       await navigateTo({ name: 'index' })
@@ -58,7 +58,7 @@ function newNavigator() {
 
   async function backOrGameMenu() {
     if (enable.value) {
-      useRouter().back()
+      router.back()
     } else {
       await navigateTo({ name: 'game-menu', replace: true })
     }

@@ -1,7 +1,6 @@
 <template>
   <section
     :class="[$style.content, $props.panelClass]"
-    role="dialog"
     :aria-labelledby="titleId"
   >
     <header>

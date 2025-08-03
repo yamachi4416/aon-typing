@@ -9,7 +9,6 @@
     >
       <circle v-for="c in 4" :key="c" :cx="c * 20" cy="50" r="6">
         <animate
-          ref="anims"
           attributeName="r"
           :begin="`${0 - 0.125 * (4 - c)}s`"
           values="0;6;0"
@@ -21,17 +20,6 @@
     </svg>
   </div>
 </template>
-
-<script setup lang="ts">
-const anims = ref<SVGAnimateElement[]>()
-
-onMounted(async () => {
-  await nextTick()
-  if (anims.value) {
-    await Promise.all([...anims.value].map((a) => a.beginElement()))
-  }
-})
-</script>
 
 <style lang="scss" module>
 .loading {

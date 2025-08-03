@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { problems } from '~/assets/api/problems.json'
-import { endpointRegister } from '../utils'
+import { endpointRegister } from '../_utils'
 
 describe('fetchWithCache', () => {
   const { registerEndpoint, unregisterEndpoints } = endpointRegister()
