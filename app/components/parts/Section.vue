@@ -46,10 +46,12 @@ withDefaults(
     display: none;
   }
 
+  /* stylelint-disable-next-line nesting-selector-no-missing-scoping-root */
   & > * {
     width: 100%;
   }
 
+  /* stylelint-disable-next-line nesting-selector-no-missing-scoping-root */
   & :where(img) {
     z-index: 1;
     width: 100%;
@@ -64,7 +66,7 @@ withDefaults(
   z-index: 0;
   display: flex;
   padding: 10px;
-  page-break-inside: avoid;
+  break-inside: avoid;
 
   &:hover {
     z-index: 1;

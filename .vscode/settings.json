@@ -1,7 +1,7 @@
 {
-  "volar.completion.preferredTagNameCase": "pascal",
-  "volar.completion.preferredAttrNameCase": "camel",
   "editor.tabSize": 2,
+  "vue.suggest.componentNameCasing": "alwaysPascalCase",
+  "stylelint.validate": ["css", "postcss", "scss", "vue"],
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

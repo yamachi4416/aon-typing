@@ -120,7 +120,7 @@ const chars = Object.freeze(
     background: var(--background-90);
     border-right: 1px solid var(--color-c);
     border-bottom: 1px solid var(--color-c);
-    page-break-inside: avoid;
+    break-inside: avoid;
 
     &:first-of-type {
       border-top: 1px solid var(--color-c);
@@ -202,7 +202,7 @@ const chars = Object.freeze(
     padding: 0;
 
     tr {
-      page-break-inside: avoid;
+      break-inside: avoid;
 
       th {
         font-size: 0.9em;
