@@ -1,0 +1,46 @@
+{
+  "id": "1010480",
+  "title": "北総鉄道北総線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-08-03",
+  "updatedAt": "2025-08-03",
+  "words": [
+    {
+      "info": "印旛日本医大",
+      "info2": "いんばにほんいだい",
+      "word": "inbanihonnidai"
+    },
+    {
+      "info": "印西牧の原",
+      "info2": "いんざいまきのはら",
+      "word": "inzaimakinohara"
+    },
+    {
+      "info": "千葉ニュータウン中央",
+      "info2": "ちばにゅーたうんちゅうおう",
+      "word": "tibanyu-tauntyuuou"
+    },
+    { "info": "小室", "info2": "こむろ", "word": "komuro" },
+    { "info": "白井", "info2": "しろい", "word": "siroi" },
+    { "info": "西白井", "info2": "にししろい", "word": "nisisiroi" },
+    { "info": "新鎌ケ谷", "info2": "しんかまがや", "word": "sinkamagaya" },
+    { "info": "大町", "info2": "おおまち", "word": "oomati" },
+    { "info": "松飛台", "info2": "まつひだい", "word": "matuhidai" },
+    { "info": "東松戸", "info2": "ひがしまつど", "word": "higasimatudo" },
+    { "info": "秋山", "info2": "あきやま", "word": "akiyama" },
+    { "info": "北国分", "info2": "きたこくぶん", "word": "kitakokubunn" },
+    { "info": "矢切", "info2": "やぎり", "word": "yagiri" },
+    { "info": "新柴又", "info2": "しんしばまた", "word": "sinsibamata" },
+    {
+      "info": "京成高砂",
+      "info2": "けいせいたかさご",
+      "word": "keiseitakasago"
+    }
+  ],
+  "optional": { "cd": ["480"], "coCd": ["61"] }
+}
