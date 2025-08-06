@@ -1,4 +1,4 @@
-import type { DOMWrapper } from '@vue/test-utils'
+import { flushPromises, type DOMWrapper } from '@vue/test-utils'
 import type { AppPage } from '../../_utils'
 
 export class PageModelUtility {
@@ -8,6 +8,7 @@ export class PageModelUtility {
     if (!el?.exists()) return false
     if (el.attributes('disabled') !== undefined) return false
     await el.trigger('click')
+    await flushPromises()
     return true
   }
 
@@ -27,17 +28,17 @@ export class PageModelUtility {
     const nuxt = tryUseNuxtApp()
     if (!nuxt) return false
 
-    const cancel = setTimeout(() => {
-      unsubscribe()
-      resolve(false)
-    }, timeout)
+    const clears = [
+      (() => {
+        const cancel = setTimeout(() => resolve(false), timeout)
+        return () => clearTimeout(cancel)
+      })(),
+      nuxt.hook('page:finish', () => resolve(true)),
+    ]
 
-    const unsubscribe = nuxt.hook('page:finish', () => {
-      clearTimeout(cancel)
-      unsubscribe()
-      resolve(true)
+    return promise.then((result) => {
+      clears.forEach((fn) => fn())
+      return result
     })
-
-    return promise
   }
 }

@@ -217,5 +217,14 @@ describe('pages/game/menu', () => {
       const page = await setupPage()
       expect(page.problemDetailDialog.hasSelect).toBe(true)
     })
+
+    it('問題を選択する', async () => {
+      const page = await setupPage()
+      expect(await page.problemDetailDialog.clickSelect()).toBe(true)
+      expect(page.menuDialog.isActive).toBe(true)
+      expect(page.problemDetailDialog.isExists).toBe(false)
+      expect(page.problemListDialog.isExists).toBe(false)
+      expect(page.problemId).toBe(problem1000001.id)
+    })
   })
 })
