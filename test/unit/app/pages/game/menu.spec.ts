@@ -6,9 +6,10 @@ import { MenuPageModel } from './_page/MenuPageModel'
 
 function setupRoute() {
   const router = useRouter()
-  const menu = router.getRoutes().find(({ path }) => path === '/game/menu')
+  const game = router
+    .getRoutes()
+    .find(({ path, name }) => path === '/game' && name === undefined)!
   router.clearRoutes()
-  router.addRoute(menu!)
   router.addRoute({
     path: '/',
     name: 'index',
@@ -17,26 +18,30 @@ function setupRoute() {
     }),
   })
   router.addRoute({
-    path: '/game/play',
-    name: 'game-play',
-    component: defineComponent({
-      template: '/game/play',
-    }),
+    ...game,
+    children: [
+      game.children.find(({ path }) => path === 'menu')!,
+      {
+        path: 'play',
+        name: 'game-play',
+        component: defineComponent({
+          template: '/game/play',
+        }),
+      },
+    ],
   })
 }
 
-function setupState() {
-  useGameSetting().setting.value = TypingGameSetting.create()
-  useState('/api/problems/1000001.json').value = problem1000001
-  useState('/api/problems.json').value = problems
-}
-
-const createPage = MenuPageModel.create
-
 describe('pages/game/menu', () => {
+  const createPage = MenuPageModel.create
+
   beforeEach(() => {
     setupRoute()
-    setupState()
+    clearNuxtState()
+    useGameSetting().setting.value = TypingGameSetting.create()
+    useState('/api/problems.json').value = problems
+    useState('/api/problems/1000001.json').value = problem1000001
+    useState('/api/railway/corporations.json').value = []
   })
 
   describe('メニューダイアログ', () => {
