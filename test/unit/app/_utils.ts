@@ -2,15 +2,30 @@ import {
   registerEndpoint as _registerEndpoint,
   mountSuspended,
 } from '@nuxt/test-utils/runtime'
+import type { NitroFetchRequest } from 'nitropack'
+import { vi } from 'vitest'
 import App from '~/app.vue'
+import { isFunction } from '~~/libs/Util'
 
 export function endpointRegister() {
+  type Options = Parameters<typeof _registerEndpoint>[1]
+
   const unregisters: (() => void)[] = []
 
-  const registerEndpoint: typeof _registerEndpoint = (...args) => {
-    const unregister = _registerEndpoint(...args)
+  function registerEndpoint<Path extends NitroFetchRequest>(
+    path: Path,
+    options: Options,
+  ) {
+    const [method, _handler] = isFunction(options)
+      ? ['GET' as const, options]
+      : [options.method, options.handler]
+    const handler = vi.fn(_handler)
+    const unregister = _registerEndpoint(path as string, { method, handler })
     unregisters.push(unregister)
-    return unregister
+    return {
+      handler,
+      unregister,
+    }
   }
 
   const unregisterEndpoints = () => {

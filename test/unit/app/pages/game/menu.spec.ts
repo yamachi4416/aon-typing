@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it } from 'vitest'
 import problems from '~/assets/api/problems.json'
 import problem1000001 from '~/assets/api/problems/1000001.json'
 import { TypingGameSetting } from '~~/libs/TypingGameSetting'
+import { endpointRegister } from '../../_utils'
 import { MenuPageModel } from './_page/MenuPageModel'
 
 function setupRoute() {
@@ -34,14 +35,66 @@ function setupRoute() {
 
 describe('pages/game/menu', () => {
   const createPage = MenuPageModel.create
+  const { registerEndpoint, unregisterEndpoints } = endpointRegister()
 
   beforeEach(() => {
+    unregisterEndpoints()
     setupRoute()
     clearNuxtState()
     useGameSetting().setting.value = TypingGameSetting.create()
     useState('/api/problems.json').value = problems
     useState('/api/problems/1000001.json').value = problem1000001
     useState('/api/railway/corporations.json').value = []
+  })
+
+  describe('データの取得', () => {
+    it('取得済みの場合（問題の一覧）', async () => {
+      const { handler } = registerEndpoint('/api/problems.json', () => {})
+
+      await createPage()
+
+      expect(handler).toBeCalledTimes(0)
+    })
+
+    it('取得済みの場合（鉄道会社の一覧）', async () => {
+      const { handler } = registerEndpoint(
+        '/api/railway/corporations.json',
+        () => {},
+      )
+
+      await createPage()
+
+      expect(handler).toBeCalledTimes(0)
+    })
+
+    it('未取得の場合（問題の一覧）', async () => {
+      const { handler } = registerEndpoint('/api/problems.json', () => ({
+        problems: [],
+      }))
+
+      const state = useState('/api/problems.json')
+      state.value = undefined
+
+      await createPage()
+
+      expect(handler).toBeCalledTimes(1)
+      expect(state.value).toEqual({ problems: [] })
+    })
+
+    it('未取得の場合（鉄道会社の一覧）', async () => {
+      const { handler } = registerEndpoint(
+        '/api/railway/corporations.json',
+        () => [{ code: '0000', name: 'co0000' }],
+      )
+
+      const state = useState('/api/railway/corporations.json')
+      state.value = undefined
+
+      await createPage()
+
+      expect(handler).toBeCalledTimes(1)
+      expect(state.value).toEqual([{ code: '0000', name: 'co0000' }])
+    })
   })
 
   describe('メニューダイアログ', () => {
