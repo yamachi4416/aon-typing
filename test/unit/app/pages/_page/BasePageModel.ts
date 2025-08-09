@@ -1,32 +1,25 @@
+import type { VueWrapper } from '@vue/test-utils'
 import { flushPromises } from '@vue/test-utils'
-import type { AppPage } from '../../_utils'
-import { PageModelUtility } from './PageModelUtility'
+import { mountAppSuspended } from '../../_utils'
+import { BaseModel } from './BaseModel'
 
-export abstract class BasePageModel {
-  protected readonly utility: PageModelUtility
-
-  protected constructor(protected readonly page: AppPage) {
-    this.utility = new PageModelUtility(page)
+export abstract class BasePageModel<VM = unknown> extends BaseModel<
+  VueWrapper<VM>
+> {
+  protected constructor(page: VueWrapper<VM>) {
+    super(page)
   }
 
   get nuxt() {
-    return this.page.vm.$nuxt
+    return this.el?.vm.$nuxt
   }
 
   get router() {
-    return this.page.vm.$router
+    return this.el?.vm.$router
   }
 
   get pathname() {
     return location.pathname
-  }
-
-  get textContent() {
-    return this.page.text()
-  }
-
-  get html() {
-    return this.page.html()
   }
 
   async keydown(init: KeyboardEventInit | string) {
@@ -48,7 +41,9 @@ export abstract class BasePageModel {
     await flushPromises()
   }
 
-  public async waitForPageFinished(timeout: number) {
-    return await this.utility.waitForPageFinished(timeout)
+  protected static async mountAppSuspended(
+    ...args: Parameters<typeof mountAppSuspended>
+  ) {
+    return await mountAppSuspended(...args)
   }
 }

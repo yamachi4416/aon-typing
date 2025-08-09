@@ -1,8 +1,8 @@
-import { flushPromises, type DOMWrapper } from '@vue/test-utils'
-import type { AppPage } from '../../_utils'
+import type { DOMWrapper, VueWrapper } from '@vue/test-utils'
+import { flushPromises } from '@vue/test-utils'
 
 export class PageModelUtility {
-  constructor(private readonly page: AppPage) {}
+  constructor(private readonly page: VueWrapper) {}
 
   async click(el?: DOMWrapper<Element>) {
     if (!el?.exists()) return false

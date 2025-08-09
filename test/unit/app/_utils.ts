@@ -19,7 +19,7 @@ export function endpointRegister() {
     const [method, _handler] = isFunction(options)
       ? ['GET' as const, options]
       : [options.method, options.handler]
-    const handler = vi.fn(_handler)
+    const handler = vi.isMockFunction(_handler) ? _handler : vi.fn(_handler)
     const unregister = _registerEndpoint(path as string, { method, handler })
     unregisters.push(unregister)
     return {
@@ -59,5 +59,3 @@ export async function mountAppSuspended(options?: MountSuspendedOptions) {
     },
   })
 }
-
-export type AppPage = Awaited<ReturnType<typeof mountAppSuspended>>
