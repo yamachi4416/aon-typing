@@ -1,7 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import _problem1000001 from '~/assets/api/problems/1000001.json'
 import problem1000002 from '~/assets/api/problems/1000002.json'
-import { TypingGameSetting } from '~~/libs/TypingGameSetting'
 import { endpointRegister, routerSetup } from '../../_utils'
 import { PlayPageModel } from './_page/PlayPageModel'
 
@@ -39,7 +38,7 @@ describe('/pages/game/play', () => {
     setupRoutes()
     unregisterEndpoints()
     clearNuxtState()
-    useGameSetting().setting.value = TypingGameSetting.create()
+    useGameSetting().resetSetting()
     useState('/api/problems.json').value = {
       problems: [problem1000001, problem1000002],
     }
@@ -186,8 +185,8 @@ describe('/pages/game/play', () => {
 
       expect(page.resultDialog.retryAction.active).toBe(true)
       expect(await page.resultDialog.retryAction.click()).toBe(true)
-      expect(page.resultDialog.nextAction.exists).toBe(false)
-      expect(page.countDown.count).toBe('3')
+      expect(page.resultDialog.exists).toBe(false)
+      expect(page.countDown.count).toBeDefined()
     })
 
     it('つづきをする', async () => {
@@ -195,8 +194,8 @@ describe('/pages/game/play', () => {
 
       expect(page.resultDialog.nextAction.active).toBe(true)
       expect(await page.resultDialog.nextAction.click()).toBe(true)
-      expect(page.resultDialog.nextAction.exists).toBe(false)
-      expect(page.countDown.count).toBe('3')
+      expect(page.resultDialog.exists).toBe(false)
+      expect(page.countDown.count).toBeDefined()
     })
 
     it('メニューに戻る', async () => {

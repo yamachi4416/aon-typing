@@ -1,120 +1,31 @@
 <template>
-  <div :class="$style.content">
-    <div :class="$style.main">
-      <div :class="$style.keyboard">
-        <ModGameTypingPanel
-          :class="$style.svg"
-          :state="state"
-          @toggle="typing.toggle()"
-          @cancel="typing.cancel()"
-          @dispose="typing.dispose()"
-        />
-      </div>
-    </div>
-    <div>
-      <PartsCountDown v-show="counter.isShow" :count="counter.count" />
-      <ModalPanel ref="modalGameResult" title="タイピング結果ダイアログ">
-        <ModGameResultPanel
-          :result
-          :problem="state.problem"
-          @menu="menu"
-          @next="next"
-          @retry="retry"
-        />
-      </ModalPanel>
-    </div>
-  </div>
+  <ModGameTypingPlay ref="typingPlay" @menu="navigator.backOrGameMenu()" />
 </template>
 
 <script setup lang="ts">
-import ModalPanel from '~/components/parts/ModalPanel.vue'
-import { AbortManager } from '~~/libs/AbortManager'
-import { TypingGame } from '~~/libs/TypingGame'
-import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
-import { TypingGameState } from '~~/libs/TypingGameState'
-import { countDown } from '~~/libs/Util'
+const route = useRoute()
+const id = route.query.id as string
+
+const navigator = useNavigator()
+const typingPlay = useTemplateRef('typingPlay')
 
 const { setting } = useGameSetting()
-const state = reactive(TypingGameState.create(setting.value))
-const typing = TypingGame.create({ state })
-const result = ref<TypingGameInfo>()
-const counter = shallowReactive({
-  count: 0,
-  isShow: true,
-  abort: AbortManager.create(),
-})
-
-const id = useRoute().query.id as string
-const modalGameResult = useTemplateRef('modalGameResult')
 const { retrieveProblemDetail, findProblemItem } = useProblems()
 
-onBeforeUnmount(() => {
-  counter.abort.abort()
-  typing.dispose()
-})
-
-onMounted(newTyping)
-
-async function newTyping() {
+onMounted(async () => {
   if (!findProblemItem({ id })) {
-    return await navigateTo({ name: 'game-menu', replace: true })
+    return await navigator.backOrGameMenu()
+  }
+
+  const problem = await retrieveProblemDetail({ id }).catch(() => null)
+  if (!problem) {
+    return await navigator.backOrGameMenu()
   }
 
   setting.value.problemId = id
-  const problem = await retrieveProblemDetail({ id }).catch(() => null)
 
-  if (!problem) {
-    return await navigateTo({ name: 'game-menu', replace: true })
-  }
-
-  state.init({ problem })
-
-  startTyping()
-}
-
-async function showCountDown(count = 3) {
-  try {
-    counter.abort.abort()
-    counter.abort.reset()
-    counter.count = count
-    counter.isShow = true
-
-    await countDown(count, (c) => (counter.count = c), {
-      abortManager: counter.abort,
-    })
-
-    return !counter.abort.isAborted
-  } finally {
-    counter.count = 0
-    counter.isShow = false
-  }
-}
-
-async function startTyping() {
-  result.value = undefined
-  typing.cancel()
-
-  if (!(await showCountDown())) return
-  result.value = await typing.start()
-  await modalGameResult.value?.open()
-}
-
-async function retry() {
-  await modalGameResult.value?.close()
-  state.reset()
-  await startTyping()
-}
-
-async function menu() {
-  await modalGameResult.value?.close()
-  await useNavigator().backOrGameMenu()
-}
-
-async function next() {
-  await modalGameResult.value?.close()
-  state.continue()
-  await startTyping()
-}
+  typingPlay.value?.start({ problem })
+})
 
 useHead({
   title: id ? `タイピング No.${id}` : 'タイピング',

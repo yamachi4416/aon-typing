@@ -75,7 +75,7 @@ export class TypingGameState extends TypingGameStateValue {
     return this.problem?.nextWord().current
   }
 
-  static create(setting: TypingGameSetting): TypingGameState {
+  static create(setting: Readonly<TypingGameSetting>): TypingGameState {
     return new TypingGameState(setting)
   }
 }

@@ -1,6 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import problem1000001 from '~/assets/api/problems/1000001.json'
-import { TypingGameSetting } from '~~/libs/TypingGameSetting'
 import { endpointRegister, routerSetup } from '../../_utils'
 import { MenuPageModel } from './_page/MenuPageModel'
 
@@ -33,7 +32,7 @@ describe('pages/game/menu', () => {
     setupRoutes()
     unregisterEndpoints()
     clearNuxtState()
-    useGameSetting().setting.value = TypingGameSetting.create()
+    useGameSetting().resetSetting()
     useState('/api/problems.json').value = { problems: [problem1000001] }
     useState('/api/problems/1000001.json').value = problem1000001
     useState('/api/railway/corporations.json').value = []

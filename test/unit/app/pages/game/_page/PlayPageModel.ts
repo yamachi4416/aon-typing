@@ -1,5 +1,4 @@
 import type { DOMWrapper, VueWrapper } from '@vue/test-utils'
-import type { TypingGameSetting } from '~~/libs/TypingGameSetting'
 import { mountAppSuspended } from '../../../_utils'
 import { BaseModel } from '../../_page/BaseModel'
 import { BasePageModel } from '../../_page/BasePageModel'
@@ -10,10 +9,7 @@ import {
 import { DialogModel } from '../../_page/models/DialogModel'
 
 export class PlayPageModel extends BasePageModel {
-  private constructor(
-    page: VueWrapper,
-    private readonly gameSetting: Ref<TypingGameSetting>,
-  ) {
+  private constructor(page: VueWrapper) {
     super(page)
   }
 
@@ -41,8 +37,6 @@ export class PlayPageModel extends BasePageModel {
   }: {
     problemId?: string
   } = {}) {
-    const { setting } = useGameSetting()
-
     const wrapper = await mountAppSuspended({
       route: {
         path: '/game/play',
@@ -50,7 +44,7 @@ export class PlayPageModel extends BasePageModel {
       },
     })
 
-    const page = new PlayPageModel(wrapper, setting)
+    const page = new PlayPageModel(wrapper)
 
     return page
   }
