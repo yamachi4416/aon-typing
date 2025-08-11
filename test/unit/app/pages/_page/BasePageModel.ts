@@ -19,7 +19,7 @@ export abstract class BasePageModel<VM = unknown> extends BaseModel<
   }
 
   get pathname() {
-    return location.pathname
+    return this.router?.currentRoute.value.fullPath
   }
 
   async keydown(init: KeyboardEventInit | string) {

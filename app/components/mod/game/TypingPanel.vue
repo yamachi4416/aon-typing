@@ -9,6 +9,7 @@
     width="1000"
     height="470"
     xmlns="http://www.w3.org/2000/svg"
+    aria-label="タイピング"
   >
     <PartsLineGauge
       :class="$style['line-gauge']"
@@ -55,7 +56,11 @@
             </div>
             <div :class="$style['typing-display-right']">
               <div :class="$style['close-circle']">
-                <PartsCloseCircle tabindex="-1" @click="emit('cancel')" />
+                <PartsCloseCircle
+                  tabindex="-1"
+                  title="タイピングを中止する"
+                  @click="emit('cancel')"
+                />
               </div>
             </div>
           </div>

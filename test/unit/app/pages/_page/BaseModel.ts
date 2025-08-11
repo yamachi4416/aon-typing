@@ -9,6 +9,14 @@ export abstract class BaseModel<T extends Wrapper> {
     return this.isExists()
   }
 
+  get visible() {
+    return this.isVisible()
+  }
+
+  get hidden() {
+    return !this.visible
+  }
+
   get disabled() {
     return this.isDisabled()
   }
@@ -35,6 +43,10 @@ export abstract class BaseModel<T extends Wrapper> {
     return this.isExists(el) ? el : undefined
   }
 
+  protected isVisible(el = this.el): el is T {
+    return this.isExists(el) && el.isVisible()
+  }
+
   protected isDisabled(el = this.el): el is T {
     return this.isExists(el) && el.attributes('disabled') !== undefined
   }
@@ -49,7 +61,7 @@ export abstract class BaseModel<T extends Wrapper> {
       .find((dialog) => dialog.attributes('aria-label') === title)
   }
 
-  protected async waitForPageFinished(timeout: number) {
+  async waitForPageFinished(timeout: number) {
     const { resolve, promise } = Promise.withResolvers<boolean>()
 
     const nuxt = tryUseNuxtApp()

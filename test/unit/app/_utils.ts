@@ -1,7 +1,9 @@
+import type { RouteRecord, RouteRecordRaw } from '#vue-router'
 import {
   registerEndpoint as _registerEndpoint,
   mountSuspended,
 } from '@nuxt/test-utils/runtime'
+import { flushPromises } from '@vue/test-utils'
 import type { NitroFetchRequest } from 'nitropack'
 import { vi } from 'vitest'
 import App from '~/app.vue'
@@ -49,7 +51,7 @@ function setupTeleport() {
 
 export async function mountAppSuspended(options?: MountSuspendedOptions) {
   setupTeleport()
-  return await mountSuspended(App, {
+  const page = await mountSuspended(App, {
     ...options,
     global: {
       ...options?.global,
@@ -58,4 +60,36 @@ export async function mountAppSuspended(options?: MountSuspendedOptions) {
       },
     },
   })
+  await flushPromises()
+  return page
+}
+
+type SetupRoutes = (routes: RouteRecord[]) => RouteRecordRaw[]
+
+export function routerSetup(defaultSetup?: SetupRoutes) {
+  const router = useRouter()
+  const savedRoutes = [...router.getRoutes()]
+
+  function resetRoutes() {
+    router.clearRoutes()
+    for (const route of savedRoutes) {
+      router.addRoute(route)
+    }
+  }
+
+  function setupRoutes(setup?: SetupRoutes) {
+    resetRoutes()
+    const setupFn = setup ?? defaultSetup
+    if (!setupFn) return
+    const routes = setupFn(router.getRoutes())
+    router.clearRoutes()
+    for (const route of routes) {
+      router.addRoute(route)
+    }
+  }
+
+  return {
+    resetRoutes,
+    setupRoutes,
+  }
 }

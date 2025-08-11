@@ -51,7 +51,11 @@ export class MenuPageModel extends BasePageModel {
       setting.value.problemId = problemId
     }
 
-    const wrapper = await mountAppSuspended({ route: '/game/menu' })
+    const wrapper = await mountAppSuspended({
+      route: {
+        path: '/game/menu',
+      },
+    })
     const page = new MenuPageModel(wrapper, setting)
 
     return page
@@ -60,15 +64,13 @@ export class MenuPageModel extends BasePageModel {
 
 class MenuDialogModel extends DialogModel {
   get cancelAction() {
-    const el = this.content
-      ?.findAll('footer button')
-      .find((e) => e.text() === 'やめる')
+    const el = this.footer?.findAll('button').find((e) => e.text() === 'やめる')
     return new NavigateActionModel(el)
   }
 
   get startAction() {
-    const el = this.content
-      ?.findAll('footer button')
+    const el = this.footer
+      ?.findAll('button')
       .find((e) => e.text() === 'スタートする')
     return new NavigateActionModel(el)
   }

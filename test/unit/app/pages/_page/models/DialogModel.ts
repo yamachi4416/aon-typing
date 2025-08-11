@@ -21,7 +21,11 @@ export abstract class DialogModel extends BaseModel<DOMWrapper<Element>> {
   }
 
   get header() {
-    return this.ifExists(this.ifExists()?.find('header'))
+    return this.ifExists(this.ifExists(this.content)?.find('header'))
+  }
+
+  get footer() {
+    return this.ifExists(this.ifExists(this.content)?.find('footer'))
   }
 
   get content() {

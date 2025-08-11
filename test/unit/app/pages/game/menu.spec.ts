@@ -1,49 +1,47 @@
-import { beforeEach, describe, expect, it } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import problem1000001 from '~/assets/api/problems/1000001.json'
 import { TypingGameSetting } from '~~/libs/TypingGameSetting'
-import { endpointRegister } from '../../_utils'
+import { endpointRegister, routerSetup } from '../../_utils'
 import { MenuPageModel } from './_page/MenuPageModel'
 
-function setupRoute() {
-  const router = useRouter()
-  const game = router
-    .getRoutes()
-    .find(({ path, name }) => path === '/game' && name === undefined)!
-  router.clearRoutes()
-  router.addRoute({
-    path: '/',
-    name: 'index',
-    component: defineComponent({
-      template: '/',
-    }),
-  })
-  router.addRoute({
-    ...game,
-    children: [
-      game.children.find(({ path }) => path === 'menu')!,
-      {
-        path: 'play',
-        name: 'game-play',
-        component: defineComponent({
-          template: '/game/play',
-        }),
-      },
-    ],
-  })
-}
+const { resetRoutes, setupRoutes } = routerSetup((routes) => {
+  const game = routes.find(
+    ({ path, name }) => path === '/game' && name === undefined,
+  )!
+  return [
+    { path: '/', name: 'index', component: { template: '/' } },
+    {
+      ...game,
+      children: [
+        game.children!.find(({ path }) => path === 'menu')!,
+        {
+          path: 'play',
+          name: 'game-play',
+          component: { template: '/game/play' },
+        },
+      ],
+    },
+  ]
+})
 
 describe('pages/game/menu', () => {
   const createPage = MenuPageModel.create
+
   const { registerEndpoint, unregisterEndpoints } = endpointRegister()
 
   beforeEach(() => {
+    setupRoutes()
     unregisterEndpoints()
-    setupRoute()
     clearNuxtState()
     useGameSetting().setting.value = TypingGameSetting.create()
     useState('/api/problems.json').value = { problems: [problem1000001] }
     useState('/api/problems/1000001.json').value = problem1000001
     useState('/api/railway/corporations.json').value = []
+  })
+
+  afterEach(() => {
+    resetRoutes()
+    unregisterEndpoints()
   })
 
   describe('データの取得', () => {
@@ -132,7 +130,7 @@ describe('pages/game/menu', () => {
       const page = await setupPage({ problemId: problem1000001.id })
       expect(await page.menuDialog.startAction.click()).toBe(true)
       expect(page.menuDialog.active).toBe(false)
-      expect(page.pathname).toBe('/game/play')
+      expect(page.pathname).toBe('/game/play?id=1000001')
       expect(page.text).toBe('/game/play')
     })
 

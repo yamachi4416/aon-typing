@@ -1,7 +1,15 @@
 <template>
   <div :class="$style.count">
     <div v-if="count > 0">
-      <span>{{ count }}</span>
+      <span
+        role="timer"
+        :aria-live="count <= 3 ? 'assertive' : 'polite'"
+        aria-atomic="true"
+        aria-relevant="text"
+        :aria-label="`開始まで ${count} 秒`"
+      >
+        {{ count }}
+      </span>
     </div>
   </div>
 </template>
