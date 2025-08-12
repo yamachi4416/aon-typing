@@ -3,10 +3,8 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute()
-onMounted(() => {
-  if (route.name !== 'game-menu') {
-    navigateTo({ name: 'game-menu', replace: true })
-  }
+const navigator = useNavigator()
+onMounted(async () => {
+  await navigator.backOrGameMenu()
 })
 </script>

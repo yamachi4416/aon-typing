@@ -1,38 +1,20 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import _problem1000001 from '~/assets/api/problems/1000001.json'
 import problem1000002 from '~/assets/api/problems/1000002.json'
-import { endpointRegister, routerSetup } from '../../_utils'
+import { endpointRegister } from '../../_utils'
 import { PlayPageModel } from './_page/PlayPageModel'
+import { routerSetup } from './_utils'
 
 const problem1000001: typeof _problem1000001 = {
   ..._problem1000001,
   words: _problem1000001.words.slice(0, 2),
 } as const
 
-const { resetRoutes, setupRoutes } = routerSetup((routes) => {
-  const game = routes.find(
-    ({ path, name }) => path === '/game' && name === undefined,
-  )!
-  return [
-    { path: '/', name: 'index', component: { template: '/' } },
-    {
-      ...game,
-      children: [
-        game.children.find(({ path }) => path === 'play')!,
-        {
-          path: 'menu',
-          name: 'game-menu',
-          component: { template: '/game/menu' },
-        },
-      ],
-    },
-  ]
-})
-
 describe('/pages/game/play', () => {
   const createPage = PlayPageModel.create
 
   const { registerEndpoint, unregisterEndpoints } = endpointRegister()
+  const { resetRoutes, setupRoutes } = routerSetup('play')
 
   beforeEach(() => {
     setupRoutes()
@@ -97,19 +79,19 @@ describe('/pages/game/play', () => {
     it('idが指定されていない', async () => {
       const page = await createPage()
       expect(await page.waitForPageFinished(1000)).toBe(true)
-      expect(page.pathname).toBe('/game/menu')
+      expect(page.path).toBe('/game/menu')
     })
 
     it('idが一覧に存在しない', async () => {
       const page = await createPage({ problemId: '0000000' })
       expect(await page.waitForPageFinished(1000)).toBe(true)
-      expect(page.pathname).toBe('/game/menu')
+      expect(page.path).toBe('/game/menu')
     })
 
     it('問題の内容を取得できない', async () => {
       const page = await createPage({ problemId: problem1000002.id })
       expect(await page.waitForPageFinished(1000)).toBe(true)
-      expect(page.pathname).toBe('/game/menu')
+      expect(page.path).toBe('/game/menu')
     })
   })
 
@@ -204,7 +186,7 @@ describe('/pages/game/play', () => {
       expect(page.resultDialog.menuAction.active).toBe(true)
       expect(await page.resultDialog.menuAction.click()).toBe(true)
 
-      expect(page.pathname).toBe('/game/menu')
+      expect(page.path).toBe('/game/menu')
       expect(page.text).toBe('/game/menu')
     })
   })

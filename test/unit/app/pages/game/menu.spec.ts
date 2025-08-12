@@ -1,32 +1,14 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import problem1000001 from '~/assets/api/problems/1000001.json'
-import { endpointRegister, routerSetup } from '../../_utils'
+import { endpointRegister } from '../../_utils'
 import { MenuPageModel } from './_page/MenuPageModel'
-
-const { resetRoutes, setupRoutes } = routerSetup((routes) => {
-  const game = routes.find(
-    ({ path, name }) => path === '/game' && name === undefined,
-  )!
-  return [
-    { path: '/', name: 'index', component: { template: '/' } },
-    {
-      ...game,
-      children: [
-        game.children!.find(({ path }) => path === 'menu')!,
-        {
-          path: 'play',
-          name: 'game-play',
-          component: { template: '/game/play' },
-        },
-      ],
-    },
-  ]
-})
+import { routerSetup } from './_utils'
 
 describe('pages/game/menu', () => {
   const createPage = MenuPageModel.create
 
   const { registerEndpoint, unregisterEndpoints } = endpointRegister()
+  const { resetRoutes, setupRoutes } = routerSetup('menu')
 
   beforeEach(() => {
     setupRoutes()
@@ -87,14 +69,14 @@ describe('pages/game/menu', () => {
     it('ダイアログを閉じる（ページ遷移）', async () => {
       const page = await setupPage()
       await page.navigateTo('/')
-      expect(page.pathname).toBe('/')
+      expect(page.path).toBe('/')
       expect(page.text).toBe('/')
     })
 
     it('ダイアログを閉じる（やめる）', async () => {
       const page = await setupPage()
       expect(await page.menuDialog.cancelAction.click()).toBe(true)
-      expect(page.pathname).toBe('/')
+      expect(page.path).toBe('/')
       expect(page.text).toBe('/')
     })
 
@@ -102,7 +84,7 @@ describe('pages/game/menu', () => {
       const page = await setupPage()
       await page.keydownEscape()
       expect(page.menuDialog.active).toBe(true)
-      expect(page.pathname).not.toBe('/')
+      expect(page.path).not.toBe('/')
       expect(page.text).not.toBe('/')
     })
 
@@ -129,7 +111,7 @@ describe('pages/game/menu', () => {
       const page = await setupPage({ problemId: problem1000001.id })
       expect(await page.menuDialog.startAction.click()).toBe(true)
       expect(page.menuDialog.active).toBe(false)
-      expect(page.pathname).toBe('/game/play?id=1000001')
+      expect(page.path).toBe('/game/play?id=1000001')
       expect(page.text).toBe('/game/play')
     })
 

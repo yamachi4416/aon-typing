@@ -18,7 +18,7 @@ export abstract class BasePageModel<VM = unknown> extends BaseModel<
     return this.el?.vm.$router
   }
 
-  get pathname() {
+  get path() {
     return this.router?.currentRoute.value.fullPath
   }
 
