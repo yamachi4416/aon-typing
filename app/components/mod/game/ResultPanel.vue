@@ -72,7 +72,7 @@ import type { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
 
 defineProps<{
   result: TypingGameInfo | undefined
-  problem: TypingProblemQuestioner | undefined
+  problem: Readonly<TypingProblemQuestioner> | undefined
 }>()
 
 defineEmits<{

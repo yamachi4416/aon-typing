@@ -5,9 +5,9 @@
         <ModGameTypingPanel
           :class="$style.svg"
           :state
-          @toggle="typing.toggle()"
-          @cancel="typing.cancel()"
-          @dispose="typing.dispose()"
+          @toggle="toggle"
+          @cancel="cancel"
+          @dispose="dispose"
         />
       </div>
     </div>
@@ -17,9 +17,9 @@
         <ModGameResultPanel
           :result
           :problem="state.problem"
-          @menu="onMenu"
-          @next="onNext"
-          @retry="onRetry"
+          @menu="menu"
+          @next="next"
+          @retry="retry"
         />
       </PartsModalPanel>
     </div>
@@ -27,61 +27,48 @@
 </template>
 
 <script setup lang="ts">
-import { TypingGame } from '~~/libs/TypingGame'
-import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
-import { TypingGameState } from '~~/libs/TypingGameState'
-import type { ProblemDetail } from '~~/types/problems'
-
 const emit = defineEmits<{
   (e: 'menu'): unknown
 }>()
 
-const { setting } = useGameSetting()
-const state = reactive(TypingGameState.create(toReactive(setting)))
-const typing = TypingGame.create({ state })
-const result = ref<TypingGameInfo>()
-
 const countDown = useTemplateRef('countDown')
 const modalGameResult = useTemplateRef('modalGameResult')
 
-onBeforeUnmount(() => {
-  typing.dispose()
+const {
+  state,
+  result,
+  typing: { start, toggle, cancel, dispose, ...typing },
+} = useTypingGame(async (playTyping) => {
+  if (!(await startCount())) return
+  await playTyping()
+  await openResult()
 })
 
-async function startTyping() {
-  result.value = undefined
-  typing.cancel()
+async function startCount() {
+  return await countDown.value?.start()
+}
 
-  if (!(await countDown.value?.start())) {
-    return undefined
-  }
-
-  result.value = await typing.start()
+async function openResult() {
   await modalGameResult.value?.open()
-
-  return result.value
 }
 
-async function start({ problem }: { problem: ProblemDetail }) {
-  state.init({ problem })
-  return await startTyping()
-}
-
-async function onMenu() {
+async function closeResult() {
   await modalGameResult.value?.close()
+}
+
+async function menu() {
+  await closeResult()
   emit('menu')
 }
 
-async function onNext() {
-  await modalGameResult.value?.close()
-  state.continue()
-  await startTyping()
+async function next() {
+  await closeResult()
+  await typing.next()
 }
 
-async function onRetry() {
-  await modalGameResult.value?.close()
-  state.reset()
-  await startTyping()
+async function retry() {
+  await closeResult()
+  await typing.retry()
 }
 
 defineExpose({

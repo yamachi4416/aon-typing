@@ -1,7 +1,8 @@
 <template>
   <div :class="$style.count">
-    <div v-if="count > 0">
+    <div>
       <span
+        v-if="count > 0"
         role="timer"
         :aria-live="count <= 3 ? 'assertive' : 'polite'"
         aria-atomic="true"
