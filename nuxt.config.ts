@@ -44,7 +44,14 @@ export default defineNuxtConfig({
     legacy: true,
   },
 
-  components: true,
+  components: {
+    dirs: [
+      {
+        path: '~/components',
+        ignore: ['**/_*/**'],
+      },
+    ],
+  },
   css: ['~/assets/css/main.scss'],
   ssr: true,
 

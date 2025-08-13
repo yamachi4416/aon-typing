@@ -2,77 +2,68 @@
   <div :class="$style.content">
     <div :class="$style.main">
       <div :class="$style.keyboard">
-        <ModGameTypingPanel
+        <TypingControl
           :class="$style.svg"
           :state
-          @toggle="toggle"
-          @cancel="cancel"
-          @dispose="dispose"
+          @toggle="typing.toggle"
+          @cancel="typing.cancel"
         />
       </div>
     </div>
     <div>
-      <ModGameTypingPlayCountDown ref="countDown" />
-      <PartsModalPanel ref="modalGameResult" title="タイピング結果ダイアログ">
-        <ModGameResultPanel
-          :result
-          :problem="state.problem"
-          @menu="menu"
-          @next="next"
-          @retry="retry"
-        />
-      </PartsModalPanel>
+      <CountDown ref="countDown" />
+      <ResultDialog
+        ref="resultDialog"
+        @menu="menu"
+        @next="next"
+        @retry="retry"
+      />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import {
+  CountDown,
+  ResultDialog,
+  TypingControl,
+  useTypingPlay,
+} from './_internal'
+
 const emit = defineEmits<{
   (e: 'menu'): unknown
 }>()
 
 const countDown = useTemplateRef('countDown')
-const modalGameResult = useTemplateRef('modalGameResult')
+const resultDialog = useTemplateRef('resultDialog')
 
-const {
-  state,
-  result,
-  typing: { start, toggle, cancel, dispose, ...typing },
-} = useTypingGame(async (playTyping) => {
-  if (!(await startCount())) return
-  await playTyping()
-  await openResult()
+const { state, typing } = useTypingPlay(async (play) => {
+  if (await countDown.value?.start()) {
+    const result = await play()
+    if (result) {
+      await resultDialog.value?.open({ result })
+    }
+    return result
+  }
 })
 
-async function startCount() {
-  return await countDown.value?.start()
-}
-
-async function openResult() {
-  await modalGameResult.value?.open()
-}
-
-async function closeResult() {
-  await modalGameResult.value?.close()
-}
-
 async function menu() {
-  await closeResult()
+  await resultDialog.value?.close()
   emit('menu')
 }
 
 async function next() {
-  await closeResult()
+  await resultDialog.value?.close()
   await typing.next()
 }
 
 async function retry() {
-  await closeResult()
+  await resultDialog.value?.close()
   await typing.retry()
 }
 
 defineExpose({
-  start,
+  start: typing.start,
 })
 </script>
 

@@ -40,6 +40,10 @@ export class TypingGameState extends TypingGameStateValue {
     return this.problem?.totalCharCount ?? 0
   }
 
+  get remainingTime() {
+    return Math.max(this.timeLimit - this.timeUse, 0)
+  }
+
   get isGoalReached() {
     return this.goalCharCount > 0 && this.totalTypeCorrect >= this.goalCharCount
   }
@@ -50,6 +54,10 @@ export class TypingGameState extends TypingGameStateValue {
 
   get isRunning() {
     return this.running && !this.pausing
+  }
+
+  get hasNext() {
+    return this.problem?.hasNext ?? false
   }
 
   clear() {

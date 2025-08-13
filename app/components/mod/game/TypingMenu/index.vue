@@ -1,7 +1,7 @@
 <template>
   <div>
     <PartsModalPanel ref="menuModal" title="タイピングメニューダイアログ">
-      <ModGameMenuPanel
+      <MenuPanel
         @start="onStart"
         @cancel="onCancel"
         @detail="onMenuProblemDetail"
@@ -13,7 +13,7 @@
       v-slot="{ close }"
       title="タイピング問題の選択ダイアログ"
     >
-      <ModGameProblemListPanel
+      <ProblemListPanel
         @close="close"
         @select="onSelect"
         @detail="onListProblemDetail"
@@ -24,7 +24,7 @@
       v-slot="{ close }"
       title="タイピング問題の内容ダイアログ"
     >
-      <ModGameProblemDetailPanel
+      <ProblemDetailPanel
         ref="problemDetailPanel"
         @close="close"
         @back="close"
@@ -35,6 +35,7 @@
 </template>
 <script setup lang="ts">
 import type { ProblemListItem } from '~~/types/problems'
+import { MenuPanel, ProblemDetailPanel, ProblemListPanel } from './_internal'
 
 const emit = defineEmits<{
   (e: 'start', id: string): unknown

@@ -91,7 +91,7 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits<{
-  (e: 'toggle' | 'cancel' | 'dispose'): unknown
+  (e: 'toggle' | 'cancel'): unknown
 }>()
 
 const typingState = computed(() => props.state.currentTypingState)
@@ -108,8 +108,8 @@ const keys = computed(() => {
 })
 
 const remainingTime = computed(() =>
-  props.state.timeLimit - props.state.timeUse
-    ? Math.trunc((props.state.timeLimit - props.state.timeUse) / 1000 + 1)
+  props.state.remainingTime
+    ? Math.trunc(props.state.remainingTime / 1000 + 1)
     : 0,
 )
 
@@ -132,8 +132,6 @@ const infoScale = computed(() => {
   const chars = Array.from(infoState.value?.info ?? []).length
   return [10, 20, 30, 40, 50, 100, 200, 300].find((c) => chars <= c) || 0
 })
-
-onBeforeUnmount(() => emit('dispose'))
 </script>
 
 <style lang="scss" module>

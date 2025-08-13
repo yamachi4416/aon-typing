@@ -11,6 +11,7 @@ describe('TypingGameInfo', () => {
     totalTypeCorrect: 0,
     totalTypeCount: 0,
     totalTypeMiss: 0,
+    hasNext: false,
     ...state,
   })
 
@@ -192,5 +193,15 @@ describe('TypingGameInfo', () => {
 
     expect(info.rank).toBe(expected)
     expect(info.toFixed().rank).toBe(expected)
+  })
+
+  it.each([
+    [true, true],
+    [false, false],
+  ])('hasNext: state.hasNext が %s の場合は %s', (hasNext, expected) => {
+    const info = toInfo({ hasNext })
+
+    expect(info.hasNext).toBe(expected)
+    expect(info.toFixed().hasNext).toBe(expected)
   })
 })

@@ -19,7 +19,7 @@
       :model-value="page"
       :items="filterProblems"
       :page-size="pageSize"
-      @update:model-value="selcet"
+      @update:model-value="select"
     >
       <ModProblemList v-slot="{ problem }" :problems="items" @tag="addTag">
         <button @click.self="$emit('detail', problem)">内容を見る</button>
@@ -51,7 +51,7 @@ const filterProblems = filterTagProblems({
 
 const content = ref<InstanceType<typeof ModalContentVue>>()
 
-async function selcet(p: number) {
+async function select(p: number) {
   page.value = p
   await nextTick()
   content.value?.scroll({ top: 0 })

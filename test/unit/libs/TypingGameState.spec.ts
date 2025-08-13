@@ -39,6 +39,7 @@ describe('TypingGameState', () => {
     expect(state.running).toBe(false)
     expect(state.timeLimit).toBe(0)
     expect(state.timeUse).toBe(0)
+    expect(state.remainingTime).toBe(0)
     expect(state.goalCharCount).toBe(0)
     expect(state.totalTypeCount).toBe(0)
     expect(state.totalTypeCorrect).toBe(0)
@@ -47,6 +48,7 @@ describe('TypingGameState', () => {
     expect(state.problem).toBeUndefined()
     expect(state.currentWord).toBeUndefined()
     expect(state.totalCharCount).toBe(0)
+    expect(state.hasNext).toBe(false)
   })
 
   it('settingの値で初期値が設定される', () => {
@@ -72,7 +74,23 @@ describe('TypingGameState', () => {
     expect(state.problem?.id).toBe(problem.id)
     expect(state.totalCharCount).toBe(2)
     expect(state.currentWord).toBeTruthy()
+    expect(state.hasNext).toBe(true)
   })
+
+  it.each([
+    [1, 0, 1],
+    [2, 1, 1],
+    [0, 1, 0],
+  ])(
+    'remainingTime (timeLimit=%d, timeUse=%d) => %d',
+    (timeLimit, timeUse, expected) => {
+      const setting = TypingGameSetting.create()
+      setting.timeLimit = timeLimit
+      const state = TypingGameState.create(setting)
+      state.timeUse = timeUse
+      expect(state.remainingTime).toBe(expected)
+    },
+  )
 
   it.each([
     [0, 0, false],
@@ -158,6 +176,21 @@ describe('TypingGameState', () => {
     state.reset()
 
     expect(state).toEqual(initValue)
+  })
+
+  it('hasNextは問題のhasNextと同じ', () => {
+    const setting = TypingGameSetting.create()
+    const state = TypingGameState.create(setting)
+
+    state.init({ problem: defaultProblem() })
+
+    const mock = vi.spyOn(state.problem!, 'hasNext', 'get')
+
+    mock.mockReturnValue(false)
+    expect(state.hasNext).toBe(false)
+
+    mock.mockReturnValue(true)
+    expect(state.hasNext).toBe(true)
   })
 
   it('resetを実行すると問題もresetされる', () => {

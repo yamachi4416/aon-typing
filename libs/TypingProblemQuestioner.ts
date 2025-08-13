@@ -54,6 +54,11 @@ export abstract class TypingProblemQuestioner {
   }
 }
 
+export type ReadonlyTypingProblemQuestioner = Omit<
+  TypingProblemQuestioner,
+  'init' | 'nextWord' | 'continue' | 'reset'
+>
+
 class TypingProblemQuestionerImpl extends TypingProblemQuestioner {
   readonly words: TypingGameWordData[] = []
   readonly endWords: TypingGameWordData[] = []

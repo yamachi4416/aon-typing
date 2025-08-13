@@ -25,7 +25,7 @@ export const helpAnimals = (): ReadonlyArray<Rank> => rankList().slice(2, 6)
 type State = Readonly<
   Pick<
     TypingGameState,
-    'tick' | 'totalTypeCount' | 'totalTypeMiss' | 'totalTypeCorrect'
+    'tick' | 'totalTypeCount' | 'totalTypeMiss' | 'totalTypeCorrect' | 'hasNext'
   > & {
     problem?: Readonly<{
       current?: Readonly<Pick<TypingGameWordData, 'misses'>>
@@ -43,6 +43,7 @@ export abstract class TypingGameInfo {
   abstract readonly score: number
   abstract readonly missKeys: { char: string; count: number }[]
   abstract readonly rank: string
+  abstract readonly hasNext: boolean
 
   static create(state: State): TypingGameInfoImpl
   static create(state: State, fixed: true): TypingGameInfo
@@ -108,6 +109,10 @@ class TypingGameInfoImpl implements TypingGameInfo {
     return rank?.name ?? ''
   }
 
+  get hasNext() {
+    return this.state.hasNext
+  }
+
   toFixed(): TypingGameInfo {
     return {
       time: this.time,
@@ -118,6 +123,7 @@ class TypingGameInfoImpl implements TypingGameInfo {
       score: this.score,
       missKeys: this.missKeys,
       rank: this.rank,
+      hasNext: this.hasNext,
     }
   }
 }
