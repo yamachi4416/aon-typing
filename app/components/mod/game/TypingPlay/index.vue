@@ -5,8 +5,8 @@
         <TypingControl
           :class="$style.svg"
           :state
-          @toggle="typing.toggle"
-          @cancel="typing.cancel"
+          @toggle="toggle"
+          @cancel="cancel"
         />
       </div>
     </div>
@@ -23,29 +23,40 @@
 </template>
 
 <script setup lang="ts">
-import {
-  CountDown,
-  ResultDialog,
-  TypingControl,
-  useTypingPlay,
-} from './_internal'
+import { TypingGame } from '~~/libs/TypingGame'
+import { TypingGameState } from '~~/libs/TypingGameState'
+import type { ProblemDetail } from '~~/types/problems'
+import { CountDown, ResultDialog, TypingControl } from './_internal'
 
 const emit = defineEmits<{
-  (e: 'menu'): unknown
+  menu: []
 }>()
+
+const setting = toReactive(useGameSetting().setting)
+const state = reactive(TypingGameState.create(setting))
+const typing = TypingGame.create({ state })
 
 const countDown = useTemplateRef('countDown')
 const resultDialog = useTemplateRef('resultDialog')
 
-const { state, typing } = useTypingPlay(async (play) => {
+const toggle = typing.toggle.bind(typing)
+const cancel = typing.cancel.bind(typing)
+
+async function play() {
+  cancel()
   if (await countDown.value?.start()) {
-    const result = await play()
+    const result = await typing.start()
     if (result) {
       await resultDialog.value?.open({ result })
     }
     return result
   }
-})
+}
+
+async function start({ problem }: { problem: Readonly<ProblemDetail> }) {
+  state.init({ problem })
+  return await play()
+}
 
 async function menu() {
   await resultDialog.value?.close()
@@ -54,16 +65,20 @@ async function menu() {
 
 async function next() {
   await resultDialog.value?.close()
-  await typing.next()
+  state.continue()
+  await play()
 }
 
 async function retry() {
   await resultDialog.value?.close()
-  await typing.retry()
+  state.reset()
+  await play()
 }
 
+onBeforeUnmount(() => typing.dispose())
+
 defineExpose({
-  start: typing.start,
+  start,
 })
 </script>
 
