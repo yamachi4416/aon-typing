@@ -26,13 +26,13 @@
           <th>目標タイプ数</th>
           <td role="radiogroup">
             <button
-              v-for="i in goalCharCounts"
-              :key="`goalCharCount-${i}`"
+              v-for="[value, label] in options.goalCharCount"
+              :key="value"
               role="radio"
-              :title="`目標タイプ数を「${i || 'なし'}」に設定する`"
-              :aria-checked="i === setting.goalCharCount"
-              @click="setting.goalCharCount = i"
-              v-text="i || 'なし'"
+              :title="`目標タイプ数を「${label}」に設定する`"
+              :aria-checked="setting.goalCharCount === value"
+              @click="setting.goalCharCount = value"
+              v-text="label"
             />
           </td>
         </tr>
@@ -40,13 +40,13 @@
           <th>自動モード</th>
           <td role="radiogroup">
             <button
-              v-for="a in HelpAnimals"
-              :key="`automode-${a.speed}`"
+              v-for="[value, label] in options.autoMode"
+              :key="value"
               role="radio"
-              :title="`自動モードを「${a.name}」に設定する`"
-              :aria-checked="setting.autoMode === a.speed"
-              @click="setting.autoMode = a.speed"
-              v-text="a.name"
+              :title="`自動モードを「${label}」に設定する`"
+              :aria-checked="setting.autoMode === value"
+              @click="setting.autoMode = value"
+              v-text="label"
             />
           </td>
         </tr>
@@ -54,12 +54,12 @@
           <th>出題する順番</th>
           <td role="radiogroup">
             <button
-              v-for="(label, order) in problemOrders"
-              :key="order"
+              v-for="[value, label] in options.problemOrder"
+              :key="value"
               role="radio"
               :title="`出題する順番を「${label}」に設定する`"
-              :aria-checked="setting.problemOrder === order"
-              @click="setting.problemOrder = order"
+              :aria-checked="setting.problemOrder === value"
+              @click="setting.problemOrder = value"
               v-text="label"
             />
           </td>
@@ -69,7 +69,7 @@
           <td>
             <button
               title="問題をいちらんから選択する"
-              @click="openProblemSelect"
+              @click="emit('openProblemSelect')"
             >
               いちらん選択
             </button>
@@ -98,8 +98,9 @@
               :title="`選択した問題「${problem.title}」の内容を表示する`"
               href="#"
               @click.prevent="emit('detail', problem)"
-              >{{ problem?.title }}</a
             >
+              {{ problem?.title }}
+            </a>
           </td>
         </tr>
         <tr>
@@ -124,6 +125,7 @@
 
 <script setup lang="ts">
 import { helpAnimals } from '~~/libs/TypingGameInfo'
+import type { TypingGameSetting } from '~~/libs/TypingGameSetting'
 import type { ProblemListItem } from '~~/types/problems'
 
 const emit = defineEmits<{
@@ -139,6 +141,11 @@ const problem = computed(() => {
   return problems.value.find((p) => p.id === id)
 })
 
+const { select: randomProblemSelect } = useRandomSelect(
+  toRef(setting.value, 'problemId'),
+  computed(() => problems.value.map(({ id }) => id)),
+)
+
 const problemType = computed(() => {
   switch (problem.value?.type) {
     case 'japanese':
@@ -150,44 +157,32 @@ const problemType = computed(() => {
   }
 })
 
-const HelpAnimals = [
-  {
-    name: 'オフ',
-    speed: 0,
-  },
-  ...helpAnimals().map(({ start, end, name }) => {
-    const avg = Math.round(start + ((end ?? 0) - start) / 2)
-    return {
-      name,
-      speed: Math.round(60000 / avg),
-    }
-  }),
-]
+const options = defineMenuOptions({
+  autoMode: [
+    [0, 'オフ'],
+    ...helpAnimals().map<[number, string]>(
+      ({ start, end, name }) =>
+        [
+          Math.round(60000 / Math.round(start + ((end ?? 0) - start) / 2)),
+          name,
+        ] as const,
+    ),
+  ],
+  goalCharCount: [
+    [0, 'なし'],
+    ...[100, 250, 450, 700, 1000].map<[number, string]>((v) => [v, String(v)]),
+  ],
+  problemOrder: [
+    ['first', '前から'],
+    ['last', '後から'],
+    ['random', 'ランダム'],
+  ],
+})
 
-const goalCharCounts = [0, 100, 250, 450, 700, 1000]
-
-const problemOrders: Record<(typeof setting)['value']['problemOrder'], string> =
-  {
-    first: '前から',
-    last: '後から',
-    random: 'ランダム',
-  }
-
-function openProblemSelect() {
-  emit('openProblemSelect')
-}
-
-function randomProblemSelect() {
-  const length = problems.value.length
-  if (length > 0) {
-    const idx = Math.floor(Math.random() * length)
-    const problemId = problems.value[idx]!.id
-    if (setting.value.problemId !== problemId) {
-      setting.value.problemId = problemId
-    } else if (length > 1) {
-      randomProblemSelect()
-    }
-  }
+function defineMenuOptions<Keys extends keyof TypingGameSetting>(options: {
+  [K in Keys]: [value: TypingGameSetting[K], label: string][]
+}) {
+  return readonly(options)
 }
 </script>
 

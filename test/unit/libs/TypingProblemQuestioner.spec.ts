@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { TypingProblemQuestioner } from '~~/libs/TypingProblemQuestioner'
 import type { ProblemDetailWord } from '~~/types/problems'
 
@@ -15,6 +15,13 @@ describe('TypingProblemQuestioner', () => {
       },
       { problemOrder: 'first', ...setting },
     )
+  beforeEach(() => {
+    vi.resetAllMocks()
+  })
+
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
 
   describe('create', () => {
     it('初期値（wordsなし）', () => {
@@ -151,10 +158,6 @@ describe('TypingProblemQuestioner', () => {
   })
 
   describe('problemOrder', () => {
-    beforeEach(() => {
-      vi.resetAllMocks()
-    })
-
     const words: ReadonlyArray<ProblemDetailWord> = [
       { info2: 'あいうえお', word: 'aiueo', info: 'アイウエオ' },
       { info2: 'かきくけこ', word: 'kakikukeko', info: 'カキクケコ' },
@@ -181,9 +184,11 @@ describe('TypingProblemQuestioner', () => {
       ])
     })
 
-    it('random', () => {
-      const rand = [1, 3, 2]
-      vi.spyOn(Math, 'random').mockImplementation(() => rand.shift()!)
+    it('random', async () => {
+      const util = await import('~~/libs/Util')
+      const shuffle = vi
+        .spyOn(util, 'shuffle')
+        .mockImplementation((arr) => [arr[0], arr[2], arr[1]])
 
       const problem = create({ words }, { problemOrder: 'random' })
 
@@ -192,6 +197,7 @@ describe('TypingProblemQuestioner', () => {
         'sasisuseso',
         'kakikukeko',
       ])
+      expect(shuffle).toBeCalledTimes(1)
     })
   })
 })

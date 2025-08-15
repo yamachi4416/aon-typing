@@ -42,6 +42,7 @@ describe('TypingGame', () => {
 
   afterEach(() => {
     vi.useRealTimers()
+    vi.restoreAllMocks()
   })
 
   it('問題が設定されていない', async () => {

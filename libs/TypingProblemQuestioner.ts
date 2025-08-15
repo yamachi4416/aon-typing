@@ -1,6 +1,7 @@
 import type { ProblemDetail } from '~~/types/problems'
 import type { TypingGameSetting } from './TypingGameSetting'
 import { TypingGameWordData } from './TypingGameWordData'
+import { shuffle } from './Util'
 
 type Problem = Readonly<Pick<ProblemDetail, 'id' | 'type' | 'words'>>
 type Setting = Readonly<Pick<TypingGameSetting, 'problemOrder'>>
@@ -10,11 +11,7 @@ const problemSorters: Record<
   (words: ReadonlyArray<TypingGameWordData>) => TypingGameWordData[]
 > = {
   first: (words) => [...words],
-  random: (words) =>
-    words
-      .map((word) => ({ word, order: Math.random() }))
-      .toSorted((a, b) => a.order - b.order)
-      .map(({ word }) => word),
+  random: (words) => shuffle(words),
   last: (words) => words.toReversed(),
 }
 

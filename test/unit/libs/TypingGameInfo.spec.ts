@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { TypingGameInfo } from '~~/libs/TypingGameInfo'
 
 describe('TypingGameInfo', () => {
@@ -16,6 +16,14 @@ describe('TypingGameInfo', () => {
   })
 
   const toInfo = (state: State = {}) => create(toState(state))
+
+  beforeEach(() => {
+    vi.resetAllMocks()
+  })
+
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
 
   it('create(state) は toFixedメソッドを持つ', () => {
     const info = create(toState())

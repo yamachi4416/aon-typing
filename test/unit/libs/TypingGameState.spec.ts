@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { TypingGameSetting } from '~~/libs/TypingGameSetting'
 import { TypingGameState } from '~~/libs/TypingGameState'
 import type { ProblemDetail } from '~~/types/problems'
@@ -27,6 +27,14 @@ describe('TypingGameState', () => {
     state.totalTypeMiss = 5
     state.currentTypingState = { detail: {}, mistake: true }
   }
+
+  beforeEach(() => {
+    vi.resetAllMocks()
+  })
+
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
 
   it('初期値が設定される', () => {
     const setting = TypingGameSetting.create()
