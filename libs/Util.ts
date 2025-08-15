@@ -59,6 +59,17 @@ export async function countDown(
   })
 }
 
+export function shuffle<T>(values: ReadonlyArray<T>) {
+  const xs = [...values]
+  for (let i = xs.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    const t = xs[i]!
+    xs[i] = xs[j]!
+    xs[j] = t
+  }
+  return xs
+}
+
 export async function wait(time: number, options: TimerTickerOptions = {}) {
   return await intervalTimer(1, time, () => {}, {
     ...options,
