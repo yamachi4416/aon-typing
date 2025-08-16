@@ -7,7 +7,7 @@ import {
 } from '~~/test/e2e/util'
 
 describe('ローマ字タイピング入力表ページの画面遷移の確認', () => {
-  it("'もどる'ボタンをクリックすると前のページに遷移する", async () => {
+  it('"もどる"ボタンをクリックすると前のページに遷移する', async () => {
     const page = await createPage('/')
 
     await page

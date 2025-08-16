@@ -1,7 +1,9 @@
 <template>
   <div>
     <PartsSection aria-labelledby="disclaimer-title">
-      <h2 id="disclaimer-title">免責について</h2>
+      <h2 id="disclaimer-title">
+        免責について
+      </h2>
       <p>
         このウェブサイトのご利用により、利用者さまがいかなる損害を受けた場合にも、当サイトは、いかなる責任も負いかねますのでご了承ください。<br />
         また、このウェブサイトからリンクしている他のウェブサイトのご利用により生じた損害について当サイトは一切の責任を負いません。
@@ -11,7 +13,9 @@
       </template>
     </PartsSection>
     <PartsSection aria-labelledby="links-title">
-      <h2 id="links-title">リンクについて</h2>
+      <h2 id="links-title">
+        リンクについて
+      </h2>
       <p>
         このウェブサイトは、原則リンクフリーです。リンクを行う場合の許可や連絡は必要ありません。<br />
         ただしインラインフレームの使用や、画像への直リンクなどは禁止させていただいております。<br />
@@ -22,7 +26,9 @@
       </template>
     </PartsSection>
     <PartsSection aria-labelledby="copy-title">
-      <h2 id="copy-title">著作権等について</h2>
+      <h2 id="copy-title">
+        著作権等について
+      </h2>
       <p>
         このウェブサイト内に掲載している文章や画像などにつきましては、無断転載することを禁止させていただいております。<br />
         もしこのウェブサイトが著作権や肖像権を侵害しているなど問題がございましたら、対応いたしますのでお問い合わせフォームよりご連絡ください。
@@ -32,7 +38,9 @@
       </template>
     </PartsSection>
     <PartsSection aria-labelledby="pi-title">
-      <h2 id="pi-title">個人情報の取り扱いについて</h2>
+      <h2 id="pi-title">
+        個人情報の取り扱いについて
+      </h2>
       <p>
         このウェブサイトでは、お問い合わせフォームのご利用時に、名前（ハンドルネーム）、メールアドレス等の個人情報をご登録いただく場合があります。
       </p>
@@ -44,7 +52,9 @@
       </template>
     </PartsSection>
     <PartsSection aria-labelledby="pio-title">
-      <h2 id="pio-title">個人情報の第三者への開示について</h2>
+      <h2 id="pio-title">
+        個人情報の第三者への開示について
+      </h2>
       <p>
         このウェブサイトでは、個人情報は適切に管理し、以下に該当する場合を除いて第三者に開示することはありません。
       </p>
@@ -59,7 +69,9 @@
       </template>
     </PartsSection>
     <PartsSection aria-labelledby="cookie-title">
-      <h2 id="cookie-title">Cookieについて</h2>
+      <h2 id="cookie-title">
+        Cookieについて
+      </h2>
       <p>
         このウェブサイトをご利用にあたって、利用者さまの利便性向上、掲載内容の最適化、第三者広告配信事業者への広告配信などにCookieを利用しています。
       </p>
@@ -72,7 +84,9 @@
       </template>
     </PartsSection>
     <PartsSection aria-labelledby="analytics-title">
-      <h2 id="analytics-title">アクセス解析ツールについて</h2>
+      <h2 id="analytics-title">
+        アクセス解析ツールについて
+      </h2>
       <p>
         このウェブサイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。
       </p>
@@ -83,16 +97,18 @@
           href="https://policies.google.com/technologies/partner-sites"
           title="ユーザーが Google パートナーのサイトやアプリを使用する際の Google によるデータ使用"
           target="_blank"
-          >ユーザーが Google パートナーのサイトやアプリを使用する際の Google
-          によるデータ使用</a
-        >」を参照ください。
+        >
+          ユーザーが Google パートナーのサイトやアプリを使用する際のGoogleによるデータ使用
+        </a>」を参照ください。
       </p>
       <template #right>
         <ImgNekoUserKeyboard />
       </template>
     </PartsSection>
     <PartsSection aria-labelledby="env-title">
-      <h2 id="env-title">サイト閲覧について</h2>
+      <h2 id="env-title">
+        サイト閲覧について
+      </h2>
       <p>
         このウェブサイトでは、基本的に最新のブラウザでのご利用を推奨しています。
       </p>

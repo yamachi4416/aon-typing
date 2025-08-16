@@ -10,8 +10,12 @@
       :problems="items"
       @tag="(tag) => emit('tag', tag)"
     >
-      <button @click="$emit('detail', problem)">内容を見る</button>
-      <button @click="$emit('play', problem)">プレイする</button>
+      <button @click="$emit('detail', problem)">
+        内容を見る
+      </button>
+      <button @click="$emit('play', problem)">
+        プレイする
+      </button>
     </ModProblemList>
   </PartsPagenate>
 </template>

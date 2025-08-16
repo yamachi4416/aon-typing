@@ -3,7 +3,9 @@
     <div>
       <header>
         <span>No.{{ item.id }}</span>
-        <h1 :id="`item-title-${uid}`">{{ item.title }}</h1>
+        <h1 :id="`item-title-${uid}`">
+          {{ item.title }}
+        </h1>
       </header>
       <div>
         <table>

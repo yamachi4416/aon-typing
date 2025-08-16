@@ -55,9 +55,8 @@ const props = defineProps<{
 const shiftKey = ref(false)
 const keyboard = computed(() => props.keys?.getKeys() ?? [])
 const isShift = computed(
-  () =>
-    shiftKey.value ||
-    (props.typeKey ? props.keys.isShiftKey(props.typeKey) : false),
+  () => shiftKey.value
+    || (props.typeKey ? props.keys.isShiftKey(props.typeKey) : false),
 )
 
 function hi([normal, shift]: Key) {

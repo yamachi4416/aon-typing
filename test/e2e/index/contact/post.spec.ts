@@ -8,7 +8,7 @@ import {
 } from '~~/test/e2e/util'
 
 describe('お問い合わせフォームの送信の確認', () => {
-  it("フォームを送信に成功すること'ありがとうござます'画面に遷移する", async () => {
+  it('フォームを送信に成功すること"ありがとうござます"画面に遷移する', async () => {
     const page = await createPage('/contact')
 
     const container = page.getByRole('main')

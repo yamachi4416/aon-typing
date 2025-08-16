@@ -41,7 +41,7 @@ export abstract class TypingGameInfo {
   abstract readonly correctRate: number
   abstract readonly wordPerMinute: number
   abstract readonly score: number
-  abstract readonly missKeys: { char: string; count: number }[]
+  abstract readonly missKeys: { char: string, count: number }[]
   abstract readonly rank: string
   abstract readonly hasNext: boolean
 

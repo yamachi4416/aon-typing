@@ -6,7 +6,9 @@
     >
       <header>
         <span>No.{{ detail.id }}</span>
-        <h2 :id="`title-${uid}`">{{ detail.title }}</h2>
+        <h2 :id="`title-${uid}`">
+          {{ detail.title }}
+        </h2>
       </header>
       <table>
         <tbody>

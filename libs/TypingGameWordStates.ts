@@ -149,10 +149,8 @@ class TypingGameWordStateImpl implements TypingGameWordState {
   }
 }
 
-class TypingGameWordInfoStateImpl
-  extends TypingGameWordStateImpl
-  implements TypingGameWordInfoState
-{
+class TypingGameWordInfoStateImpl extends TypingGameWordStateImpl
+  implements TypingGameWordInfoState {
   public readonly info: string
 
   constructor(word: string, info: string) {

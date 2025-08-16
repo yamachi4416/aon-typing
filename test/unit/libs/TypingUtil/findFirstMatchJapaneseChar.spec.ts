@@ -5,7 +5,7 @@ import {
 } from '~~/libs/TypingUtil'
 
 describe('findFirstMatchJapaneseChar', () => {
-  type V = Readonly<[string, string, { jc: string; ec: string }]>
+  type V = Readonly<[string, string, { jc: string, ec: string }]>
   const chars = Object.freeze(
     japaneseTypeCharsList().flatMap(([jc, ecs]) =>
       ecs.map<V>((ec) => [ec, jc, { jc, ec }]),

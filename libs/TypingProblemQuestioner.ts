@@ -64,9 +64,9 @@ class TypingProblemQuestionerImpl extends TypingProblemQuestioner {
   constructor(problem: Problem, setting: Setting) {
     super(problem, setting)
     this.init()
-    this.totalCharCount =
-      this.words.reduce((a, w) => a + w.wordState.words.length, 0) +
-      this.endWords.reduce((a, w) => a + w.wordState.words.length, 0)
+    this.totalCharCount
+      = this.words.reduce((a, w) => a + w.wordState.words.length, 0)
+        + this.endWords.reduce((a, w) => a + w.wordState.words.length, 0)
   }
 
   init() {

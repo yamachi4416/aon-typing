@@ -8,7 +8,9 @@
       <button v-show="navigator.enable" @click="navigator.backOrIndex">
         もどる
       </button>
-      <button @click="navigator.gameMenu({ id })">プレイする</button>
+      <button @click="navigator.gameMenu({ id })">
+        プレイする
+      </button>
       <template #right>
         <ImgNekoUserKeyboard />
       </template>

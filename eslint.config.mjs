@@ -1,9 +1,19 @@
 import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
-import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginCompat from 'eslint-plugin-compat'
 import eslintPluginPromise from 'eslint-plugin-promise'
 
-export default createConfigForNuxt({})
+export default createConfigForNuxt({
+  features: {
+    formatters: true,
+    import: {
+      package: 'eslint-plugin-import-lite',
+    },
+    stylistic: {
+      arrowParens: true,
+      braceStyle: '1tbs',
+    },
+  },
+})
   .prepend(eslintPluginPromise.configs['flat/recommended'], {
     ...eslintPluginCompat.configs['flat/recommended'],
     ignores: ['./test/**/*', './scripts/**/*'],
@@ -11,10 +21,13 @@ export default createConfigForNuxt({})
       polyfills: ['es:all'],
     },
   })
-  .append(eslintConfigPrettier)
   .overrideRules({
-    'no-console': 'off',
-    'no-lone-blocks': 'off',
-    'vue/multi-word-component-names': 'off',
-    'import/order': 'off',
+    '@stylistic/generator-star-spacing': 'off',
+    'vue/max-attributes-per-line': [
+      'error',
+      {
+        singleline: 10,
+      },
+    ],
+    'vue/html-self-closing': 'off',
   })

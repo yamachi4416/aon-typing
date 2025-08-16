@@ -118,7 +118,9 @@
       <button :disabled="!problem?.id" @click="emit('start')">
         スタートする
       </button>
-      <button @click="emit('cancel')">やめる</button>
+      <button @click="emit('cancel')">
+        やめる
+      </button>
     </template>
   </PartsModalContent>
 </template>

@@ -8,7 +8,7 @@ import {
 } from '~~/test/e2e/util'
 
 describe('新着の問題の画面遷移の確認', () => {
-  it("'新着の問題をもっと見る'リンクをクリックすると'問題いちらん（新着順）'ページに遷移する", async () => {
+  it('"新着の問題をもっと見る"リンクをクリックすると"問題いちらん（新着順）"ページに遷移する', async () => {
     const page = await createPage('/')
 
     const container = page.getByRole('main')
@@ -33,7 +33,7 @@ describe('新着の問題の画面遷移の確認', () => {
     await expectLoadingHidden(page)
   })
 
-  it("'内容を見る'ボタンをクリックすると'問題の内容'ページに遷移する", async () => {
+  it('\'内容を見る\'ボタンをクリックすると\'問題の内容\'ページに遷移する', async () => {
     const problem = news[0]!
     expect(problem).toBeTruthy()
 
@@ -64,7 +64,7 @@ describe('新着の問題の画面遷移の確認', () => {
     await expectLoadingHidden(page)
   })
 
-  it("'プレイする'ボタンをクリックすると'タイピングメニュー'ページに遷移する", async () => {
+  it('\'プレイする\'ボタンをクリックすると\'タイピングメニュー\'ページに遷移する', async () => {
     const problem = news[0]!
     expect(problem).toBeTruthy()
 
@@ -95,7 +95,7 @@ describe('新着の問題の画面遷移の確認', () => {
     await expectLoadingHidden(page)
   })
 
-  it("'タグ'ボタンをクリックすると'タグ'ページに遷移する", async () => {
+  it('\'タグ\'ボタンをクリックすると\'タグ\'ページに遷移する', async () => {
     const problem = news[0]!
     expect(problem).toBeTruthy()
 

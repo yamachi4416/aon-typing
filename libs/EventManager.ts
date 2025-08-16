@@ -68,11 +68,9 @@ class RegisteredListener {
   ) {}
 
   isEqual(other: RegisteredListener) {
-    return (
-      other.name === this.name &&
-      other.handler === this.handler &&
-      other.target === this.target
-    )
+    return other.name === this.name
+      && other.handler === this.handler
+      && other.target === this.target
   }
 }
 

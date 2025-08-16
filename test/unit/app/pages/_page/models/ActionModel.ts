@@ -1,4 +1,5 @@
-import { flushPromises, type DOMWrapper } from '@vue/test-utils'
+import { flushPromises } from '@vue/test-utils'
+import type { DOMWrapper } from '@vue/test-utils'
 import { BaseModel } from '../BaseModel'
 
 export class ActionModel extends BaseModel<DOMWrapper<Element>> {

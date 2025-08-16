@@ -40,7 +40,7 @@ async function generateProblemData({
   await fs.mkdir(problemsDist, { recursive: true })
 
   const tags = await readJson<
-    Record<string, { id: string; count?: number; problems: ProblemListItem[] }>
+    Record<string, { id: string, count?: number, problems: ProblemListItem[] }>
   >(tagsFile, {})
 
   let tagId = Object.values(tags).length + 1
@@ -126,19 +126,18 @@ async function generateProblemData({
       const problems = await readJson<{ id: string }[]>(newProblemsFile)
       const indexMap = new Map(problems.map(({ id }, i) => [id, i + 1]))
       return (a: string, b: string) =>
-        (indexMap.get(a) ?? -Number.MAX_SAFE_INTEGER) -
-        (indexMap.get(b) ?? -Number.MAX_SAFE_INTEGER)
+        (indexMap.get(a) ?? -Number.MAX_SAFE_INTEGER)
+        - (indexMap.get(b) ?? -Number.MAX_SAFE_INTEGER)
     }
 
     const compareByExists = await getCompareByExists()
 
     return problems
       .toSorted(
-        (a, b) =>
-          compareByExists(a.id, b.id) ||
-          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() ||
-          new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
-          b.birthtime - a.birthtime,
+        (a, b) => compareByExists(a.id, b.id)
+          || new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+          || new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
+          || b.birthtime - a.birthtime,
       )
       .map(({ id, title, type, words, tags = [] }) => ({
         id,
@@ -157,7 +156,7 @@ async function generateProblemData({
       path.join(dataDir, 'railway', 'corporations.json'),
     )
 
-    const lineMap = new Map<string, { id: string; count: number }>()
+    const lineMap = new Map<string, { id: string, count: number }>()
     for (const { id, optional: { cd: cds = [] } = {} } of problems) {
       if (!id.startsWith('1010')) continue
       for (const cd of cds) {

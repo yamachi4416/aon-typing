@@ -1,8 +1,8 @@
 import {
   defineCommand as _defineCommand,
   runMain as _runMain,
-  type Resolvable,
 } from 'citty'
+import type { Resolvable } from 'citty'
 import fs from 'node:fs/promises'
 import { createInterface } from 'node:readline/promises'
 import { isFunction } from '~~/libs/Util'

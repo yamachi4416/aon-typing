@@ -8,7 +8,7 @@ import {
 
 import { problems } from '~/assets/api/problems.json'
 
-it("トップページの'検索'フォームから問題を検索することができる", async () => {
+it('トップページの"検索"フォームから問題を検索することができる', async () => {
   const page = await createPage('/')
 
   const container = page.getByRole('main')

@@ -1,7 +1,9 @@
 <template>
   <div>
     <PartsSection aria-labelledby="hello-title">
-      <h2 id="hello-title">ようこそ「{{ site.name }}」へ</h2>
+      <h2 id="hello-title">
+        ようこそ「{{ site.name }}」へ
+      </h2>
       <p>
         {{
           site.name
@@ -15,7 +17,9 @@
     </PartsSection>
 
     <PartsSection :class="$style.search" aria-labelledby="search-title">
-      <h2 id="search-title">タイトル検索</h2>
+      <h2 id="search-title">
+        タイトル検索
+      </h2>
       <p>タイピングの問題のタイトルをキーワードで検索します。</p>
       <form role="search" @submit.prevent>
         <div>
@@ -38,7 +42,9 @@
     </PartsSection>
 
     <section :class="$style.news" aria-labelledby="news-title">
-      <h2 id="news-title">新着の問題</h2>
+      <h2 id="news-title">
+        新着の問題
+      </h2>
       <ModProblemLists
         :problems="newProblems"
         @tag="navigator.indexTagDetail"
@@ -53,7 +59,9 @@
     </section>
 
     <PartsSection :class="$style.tags" aria-labelledby="tags-title">
-      <h2 id="tags-title">タグいちらん</h2>
+      <h2 id="tags-title">
+        タグいちらん
+      </h2>
       <ul>
         <li v-for="tag in tagSummary" :key="`tag-${tag.id}`">
           <NuxtLink
@@ -74,7 +82,9 @@
     </PartsSection>
 
     <PartsSection :class="$style.others" aria-labelledby="others-title">
-      <h2 id="others-title">その他</h2>
+      <h2 id="others-title">
+        その他
+      </h2>
       <ul>
         <li>
           <NuxtLink :to="{ name: 'index-railway-corporations' }">
@@ -103,8 +113,12 @@ const site = useSiteConfig()
 const route = useRoute()
 const navigator = useNavigator()
 
-const { newProblems, tagSummary, fetchTopNewsProblems, fetchTags } =
-  useProblems()
+const {
+  newProblems,
+  tagSummary,
+  fetchTopNewsProblems,
+  fetchTags,
+} = useProblems()
 
 const state = reactive({
   kwd: '',

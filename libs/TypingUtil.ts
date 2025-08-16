@@ -300,7 +300,7 @@ const JapaneseToTypeCharList2 = [
   ['％', '%'],
   ['＄', '$'],
   ['”', '"'],
-  ['’', "'"],
+  ['’', `'`],
   ['＃', '#'],
   ['（', '('],
   ['）', ')'],
@@ -451,7 +451,7 @@ export function hira2Kana(text: string) {
 }
 
 export function toTypeJapaneseCharsMap(text = '', { length = 0 } = {}) {
-  const maps: { jc: string; ec: string }[] = []
+  const maps: { jc: string, ec: string }[] = []
   if (!text) return maps
 
   const chars = Array.from(text)
@@ -512,9 +512,9 @@ export function findFirstEqualJapaneseChar(
 export function findFirstMatchJapaneseChar(typeChars: string, jpChars: string) {
   return TypeCharToJapaneseList.reduce(
     (longest, [ec, jc]) =>
-      ec.startsWith(typeChars) &&
-      jpChars.startsWith(jc) &&
-      jc.length > longest.jc.length
+      ec.startsWith(typeChars)
+      && jpChars.startsWith(jc)
+      && jc.length > longest.jc.length
         ? { jc, ec }
         : longest,
     { jc: '', ec: '' },
@@ -536,8 +536,8 @@ export function allowDoubleN(
   leftInfoChars: string,
 ) {
   if (
-    typeChar === 'n' &&
-    (leftInfoChars.endsWith('ん') || leftInfoChars.endsWith('ン'))
+    typeChar === 'n'
+    && (leftInfoChars.endsWith('ん') || leftInfoChars.endsWith('ン'))
   ) {
     const m = leftTypeChars.match(/n+$/)
     if (m && m[0].length % 2 === 1) {
@@ -550,7 +550,7 @@ export function allowDoubleN(
 export function japaneseTypeCharsList({
   useKana,
   shortest,
-}: { useKana?: boolean; shortest?: boolean } = {}): [string, string[]][] {
+}: { useKana?: boolean, shortest?: boolean } = {}): [string, string[]][] {
   return JapaneseToTypeCharsList.map<[string, string[]]>(([hira, types]) => {
     const key = useKana ? hira2Kana(hira) : hira
     const keys = types.split('\t')

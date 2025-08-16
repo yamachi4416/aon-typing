@@ -7,7 +7,7 @@ import {
 } from '~~/test/e2e/util'
 
 describe('鉄道の会社の路線のいちらんページの画面遷移の確認', () => {
-  it("存在しない鉄道の会社のページにアクセスすると'404'ページに遷移する", async () => {
+  it('存在しない鉄道の会社のページにアクセスすると"404"ページに遷移する', async () => {
     const page = await createPage('/railway/corporations/00000')
     expect(await page.title()).toMatch(/^ページが見つかりません/)
   })

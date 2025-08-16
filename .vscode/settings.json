@@ -1,11 +1,24 @@
 {
   "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "vue.suggest.componentNameCasing": "alwaysPascalCase",
   "stylelint.validate": ["css", "postcss", "scss", "vue"],
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    }
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    }
   }
 }

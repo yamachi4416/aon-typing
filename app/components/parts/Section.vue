@@ -1,13 +1,23 @@
 <template>
   <div :class="$style.section">
-    <div v-if="$slots.left" :class="$style.left">
+    <div
+      v-if="$slots.left"
+      :class="$style.left"
+    >
       <span :class="$style.fuki" />
       <slot name="left" />
     </div>
-    <component :is="is" :class="$style.content" v-bind="$attrs">
+    <component
+      :is="is"
+      :class="$style.content"
+      v-bind="$attrs"
+    >
       <slot />
     </component>
-    <div v-if="$slots.right" :class="$style.right">
+    <div
+      v-if="$slots.right"
+      :class="$style.right"
+    >
       <span :class="$style.fuki" />
       <slot name="right" />
     </div>
@@ -106,11 +116,7 @@ withDefaults(
     width: 30px;
     height: 30px;
     content: '';
-    background: linear-gradient(
-      -135deg,
-      var(--background-90) 51%,
-      transparent 51%
-    );
+    background: linear-gradient(-135deg, var(--background-90) 51%, transparent 51%);
     box-shadow: var(--shadow-color-md) 1px 0 1px 0;
     transform: rotate(60deg) skew(-20deg, -20deg) translateZ(-1px);
   }

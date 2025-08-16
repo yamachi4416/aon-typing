@@ -154,15 +154,19 @@ describe('reactive', () => {
           public firstName: string,
           public lastName: string,
         ) {}
+
         get name() {
           return [this.firstName, this.lastName].join(' ')
         }
+
         set name(name: string) {
           this.setName(name)
         }
+
         getName() {
           return this.name
         }
+
         setName(name: string) {
           const [firstName, lastName] = name.split(' ')
           this.firstName = firstName ?? ''

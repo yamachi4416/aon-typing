@@ -2,7 +2,9 @@
   <div :class="$style.page">
     <PartsSection aria-labelledby="info-title">
       <header>
-        <h2 id="info-title">ローマ字タイピング入力表</h2>
+        <h2 id="info-title">
+          ローマ字タイピング入力表
+        </h2>
       </header>
       <div>
         <p>
@@ -15,11 +17,12 @@
             title="ローマ字タイピング入力表をダウンロードする"
             target="_blank"
             @click.prevent="navigator.download"
-            >こちら</a
-          >からどうぞ。
+          >こちら</a>からどうぞ。
         </p>
         <footer :class="$style.footer">
-          <button v-show="navigator.enable" @click="router.back">もどる</button>
+          <button v-show="navigator.enable" @click="router.back">
+            もどる
+          </button>
           <button title="印刷ダイアログを表示する" @click="print">
             印刷する
           </button>

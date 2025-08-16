@@ -44,8 +44,9 @@ async function getOperationLines({ dataDir }: { dataDir: string }) {
     'corporations.json',
   )
 
-  const data: { operationLines: { code: string; name: string }[] }[] =
-    await readJson(filePath)
+  const data: {
+    operationLines: { code: string, name: string }[]
+  }[] = await readJson(filePath)
 
   return new Map(
     data.flatMap(({ operationLines }) =>

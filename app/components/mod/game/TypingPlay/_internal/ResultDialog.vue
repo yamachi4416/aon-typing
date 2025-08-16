@@ -57,8 +57,12 @@
       </table>
 
       <template #footer>
-        <button @click="emit('retry')">もういちど</button>
-        <button @click="emit('menu')">メニューに戻る</button>
+        <button @click="emit('retry')">
+          もういちど
+        </button>
+        <button @click="emit('menu')">
+          メニューに戻る
+        </button>
         <button :disabled="!result.hasNext" @click="emit('next')">
           つづきをする
         </button>

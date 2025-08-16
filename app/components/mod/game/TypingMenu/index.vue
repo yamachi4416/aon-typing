@@ -33,6 +33,7 @@
     </PartsModalPanel>
   </div>
 </template>
+
 <script setup lang="ts">
 import type { ProblemListItem } from '~~/types/problems'
 import { MenuPanel, ProblemDetailPanel, ProblemListPanel } from './_internal'

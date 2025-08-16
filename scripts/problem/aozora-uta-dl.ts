@@ -7,9 +7,9 @@ import { defineCommand } from '../_util/cli'
 import { httpFetch } from '../_util/http'
 
 const normalizeMap: Record<string, string> = {
-  一: '１',
-  二: '２',
-  三: '３',
+  '一': '１',
+  '二': '２',
+  '三': '３',
   '…': '...',
 }
 
@@ -125,13 +125,13 @@ async function fetchDocument(url: string) {
 }
 
 function splitWords(
-  words: Array<{ info: string; info2: string }>,
+  words: Array<{ info: string, info2: string }>,
   regex: RegExp,
   max: number,
 ) {
   const ret = []
 
-  const nwords = words.reduce<Array<{ info: string; info2: string }>>(
+  const nwords = words.reduce<Array<{ info: string, info2: string }>>(
     (a, word) => {
       if (word.info.length <= max) {
         a.push(word)
@@ -171,7 +171,7 @@ function splitWords(
   return ret
 }
 
-async function aozoraDL(args: { url: string; dist: string; word: number }) {
+async function aozoraDL(args: { url: string, dist: string, word: number }) {
   const cardUrl = new URL(args.url)
   const distDir = args.dist
   const wordMax = args.word
@@ -202,7 +202,7 @@ async function aozoraDL(args: { url: string; dist: string; word: number }) {
     { info: info.author, info2: info.authorKana },
   )
 
-  page.words.forEach((word: { info: string; info2: string }) => {
+  page.words.forEach((word: { info: string, info2: string }) => {
     word.info = word.info.trim()
     word.info2 = word.info2.trim()
   })

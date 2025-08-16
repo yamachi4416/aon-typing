@@ -13,7 +13,7 @@ describe(`問題 タグ：${tag.name} ページの画面遷移の確認`, () => 
   const tagPageUrl = toTagPageUrl(id)
 
   it.each(problems.slice(0, 2))(
-    "No.$idの問題の'内容を見る'ボタンをクリックすると'問題の内容'ページに遷移する",
+    'No.$idの問題の"内容を見る"ボタンをクリックすると"問題の内容"ページに遷移する',
     async (problem) => {
       const page = await createPage(tagPageUrl)
 
@@ -39,7 +39,7 @@ describe(`問題 タグ：${tag.name} ページの画面遷移の確認`, () => 
   )
 
   it.each(problems.slice(0, 2))(
-    "No.$idの問題の'プレイする'ボタンをクリックすると'タイピングメニュー'ページに遷移する",
+    'No.$idの問題の\'プレイする\'ボタンをクリックすると\'タイピングメニュー\'ページに遷移する',
     async (problem) => {
       const page = await createPage(tagPageUrl)
 
@@ -72,7 +72,7 @@ describe(`問題 タグ：${tag.name} ページの画面遷移の確認`, () => 
   )
 
   it.each(problems.slice(0, 2))(
-    "No.$idの問題の'タグ'ボタンをクリックすると'タグ'ページに遷移する",
+    'No.$idの問題の\'タグ\'ボタンをクリックすると\'タグ\'ページに遷移する',
     async (problem) => {
       const tag = problem.tags.find((tag) => tag.id !== id)
 
@@ -100,7 +100,7 @@ describe(`問題 タグ：${tag.name} ページの画面遷移の確認`, () => 
     },
   )
 
-  it("存在しないタグのページにアクセスすると'404'ページに遷移する", async () => {
+  it('存在しないタグのページにアクセスすると\'404\'ページに遷移する', async () => {
     const page = await createPage(toTagPageUrl('000000'))
     expect(await page.title()).toMatch(/^ページが見つかりません/)
   })

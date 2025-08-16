@@ -1,7 +1,11 @@
 <template>
   <div :class="$style.theme">
-    <button @click.prevent="changeTheme('light')">light</button> /
-    <button @click.prevent="changeTheme('dark')">dark</button>
+    <button @click.prevent="changeTheme('light')">
+      light
+    </button> /
+    <button @click.prevent="changeTheme('dark')">
+      dark
+    </button>
   </div>
 </template>
 

@@ -58,8 +58,8 @@ const desc = computed(() => {
   }
 
   if (
-    error.value?.statusCode === 404 ||
-    /^(404|Page) Not Found/i.test(error.value?.message)
+    error.value?.statusCode === 404
+    || /^(404|Page) Not Found/i.test(error.value?.message)
   ) {
     return 'notfound'
   } else {

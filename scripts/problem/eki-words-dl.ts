@@ -11,7 +11,7 @@ interface Data {
     cd: string[]
     coCd: string[]
   }
-  words: Array<{ info: string; info2: string }>
+  words: Array<{ info: string, info2: string }>
 }
 
 interface Info {
@@ -35,7 +35,7 @@ async function loadInfoData({ file }: { file: string }) {
   return info
 }
 
-async function outProcess({ info, dryRun }: { info: Info; dryRun?: boolean }) {
+async function outProcess({ info, dryRun }: { info: Info, dryRun?: boolean }) {
   const { id, file, text, data } = info
 
   if (text) {

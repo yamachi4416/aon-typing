@@ -5,7 +5,9 @@
       :aria-labelledby="`title-${uid}`"
     >
       <header>
-        <h2 :id="`title-${uid}`">{{ corporation?.name }}の路線いちらん</h2>
+        <h2 :id="`title-${uid}`">
+          {{ corporation?.name }}の路線いちらん
+        </h2>
       </header>
       <p>
         {{ corporation?.name }}の路線いちらんです。<br />

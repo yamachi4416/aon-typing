@@ -6,7 +6,9 @@
       :aria-labelledby="`form-title-${uid}`"
       @submit.prevent
     >
-      <h2 :id="`form-title-${uid}`">お問い合わせ</h2>
+      <h2 :id="`form-title-${uid}`">
+        お問い合わせ
+      </h2>
       <div>
         <label class="col-3 col-sm-12" :for="`name-${uid}`">
           お名前<small>（ハンドルネーム）</small>

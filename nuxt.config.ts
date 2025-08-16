@@ -36,14 +36,13 @@ const routes: ReadonlyArray<string> = [
 ]
 
 export default defineNuxtConfig({
-  features: {
-    inlineStyles: false,
-  },
-
-  unhead: {
-    legacy: true,
-  },
-
+  modules: [
+    '@nuxtjs/seo',
+    '@nuxtjs/google-fonts',
+    '@nuxt/test-utils/module',
+    '~/modules/vitePluginLegacy',
+  ],
+  ssr: true,
   components: {
     dirs: [
       {
@@ -52,21 +51,6 @@ export default defineNuxtConfig({
       },
     ],
   },
-  css: ['~/assets/css/main.scss'],
-  ssr: true,
-
-  modules: [
-    '@nuxtjs/seo',
-    '@nuxtjs/google-fonts',
-    '@nuxt/test-utils/module',
-    '~/modules/vitePluginLegacy',
-  ],
-
-  experimental: {
-    payloadExtraction: false,
-    typedPages: true,
-  },
-
   app: {
     head: {
       charset: 'utf-8',
@@ -79,34 +63,15 @@ export default defineNuxtConfig({
       script: [{ src: '/static/js/index.js' }],
     },
   },
-
+  css: ['~/assets/css/main.scss'],
+  unhead: {
+    legacy: true,
+  },
   site: {
     name: 'あぉ～ん タイピング',
     copyright: '2021 Studio AON',
     defaultLocale: 'ja',
   },
-
-  sitemap: {
-    credits: false,
-    xsl: false,
-    include: [...routes],
-  },
-
-  ogImage: {
-    enabled: false,
-  },
-
-  googleFonts: {
-    display: 'swap',
-    download: false,
-    families: {
-      Itim: true,
-      'Noto Sans JP': {
-        wght: 400,
-      },
-    },
-  },
-
   runtimeConfig: {
     apiDir: resolver.resolve('./app/assets/api'),
     public: {
@@ -118,14 +83,20 @@ export default defineNuxtConfig({
       },
     },
   },
-
+  features: {
+    inlineStyles: false,
+  },
+  experimental: {
+    payloadExtraction: false,
+    typedPages: true,
+  },
+  compatibilityDate: '2025-07-15',
   nitro: {
     minify: true,
     prerender: {
       routes: [...routes, '/404.html'],
     },
   },
-
   hooks: {
     'pages:resolved'(pages) {
       pages.push({
@@ -135,6 +106,22 @@ export default defineNuxtConfig({
       })
     },
   },
-
-  compatibilityDate: '2025-07-15',
+  googleFonts: {
+    display: 'swap',
+    download: false,
+    families: {
+      'Itim': true,
+      'Noto Sans JP': {
+        wght: 400,
+      },
+    },
+  },
+  ogImage: {
+    enabled: false,
+  },
+  sitemap: {
+    credits: false,
+    xsl: false,
+    include: [...routes],
+  },
 })

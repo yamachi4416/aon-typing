@@ -142,7 +142,7 @@ describe('TypingGame', () => {
     expect(info?.totalTypeCount).toBe(3)
   })
 
-  it("'CapsLock', 'Shift', '' はカウントされない", async () => {
+  it('"CapsLock", "Shift", "" はカウントされない', async () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)

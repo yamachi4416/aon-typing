@@ -4,7 +4,9 @@
     :aria-labelledby="titleId"
   >
     <header>
-      <h1 :id="titleId">{{ title }}</h1>
+      <h1 :id="titleId">
+        {{ title }}
+      </h1>
       <span v-if="showClose">
         <PartsCloseCircle
           :title="`${title}ダイアログを閉じる`"

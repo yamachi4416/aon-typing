@@ -1,8 +1,5 @@
-import {
-  EventManager,
-  TypingEvent,
-  type TypingEventDetail,
-} from './EventManager'
+import { EventManager, TypingEvent } from './EventManager'
+import type { TypingEventDetail } from './EventManager'
 
 export abstract class TypingGameEventManager {
   abstract addKeydown(handler: (e: KeyboardEvent) => unknown): typeof handler

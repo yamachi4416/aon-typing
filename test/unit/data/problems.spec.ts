@@ -33,10 +33,9 @@ async function testTyping(file: string) {
   }
 
   const words = TypingGameWordData.fromDetailWords(problem.words)
-  const chars =
-    problem.type === 'japanese'
-      ? problem.words.map((word) => toTypeJapaneseChars(word.info2)).join('')
-      : problem.words.map((word) => word.word).join('')
+  const chars = problem.type === 'japanese'
+    ? problem.words.map((word) => toTypeJapaneseChars(word.info2)).join('')
+    : problem.words.map((word) => word.word).join('')
 
   let word = words.shift()
 

@@ -59,7 +59,7 @@ const usedPath = computed(() => {
   return donut({ r: 30, cr: 20, mv: 0, fx: 10 }, { deg1, deg2 })
 })
 
-function donut100({ r, cr, mv }: { r: number; cr: number; mv: number }) {
+function donut100({ r, cr, mv }: { r: number, cr: number, mv: number }) {
   return [
     `M0,${-cr - mv}`,
     `A${cr},${cr} 0 0 1 0,${cr + mv}`,
@@ -72,8 +72,8 @@ function donut100({ r, cr, mv }: { r: number; cr: number; mv: number }) {
 }
 
 function donut(
-  { r, cr, mv, fx }: { r: number; cr: number; mv: number; fx: number },
-  { deg1, deg2 }: { deg1: number; deg2: number },
+  { r, cr, mv, fx }: { r: number, cr: number, mv: number, fx: number },
+  { deg1, deg2 }: { deg1: number, deg2: number },
 ) {
   const round = (i: number) =>
     Math.round(i * Math.pow(10, fx)) / Math.pow(10, fx)

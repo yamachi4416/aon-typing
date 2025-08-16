@@ -32,7 +32,7 @@ export default defineCommand({
 
     const corporationLines = new Map<
       string,
-      { code: string; name: string; yomi: string }[]
+      { code: string, name: string, yomi: string }[]
     >()
     for (const { code, name, yomi, corporation } of await fetchOperationLines({
       key,

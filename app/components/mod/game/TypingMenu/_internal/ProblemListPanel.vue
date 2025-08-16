@@ -22,8 +22,12 @@
       @update:model-value="select"
     >
       <ModProblemList v-slot="{ problem }" :problems="items" @tag="addTag">
-        <button @click.self="$emit('detail', problem)">内容を見る</button>
-        <button @click.self="$emit('select', problem)">選択する</button>
+        <button @click.self="$emit('detail', problem)">
+          内容を見る
+        </button>
+        <button @click.self="$emit('select', problem)">
+          選択する
+        </button>
       </ModProblemList>
     </PartsPagenate>
   </PartsModalContent>

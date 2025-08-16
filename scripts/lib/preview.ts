@@ -19,11 +19,9 @@ function defineHandler(handler: Hanlder) {
 function contactHandler({ logger }: { logger?: Logger }) {
   return defineHandler({
     match(url, req) {
-      return (
-        req.method?.toLowerCase() === 'post' &&
-        url.pathname === '/api/contact' &&
-        /^application\/json/i.test(req.headers?.['content-type'] ?? '')
-      )
+      return req.method?.toLowerCase() === 'post'
+        && url.pathname === '/api/contact'
+        && /^application\/json/i.test(req.headers?.['content-type'] ?? '')
     },
     async handle(_, req, res) {
       const buffers = []
@@ -41,7 +39,7 @@ function contactHandler({ logger }: { logger?: Logger }) {
   })
 }
 
-function sendFileHandler({ distDir }: { distDir: string; logger?: Logger }) {
+function sendFileHandler({ distDir }: { distDir: string, logger?: Logger }) {
   const root = path.normalize(path.resolve(distDir))
 
   return defineHandler({
@@ -98,27 +96,25 @@ function sendFileHandler({ distDir }: { distDir: string; logger?: Logger }) {
   }
 
   function mimetype(filename: string) {
-    return (
-      {
-        '.css': 'text/css',
-        '.gif': 'image/gif',
-        '.htm': 'text/html',
-        '.html': 'text/html',
-        '.ico': 'image/vnd.microsoft.icon',
-        '.jpeg': 'image/jpeg',
-        '.jpg': 'image/jpeg',
-        '.js': 'text/javascript',
-        '.json': 'application/json',
-        '.mjs': 'text/javascript',
-        '.pdf': 'application/pdf',
-        '.png': 'image/png',
-        '.svg': 'image/svg+xml',
-        '.txt': 'text/plain',
-        '.webp': 'image/webp',
-        '.xml': 'text/xml',
-      }[path.extname(filename)?.toLocaleLowerCase() ?? ''] ??
-      'application/octet-stream'
-    )
+    const ext = path.extname(filename)?.toLocaleLowerCase() ?? ''
+    return {
+      '.css': 'text/css',
+      '.gif': 'image/gif',
+      '.htm': 'text/html',
+      '.html': 'text/html',
+      '.ico': 'image/vnd.microsoft.icon',
+      '.jpeg': 'image/jpeg',
+      '.jpg': 'image/jpeg',
+      '.js': 'text/javascript',
+      '.json': 'application/json',
+      '.mjs': 'text/javascript',
+      '.pdf': 'application/pdf',
+      '.png': 'image/png',
+      '.svg': 'image/svg+xml',
+      '.txt': 'text/plain',
+      '.webp': 'image/webp',
+      '.xml': 'text/xml',
+    }[ext] ?? 'application/octet-stream'
   }
 }
 

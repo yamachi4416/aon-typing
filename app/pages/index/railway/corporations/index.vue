@@ -5,7 +5,9 @@
       :class="$style['page-header']"
     >
       <header>
-        <h2 :id="`title-${uid}`">鉄道の会社いちらん</h2>
+        <h2 :id="`title-${uid}`">
+          鉄道の会社いちらん
+        </h2>
       </header>
       <p>
         鉄道の会社いちらんです。<br />

@@ -9,11 +9,9 @@ export abstract class DialogModel extends BaseModel<DOMWrapper<Element>> {
 
   override get active() {
     const el = this.el
-    return (
-      this.isExists(el) &&
-      (el.attributes('inert') === undefined ||
-        el.attributes('inert') === 'false')
-    )
+    if (!this.isExists(el)) return false
+    return el.attributes('inert') === undefined
+      || el.attributes('inert') === 'false'
   }
 
   get inactive() {

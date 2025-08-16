@@ -13,8 +13,8 @@ export function isFunction(fn: unknown) {
 export function toInvertRecord<K extends PropertyKey, V extends PropertyKey>(
   record: Readonly<Record<K, V>>,
 ): Record<V extends number ? `${V}` : V, K extends number ? `${K}` : K> {
-  const propertyIsEnumerable =
-    Object.prototype.propertyIsEnumerable.bind(record)
+  const propertyIsEnumerable
+    = Object.prototype.propertyIsEnumerable.bind(record)
   return Object.fromEntries(
     Reflect.ownKeys(record)
       .filter(propertyIsEnumerable)
@@ -85,7 +85,7 @@ export function pagenate<T>({
   items: Readonly<ArrayLike<T>>
   page: number
   pageSize: number
-}): { items: T[]; pagenate: number[]; last: number } {
+}): { items: T[], pagenate: number[], last: number } {
   if (!items.length) {
     return { items: [], pagenate: [], last: 0 }
   }

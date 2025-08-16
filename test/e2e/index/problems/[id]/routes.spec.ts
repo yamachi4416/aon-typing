@@ -8,7 +8,7 @@ import {
 } from '~~/test/e2e/util'
 
 describe('問題の内容ページの画面遷移の確認', () => {
-  it("'プレイする'ボタンをクリックすると'タイピングメニュー'ページに遷移する", async () => {
+  it('"プレイする"ボタンをクリックすると"タイピングメニュー"ページに遷移する', async () => {
     const page = await createPage(`/problems/${problem.id}`)
 
     const container = page.getByRole('region', { name: problem.title })
@@ -43,7 +43,7 @@ describe('問題の内容ページの画面遷移の確認', () => {
     await expectLoadingHidden(page)
   })
 
-  it("'もどる'ボタンをクリックすると前のページに遷移する", async () => {
+  it('"もどる"ボタンをクリックすると前のページに遷移する', async () => {
     const page = await createPage('/problems')
 
     await page
@@ -70,7 +70,7 @@ describe('問題の内容ページの画面遷移の確認', () => {
     await expectLoadingHidden(page)
   })
 
-  it("'タグ'ボタンをクリックすると'タグ'ページに遷移する", async () => {
+  it('"タグ"ボタンをクリックすると"タグ"ページに遷移する', async () => {
     const tag = problem.tags[0]!
     expect(tag).toBeTruthy()
 
@@ -96,7 +96,7 @@ describe('問題の内容ページの画面遷移の確認', () => {
     await expectLoadingHidden(page)
   })
 
-  it("存在しない問題のページにアクセスすると'404'ページに遷移する", async () => {
+  it('存在しない問題のページにアクセスすると"404"ページに遷移する', async () => {
     const page = await createPage('/problems/00000000')
     expect(await page.title()).toMatch(/^ページが見つかりません/)
   })
