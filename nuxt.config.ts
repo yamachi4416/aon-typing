@@ -38,9 +38,9 @@ const routes: ReadonlyArray<string> = [
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/seo',
-    '@nuxtjs/google-fonts',
     '@nuxt/test-utils/module',
     '~/modules/vitePluginLegacy',
+    '~/modules/googleFonts',
   ],
   ssr: true,
   components: {
@@ -64,9 +64,6 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.scss'],
-  unhead: {
-    legacy: true,
-  },
   site: {
     name: 'あぉ～ん タイピング',
     copyright: '2021 Studio AON',
@@ -108,7 +105,6 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     display: 'swap',
-    download: false,
     families: {
       'Itim': true,
       'Noto Sans JP': {
