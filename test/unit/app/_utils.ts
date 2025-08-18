@@ -5,7 +5,6 @@ import {
 } from '@nuxt/test-utils/runtime'
 import { flushPromises } from '@vue/test-utils'
 import type { NitroFetchRequest } from 'nitropack'
-import { vi } from 'vitest'
 import App from '~/app.vue'
 import { isFunction } from '~~/libs/Util'
 

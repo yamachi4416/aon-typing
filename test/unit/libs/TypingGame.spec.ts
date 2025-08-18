@@ -1,5 +1,3 @@
-import { afterEach } from 'node:test'
-import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { TimerManager } from '~~/libs/TimerManager'
 import { TypingGame } from '~~/libs/TypingGame'
 import { TypingGameSetting } from '~~/libs/TypingGameSetting'

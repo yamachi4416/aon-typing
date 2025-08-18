@@ -1,4 +1,3 @@
-import { expect, it, vi } from 'vitest'
 import { createPage } from '~~/test/e2e/util'
 
 it('ローマ字タイピング入力表ページの印刷ボタンの確認', async () => {

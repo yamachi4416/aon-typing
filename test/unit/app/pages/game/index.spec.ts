@@ -1,4 +1,3 @@
-import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import problem1000001 from '~/assets/api/problems/1000001.json'
 import { endpointRegister } from '../../_utils'
 import { IndexPageModel } from './_page/IndexPageModel'

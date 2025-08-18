@@ -1,5 +1,3 @@
-import { describe, expect, it } from 'vitest'
-
 describe('reactive', () => {
   describe('toReactive', () => {
     describe('object', () => {

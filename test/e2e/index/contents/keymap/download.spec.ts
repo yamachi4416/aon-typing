@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest'
 import { createPage, expectLoadingHidden } from '~~/test/e2e/util'
 
 describe('ローマ字タイピング入力表ページのPDFファイルダウンロードの確認', () => {

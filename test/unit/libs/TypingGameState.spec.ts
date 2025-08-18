@@ -1,4 +1,3 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { TypingGameSetting } from '~~/libs/TypingGameSetting'
 import { TypingGameState } from '~~/libs/TypingGameState'
 import type { ProblemDetail } from '~~/types/problems'

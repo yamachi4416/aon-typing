@@ -1,4 +1,3 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { shuffle } from '~~/libs/Util'
 
 describe('shuffle', () => {

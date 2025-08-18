@@ -1,4 +1,3 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { TypingGameInfo } from '~~/libs/TypingGameInfo'
 
 describe('TypingGameInfo', () => {

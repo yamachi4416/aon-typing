@@ -1,5 +1,4 @@
 import { mount } from '@vue/test-utils'
-import { describe, expect, it } from 'vitest'
 import PartsPagenate from '~/components/parts/Pagenate.vue'
 
 describe('PartsPagenate', () => {

@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest'
 import { toTypeJapaneseChars, toTypeJapaneseCharsMap } from '~~/libs/TypingUtil'
 
 type Cases = ReadonlyArray<readonly [string, string] | [string, string, string]>

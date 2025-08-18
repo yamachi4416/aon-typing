@@ -1,4 +1,3 @@
-import { describe, it } from 'vitest'
 import { createPage, expectLoadingHidden, waitForRouterPath } from '../../util'
 
 describe('お問い合わせありがとうございますページの確認', () => {

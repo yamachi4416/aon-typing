@@ -1,7 +1,6 @@
 import { readdir, readFile } from 'node:fs/promises'
 import { cpus } from 'node:os'
 import { resolve } from 'node:path'
-import { assert, expect, it } from 'vitest'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
 import { TypingGamer } from '~~/libs/TypingGamer'
 import { toTypeJapaneseChars } from '~~/libs/TypingUtil'

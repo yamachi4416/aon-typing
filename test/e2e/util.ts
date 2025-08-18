@@ -4,7 +4,6 @@ import {
   url as _url,
   waitForHydration,
 } from '@nuxt/test-utils'
-import { assert, expect } from 'vitest'
 
 type PageOptions = Parameters<typeof _createPage>[1]
 export type Page = Awaited<ReturnType<typeof _createPage>>

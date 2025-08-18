@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest'
 import { TypingGamer } from '~~/libs/TypingGamer'
 import { TypingGameWordData } from '~~/libs/TypingGameWordData'
 import type { ProblemDetailWord } from '~~/types/problems'

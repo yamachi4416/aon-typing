@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest'
 import { kana2Hira } from '~~/libs/TypingUtil'
 
 describe('kana2Hira', () => {

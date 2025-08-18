@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest'
 import { $fetch, baseUrl, createPage } from '~~/test/e2e/util'
 
 describe('SEO関連のメタタグの確認', () => {

@@ -9,6 +9,9 @@ const reolveAliasConfig: UserConfig = {
       '~~': new URL('./', import.meta.url).pathname,
     },
   },
+  test: {
+    globals: true,
+  },
 }
 
 export default defineConfig({
@@ -25,6 +28,7 @@ export default defineConfig({
         test: {
           name: 'app',
           dir: './test/unit/app',
+          globals: true,
           environmentOptions: {
             nuxt: {
               overrides: {

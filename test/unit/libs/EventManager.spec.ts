@@ -1,4 +1,3 @@
-import { describe, expect, it, vi } from 'vitest'
 import { EventManager, TypingEvent } from '~~/libs/EventManager'
 
 describe('EventManager', () => {

@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest'
 import { TypingGameWordState } from '~~/libs/TypingGameWordStates'
 
 describe('TypingGameWordState', () => {

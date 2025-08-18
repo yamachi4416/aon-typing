@@ -1,4 +1,3 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { TimerManager } from '~~/libs/TimerManager'
 
 describe('TimerManager', () => {

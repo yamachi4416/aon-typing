@@ -1,5 +1,3 @@
-import { describe, expect, it } from 'vitest'
-
 describe('useRandomSelect', () => {
   const createValue = <T>(init?: T) => {
     const changes: T[] = []

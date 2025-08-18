@@ -1,12 +1,14 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
-import { describe, expect, it, vi } from 'vitest'
 import BasicHeaderTitle from '~/components/basic/header/Title.vue'
 
 describe('BasicHeaderTitle', () => {
   it('タイトルに指定した値が表示される', async () => {
-    const component = await mountSuspended(
-      <BasicHeaderTitle name="タイピング" anim={false} />,
-    )
+    const component = await mountSuspended(BasicHeaderTitle, {
+      props: {
+        name: 'タイピング',
+        anim: false,
+      },
+    })
 
     const h1 = component.find('h1')
     expect(h1.exists()).toBe(true)
@@ -14,24 +16,29 @@ describe('BasicHeaderTitle', () => {
   })
 
   it('タイトルはトップページへのリンク', async () => {
-    const component = await mountSuspended(
-      <BasicHeaderTitle name="タイピング" anim={false} />,
-    )
+    const component = await mountSuspended(BasicHeaderTitle, {
+      props: {
+        name: 'タイピング',
+        anim: false,
+      },
+    })
 
     const a = component.find('a')
     expect(a.exists()).toBe(true)
     expect(a.attributes('href')).toBe('/')
   })
 
-  it('タイトルがアニメーションされる', async ({ onTestFinished }) => {
-    vi.useFakeTimers()
-    onTestFinished(() => {
-      vi.useRealTimers()
-    })
+  it('タイトルがアニメーションされる', async () => {
+    using dispose = new DisposableStack()
+    dispose.defer(() => vi.useRealTimers())
 
-    const component = await mountSuspended(
-      <BasicHeaderTitle name="タイピング" />,
-    )
+    vi.useFakeTimers()
+    const component = await mountSuspended(BasicHeaderTitle, {
+      props: {
+        name: 'タイピング',
+        anim: true,
+      },
+    })
 
     const h1 = component.find('h1')
     expect(h1.exists()).toBe(true)

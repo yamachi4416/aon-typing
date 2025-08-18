@@ -1,7 +1,6 @@
 import { registerEndpoint } from '@nuxt/test-utils/runtime'
 import type { EventHandler } from 'h3'
 import { readBody } from 'h3'
-import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 describe('useContact', () => {
   beforeEach(() => {
