@@ -18,7 +18,6 @@
       v-slot="{ items }"
       :model-value="page"
       :items="filterProblems"
-      :page-size="pageSize"
       @update:model-value="select"
     >
       <ModProblemList v-slot="{ problem }" :problems="items" @tag="addTag">
@@ -34,7 +33,6 @@
 </template>
 
 <script setup lang="ts">
-import type ModalContentVue from '~/components/parts/ModalContent.vue'
 import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 
 defineEmits<{
@@ -43,17 +41,16 @@ defineEmits<{
   (e: 'close'): unknown
 }>()
 
-const { problems, filterTagProblems } = useProblems()
-const { pageSize } = useRuntimeConfig().public
 const page = ref(1)
-
 const tags = ref(new Map<string, ProblemItemTag>())
+const { problems, filterTagProblems } = useProblems()
+
 const filterProblems = filterTagProblems({
   problems,
   tags: computed(() => tags.value.keys()),
 })
 
-const content = ref<InstanceType<typeof ModalContentVue>>()
+const content = useTemplateRef('content')
 
 async function select(p: number) {
   page.value = p

@@ -74,7 +74,6 @@ export default defineNuxtConfig({
     public: {
       gtagId: '',
       contactUrl: '/api/contact',
-      pageSize: 30,
       site: {
         url: 'http://localhost:3000',
       },
@@ -106,7 +105,7 @@ export default defineNuxtConfig({
   googleFonts: {
     display: 'swap',
     families: {
-      'Itim': true,
+      Itim: true,
       'Noto Sans JP': {
         wght: 400,
       },

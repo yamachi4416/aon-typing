@@ -3,7 +3,6 @@
     v-slot="{ items }"
     v-model="page"
     :items="problems"
-    :page-size="props.pageSize"
   >
     <ModProblemList
       v-slot="{ problem }"
@@ -23,16 +22,11 @@
 <script setup lang="ts">
 import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 
-const props = withDefaults(
-  defineProps<{
-    problems?: ProblemListItem[]
-    pageSize?: number
-  }>(),
-  {
-    problems: () => [],
-    pageSize: 30,
-  },
-)
+const {
+  problems = [],
+} = defineProps<{
+  problems?: ProblemListItem[]
+}>()
 
 const emit = defineEmits<{
   (e: 'tag', tag: ProblemItemTag): unknown

@@ -3,7 +3,6 @@ import type { Page } from '~~/test/e2e/util'
 import {
   createPage,
   expectLoadingHidden,
-  publicConfig,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -29,6 +28,8 @@ describe.each([
     problems: tag.problems,
   },
 ])('$nameのページングの確認', ({ pageUrl, problems }) => {
+  const pageSize = 30
+
   const getItem = (page: Page, i: number) =>
     page.getByRole('article', { name: problems[i]!.title }).first()
 
@@ -45,8 +46,6 @@ describe.each([
 
   it('Nページ目を表示するリンクの確認', async () => {
     const page = await createPage(pageUrl)
-
-    const { pageSize } = await publicConfig(page)
 
     expect(await getPageListbox(page).inputValue()).toBe('1')
     expect(await getItem(page, 0).isVisible()).toBeTruthy()
@@ -71,8 +70,6 @@ describe.each([
   it('最後のページを表示するリンクの確認', async () => {
     const page = await createPage(pageUrl)
 
-    const { pageSize } = await publicConfig(page)
-
     const lastPage = Math.ceil(problems.length / pageSize)
 
     await getPageLink(page, lastPage).click()
@@ -86,8 +83,6 @@ describe.each([
 
   it('プルダウンのページの選択肢の確認', async () => {
     const page = await createPage(pageUrl)
-
-    const { pageSize } = await publicConfig(page)
 
     const lastPage = Math.ceil(problems.length / pageSize)
     const listbox = getPageListbox(page)

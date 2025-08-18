@@ -2,6 +2,7 @@
   "extends": "../.nuxt/tsconfig.app.json",
   "include": [
     "./**/*",
+    "../.nuxt/types/runtime-config.d.ts",
     "../.nuxt/types/nitro-routes.d.ts",
     "../.nuxt/types/typed-router.d.ts",
     "../.nuxt/types/imports.d.ts"

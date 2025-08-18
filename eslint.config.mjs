@@ -11,6 +11,7 @@ export default createConfigForNuxt({
     stylistic: {
       arrowParens: true,
       braceStyle: '1tbs',
+      quoteProps: 'as-needed',
     },
   },
 })

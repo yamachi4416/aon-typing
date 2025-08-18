@@ -7,9 +7,9 @@ import { defineCommand } from '../_util/cli'
 import { httpFetch } from '../_util/http'
 
 const normalizeMap: Record<string, string> = {
-  '一': '１',
-  '二': '２',
-  '三': '３',
+  一: '１',
+  二: '２',
+  三: '３',
   '…': '...',
 }
 
