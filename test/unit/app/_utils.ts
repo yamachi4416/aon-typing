@@ -5,8 +5,14 @@ import {
 } from '@nuxt/test-utils/runtime'
 import { flushPromises } from '@vue/test-utils'
 import type { NitroFetchRequest } from 'nitropack'
+import type { AllowedComponentProps, VNodeProps } from 'vue'
 import App from '~/app.vue'
 import { isFunction } from '~~/libs/Util'
+
+export type ComponentProps<
+  T extends abstract new (...args: unknown[]) => { $props: object },
+  R = Omit<InstanceType<T>['$props'], keyof VNodeProps | keyof AllowedComponentProps>,
+> = { -readonly [K in keyof R]: R[K] }
 
 export function endpointRegister() {
   type Options = Parameters<typeof _registerEndpoint>[1]

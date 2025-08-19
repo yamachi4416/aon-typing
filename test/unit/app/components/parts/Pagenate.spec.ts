@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils'
+import { mountSuspended } from '@nuxt/test-utils/runtime'
 import PartsPagenate from '~/components/parts/Pagenate.vue'
 
 describe('PartsPagenate', () => {
@@ -17,11 +17,7 @@ describe('PartsPagenate', () => {
         `,
     })
 
-    const component = mount(Component)
-
-    await nextTick()
-
-    return component
+    return await mountSuspended(Component)
   }
 
   describe('pagenate', () => {

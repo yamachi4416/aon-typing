@@ -1,27 +1,28 @@
 <template>
-  <g :class="$style.line">
-    <rect :height="height" :width="usedWidth" rx="3" ry="3" />
+  <g :class="styles.line">
+    <rect :height :width rx="3" ry="3" />
   </g>
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(
-  defineProps<{
-    limit: number
-    used?: number
-    width?: number
-    height?: number
-  }>(),
-  {
-    used: 0,
-    width: 1000,
-    height: 5,
-  },
-)
+const styles = useCssModule()
 
-const usedWidth = computed(() => {
-  if (props.limit) {
-    return Math.round((props.used / props.limit) * props.width)
+const {
+  limit,
+  used = 0,
+  width: maxWidth = 1000,
+  height = 5,
+} = defineProps<{
+  limit: number
+  used?: number
+  width?: number
+  height?: number
+}>()
+
+const width = computed(() => {
+  if (limit > 0) {
+    const ratio = Math.min(Math.max(used, 0), limit) / limit
+    return Math.round(ratio * maxWidth)
   } else {
     return 0
   }
