@@ -1,0 +1,42 @@
+{
+  "id": "1010699",
+  "title": "養老鉄道養老線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-08-19",
+  "updatedAt": "2025-08-19",
+  "words": [
+    { "info": "揖斐", "info2": "いび", "word": "ibi" },
+    { "info": "美濃本郷", "info2": "みのほんごう", "word": "minohongou" },
+    { "info": "北池野", "info2": "きたいけの", "word": "kitaikeno" },
+    { "info": "池野", "info2": "いけの", "word": "ikeno" },
+    { "info": "北神戸", "info2": "きたごうど", "word": "kitagoudo" },
+    { "info": "広神戸", "info2": "ひろごうど", "word": "hirogoudo" },
+    { "info": "東赤坂", "info2": "ひがしあかさか", "word": "higasiakasaka" },
+    { "info": "北大垣", "info2": "きたおおがき", "word": "kitaoogaki" },
+    { "info": "室", "info2": "むろ", "word": "muro" },
+    { "info": "大垣", "info2": "おおがき", "word": "oogaki" },
+    { "info": "西大垣", "info2": "にしおおがき", "word": "nisioogaki" },
+    { "info": "美濃青柳", "info2": "みのやなぎ", "word": "minoyanagi" },
+    { "info": "友江", "info2": "ともえ", "word": "tomoe" },
+    { "info": "大外羽", "info2": "おおとば", "word": "ootoba" },
+    { "info": "烏江", "info2": "からすえ", "word": "karasue" },
+    { "info": "美濃高田", "info2": "みのたかだ", "word": "minotakada" },
+    { "info": "養老", "info2": "ようろう", "word": "yourou" },
+    { "info": "美濃津屋", "info2": "みのつや", "word": "minotuya" },
+    { "info": "駒野", "info2": "こまの", "word": "komano" },
+    { "info": "美濃山崎", "info2": "みのやまざき", "word": "minoyamazaki" },
+    { "info": "石津", "info2": "いしづ", "word": "isidu" },
+    { "info": "美濃松山", "info2": "みのまつやま", "word": "minomatuyama" },
+    { "info": "多度", "info2": "たど", "word": "tado" },
+    { "info": "下野代", "info2": "しものしろ", "word": "simonosiro" },
+    { "info": "下深谷", "info2": "しもふかや", "word": "simohukaya" },
+    { "info": "播磨", "info2": "はりま", "word": "harima" },
+    { "info": "桑名", "info2": "くわな", "word": "kuwana" }
+  ],
+  "optional": { "cd": ["699"], "coCd": ["208"] }
+}

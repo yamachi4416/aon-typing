@@ -1,0 +1,30 @@
+{
+  "id": "1010698",
+  "title": "伊賀鉄道伊賀線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-08-19",
+  "updatedAt": "2025-08-19",
+  "words": [
+    { "info": "伊賀神戸", "info2": "いがかんべ", "word": "igakanbe" },
+    { "info": "比土", "info2": "ひど", "word": "hido" },
+    { "info": "上林", "info2": "うえばやし", "word": "uebayasi" },
+    { "info": "丸山", "info2": "まるやま", "word": "maruyama" },
+    { "info": "依那古", "info2": "いなこ", "word": "inako" },
+    { "info": "市部", "info2": "いちべ", "word": "itibe" },
+    { "info": "猪田道", "info2": "いだみち", "word": "idamiti" },
+    { "info": "四十九", "info2": "しじゅく", "word": "sijuku" },
+    { "info": "桑町", "info2": "くわまち", "word": "kuwamati" },
+    { "info": "茅町", "info2": "かやまち", "word": "kayamati" },
+    { "info": "広小路", "info2": "ひろこうじ", "word": "hirokouzi" },
+    { "info": "上野市", "info2": "うえのし", "word": "uenosi" },
+    { "info": "西大手", "info2": "にしおおて", "word": "nisioote" },
+    { "info": "新居", "info2": "にい", "word": "nii" },
+    { "info": "伊賀上野", "info2": "いがうえの", "word": "igaueno" }
+  ],
+  "optional": { "cd": ["698"], "coCd": ["207"] }
+}
