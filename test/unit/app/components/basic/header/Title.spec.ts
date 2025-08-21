@@ -1,9 +1,18 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
+import type { ComponentProps } from 'vue-component-type-helpers'
 import BasicHeaderTitle from '~/components/basic/header/Title.vue'
 
 describe('BasicHeaderTitle', () => {
+  type Props = ComponentProps<typeof BasicHeaderTitle>
+
+  const Wrapper = defineComponent<Props>({
+    setup(props) {
+      return () => h(BasicHeaderTitle, props)
+    },
+  })
+
   it('タイトルに指定した値が表示される', async () => {
-    const component = await mountSuspended(BasicHeaderTitle, {
+    const component = await mountSuspended(Wrapper, {
       props: {
         name: 'タイピング',
         anim: false,
@@ -16,7 +25,7 @@ describe('BasicHeaderTitle', () => {
   })
 
   it('タイトルはトップページへのリンク', async () => {
-    const component = await mountSuspended(BasicHeaderTitle, {
+    const component = await mountSuspended(Wrapper, {
       props: {
         name: 'タイピング',
         anim: false,
@@ -33,7 +42,7 @@ describe('BasicHeaderTitle', () => {
     dispose.defer(() => vi.useRealTimers())
 
     vi.useFakeTimers()
-    const component = await mountSuspended(BasicHeaderTitle, {
+    const component = await mountSuspended(Wrapper, {
       props: {
         name: 'タイピング',
         anim: true,

@@ -2,7 +2,7 @@
   <header :class="$style.header" role="banner">
     <section>
       <BasicHeaderTitle :name :anim />
-      <BasicHeaderThemeChagne />
+      <BasicHeaderThemeChange />
     </section>
     <BasicHeaderNavigation />
   </header>
