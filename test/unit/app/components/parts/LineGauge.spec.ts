@@ -1,10 +1,16 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
+import type { ComponentProps } from 'vue-component-type-helpers'
 import PartsLineGauge from '~/components/parts/LineGauge.vue'
-import type { ComponentProps } from '../../_utils'
-
-type Props = ComponentProps<typeof PartsLineGauge>
 
 describe('PartsLineGauge', () => {
+  type Props = ComponentProps<typeof PartsLineGauge>
+
+  const Wrapper = defineComponent<Props>({
+    setup(props) {
+      return () => h(PartsLineGauge, props)
+    },
+  })
+
   it.each<[props: Props, expected: `${number}`]>([
     [{ limit: 0 }, '0'],
     [{ limit: 0, used: 0 }, '0'],
@@ -20,7 +26,7 @@ describe('PartsLineGauge', () => {
     [{ limit: 100, used: -1 }, '0'],
     [{ limit: 100, used: 10, width: 200 }, '20'],
   ])('width: props=%j expected=%s', async (props, expected) => {
-    const component = await mountSuspended(PartsLineGauge, { props })
+    const component = await mountSuspended(Wrapper, { props })
     const rect = component.find<SVGRectElement>('rect')
     expect(rect.exists()).toBe(true)
     expect(rect.attributes('width')).toBe(expected)
@@ -31,16 +37,14 @@ describe('PartsLineGauge', () => {
     [{ limit: 0, height: 10 }, '10'],
     [{ limit: 0, height: 20 }, '20'],
   ])('height: props=%j expected=%s', async (props, expected) => {
-    const component = await mountSuspended(PartsLineGauge, { props })
+    const component = await mountSuspended(Wrapper, { props })
     const rect = component.find<SVGRectElement>('rect')
     expect(rect.exists()).toBe(true)
     expect(rect.attributes('height')).toBe(expected)
   })
 
   it('reactive', async () => {
-    const component = await mountSuspended(PartsLineGauge, {
-      props: { limit: 0 },
-    })
+    const component = await mountSuspended(Wrapper, { props: { limit: 0 } })
 
     const rect = component.find<SVGRectElement>('rect')
     expect(rect.exists()).toBe(true)

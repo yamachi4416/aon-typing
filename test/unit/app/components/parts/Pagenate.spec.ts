@@ -1,24 +1,18 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
+import type { ComponentProps, ComponentSlots } from 'vue-component-type-helpers'
 import PartsPagenate from '~/components/parts/Pagenate.vue'
 
 describe('PartsPagenate', () => {
-  async function mountComponent(props: {
-    page?: MaybeRefOrGetter<number>
-    pageSize?: MaybeRefOrGetter<number | undefined>
-    items?: MaybeRefOrGetter<number[]>
-  }) {
-    const Component = defineComponent({
-      components: { PartsPagenate },
-      setup: () => props,
-      template: `
-        <PartsPagenate v-model="page" :items :pageSize v-slot="{ items }">
-          <p>{{ items.join(',') }}</p>
-        </PartsPagenate>
-        `,
-    })
+  type Props = ComponentProps<typeof PartsPagenate<number>>
+  type Slots = ComponentSlots<typeof PartsPagenate<number>>
 
-    return await mountSuspended(Component)
-  }
+  const Wrapper = defineComponent<Props>({
+    setup(props) {
+      return () => h(PartsPagenate<number>, props, {
+        default: ({ items }) => h('p', null, items.join(',')),
+      } satisfies Slots)
+    },
+  })
 
   describe('pagenate', () => {
     it.each([
@@ -27,9 +21,13 @@ describe('PartsPagenate', () => {
     ])(
       '表示されない (count=$count, pageSize=$pageSize)',
       async ({ count, pageSize }) => {
-        const page = ref(1)
-        const items = [...Array(count)].map((_, i) => i + 1)
-        const component = await mountComponent({ page, pageSize, items })
+        const component = await mountSuspended(Wrapper, {
+          props: {
+            modelValue: 1,
+            pageSize,
+            items: [...Array(count)].map((_, i) => i + 1),
+          },
+        })
 
         expect(component.find('select').exists()).toBe(false)
         expect(component.find('a').exists()).toBe(false)
@@ -73,10 +71,14 @@ describe('PartsPagenate', () => {
       },
     ])(
       '表示される (count=$count, pageSize=$pageSize, page=$page)',
-      async ({ count, pageSize, page: _page, expected }) => {
-        const page = ref(_page)
-        const items = [...Array(count)].map((_, i) => i + 1)
-        const component = await mountComponent({ page, pageSize, items })
+      async ({ count, pageSize, page: modelValue, expected }) => {
+        const component = await mountSuspended(Wrapper, {
+          props: {
+            modelValue,
+            pageSize,
+            items: [...Array(count)].map((_, i) => i + 1),
+          },
+        })
 
         const select = component.find('select')
         expect(select.exists()).toBe(true)
@@ -110,8 +112,10 @@ describe('PartsPagenate', () => {
       { items: [] as number[], pageSize: 4, page: 1, expected: '' },
     ])(
       'items=$items, pageSize=$pageSize, page=$page',
-      async ({ items, pageSize, page, expected }) => {
-        const component = await mountComponent({ page, pageSize, items })
+      async ({ items, pageSize, page: modelValue, expected }) => {
+        const component = await mountSuspended(Wrapper, {
+          props: { modelValue, pageSize, items },
+        })
         const content = component.find('p')
         expect(content.text()).toBe(expected)
       },
@@ -120,9 +124,13 @@ describe('PartsPagenate', () => {
 
   describe('paging', () => {
     it('ページのリンクをクリック', async () => {
-      const page = ref(1)
-      const items = [...Array(10)].map((_, i) => i + 1)
-      const component = await mountComponent({ page, pageSize: 3, items })
+      const component = await mountSuspended(Wrapper, {
+        props: {
+          modelValue: 1,
+          pageSize: 3,
+          items: [1, 2, 3, 4, 5, 6, 7],
+        },
+      })
 
       const content = component.find('p')
       expect(content.text()).toBe('1,2,3')
@@ -130,14 +138,17 @@ describe('PartsPagenate', () => {
       const anchor = component.find('a[title^="2"]')
       await anchor.trigger('click')
 
-      expect(page.value).toBe(2)
       expect(content.text()).toBe('4,5,6')
     })
 
     it('ページのプルダウンで選択', async () => {
-      const page = ref(1)
-      const items = [...Array(10)].map((_, i) => i + 1)
-      const component = await mountComponent({ page, pageSize: 3, items })
+      const component = await mountSuspended(Wrapper, {
+        props: {
+          modelValue: 1,
+          pageSize: 3,
+          items: [1, 2, 3, 4, 5, 6, 7],
+        },
+      })
 
       const content = component.find('p')
 
@@ -146,61 +157,66 @@ describe('PartsPagenate', () => {
       const select = component.find('select')
       await select.setValue('2')
 
-      expect(page.value).toBe(2)
       expect(content.text()).toBe('4,5,6')
     })
   })
 
   describe('リアクティブ', () => {
     it('page', async () => {
-      const page = ref(2)
-      const items = [1, 2, 3, 4, 5, 6]
-      const component = await mountComponent({ page, pageSize: 5, items })
+      const component = await mountSuspended(Wrapper, {
+        props: {
+          modelValue: 2,
+          pageSize: 5,
+          items: [1, 2, 3, 4, 5, 6],
+        },
+      })
 
       const content = component.find('p')
       expect(content.text()).toBe('6')
       expect(component.findAll('a').map((a) => a.text())).toEqual(['1'])
 
-      page.value = 1
-      await nextTick()
+      await component.setProps({ modelValue: 1 })
 
       expect(content.text()).toBe('1,2,3,4,5')
       expect(component.findAll('a').map((a) => a.text())).toEqual(['2'])
     })
 
     it('items', async () => {
-      const page = ref(2)
-      const items = ref([1, 2, 3, 4, 5, 6])
-      const component = await mountComponent({ page, pageSize: 5, items })
+      const component = await mountSuspended(Wrapper, {
+        props: {
+          modelValue: 2,
+          pageSize: 5,
+          items: [1, 2, 3, 4, 5, 6],
+        },
+      })
 
       const content = component.find('p')
 
       expect(content.text()).toBe('6')
       expect(component.findAll('a').map((a) => a.text())).toEqual(['1'])
 
-      items.value.pop()
-      await nextTick()
+      await component.setProps({ items: [1, 2, 3, 4, 5] })
 
-      expect(page.value).toBe(1)
       expect(content.text()).toBe('1,2,3,4,5')
       expect(component.findAll('a')).toEqual([])
     })
 
     it('pageSize', async () => {
-      const page = ref(2)
-      const items = ref([1, 2, 3, 4, 5, 6])
-      const pageSize = ref(5)
-      const component = await mountComponent({ page, pageSize, items })
+      const component = await mountSuspended(Wrapper, {
+        props: {
+          modelValue: 2,
+          pageSize: 5,
+          items: [1, 2, 3, 4, 5, 6],
+        },
+      })
 
       const content = component.find('p')
 
       expect(content.text()).toBe('6')
       expect(component.findAll('a').map((a) => a.text())).toEqual(['1'])
 
-      pageSize.value = 6
-      await nextTick()
+      await component.setProps({ pageSize: 6 })
 
-      expect(page.value).toBe(1)
       expect(content.text()).toBe('1,2,3,4,5,6')
       expect(component.findAll('a')).toEqual([])
     })

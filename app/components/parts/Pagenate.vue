@@ -1,7 +1,7 @@
 <template>
   <slot :items="pages.items" />
   <ClientOnly>
-    <div v-if="pages.last > 1" :class="styles.pagenate">
+    <div v-if="pages.last > 1" :class="$style.pagenate">
       <template v-for="p in pages.pagenate" :key="p">
         <label v-if="p === page" title="表示するページを選択" selected>
           {{ p }}
@@ -27,8 +27,6 @@
 
 <script setup generic="T" lang="ts">
 import { pagenate } from '~~/libs/Util'
-
-const styles = useCssModule()
 
 const { items, pageSize = 30 } = defineProps<{
   items: T[]

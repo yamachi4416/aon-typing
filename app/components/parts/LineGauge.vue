@@ -1,12 +1,10 @@
 <template>
-  <g :class="styles.line">
+  <g :class="$style.line">
     <rect :height :width rx="3" ry="3" />
   </g>
 </template>
 
 <script setup lang="ts">
-const styles = useCssModule()
-
 const {
   limit,
   used = 0,
