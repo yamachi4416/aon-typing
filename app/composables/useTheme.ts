@@ -17,7 +17,7 @@ export function useTheme() {
   }
 
   function changeTheme(theme: ThemeValues) {
-    if (import.meta.server) {
+    if (!globalThis.document?.documentElement) {
       return
     }
 

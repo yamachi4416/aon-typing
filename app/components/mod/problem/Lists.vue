@@ -5,44 +5,26 @@
     :items="problems"
   >
     <ModProblemList
-      v-slot="{ problem }"
       :problems="items"
-      @tag="(tag) => emit('tag', tag)"
-    >
-      <button @click="$emit('detail', problem)">
-        内容を見る
-      </button>
-      <button @click="$emit('play', problem)">
-        プレイする
-      </button>
-    </ModProblemList>
+      @tag="(tag) => $emit('tag', tag)"
+      @detail="(problem) => $emit('detail', problem)"
+      @play="(problem) => $emit('play', problem)"
+    />
   </PartsPagenate>
 </template>
 
 <script setup lang="ts">
 import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 
-const {
-  problems = [],
-} = defineProps<{
-  problems?: ProblemListItem[]
+defineProps<{
+  problems: ProblemListItem[]
 }>()
 
-const emit = defineEmits<{
-  (e: 'tag', tag: ProblemItemTag): unknown
-  (e: 'detail' | 'play', p: ProblemListItem): unknown
-  (e: 'page', page: number): unknown
+defineEmits<{
+  tag: [tag: ProblemItemTag]
+  detail: [problem: ProblemListItem]
+  play: [problem: ProblemListItem]
 }>()
 
-const route = useRoute()
-
-const page = computed<number>({
-  get() {
-    return Number(route.query.page || 1)
-  },
-  async set(value) {
-    await navigateTo({ query: { ...route.query, page: String(value) } })
-    emit('page', value)
-  },
-})
+const page = defineModel<number>('page', { default: 1 })
 </script>

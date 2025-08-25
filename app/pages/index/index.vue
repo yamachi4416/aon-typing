@@ -45,7 +45,7 @@
       <h2 id="news-title">
         新着の問題
       </h2>
-      <ModProblemLists
+      <ModProblemList
         :problems="newProblems"
         @tag="navigator.indexTagDetail"
         @detail="navigator.indexProblemDetail"

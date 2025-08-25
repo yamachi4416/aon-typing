@@ -23,11 +23,11 @@
       </template>
     </PartsSection>
     <ModProblemLists
+      v-model:page="page"
       :problems="kwdsProblems"
       @tag="navigator.indexTagDetail"
       @detail="navigator.indexProblemDetail"
       @play="navigator.gameMenu"
-      @page="navigator.scrollTop"
     />
   </div>
 </template>
@@ -42,6 +42,9 @@ const router = useRouter()
 const navigator = useNavigator()
 
 const { problems, fetchProblems } = useProblems()
+
+const page = usePageQuery(route)
+watch(page, () => navigator.scrollTop())
 
 const kwds = computed(() => {
   const kwds = !route.query.kwd

@@ -42,10 +42,10 @@ onBeforeMount(() => {
 })
 
 const offline = computed(() => {
-  if (!import.meta.client) {
-    return false
+  if (globalThis.navigator) {
+    return !globalThis.navigator.onLine
   }
-  return !window.navigator.onLine
+  return false
 })
 
 const desc = computed(() => {

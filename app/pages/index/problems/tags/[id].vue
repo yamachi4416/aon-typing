@@ -9,11 +9,11 @@
       </template>
     </ModProblemTagInfo>
     <ModProblemLists
+      v-model:page="page"
       :problems="problems"
       @tag="navigator.indexTagDetail"
       @detail="navigator.indexProblemDetail"
       @play="navigator.gameMenu"
-      @page="navigator.scrollTop"
     />
   </div>
 </template>
@@ -25,6 +25,8 @@ const { retrieveTag, filterTagProblems } = useProblems()
 const route = useRoute('index-problems-tags-id')
 const router = useRouter()
 const navigator = useNavigator()
+const page = usePageQuery(route)
+watch(page, () => navigator.scrollTop())
 
 const tag = await wrapLoading(retrieveTag({ id: route.params.id }))
 

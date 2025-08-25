@@ -133,7 +133,7 @@ function newNavigator() {
 export default defineNuxtPlugin((_) => {
   const navigator = newNavigator()
 
-  if (import.meta.client) {
+  if (globalThis.history) {
     useRouter().afterEach(() => {
       navigator.path.value = useRouter().options.history.state.back as string
     })

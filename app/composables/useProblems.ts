@@ -1,5 +1,4 @@
 import type { ProblemListItem } from '~~/types/problems'
-import { toValueIfFound } from './utils'
 
 export function useProblems() {
   const { value: problems, fetch: fetchProblems } = useFetchCache({
