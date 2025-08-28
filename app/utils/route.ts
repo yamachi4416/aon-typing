@@ -10,50 +10,26 @@ export function routeRecords<
   return records
 }
 
-function defineQueryConverter<T, R = T>(
-  convert: (value: LocationQueryValue) => T | undefined,
-  transform?: (values: T[]) => R[],
-) {
-  return (query: LocationQuery, key: string) => {
-    const values = Array.isArray(query[key]) ? query[key] : [query[key]]
-    const converted = values
-      .map((v) => convert(v as string))
-      .filter((v) => v !== undefined)
-    return transform ? transform(converted) : converted
-  }
+export type QueryConverter<T> = {
+  readonly fromQuery: (query: LocationQuery, key: string) => T[]
+  readonly toQuery: (values: T[]) => string[]
 }
 
-const queryConverters = {
-  string: defineQueryConverter((value) => value as string ?? undefined),
-  positiveInt: defineQueryConverter((value) => {
-    if (!value || !/^\d+$/.test(value)) return undefined
-    const v = BigInt(value)
-    if (v <= Number.MAX_SAFE_INTEGER) {
-      return Number(v)
-    }
-    return undefined
-  }),
-} as const
-
-type QueryConverters = typeof queryConverters
-export type QueryConverterTypes = keyof QueryConverters
-export type QueryConvertValues<T extends QueryConverterTypes> = ReturnType<QueryConverters[T]>
-export type QueryConvertValue<T extends QueryConverterTypes> = QueryConvertValues<T>[number] | undefined
-
-export function toQueryValues<T extends QueryConverterTypes>(
-  query: LocationQuery,
-  key: string,
-  type: T,
-) {
-  return queryConverters[type](query, key) as QueryConvertValues<T>
-}
-
-export function toQueryValue<T extends QueryConverterTypes>(
-  query: LocationQuery,
-  key: string,
-  type: T,
-) {
-  return toQueryValues<T>(query, key, type)[0] as QueryConvertValue<T>
+export function defineQueryConverter<T, R>(defines: {
+  readonly toValue: (value: LocationQueryValue | undefined) => T | undefined
+  readonly toValues: (values: T[]) => R[]
+  readonly toQueries: (values: R[]) => string[]
+}): QueryConverter<R> {
+  const { toValue, toValues, toQueries } = defines
+  return Object.freeze({
+    fromQuery: (query: LocationQuery, key: string) => {
+      const values = Array.isArray(query[key]) ? query[key] : [query[key]]
+      return toValues(values
+        .map(toValue)
+        .filter((v) => v !== undefined))
+    },
+    toQuery: toQueries,
+  })
 }
 
 export function convertToQuery(search: string) {
