@@ -1,11 +1,11 @@
-type UsePageQueryOptions = Pick<UseURLQueryOptions, 'replace'> & { readonly name?: string }
+type UseRoutePageQueryOptions = Pick<UseRouteQueryOptions, 'replace'> & { readonly name?: string }
 
-export function usePageQuery(
-  route: UseURLQueryRoute,
+export function useRoutePageQuery(
+  route: UseRouteQueryRoute,
   {
     name = 'page',
     replace = false,
-  }: UsePageQueryOptions = {},
+  }: UseRoutePageQueryOptions = {},
 ) {
   const converter = defineQueryConverter({
     toValue: (value) => {
@@ -17,7 +17,7 @@ export function usePageQuery(
     toQueries: (values) => values.map(String),
   })
 
-  const urlQuery = useURLQuery(name, route, converter, { replace })
+  const urlQuery = useRouteQuery(name, route, converter, { replace })
 
   return computed({
     get() {

@@ -5,8 +5,8 @@ const { navigateToMock } = vi.hoisted(() => ({
 }))
 mockNuxtImport('navigateTo', () => navigateToMock)
 
-describe('usePageQuery', () => {
-  type Params = Parameters<typeof usePageQuery>
+describe('useRoutePageQuery', () => {
+  type Params = Parameters<typeof useRoutePageQuery>
 
   beforeEach(() => {
     vi.resetAllMocks()
@@ -24,7 +24,7 @@ describe('usePageQuery', () => {
     { query: { page: `${Number.MAX_SAFE_INTEGER}` }, expected: Number.MAX_SAFE_INTEGER },
     { query: { page: `${Number.MAX_SAFE_INTEGER + 1}` }, expected: 1 },
   ])('get route.query($query)から取得される', ({ query, expected }) => {
-    const page = usePageQuery({ query })
+    const page = useRoutePageQuery({ query })
     expect(page.value).toBe(expected)
   })
 
@@ -34,7 +34,7 @@ describe('usePageQuery', () => {
     { query: { other: 'a', page: '1' }, expected: '/?other=a&page=2' },
   ])('set route.query($query)とマージされる', ({ query, expected }) => {
     vi.spyOn(globalThis, 'location', 'get').mockReturnValue(undefined!)
-    const page = usePageQuery({ query })
+    const page = useRoutePageQuery({ query })
     page.value++
     expect(navigateToMock).toBeCalledWith(expected, { replace: false })
   })
@@ -45,14 +45,14 @@ describe('usePageQuery', () => {
     { search: '?other=a&page=1', expected: '/?other=a&page=2' },
   ])('set location.search($search)とマージされる', ({ search, expected }) => {
     vi.spyOn(location, 'search', 'get').mockReturnValue(search)
-    const page = usePageQuery({ query: {} })
+    const page = useRoutePageQuery({ query: {} })
     page.value++
     expect(navigateToMock).toBeCalledWith(expected, { replace: false })
   })
 
   it('reactive', () => {
     const route = reactive({ query: {} })
-    const page = usePageQuery(route)
+    const page = useRoutePageQuery(route)
     expect(page.value).toBe(1)
     route.query = { page: '2' }
     expect(page.value).toBe(2)

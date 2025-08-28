@@ -25,7 +25,7 @@ const { retrieveTag, filterTagProblems } = useProblems()
 const route = useRoute('index-problems-tags-id')
 const router = useRouter()
 const navigator = useNavigator()
-const page = usePageQuery(route)
+const page = useRoutePageQuery(route)
 watch(page, () => navigator.scrollTop())
 
 const tag = await wrapLoading(retrieveTag({ id: route.params.id }))

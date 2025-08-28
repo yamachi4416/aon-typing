@@ -43,7 +43,7 @@ const navigator = useNavigator()
 
 const { problems, fetchProblems } = useProblems()
 
-const page = usePageQuery(route)
+const page = useRoutePageQuery(route)
 watch(page, () => navigator.scrollTop())
 
 const kwds = computed(() => {

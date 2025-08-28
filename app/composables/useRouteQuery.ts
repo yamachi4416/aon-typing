@@ -1,14 +1,14 @@
-export type UseURLQueryRoute = Pick<ReturnType<typeof useRoute>, 'query'>
+export type UseRouteQueryRoute = Pick<ReturnType<typeof useRoute>, 'query'>
 
-export type UseURLQueryOptions = {
+export type UseRouteQueryOptions = {
   readonly replace?: boolean | 'history'
 }
 
-export function useURLQuery<T>(
+export function useRouteQuery<T>(
   name: string,
-  route: UseURLQueryRoute,
+  route: UseRouteQueryRoute,
   converter: QueryConverter<T>,
-  options: UseURLQueryOptions = {},
+  options: UseRouteQueryOptions = {},
 ) {
   const router = useRouter()
 

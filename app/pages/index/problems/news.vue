@@ -16,7 +16,7 @@ const navigator = useNavigator()
 
 const { allNewProblems, fetchAllNewProblems } = useProblems()
 
-const page = usePageQuery(route)
+const page = useRoutePageQuery(route)
 watch(page, () => navigator.scrollTop())
 
 useHead({
