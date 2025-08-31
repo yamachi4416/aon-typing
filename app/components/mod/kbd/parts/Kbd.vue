@@ -1,5 +1,5 @@
 <template>
-  <kbd :class="$style.kbd" :data-kbd="props.text" v-text="label" />
+  <kbd :class="$style.kbd" :data-kbd="text" v-text="label" />
 </template>
 
 <script setup lang="ts">
@@ -16,11 +16,11 @@ const labels = new Map<string, string>([
   ['shiftR', 'shift'],
 ] satisfies [Key[0], string][])
 
-const props = defineProps<{
+const { text } = defineProps<{
   text: string
 }>()
 
-const label = computed(() => labels.get(props.text) ?? props.text)
+const label = computed(() => labels.get(text) ?? text)
 </script>
 
 <style module>

@@ -39,8 +39,8 @@ import type { ProblemListItem } from '~~/types/problems'
 import { MenuPanel, ProblemDetailPanel, ProblemListPanel } from './_internal'
 
 const emit = defineEmits<{
-  (e: 'start', id: string): unknown
-  (e: 'cancel'): unknown
+  start: [id: string]
+  cancel: []
 }>()
 
 const { setting } = useGameSetting()

@@ -58,11 +58,11 @@ describe('useRandomSelect', () => {
 
     for (let i = 0; i < 2; i++) select()
 
-    expect(changes.toSorted()).toEqual([2, 3])
+    expect(changes.toSorted((a, b) => (a - b))).toEqual([2, 3])
   })
 
   it('valuesから均等に選択する（初期値なし）', () => {
-    const { value, changes } = createValue()
+    const { value, changes } = createValue<number>()
     const values = ref([1, 2, 3])
 
     const { select } = useRandomSelect(value, values)
@@ -71,7 +71,7 @@ describe('useRandomSelect', () => {
       select()
     }
 
-    expect(changes.toSorted()).toEqual([1, 2, 3])
+    expect(changes.toSorted((a, b) => (a - b))).toEqual([1, 2, 3])
   })
 
   it('valuesから均等に選択する', () => {
@@ -90,7 +90,7 @@ describe('useRandomSelect', () => {
       .values()
       .map((v) => v.length)
       .toArray()
-      .toSorted()
+      .toSorted((a, b) => (a - b))
 
     expect(counts).toEqual([33, 33, 34])
   })

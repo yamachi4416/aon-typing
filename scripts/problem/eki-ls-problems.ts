@@ -85,7 +85,7 @@ export default defineCommand({
     const operationLines = await getOperationLines(args)
 
     const codes = [
-      ...new Set([...problems.keys(), ...operationLines.keys()].toSorted()),
+      ...new Set([...problems.keys(), ...operationLines.keys()].toSorted((a, b) => (a - b))),
     ]
 
     const lines = codes.map((code) => [

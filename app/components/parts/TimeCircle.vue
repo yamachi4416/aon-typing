@@ -29,31 +29,26 @@
 
 <script setup lang="ts">
 defineEmits<{
-  (e: 'click'): void
+  click: []
 }>()
 
-const props = withDefaults(
-  defineProps<{
-    totalTime?: number
-    time?: number
-    text?: number | string
-  }>(),
-  {
-    totalTime: 60,
-    time: 0,
-    text: undefined,
-  },
-)
+const {
+  totalTime = 60,
+  time = 0,
+  text,
+} = defineProps<{
+  totalTime?: number
+  time?: number
+  text?: number | string
+}>()
 
-const dispText = computed(() => String(props.text || props.time))
+const dispText = computed(() => String(text || time))
 const totalPath = computed(() => {
-  const { time, totalTime } = props
   const deg1 = (360 * time) / totalTime
   const deg2 = 360
   return donut({ r: 30, cr: 20, mv: 0, fx: 10 }, { deg1, deg2 })
 })
 const usedPath = computed(() => {
-  const { time, totalTime } = props
   const deg1 = 0
   const deg2 = (360 * time) / totalTime
   return donut({ r: 30, cr: 20, mv: 0, fx: 10 }, { deg1, deg2 })

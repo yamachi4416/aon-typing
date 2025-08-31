@@ -8,7 +8,7 @@
       <slot name="left" />
     </div>
     <component
-      :is="is"
+      :is
       :class="$style.content"
       v-bind="$attrs"
     >
@@ -29,14 +29,9 @@ defineOptions({
   inheritAttrs: false,
 })
 
-withDefaults(
-  defineProps<{
-    is?: string
-  }>(),
-  {
-    is: 'section',
-  },
-)
+const { is = 'section' } = defineProps<{
+  is?: string
+}>()
 </script>
 
 <style lang="scss" module>

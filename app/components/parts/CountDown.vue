@@ -16,14 +16,9 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(
-  defineProps<{
-    count?: number
-  }>(),
-  {
-    count: 0,
-  },
-)
+const { count = 0 } = defineProps<{
+  count?: number
+}>()
 </script>
 
 <style lang="scss" module>

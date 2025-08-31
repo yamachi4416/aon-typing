@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+const { error } = defineProps<{
   error: {
     message: string
     statusCode?: number
@@ -35,7 +35,6 @@ const props = defineProps<{
 }>()
 
 const { stopLoading } = useLoading()
-const error = toRef(props, 'error')
 
 onBeforeMount(() => {
   stopLoading()
@@ -49,17 +48,17 @@ const offline = computed(() => {
 })
 
 const desc = computed(() => {
+  if (!error) {
+    return null
+  }
+
   if (offline.value) {
     return 'offline'
   }
 
-  if (!error.value) {
-    return null
-  }
-
   if (
-    error.value?.statusCode === 404
-    || /^(404|Page) Not Found/i.test(error.value?.message)
+    error.statusCode === 404
+    || /^(404|Page) Not Found/i.test(error.message)
   ) {
     return 'notfound'
   } else {
@@ -68,7 +67,7 @@ const desc = computed(() => {
 })
 
 const title = computed(() => {
-  if (!error.value) {
+  if (!error) {
     return null
   }
 

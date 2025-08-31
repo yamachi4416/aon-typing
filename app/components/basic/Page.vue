@@ -9,18 +9,15 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(
-  defineProps<{
-    anim?: boolean
-    showHeader?: boolean
-    showFooter?: boolean
-  }>(),
-  {
-    anim: true,
-    showHeader: true,
-    showFooter: true,
-  },
-)
+const {
+  anim = true,
+  showHeader = true,
+  showFooter = true,
+} = defineProps<{
+  anim?: boolean
+  showHeader?: boolean
+  showFooter?: boolean
+}>()
 
 const { name, copyright } = useSiteConfig()
 </script>

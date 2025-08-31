@@ -1,5 +1,5 @@
 import { mockNuxtImport } from '@nuxt/test-utils/runtime'
-import { mockNavigateTo, routerSetup } from '../_utils'
+import { mockNavigateTo } from '../_utils'
 
 const { navigateToMock } = vi.hoisted(() => ({
   navigateToMock: vi.fn<typeof navigateTo>(),
@@ -10,20 +10,7 @@ mockNuxtImport('navigateTo', () => navigateToMock)
 describe('useRoutePageQuery', () => {
   type Params = Parameters<typeof useRoutePageQuery>
 
-  const { setupRoutes, resetRoutes } = routerSetup()
   const { setupNavigateToMock, waitForNavigateTo } = mockNavigateTo(navigateToMock)
-
-  beforeAll(() => {
-    setupRoutes(() => [{
-      path: '/',
-      name: 'index',
-      component: defineComponent({ setup() { return () => h('div') } }),
-    }])
-  })
-
-  afterAll(() => {
-    resetRoutes()
-  })
 
   beforeEach(() => {
     vi.resetAllMocks()

@@ -192,7 +192,7 @@ class TypingGameImpl implements TypingGame {
 
     if (!this.state.problem) return
 
-    const { words, type } = this.state.problem!
+    const { words, type } = this.state.problem ?? {}
     const { timeLimit, autoMode } = this.setting
 
     const visibleChange = this._addVisibleChangeHandler()

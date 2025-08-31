@@ -46,38 +46,37 @@ import type { Key, Keys } from '~~/libs/Keys'
 import type { TypingGameSetting } from '~~/libs/TypingGameSetting'
 import KbdKey from './JISKeyboardKey.vue'
 
-const props = defineProps<{
+const { typeKey, setting, keys } = defineProps<{
   typeKey?: string
   setting: TypingGameSetting
   keys: Keys
 }>()
 
 const shiftKey = ref(false)
-const keyboard = computed(() => props.keys?.getKeys() ?? [])
+const keyboard = computed(() => keys?.getKeys() ?? [])
 const isShift = computed(
-  () => shiftKey.value
-    || (props.typeKey ? props.keys.isShiftKey(props.typeKey) : false),
+  () => shiftKey.value || (typeKey ? keys.isShiftKey(typeKey) : false),
 )
 
 function hi([normal, shift]: Key) {
-  if (!props.typeKey) {
+  if (!typeKey) {
     return false
   }
 
-  const typeKey = isShift.value ? shift : normal
+  const key = isShift.value ? shift : normal
 
-  switch (typeKey) {
+  switch (key) {
     case 'shiftR':
-      return props.keys.isShiftLeftKey(props.typeKey)
+      return keys.isShiftLeftKey(typeKey)
     case 'shiftL':
-      return props.keys.isShiftRightKey(props.typeKey)
+      return keys.isShiftRightKey(typeKey)
     default:
-      return props.typeKey === typeKey
+      return typeKey === key
   }
 }
 
 function keydown([normal, shift]: Key, start: boolean) {
-  if (props.setting.autoMode) {
+  if (setting.autoMode) {
     return
   }
 

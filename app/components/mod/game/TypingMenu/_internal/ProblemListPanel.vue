@@ -36,9 +36,10 @@
 import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 
 defineEmits<{
-  (e: 'select' | 'detail', item: ProblemListItem): unknown
-  (e: 'tag', item: ProblemItemTag): unknown
-  (e: 'close'): unknown
+  select: [item: ProblemListItem]
+  detail: [item: ProblemListItem]
+  tag: [item: ProblemItemTag]
+  close: []
 }>()
 
 const page = ref(1)

@@ -9,15 +9,10 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(
-  defineProps<{
-    name: string
-    anim?: boolean
-  }>(),
-  {
-    anim: true,
-  },
-)
+const { name, anim = true } = defineProps<{
+  name: string
+  anim?: boolean
+}>()
 </script>
 
 <style lang="scss" module>

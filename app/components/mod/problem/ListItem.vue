@@ -41,7 +41,7 @@ defineProps<{
 }>()
 
 defineEmits<{
-  (e: 'tag', tag: ProblemItemTag): unknown
+  tag: [tag: ProblemItemTag]
 }>()
 
 const uid = useId()

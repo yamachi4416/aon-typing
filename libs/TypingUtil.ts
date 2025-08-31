@@ -460,7 +460,7 @@ export function toTypeJapaneseCharsMap(text = '', { length = 0 } = {}) {
     for (let i = TypeCharMapMaxKeySize; i >= 0; i--) {
       const jc = chars.slice(s, s + i).join('')
       const hira = kana2Hira(jc)
-      if (hira[0] === 'ん') {
+      if (hira.startsWith('ん')) {
         return {
           jc: jc[0] ?? '',
           ec: needDoubleN(hira) ? 'nn' : 'n',
@@ -473,11 +473,12 @@ export function toTypeJapaneseCharsMap(text = '', { length = 0 } = {}) {
     return { jc: chars[s] ?? '', ec: chars[s] ?? '' }
   }
 
+  let index = 0
   const last = Math.min(length || chars.length, chars.length)
-  for (let i = 0; i < last; i++) {
-    const map = toMap(i)
+  while (index < last) {
+    const map = toMap(index)
     maps.push(map)
-    i += map.jc.length - 1
+    index += map.jc.length
   }
 
   return maps
@@ -539,7 +540,7 @@ export function allowDoubleN(
     typeChar === 'n'
     && (leftInfoChars.endsWith('ん') || leftInfoChars.endsWith('ン'))
   ) {
-    const m = leftTypeChars.match(/n+$/)
+    const m = /n+$/.exec(leftTypeChars)
     if (m && m[0].length % 2 === 1) {
       return true
     }

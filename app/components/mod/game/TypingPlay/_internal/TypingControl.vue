@@ -86,18 +86,19 @@
 import { getKeyLayout } from '~~/libs/Keys'
 import type { TypingGameState } from '~~/libs/TypingGameState'
 
-const props = defineProps<{
+const { state } = defineProps<{
   state: Readonly<TypingGameState>
 }>()
 
 const emit = defineEmits<{
-  (e: 'toggle' | 'cancel'): unknown
+  toggle: []
+  cancel: []
 }>()
 
-const typingState = computed(() => props.state.currentTypingState)
-const problem = computed(() => props.state.problem)
-const setting = computed(() => props.state.setting)
-const current = computed(() => props.state.currentWord)
+const typingState = computed(() => state.currentTypingState)
+const problem = computed(() => state.problem)
+const setting = computed(() => state.setting)
+const current = computed(() => state.currentWord)
 const infoState = computed(() => current.value?.infoState)
 const typeKey = computed(() => current.value?.wordState.current ?? '')
 
@@ -108,8 +109,8 @@ const keys = computed(() => {
 })
 
 const remainingTime = computed(() =>
-  props.state.remainingTime
-    ? Math.trunc(props.state.remainingTime / 1000 + 1)
+  state.remainingTime
+    ? Math.trunc(state.remainingTime / 1000 + 1)
     : 0,
 )
 

@@ -19,8 +19,9 @@ import type {
 } from '~~/types/problems'
 
 defineEmits<{
-  (e: 'select', detail: ProblemDetail): unknown
-  (e: 'back' | 'close'): unknown
+  select: [detail: ProblemDetail]
+  back: []
+  close: []
 }>()
 
 const { wrapLoading } = useLoading()

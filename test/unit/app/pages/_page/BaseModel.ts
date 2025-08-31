@@ -36,7 +36,8 @@ export abstract class BaseModel<T extends Wrapper> {
   }
 
   protected isExists(el = this.el): el is T {
-    return el !== undefined && el.exists()
+    if (el === undefined) return false
+    return el.exists()
   }
 
   protected ifExists(el = this.el) {

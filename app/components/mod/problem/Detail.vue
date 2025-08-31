@@ -82,13 +82,13 @@
 <script setup lang="ts">
 import type { ProblemDetail, ProblemItemTag } from '~~/types/problems'
 
-const props = defineProps<{
+const { detail } = defineProps<{
   detail: ProblemDetail
 }>()
 
 defineEmits<{
-  (e: 'tag', tag: ProblemItemTag): unknown
-  (e: 'railway', railway: { code: string }): unknown
+  tag: [tag: ProblemItemTag]
+  railway: [railway: { code: string }]
 }>()
 
 const uid = useId()
@@ -96,7 +96,7 @@ const vnodeProps = computed(() => getCurrentInstance()?.vnode?.props)
 const hasOnTag = computed(() => !!vnodeProps.value?.onTag)
 const hasOnRailway = computed(() => !!vnodeProps.value?.onRailway)
 const { getCorporation } = useRailways()
-const railway = computed(() => getCorporation(props.detail.optional?.coCd?.[0]))
+const railway = computed(() => getCorporation(detail.optional?.coCd?.[0]))
 </script>
 
 <style lang="scss" module>

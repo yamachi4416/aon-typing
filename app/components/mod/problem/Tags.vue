@@ -16,19 +16,16 @@
 <script setup lang="ts">
 import type { ProblemItemTag } from '~~/types/problems'
 
-withDefaults(
-  defineProps<{
-    tags?: ReadonlyArray<ProblemItemTag>
-    clickable?: boolean
-  }>(),
-  {
-    tags: () => [],
-    clickable: true,
-  },
-)
+const {
+  tags = [],
+  clickable = true,
+} = defineProps<{
+  tags?: ReadonlyArray<ProblemItemTag>
+  clickable?: boolean
+}>()
 
 defineEmits<{
-  (e: 'tag', tag: ProblemItemTag): unknown
+  tag: [tag: ProblemItemTag]
 }>()
 </script>
 

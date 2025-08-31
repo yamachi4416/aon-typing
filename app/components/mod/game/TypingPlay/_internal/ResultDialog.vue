@@ -76,7 +76,9 @@ import { fmtDispTime, fmtPercent } from '~/utils/filters'
 import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
 
 const emit = defineEmits<{
-  (e: 'retry' | 'next' | 'menu'): unknown
+  retry: []
+  next: []
+  menu: []
 }>()
 
 const result = ref<TypingGameInfo>()

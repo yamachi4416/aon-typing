@@ -17,17 +17,12 @@
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(
-  defineProps<{
-    handNumbers?: number[]
-  }>(),
-  {
-    handNumbers: () => [],
-  },
-)
+const { handNumbers = [] } = defineProps<{
+  handNumbers?: number[]
+}>()
 
 function hi(k: number) {
-  return props.handNumbers?.some((v, _i) => v === k) ?? false
+  return handNumbers.some((v, _i) => v === k) ?? false
 }
 </script>
 

@@ -13,14 +13,14 @@ import JISKeyboard from '~/components/mod/kbd/JISKeyboard.vue'
 import type { Keys } from '~~/libs/Keys'
 import type { TypingGameSetting } from '~~/libs/TypingGameSetting'
 
-const props = defineProps<{
+const { keys } = defineProps<{
   typeKey?: string
   setting: TypingGameSetting
   keys: Keys
 }>()
 
 const keyboard = computed(() =>
-  props.keys.name === 'JIS' ? JISKeyboard : undefined,
+  keys.name === 'JIS' ? JISKeyboard : undefined,
 )
 </script>
 

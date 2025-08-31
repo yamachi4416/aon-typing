@@ -13,20 +13,20 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+const { text, highlight } = defineProps<{
   text?: string
   highlight: boolean
 }>()
 
 const emit = defineEmits<{
-  (e: 'click', start: boolean): unknown
+  click: [start: boolean]
 }>()
 
 const clicked = ref(false)
-const hi = computed(() => props.highlight || clicked.value)
+const hi = computed(() => highlight || clicked.value)
 
 function touchstart() {
-  if (props.text) {
+  if (text) {
     clicked.value = true
     emit('click', true)
   }
@@ -51,7 +51,7 @@ function touchmove(e: TouchEvent) {
 }
 
 function touchend() {
-  if (props.text) {
+  if (text) {
     clicked.value = false
     emit('click', false)
   }

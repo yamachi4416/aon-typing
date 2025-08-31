@@ -14,27 +14,22 @@
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(
-  defineProps<{
-    time?: number
-  }>(),
-  {
-    time: 0,
-  },
-)
+const { time = 0 } = defineProps<{
+  time?: number
+}>()
 
 defineEmits<{
-  (e: 'click'): void
+  click: []
 }>()
 
 const minute = computed(() => {
-  const t = Math.floor(props.time / 1000)
+  const t = Math.floor(time / 1000)
   const m = Math.floor(t / 60)
   return String(m).padStart(2, '0')
 })
 
 const second = computed(() => {
-  const t = Math.floor(props.time / 1000)
+  const t = Math.floor(time / 1000)
   const s = Math.floor(t % 60)
   return String(s).padStart(2, '0')
 })

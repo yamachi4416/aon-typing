@@ -10,24 +10,19 @@
 import { toTypeJapaneseCharsMap } from '~~/libs/TypingUtil'
 import { wait } from '~~/libs/Util'
 
-const props = withDefaults(
-  defineProps<{
-    name: string
-    anim?: boolean
-  }>(),
-  {
-    anim: true,
-  },
-)
+const { name, anim = true } = defineProps<{
+  name: string
+  anim?: boolean
+}>()
 
-const fins = ref([props.name])
+const fins = ref([name])
 const bufs = ref<string[]>([])
 const title = computed(() => [...fins.value, ...bufs.value].join(''))
 
 onMounted(typing)
 
 async function typing() {
-  if (!props.anim) return
+  if (!anim) return
 
   const text = fins.value.join('')
   fins.value = []

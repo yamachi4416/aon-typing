@@ -63,11 +63,9 @@ async function generateProblemData({
       }
 
       problem.tags = dataObj.tags.map((name) => {
-        if (!tags[name]) {
-          tags[name] = {
-            id: String(tagId++).padStart(5, '0'),
-            problems: [],
-          }
+        tags[name] ??= {
+          id: String(tagId++).padStart(5, '0'),
+          problems: [],
         }
 
         return { id: tags[name].id, name }
@@ -103,20 +101,20 @@ async function generateProblemData({
   await fs.rm(tagsDist, { recursive: true }).catch(() => {})
   await fs.mkdir(tagsDist, { recursive: true })
 
-  const tagSummary = await Promise.all(
+  const tagSummary = (await Promise.all(
     Object.keys(tags).map(async (name) => {
       const { id, problems } = tags[name]!
       await writeJson(path.join(tagsDist, `${id}.json`), { id, name, problems })
       return { id, name, count: problems.length } satisfies ProblemTagSummary
     }),
-  )
+  )).toSorted((a, b) => a.id.localeCompare(b.id))
 
   await writeJson(
     tagsFile,
     Object.fromEntries(
-      tagSummary
-        .sort((a, b) => (a.id < b.id ? -1 : 1))
-        .map(({ name, id, count }) => [name, { id, count }]),
+      tagSummary.map(
+        ({ name, id, count }) => [name, { id, count }],
+      ),
     ),
   )
 

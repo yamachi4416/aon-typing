@@ -1,6 +1,6 @@
 <template>
   <section
-    :class="[$style.content, $props.panelClass]"
+    :class="[$style.content, panelClass]"
     :aria-labelledby="titleId"
   >
     <header>
@@ -14,7 +14,7 @@
         />
       </span>
     </header>
-    <component :is="is" ref="content" v-bind="$attrs">
+    <component :is ref="content" v-bind="$attrs">
       <slot name="default" />
     </component>
     <footer v-if="$slots.footer">
@@ -28,23 +28,20 @@ defineOptions({
   inheritAttrs: false,
 })
 
-withDefaults(
-  defineProps<{
-    title?: string
-    is?: string
-    panelClass?: string
-    showClose?: boolean
-  }>(),
-  {
-    title: 'ダイアログ',
-    is: 'div',
-    panelClass: undefined,
-    showClose: true,
-  },
-)
+const {
+  title = 'ダイアログ',
+  is = 'div',
+  panelClass,
+  showClose = true,
+} = defineProps<{
+  title?: string
+  is?: string
+  panelClass?: string
+  showClose?: boolean
+}>()
 
 defineEmits<{
-  (e: 'close'): unknown
+  close: []
 }>()
 
 const content = ref<HTMLElement>()

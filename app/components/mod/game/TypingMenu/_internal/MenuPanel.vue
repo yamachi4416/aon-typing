@@ -131,8 +131,11 @@ import type { TypingGameSetting } from '~~/libs/TypingGameSetting'
 import type { ProblemListItem } from '~~/types/problems'
 
 const emit = defineEmits<{
-  (e: 'openProblemSelect' | 'start' | 'cancel' | 'close'): unknown
-  (e: 'detail', problem: ProblemListItem): unknown
+  start: []
+  cancel: []
+  close: []
+  detail: [problem: ProblemListItem]
+  openProblemSelect: []
 }>()
 
 const { problems } = useProblems()

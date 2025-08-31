@@ -23,25 +23,30 @@ export function useRouteQuery<T>(
     return converter.fromQuery(getQuery(), name)
   }
 
+  async function setValue(value: T[], trigger: () => void) {
+    const query = {
+      ...getQuery(),
+      [name]: converter.toQuery(value),
+    }
+    const to = router.resolve({ query })
+
+    if (options.replace === 'history') {
+      if (!globalThis.history) return
+      history.replaceState(history.state, '', to.fullPath)
+    } else {
+      await navigateTo(to.fullPath, { replace: options.replace })
+    }
+
+    trigger()
+  }
+
   return customRef((track, trigger) => ({
     get() {
       track()
       return getValue()
     },
-    async set(value) {
-      const query = {
-        ...getQuery(),
-        [name]: converter.toQuery(value),
-      }
-      const to = router.resolve({ query })
-
-      if (options.replace === 'history') {
-        if (!globalThis.history) return
-        history.replaceState(history.state, '', to.fullPath)
-      } else {
-        await navigateTo(to.fullPath, { replace: options.replace })
-      }
-      trigger()
+    set(value) {
+      setValue(value, trigger)
     },
   }))
 }
