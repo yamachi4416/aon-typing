@@ -1,15 +1,33 @@
 import { mockNuxtImport } from '@nuxt/test-utils/runtime'
+import { mockNavigateTo, routerSetup } from '../_utils'
 
 const { navigateToMock } = vi.hoisted(() => ({
   navigateToMock: vi.fn<typeof navigateTo>(),
 }))
+
 mockNuxtImport('navigateTo', () => navigateToMock)
 
 describe('useRoutePageQuery', () => {
   type Params = Parameters<typeof useRoutePageQuery>
 
+  const { setupRoutes, resetRoutes } = routerSetup()
+  const { setupNavigateToMock, waitForNavigateTo } = mockNavigateTo(navigateToMock)
+
+  beforeAll(() => {
+    setupRoutes(() => [{
+      path: '/',
+      name: 'index',
+      component: defineComponent({ setup() { return () => h('div') } }),
+    }])
+  })
+
+  afterAll(() => {
+    resetRoutes()
+  })
+
   beforeEach(() => {
     vi.resetAllMocks()
+    setupNavigateToMock()
   })
 
   it.each<{ query: Params[0]['query'], expected: number }>([
@@ -23,38 +41,99 @@ describe('useRoutePageQuery', () => {
     { query: { page: '0xFF' }, expected: 1 },
     { query: { page: `${Number.MAX_SAFE_INTEGER}` }, expected: Number.MAX_SAFE_INTEGER },
     { query: { page: `${Number.MAX_SAFE_INTEGER + 1}` }, expected: 1 },
-  ])('get route.query($query)から取得される', ({ query, expected }) => {
-    const page = useRoutePageQuery({ query })
+  ])('get route.query($query)から設定される', async ({ query, expected }) => {
+    await navigateTo({ query })
+
+    vi.spyOn(globalThis, 'location', 'get').mockReturnValue(undefined!)
+
+    const route = useRoute()
+    const page = useRoutePageQuery(route)
+
     expect(page.value).toBe(expected)
   })
 
+  it.each([
+    [2, 2],
+    [3, 3],
+    [Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER],
+  ])('set 有効な値は設定される(%o)', async (value, expected) => {
+    await navigateTo('/')
+
+    const route = useRoute()
+    const page = useRoutePageQuery(route)
+
+    page.value = value
+
+    expect(await waitForNavigateTo()).toBe(true)
+    expect(page.value).toBe(expected)
+    expect(location.search).toBe(`?page=${expected}`)
+    expect(useRouter().resolve(route).fullPath).toBe(`/?page=${expected}`)
+  })
+
+  it.each(
+    [0, 1, -1, 1.01, Number.MAX_SAFE_INTEGER + 1],
+  )('set 不正な値や同じ値は設定されない(%o)', async (value) => {
+    await navigateTo('/')
+
+    const route = useRoute()
+    const page = useRoutePageQuery(route)
+
+    page.value = value
+
+    expect(await waitForNavigateTo()).toBe(false)
+    expect(page.value).toBe(1)
+  })
+
   it.each<{ query: Params[0]['query'], expected: string }>([
-    { query: {}, expected: '/?page=2' },
-    { query: { other: 'a' }, expected: '/?other=a&page=2' },
-    { query: { other: 'a', page: '1' }, expected: '/?other=a&page=2' },
-  ])('set route.query($query)とマージされる', ({ query, expected }) => {
-    vi.spyOn(globalThis, 'location', 'get').mockReturnValue(undefined!)
-    const page = useRoutePageQuery({ query })
-    page.value++
-    expect(navigateToMock).toBeCalledWith(expected, { replace: false })
+    { query: {}, expected: '?page=2' },
+    { query: { other: 'a' }, expected: '?other=a&page=2' },
+    { query: { other: 'a', page: '1' }, expected: '?other=a&page=2' },
+  ])('set route.query($query)とマージされる', async ({ query, expected }) => {
+    await navigateTo({ query })
+
+    const route = useRoute()
+    const page = useRoutePageQuery(route)
+    const next = page.value + 1
+
+    page.value = next
+
+    expect(await waitForNavigateTo()).toBe(true)
+    expect(page.value).toBe(next)
+    expect(location.search).toBe(expected)
+    expect(useRouter().resolve(route).fullPath).toBe(`/${expected}`)
   })
 
   it.each<{ search: string, expected: string }>([
-    { search: '?', expected: '/?page=2' },
-    { search: '?other=a', expected: '/?other=a&page=2' },
-    { search: '?other=a&page=1', expected: '/?other=a&page=2' },
-  ])('set location.search($search)とマージされる', ({ search, expected }) => {
-    vi.spyOn(location, 'search', 'get').mockReturnValue(search)
-    const page = useRoutePageQuery({ query: {} })
-    page.value++
-    expect(navigateToMock).toBeCalledWith(expected, { replace: false })
+    { search: '', expected: '?page=2' },
+    { search: '?other=a', expected: '?other=a&page=2' },
+    { search: '?other=a&page=1', expected: '?other=a&page=2' },
+  ])('set location.search($search)とマージされる', async ({ search, expected }) => {
+    await navigateTo('/')
+    location.search = search
+
+    const route = useRoute()
+    const page = useRoutePageQuery(route)
+    const next = page.value + 1
+
+    page.value = next
+
+    expect(await waitForNavigateTo()).toBe(true)
+    expect(page.value).toBe(next)
+    expect(location.search).toBe(expected)
+    expect(useRouter().resolve(route).fullPath).toBe(`/${expected}`)
   })
 
-  it('reactive', () => {
-    const route = reactive({ query: {} })
+  it.each<{ query: Params[0]['query'], expected: number }>([
+    { query: { page: '2' }, expected: 2 },
+    { query: { page: '0' }, expected: 1 },
+  ])('クエリが変更されると値に反映される', async () => {
+    await navigateTo('/')
+
+    const route = useRoute()
     const page = useRoutePageQuery(route)
-    expect(page.value).toBe(1)
-    route.query = { page: '2' }
+
+    await navigateTo({ query: { page: '2' } }, { replace: true })
+
     expect(page.value).toBe(2)
   })
 })

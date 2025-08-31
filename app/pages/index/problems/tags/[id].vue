@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ModProblemTagInfo :tag="tag" :qtags="tags" @tag="changeTags">
+    <ModProblemTagInfo v-model:tags="tags" :tag>
       <button v-show="navigator.enable" @click="router.back">
         もどる
       </button>
@@ -25,34 +25,22 @@ const { retrieveTag, filterTagProblems } = useProblems()
 const route = useRoute('index-problems-tags-id')
 const router = useRouter()
 const navigator = useNavigator()
-const page = useRoutePageQuery(route)
-watch(page, () => navigator.scrollTop())
-
 const tag = await wrapLoading(retrieveTag({ id: route.params.id }))
 
-const tags = ref(queryTags())
+const page = useRoutePageQuery(route)
+const tags = useRouteTagsQuery(route, {
+  whiteList: tag.problems.flatMap((p) => p.tags.map(({ id }) => id)),
+})
+
 const problems = filterTagProblems({
   problems: tag.problems,
   tagId: tag.id,
   tags,
 })
 
-onMounted(() => {
-  tags.value = queryTags()
-})
+watch(page, () => navigator.scrollTop())
 
 useHead({
   title: `問題 タグ：${tag.name}`,
 })
-
-function queryTags() {
-  const tags = route.query.tags
-  if (!tags) return []
-  const all = Array.isArray(tags) ? tags.join(',') : tags
-  return !all ? [] : all.split(',')
-}
-
-function changeTags(stags: string[]) {
-  tags.value = stags
-}
 </script>

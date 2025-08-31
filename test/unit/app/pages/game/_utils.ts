@@ -29,7 +29,7 @@ export function routerSetup(targetPath: '' | 'menu' | 'play') {
       {
         ...game,
         children: [
-          game.children!.find(({ path }) => path === targetPath)!,
+          game.children.find(({ path }) => path === targetPath)!,
           ...defaults.filter(({ path }) => path !== targetPath),
         ],
       },

@@ -12,7 +12,7 @@ export function routeRecords<
 
 export type QueryConverter<T> = {
   readonly fromQuery: (query: LocationQuery, key: string) => T[]
-  readonly toQuery: (values: T[]) => string[]
+  readonly toQuery: (values: T[]) => string[] | undefined
 }
 
 export function defineQueryConverter<T, R>(defines: {

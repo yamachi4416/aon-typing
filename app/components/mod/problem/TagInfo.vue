@@ -5,7 +5,7 @@
       <h2>タグ：{{ tag.name }}</h2>
     </header>
     <div :class="$style.tags">
-      <label v-for="t in tags" :key="`tag-${t.id}`" :title="t.title">
+      <label v-for="t in tags" :key="t.id" :title="t.title">
         {{ t.name }}
         <input
           v-model="tagIds"
@@ -28,54 +28,29 @@
 <script setup lang="ts">
 import type { TagInfo } from '~~/types/problems'
 
-const props = withDefaults(
-  defineProps<{
-    tag?: TagInfo
-    qtags?: string[]
-  }>(),
-  {
-    tag: () => ({}) as TagInfo,
-    qtags: () => [],
-  },
-)
-
-const emit = defineEmits<{
-  (e: 'tag', tags: string[]): unknown
+const { tag } = defineProps<{
+  tag: TagInfo
 }>()
 
-const { replaceQuery } = useNavigator()
-const tagIds = computed({
-  get() {
-    return props.qtags ?? []
-  },
-  set(value) {
-    const tags = [...value].sort()
-    replaceQuery({ tags: tags.join(',') })
-    emit('tag', tags)
-  },
-})
+const tagIds = defineModel<string[]>('tags', { default: () => [] })
 
 const tags = computed(() => {
-  const all = props.tag.problems?.flatMap((p) => p.tags) ?? []
-  const map = new Map(all.map((tag) => [tag.id, tag]))
   const ons = new Set(tagIds.value)
-  return [...map.values()]
-    .filter(({ id }) => id !== props.tag.id)
-    .map((tag) => ({
-      ...tag,
-      title: ons.has(tag.id)
-        ? `「${tag.name}」タグの問題のみ表示するのをやめる`
-        : `「${tag.name}」タグの問題のみ表示する`,
+  return Map.groupBy(
+    tag.problems.flatMap((p) => p.tags),
+    ({ id }) => id)
+    .entries()
+    .map(([id, [tag, ...tags]]) => ({
+      id,
+      name: tag!.name,
+      title: ons.has(tag!.id)
+        ? `「${tag!.name}」タグの問題のみ表示するのをやめる`
+        : `「${tag!.name}」タグの問題のみ表示する`,
+      count: tags.length + 1,
     }))
-})
-
-onMounted(async () => {
-  const idsHas = new Set(tags.value.map(({ id }) => id))
-  const ids = tagIds.value.filter(idsHas.has.bind(idsHas))
-  if (tagIds.value.length !== ids.length) {
-    await nextTick()
-    tagIds.value = ids
-  }
+    .filter(({ id }) => id !== tag.id)
+    .toArray()
+    .toSorted((a, b) => b.count - a.count || a.id.localeCompare(b.id))
 })
 </script>
 

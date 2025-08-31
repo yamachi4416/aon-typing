@@ -12,15 +12,15 @@ export function useRouteQuery<T>(
 ) {
   const router = useRouter()
 
-  function getValue() {
-    return converter.fromQuery(route.query, name)
+  function getQuery() {
+    const query = route.query
+    return globalThis.location
+      ? convertToQuery(globalThis.location.search)
+      : { ...query }
   }
 
-  function getNewQuery(value: T[]) {
-    const current = globalThis.location
-      ? convertToQuery(globalThis.location.search)
-      : route.query
-    return { ...current, [name]: converter.toQuery(value) }
+  function getValue() {
+    return converter.fromQuery(getQuery(), name)
   }
 
   return customRef((track, trigger) => ({
@@ -29,9 +29,10 @@ export function useRouteQuery<T>(
       return getValue()
     },
     async set(value) {
-      if (value === getValue()) return
-
-      const query = getNewQuery(value)
+      const query = {
+        ...getQuery(),
+        [name]: converter.toQuery(value),
+      }
       const to = router.resolve({ query })
 
       if (options.replace === 'history') {

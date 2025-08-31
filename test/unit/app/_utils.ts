@@ -5,6 +5,7 @@ import {
 } from '@nuxt/test-utils/runtime'
 import { flushPromises } from '@vue/test-utils'
 import type { NitroFetchRequest } from 'nitropack'
+import type { Mock } from 'vitest'
 import App from '~/app.vue'
 import { isFunction } from '~~/libs/Util'
 
@@ -90,5 +91,34 @@ export function routerSetup(defaultSetup?: SetupRoutes) {
   return {
     resetRoutes,
     setupRoutes,
+  }
+}
+
+export function mockNavigateTo(navigateToMock: Mock<typeof navigateTo>) {
+  function setupNavigateToMock() {
+    const router = useRouter()
+    return navigateToMock
+      .mockClear()
+      .mockImplementation(async (to, options) => {
+        if (!to) return
+        if (options?.replace) {
+          return await router.replace(to)
+        }
+        return await router.push(to)
+      })
+  }
+
+  async function waitForNavigateTo() {
+    const { results, settledResults } = navigateToMock.mock
+    if (results.length && settledResults.length < results.length) {
+      await results.at(-1)?.value
+      return true
+    }
+    return false
+  }
+
+  return {
+    setupNavigateToMock,
+    waitForNavigateTo,
   }
 }
