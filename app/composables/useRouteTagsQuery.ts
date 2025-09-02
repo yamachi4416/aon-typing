@@ -7,7 +7,7 @@ export function useRouteTagsQuery(
   route: UseRouteQueryRoute,
   {
     name = 'tags',
-    replace = true,
+    replace = 'history',
     whiteList,
     ...option
   }: Options = {},
@@ -29,15 +29,14 @@ export function useRouteTagsQuery(
   })
 
   const urlQuery = useRouteQuery(name, route, converter, { ...option, replace })
-  const currentValue = computed(() => urlQuery.value.filter(isValid))
 
   return computed({
     get() {
-      return currentValue.value
+      return urlQuery.value
     },
     set(value) {
       const newValue = normalizeValues(value)
-      if (isSameValue(currentValue.value, newValue)) return
+      if (isSameValue(urlQuery.value, newValue)) return
       urlQuery.value = newValue
     },
   })

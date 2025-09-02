@@ -29,7 +29,7 @@ describe('useRoutePageQuery', () => {
     { query: { page: `${Number.MAX_SAFE_INTEGER}` }, expected: Number.MAX_SAFE_INTEGER },
     { query: { page: `${Number.MAX_SAFE_INTEGER + 1}` }, expected: 1 },
   ])('get route.query($query)から設定される', async ({ query, expected }) => {
-    await navigateTo({ query })
+    await navigateTo({ path: '/', query })
 
     vi.spyOn(globalThis, 'location', 'get').mockReturnValue(undefined!)
 
@@ -76,7 +76,7 @@ describe('useRoutePageQuery', () => {
     { query: { other: 'a' }, expected: '?other=a&page=2' },
     { query: { other: 'a', page: '1' }, expected: '?other=a&page=2' },
   ])('set route.query($query)とマージされる', async ({ query, expected }) => {
-    await navigateTo({ query })
+    await navigateTo({ path: '/', query })
 
     const route = useRoute()
     const page = useRoutePageQuery(route)

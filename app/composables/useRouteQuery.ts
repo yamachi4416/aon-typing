@@ -31,8 +31,7 @@ export function useRouteQuery<T>(
     const to = router.resolve({ query })
 
     if (options.replace === 'history') {
-      if (!globalThis.history) return
-      history.replaceState(history.state, '', to.fullPath)
+      router.options.history.replace(to.fullPath)
     } else {
       await navigateTo(to.fullPath, { replace: options.replace })
     }
