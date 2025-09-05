@@ -16,26 +16,19 @@
       </template>
     </PartsSection>
 
-    <PartsSection :class="$style.search" aria-labelledby="search-title">
+    <PartsSection aria-labelledby="search-title">
       <h2 id="search-title">
         タイトル検索
       </h2>
       <p>タイピングの問題のタイトルをキーワードで検索します。</p>
-      <form role="search" @submit.prevent>
-        <div>
-          <input
-            id="search-keyword"
-            v-model="state.kwd"
-            placeholder=" "
-            @keyup.enter="searchEnterProblems"
-            @change="changeKwds"
-          />
-          <label for="search-keyword">検索キーワード</label>
-        </div>
-        <button type="button" :disabled="!enableSearch" @click="searchProblems">
-          検索する
-        </button>
-      </form>
+      <PartsSearchForm
+        v-model.trim="state.kwd"
+        label="検索キーワード"
+        :maxlength="100"
+        @change="changeKwds"
+        @enter="searchProblems"
+        @search="searchProblems"
+      />
       <template #left>
         <ImgNekoUserKeyboard />
       </template>
@@ -124,8 +117,6 @@ const state = reactive({
   kwd: '',
 })
 
-const enableSearch = computed(() => !!normalizedKwd(state.kwd))
-
 onMounted(() => {
   state.kwd = normalizedKwd(route.query.kwd)
 })
@@ -136,19 +127,14 @@ function normalizedKwd(val: string | null | (string | null)[] = '') {
 }
 
 async function searchProblems() {
-  if (enableSearch.value) {
-    await navigateTo({
-      name: 'index-problems',
-      query: { kwd: normalizedKwd(state.kwd) },
-    })
+  const kwd = normalizedKwd(state.kwd)
+  if (kwd !== (route.query.kwd ?? '')) {
+    navigator.replaceQuery({ kwd })
   }
-}
-
-async function searchEnterProblems() {
-  if (enableSearch.value) {
-    changeKwds()
-    await searchProblems()
-  }
+  await navigateTo({
+    name: 'index-problems',
+    query: { kwd },
+  })
 }
 
 function changeKwds() {
@@ -207,25 +193,6 @@ await Promise.all([fetchTopNewsProblems(), fetchTags()])
   gap: 2px;
   align-items: center;
   font-size: 0.9em;
-}
-
-.search {
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    padding: 10px;
-
-    input {
-      @include cmps.placeholder;
-    }
-
-    button {
-      @include cmps.button-big {
-        align-self: center;
-      }
-    }
-  }
 }
 
 .news {
