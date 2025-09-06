@@ -55,6 +55,12 @@
   --keyboard-highlight: var(--input-selected);
   --loading-color: rgb(253 207 0 / 10%);
   --countdown-color: var(--color-l);
+  --button-fg: var(--color-3);
+  --button-bg: var(--color-e);
+  --disabled-fg: var(--color-a);
+  --disabled-bg: var(--color-9);
+  --checked-fg: var(--button-fg);
+  --checked-bg: var(--input-selected);
 }
 
 @mixin theme_dark_cssvars {

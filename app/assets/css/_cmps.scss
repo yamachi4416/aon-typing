@@ -16,18 +16,18 @@
   padding: 0 1.5em;
   font-size: 0.9em;
   line-height: 2;
-  color: var(--color-3);
+  color: var(--button-fg);
   white-space: nowrap;
   text-decoration: none;
   appearance: none;
-  background: var(--color-e);
+  background: var(--button-bg);
   border: 1px solid var(--color-9);
   border-radius: 10px;
   @content;
 
   &:disabled {
-    color: var(--color-a);
-    border-color: var(--color-9);
+    color: var(--disabled-fg);
+    border-color: var(--disabled-bg);
   }
 
   &:is(label):has(> :focus-visible) {
@@ -48,8 +48,10 @@
     }
 
     &[selected],
-    &[aria-checked='true'] {
-      background: var(--input-selected);
+    &[aria-checked='true'],
+    &:has(> :checked) {
+      color: var(--checked-fg);
+      background: var(--checked-bg);
     }
   }
 }

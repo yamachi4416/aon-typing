@@ -2,7 +2,7 @@
   <div :class="$style.section">
     <div
       v-if="$slots.left"
-      :class="$style.left"
+      :class="[$style.side, $style.left]"
     >
       <span :class="$style.fuki" />
       <slot name="left" />
@@ -16,7 +16,7 @@
     </component>
     <div
       v-if="$slots.right"
-      :class="$style.right"
+      :class="[$style.side]"
     >
       <span :class="$style.fuki" />
       <slot name="right" />
@@ -38,34 +38,6 @@ const { is = 'section' } = defineProps<{
 @use '~/assets/css/vars';
 @use '~/assets/css/cmps';
 
-@mixin side {
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  max-width: 150px;
-  overflow: hidden;
-  @content;
-
-  @include vars.media_s {
-    display: none;
-  }
-
-  /* stylelint-disable-next-line nesting-selector-no-missing-scoping-root */
-  & > * {
-    width: 100%;
-  }
-
-  /* stylelint-disable-next-line nesting-selector-no-missing-scoping-root */
-  & :where(img) {
-    z-index: 1;
-    width: 100%;
-    min-width: 90px;
-    height: auto;
-    min-height: 90px;
-  }
-}
-
 .section {
   position: relative;
   z-index: 0;
@@ -86,14 +58,33 @@ const { is = 'section' } = defineProps<{
   @include cmps.paper;
 }
 
-.right {
-  @include side;
+.side {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  max-width: 150px;
+  overflow: hidden;
+
+  @include vars.media_s {
+    display: none;
+  }
+
+  & > * {
+    width: 100%;
+  }
+
+  & :where(img) {
+    z-index: 1;
+    width: 100%;
+    min-width: 90px;
+    height: auto;
+    min-height: 90px;
+  }
 }
 
 .left {
-  @include side {
-    transform: scale(-1, 1);
-  }
+  transform: scale(-1, 1);
 }
 
 .fuki {

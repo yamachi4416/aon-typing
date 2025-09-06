@@ -11,57 +11,69 @@
         <tr>
           <th>制限時間</th>
           <td role="radiogroup">
-            <button
-              v-for="i in [0, 1, 2, 3, 4, 5]"
-              :key="`time-limit-${i}`"
-              role="radio"
-              :title="`制限時間を「${i ? i + '分' : 'なし'}」に設定する`"
-              :aria-checked="i * 60000 === setting.timeLimit"
-              @click="setting.timeLimit = i * 60000"
-              v-text="i ? i + '分' : 'なし'"
-            />
+            <label
+              v-for="[value, label] in options.timeLimit"
+              :key="value"
+              :title="`制限時間を「${label}」に設定する`"
+            >
+              <input
+                v-model="setting.timeLimit"
+                type="radio"
+                :value
+              />
+              {{ label }}
+            </label>
           </td>
         </tr>
         <tr>
           <th>目標タイプ数</th>
           <td role="radiogroup">
-            <button
+            <label
               v-for="[value, label] in options.goalCharCount"
               :key="value"
-              role="radio"
               :title="`目標タイプ数を「${label}」に設定する`"
-              :aria-checked="setting.goalCharCount === value"
-              @click="setting.goalCharCount = value"
-              v-text="label"
-            />
+            >
+              <input
+                v-model="setting.goalCharCount"
+                type="radio"
+                :value
+              />
+              {{ label }}
+            </label>
           </td>
         </tr>
         <tr>
           <th>自動モード</th>
           <td role="radiogroup">
-            <button
+            <label
               v-for="[value, label] in options.autoMode"
               :key="value"
-              role="radio"
               :title="`自動モードを「${label}」に設定する`"
-              :aria-checked="setting.autoMode === value"
-              @click="setting.autoMode = value"
-              v-text="label"
-            />
+            >
+              <input
+                v-model="setting.autoMode"
+                type="radio"
+                :value
+              />
+              {{ label }}
+            </label>
           </td>
         </tr>
         <tr>
           <th>出題する順番</th>
           <td role="radiogroup">
-            <button
+            <label
               v-for="[value, label] in options.problemOrder"
               :key="value"
-              role="radio"
               :title="`出題する順番を「${label}」に設定する`"
-              :aria-checked="setting.problemOrder === value"
-              @click="setting.problemOrder = value"
-              v-text="label"
-            />
+            >
+              <input
+                v-model="setting.problemOrder"
+                type="radio"
+                :value
+              />
+              {{ label }}
+            </label>
           </td>
         </tr>
         <tr>
@@ -163,6 +175,10 @@ const problemType = computed(() => {
 })
 
 const options = defineMenuOptions({
+  timeLimit: [
+    [0, 'なし'],
+    ...[1, 2, 3, 4, 5].map<[number, string]>((v) => [v * 60000, `${v}分`]),
+  ],
   autoMode: [
     [0, 'オフ'],
     ...helpAnimals().map<[number, string]>(
@@ -208,7 +224,8 @@ function defineMenuOptions<Keys extends keyof TypingGameSetting>(options: {
   }
 
   & > table:nth-of-type(1) {
-    td:has(> button) {
+    td:has(> button),
+    td:has(> label > input[type='radio']) {
       @include cmps.buttons-tight {
         flex-wrap: nowrap;
         justify-content: flex-start;

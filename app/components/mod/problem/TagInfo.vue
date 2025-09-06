@@ -6,7 +6,6 @@
     </header>
     <div :class="$style.tags">
       <label v-for="t in tags" :key="t.id" :title="t.title">
-        {{ t.name }}
         <input
           v-model="tagIds"
           type="checkbox"
@@ -14,6 +13,7 @@
           :value="t.id"
           @keyup.enter.prevent=";($event.target as any)?.click?.()"
         />
+        {{ t.name }}
       </label>
     </div>
     <footer v-if="$slots.default">
@@ -62,6 +62,10 @@ const tags = computed(() => {
 }
 
 .tags {
+  --button-fg: var(--color-6);
+  --checked-fg: var(--color-f);
+  --checked-bg: var(--color-p);
+
   @include cmps.buttons {
     justify-content: flex-start;
     padding: 10px 0;
@@ -69,13 +73,7 @@ const tags = computed(() => {
 
   & > :where(label) {
     padding: 0 1em;
-    color: var(--color-6);
     border: none;
-
-    &:has(input:checked) {
-      color: var(--color-f);
-      background: var(--color-p);
-    }
   }
 }
 </style>
