@@ -75,37 +75,39 @@ describe('useRouteTagsQuery', () => {
     expect(useRouter().options.history.location).toBe(`/${search}`)
   })
 
-  it.each<{ query: Params[0]['query'], expected: string }>([
-    { query: {}, expected: '?tags=2' },
-    { query: { other: 'a' }, expected: '?other=a&tags=2' },
-    { query: { other: 'a', tags: '1' }, expected: '?other=a&tags=2' },
-  ])('set route.query($query)とマージされる', async ({ query, expected }) => {
+  it.each<{ query: Params[0]['query'], value: string[], expected: string }>([
+    { query: {}, value: ['2'], expected: '?tags=2' },
+    { query: { other: 'a' }, value: ['2'], expected: '?other=a&tags=2' },
+    { query: { other: 'a', tags: '1' }, value: ['2'], expected: '?other=a&tags=2' },
+    { query: { other: 'a', tags: '1' }, value: [], expected: '?other=a' },
+  ])('set route.query($query)とマージされる', async ({ query, value, expected }) => {
     await navigateTo({ path: '/', query })
 
     const route = useRoute()
     const tags = useRouteTagsQuery(route)
 
-    tags.value = ['2']
+    tags.value = value
 
-    expect(tags.value).toEqual(['2'])
+    expect(tags.value).toEqual(value)
     expect(location.search).toBe(expected)
     expect(useRouter().options.history.location).toBe(`/${expected}`)
   })
 
-  it.each<{ search: string, expected: string }>([
-    { search: '', expected: '?tags=2' },
-    { search: '?other=a', expected: '?other=a&tags=2' },
-    { search: '?other=a&tags=1', expected: '?other=a&tags=2' },
-  ])('set location.search($search)とマージされる', async ({ search, expected }) => {
+  it.each<{ search: string, value: string[], expected: string }>([
+    { search: '', value: ['2'], expected: '?tags=2' },
+    { search: '?other=a', value: ['2'], expected: '?other=a&tags=2' },
+    { search: '?other=a&tags=1', value: ['2'], expected: '?other=a&tags=2' },
+    { search: '?other=a&tags=1', value: [], expected: '?other=a' },
+  ])('set location.search($search)とマージされる', async ({ search, value, expected }) => {
     await navigateTo('/')
     location.search = search
 
     const route = useRoute()
     const tags = useRouteTagsQuery(route)
 
-    tags.value = ['2']
+    tags.value = value
 
-    expect(tags.value).toEqual(['2'])
+    expect(tags.value).toEqual(value)
     expect(location.search).toBe(expected)
     expect(useRouter().options.history.location).toBe(`/${expected}`)
   })

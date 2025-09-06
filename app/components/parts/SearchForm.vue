@@ -3,20 +3,18 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const inputRef = useTemplateRef('inputRef')
-
 const { maxlength } = defineProps<{
   label?: string
   maxlength?: number
 }>()
 
 const emit = defineEmits<{
-  enter: []
   search: []
-  change: []
 }>()
 
-const [modelValue, modifiers] = defineModel<string, 'trim' | 'lazy'>({
+const inputRef = useTemplateRef('inputRef')
+
+const modelValue = defineModel<string>({
   default: () => '',
 })
 
@@ -24,30 +22,18 @@ const uid = useId()
 const disabled = computed(() => !modelValue.value)
 
 function onInput() {
-  const input = inputRef.value!
-
-  if (maxlength) {
-    input.value = [...input.value].slice(0, maxlength).join('')
+  const input = inputRef.value
+  if (!input || !maxlength) return
+  input.value = [...input.value].slice(0, maxlength).join('')
+  if (modelValue.value !== input.value) {
+    modelValue.value = input.value
   }
-
-  if (modifiers.lazy) return
-  modelValue.value = input.value
 }
 
-function onChange() {
-  const input = inputRef.value!
-
-  if (modifiers.trim) {
-    input.value = input.value.trim()
-  }
-
-  modelValue.value = input.value
-  emit('change')
-}
-
-function onEnter() {
-  if (disabled.value) return
-  emit('enter')
+function onFocusout() {
+  const input = inputRef.value
+  if (!input) return
+  input.value = modelValue.value
 }
 
 function onSearch() {
@@ -62,12 +48,12 @@ function onSearch() {
       <input
         :id="uid"
         ref="inputRef"
-        v-model.lazy="modelValue"
+        v-model="modelValue"
         placeholder=" "
         :class="$style.input"
         @input="onInput"
-        @change="onChange"
-        @keyup.enter="onEnter"
+        @focusout="onFocusout"
+        @keyup.enter="onSearch"
       />
       <label v-if="label" :for="uid">
         {{ label }}

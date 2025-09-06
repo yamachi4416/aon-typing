@@ -31,7 +31,7 @@ export function useRoutePageQuery(
     set(value) {
       if (!isValid(value)) return
       if (isSameValue(currentValue.value, value)) return
-      urlQuery.value = [value]
+      urlQuery.value = value === 1 ? [] : [value]
     },
   })
 }

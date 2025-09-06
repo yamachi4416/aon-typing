@@ -42,39 +42,6 @@ describe('PartsSearchForm', () => {
       expect(component.props('modelValue')).toBe(expected)
     })
 
-    it.each<{ value: string, expected: string }>([
-      { value: ' ', expected: '' },
-      { value: '  ', expected: '' },
-      { value: '1', expected: '1' },
-      { value: '1 ', expected: '1' },
-      { value: ' 1', expected: '1' },
-      { value: ' 1 ', expected: '1' },
-      { value: '  1  ', expected: '1' },
-      { value: '1 1', expected: '1 1' },
-    ])('modelModifiers.trim: value=$value expected=$expected', async ({ value, expected }) => {
-      const component = await mountComponent({ modelModifiers: { trim: true } })
-      await component.find('input').setValue(value)
-      expect(component.props('modelValue')).toBe(expected)
-    })
-
-    it('modelModifiers.lazy=false', async () => {
-      const component = await mountComponent()
-      const input = component.find('input')
-      input.element.value = '12345'
-      await input.trigger('input')
-      expect(component.props('modelValue')).toBe('12345')
-    })
-
-    it('modelModifiers.lazy=true', async () => {
-      const component = await mountComponent({ modelModifiers: { lazy: true } })
-      const input = component.find('input')
-      input.element.value = '12345'
-      await input.trigger('input')
-      expect(component.props('modelValue')).toBe('')
-      await input.trigger('change')
-      expect(component.props('modelValue')).toBe('12345')
-    })
-
     it('label=undefined', async () => {
       const component = await mountComponent()
       const label = component.find('label')
@@ -122,23 +89,6 @@ describe('PartsSearchForm', () => {
       const button = component.find('button')
       await button.trigger('click')
       expect(onSearch).toBeCalled()
-    })
-  })
-
-  describe('onEnter', () => {
-    it('disabled', async () => {
-      const onEnter = vi.fn()
-      const component = await mountComponent({ onEnter })
-      await component.find('input').trigger('keyup.enter')
-      expect(onEnter).not.toBeCalled()
-    })
-
-    it('enabled', async () => {
-      const onEnter = vi.fn()
-      const component = await mountComponent({ onEnter })
-      await component.find('input').setValue('1')
-      await component.find('input').trigger('keyup.enter')
-      expect(onEnter).toBeCalled()
     })
   })
 })

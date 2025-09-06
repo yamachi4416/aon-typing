@@ -22,11 +22,9 @@
       </h2>
       <p>タイピングの問題のタイトルをキーワードで検索します。</p>
       <PartsSearchForm
-        v-model.trim="state.kwd"
+        v-model="kwd"
         label="検索キーワード"
         :maxlength="100"
-        @change="changeKwds"
-        @enter="searchProblems"
         @search="searchProblems"
       />
       <template #left>
@@ -113,35 +111,13 @@ const {
   fetchTags,
 } = useProblems()
 
-const state = reactive({
-  kwd: '',
-})
-
-onMounted(() => {
-  state.kwd = normalizedKwd(route.query.kwd)
-})
-
-function normalizedKwd(val: string | null | (string | null)[] = '') {
-  const kwd = val ? Array.from(val).slice(0, 100).join('') : ''
-  return kwd.trim()
-}
+const kwd = useRouteKwdQuery(route)
 
 async function searchProblems() {
-  const kwd = normalizedKwd(state.kwd)
-  if (kwd !== (route.query.kwd ?? '')) {
-    navigator.replaceQuery({ kwd })
-  }
   await navigateTo({
     name: 'index-problems',
-    query: { kwd },
+    query: { kwd: kwd.value },
   })
-}
-
-function changeKwds() {
-  const kwd = normalizedKwd(state.kwd)
-  if (kwd !== (route.query.kwd ?? '')) {
-    navigator.replaceQuery({ kwd })
-  }
 }
 
 await Promise.all([fetchTopNewsProblems(), fetchTags()])

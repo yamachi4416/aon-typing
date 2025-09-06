@@ -71,41 +71,41 @@ describe('useRoutePageQuery', () => {
     expect(page.value).toBe(1)
   })
 
-  it.each<{ query: Params[0]['query'], expected: string }>([
-    { query: {}, expected: '?page=2' },
-    { query: { other: 'a' }, expected: '?other=a&page=2' },
-    { query: { other: 'a', page: '1' }, expected: '?other=a&page=2' },
-  ])('set route.query($query)とマージされる', async ({ query, expected }) => {
+  it.each<{ query: Params[0]['query'], value: number, expected: string }>([
+    { query: {}, value: 2, expected: '?page=2' },
+    { query: { other: 'a' }, value: 2, expected: '?other=a&page=2' },
+    { query: { other: 'a', page: '1' }, value: 2, expected: '?other=a&page=2' },
+    { query: { other: 'a', page: '2' }, value: 1, expected: '?other=a' },
+  ])('set route.query($query)とマージされる', async ({ query, value, expected }) => {
     await navigateTo({ path: '/', query })
 
     const route = useRoute()
     const page = useRoutePageQuery(route)
-    const next = page.value + 1
 
-    page.value = next
+    page.value = value
 
     expect(await waitForNavigateTo()).toBe(true)
-    expect(page.value).toBe(next)
+    expect(page.value).toBe(value)
     expect(location.search).toBe(expected)
     expect(useRouter().resolve(route).fullPath).toBe(`/${expected}`)
   })
 
-  it.each<{ search: string, expected: string }>([
-    { search: '', expected: '?page=2' },
-    { search: '?other=a', expected: '?other=a&page=2' },
-    { search: '?other=a&page=1', expected: '?other=a&page=2' },
-  ])('set location.search($search)とマージされる', async ({ search, expected }) => {
+  it.each<{ search: string, value: number, expected: string }>([
+    { search: '', value: 2, expected: '?page=2' },
+    { search: '?other=a', value: 2, expected: '?other=a&page=2' },
+    { search: '?other=a&page=1', value: 2, expected: '?other=a&page=2' },
+    { search: '?other=a&page=2', value: 1, expected: '?other=a' },
+  ])('set location.search($search)とマージされる', async ({ search, value, expected }) => {
     await navigateTo('/')
     location.search = search
 
     const route = useRoute()
     const page = useRoutePageQuery(route)
-    const next = page.value + 1
 
-    page.value = next
+    page.value = value
 
     expect(await waitForNavigateTo()).toBe(true)
-    expect(page.value).toBe(next)
+    expect(page.value).toBe(value)
     expect(location.search).toBe(expected)
     expect(useRouter().resolve(route).fullPath).toBe(`/${expected}`)
   })

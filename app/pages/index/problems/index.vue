@@ -1,9 +1,9 @@
 <template>
   <div>
-    <PartsSection v-if="kwds.length > 0" :class="$style['page-header']">
+    <PartsSection v-if="kwd" :class="$style['page-header']">
       <header>
         <h2>
-          <span>{{ kwds.join(' ') }}</span>
+          <span>{{ kwd }}</span>
           の検索結果
         </h2>
       </header>
@@ -46,16 +46,8 @@ const { problems, fetchProblems } = useProblems()
 const page = useRoutePageQuery(route)
 watch(page, () => navigator.scrollTop())
 
-const kwds = computed(() => {
-  const kwds = !route.query.kwd
-    ? []
-    : Array.isArray(route.query.kwd)
-      ? route.query.kwd
-      : [route.query.kwd]
-  return kwds
-    .flatMap((kwd) => kwd?.split(/[\u{20}\u{3000}]/u).filter((v) => v) ?? [])
-    .filter(Boolean)
-})
+const kwd = useRouteKwdQuery(route)
+const kwds = computed(() => kwd.value.split(' '))
 
 const kwdsProblems = computed(() => {
   if (kwds.value?.length) {
@@ -76,5 +68,7 @@ await fetchProblems()
 
 .page-header {
   @include cmps.pageHeader;
+
+  line-break: anywhere;
 }
 </style>
