@@ -1,8 +1,7 @@
 <template>
-  <div
+  <dialog
     v-if="show"
     ref="modal"
-    role="dialog"
     aria-modal="true"
     :aria-label="title"
     :aria-disabled="inert"
@@ -12,7 +11,7 @@
     <div :class="$style.contents">
       <slot :close />
     </div>
-  </div>
+  </dialog>
 </template>
 
 <script setup lang="ts">
@@ -124,7 +123,9 @@ defineExpose(exposes)
   height: 100%;
   padding: 10px;
   overflow: auto;
+  appearance: none;
   background: transparent;
+  border: none;
 }
 
 .contents {

@@ -58,7 +58,7 @@ export abstract class BaseModel<T extends Wrapper> {
 
   protected getDialog(title: string, el = this.el) {
     return this.ifExists(el)
-      ?.findAll('[role="dialog"]')
+      ?.findAll('dialog')
       .find((dialog) => dialog.attributes('aria-label') === title)
   }
 
