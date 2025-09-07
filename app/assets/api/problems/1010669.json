@@ -1,0 +1,40 @@
+{
+  "id": "1010669",
+  "title": "東葉高速鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-09-07",
+  "updatedAt": "2025-09-07",
+  "words": [
+    {
+      "info": "東葉勝田台",
+      "info2": "とうようかつただい",
+      "word": "touyoukatutadai"
+    },
+    { "info": "村上", "info2": "むらかみ", "word": "murakami" },
+    {
+      "info": "八千代中央",
+      "info2": "やちよちゅうおう",
+      "word": "yatiyotyuuou"
+    },
+    {
+      "info": "八千代緑が丘",
+      "info2": "やちよみどりがおか",
+      "word": "yatiyomidorigaoka"
+    },
+    {
+      "info": "船橋日大前",
+      "info2": "ふなばしにちだいまえ",
+      "word": "hunabasinitidaimae"
+    },
+    { "info": "北習志野", "info2": "きたならしの", "word": "kitanarasino" },
+    { "info": "飯山満", "info2": "はさま", "word": "hasama" },
+    { "info": "東海神", "info2": "ひがしかいじん", "word": "higasikaizinn" },
+    { "info": "西船橋", "info2": "にしふなばし", "word": "nisihunabasi" }
+  ],
+  "optional": { "cd": ["669"], "coCd": ["173"] }
+}

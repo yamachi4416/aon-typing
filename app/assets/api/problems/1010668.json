@@ -1,0 +1,39 @@
+{
+  "id": "1010668",
+  "title": "東京臨海高速鉄道りんかい線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-09-07",
+  "updatedAt": "2025-09-07",
+  "words": [
+    { "info": "大崎", "info2": "おおさき", "word": "oosaki" },
+    { "info": "大井町", "info2": "おおいまち", "word": "ooimati" },
+    {
+      "info": "品川シーサイド",
+      "info2": "しながわしーさいど",
+      "word": "sinagawasi-saido"
+    },
+    {
+      "info": "天王洲アイル",
+      "info2": "てんのうずあいる",
+      "word": "tennnouzuairu"
+    },
+    {
+      "info": "東京テレポート",
+      "info2": "とうきょうてれぽーと",
+      "word": "toukyouterepo-to"
+    },
+    {
+      "info": "国際展示場",
+      "info2": "こくさいてんじじょう",
+      "word": "kokusaitenzijou"
+    },
+    { "info": "東雲", "info2": "しののめ", "word": "sinonome" },
+    { "info": "新木場", "info2": "しんきば", "word": "sinkiba" }
+  ],
+  "optional": { "cd": ["668"], "coCd": ["172"] }
+}
