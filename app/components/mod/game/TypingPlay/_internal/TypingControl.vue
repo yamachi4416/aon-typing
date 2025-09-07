@@ -11,7 +11,7 @@
     xmlns="http://www.w3.org/2000/svg"
     aria-label="タイピング"
   >
-    <PartsLineGauge
+    <LineGauge
       :class="$style['line-gauge']"
       :limit="state.goalCharCount || state.totalCharCount || 0"
       :used="state.totalTypeCorrect"
@@ -21,14 +21,14 @@
         <div :class="$style['typing-display']">
           <div>
             <div :class="$style['typing-display-left']">
-              <PartsTimeCircle
+              <TimeCircle
                 v-if="state.timeLimit > 0"
                 :total-time="state.timeLimit"
                 :time="state.timeUse"
                 :text="remainingTime || 'END'"
                 @click="emit('toggle')"
               />
-              <PartsTimeClock
+              <TimeClock
                 v-else
                 :time="state.timeUse"
                 @click="emit('toggle')"
@@ -85,6 +85,7 @@
 <script setup lang="ts">
 import { getKeyLayout } from '~~/libs/Keys'
 import type { TypingGameState } from '~~/libs/TypingGameState'
+import { LineGauge, TimeCircle, TimeClock } from '.'
 
 const { state } = defineProps<{
   state: Readonly<TypingGameState>

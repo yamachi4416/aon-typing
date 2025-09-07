@@ -1,13 +1,13 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import type { ComponentProps } from 'vue-component-type-helpers'
-import PartsLineGauge from '~/components/parts/LineGauge.vue'
+import { LineGauge } from '~/components/mod/game/TypingPlay/_internal'
 
-describe('PartsLineGauge', () => {
-  type Props = ComponentProps<typeof PartsLineGauge>
+describe('LineGauge', () => {
+  type Props = ComponentProps<typeof LineGauge>
 
   const Wrapper = defineComponent<Props>({
     setup(props) {
-      return () => h(PartsLineGauge, props)
+      return () => h(LineGauge, props)
     },
   })
 

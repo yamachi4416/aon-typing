@@ -1,3 +1,6 @@
 export { default as CountDown } from './CountDown.vue'
+export { default as LineGauge } from './LineGauge.vue'
 export { default as ResultDialog } from './ResultDialog.vue'
+export { default as TimeCircle } from './TimeCircle.vue'
+export { default as TimeClock } from './TimeClock.vue'
 export { default as TypingControl } from './TypingControl.vue'
