@@ -14,6 +14,10 @@ describe('PartsPagenate', () => {
     },
   })
 
+  async function mountComponent(props?: Props) {
+    return await mountSuspended(Wrapper, { props })
+  }
+
   describe('pagenate', () => {
     it.each([
       { count: 10, pageSize: 10 },
@@ -21,12 +25,10 @@ describe('PartsPagenate', () => {
     ])(
       '表示されない (count=$count, pageSize=$pageSize)',
       async ({ count, pageSize }) => {
-        const component = await mountSuspended(Wrapper, {
-          props: {
-            modelValue: 1,
-            pageSize,
-            items: [...Array(count)].map((_, i) => i + 1),
-          },
+        const component = await mountComponent({
+          modelValue: 1,
+          pageSize,
+          items: [...Array(count)].map((_, i) => i + 1),
         })
 
         expect(component.find('select').exists()).toBe(false)
@@ -72,12 +74,10 @@ describe('PartsPagenate', () => {
     ])(
       '表示される (count=$count, pageSize=$pageSize, page=$page)',
       async ({ count, pageSize, page: modelValue, expected }) => {
-        const component = await mountSuspended(Wrapper, {
-          props: {
-            modelValue,
-            pageSize,
-            items: [...Array(count)].map((_, i) => i + 1),
-          },
+        const component = await mountComponent({
+          modelValue,
+          pageSize,
+          items: [...Array(count)].map((_, i) => i + 1),
         })
 
         const select = component.find('select')
@@ -113,9 +113,7 @@ describe('PartsPagenate', () => {
     ])(
       'items=$items, pageSize=$pageSize, page=$page',
       async ({ items, pageSize, page: modelValue, expected }) => {
-        const component = await mountSuspended(Wrapper, {
-          props: { modelValue, pageSize, items },
-        })
+        const component = await mountComponent({ modelValue, pageSize, items })
         const content = component.find('p')
         expect(content.text()).toBe(expected)
       },
@@ -124,12 +122,10 @@ describe('PartsPagenate', () => {
 
   describe('paging', () => {
     it('ページのリンクをクリック', async () => {
-      const component = await mountSuspended(Wrapper, {
-        props: {
-          modelValue: 1,
-          pageSize: 3,
-          items: [1, 2, 3, 4, 5, 6, 7],
-        },
+      const component = await mountComponent({
+        modelValue: 1,
+        pageSize: 3,
+        items: [1, 2, 3, 4, 5, 6, 7],
       })
 
       const content = component.find('p')
@@ -142,12 +138,10 @@ describe('PartsPagenate', () => {
     })
 
     it('ページのプルダウンで選択', async () => {
-      const component = await mountSuspended(Wrapper, {
-        props: {
-          modelValue: 1,
-          pageSize: 3,
-          items: [1, 2, 3, 4, 5, 6, 7],
-        },
+      const component = await mountComponent({
+        modelValue: 1,
+        pageSize: 3,
+        items: [1, 2, 3, 4, 5, 6, 7],
       })
 
       const content = component.find('p')
@@ -163,12 +157,10 @@ describe('PartsPagenate', () => {
 
   describe('リアクティブ', () => {
     it('page', async () => {
-      const component = await mountSuspended(Wrapper, {
-        props: {
-          modelValue: 2,
-          pageSize: 5,
-          items: [1, 2, 3, 4, 5, 6],
-        },
+      const component = await mountComponent({
+        modelValue: 2,
+        pageSize: 5,
+        items: [1, 2, 3, 4, 5, 6],
       })
 
       const content = component.find('p')
@@ -182,12 +174,10 @@ describe('PartsPagenate', () => {
     })
 
     it('items', async () => {
-      const component = await mountSuspended(Wrapper, {
-        props: {
-          modelValue: 2,
-          pageSize: 5,
-          items: [1, 2, 3, 4, 5, 6],
-        },
+      const component = await mountComponent({
+        modelValue: 2,
+        pageSize: 5,
+        items: [1, 2, 3, 4, 5, 6],
       })
 
       const content = component.find('p')
@@ -202,12 +192,10 @@ describe('PartsPagenate', () => {
     })
 
     it('pageSize', async () => {
-      const component = await mountSuspended(Wrapper, {
-        props: {
-          modelValue: 2,
-          pageSize: 5,
-          items: [1, 2, 3, 4, 5, 6],
-        },
+      const component = await mountComponent({
+        modelValue: 2,
+        pageSize: 5,
+        items: [1, 2, 3, 4, 5, 6],
       })
 
       const content = component.find('p')
