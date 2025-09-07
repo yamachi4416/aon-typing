@@ -82,7 +82,7 @@ export function pagenate<T>({
   page,
   pageSize,
 }: {
-  items: Readonly<ArrayLike<T>>
+  items: ReadonlyArray<T>
   page: number
   pageSize: number
 }): { items: T[], pagenate: number[], last: number } {

@@ -10,10 +10,10 @@ const navigator = useNavigator()
 const typingPlay = useTemplateRef('typingPlay')
 
 const { setting } = useGameSetting()
-const { retrieveProblemDetail, findProblemItem } = useProblems()
+const { problems, retrieveProblemDetail } = useProblems()
 
 onMounted(async () => {
-  if (!findProblemItem({ id })) {
+  if (!problems.value.some((p) => p.id === id)) {
     return await navigator.backOrGameMenu()
   }
 

@@ -29,7 +29,7 @@
 import { pagenate } from '~~/libs/Util'
 
 const { items, pageSize = 30 } = defineProps<{
-  items: T[]
+  items: ReadonlyArray<T>
   pageSize?: number
 }>()
 

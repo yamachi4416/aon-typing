@@ -1,5 +1,3 @@
-import type { ProblemListItem } from '~~/types/problems'
-
 export function useProblems() {
   const { value: problems, fetch: fetchProblems } = useFetchCache({
     path: '/api/problems.json',
@@ -40,35 +38,6 @@ export function useProblems() {
     return toValueIfFound(data.id, data)
   }
 
-  function findProblemItem({ id }: { id: string }) {
-    if (id) {
-      return problems.value.find(({ id: pid }) => pid === id)
-    }
-  }
-
-  function filterTagProblems({
-    problems,
-    tagId = '',
-    tags = [],
-  }: {
-    problems: MaybeRefOrGetter<ProblemListItem[]>
-    tagId?: MaybeRefOrGetter<string>
-    tags?: MaybeRefOrGetter<string[] | IterableIterator<string>>
-  }) {
-    return computed(() => {
-      const ids = new Set([toValue(tagId), ...toValue(tags)].filter(Boolean))
-      const items = toValue(problems)
-
-      if (ids.size === 0) {
-        return items
-      }
-
-      return items.filter(({ tags }) =>
-        ids.isSubsetOf(new Set(tags.map(({ id }) => id))),
-      )
-    })
-  }
-
   return {
     problems,
     newProblems,
@@ -80,7 +49,5 @@ export function useProblems() {
     fetchTags,
     retrieveTag,
     retrieveProblemDetail,
-    findProblemItem,
-    filterTagProblems,
   }
 }

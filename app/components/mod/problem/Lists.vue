@@ -17,7 +17,7 @@
 import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 
 defineProps<{
-  problems: ProblemListItem[]
+  problems: ReadonlyArray<ProblemListItem>
 }>()
 
 defineEmits<{

@@ -20,25 +20,21 @@
 
 <script setup lang="ts">
 const { wrapLoading } = useLoading()
-const { retrieveTag, filterTagProblems } = useProblems()
+const { retrieveTag } = useProblems()
 
 const route = useRoute('index-problems-tags-id')
 const router = useRouter()
 const navigator = useNavigator()
+
 const tag = await wrapLoading(retrieveTag({ id: route.params.id }))
 
 const page = useRoutePageQuery(route)
+watch(page, () => navigator.scrollTop())
 const tags = useRouteTagsQuery(route, {
   whiteList: tag.problems.flatMap((p) => p.tags.map(({ id }) => id)),
 })
 
-const problems = filterTagProblems({
-  problems: tag.problems,
-  tagId: tag.id,
-  tags,
-})
-
-watch(page, () => navigator.scrollTop())
+const problems = useProblemsFilter(tag.problems, { tags })
 
 useHead({
   title: `問題 タグ：${tag.name}`,
