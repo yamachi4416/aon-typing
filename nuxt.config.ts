@@ -18,22 +18,26 @@ const routes: ReadonlyArray<string> = [
   '/policy',
   '/contact',
   '/contents/keymap',
-  ...problems.map(({ id }) => `/problems/${id}`),
-  ...Object.values(tags).map(({ id }) => `/problems/tags/${id}`),
-  ...corporations.map(
-    ({ code }) => `/railway/corporations/${code.padStart(4, '0')}`,
+  ...problems.flatMap(({ id }) => [
+    `/problems/${id}`,
+    `/api/problems/${id}.json`,
+  ]),
+  ...Object.values(tags).flatMap(({ id }) => [
+    `/problems/tags/${id}`,
+    `/api/tags/${id}.json`,
+  ]),
+  ...corporations.map(({ code }) => code.padStart(4, '0')).flatMap(
+    (code) => [
+      `/railway/corporations/${code}`,
+      `/api/railway/corporations/${code}.json`,
+    ],
   ),
   '/api/problems.json',
   '/api/problems/news.json',
   '/api/problems/news/all.json',
   '/api/tags.json',
   '/api/railway/corporations.json',
-  ...problems.map(({ id }) => `/api/problems/${id}.json`),
-  ...Object.values(tags).map(({ id }) => `/api/tags/${id}.json`),
-  ...corporations.map(
-    ({ code }) => `/api/railway/corporations/${code.padStart(4, '0')}.json`,
-  ),
-]
+].toSorted((a, b) => a.localeCompare(b))
 
 export default defineNuxtConfig({
   modules: [
