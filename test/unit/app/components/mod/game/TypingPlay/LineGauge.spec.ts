@@ -11,6 +11,10 @@ describe('LineGauge', () => {
     },
   })
 
+  async function mountComponent(props?: Props) {
+    return await mountSuspended(Wrapper, { props })
+  }
+
   it.each<[props: Props, expected: `${number}`]>([
     [{ limit: 0 }, '0'],
     [{ limit: 0, used: 0 }, '0'],
@@ -26,7 +30,7 @@ describe('LineGauge', () => {
     [{ limit: 100, used: -1 }, '0'],
     [{ limit: 100, used: 10, width: 200 }, '20'],
   ])('width: props=%j expected=%s', async (props, expected) => {
-    const component = await mountSuspended(Wrapper, { props })
+    const component = await mountComponent(props)
     const rect = component.find<SVGRectElement>('rect')
     expect(rect.exists()).toBe(true)
     expect(rect.attributes('width')).toBe(expected)
@@ -37,14 +41,14 @@ describe('LineGauge', () => {
     [{ limit: 0, height: 10 }, '10'],
     [{ limit: 0, height: 20 }, '20'],
   ])('height: props=%j expected=%s', async (props, expected) => {
-    const component = await mountSuspended(Wrapper, { props })
+    const component = await mountComponent(props)
     const rect = component.find<SVGRectElement>('rect')
     expect(rect.exists()).toBe(true)
     expect(rect.attributes('height')).toBe(expected)
   })
 
   it('reactive', async () => {
-    const component = await mountSuspended(Wrapper, { props: { limit: 0 } })
+    const component = await mountComponent({ limit: 0 })
 
     const rect = component.find<SVGRectElement>('rect')
     expect(rect.exists()).toBe(true)
