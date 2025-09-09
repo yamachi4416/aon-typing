@@ -2,7 +2,6 @@
   <svg viewBox="-31 -31 62 62" width="60" xmlns="http://www.w3.org/2000/svg">
     <g :class="$style.clock" @click="$emit('click')">
       <text
-        class="time-clock-text"
         text-anchor="middle"
         dominant-baseline="central"
         x="0"
@@ -22,17 +21,17 @@ defineEmits<{
   click: []
 }>()
 
-const minute = computed(() => {
-  const t = Math.floor(time / 1000)
-  const m = Math.floor(t / 60)
-  return String(m).padStart(2, '0')
-})
+const sec = computed(
+  () => Math.trunc(Math.max(time, 0) / 1000),
+)
 
-const second = computed(() => {
-  const t = Math.floor(time / 1000)
-  const s = Math.floor(t % 60)
-  return String(s).padStart(2, '0')
-})
+const minute = computed(
+  () => String(Math.trunc(sec.value / 60)).padStart(2, '0'),
+)
+
+const second = computed(
+  () => String(Math.trunc(sec.value % 60)).padStart(2, '0'),
+)
 
 const dispTime = computed(() => `${minute.value}:${second.value}`)
 </script>
