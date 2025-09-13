@@ -10,10 +10,10 @@
           v-for="(kbd, i) in keyboard[j]"
           :key="i"
           :kbd="kbd"
-          :shift="isShift"
-          :highlight="hi(kbd)"
+          :shift="shift"
+          :highlight="highlight(kbd)"
           :transform="`translate(${66 * i + (i ? special : 0)})`"
-          @click="keydown"
+          @click="onClick"
         />
       </g>
       <g :transform="`translate(0 ${66 * 4})`">
@@ -24,9 +24,9 @@
           <KbdKey :transform="`translate(${66 * 2})`" />
           <KbdKey
             :kbd="keyboard[4]![0]"
-            :highlight="hi(keyboard[4]![0]!)"
+            :highlight="highlight(keyboard[4]![0]!)"
             :transform="`translate(${66 * 3})`"
-            @click="keydown"
+            @click="onClick"
           />
           <g :transform="`translate(${66 * 3 + 262})`">
             <KbdKey middle />
@@ -41,54 +41,22 @@
 </template>
 
 <script setup lang="ts">
-import { TypingEvent } from '~~/libs/EventManager'
 import type { Key, Keys } from '~~/libs/Keys'
-import type { TypingGameSetting } from '~~/libs/TypingGameSetting'
 import KbdKey from './JISKeyboardKey.vue'
 
-const { typeKey, setting, keys } = defineProps<{
-  typeKey?: string
-  setting: TypingGameSetting
+const { keys } = defineProps<{
   keys: Keys
+  shift: boolean
+  highlight: (key: Key) => boolean
 }>()
 
-const shiftKey = ref(false)
-const keyboard = computed(() => keys?.getKeys() ?? [])
-const isShift = computed(
-  () => shiftKey.value || (typeKey ? keys.isShiftKey(typeKey) : false),
-)
+const emit = defineEmits<{
+  click: [key: Key, start: boolean]
+}>()
 
-function hi([normal, shift]: Key) {
-  if (!typeKey) {
-    return false
-  }
+const keyboard = computed(() => keys.getKeys())
 
-  const key = isShift.value ? shift : normal
-
-  switch (key) {
-    case 'shiftR':
-      return keys.isShiftLeftKey(typeKey)
-    case 'shiftL':
-      return keys.isShiftRightKey(typeKey)
-    default:
-      return typeKey === key
-  }
-}
-
-function keydown([normal, shift]: Key, start: boolean) {
-  if (setting.autoMode) {
-    return
-  }
-
-  if (normal === 'shiftL' || normal === 'shiftR') {
-    shiftKey.value = start
-    return
-  }
-
-  if (start) {
-    window.dispatchEvent(
-      new TypingEvent({ char: shiftKey.value ? shift : normal }),
-    )
-  }
+function onClick(key: Key, start: boolean) {
+  emit('click', key, start)
 }
 </script>

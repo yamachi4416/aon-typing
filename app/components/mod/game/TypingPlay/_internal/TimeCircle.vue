@@ -5,24 +5,24 @@
     :class="$style.svg"
   >
     <g>
-      <path :class="$style.total" :d="totalPath" />
       <path :class="$style.used" :d="usedPath" />
+      <path :class="$style.remain" :d="remainPath" />
       <circle
         :class="$style.center"
+        :title
         cy="0"
         cx="0"
         r="20"
         @click="$emit('click')"
       />
       <text
-        :class="$style.number"
+        :class="$style.text"
         text-anchor="middle"
         dominant-baseline="central"
         x="0"
         y="0"
-      >
-        {{ dispText }}
-      </text>
+        v-text="dispText"
+      />
     </g>
   </svg>
 </template>
@@ -33,24 +33,29 @@ defineEmits<{
 }>()
 
 const {
-  totalTime = 60,
-  time = 0,
-  text,
+  time,
+  timeLimit,
 } = defineProps<{
-  totalTime?: number
-  time?: number
-  text?: number | string
+  time: number
+  timeLimit: number
+  title?: string
 }>()
 
-const dispText = computed(() => String(text || time))
-const totalPath = computed(() => {
-  const deg1 = (360 * time) / totalTime
-  const deg2 = 360
-  return donut({ r: 30, cr: 20, mv: 0, fx: 10 }, { deg1, deg2 })
-})
+const dispText = computed(() =>
+  timeLimit - time > 0
+    ? String(Math.trunc((timeLimit - time) / 1000 + 1))
+    : 'END',
+)
+
 const usedPath = computed(() => {
   const deg1 = 0
-  const deg2 = (360 * time) / totalTime
+  const deg2 = (360 * time) / timeLimit
+  return donut({ r: 30, cr: 20, mv: 0, fx: 10 }, { deg1, deg2 })
+})
+
+const remainPath = computed(() => {
+  const deg1 = (360 * time) / timeLimit
+  const deg2 = 360
   return donut({ r: 30, cr: 20, mv: 0, fx: 10 }, { deg1, deg2 })
 })
 
@@ -108,12 +113,12 @@ function donut(
   user-select: none;
 }
 
-.total {
-  fill: var(--color-e);
-}
-
 .used {
   fill: var(--color-p);
+}
+
+.remain {
+  fill: var(--color-e);
 }
 
 .center {
@@ -122,7 +127,7 @@ function donut(
   fill: transparent;
 }
 
-.number {
+.text {
   pointer-events: none;
   fill: var(--color-3);
 }

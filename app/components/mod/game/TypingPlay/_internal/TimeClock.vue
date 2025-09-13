@@ -1,6 +1,6 @@
 <template>
   <svg viewBox="-31 -31 62 62" width="60" xmlns="http://www.w3.org/2000/svg">
-    <g :class="$style.clock" @click="$emit('click')">
+    <g :class="$style.clock" :title @click="$emit('click')">
       <text
         text-anchor="middle"
         dominant-baseline="central"
@@ -15,6 +15,7 @@
 <script setup lang="ts">
 const { time = 0 } = defineProps<{
   time?: number
+  title?: string
 }>()
 
 defineEmits<{

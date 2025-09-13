@@ -25,7 +25,7 @@ export interface Keys {
   isShiftLeftKey(key: string): boolean
   getHandIdx(key: string): number
   getKeys(): Readonly<Key[][]>
-  getCapsLockKeys(): Keys | null
+  getCapsLockKeys(): Keys
 }
 
 function defineKeys({
@@ -87,7 +87,7 @@ function defineKeys({
         isCapsLock: true,
       })
 
-  return {
+  const keys = {
     get name() {
       return name
     },
@@ -112,43 +112,45 @@ function defineKeys({
       )
     },
     getCapsLockKeys() {
-      return capsLockKeys
+      return capsLockKeys ?? keys
     },
   }
+
+  return Object.freeze<Keys>(keys)
 }
 
-const NullKeys = defineKeys({
-  name: 'NULL',
-  normalKeys: [],
-  shiftKeys: [],
+const KeysMap = Object.freeze<Record<KeyLayoutName, Readonly<Keys> | undefined>>({
+  NULL: defineKeys({
+    name: 'NULL',
+    normalKeys: [],
+    shiftKeys: [],
+  }),
+  JIS: defineKeys({
+    name: 'JIS',
+    // prettier-ignore
+    normalKeys: [
+      ['zh', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '^', '\\', 'bs'],
+      ['\t', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '@', '[', '\n'],
+      ['cap', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', ':', ']'],
+      ['shiftL', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '\\', 'shiftR'],
+      [' '],
+    ],
+    // prettier-ignore
+    shiftKeys: [
+      ['zh', '!', '"', '#', '$', '%', '&', '\'', '(', ')', '', '=', '~', '|', 'bs'],
+      ['\t', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '`', '{', '\n'],
+      ['cap', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', '+', '*', '}'],
+      ['shiftL', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?', '_', 'shiftR'],
+      [' '],
+    ],
+  }),
+  US: undefined,
 })
 
-const JISKeys = defineKeys({
-  name: 'JIS',
-  // prettier-ignore
-  normalKeys: [
-    ['zh', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '^', '\\', 'bs'],
-    ['\t', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '@', '[', '\n'],
-    ['cap', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', ':', ']'],
-    ['shiftL', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '\\', 'shiftR'],
-    [' '],
-  ],
-  // prettier-ignore
-  shiftKeys: [
-    ['zh', '!', '"', '#', '$', '%', '&', '\'', '(', ')', '', '=', '~', '|', 'bs'],
-    ['\t', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '`', '{', '\n'],
-    ['cap', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', '+', '*', '}'],
-    ['shiftL', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?', '_', 'shiftR'],
-    [' '],
-  ],
-})
-
-export function getKeyLayout(name: KeyLayoutName) {
-  switch (name) {
-    case 'NULL':
-      return NullKeys
-    case 'JIS':
-      return JISKeys
+export function getKeyLayout(name: KeyLayoutName, capsLock?: boolean) {
+  const keys = KeysMap[name]
+  if (keys === undefined) {
+    throw new Error(`${name} keyboard is not support yet`)
   }
-  throw new Error(`${name} keyboard is not support yet`)
+  return capsLock ? keys.getCapsLockKeys() : keys
 }

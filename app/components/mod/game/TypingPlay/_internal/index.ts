@@ -1,4 +1,7 @@
 export { default as CountDown } from './CountDown.vue'
+export { default as DisplayWords } from './DisplayWords.vue'
+export { default as HandMap } from './HandMap.vue'
+export { default as Keyboard } from './Keyboard.vue'
 export { default as LineGauge } from './LineGauge.vue'
 export { default as ResultDialog } from './ResultDialog.vue'
 export { default as TimeCircle } from './TimeCircle.vue'

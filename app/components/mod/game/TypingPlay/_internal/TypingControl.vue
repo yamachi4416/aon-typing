@@ -1,82 +1,59 @@
 <template>
   <svg
-    :class="{
-      [$style.panel]: true,
-      [$style['panel-mistake']]: flashTypingMistake,
-      [$style['panel-capslock']]: keys.isCapsLock,
-    }"
+    :class="$style.panel"
     viewBox="0 0 1000 470"
     width="1000"
     height="470"
     xmlns="http://www.w3.org/2000/svg"
     aria-label="タイピング"
+    :data-mistake="flashTypingMistake"
+    :data-capslock="capsLock"
   >
     <LineGauge
       :class="$style['line-gauge']"
-      :limit="state.goalCharCount || state.totalCharCount || 0"
+      :limit="state.goalCharCount || state.totalCharCount"
       :used="state.totalTypeCorrect"
     />
     <foreignObject :class="$style.typing" width="1000" height="470">
       <div>
         <div :class="$style['typing-display']">
-          <div>
-            <div :class="$style['typing-display-left']">
-              <TimeCircle
-                v-if="state.timeLimit > 0"
-                :total-time="state.timeLimit"
-                :time="state.timeUse"
-                :text="remainingTime || 'END'"
-                @click="emit('toggle')"
-              />
-              <TimeClock
-                v-else
-                :time="state.timeUse"
-                @click="emit('toggle')"
-              />
-            </div>
-            <div :class="$style['typing-display-center']">
-              <div
-                :class="$style['typing-display-info1']"
-                :data-type="problem?.type"
-                :data-scale="infoScale"
-              >
-                <span v-text="infoState?.info" />
-              </div>
-              <ModKbdDisplayWords
-                v-if="infoState?.word"
-                width="100%"
-                :class="$style['typing-display-info2']"
-                :word="infoState"
-              />
-              <ModKbdDisplayWords
-                width="100%"
-                :class="$style['typing-display-words']"
-                :word="current?.wordState"
-              />
-            </div>
-            <div :class="$style['typing-display-right']">
-              <div :class="$style['close-circle']">
-                <PartsCloseCircle
-                  tabindex="-1"
-                  title="タイピングを中止する"
-                  @click="emit('cancel')"
-                />
-              </div>
-            </div>
+          <div :class="$style['typing-display-left']">
+            <TimeCircle
+              v-if="state.timeLimit > 0"
+              :time="state.timeUse"
+              :time-limit="state.timeLimit"
+              :title="toggleTitle"
+              @click="emit('toggle')"
+            />
+            <TimeClock
+              v-else
+              :time="state.timeUse"
+              :title="toggleTitle"
+              @click="emit('toggle')"
+            />
+          </div>
+          <DisplayWords
+            :class="$style['typing-display-center']"
+            :problem-type="state.problem?.type"
+            :info-state="state.currentWord?.infoState"
+            :word-state="state.currentWord?.wordState"
+          />
+          <div :class="$style['typing-display-right']">
+            <PartsCloseCircle
+              :class="$style['close-circle']"
+              tabindex="-1"
+              title="タイピングを中止する"
+              @click="emit('cancel')"
+            />
           </div>
         </div>
-        <div :class="$style['typing-hands']">
-          <ModKbdHandMap :hand-numbers="handNumbers.L" />
-          <ModKbdHandMap :hand-numbers="handNumbers.R" />
-        </div>
-        <div :class="$style['typing-keyboard']">
-          <ModKbdTypingKeyboard
-            v-if="keys"
-            :type-key="typeKey"
-            :setting="setting"
-            :keys="keys"
-          />
-        </div>
+        <HandMap :keys :char />
+        <Keyboard
+          :class="$style['typing-keyboard']"
+          :keys
+          :char
+          :clickable="state.setting.autoMode === 0"
+        />
       </div>
     </foreignObject>
   </svg>
@@ -85,7 +62,7 @@
 <script setup lang="ts">
 import { getKeyLayout } from '~~/libs/Keys'
 import type { TypingGameState } from '~~/libs/TypingGameState'
-import { LineGauge, TimeCircle, TimeClock } from '.'
+import { DisplayWords, HandMap, Keyboard, LineGauge, TimeCircle, TimeClock } from '.'
 
 const { state } = defineProps<{
   state: Readonly<TypingGameState>
@@ -96,43 +73,27 @@ const emit = defineEmits<{
   cancel: []
 }>()
 
-const typingState = computed(() => state.currentTypingState)
-const problem = computed(() => state.problem)
-const setting = computed(() => state.setting)
-const current = computed(() => state.currentWord)
-const infoState = computed(() => current.value?.infoState)
-const typeKey = computed(() => current.value?.wordState.current ?? '')
-
-const keys = computed(() => {
-  const isCapsLock = typingState.value.detail?.capsLock ?? false
-  const layout = getKeyLayout(setting.value.keyLayout ?? 'NULL')
-  return isCapsLock ? layout.getCapsLockKeys()! : layout
-})
-
-const remainingTime = computed(() =>
-  state.remainingTime
-    ? Math.trunc(state.remainingTime / 1000 + 1)
-    : 0,
+const char = computed(
+  () => state.currentWord?.wordState.current,
 )
 
-const handNumbers = computed(() => {
-  const handNumber = keys.value.getHandIdx(typeKey.value)
-  return {
-    L: [handNumber, keys.value.isShiftRightKey(typeKey.value) ? 1 : 0],
-    R: [handNumber - 5, keys.value.isShiftLeftKey(typeKey.value) ? 5 : 0],
-  }
-})
+const capsLock = computed(
+  () => state.currentTypingState.detail?.capsLock ?? false,
+)
+
+const keys = computed(
+  () => getKeyLayout(state.setting.keyLayout, capsLock.value),
+)
+
+const toggleTitle = computed(
+  () => state.isPausing ? 'タイピングを再開する' : 'タイピングを一時停止する',
+)
 
 const { flash: flashTypingMistake } = useFlashing({
-  watchSource: typingState,
+  watchSource: () => state.currentTypingState,
   valueGetter: (source) => source.mistake,
   defaultValue: false,
   timeout: 120,
-})
-
-const infoScale = computed(() => {
-  const chars = Array.from(infoState.value?.info ?? []).length
-  return [10, 20, 30, 40, 50, 100, 200, 300].find((c) => chars <= c) || 0
 })
 </script>
 
@@ -149,16 +110,16 @@ const infoScale = computed(() => {
   border: 2px solid var(--color-3);
   border-radius: 10px;
   box-shadow: var(--shadow-color-lg) 3px 3px 9px;
-}
 
-.panel-mistake {
-  --color-p: var(--input-error-message);
-  --keyboard-highlight: var(--input-error-message);
-}
+  &[data-mistake='true'] {
+    --color-p: var(--input-error-message);
+    --keyboard-highlight: var(--input-error-message);
+  }
 
-.panel-capslock {
-  --keyboard-capslock-stroke: var(--color-3);
-  --keyboard-capslock-fill: var(--keyboard-highlight);
+  &[data-capslock='true'] {
+    --keyboard-capslock-stroke: var(--color-3);
+    --keyboard-capslock-fill: var(--keyboard-highlight);
+  }
 }
 
 .line-gauge {
@@ -182,12 +143,9 @@ const infoScale = computed(() => {
 }
 
 .typing-display {
+  display: flex;
+  align-items: flex-start;
   width: 100%;
-
-  & > * {
-    display: flex;
-    align-items: flex-start;
-  }
 }
 
 .typing-display-left {
@@ -212,67 +170,11 @@ const infoScale = computed(() => {
   width: 60px;
 }
 
-.typing-display-info1 {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  font-size: 1em;
-  line-height: 1.2;
-  color: var(--color-6);
-  white-space: pre-wrap;
-
-  & > * {
-    white-space: pre-wrap;
-  }
-
-  &[data-type='english'] {
-    font-size: 1.2em;
-    line-height: 1.4;
-  }
-
-  $scales: 10, 20, 30, 40, 50, 100, 200, 300;
-
-  @each $scale in $scales {
-    $index: list.index($scales, $scale);
-    $diff: ($index - 1) * 0.1em;
-
-    &[data-scale='#{$scale}'] {
-      font-size: 1.5em - $diff;
-
-      &[data-type='english'] {
-        font-size: 1.6em - $diff;
-      }
-    }
-  }
-}
-
-.typing-display-info2 {
-  font-size: 1.1em;
-  letter-spacing: 0.1em;
-}
-
-.typing-display-words {
-  font-size: 1.5em;
-  letter-spacing: 0.15em;
-}
-
 .close-circle {
   width: 35px;
   height: 35px;
   margin-top: -5px;
   margin-right: -5px;
-}
-
-.typing-hands {
-  display: flex;
-  gap: 20px;
-  width: 90%;
-  height: 15px;
-
-  & > * {
-    width: 100%;
-  }
 }
 
 .typing-keyboard {

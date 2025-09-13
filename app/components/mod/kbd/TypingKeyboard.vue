@@ -1,27 +1,64 @@
 <template>
   <component
-    :is="keyboard"
+    :is="Keyboard"
     :class="$style.keyboard"
-    :type-key="typeKey"
-    :setting="setting"
-    :keys="keys"
+    :keys
+    :shift="isShift"
+    :highlight
+    @click="onClick"
   />
 </template>
 
 <script setup lang="ts">
 import JISKeyboard from '~/components/mod/kbd/JISKeyboard.vue'
-import type { Keys } from '~~/libs/Keys'
-import type { TypingGameSetting } from '~~/libs/TypingGameSetting'
+import type { Key, Keys } from '~~/libs/Keys'
 
-const { keys } = defineProps<{
-  typeKey?: string
-  setting: TypingGameSetting
+const { keys, char } = defineProps<{
   keys: Keys
+  char: string
 }>()
 
-const keyboard = computed(() =>
+const emit = defineEmits<{
+  click: [char: string]
+}>()
+
+const Keyboard = computed(() =>
   keys.name === 'JIS' ? JISKeyboard : undefined,
 )
+
+const shiftKey = ref(false)
+
+const isShift = computed(
+  () => shiftKey.value || (char ? keys.isShiftKey(char) : false),
+)
+
+function highlight([normal, shift]: Key) {
+  if (!char) {
+    return false
+  }
+
+  const key = isShift.value ? shift : normal
+
+  switch (key) {
+    case 'shiftR':
+      return keys.isShiftLeftKey(char)
+    case 'shiftL':
+      return keys.isShiftRightKey(char)
+    default:
+      return char === key
+  }
+}
+
+function onClick([normal, shift]: Key, start: boolean) {
+  if (normal === 'shiftL' || normal === 'shiftR') {
+    shiftKey.value = start
+    return
+  }
+
+  if (!start) return
+
+  emit('click', shiftKey.value ? shift : normal)
+}
 </script>
 
 <style lang="scss" module>
