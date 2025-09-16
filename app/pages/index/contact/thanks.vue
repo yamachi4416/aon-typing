@@ -1,5 +1,5 @@
 <template>
-  <PartsSection v-show="isPosted" aria-labelledby="thanks-title">
+  <PartsSection aria-labelledby="thanks-title">
     <h2 id="thanks-title">
       お問い合わせありがとうございます
     </h2>
@@ -17,13 +17,13 @@ useHead({
   meta: [{ name: 'robots', content: 'noindex' }],
 })
 
-const site = useSiteConfig()
-
-const { isPosted } = useContactPosted()
-
-onBeforeMount(() => {
-  if (!isPosted.value) {
-    navigateTo({ name: 'index', replace: true })
-  }
+definePageMeta({
+  middleware(_, from) {
+    if (from.name !== 'index-contact') {
+      return navigateTo({ name: 'index-contact', replace: true })
+    }
+  },
 })
+
+const site = useSiteConfig()
 </script>
