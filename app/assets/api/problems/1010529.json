@@ -1,0 +1,39 @@
+{
+  "id": "1010529",
+  "title": "大井川鐵道大井川本線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-09-21",
+  "updatedAt": "2025-09-21",
+  "words": [
+    { "info": "千頭", "info2": "せんず", "word": "senzu" },
+    { "info": "崎平", "info2": "さきだいら", "word": "sakidaira" },
+    { "info": "青部", "info2": "あおべ", "word": "aobe" },
+    { "info": "駿河徳山", "info2": "するがとくやま", "word": "surugatokuyama" },
+    { "info": "田野口", "info2": "たのくち", "word": "tanokuti" },
+    { "info": "下泉", "info2": "しもいずみ", "word": "simoizumi" },
+    { "info": "塩郷", "info2": "しおごう", "word": "siogou" },
+    { "info": "地名", "info2": "じな", "word": "zina" },
+    {
+      "info": "川根温泉笹間渡",
+      "info2": "かわねおんせんささまど",
+      "word": "kawaneonsensasamado"
+    },
+    { "info": "抜里", "info2": "ぬくり", "word": "nukuri" },
+    { "info": "家山", "info2": "いえやま", "word": "ieyama" },
+    { "info": "大和田", "info2": "おわだ", "word": "owada" },
+    { "info": "福用", "info2": "ふくよう", "word": "hukuyou" },
+    { "info": "神尾", "info2": "かみお", "word": "kamio" },
+    { "info": "門出", "info2": "かどで", "word": "kadode" },
+    { "info": "合格", "info2": "ごうかく", "word": "goukaku" },
+    { "info": "日切", "info2": "ひぎり", "word": "higiri" },
+    { "info": "代官町", "info2": "だいかんちょう", "word": "daikantyou" },
+    { "info": "新金谷", "info2": "しんかなや", "word": "sinkanaya" },
+    { "info": "金谷", "info2": "かなや", "word": "kanaya" }
+  ],
+  "optional": { "cd": ["529"], "coCd": ["95"] }
+}

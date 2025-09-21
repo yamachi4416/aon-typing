@@ -1,0 +1,28 @@
+{
+  "id": "1010546",
+  "title": "三岐鉄道北勢線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-09-21",
+  "updatedAt": "2025-09-21",
+  "words": [
+    { "info": "阿下喜", "info2": "あげき", "word": "ageki" },
+    { "info": "麻生田", "info2": "おうだ", "word": "ouda" },
+    { "info": "楚原", "info2": "そはら", "word": "sohara" },
+    { "info": "大泉", "info2": "おおいずみ", "word": "ooizumi" },
+    { "info": "東員", "info2": "とういん", "word": "touinn" },
+    { "info": "穴太", "info2": "あのう", "word": "anou" },
+    { "info": "七和", "info2": "ななわ", "word": "nanawa" },
+    { "info": "星川", "info2": "ほしかわ", "word": "hosikawa" },
+    { "info": "在良", "info2": "ありよし", "word": "ariyosi" },
+    { "info": "蓮花寺", "info2": "れんげじ", "word": "rengezi" },
+    { "info": "西別所", "info2": "にしべっしょ", "word": "nisibessyo" },
+    { "info": "馬道", "info2": "うまみち", "word": "umamiti" },
+    { "info": "西桑名", "info2": "にしくわな", "word": "nisikuwana" }
+  ],
+  "optional": { "cd": ["546"], "coCd": ["103"] }
+}
