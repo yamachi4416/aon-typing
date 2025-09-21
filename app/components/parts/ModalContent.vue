@@ -115,12 +115,10 @@ defineExpose({
       }
 
       @include vars.media_ml {
+        grid-template-columns: 42px 1fr 42px;
+
         &::before {
           content: '';
-        }
-
-        & {
-          grid-template-columns: 42px 1fr 42px;
         }
       }
     }
