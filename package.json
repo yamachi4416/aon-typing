@@ -14,7 +14,7 @@
     "dev": "nuxt dev",
     "preview": "nuxt preview",
     "generate": "nuxt generate",
-    "lint": "pnpm run '/lint:.*/'",
+    "lint": "pnpm run /lint:.*/",
     "lint:typecheck": "nuxt typecheck",
     "lint:scripts": "eslint .",
     "lint:styles": "stylelint app/**/*.{scss,vue}",
