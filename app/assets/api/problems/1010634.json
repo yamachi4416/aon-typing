@@ -1,0 +1,48 @@
+{
+  "id": "1010634",
+  "title": "筑豊電気鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-09-30",
+  "updatedAt": "2025-09-30",
+  "words": [
+    {
+      "info": "筑豊直方",
+      "info2": "ちくほうのおがた",
+      "word": "tikuhounoogata"
+    },
+    { "info": "感田", "info2": "がんだ", "word": "ganda" },
+    { "info": "遠賀野", "info2": "おんがの", "word": "ongano" },
+    { "info": "木屋瀬", "info2": "こやのせ", "word": "koyanose" },
+    { "info": "新木屋瀬", "info2": "しんこやのせ", "word": "sinkoyanose" },
+    { "info": "楠橋", "info2": "くすばし", "word": "kusubasi" },
+    { "info": "筑豊香月", "info2": "ちくほうかつき", "word": "tikuhoukatuki" },
+    {
+      "info": "希望が丘高校前",
+      "info2": "きぼうがおかこうこうまえ",
+      "word": "kibougaokakoukoumae"
+    },
+    { "info": "筑豊中間", "info2": "ちくほうなかま", "word": "tikuhounakama" },
+    { "info": "東中間", "info2": "ひがしなかま", "word": "higasinakama" },
+    { "info": "通谷", "info2": "とおりたに", "word": "tooritani" },
+    { "info": "西山", "info2": "にしやま", "word": "nisiyama" },
+    { "info": "三ケ森", "info2": "さんがもり", "word": "sangamori" },
+    { "info": "永犬丸", "info2": "えいのまる", "word": "einomaru" },
+    { "info": "今池", "info2": "いまいけ", "word": "imaike" },
+    { "info": "森下", "info2": "もりした", "word": "morisita" },
+    { "info": "穴生", "info2": "あのお", "word": "anoo" },
+    { "info": "萩原", "info2": "はぎわら", "word": "hagiwara" },
+    { "info": "熊西", "info2": "くまにし", "word": "kumanisi" },
+    { "info": "西黒崎", "info2": "にしくろさき", "word": "nisikurosaki" },
+    {
+      "info": "黒崎駅前",
+      "info2": "くろさきえきまえ",
+      "word": "kurosakiekimae"
+    }
+  ],
+  "optional": { "cd": ["634"], "coCd": ["139"] }
+}

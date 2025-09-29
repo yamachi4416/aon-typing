@@ -1,0 +1,29 @@
+{
+  "id": "1010604",
+  "title": "水島臨海鉄道の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-09-30",
+  "updatedAt": "2025-09-30",
+  "words": [
+    {
+      "info": "三菱自工前",
+      "info2": "みつびしじこうまえ",
+      "word": "mitubisizikoumae"
+    },
+    { "info": "水島", "info2": "みずしま", "word": "mizusima" },
+    { "info": "常盤", "info2": "ときわ", "word": "tokiwa" },
+    { "info": "栄", "info2": "さかえ", "word": "sakae" },
+    { "info": "弥生", "info2": "やよい", "word": "yayoi" },
+    { "info": "浦田", "info2": "うらだ", "word": "urada" },
+    { "info": "福井", "info2": "ふくい", "word": "hukui" },
+    { "info": "西富井", "info2": "にしとみい", "word": "nisitomii" },
+    { "info": "球場前", "info2": "きゅうじょうまえ", "word": "kyuujoumae" },
+    { "info": "倉敷市", "info2": "くらしきし", "word": "kurasikisi" }
+  ],
+  "optional": { "cd": ["604"], "coCd": ["132"] }
+}
