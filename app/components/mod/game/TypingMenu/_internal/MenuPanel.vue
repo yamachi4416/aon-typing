@@ -8,74 +8,26 @@
   >
     <table>
       <tbody>
-        <tr>
-          <th>制限時間</th>
-          <td role="radiogroup">
-            <label
-              v-for="[value, label] in options.timeLimit"
-              :key="value"
-              :title="`制限時間を「${label}」に設定する`"
-            >
-              <input
-                v-model="setting.timeLimit"
-                type="radio"
-                :value
-              />
-              {{ label }}
-            </label>
-          </td>
-        </tr>
-        <tr>
-          <th>目標タイプ数</th>
-          <td role="radiogroup">
-            <label
-              v-for="[value, label] in options.goalCharCount"
-              :key="value"
-              :title="`目標タイプ数を「${label}」に設定する`"
-            >
-              <input
-                v-model="setting.goalCharCount"
-                type="radio"
-                :value
-              />
-              {{ label }}
-            </label>
-          </td>
-        </tr>
-        <tr>
-          <th>自動モード</th>
-          <td role="radiogroup">
-            <label
-              v-for="[value, label] in options.autoMode"
-              :key="value"
-              :title="`自動モードを「${label}」に設定する`"
-            >
-              <input
-                v-model="setting.autoMode"
-                type="radio"
-                :value
-              />
-              {{ label }}
-            </label>
-          </td>
-        </tr>
-        <tr>
-          <th>出題する順番</th>
-          <td role="radiogroup">
-            <label
-              v-for="[value, label] in options.problemOrder"
-              :key="value"
-              :title="`出題する順番を「${label}」に設定する`"
-            >
-              <input
-                v-model="setting.problemOrder"
-                type="radio"
-                :value
-              />
-              {{ label }}
-            </label>
-          </td>
-        </tr>
+        <MenuRadioGroup
+          v-model="setting.timeLimit"
+          label="制限時間"
+          :items="options.timeLimit"
+        />
+        <MenuRadioGroup
+          v-model="setting.goalCharCount"
+          label="目標タイプ数"
+          :items="options.goalCharCount"
+        />
+        <MenuRadioGroup
+          v-model="setting.autoMode"
+          label="自動モード"
+          :items="options.autoMode"
+        />
+        <MenuRadioGroup
+          v-model="setting.problemOrder"
+          label="出題する順番"
+          :items="options.problemOrder"
+        />
         <tr>
           <th>問題</th>
           <td>
@@ -141,6 +93,7 @@
 import { helpAnimals } from '~~/libs/TypingGameInfo'
 import type { TypingGameSetting } from '~~/libs/TypingGameSetting'
 import type { ProblemListItem } from '~~/types/problems'
+import { MenuRadioGroup } from '.'
 
 const emit = defineEmits<{
   start: []
