@@ -3,6 +3,7 @@ import { defu } from 'defu'
 import type { ComponentProps } from 'vue-component-type-helpers'
 import { ResultDialog } from '~/components/mod/game/TypingPlay/_internal'
 import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
+import { toTablesArray } from '~~/test/unit/app/_utils'
 
 describe('ResultDialog', () => {
   type Props = ComponentProps<typeof ResultDialog>
@@ -37,23 +38,6 @@ describe('ResultDialog', () => {
 
   async function closeDialog(component: Component) {
     return await component.vm.close()
-  }
-
-  function toTablesArray(component: Component) {
-    type N<V> = V | N<V>[]
-
-    const mapValues = (c: Element): N<string> => c.children.length
-      ? Array.from(c.children).map(mapValues)
-      : c.textContent
-
-    const toTableArray = (table?: HTMLTableElement) => table
-      ? Array.from(table.getElementsByTagName('tr')).map(mapValues)
-      : undefined
-
-    return component.findAll('table')
-      .filter((table) => table.exists())
-      .map((table) => toTableArray(table.element))
-      .flat()
   }
 
   it('openを実行する前はダイアログは表示されない', async () => {

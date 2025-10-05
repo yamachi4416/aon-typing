@@ -49,7 +49,7 @@ export interface ProblemDetail {
   links?: ReadonlyArray<ProblemDetailLink>
   optional?: {
     cd?: ReadonlyArray<string>
-    coCd: ReadonlyArray<string>
+    coCd?: ReadonlyArray<string>
   }
 }
 

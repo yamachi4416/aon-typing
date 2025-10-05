@@ -3,7 +3,8 @@ import {
   registerEndpoint as _registerEndpoint,
   mountSuspended,
 } from '@nuxt/test-utils/runtime'
-import { flushPromises } from '@vue/test-utils'
+import type { BaseWrapper } from '@vue/test-utils'
+import { DOMWrapper, flushPromises } from '@vue/test-utils'
 import type { NitroFetchRequest } from 'nitropack'
 import type { Mock } from 'vitest'
 import App from '~/app.vue'
@@ -121,4 +122,26 @@ export function mockNavigateTo(navigateToMock: Mock<typeof navigateTo>) {
     setupNavigateToMock,
     waitForNavigateTo,
   }
+}
+
+export function toTablesArray(component: BaseWrapper<Node>) {
+  type N<V> = V | N<V>[]
+
+  const mapValues = (c: Element): N<string> => c.children.length
+    ? Array.from(c.children).map(mapValues)
+    : c.textContent
+
+  const toTableArray = (table?: HTMLTableElement) => table
+    ? Array.from(table.getElementsByTagName('tr')).map(mapValues)
+    : undefined
+
+  return component.findAll('table')
+    .filter((table) => table.exists())
+    .map((table) => toTableArray(table.element))
+    .flat()
+}
+
+export function findTableValueCell(component: BaseWrapper<Node>, label: string) {
+  const th = component.findAll('th').find((x) => x.text() === label)
+  return new DOMWrapper(th?.element.nextElementSibling)
 }

@@ -35,6 +35,7 @@
 
 <script setup lang="ts">
 import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
+import { ModProblemTags } from '.'
 
 defineProps<{
   item: ProblemListItem

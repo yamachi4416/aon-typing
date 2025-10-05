@@ -12,7 +12,7 @@
       </header>
       <table>
         <tbody>
-          <tr>
+          <tr v-if="detail.tags.length">
             <th>タグ</th>
             <td>
               <ModProblemTags
@@ -81,6 +81,7 @@
 
 <script setup lang="ts">
 import type { ProblemDetail, ProblemItemTag } from '~~/types/problems'
+import { ModProblemTags } from './_internal'
 
 const { detail } = defineProps<{
   detail: ProblemDetail

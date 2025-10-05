@@ -24,6 +24,7 @@
 
 <script setup lang="ts">
 import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
+import { ModProblemListItem } from './_internal'
 
 defineProps<{
   problems: ProblemListItem[]
