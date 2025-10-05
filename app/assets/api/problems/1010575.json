@@ -1,0 +1,22 @@
+{
+  "id": "1010575",
+  "title": "神戸高速線(西代－元町)の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-10-05",
+  "updatedAt": "2025-10-05",
+  "words": [
+    { "info": "元町", "info2": "もとまち", "word": "motomati" },
+    { "info": "西元町", "info2": "にしもとまち", "word": "nisimotomati" },
+    { "info": "高速神戸", "info2": "こうそくこうべ", "word": "kousokukoube" },
+    { "info": "新開地", "info2": "しんかいち", "word": "sinkaiti" },
+    { "info": "大開", "info2": "だいかい", "word": "daikai" },
+    { "info": "高速長田", "info2": "こうそくながた", "word": "kousokunagata" },
+    { "info": "西代", "info2": "にしだい", "word": "nisidai" }
+  ],
+  "optional": { "cd": ["575"], "coCd": ["118"] }
+}
