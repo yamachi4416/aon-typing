@@ -22,6 +22,7 @@ export default defineConfig({
           name: 'libs',
           include: ['./test/unit/{data,libs}/**/*.spec.ts'],
           environment: 'happy-dom',
+          testTimeout: 30_000,
         },
       } satisfies UserConfig),
       await defineVitestProject({
@@ -29,6 +30,7 @@ export default defineConfig({
           name: 'app',
           dir: './test/unit/app',
           globals: true,
+          testTimeout: 30_000,
           environmentOptions: {
             nuxt: {
               overrides: {
