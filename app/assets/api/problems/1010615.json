@@ -1,0 +1,50 @@
+{
+  "id": "1010615",
+  "title": "高松琴平電気鉄道琴平線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-10-18",
+  "updatedAt": "2025-10-18",
+  "words": [
+    {
+      "info": "琴電琴平",
+      "info2": "ことでんことひら",
+      "word": "kotodenkotohira"
+    },
+    { "info": "榎井", "info2": "えない", "word": "enai" },
+    { "info": "羽間", "info2": "はざま", "word": "hazama" },
+    { "info": "岡田", "info2": "おかだ", "word": "okada" },
+    { "info": "栗熊", "info2": "くりくま", "word": "kurikuma" },
+    { "info": "羽床", "info2": "はゆか", "word": "hayuka" },
+    { "info": "滝宮", "info2": "たきのみや", "word": "takinomiya" },
+    { "info": "綾川", "info2": "あやがわ", "word": "ayagawa" },
+    { "info": "陶", "info2": "すえ", "word": "sue" },
+    { "info": "畑田", "info2": "はただ", "word": "hatada" },
+    { "info": "挿頭丘", "info2": "かざしがおか", "word": "kazasigaoka" },
+    { "info": "岡本", "info2": "おかもと", "word": "okamoto" },
+    { "info": "円座", "info2": "えんざ", "word": "enza" },
+    { "info": "一宮", "info2": "いちのみや", "word": "itinomiya" },
+    { "info": "空港通り", "info2": "くうこうどおり", "word": "kuukoudoori" },
+    { "info": "仏生山", "info2": "ぶっしょうざん", "word": "bussyouzann" },
+    { "info": "太田", "info2": "おおた", "word": "oota" },
+    { "info": "伏石", "info2": "ふせいし", "word": "huseisi" },
+    { "info": "三条", "info2": "さんじょう", "word": "sanjou" },
+    {
+      "info": "栗林公園",
+      "info2": "りつりんこうえん",
+      "word": "riturinkouenn"
+    },
+    { "info": "瓦町", "info2": "かわらまち", "word": "kawaramati" },
+    { "info": "片原町", "info2": "かたはらまち", "word": "kataharamati" },
+    {
+      "info": "高松築港",
+      "info2": "たかまつちっこう",
+      "word": "takamatutikkou"
+    }
+  ],
+  "optional": { "cd": ["615"], "coCd": ["135"] }
+}

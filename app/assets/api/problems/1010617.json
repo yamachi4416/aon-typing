@@ -1,0 +1,35 @@
+{
+  "id": "1010617",
+  "title": "高松琴平電気鉄道志度線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-10-18",
+  "updatedAt": "2025-10-18",
+  "words": [
+    { "info": "琴電志度", "info2": "ことでんしど", "word": "kotodensido" },
+    { "info": "原", "info2": "はら", "word": "hara" },
+    { "info": "房前", "info2": "ふさざき", "word": "husazaki" },
+    { "info": "塩屋", "info2": "しおや", "word": "sioya" },
+    { "info": "八栗新道", "info2": "やくりしんみち", "word": "yakurisinmiti" },
+    { "info": "大町", "info2": "おおまち", "word": "oomati" },
+    { "info": "六万寺", "info2": "ろくまんじ", "word": "rokumanzi" },
+    { "info": "八栗", "info2": "やくり", "word": "yakuri" },
+    { "info": "古高松", "info2": "ふるたかまつ", "word": "hurutakamatu" },
+    { "info": "琴電屋島", "info2": "ことでんやしま", "word": "kotodennyasima" },
+    { "info": "潟元", "info2": "かたもと", "word": "katamoto" },
+    { "info": "春日川", "info2": "かすががわ", "word": "kasugagawa" },
+    { "info": "沖松島", "info2": "おきまつしま", "word": "okimatusima" },
+    {
+      "info": "松島二丁目",
+      "info2": "まつしまにちょうめ",
+      "word": "matusimanityoume"
+    },
+    { "info": "今橋", "info2": "いまばし", "word": "imabasi" },
+    { "info": "瓦町", "info2": "かわらまち", "word": "kawaramati" }
+  ],
+  "optional": { "cd": ["617"], "coCd": ["135"] }
+}

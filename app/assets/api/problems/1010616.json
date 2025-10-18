@@ -1,0 +1,31 @@
+{
+  "id": "1010616",
+  "title": "高松琴平電気鉄道長尾線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-10-18",
+  "updatedAt": "2025-10-18",
+  "words": [
+    { "info": "長尾", "info2": "ながお", "word": "nagao" },
+    { "info": "公文明", "info2": "くもんみょう", "word": "kumonmyou" },
+    { "info": "井戸", "info2": "いど", "word": "ido" },
+    { "info": "白山", "info2": "しらやま", "word": "sirayama" },
+    { "info": "学園通り", "info2": "がくえんどおり", "word": "gakuendoori" },
+    { "info": "平木", "info2": "ひらぎ", "word": "hiragi" },
+    { "info": "農学部前", "info2": "のうがくぶまえ", "word": "nougakubumae" },
+    { "info": "池戸", "info2": "いけのべ", "word": "ikenobe" },
+    { "info": "高田", "info2": "たかた", "word": "takata" },
+    { "info": "西前田", "info2": "にしまえだ", "word": "nisimaeda" },
+    { "info": "水田", "info2": "みずた", "word": "mizuta" },
+    { "info": "元山", "info2": "もとやま", "word": "motoyama" },
+    { "info": "木太東口", "info2": "きたひがしぐち", "word": "kitahigasiguti" },
+    { "info": "林道", "info2": "はやしみち", "word": "hayasimiti" },
+    { "info": "花園", "info2": "はなぞの", "word": "hanazono" },
+    { "info": "瓦町", "info2": "かわらまち", "word": "kawaramati" }
+  ],
+  "optional": { "cd": ["616"], "coCd": ["135"] }
+}
