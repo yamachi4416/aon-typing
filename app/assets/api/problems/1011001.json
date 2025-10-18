@@ -9,7 +9,7 @@
     { "id": "00013", "name": "歴史" }
   ],
   "createdAt": "2021-05-31",
-  "updatedAt": "2021-05-31",
+  "updatedAt": "2025-10-18",
   "words": [
     {
       "info": "（第1代）伊藤 博文",
@@ -397,9 +397,14 @@
       "word": "suga yosihide"
     },
     {
-      "info": "（第100代）岸田 文雄",
+      "info": "（第100~101代）岸田 文雄",
       "info2": "きしだ ふみお",
       "word": "kisida humio"
+    },
+    {
+      "info": "（第102~103代）石破 茂",
+      "info2": "いしば しげる",
+      "word": "isiba sigeru"
     }
   ]
 }
