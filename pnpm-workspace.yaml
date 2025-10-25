@@ -3,3 +3,5 @@ ignoredBuiltDependencies:
   - core-js
   - esbuild
   - unrs-resolver
+shellEmulator: true
+shamefullyHoist: true
