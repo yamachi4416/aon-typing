@@ -1,0 +1,30 @@
+{
+  "id": "1010770",
+  "title": "伊予鉄道松山市駅線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-10-28",
+  "updatedAt": "2025-10-28",
+  "words": [
+    { "info": "道後温泉", "info2": "どうごおんせん", "word": "dougoonsenn" },
+    { "info": "道後公園", "info2": "どうごこうえん", "word": "dougokouenn" },
+    { "info": "南町", "info2": "みなみまち", "word": "minamimati" },
+    { "info": "上一万", "info2": "かみいちまん", "word": "kamiitimann" },
+    {
+      "info": "警察署前",
+      "info2": "けいさつしょまえ",
+      "word": "keisatusyomae"
+    },
+    { "info": "勝山町", "info2": "かつやまちょう", "word": "katuyamatyou" },
+    { "info": "大街道", "info2": "おおかいどう", "word": "ookaidou" },
+    { "info": "県庁前", "info2": "けんちょうまえ", "word": "kentyoumae" },
+    { "info": "市役所前", "info2": "しやくしょまえ", "word": "siyakusyomae" },
+    { "info": "南堀端", "info2": "みなみほりばた", "word": "minamihoribata" },
+    { "info": "松山市駅", "info2": "まつやましえき", "word": "matuyamasieki" }
+  ],
+  "optional": { "cd": ["770"], "coCd": ["136"] }
+}
