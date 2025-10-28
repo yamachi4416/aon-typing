@@ -3,11 +3,11 @@ import { countDown } from '~~/libs/Util'
 
 describe('countDown', () => {
   beforeEach(() => {
-    vi.resetAllMocks()
     vi.useFakeTimers()
   })
 
   afterEach(() => {
+    vi.restoreAllMocks()
     vi.useRealTimers()
   })
 

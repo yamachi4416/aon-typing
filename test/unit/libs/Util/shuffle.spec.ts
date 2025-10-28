@@ -1,10 +1,6 @@
 import { shuffle } from '~~/libs/Util'
 
 describe('shuffle', () => {
-  beforeEach(() => {
-    vi.resetAllMocks()
-  })
-
   afterEach(() => {
     vi.restoreAllMocks()
   })

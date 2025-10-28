@@ -2,11 +2,11 @@ import { TimerManager } from '~~/libs/TimerManager'
 
 describe('TimerManager', () => {
   beforeEach(() => {
-    vi.resetAllMocks()
     vi.useFakeTimers()
   })
 
   afterEach(() => {
+    vi.restoreAllMocks()
     vi.useRealTimers()
   })
 

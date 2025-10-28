@@ -16,10 +16,6 @@ describe('TypingGameInfo', () => {
 
   const toInfo = (state: State = {}) => create(toState(state))
 
-  beforeEach(() => {
-    vi.resetAllMocks()
-  })
-
   afterEach(() => {
     vi.restoreAllMocks()
   })

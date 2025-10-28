@@ -34,7 +34,6 @@ describe('TypingGame', () => {
   }
 
   beforeEach(() => {
-    vi.resetAllMocks()
     vi.useFakeTimers()
   })
 

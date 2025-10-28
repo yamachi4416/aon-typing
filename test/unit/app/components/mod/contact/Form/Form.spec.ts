@@ -14,8 +14,8 @@ registerEndpoint('/api/contact', {
 })
 
 describe('ModContactForm', () => {
-  beforeEach(() => {
-    vi.resetAllMocks()
+  afterEach(() => {
+    vi.restoreAllMocks()
   })
 
   type Props = ComponentProps<typeof Form>

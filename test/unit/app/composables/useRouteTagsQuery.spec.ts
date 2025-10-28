@@ -1,8 +1,8 @@
 describe('useRouteTagsQuery', () => {
   type Params = Parameters<typeof useRouteTagsQuery>
 
-  beforeEach(() => {
-    vi.resetAllMocks()
+  afterEach(() => {
+    vi.restoreAllMocks()
   })
 
   it.each<{ query: Params[0]['query'], expected: string[] }>([

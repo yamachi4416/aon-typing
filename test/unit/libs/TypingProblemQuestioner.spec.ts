@@ -14,9 +14,6 @@ describe('TypingProblemQuestioner', () => {
       },
       { problemOrder: 'first', ...setting },
     )
-  beforeEach(() => {
-    vi.resetAllMocks()
-  })
 
   afterEach(() => {
     vi.restoreAllMocks()

@@ -11,8 +11,8 @@ registerEndpoint('/api/contact', {
 })
 
 describe('useContact', () => {
-  beforeEach(() => {
-    vi.resetAllMocks()
+  afterEach(() => {
+    vi.restoreAllMocks()
   })
 
   describe('errors', () => {

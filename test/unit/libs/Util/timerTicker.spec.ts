@@ -3,11 +3,11 @@ import { timerTicker } from '~~/libs/Util'
 
 describe('timerTicker', () => {
   beforeEach(() => {
-    vi.resetAllMocks()
     vi.useFakeTimers()
   })
 
   afterEach(() => {
+    vi.restoreAllMocks()
     vi.useRealTimers()
   })
 

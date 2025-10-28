@@ -27,10 +27,6 @@ describe('TypingGameState', () => {
     state.currentTypingState = { detail: {}, mistake: true }
   }
 
-  beforeEach(() => {
-    vi.resetAllMocks()
-  })
-
   afterEach(() => {
     vi.restoreAllMocks()
   })

@@ -26,9 +26,9 @@ describe('TypingControl', () => {
     return reactive(TypingGameState.create(setting))
   }
 
-  beforeEach(() => {
+  afterEach(() => {
     vi.useRealTimers()
-    vi.resetAllMocks()
+    vi.restoreAllMocks()
   })
 
   describe('data-capslock', () => {

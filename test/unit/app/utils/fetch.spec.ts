@@ -4,8 +4,8 @@ import { endpointRegister } from '../_utils'
 describe('fetchWithCache', () => {
   const { registerEndpoint, unregisterEndpoints } = endpointRegister()
 
-  beforeEach(() => {
-    vi.resetAllMocks()
+  afterEach(() => {
+    vi.restoreAllMocks()
     unregisterEndpoints()
     clearNuxtState()
   })
