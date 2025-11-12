@@ -1,0 +1,26 @@
+{
+  "id": "1010643",
+  "title": "甘木鉄道甘木線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-11-12",
+  "updatedAt": "2025-11-12",
+  "words": [
+    { "info": "甘木", "info2": "あまぎ", "word": "amagi" },
+    { "info": "高田", "info2": "たかた", "word": "takata" },
+    { "info": "太刀洗", "info2": "たちあらい", "word": "tatiarai" },
+    { "info": "山隈", "info2": "やまぐま", "word": "yamaguma" },
+    { "info": "西太刀洗", "info2": "にしたちあらい", "word": "nisitatiarai" },
+    { "info": "今隈", "info2": "いまぐま", "word": "imaguma" },
+    { "info": "松崎", "info2": "まつざき", "word": "matuzaki" },
+    { "info": "大板井", "info2": "おおいたい", "word": "ooitai" },
+    { "info": "小郡", "info2": "おごおり", "word": "ogoori" },
+    { "info": "立野", "info2": "たての", "word": "tateno" },
+    { "info": "基山", "info2": "きやま", "word": "kiyama" }
+  ],
+  "optional": { "cd": ["643"], "coCd": ["143"] }
+}

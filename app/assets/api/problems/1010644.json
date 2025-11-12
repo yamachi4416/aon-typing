@@ -1,0 +1,96 @@
+{
+  "id": "1010644",
+  "title": "松浦鉄道西九州線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-11-12",
+  "updatedAt": "2025-11-12",
+  "words": [
+    { "info": "佐世保", "info2": "させぼ", "word": "sasebo" },
+    {
+      "info": "佐世保中央",
+      "info2": "させぼちゅうおう",
+      "word": "sasebotyuuou"
+    },
+    { "info": "中佐世保", "info2": "なかさせぼ", "word": "nakasasebo" },
+    { "info": "北佐世保", "info2": "きたさせぼ", "word": "kitasasebo" },
+    { "info": "山の田", "info2": "やまのた", "word": "yamanota" },
+    { "info": "泉福寺", "info2": "せんぷくじ", "word": "senpukuzi" },
+    { "info": "左石", "info2": "ひだりいし", "word": "hidariisi" },
+    { "info": "野中", "info2": "のなか", "word": "nonaka" },
+    { "info": "皆瀬", "info2": "かいぜ", "word": "kaize" },
+    { "info": "中里", "info2": "なかざと", "word": "nakazato" },
+    { "info": "本山", "info2": "もとやま", "word": "motoyama" },
+    { "info": "上相浦", "info2": "かみあいのうら", "word": "kamiainoura" },
+    { "info": "大学", "info2": "だいがく", "word": "daigaku" },
+    { "info": "相浦", "info2": "あいのうら", "word": "ainoura" },
+    { "info": "棚方", "info2": "たながた", "word": "tanagata" },
+    { "info": "真申", "info2": "まさる", "word": "masaru" },
+    { "info": "小浦", "info2": "こうら", "word": "koura" },
+    { "info": "佐々", "info2": "さざ", "word": "saza" },
+    {
+      "info": "清峰高校前",
+      "info2": "せいほうこうこうまえ",
+      "word": "seihoukoukoumae"
+    },
+    { "info": "神田", "info2": "こうだ", "word": "kouda" },
+    { "info": "吉井", "info2": "よしい", "word": "yosii" },
+    {
+      "info": "潜竜ケ滝",
+      "info2": "せんりゅうがたき",
+      "word": "senryuugataki"
+    },
+    { "info": "いのつき", "info2": "いのつき", "word": "inotuki" },
+    { "info": "高岩", "info2": "たかいわ", "word": "takaiwa" },
+    {
+      "info": "江迎鹿町",
+      "info2": "えむかえしかまち",
+      "word": "emukaesikamati"
+    },
+    { "info": "すえたちばな", "info2": "すえたちばな", "word": "suetatibana" },
+    { "info": "西田平", "info2": "にしたびら", "word": "nisitabira" },
+    {
+      "info": "たびら平戸口",
+      "info2": "たびらひらどぐち",
+      "word": "tabirahiradoguti"
+    },
+    { "info": "中田平", "info2": "なかたびら", "word": "nakatabira" },
+    { "info": "東田平", "info2": "ひがしたびら", "word": "higasitabira" },
+    { "info": "西木場", "info2": "にしこば", "word": "nisikoba" },
+    { "info": "御厨", "info2": "みくりや", "word": "mikuriya" },
+    {
+      "info": "松浦発電所前",
+      "info2": "まつうらはつでんしょまえ",
+      "word": "matuurahatudensyomae"
+    },
+    { "info": "松浦", "info2": "まつうら", "word": "matuura" },
+    { "info": "調川", "info2": "つきのかわ", "word": "tukinokawa" },
+    { "info": "前浜", "info2": "まえはま", "word": "maehama" },
+    { "info": "鷹島口", "info2": "たかしまぐち", "word": "takasimaguti" },
+    { "info": "今福", "info2": "いまぶく", "word": "imabuku" },
+    { "info": "福島口", "info2": "ふくしまぐち", "word": "hukusimaguti" },
+    { "info": "浦ノ崎", "info2": "うらのさき", "word": "uranosaki" },
+    { "info": "波瀬", "info2": "はぜ", "word": "haze" },
+    { "info": "久原", "info2": "くばら", "word": "kubara" },
+    { "info": "鳴石", "info2": "なるいし", "word": "naruisi" },
+    { "info": "楠久", "info2": "くすく", "word": "kusuku" },
+    { "info": "里", "info2": "さと", "word": "sato" },
+    { "info": "東山代", "info2": "ひがしやましろ", "word": "higasiyamasiro" },
+    { "info": "伊万里", "info2": "いまり", "word": "imari" },
+    { "info": "川東", "info2": "かわひがし", "word": "kawahigasi" },
+    { "info": "金武", "info2": "かなたけ", "word": "kanatake" },
+    { "info": "夫婦石", "info2": "めおといし", "word": "meotoisi" },
+    { "info": "山谷", "info2": "やまだに", "word": "yamadani" },
+    { "info": "大木", "info2": "おおぎ", "word": "oogi" },
+    { "info": "西有田", "info2": "にしありた", "word": "nisiarita" },
+    { "info": "蔵宿", "info2": "ぞうしゅく", "word": "zousyuku" },
+    { "info": "黒川", "info2": "くろごう", "word": "kurogou" },
+    { "info": "三代橋", "info2": "みだいばし", "word": "midaibasi" },
+    { "info": "有田", "info2": "ありた", "word": "arita" }
+  ],
+  "optional": { "cd": ["644"], "coCd": ["144"] }
+}
