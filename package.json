@@ -58,9 +58,5 @@
   "dependencies": {
     "@nuxtjs/seo": "^3.2.2",
     "vue-gtag-next": "^1.14.0"
-  },
-  "volta": {
-    "node": "24.3.0",
-    "pnpm": "10.19.0"
   }
 }
