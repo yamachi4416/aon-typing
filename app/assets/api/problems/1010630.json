@@ -1,0 +1,40 @@
+{
+  "id": "1010630",
+  "title": "土佐くろしお鉄道ごめん・なはり線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-12-01",
+  "updatedAt": "2025-12-01",
+  "words": [
+    { "info": "奈半利", "info2": "なはり", "word": "nahari" },
+    { "info": "田野", "info2": "たの", "word": "tano" },
+    { "info": "安田", "info2": "やすだ", "word": "yasuda" },
+    { "info": "唐浜", "info2": "とうのはま", "word": "tounohama" },
+    { "info": "下山", "info2": "しもやま", "word": "simoyama" },
+    { "info": "伊尾木", "info2": "いおき", "word": "ioki" },
+    { "info": "安芸", "info2": "あき", "word": "aki" },
+    {
+      "info": "あき総合病院前",
+      "info2": "あきそうごうびょういんまえ",
+      "word": "akisougoubyouinmae"
+    },
+    { "info": "球場前", "info2": "きゅうじょうまえ", "word": "kyuujoumae" },
+    { "info": "穴内", "info2": "あなない", "word": "ananai" },
+    { "info": "赤野", "info2": "あかの", "word": "akano" },
+    { "info": "和食", "info2": "わじき", "word": "waziki" },
+    { "info": "西分", "info2": "にしぶん", "word": "nisibunn" },
+    { "info": "夜須", "info2": "やす", "word": "yasu" },
+    { "info": "香我美", "info2": "かがみ", "word": "kagami" },
+    { "info": "あかおか", "info2": "あかおか", "word": "akaoka" },
+    { "info": "よしかわ", "info2": "よしかわ", "word": "yosikawa" },
+    { "info": "のいち", "info2": "のいち", "word": "noiti" },
+    { "info": "立田", "info2": "たてだ", "word": "tateda" },
+    { "info": "後免町", "info2": "ごめんまち", "word": "gomenmati" },
+    { "info": "後免", "info2": "ごめん", "word": "gomenn" }
+  ],
+  "optional": { "cd": ["630"], "coCd": ["138"] }
+}

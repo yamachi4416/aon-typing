@@ -1,0 +1,34 @@
+{
+  "id": "1010631",
+  "title": "土佐くろしお鉄道中村線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-12-01",
+  "updatedAt": "2025-12-01",
+  "words": [
+    { "info": "中村", "info2": "なかむら", "word": "nakamura" },
+    { "info": "古津賀", "info2": "こつか", "word": "kotuka" },
+    { "info": "西大方", "info2": "にしおおがた", "word": "nisioogata" },
+    { "info": "土佐入野", "info2": "とさいりの", "word": "tosairino" },
+    { "info": "浮鞭", "info2": "うきぶち", "word": "ukibuti" },
+    { "info": "海の王迎", "info2": "うみのおうむかえ", "word": "uminooumukae" },
+    {
+      "info": "土佐上川口",
+      "info2": "とさかみかわぐち",
+      "word": "tosakamikawaguti"
+    },
+    { "info": "有井川", "info2": "ありいがわ", "word": "ariigawa" },
+    { "info": "土佐白浜", "info2": "とさしらはま", "word": "tosasirahama" },
+    { "info": "佐賀公園", "info2": "さがこうえん", "word": "sagakouenn" },
+    { "info": "土佐佐賀", "info2": "とささが", "word": "tosasaga" },
+    { "info": "伊与喜", "info2": "いよき", "word": "iyoki" },
+    { "info": "荷稲", "info2": "かいな", "word": "kaina" },
+    { "info": "若井", "info2": "わかい", "word": "wakai" },
+    { "info": "窪川", "info2": "くぼかわ", "word": "kubokawa" }
+  ],
+  "optional": { "cd": ["631"], "coCd": ["138"] }
+}
