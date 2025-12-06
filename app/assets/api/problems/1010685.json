@@ -1,0 +1,46 @@
+{
+  "id": "1010685",
+  "title": "ゆいレールの駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2025-12-06",
+  "updatedAt": "2025-12-06",
+  "words": [
+    {
+      "info": "てだこ浦西",
+      "info2": "てだこうらにし",
+      "word": "tedakouranisi"
+    },
+    { "info": "浦添前田", "info2": "うらそえまえだ", "word": "urasoemaeda" },
+    { "info": "経塚", "info2": "きょうづか", "word": "kyouduka" },
+    { "info": "石嶺", "info2": "いしみね", "word": "isimine" },
+    { "info": "首里", "info2": "しゅり", "word": "syuri" },
+    { "info": "儀保", "info2": "ぎぼ", "word": "gibo" },
+    {
+      "info": "市立病院前",
+      "info2": "しりつびょういんまえ",
+      "word": "siritubyouinmae"
+    },
+    { "info": "古島", "info2": "ふるじま", "word": "huruzima" },
+    { "info": "おもろまち", "info2": "おもろまち", "word": "omoromati" },
+    { "info": "安里", "info2": "あさと", "word": "asato" },
+    { "info": "牧志", "info2": "まきし", "word": "makisi" },
+    { "info": "美栄橋", "info2": "みえばし", "word": "miebasi" },
+    { "info": "県庁前", "info2": "けんちょうまえ", "word": "kentyoumae" },
+    { "info": "旭橋", "info2": "あさひばし", "word": "asahibasi" },
+    { "info": "壺川", "info2": "つぼがわ", "word": "tubogawa" },
+    {
+      "info": "奥武山公園",
+      "info2": "おうのやまこうえん",
+      "word": "ounoyamakouenn"
+    },
+    { "info": "小禄", "info2": "おろく", "word": "oroku" },
+    { "info": "赤嶺", "info2": "あかみね", "word": "akamine" },
+    { "info": "那覇空港", "info2": "なはくうこう", "word": "nahakuukou" }
+  ],
+  "optional": { "cd": ["685"], "coCd": ["197"] }
+}
