@@ -9,15 +9,8 @@ import type { ProblemType } from '~~/types/problems'
 describe('TypingControl', () => {
   type Props = ComponentProps<typeof TypingControl>
 
-  const Wrapper = defineComponent<Props>({
-    setup(props) {
-      return () => h(TypingControl, props)
-    },
-  })
-
   async function mountComponent(props?: Props) {
-    const wrapper = await mountSuspended(Wrapper, { props })
-    return wrapper.findComponent(TypingControl)
+    return await mountSuspended(TypingControl, { props })
   }
 
   function createGameState(settings: Partial<TypingGameSetting>) {

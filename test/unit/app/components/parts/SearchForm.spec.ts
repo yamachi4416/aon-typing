@@ -5,22 +5,16 @@ import PartsSearchForm from '~/components/parts/SearchForm.vue'
 describe('PartsSearchForm', () => {
   type Props = ComponentProps<typeof PartsSearchForm>
 
-  const Wrapper = defineComponent<Props>({
-    setup(props) {
-      const model = ref('')
-      return () => h(PartsSearchForm, {
-        ...props,
-        modelValue: model.value,
-        'onUpdate:modelValue'(value) {
-          model.value = value
-        },
-      })
-    },
-  })
-
   async function mountComponent(props?: Props) {
-    const wrapper = await mountSuspended(Wrapper, { props })
-    return wrapper.findComponent(PartsSearchForm)
+    const wrapper = await mountSuspended(PartsSearchForm, {
+      props: {
+        ...props,
+        'onUpdate:modelValue'(value) {
+          wrapper.setProps({ modelValue: value })
+        },
+      },
+    })
+    return wrapper
   }
 
   describe('props', () => {

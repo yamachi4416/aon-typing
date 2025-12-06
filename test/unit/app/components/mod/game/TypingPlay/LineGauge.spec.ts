@@ -5,14 +5,8 @@ import { LineGauge } from '~/components/mod/game/TypingPlay/_internal'
 describe('LineGauge', () => {
   type Props = ComponentProps<typeof LineGauge>
 
-  const Wrapper = defineComponent<Props>({
-    setup(props) {
-      return () => h(LineGauge, props)
-    },
-  })
-
   async function mountComponent(props?: Props) {
-    return await mountSuspended(Wrapper, { props })
+    return await mountSuspended(LineGauge, { props })
   }
 
   it.each<[props: Props, expected: `${number}`]>([

@@ -5,14 +5,8 @@ import { TimeClock } from '~/components/mod/game/TypingPlay/_internal'
 describe('TimeClock', () => {
   type Props = ComponentProps<typeof TimeClock>
 
-  const Wrapper = defineComponent<Props>({
-    setup(props) {
-      return () => h(TimeClock, props)
-    },
-  })
-
   async function mountComponent(props?: Props) {
-    return await mountSuspended(Wrapper, { props })
+    return await mountSuspended(TimeClock, { props })
   }
 
   it.each<{ time: Props['time'], expected: string }>([

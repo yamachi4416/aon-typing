@@ -20,15 +20,8 @@ describe('ModContactForm', () => {
 
   type Props = ComponentProps<typeof Form>
 
-  const Wrapper = defineComponent<Props>({
-    setup(props) {
-      return () => h(Form, props)
-    },
-  })
-
   async function mountComponent(props?: Props) {
-    const wrapper = await mountSuspended(Wrapper, { props })
-    return wrapper.findComponent(Form)
+    return await mountSuspended(Form, { props })
   }
 
   function getInput(

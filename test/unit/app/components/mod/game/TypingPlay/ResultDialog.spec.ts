@@ -9,15 +9,8 @@ describe('ResultDialog', () => {
   type Props = ComponentProps<typeof ResultDialog>
   type Component = Awaited<ReturnType<typeof mountComponent>>
 
-  const Wrapper = defineComponent<Props>({
-    setup(props) {
-      return () => h(ResultDialog, props)
-    },
-  })
-
   async function mountComponent(props?: Props) {
-    const wrapper = await mountSuspended(Wrapper, { props })
-    return wrapper.findComponent(ResultDialog)
+    return await mountSuspended(ResultDialog, { props })
   }
 
   async function openDialog(component: Component, result?: Partial<TypingGameInfo>) {

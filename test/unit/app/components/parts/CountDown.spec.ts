@@ -6,15 +6,8 @@ import PartsCountDown from '~/components/parts/CountDown.vue'
 describe('PartsCountDown', () => {
   type Props = ComponentProps<typeof PartsCountDown>
 
-  const Wrapper = defineComponent<Props>({
-    setup(props) {
-      return () => h(PartsCountDown, props)
-    },
-  })
-
   async function mountComponent(props?: Props) {
-    const wrapper = await mountSuspended(Wrapper, { props })
-    return wrapper.findComponent(PartsCountDown)
+    return await mountSuspended(PartsCountDown, { props })
   }
 
   it('countのデフォルトは0', async () => {

@@ -9,14 +9,8 @@ describe('ListItem', () => {
   type Props = ComponentProps<typeof ModProblemListItem>
   type Slots = Pick<ComponentSlots<typeof ModProblemListItem>, 'footer'>
 
-  const Wrapper = defineComponent<Props>({
-    setup(props, { slots }) {
-      return () => h(ModProblemListItem, props, slots)
-    },
-  })
-
   async function mountComponent(props: Props, slots: Slots = {}) {
-    return await mountSuspended(Wrapper, { props, slots: slots })
+    return await mountSuspended(ModProblemListItem, { props, slots: slots })
   }
 
   function listItem(value: Partial<ProblemListItem> = {}) {

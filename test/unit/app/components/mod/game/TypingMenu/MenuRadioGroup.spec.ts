@@ -5,14 +5,8 @@ import { MenuRadioGroup } from '~/components/mod/game/TypingMenu/_internal'
 describe('MenuRadioGroup', () => {
   type Props = ComponentProps<typeof MenuRadioGroup<number>>
 
-  const Wrapper = defineComponent<Props>({
-    setup(props) {
-      return () => h(MenuRadioGroup<number>, props)
-    },
-  })
-
   async function mountComponent(props: Props) {
-    return await mountSuspended(Wrapper, { props })
+    return await mountSuspended(MenuRadioGroup<number>, { props })
   }
 
   it('見出しに指定したnameが表示される', async () => {

@@ -5,7 +5,7 @@ const { navigateToMock } = vi.hoisted(() => ({
   navigateToMock: vi.fn<typeof navigateTo>(),
 }))
 
-mockNuxtImport('navigateTo', () => navigateToMock)
+mockNuxtImport(navigateTo, () => navigateToMock)
 
 describe('useRoutePageQuery', () => {
   type Params = Parameters<typeof useRoutePageQuery>

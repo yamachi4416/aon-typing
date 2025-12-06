@@ -5,14 +5,8 @@ import { TimeCircle } from '~/components/mod/game/TypingPlay/_internal'
 describe('TimeCircle', () => {
   type Props = ComponentProps<typeof TimeCircle>
 
-  const Wrapper = defineComponent<Props>({
-    setup(props) {
-      return () => h(TimeCircle, props)
-    },
-  })
-
   async function mountComponent(props?: Props) {
-    return await mountSuspended(Wrapper, { props })
+    return await mountSuspended(TimeCircle, { props })
   }
 
   it.each<{ props: Props, expected: string }>([

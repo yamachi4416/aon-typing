@@ -1,21 +1,17 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
-import type { ComponentProps, ComponentSlots } from 'vue-component-type-helpers'
+import type { ComponentProps } from 'vue-component-type-helpers'
 import PartsPagenate from '~/components/parts/Pagenate.vue'
 
 describe('PartsPagenate', () => {
   type Props = ComponentProps<typeof PartsPagenate<number>>
-  type Slots = ComponentSlots<typeof PartsPagenate<number>>
-
-  const Wrapper = defineComponent<Props>({
-    setup(props) {
-      return () => h(PartsPagenate<number>, props, {
-        default: ({ items }) => h('p', null, items.join(',')),
-      } satisfies Slots)
-    },
-  })
 
   async function mountComponent(props?: Props) {
-    return await mountSuspended(Wrapper, { props })
+    return await mountSuspended(PartsPagenate<number>, {
+      props,
+      slots: {
+        default: ({ items }) => h('p', null, items.join(',')),
+      },
+    })
   }
 
   describe('pagenate', () => {
