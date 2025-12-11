@@ -6,7 +6,15 @@ describe('MenuRadioGroup', () => {
   type Props = ComponentProps<typeof MenuRadioGroup<number>>
 
   async function mountComponent(props: Props) {
-    return await mountSuspended(MenuRadioGroup<number>, { props })
+    const wrapper = await mountSuspended(MenuRadioGroup<number>, {
+      props: {
+        ...props,
+        'onUpdate:modelValue'(value) {
+          wrapper.setProps({ modelValue: value })
+        },
+      },
+    })
+    return wrapper
   }
 
   it('見出しに指定したnameが表示される', async () => {
@@ -73,17 +81,15 @@ describe('MenuRadioGroup', () => {
   })
 
   it('ラジオボタンがチェックするとmodelValueに反映される', async () => {
-    const value = ref(1)
     const component = await mountComponent({
       label: 'Name',
-      get modelValue() { return value.value },
+      modelValue: 1,
       items: [[0, 'o0'], [1, 'o1'], [2, 'o2']],
-      'onUpdate:modelValue': (v) => (value.value = v),
     })
 
     const inputs = component.findAll('input')
     await inputs[2]!.setValue()
     expect(inputs.map((e) => e.element.checked)).toEqual([false, false, true])
-    expect(value.value).toBe(2)
+    expect(component.props('modelValue')).toBe(2)
   })
 })
