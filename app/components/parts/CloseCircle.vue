@@ -34,7 +34,7 @@ defineEmits<{
 </script>
 
 <style lang="scss" module>
-.close {
+:where(.close) {
   width: 100%;
   height: 100%;
   color: var(--color-3);
