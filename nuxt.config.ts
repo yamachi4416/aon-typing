@@ -43,8 +43,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/seo',
     '@nuxt/test-utils/module',
-    '~/modules/vitePluginLegacy',
-    '~/modules/googleFonts',
   ],
   ssr: true,
   components: {
