@@ -12,7 +12,6 @@
   "optional": { "cd": ["1"], "coCd": ["1"] },
   "words": [
     { "info": "長万部", "info2": "おしゃまんべ", "word": "osyamanbe" },
-    { "info": "中ノ沢", "info2": "なかのさわ", "word": "nakanosawa" },
     { "info": "国縫", "info2": "くんぬい", "word": "kunnnui" },
     { "info": "黒岩", "info2": "くろいわ", "word": "kuroiwa" },
     { "info": "山崎", "info2": "やまさき", "word": "yamasaki" },
