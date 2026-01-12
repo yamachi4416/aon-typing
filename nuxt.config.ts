@@ -105,6 +105,7 @@ export default defineNuxtConfig({
     enabled: false,
   },
   sitemap: {
+    zeroRuntime: true,
     credits: false,
     xsl: false,
     include: [...routes],
