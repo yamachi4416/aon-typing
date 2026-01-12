@@ -40,7 +40,10 @@ const routes: ReadonlyArray<string> = [
 ].toSorted((a, b) => a.localeCompare(b))
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/seo', '@nuxt/test-utils/module', '@nuxt/fonts'],
+  modules: [
+    '@nuxtjs/seo',
+    '@nuxt/test-utils/module',
+  ],
   ssr: true,
   components: {
     dirs: [
@@ -99,6 +102,15 @@ export default defineNuxtConfig({
         path: '/404.html',
         file: resolver.resolve('app/error.vue'),
       })
+    },
+  },
+  googleFonts: {
+    display: 'swap',
+    families: {
+      Itim: true,
+      'Noto Sans JP': {
+        wght: 400,
+      },
     },
   },
   ogImage: {
