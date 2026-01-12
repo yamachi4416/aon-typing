@@ -5,18 +5,16 @@ import BasicHeaderThemeChange from '~/components/basic/header/ThemeChange.vue'
 describe('BasicHeaderThemeChange', () => {
   type Props = ComponentProps<typeof BasicHeaderThemeChange>
 
-  const Wrapper = defineComponent<Props>({
-    setup(props) {
-      return () => h(BasicHeaderThemeChange, props)
-    },
-  })
+  async function mountComponent(props?: Props) {
+    return await mountSuspended(BasicHeaderThemeChange, { props })
+  }
 
   it('darkボタン', async () => {
     const html = document.documentElement
     html.classList.remove('dark')
     expect(html.classList.contains('dark')).toBe(false)
 
-    const component = await mountSuspended(Wrapper)
+    const component = await mountComponent()
 
     const button = component
       .findAll('button')
@@ -33,7 +31,7 @@ describe('BasicHeaderThemeChange', () => {
     html.classList.add('dark')
     expect(html.classList.contains('dark')).toBe(true)
 
-    const component = await mountSuspended(Wrapper)
+    const component = await mountComponent()
 
     const button = component
       .findAll('button')
