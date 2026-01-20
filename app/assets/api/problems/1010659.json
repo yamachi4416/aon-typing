@@ -1,0 +1,45 @@
+{
+  "id": "1010659",
+  "title": "くま川鉄道湯前線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2026-01-20",
+  "updatedAt": "2026-01-20",
+  "words": [
+    { "info": "湯前", "info2": "ゆのまえ", "word": "yunomae" },
+    { "info": "新鶴羽", "info2": "しんつるば", "word": "sinturuba" },
+    { "info": "東多良木", "info2": "ひがしたらぎ", "word": "higasitaragi" },
+    { "info": "多良木", "info2": "たらぎ", "word": "taragi" },
+    {
+      "info": "公立病院前",
+      "info2": "こうりつびょういんまえ",
+      "word": "kouritubyouinmae"
+    },
+    { "info": "東免田", "info2": "ひがしめんだ", "word": "higasimenda" },
+    { "info": "あさぎり", "info2": "あさぎり", "word": "asagiri" },
+    {
+      "info": "おかどめ幸福",
+      "info2": "おかどめこうふく",
+      "word": "okadomekouhuku"
+    },
+    { "info": "木上", "info2": "きのえ", "word": "kinoe" },
+    { "info": "一武", "info2": "いちぶ", "word": "itibu" },
+    { "info": "肥後西村", "info2": "ひごにしのむら", "word": "higonisinomura" },
+    { "info": "川村", "info2": "かわむら", "word": "kawamura" },
+    {
+      "info": "相良藩願成寺",
+      "info2": "さがらはんがんじょうじ",
+      "word": "sagarahanganjouzi"
+    },
+    {
+      "info": "人吉温泉",
+      "info2": "ひとよしおんせん",
+      "word": "hitoyosionsenn"
+    }
+  ],
+  "optional": { "cd": ["659"], "coCd": ["150"] }
+}
