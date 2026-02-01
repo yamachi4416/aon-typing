@@ -182,7 +182,7 @@ export async function previewServer({
         logger?.info(
           `
 ${'-'.repeat(50)}
-Server Listen On  : ${host}:${port}
+Server Listen On  : ${address().address}
 Static Files Root : ${distDir}
 ${'-'.repeat(50)}`.trimStart(),
         )
@@ -195,7 +195,8 @@ ${'-'.repeat(50)}`.trimStart(),
     }
 
     function address() {
-      const { address: host, port } = server.address() as AddressInfo
+      const { address, family, port } = server.address() as AddressInfo
+      const host = family === 'IPv6' ? `[${address}]` : address
       return {
         host,
         port,
