@@ -68,10 +68,15 @@ export async function mountAppSuspended(options?: MountSuspendedOptions) {
 type SetupRoutes = (routes: RouteRecord[]) => RouteRecordRaw[]
 
 export function routerSetup(defaultSetup?: SetupRoutes) {
-  const router = useRouter()
-  const savedRoutes = [...router.getRoutes()]
+  const savedRoutes: RouteRecord[] = []
 
-  function resetRoutes() {
+  function saveRoutes() {
+    const router = useRouter()
+    savedRoutes.push(...router.getRoutes())
+  }
+
+  function restoreRoutes() {
+    const router = useRouter()
     router.clearRoutes()
     for (const route of savedRoutes) {
       router.addRoute(route)
@@ -79,7 +84,8 @@ export function routerSetup(defaultSetup?: SetupRoutes) {
   }
 
   function setupRoutes(setup?: SetupRoutes) {
-    resetRoutes()
+    const router = useRouter()
+    restoreRoutes()
     const setupFn = setup ?? defaultSetup
     if (!setupFn) return
     const routes = setupFn(router.getRoutes())
@@ -90,7 +96,8 @@ export function routerSetup(defaultSetup?: SetupRoutes) {
   }
 
   return {
-    resetRoutes,
+    saveRoutes,
+    restoreRoutes,
     setupRoutes,
   }
 }
@@ -111,7 +118,8 @@ export function mockNavigateTo(navigateToMock: Mock<typeof navigateTo>) {
 
   async function waitForNavigateTo() {
     const { results, settledResults } = navigateToMock.mock
-    if (results.length && settledResults.length < results.length) {
+    const fulfilled = settledResults.filter(({ type }) => type === 'fulfilled')
+    if (results.length && fulfilled.length < results.length) {
       await results.at(-1)?.value
       return true
     }

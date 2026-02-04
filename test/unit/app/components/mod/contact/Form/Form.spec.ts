@@ -15,6 +15,7 @@ registerEndpoint('/api/contact', {
 
 describe('ModContactForm', () => {
   afterEach(() => {
+    vi.resetAllMocks()
     vi.restoreAllMocks()
   })
 

@@ -7,7 +7,11 @@ describe('pages/game/menu', () => {
   const createPage = MenuPageModel.create
 
   const { registerEndpoint, unregisterEndpoints } = endpointRegister()
-  const { resetRoutes, setupRoutes } = routerSetup('menu')
+  const { saveRoutes, restoreRoutes, setupRoutes } = routerSetup('menu')
+
+  beforeAll(() => {
+    saveRoutes()
+  })
 
   beforeEach(() => {
     setupRoutes()
@@ -20,7 +24,7 @@ describe('pages/game/menu', () => {
   })
 
   afterEach(() => {
-    resetRoutes()
+    restoreRoutes()
     unregisterEndpoints()
   })
 

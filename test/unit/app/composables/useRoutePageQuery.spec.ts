@@ -17,6 +17,7 @@ describe('useRoutePageQuery', () => {
   })
 
   afterEach(() => {
+    vi.resetAllMocks()
     vi.restoreAllMocks()
   })
 

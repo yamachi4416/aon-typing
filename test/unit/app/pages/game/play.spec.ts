@@ -13,7 +13,11 @@ describe('/pages/game/play', () => {
   const createPage = PlayPageModel.create
 
   const { registerEndpoint, unregisterEndpoints } = endpointRegister()
-  const { resetRoutes, setupRoutes } = routerSetup('play')
+  const { saveRoutes, restoreRoutes, setupRoutes } = routerSetup('play')
+
+  beforeAll(() => {
+    saveRoutes()
+  })
 
   beforeEach(() => {
     setupRoutes()
@@ -29,7 +33,7 @@ describe('/pages/game/play', () => {
 
   afterEach(() => {
     vi.useRealTimers()
-    resetRoutes()
+    restoreRoutes()
     unregisterEndpoints()
   })
 

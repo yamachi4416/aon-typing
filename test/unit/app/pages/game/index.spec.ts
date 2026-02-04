@@ -7,7 +7,11 @@ describe('/pages/game/index', () => {
   const createPage = IndexPageModel.create
 
   const { registerEndpoint, unregisterEndpoints } = endpointRegister()
-  const { resetRoutes, setupRoutes } = routerSetup('')
+  const { saveRoutes, restoreRoutes, setupRoutes } = routerSetup('')
+
+  beforeAll(() => {
+    saveRoutes()
+  })
 
   beforeEach(() => {
     setupRoutes()
@@ -18,7 +22,7 @@ describe('/pages/game/index', () => {
   })
 
   afterEach(() => {
-    resetRoutes()
+    restoreRoutes()
     unregisterEndpoints()
   })
 
