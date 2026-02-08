@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^1.13.0",
-    "@nuxt/test-utils": "https://pkg.pr.new/@nuxt/test-utils@ca06966",
+    "@nuxt/test-utils": "^4.0.0",
     "@types/node": "^25.1.0",
     "@vitejs/plugin-legacy": "^7.2.1",
     "@vitest/coverage-v8": "^4.0.18",
