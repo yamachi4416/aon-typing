@@ -1,4 +1,4 @@
-import { defineNuxtModule } from '@nuxt/kit'
+import { addVitePlugin, defineNuxtModule } from '@nuxt/kit'
 import type { Options } from '@vitejs/plugin-legacy'
 import vitePluginLegacy from '@vitejs/plugin-legacy'
 
@@ -7,9 +7,7 @@ export default defineNuxtModule<Options>({
     name: 'vitePluginLegacy',
   },
   setup(options, nuxt) {
-    nuxt.options.vite ??= {}
-    nuxt.options.vite.plugins ??= []
-    nuxt.options.vite.plugins.push(vitePluginLegacy(options))
+    addVitePlugin(vitePluginLegacy(options))
 
     nuxt.hook('build:manifest', (manifest) => {
       if (nuxt.options.dev) return
