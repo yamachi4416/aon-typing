@@ -16,6 +16,9 @@ const reolveAliasConfig: UserConfig = {
 
 export default defineConfig({
   test: {
+    coverage: {
+      exclude: ['./test/**/*'],
+    },
     projects: [
       mergeConfig(reolveAliasConfig, {
         test: {
