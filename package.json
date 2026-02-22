@@ -33,7 +33,7 @@
     "@vitest/coverage-v8": "^4.0.18",
     "@vue/test-utils": "^2.4.6",
     "citty": "^0.2.1",
-    "eslint": "^9.39.3",
+    "eslint": "^10.0.1",
     "eslint-plugin-compat": "^6.2.0",
     "eslint-plugin-format": "^1.4.0",
     "eslint-plugin-promise": "^7.2.1",
