@@ -178,7 +178,7 @@ describe('ModProblemDetail', () => {
     const list = component.find('[aria-label="「Title」の問題いちらん"]')
     expect(list.exists()).toBe(true)
 
-    const items = list.findAll('li').map((x) => x.findAll('> * > *').map((v) => v.text()))
+    const items = list.findAll('li').map((x) => x.findAll(':scope > * > *').map((v) => v.text()))
     expect(items).toEqual([
       ['No.1', 'info1', 'word1'],
       ['No.2', 'info2', 'word2'],

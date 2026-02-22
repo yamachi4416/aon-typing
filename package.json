@@ -28,17 +28,17 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^1.15.1",
     "@nuxt/test-utils": "^4.0.0",
-    "@types/node": "^25.2.3",
+    "@types/node": "^25.3.0",
     "@vitejs/plugin-legacy": "^7.2.1",
     "@vitest/coverage-v8": "^4.0.18",
     "@vue/test-utils": "^2.4.6",
     "citty": "^0.2.1",
-    "eslint": "^9.39.2",
-    "eslint-plugin-compat": "^6.1.0",
+    "eslint": "^9.39.3",
+    "eslint-plugin-compat": "^6.2.0",
     "eslint-plugin-format": "^1.4.0",
     "eslint-plugin-promise": "^7.2.1",
     "google-fonts-helper": "^3.7.3",
-    "happy-dom": "^20.6.2",
+    "happy-dom": "^20.7.0",
     "nuxt": "^4.3.1",
     "playwright-core": "^1.58.2",
     "prettier": "^3.8.1",
@@ -52,8 +52,8 @@
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18",
-    "vue-component-type-helpers": "^3.2.4",
-    "vue-tsc": "^3.2.4"
+    "vue-component-type-helpers": "^3.2.5",
+    "vue-tsc": "^3.2.5"
   },
   "dependencies": {
     "@nuxtjs/seo": "^3.4.0",
