@@ -10,7 +10,7 @@
         </h2>
       </header>
       <p>
-        {{ corporation?.name }}の路線いちらんです。<br />
+        {{ corporation?.name }}の路線いちらんです。<br>
         問題の No.
         が表示されている路線はクリックするとタイピングの問題を表示します。
       </p>

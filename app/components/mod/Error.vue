@@ -4,21 +4,21 @@
     <PartsSection v-if="desc === 'offline'">
       <h2>{{ title }}</h2>
       <p>
-        インターネットに接続できません。<br />
+        インターネットに接続できません。<br>
         ネットワークの状態を確認してください。
       </p>
     </PartsSection>
     <PartsSection v-else-if="desc === 'notfound'">
       <h2>{{ title }}</h2>
       <p>
-        お探しのページは見つかりませんでした。<br />
+        お探しのページは見つかりませんでした。<br>
         既に削除されているか、URLが間違っている可能性があります。
       </p>
     </PartsSection>
     <PartsSection v-else>
       <h2>{{ title }}</h2>
       <p>
-        申し訳ありません。<br />
+        申し訳ありません。<br>
         予期しないエラーが発生しました。
         <span>{{ error?.message }}</span>
       </p>

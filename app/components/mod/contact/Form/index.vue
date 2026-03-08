@@ -26,7 +26,7 @@
             v-bind="attrs"
             name="name"
             required
-          />
+          >
         </template>
       </FormField>
       <FormField
@@ -40,7 +40,7 @@
           type="email"
           name="email"
           required
-        />
+        >
       </FormField>
       <FormField
         v-slot="{ attrs }"

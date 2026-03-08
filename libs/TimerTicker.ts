@@ -58,7 +58,7 @@ class TimerTickerImpl implements TimerTicker {
     this.abortManager.removeListener(this.cancel)
   }
 
-  private async *ticker() {
+  private async* ticker() {
     while (this.state.running) {
       await this.state.defer()
       if (!this.state.running) return

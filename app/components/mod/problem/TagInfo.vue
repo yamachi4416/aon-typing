@@ -12,7 +12,7 @@
           name="tags"
           :value="t.id"
           @keyup.enter.prevent=";($event.target as any)?.click?.()"
-        />
+        >
         {{ t.name }}
       </label>
     </div>

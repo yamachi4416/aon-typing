@@ -11,7 +11,7 @@
           v-model="model"
           type="radio"
           :value="option.value"
-        />
+        >
         {{ option.label }}
       </label>
     </td>

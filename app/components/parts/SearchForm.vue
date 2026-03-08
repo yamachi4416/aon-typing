@@ -54,7 +54,7 @@ function onSearch() {
         @input="onInput"
         @focusout="onFocusout"
         @keyup.enter="onSearch"
-      />
+      >
       <label v-if="label" :for="uid">
         {{ label }}
       </label>

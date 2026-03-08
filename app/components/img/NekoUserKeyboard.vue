@@ -5,5 +5,5 @@
     height="296"
     alt=""
     loading="lazy"
-  />
+  >
 </template>

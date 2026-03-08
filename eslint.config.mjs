@@ -23,12 +23,10 @@ export default createConfigForNuxt({
     },
   })
   .overrideRules({
-    '@stylistic/generator-star-spacing': 'off',
     'vue/max-attributes-per-line': [
       'error',
       {
         singleline: 10,
       },
     ],
-    'vue/html-self-closing': 'off',
   })
