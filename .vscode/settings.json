@@ -4,27 +4,27 @@
   "vue.suggest.componentNameCasing": "alwaysPascalCase",
   "stylelint.validate": ["css", "postcss", "scss", "vue"],
   "eslint.format.enable": true,
-  "typescript.format.semicolons": "remove",
-  "javascript.format.semicolons": "remove",
+  "js/ts.format.enabled": false,
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.organizeImports": "explicit"
+      "source.fixAll.eslint": "explicit",
+      "source.fixAll.stylelint": "explicit",
+      "source.removeUnusedImports": "explicit"
     }
   },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.organizeImports": "explicit"
+      "source.fixAll.eslint": "explicit",
+      "source.removeUnusedImports": "explicit"
     }
   },
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.organizeImports": "explicit"
+      "source.fixAll.eslint": "explicit",
+      "source.removeUnusedImports": "explicit"
     }
   }
 }
