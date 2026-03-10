@@ -1,4 +1,4 @@
-import { addVitePlugin, defineNuxtModule } from '@nuxt/kit'
+import { addVitePlugin, defineNuxtModule } from 'nuxt/kit'
 import type { Options } from '@vitejs/plugin-legacy'
 import vitePluginLegacy from '@vitejs/plugin-legacy'
 

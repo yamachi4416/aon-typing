@@ -1,7 +1,7 @@
 const themeKey = 'theme'
 const themeValues = ['light', 'dark'] as const
 
-export type ThemeValues = (typeof themeValues)[number]
+type ThemeValues = (typeof themeValues)[number]
 
 export function useTheme() {
   function setTheme(theme: ThemeValues) {

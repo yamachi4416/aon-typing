@@ -4,4 +4,5 @@ ignoredBuiltDependencies:
   - esbuild
   - unrs-resolver
 shellEmulator: true
-shamefullyHoist: true
+publicHoistPattern:
+  - unplugin-vue-router

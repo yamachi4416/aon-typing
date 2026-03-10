@@ -39,7 +39,7 @@ export function toArray<T>(value: T | T[] | undefined | null): T[] {
   return [value]
 }
 
-export function isEqualErrorCode<T>(error: unknown, code: T) {
+function isEqualErrorCode<T>(error: unknown, code: T) {
   return error instanceof Error && 'code' in error && error.code === code
 }
 

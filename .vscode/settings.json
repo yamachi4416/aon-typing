@@ -1,10 +1,12 @@
 {
+  "files.eol": "\n",
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "vue.suggest.componentNameCasing": "alwaysPascalCase",
   "stylelint.validate": ["css", "postcss", "scss", "vue"],
   "eslint.format.enable": true,
   "js/ts.format.enabled": false,
+  "js/ts.format.semicolons": "remove",
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.codeActionsOnSave": {

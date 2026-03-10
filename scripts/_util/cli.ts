@@ -60,7 +60,7 @@ export const runMain: typeof _runMain = async (cmd, opts = {}) => {
   return await _runMain(cmd, { ...opts, rawArgs })
 }
 
-export async function prompt(message: string) {
+async function prompt(message: string) {
   const readline = createInterface(process.stdin, process.stdout)
   try {
     return await readline.question(message)

@@ -1,4 +1,4 @@
-import { defineNuxtModule, setGlobalHead } from '@nuxt/kit'
+import { defineNuxtModule, setGlobalHead } from 'nuxt/kit'
 import type { GoogleFonts } from 'google-fonts-helper'
 import { constructURL } from 'google-fonts-helper'
 

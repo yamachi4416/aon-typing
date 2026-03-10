@@ -1,4 +1,4 @@
-import { createResolver } from '@nuxt/kit'
+import { createResolver } from 'nuxt/kit'
 import { defineNuxtConfig } from 'nuxt/config'
 import { problems } from './app/assets/api/problems.json'
 import corporations from './app/assets/api/railway/corporations.json'

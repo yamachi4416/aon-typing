@@ -57,7 +57,7 @@ async function setProblem(item: ProblemListItem) {
   problemDetail.value = await retrieveProblemDetail(item)
 }
 
-const expose = {
+defineExpose({
   async setDetail({
     problem,
     selectable = true,
@@ -68,9 +68,5 @@ const expose = {
     showSelect.value = selectable
     await wrapLoading(setProblem(problem))
   },
-}
-
-export type ProblemDetailPanel = typeof expose
-
-defineExpose(expose)
+})
 </script>

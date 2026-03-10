@@ -14,14 +14,14 @@ export async function createPage(path: string, options?: PageOptions) {
   return page
 }
 
-export function url(path: string) {
+function url(path: string) {
   if (/^https?:\/\//.test(path)) {
     return path
   }
   return _url(path)
 }
 
-export async function publicConfig(page: Page) {
+async function publicConfig(page: Page) {
   return await page.evaluate(() => useNuxtApp().$config.public)
 }
 

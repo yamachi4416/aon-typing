@@ -14,7 +14,7 @@ interface Corporation {
   Type: string
 }
 
-export interface CorporationApiResult {
+interface CorporationApiResult {
   ResultSet: {
     apiVersion: string
     engineVersion: string
@@ -44,7 +44,7 @@ interface Point {
   }
 }
 
-export interface StationApiResult {
+interface StationApiResult {
   ResultSet: {
     apiVersion: string
     engineVersion: string
@@ -64,7 +64,7 @@ interface Line {
   corporationIndex: string
 }
 
-export interface OperationLineApiResult {
+interface OperationLineApiResult {
   ResultSet: {
     apiVersion: string
     engineVersion: string
@@ -126,7 +126,7 @@ async function* fetchPagingAll<T extends PagingResult>({
   }
 }
 
-export async function fetchStation({
+async function fetchStation({
   key,
   operationLineCode,
 }: {

@@ -1,4 +1,4 @@
-import type { WatchSource } from 'vue-demi'
+import type { WatchSource } from 'vue'
 import { AbortManager } from '~~/libs/AbortManager'
 import { wait } from '~~/libs/Util'
 
