@@ -1,6 +1,6 @@
 import { mkdir } from 'node:fs/promises'
 import path from 'node:path'
-import { isPathExists, writeJson } from '../_util'
+import { isPathExists, writeJson } from '../_util/io'
 import { defineCommand } from '../_util/cli'
 import { fetchCorporations, fetchOperationLines } from './ekispert/api'
 

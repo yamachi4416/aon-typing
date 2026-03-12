@@ -1,8 +1,9 @@
 import { mkdtemp, readdir, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
-import { readJson, toArray } from '../_util'
 import { defineCommand } from '../_util/cli'
+import { readJson } from '../_util/io'
+import { toArray } from '../_util/shared'
 
 async function getTaggedProblems({ dataDir }: { dataDir: string }) {
   const dir = path.join(path.resolve(dataDir), 'problems')

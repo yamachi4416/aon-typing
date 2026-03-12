@@ -95,6 +95,11 @@ export default defineNuxtConfig({
       routes: [...routes, '/404.html'],
     },
   },
+  typescript: {
+    nodeTsConfig: {
+      include: ['../scripts/**/*.ts'],
+    },
+  },
   hooks: {
     'pages:resolved'(pages) {
       pages.push({

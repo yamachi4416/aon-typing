@@ -22,9 +22,9 @@
     "test": "vitest",
     "test:unit": "vitest --project libs --project app",
     "test:e2e": "vitest --project e2e",
-    "script": "tsx --tsconfig ./scripts/tsconfig.json",
-    "script:preview:dist": "pnpm run script ./scripts/preview-server -d ./dist",
-    "script:generate:problem": "pnpm run script ./scripts/problem generate -i ./data -o ./app/assets/api"
+    "script:preview:dist": "jiti ./scripts/preview-server -d ./dist",
+    "script:problem": "jiti ./scripts/problem",
+    "script:problem:generate": "jiti ./scripts/problem generate -i ./data -o ./app/assets/api"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^1.15.2",
@@ -42,6 +42,7 @@
     "eslint-plugin-promise": "^7.2.1",
     "google-fonts-helper": "^3.7.3",
     "happy-dom": "^20.8.3",
+    "jiti": "^2.6.1",
     "knip": "^5.86.0",
     "nuxt": "^4.3.1",
     "playwright-core": "^1.58.2",
@@ -53,7 +54,6 @@
     "stylelint-config-recommended-vue": "^1.6.1",
     "stylelint-config-standard-scss": "^17.0.0",
     "terser": "^5.46.0",
-    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18",
     "vue-component-type-helpers": "^3.2.5",

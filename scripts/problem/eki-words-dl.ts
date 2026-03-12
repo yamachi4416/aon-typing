@@ -1,8 +1,8 @@
 import { readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
-import { prettyJson } from '../_util'
 import { defineCommand } from '../_util/cli'
 import { fetchOperationLine, fetchStations } from './ekispert/api'
+import { prettyJson } from '../_util/io'
 
 interface Data {
   title: string

@@ -53,6 +53,9 @@ importers:
       happy-dom:
         specifier: ^20.8.3
         version: 20.8.3
+      jiti:
+        specifier: ^2.6.1
+        version: 2.6.1
       knip:
         specifier: ^5.86.0
         version: 5.86.0(@types/node@25.3.5)(typescript@5.9.3)
@@ -86,9 +89,6 @@ importers:
       terser:
         specifier: ^5.46.0
         version: 5.46.0
-      tsx:
-        specifier: ^4.21.0
-        version: 4.21.0
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -12965,6 +12965,7 @@ snapshots:
       get-tsconfig: 4.13.6
     optionalDependencies:
       fsevents: 2.3.3
+    optional: true
 
   type-check@0.4.0:
     dependencies:

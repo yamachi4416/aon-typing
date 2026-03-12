@@ -1,14 +1,14 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import { toTypeJapaneseChars } from '~~/libs/TypingUtil'
+import { toTypeJapaneseChars } from '../../libs/TypingUtil'
 import type {
   ProblemDetail,
   ProblemListItem,
   ProblemTagSummary,
   RailwayCorporation,
-} from '~~/types/problems'
-import { isPathExists, readJson, writeJson } from '../_util'
+} from '../../types/problems'
 import { defineCommand } from '../_util/cli'
+import { isPathExists, readJson, writeJson } from '../_util/io'
 
 type ProblemDetailData = Omit<ProblemDetail, 'tags'> & { tags: string[] }
 
