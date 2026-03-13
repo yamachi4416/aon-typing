@@ -42,21 +42,19 @@ export function useModals({
     closes.at(-1)?.focus()
   }
 
-  async function closeModalsNavigation(next: (valid?: boolean) => unknown) {
+  async function closeModalsNavigation() {
     if (hasPendingModal.value) {
-      next(false)
       return false
     }
 
     if (currentModal.value) {
-      next(false)
-      await currentModal.value.close()
+      currentModal.value.close()
       return false
     }
 
-    await mainModal?.value?.close()
-    next()
-    return true
+    if (mainModal.value) {
+      await mainModal.value.close()
+    }
   }
 
   useClientEvent((add) => {

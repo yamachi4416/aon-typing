@@ -10,7 +10,7 @@ export default {
     'nitropack',
     'sass',
     'vitest-environment-nuxt',
+    'vue-router',
     'vue-tsc',
-    'vue',
   ],
 } satisfies KnipConfig

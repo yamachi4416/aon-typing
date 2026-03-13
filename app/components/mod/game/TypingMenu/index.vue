@@ -60,8 +60,8 @@ onMounted(() => {
   menuModal.value?.open()
 })
 
-onBeforeRouteLeave(async (_to, _from, next) => {
-  return await closeModalsNavigation(next)
+onBeforeRouteLeave(async (_to, _from) => {
+  return await closeModalsNavigation()
 })
 
 async function onStart() {

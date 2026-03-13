@@ -95,6 +95,13 @@ export default defineNuxtConfig({
       routes: [...routes, '/404.html'],
     },
   },
+  vite: {
+    optimizeDeps: {
+      include: [
+        'vue-gtag-next',
+      ],
+    },
+  },
   typescript: {
     nodeTsConfig: {
       include: ['../scripts/**/*.ts'],
