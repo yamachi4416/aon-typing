@@ -14,7 +14,7 @@ export function useRouteTagsQuery(
 ) {
   const valids = new Set(whiteList)
 
-  const isValid = (value: string) => whiteList ? valids.has(value) : value
+  const isValid = (value: string) => whiteList ? valids.has(value) : !!value
   const normalizeValues = (values: string[]) =>
     [...new Set(values)].filter(isValid).toSorted((a, b) => a.localeCompare(b))
   const isSameValue = (a: string[], b: string[]) =>
