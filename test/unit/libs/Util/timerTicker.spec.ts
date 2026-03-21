@@ -110,24 +110,4 @@ describe('timerTicker', () => {
       message: 'This operation was aborted',
     })
   })
-
-  it('定義されている場合はIdleCallbackが使用される', async () => {
-    const originalRequest = globalThis.requestIdleCallback
-    const originalCancel = globalThis.cancelIdleCallback
-    globalThis.requestIdleCallback = vi.fn(() => 1)
-    globalThis.cancelIdleCallback = vi.fn()
-    try {
-      const ticker = timerTicker(500)
-      const ticks = ticker.start()
-
-      ticks.next()
-      ticker.stop()
-
-      expect(globalThis.requestIdleCallback).toBeCalled()
-      expect(globalThis.cancelIdleCallback).toBeCalled()
-    } finally {
-      globalThis.requestIdleCallback = originalRequest
-      globalThis.cancelIdleCallback = originalCancel
-    }
-  })
 })

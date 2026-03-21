@@ -1,5 +1,3 @@
-import { isFunction } from './Util'
-
 export abstract class TimerTickExecutor {
   abstract defer(
     callback: (value?: unknown) => unknown,
@@ -14,17 +12,10 @@ export abstract class TimerTickExecutor {
 
 class TimerTickExecutorImpl implements TimerTickExecutor {
   defer(callback: (value?: unknown) => unknown, timeout: number): number {
-    if (isFunction(globalThis.requestIdleCallback)) {
-      return requestIdleCallback(callback, { timeout })
-    }
     return Number(setTimeout(callback, timeout))
   }
 
   cancel(id: number) {
-    if (isFunction(globalThis.cancelIdleCallback)) {
-      cancelIdleCallback(id)
-    } else {
-      clearTimeout(id)
-    }
+    clearTimeout(id)
   }
 }
