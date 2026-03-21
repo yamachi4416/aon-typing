@@ -43,6 +43,6 @@ describe('TimeClock', () => {
     const onClick = vi.fn()
     const component = await mountComponent({ onClick })
     await component.find('g').trigger('click')
-    expect(onClick).toBeCalledTimes(1)
+    expect(onClick).toHaveBeenCalledTimes(1)
   })
 })

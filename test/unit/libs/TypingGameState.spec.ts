@@ -206,7 +206,7 @@ describe('TypingGameState', () => {
 
     state.reset()
 
-    expect(fn).toBeCalledTimes(1)
+    expect(fn).toHaveBeenCalledTimes(1)
   })
 
   it('continueを実行すると状態が初期値にリセットされる', () => {
@@ -233,6 +233,6 @@ describe('TypingGameState', () => {
 
     state.continue()
 
-    expect(fn).toBeCalledTimes(1)
+    expect(fn).toHaveBeenCalledTimes(1)
   })
 })

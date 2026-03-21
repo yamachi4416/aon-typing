@@ -193,7 +193,7 @@ describe('TypingProblemQuestioner', () => {
         'sasisuseso',
         'kakikukeko',
       ])
-      expect(shuffle).toBeCalledTimes(1)
+      expect(shuffle).toHaveBeenCalledTimes(1)
     })
   })
 })

@@ -11,8 +11,8 @@ describe('EventManager', () => {
       manager.add('keydown', handler)
       manager.dispatch(event)
 
-      expect(handler).toBeCalledTimes(1)
-      expect(handler).toBeCalledWith(event)
+      expect(handler).toHaveBeenCalledTimes(1)
+      expect(handler).toHaveBeenCalledWith(event)
     })
 
     it('イベントの購読ができる (window)', () => {
@@ -24,7 +24,7 @@ describe('EventManager', () => {
 
       document.body.click()
 
-      expect(handler).toBeCalledTimes(1)
+      expect(handler).toHaveBeenCalledTimes(1)
     })
 
     it('イベントの購読ができる (Document)', () => {
@@ -36,7 +36,7 @@ describe('EventManager', () => {
 
       document.body.click()
 
-      expect(handler).toBeCalledTimes(1)
+      expect(handler).toHaveBeenCalledTimes(1)
     })
 
     it('イベントの購読ができる (Element)', () => {
@@ -50,7 +50,7 @@ describe('EventManager', () => {
 
       target.click()
 
-      expect(handler).toBeCalledTimes(1)
+      expect(handler).toHaveBeenCalledTimes(1)
     })
 
     it('イベントの購読ができる (EventTarget)', () => {
@@ -63,7 +63,7 @@ describe('EventManager', () => {
 
       target.click()
 
-      expect(handler).toBeCalledTimes(1)
+      expect(handler).toHaveBeenCalledTimes(1)
     })
 
     it('重複して購読されない', () => {
@@ -77,7 +77,7 @@ describe('EventManager', () => {
 
       document.body.click()
 
-      expect(handler).toBeCalledTimes(1)
+      expect(handler).toHaveBeenCalledTimes(1)
     })
 
     it('複数購読できる', () => {
@@ -96,8 +96,8 @@ describe('EventManager', () => {
       target.focus()
       target.click()
 
-      expect(handler1).toBeCalledTimes(1)
-      expect(handler2).toBeCalledTimes(2)
+      expect(handler1).toHaveBeenCalledTimes(1)
+      expect(handler2).toHaveBeenCalledTimes(2)
     })
   })
 
@@ -110,8 +110,8 @@ describe('EventManager', () => {
     manager.add('c:typing', handler)
     manager.dispatch(event)
 
-    expect(handler).toBeCalledTimes(1)
-    expect(handler).toBeCalledWith(event)
+    expect(handler).toHaveBeenCalledTimes(1)
+    expect(handler).toHaveBeenCalledWith(event)
   })
 
   it('clearで購読したイベントをすべて解除できる', () => {
@@ -132,7 +132,7 @@ describe('EventManager', () => {
     target.focus()
     target.click()
 
-    expect(handler1).toBeCalledTimes(0)
-    expect(handler2).toBeCalledTimes(0)
+    expect(handler1).toHaveBeenCalledTimes(0)
+    expect(handler2).toHaveBeenCalledTimes(0)
   })
 })

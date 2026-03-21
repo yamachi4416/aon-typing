@@ -9,8 +9,8 @@ describe('AbortManager', () => {
     abort.abort()
 
     expect(abort.isAborted).toBe(true)
-    expect(handler1).toBeCalledTimes(1)
-    expect(handler2).toBeCalledTimes(1)
+    expect(handler1).toHaveBeenCalledTimes(1)
+    expect(handler2).toHaveBeenCalledTimes(1)
   })
 
   it('abort済みの場合は登録したハンドラは実行されない', () => {
@@ -19,10 +19,10 @@ describe('AbortManager', () => {
     const abort = AbortManager.create(handler)
     abort.abort()
 
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
 
     abort.abort()
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
   })
 
   it('同じハンドラは重複して登録されない', () => {
@@ -31,7 +31,7 @@ describe('AbortManager', () => {
     const abort = AbortManager.create(handler, handler)
     abort.abort()
 
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
   })
 
   it('登録したハンドラを解除できる', () => {
@@ -41,7 +41,7 @@ describe('AbortManager', () => {
     abort.removeListener(handler)
     abort.abort()
 
-    expect(handler).toBeCalledTimes(0)
+    expect(handler).toHaveBeenCalledTimes(0)
   })
 
   it('abortされた場合はthrowIfAbortedでエラーがスローされる', () => {
@@ -75,13 +75,13 @@ describe('AbortManager', () => {
 
     abort.abort()
     expect(abort.isAborted).toBe(true)
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
 
     abort.reset()
     expect(abort.isAborted).toBe(false)
 
     abort.abort()
     expect(abort.isAborted).toBe(true)
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
   })
 })

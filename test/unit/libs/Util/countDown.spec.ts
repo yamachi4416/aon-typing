@@ -15,19 +15,19 @@ describe('countDown', () => {
     const tick = vi.fn()
 
     const promise = countDown(3, tick)
-    expect(tick).toBeCalledTimes(0)
+    expect(tick).toHaveBeenCalledTimes(0)
 
     await vi.advanceTimersByTimeAsync(1000)
-    expect(tick).toBeCalledTimes(1)
-    expect(tick).toBeCalledWith(2)
+    expect(tick).toHaveBeenCalledTimes(1)
+    expect(tick).toHaveBeenCalledWith(2)
 
     await vi.advanceTimersByTimeAsync(1000)
-    expect(tick).toBeCalledTimes(2)
-    expect(tick).toBeCalledWith(1)
+    expect(tick).toHaveBeenCalledTimes(2)
+    expect(tick).toHaveBeenCalledWith(1)
 
     await vi.advanceTimersByTimeAsync(1000)
-    expect(tick).toBeCalledTimes(3)
-    expect(tick).toBeCalledWith(0)
+    expect(tick).toHaveBeenCalledTimes(3)
+    expect(tick).toHaveBeenCalledWith(0)
 
     await expect(promise).resolves.toBe(0)
   })
@@ -39,7 +39,7 @@ describe('countDown', () => {
 
     await vi.advanceTimersByTimeAsync(10000)
 
-    expect(tick).toBeCalledTimes(3)
+    expect(tick).toHaveBeenCalledTimes(3)
 
     await expect(promise).resolves.toBe(0)
   })
@@ -55,7 +55,7 @@ describe('countDown', () => {
 
     await vi.advanceTimersByTimeAsync(1000)
 
-    expect(tick).toBeCalledTimes(1)
+    expect(tick).toHaveBeenCalledTimes(1)
 
     await expect(promise).resolves.toBe(2)
   })

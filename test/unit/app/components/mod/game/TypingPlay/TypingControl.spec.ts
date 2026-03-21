@@ -146,7 +146,7 @@ describe('TypingControl', () => {
       const timer = component.findComponent(TimeCircle)
       await timer.find(`[title="${title}"]`).trigger('click')
 
-      expect(onToggle).toBeCalledTimes(1)
+      expect(onToggle).toHaveBeenCalledTimes(1)
     })
   })
 
@@ -185,7 +185,7 @@ describe('TypingControl', () => {
       const timer = component.findComponent(TimeClock)
       await timer.find(`[title="${title}"]`).trigger('click')
 
-      expect(onToggle).toBeCalledTimes(1)
+      expect(onToggle).toHaveBeenCalledTimes(1)
     })
   })
 
@@ -203,7 +203,7 @@ describe('TypingControl', () => {
       const component = await mountComponent({ state, onCancel })
       const close = component.find('[title="タイピングを中止する"]')
       await close.trigger('click')
-      expect(onCancel).toBeCalledTimes(1)
+      expect(onCancel).toHaveBeenCalledTimes(1)
     })
   })
 

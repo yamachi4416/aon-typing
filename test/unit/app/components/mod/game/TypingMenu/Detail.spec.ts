@@ -78,8 +78,8 @@ describe('ModProblemDetail', () => {
 
       await tags[0]?.trigger('click')
 
-      expect(onTag).toBeCalledTimes(1)
-      expect(onTag).toBeCalledWith({ id: '2', name: 'tag2' })
+      expect(onTag).toHaveBeenCalledTimes(1)
+      expect(onTag).toHaveBeenCalledWith({ id: '2', name: 'tag2' })
     })
   })
 
@@ -155,8 +155,8 @@ describe('ModProblemDetail', () => {
 
       await corps[0]?.trigger('click')
 
-      expect(onRailway).toBeCalledTimes(1)
-      expect(onRailway).toBeCalledWith({
+      expect(onRailway).toHaveBeenCalledTimes(1)
+      expect(onRailway).toHaveBeenCalledWith({
         code: '0001',
         name: 'CorporationName',
       })

@@ -22,19 +22,19 @@ describe('timerTicker', () => {
       return true
     })()
 
-    expect(tick).toBeCalledTimes(0)
+    expect(tick).toHaveBeenCalledTimes(0)
 
     await vi.advanceTimersByTimeAsync(500)
-    expect(tick).toBeCalledTimes(0)
+    expect(tick).toHaveBeenCalledTimes(0)
 
     await vi.advanceTimersByTimeAsync(500)
-    expect(tick).toBeCalledTimes(1)
+    expect(tick).toHaveBeenCalledTimes(1)
 
     await vi.advanceTimersByTimeAsync(500)
-    expect(tick).toBeCalledTimes(1)
+    expect(tick).toHaveBeenCalledTimes(1)
 
     await vi.advanceTimersByTimeAsync(500)
-    expect(tick).toBeCalledTimes(2)
+    expect(tick).toHaveBeenCalledTimes(2)
 
     ticker.stop()
 
@@ -52,20 +52,20 @@ describe('timerTicker', () => {
       return true
     })()
 
-    expect(tick).toBeCalledTimes(0)
+    expect(tick).toHaveBeenCalledTimes(0)
 
     await vi.advanceTimersByTimeAsync(500)
-    expect(tick).toBeCalledTimes(1)
+    expect(tick).toHaveBeenCalledTimes(1)
 
     ticker.stop()
 
     await expect(promise).resolves.toBe(true)
 
     await vi.advanceTimersByTimeAsync(500)
-    expect(tick).toBeCalledTimes(1)
+    expect(tick).toHaveBeenCalledTimes(1)
 
     await vi.advanceTimersByTimeAsync(500)
-    expect(tick).toBeCalledTimes(1)
+    expect(tick).toHaveBeenCalledTimes(1)
   })
 
   it('abortで中止できる', async () => {
@@ -81,12 +81,12 @@ describe('timerTicker', () => {
     })()
 
     await vi.advanceTimersByTimeAsync(500)
-    expect(tick).toBeCalledTimes(1)
+    expect(tick).toHaveBeenCalledTimes(1)
 
     abortManager.abort()
     await vi.advanceTimersByTimeAsync(500)
 
-    expect(tick).toBeCalledTimes(1)
+    expect(tick).toHaveBeenCalledTimes(1)
 
     await expect(promise).resolves.toBe(true)
   })

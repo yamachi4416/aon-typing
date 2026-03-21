@@ -21,24 +21,24 @@ describe('TimerManager', () => {
     expect(timer.interval).toBe(10)
     const promise = timer.start()
 
-    expect(handler1).toBeCalledTimes(0)
-    expect(handler2).toBeCalledTimes(0)
+    expect(handler1).toHaveBeenCalledTimes(0)
+    expect(handler2).toHaveBeenCalledTimes(0)
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler1).toBeCalledTimes(1)
-    expect(handler2).toBeCalledTimes(0)
+    expect(handler1).toHaveBeenCalledTimes(1)
+    expect(handler2).toHaveBeenCalledTimes(0)
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler1).toBeCalledTimes(2)
-    expect(handler2).toBeCalledTimes(1)
+    expect(handler1).toHaveBeenCalledTimes(2)
+    expect(handler2).toHaveBeenCalledTimes(1)
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler1).toBeCalledTimes(3)
-    expect(handler2).toBeCalledTimes(2)
+    expect(handler1).toHaveBeenCalledTimes(3)
+    expect(handler2).toHaveBeenCalledTimes(2)
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler1).toBeCalledTimes(4)
-    expect(handler2).toBeCalledTimes(3)
+    expect(handler1).toHaveBeenCalledTimes(4)
+    expect(handler2).toHaveBeenCalledTimes(3)
 
     timer.clear()
 
@@ -53,12 +53,12 @@ describe('TimerManager', () => {
     const promise = timer.start()
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
 
     timer.stop()
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
 
     await expect(promise).resolves.toBe(50)
   })
@@ -71,7 +71,7 @@ describe('TimerManager', () => {
     const promise1 = timer.start()
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
 
     timer.stop()
 
@@ -80,7 +80,7 @@ describe('TimerManager', () => {
     const promise2 = timer.start()
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler).toBeCalledTimes(2)
+    expect(handler).toHaveBeenCalledTimes(2)
 
     timer.stop()
 
@@ -95,12 +95,12 @@ describe('TimerManager', () => {
     const promise = timer.start()
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
 
     timer.pause()
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
 
     timer.stop()
 
@@ -115,16 +115,16 @@ describe('TimerManager', () => {
     const promise = timer.start()
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
 
     timer.pause()
 
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler).toBeCalledTimes(1)
+    expect(handler).toHaveBeenCalledTimes(1)
 
     timer.resume()
     await vi.advanceTimersByTimeAsync(50)
-    expect(handler).toBeCalledTimes(2)
+    expect(handler).toHaveBeenCalledTimes(2)
 
     timer.stop()
 

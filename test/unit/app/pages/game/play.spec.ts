@@ -46,8 +46,8 @@ describe('/pages/game/play', () => {
 
       await createPage({ problemId: problem1000001.id })
 
-      expect(pr.handler).toBeCalledTimes(0)
-      expect(cr.handler).toBeCalledTimes(0)
+      expect(pr.handler).toHaveBeenCalledTimes(0)
+      expect(cr.handler).toHaveBeenCalledTimes(0)
     })
 
     it('未取得の場合はAPIから取得する', async () => {
@@ -60,8 +60,8 @@ describe('/pages/game/play', () => {
 
       await createPage({ problemId: problem1000001.id })
 
-      expect(pr.handler).toBeCalledTimes(1)
-      expect(cr.handler).toBeCalledTimes(1)
+      expect(pr.handler).toHaveBeenCalledTimes(1)
+      expect(cr.handler).toHaveBeenCalledTimes(1)
     })
 
     it('未取得の場合はAPIから取得する（問題の内容）', async () => {
@@ -74,7 +74,7 @@ describe('/pages/game/play', () => {
 
       await createPage({ problemId: problem1000001.id })
 
-      expect(dr.handler).toBeCalledTimes(1)
+      expect(dr.handler).toHaveBeenCalledTimes(1)
     })
   })
 

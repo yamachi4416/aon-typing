@@ -35,8 +35,8 @@ describe('/pages/game/index', () => {
 
       await createPage()
 
-      expect(pr.handler).toBeCalledTimes(0)
-      expect(cr.handler).toBeCalledTimes(0)
+      expect(pr.handler).toHaveBeenCalledTimes(0)
+      expect(cr.handler).toHaveBeenCalledTimes(0)
     })
 
     it('未取得の場合はAPIから取得する', async () => {
@@ -49,8 +49,8 @@ describe('/pages/game/index', () => {
 
       await createPage()
 
-      expect(pr.handler).toBeCalledTimes(1)
-      expect(cr.handler).toBeCalledTimes(1)
+      expect(pr.handler).toHaveBeenCalledTimes(1)
+      expect(cr.handler).toHaveBeenCalledTimes(1)
     })
   })
 

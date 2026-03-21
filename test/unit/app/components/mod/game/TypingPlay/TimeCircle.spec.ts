@@ -30,6 +30,6 @@ describe('TimeCircle', () => {
     const onClick = vi.fn()
     const component = await mountComponent({ time: 0, timeLimit: 0, onClick })
     await component.find('circle').trigger('click')
-    expect(onClick).toBeCalledTimes(1)
+    expect(onClick).toHaveBeenCalledTimes(1)
   })
 })
