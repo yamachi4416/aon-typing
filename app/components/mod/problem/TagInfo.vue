@@ -11,7 +11,7 @@
           type="checkbox"
           name="tags"
           :value="t.id"
-          @keyup.enter.prevent=";($event.target as any)?.click?.()"
+          @keyup.enter.prevent="($event.target as HTMLInputElement | null)?.click?.()"
         >
         {{ t.name }}
       </label>
