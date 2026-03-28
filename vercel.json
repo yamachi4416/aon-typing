@@ -1,8 +1,0 @@
-{
-  "framework": "nuxtjs",
-  "installCommand": "pnpm install",
-  "devCommand": "pnpm run dev",
-  "buildCommand": "pnpm run generate",
-  "outputDirectory": "dist",
-  "redirects": []
-}
