@@ -20,9 +20,8 @@ jobs:
     environment: Production
 
     env:
-      NUXT_PUBLIC_SITE_URL: ${{ vars.NUXT_PUBLIC_SITE_URL }}
-      NUXT_PUBLIC_CONTACT_URL: ${{ vars.NUXT_PUBLIC_CONTACT_URL }}
-      NUXT_PUBLIC_GTAG_ID: ${{ vars.NUXT_PUBLIC_GTAG_ID }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
     steps:
       - uses: actions/checkout@v6
@@ -32,14 +31,14 @@ jobs:
           node-version: 24
           cache: 'pnpm'
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install Vercel CLI
+        run: pnpm add --global vercel@latest
 
-      - name: Run generate
-        run: pnpm run generate --preset vercel
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Deploy to vercel
-        run: |
-          VERCEL_ORG_ID=${{ secrets.VERCEL_ORG_ID }} \
-          VERCEL_PROJECT_ID=${{ secrets.VERCEL_PROJECT_ID }} \
-          pnpx vercel deploy --prebuilt --prod --no-logs --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy Project Artifacts to Vercel
+        run: pnpx vercel deploy --prebuilt --prod --no-logs --token=${{ secrets.VERCEL_TOKEN }}
