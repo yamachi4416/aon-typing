@@ -53,5 +53,10 @@ export default defineConfig({
         },
       } satisfies UserConfig),
     ],
+    onConsoleLog(log) {
+      if (log.includes('<Suspense> is an experimental feature')) {
+        return false
+      }
+    },
   },
 })
