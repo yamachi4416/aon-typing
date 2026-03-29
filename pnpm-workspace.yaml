@@ -3,6 +3,7 @@ ignoredBuiltDependencies:
   - core-js
   - esbuild
   - unrs-resolver
+  - vue-demi
 shellEmulator: true
 publicHoistPattern:
   - unplugin-vue-router
