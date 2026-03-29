@@ -40,18 +40,11 @@ onBeforeMount(() => {
   stopLoading()
 })
 
-const offline = computed(() => {
-  if (globalThis.navigator) {
-    return !globalThis.navigator.onLine
-  }
-  return false
-})
+const offline = computed(() =>
+  typeof window !== 'undefined' && window.navigator.onLine === false,
+)
 
 const desc = computed(() => {
-  if (!error) {
-    return null
-  }
-
   if (offline.value) {
     return 'offline'
   }
@@ -67,10 +60,6 @@ const desc = computed(() => {
 })
 
 const title = computed(() => {
-  if (!error) {
-    return null
-  }
-
   if (!desc.value) {
     return null
   }
