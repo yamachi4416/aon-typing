@@ -1,0 +1,29 @@
+{
+  "id": "1010565",
+  "title": "北大阪急行線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2026-03-29",
+  "updatedAt": "2026-03-29",
+  "words": [
+    { "info": "箕面萱野", "info2": "みのおかやの", "word": "minookayano" },
+    {
+      "info": "箕面船場阪大前",
+      "info2": "みのおせんばはんだいまえ",
+      "word": "minoosenbahandaimae"
+    },
+    { "info": "千里中央", "info2": "せんりちゅうおう", "word": "senrityuuou" },
+    { "info": "桃山台", "info2": "ももやまだい", "word": "momoyamadai" },
+    {
+      "info": "緑地公園",
+      "info2": "りょくちこうえん",
+      "word": "ryokutikouenn"
+    },
+    { "info": "江坂", "info2": "えさか", "word": "esaka" }
+  ],
+  "optional": { "cd": ["565"], "coCd": ["113"] }
+}
