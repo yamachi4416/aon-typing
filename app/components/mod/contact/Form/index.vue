@@ -78,9 +78,10 @@ const globalError = ref('')
 const uid = useId()
 
 const { form, errors, hasErrors, postContact } = useContact()
-const { wrapLoading } = useLoading()
+const { wrapLoading, isLoading } = useLoading()
 
 async function submit() {
+  if (isLoading.value) return
   await wrapLoading(submitPost)
 }
 

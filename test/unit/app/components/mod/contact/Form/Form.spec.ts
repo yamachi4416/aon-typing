@@ -148,4 +148,30 @@ describe('ModContactForm', () => {
     expect(alert.attributes('aria-hidden')).toBe('false')
     expect(alert.text()).toBe('申し訳ありません。お問い合わせを送信できませんでした。')
   })
+
+  it('フォームの送信は排他となっている', async () => {
+    const onPosted = vi.fn()
+
+    mockHandler.mockImplementation(async () => {
+      return 'ok'
+    })
+
+    const component = await mountComponent({ onPosted })
+    await getInput(component, 'お名前（ハンドルネーム）').setValue('test name')
+    await getInput(component, 'メールアドレス').setValue('test@example.com')
+    await getInput(component, 'お問い合わせ内容').setValue('test message')
+
+    const button = component.find('button')
+    expect(button.attributes('disabled')).not.toBeDefined()
+
+    await Promise.all([
+      button.trigger('click'),
+      button.trigger('click'),
+      button.trigger('click'),
+    ])
+    await flushPromises()
+
+    expect(mockHandler).toHaveBeenCalledOnce()
+    expect(onPosted).toHaveBeenCalledOnce()
+  })
 })
