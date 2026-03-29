@@ -67,8 +67,8 @@ jobs:
             pnpm playwright-core install-deps chromium
           fi
 
-      - name: Run generate
-        run: pnpm run generate
+      - name: Run build
+        run: pnpm run build --logLevel=silent
 
       - name: Run e2e test
         run: pnpm run test:e2e
