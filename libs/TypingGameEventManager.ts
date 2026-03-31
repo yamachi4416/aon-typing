@@ -4,7 +4,7 @@ import type { TypingEventDetail } from './EventManager'
 export abstract class TypingGameEventManager {
   abstract addKeydown(handler: (e: KeyboardEvent) => unknown): typeof handler
   abstract addTyping(handler: (e: TypingEvent) => unknown): typeof handler
-  abstract addVisibilitychange(handler: () => unknown): typeof handler
+  abstract addVisibilitychange(handler: (isVisible: boolean) => unknown): () => unknown
 
   abstract dispatchTyping(detail: TypingEventDetail): unknown
   abstract clear(): unknown
@@ -27,9 +27,12 @@ class TypingGameEventManagerImple implements TypingGameEventManager {
     return handler
   }
 
-  addVisibilitychange(handler: () => unknown) {
-    this.eventManager.add('visibilitychange', handler, document)
-    return handler
+  addVisibilitychange(handler: (isVisible: boolean) => unknown) {
+    const _handler = () => {
+      handler(document.visibilityState !== 'hidden')
+    }
+    this.eventManager.add('visibilitychange', _handler, document)
+    return _handler
   }
 
   dispatchTyping(detail: TypingEventDetail) {

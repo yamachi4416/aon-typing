@@ -112,10 +112,10 @@ class TypingGameImpl implements TypingGame {
   }
 
   private _addVisibleChangeHandler() {
-    return this.eventManager.addVisibilitychange(() =>
-      document.visibilityState === 'hidden'
-        ? this.timerManager.pause()
-        : this.timerManager.resume(),
+    return this.eventManager.addVisibilitychange((isVisible) =>
+      isVisible
+        ? this.timerManager.resume()
+        : this.timerManager.pause(),
     )
   }
 
