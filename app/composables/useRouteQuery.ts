@@ -39,7 +39,7 @@ export function useRouteQuery<T>(
     trigger()
   }
 
-  return customRef((track, trigger) => ({
+  return customRef<T[]>((track, trigger) => ({
     get() {
       track()
       return getValue()
