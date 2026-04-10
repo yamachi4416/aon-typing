@@ -30,7 +30,7 @@
     "@nuxt/eslint-config": "^1.15.2",
     "@nuxt/test-utils": "^4.0.2",
     "@nuxtjs/seo": "^5.1.2",
-    "@types/node": "^25.5.2",
+    "@types/node": "^24.12.2",
     "@vitejs/plugin-legacy": "^7.2.1",
     "@vitest/coverage-v8": "^4.1.4",
     "@vue/test-utils": "^2.4.6",
