@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <Teleport to="#teleports">
+    <Teleport v-if="isSuspenseResolved" to="#teleports">
       <PartsLoading v-show="isLoading" />
     </Teleport>
   </NuxtLayout>
@@ -10,6 +10,7 @@
 <script setup lang="ts">
 const { isLoading } = useLoading()
 const site = useSiteConfig()
+const isSuspenseResolved = ref(false)
 
 useSeoMeta({
   titleTemplate: (title) => `${title ? `${title} | ` : ''}${site.name}`,
@@ -19,6 +20,10 @@ useSeoMeta({
     height: 315,
     width: 600,
   },
+})
+
+useNuxtApp().hooks.hookOnce('app:suspense:resolve', () => {
+  isSuspenseResolved.value = true
 })
 
 onErrorCaptured((err) => {
