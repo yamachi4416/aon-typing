@@ -4,9 +4,8 @@
     :class="$style.content"
     :show-close="false"
     title="タイピングメニュー"
-    @close="emit('close')"
   >
-    <table>
+    <table aria-label="タイピングの設定">
       <tbody>
         <MenuRadioGroup
           v-model="setting.timeLimit"
@@ -48,7 +47,7 @@
       </tbody>
     </table>
 
-    <table>
+    <table aria-label="選択した問題">
       <tbody>
         <tr>
           <th>タイプ</th>
@@ -98,7 +97,6 @@ import { MenuRadioGroup } from '.'
 const emit = defineEmits<{
   start: []
   cancel: []
-  close: []
   detail: [problem: ProblemListItem]
   openProblemSelect: []
 }>()
@@ -112,7 +110,12 @@ const problem = computed(() => {
 })
 
 const { select: randomProblemSelect } = useRandomSelect(
-  toRef(setting.value, 'problemId'),
+  computed({
+    get: () => setting.value.problemId,
+    set: (value) => {
+      setting.value.problemId = value
+    },
+  }),
   computed(() => problems.value.map(({ id }) => id)),
 )
 
