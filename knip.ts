@@ -8,7 +8,7 @@ export default {
   ignoreDependencies: [
     'h3',
     'nitropack',
-    'sass',
+    'sass-embedded',
     'vitest-environment-nuxt',
     'vue-router',
     'vue-tsc',
