@@ -10,6 +10,7 @@
         <input
           v-model="model"
           type="radio"
+          :name
           :value="option.value"
         >
         {{ option.label }}
