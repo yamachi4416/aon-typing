@@ -3,6 +3,7 @@ ignoredBuiltDependencies:
   - core-js
   - esbuild
   - unrs-resolver
+  - sharp
   - vue-demi
 shellEmulator: true
 publicHoistPattern:
