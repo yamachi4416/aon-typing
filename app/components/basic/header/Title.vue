@@ -23,6 +23,7 @@ onMounted(typing)
 
 async function typing() {
   if (!anim) return
+  if (!isEnableAnimation()) return
 
   const text = fins.value.join('')
   fins.value = []

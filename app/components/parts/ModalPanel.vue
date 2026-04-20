@@ -31,6 +31,7 @@ async function animate(forward = true) {
   const element = modal.value
   if (!element) return
   if (!isFunction(element.animate)) return
+  if (!isEnableAnimation()) return
   const keyframes = [
     { transform: 'translateY(-100%)' },
     { transform: 'translateY(0)' },
