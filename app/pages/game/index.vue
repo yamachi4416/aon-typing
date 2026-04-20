@@ -3,8 +3,7 @@
 </template>
 
 <script setup lang="ts">
-const navigator = useNavigator()
-onMounted(async () => {
-  await navigator.backOrGameMenu()
+definePageMeta({
+  middleware: [() => navigateTo({ name: 'game-menu' })],
 })
 </script>

@@ -56,7 +56,6 @@ describe('/pages/game/index', () => {
 
   it('メニューにリダイレクトされる', async () => {
     const page = await createPage()
-    expect(await page.waitForPageFinished(1000)).toBe(true)
     expect(page.path).toBe('/game/menu')
     expect(page.text).toBe('/game/menu')
   })
