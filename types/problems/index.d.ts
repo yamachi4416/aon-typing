@@ -26,7 +26,7 @@ export interface TagInfo {
   problems: ProblemListItem[]
 }
 
-export interface ProblemDetailLink {
+interface ProblemDetailLink {
   site: string
   name: string
   link: string
