@@ -101,6 +101,12 @@ export default defineNuxtConfig({
         'vue-gtag-next',
       ],
     },
+    esbuild: {
+      supported: {
+        // https://github.com/vitejs/vite/issues/22225
+        destructuring: true,
+      },
+    },
   },
   typescript: {
     nodeTsConfig: {
