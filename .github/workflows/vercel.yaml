@@ -25,14 +25,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v5
+      - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: 'pnpm'
 
       - name: Install Vercel CLI
-        run: pnpm add --global vercel@latest
+        run: pnpm add --global --ignore-scripts vercel@latest
 
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
