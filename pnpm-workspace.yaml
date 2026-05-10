@@ -1,10 +1,10 @@
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
-  - core-js
-  - esbuild
-  - unrs-resolver
-  - sharp
-  - vue-demi
+allowBuilds:
+  '@parcel/watcher': false
+  core-js: false
+  esbuild: false
+  unrs-resolver: false
+  sharp: false
+  vue-demi: false
 shellEmulator: true
 publicHoistPattern:
   - unplugin-vue-router
