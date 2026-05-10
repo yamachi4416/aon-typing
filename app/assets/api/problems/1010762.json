@@ -1,0 +1,42 @@
+{
+  "id": "1010762",
+  "title": "井原鉄道井原線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2026-05-10",
+  "updatedAt": "2026-05-10",
+  "words": [
+    { "info": "神辺", "info2": "かんなべ", "word": "kannnabe" },
+    { "info": "湯野", "info2": "ゆの", "word": "yuno" },
+    { "info": "御領", "info2": "ごりょう", "word": "goryou" },
+    {
+      "info": "子守唄の里高屋",
+      "info2": "こもりうたのさとたかや",
+      "word": "komoriutanosatotakaya"
+    },
+    { "info": "いずえ", "info2": "いずえ", "word": "izue" },
+    { "info": "井原", "info2": "いばら", "word": "ibara" },
+    {
+      "info": "早雲の里荏原",
+      "info2": "そううんのさとえばら",
+      "word": "souunnnosatoebara"
+    },
+    { "info": "小田", "info2": "おだ", "word": "oda" },
+    { "info": "矢掛", "info2": "やかげ", "word": "yakage" },
+    { "info": "三谷", "info2": "みたに", "word": "mitani" },
+    {
+      "info": "備中呉妹",
+      "info2": "びっちゅうくれせ",
+      "word": "bittyuukurese"
+    },
+    { "info": "吉備真備", "info2": "きびのまきび", "word": "kibinomakibi" },
+    { "info": "川辺宿", "info2": "かわべじゅく", "word": "kawabejuku" },
+    { "info": "清音", "info2": "きよね", "word": "kiyone" },
+    { "info": "総社", "info2": "そうじゃ", "word": "souja" }
+  ],
+  "optional": { "cd": ["762"], "coCd": ["180"] }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "1010658",
+  "title": "南阿蘇鉄道高森線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2026-05-10",
+  "updatedAt": "2026-05-10",
+  "words": [
+    { "info": "高森", "info2": "たかもり", "word": "takamori" },
+    { "info": "見晴台", "info2": "みはらしだい", "word": "miharasidai" },
+    {
+      "info": "南阿蘇白川水源",
+      "info2": "みなみあそしらかわすいげん",
+      "word": "minamiasosirakawasuigenn"
+    },
+    { "info": "阿蘇白川", "info2": "あそしらかわ", "word": "asosirakawa" },
+    { "info": "中松", "info2": "なかまつ", "word": "nakamatu" },
+    {
+      "info": "南阿蘇水の生まれる里白水高原",
+      "info2": "みなみあそみずのうまれるさとはくすいこうげん",
+      "word": "minamiasomizunoumarerusatohakusuikougenn"
+    },
+    {
+      "info": "阿蘇下田城",
+      "info2": "あそしもだじょう",
+      "word": "asosimodajou"
+    },
+    { "info": "加勢", "info2": "かせ", "word": "kase" },
+    { "info": "長陽", "info2": "ちょうよう", "word": "tyouyou" },
+    { "info": "立野", "info2": "たての", "word": "tateno" }
+  ],
+  "optional": { "cd": ["658"], "coCd": ["149"] }
+}
