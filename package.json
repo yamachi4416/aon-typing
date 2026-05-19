@@ -36,15 +36,15 @@
     "@vue/test-utils": "^2.4.10",
     "citty": "^0.2.2",
     "defu": "^6.1.7",
-    "eslint": "^10.3.0",
+    "eslint": "^10.4.0",
     "eslint-plugin-compat": "^7.0.2",
     "eslint-plugin-format": "^2.0.1",
     "eslint-plugin-promise": "^7.3.0",
     "google-fonts-helper": "^3.7.4",
     "happy-dom": "^20.9.0",
     "jiti": "^2.7.0",
-    "knip": "^6.13.1",
-    "nuxt": "^4.4.5",
+    "knip": "^6.14.1",
+    "nuxt": "^4.4.6",
     "playwright-core": "^1.60.0",
     "prettier": "^3.8.3",
     "sass-embedded": "^1.99.0",
@@ -57,9 +57,9 @@
     "typescript": "^6.0.3",
     "vitest": "^4.1.6",
     "vue": "^3.5.34",
-    "vue-component-type-helpers": "^3.2.9",
+    "vue-component-type-helpers": "^3.3.0",
     "vue-gtag-next": "^1.14.0",
     "vue-router": "^5.0.7",
-    "vue-tsc": "^3.2.9"
+    "vue-tsc": "^3.3.0"
   }
 }
