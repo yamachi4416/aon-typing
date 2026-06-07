@@ -1,0 +1,35 @@
+{
+  "id": "1010639",
+  "title": "平成筑豊鉄道門司港レトロ観光線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2026-06-07",
+  "updatedAt": "2026-06-07",
+  "words": [
+    {
+      "info": "関門海峡めかり",
+      "info2": "かんもんかいきょうめかり",
+      "word": "kanmonkaikyoumekari"
+    },
+    {
+      "info": "ノーフォーク広場",
+      "info2": "のーふぉーくひろば",
+      "word": "no-fo-kuhiroba"
+    },
+    {
+      "info": "出光美術館",
+      "info2": "いでみつびじゅつかん",
+      "word": "idemitubijutukann"
+    },
+    {
+      "info": "九州鉄道記念館",
+      "info2": "きゅうしゅうてつどうきねんかん",
+      "word": "kyuusyuutetudoukinenkann"
+    }
+  ],
+  "optional": { "cd": ["639"], "coCd": ["141"] }
+}

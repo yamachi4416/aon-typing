@@ -1,0 +1,42 @@
+{
+  "id": "1010636",
+  "title": "平成筑豊鉄道伊田線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2026-06-07",
+  "updatedAt": "2026-06-07",
+  "words": [
+    { "info": "田川伊田", "info2": "たがわいた", "word": "tagawaita" },
+    { "info": "下伊田", "info2": "しもいた", "word": "simoita" },
+    {
+      "info": "田川市立病院",
+      "info2": "たがわしりつびょういん",
+      "word": "tagawasiritubyouinn"
+    },
+    { "info": "糒", "info2": "ほしい", "word": "hosii" },
+    { "info": "上金田", "info2": "かみかなだ", "word": "kamikanada" },
+    { "info": "金田", "info2": "かなだ", "word": "kanada" },
+    { "info": "人見", "info2": "ひとみ", "word": "hitomi" },
+    { "info": "赤池", "info2": "あかいけ", "word": "akaike" },
+    {
+      "info": "ふれあい生力",
+      "info2": "ふれあいしょうりき",
+      "word": "hureaisyouriki"
+    },
+    { "info": "市場", "info2": "いちば", "word": "itiba" },
+    { "info": "中泉", "info2": "なかいずみ", "word": "nakaizumi" },
+    { "info": "藤棚", "info2": "ふじたな", "word": "huzitana" },
+    { "info": "あかぢ", "info2": "あかぢ", "word": "akadi" },
+    {
+      "info": "南直方御殿口",
+      "info2": "みなみのおがたごてんぐち",
+      "word": "minaminoogatagotenguti"
+    },
+    { "info": "直方", "info2": "のおがた", "word": "noogata" }
+  ],
+  "optional": { "cd": ["636"], "coCd": ["141"] }
+}
