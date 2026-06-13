@@ -54,9 +54,17 @@ function print() {
 <style lang="scss" module>
 @use '~/assets/css/cmps';
 
-.page {
-  :where(:has([aria-labelledby='info-title'])) {
-    @media print {
+@media print {
+  @page {
+    /* stylelint-disable-next-line */
+    size: 'B4';
+  }
+
+  .page {
+    /* stylelint-disable-next-line */
+    zoom: 1.23;
+
+    :where(:has([aria-labelledby='info-title'])) {
       display: none;
     }
   }
