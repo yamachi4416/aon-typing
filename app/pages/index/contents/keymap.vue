@@ -39,6 +39,14 @@
 <script setup lang="ts">
 useHead({
   title: 'ローマ字タイピング入力表',
+  style: [
+    `
+    @media print {
+      @page {
+        size: 182mm 257mm;
+      }
+    }`,
+  ],
 })
 
 const router = useRouter()
@@ -55,11 +63,6 @@ function print() {
 @use '~/assets/css/cmps';
 
 @media print {
-  @page {
-    /* stylelint-disable-next-line */
-    size: 'B4';
-  }
-
   .page {
     /* stylelint-disable-next-line */
     zoom: 1.23;

@@ -35,6 +35,7 @@ const { name, anim = true } = defineProps<{
     height: unset;
     padding-top: 25px;
     background: var(--color-f);
+    box-shadow: none;
   }
 
   & > * {
