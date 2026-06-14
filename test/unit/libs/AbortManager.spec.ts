@@ -50,14 +50,10 @@ describe('AbortManager', () => {
     const abort = AbortManager.create(handler)
     abort.abort()
 
-    try {
-      abort.throwIfAborted()
-    } catch (e) {
-      expect(e).toMatchObject({
-        name: 'AbortError',
-        message: 'This operation was aborted',
-      })
-    }
+    expect(() => abort.throwIfAborted()).toThrow(expect.objectContaining({
+      name: 'AbortError',
+      message: 'This operation was aborted',
+    }))
   })
 
   it('abortされていない場合はthrowIfAbortedでエラーがされない', () => {

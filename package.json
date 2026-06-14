@@ -33,6 +33,7 @@
     "@types/node": "^24.13.2",
     "@vitejs/plugin-legacy": "^7.2.1",
     "@vitest/coverage-v8": "^4.1.8",
+    "@vitest/eslint-plugin": "^1.6.20",
     "@vue/test-utils": "^2.4.11",
     "citty": "^0.2.2",
     "defu": "^6.1.7",

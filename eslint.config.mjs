@@ -1,6 +1,7 @@
 import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
 import eslintPluginCompat from 'eslint-plugin-compat'
 import eslintPluginPromise from 'eslint-plugin-promise'
+import vitestPlugin from '@vitest/eslint-plugin'
 
 export default createConfigForNuxt({
   features: {
@@ -14,19 +15,34 @@ export default createConfigForNuxt({
       quoteProps: 'as-needed',
     },
   },
-})
-  .prepend(eslintPluginPromise.configs['flat/recommended'], {
+}).prepend(
+  eslintPluginPromise.configs['flat/recommended'],
+  {
     ...eslintPluginCompat.configs['flat/recommended'],
     ignores: ['./test/**/*', './scripts/**/*'],
     settings: {
       polyfills: ['es:all'],
     },
-  })
-  .overrideRules({
-    'vue/max-attributes-per-line': [
-      'error',
-      {
-        singleline: 10,
-      },
-    ],
-  })
+  },
+  {
+    ...vitestPlugin.configs.recommended,
+    name: 'vitest/recommended/unit',
+    files: ['test/**/*.spec.ts'],
+    rules: {
+      ...vitestPlugin.configs.recommended.rules,
+      'vitest/expect-expect': [
+        'error',
+        {
+          assertFunctionNames: ['expect*', 'assert'],
+        },
+      ],
+    },
+  },
+).overrideRules({
+  'vue/max-attributes-per-line': [
+    'error',
+    {
+      singleline: 10,
+    },
+  ],
+})
