@@ -8,6 +8,6 @@
     "../.nuxt/types/imports.d.ts"
   ],
   "compilerOptions": {
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals", "@nuxt/test-utils/vitest-browser-nuxt"]
   }
 }

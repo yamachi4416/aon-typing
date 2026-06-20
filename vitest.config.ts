@@ -1,6 +1,7 @@
 import { defineVitestProject } from '@nuxt/test-utils/config'
 import type { ViteUserConfig as UserConfig } from 'vitest/config'
 import { defineConfig, mergeConfig } from 'vitest/config'
+import { playwright } from '@vitest/browser-playwright'
 
 const reolveAliasConfig: UserConfig = {
   resolve: {
@@ -41,6 +42,28 @@ export default defineConfig({
               },
             },
           },
+        },
+      }),
+      await defineVitestProject({
+        test: {
+          name: 'browser',
+          dir: './test/browser',
+          globals: true,
+          testTimeout: 30_000,
+          environment: 'nuxt',
+          environmentOptions: {
+            nuxt: {
+              overrides: {
+                sourcemap: true,
+              },
+            },
+          },
+          browser: {
+            enabled: true,
+            provider: playwright(),
+            instances: [{ browser: 'chromium' }],
+          },
+          setupFiles: ['@nuxt/test-utils/vitest-browser-nuxt'],
         },
       }),
       mergeConfig(reolveAliasConfig, {

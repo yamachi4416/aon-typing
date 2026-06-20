@@ -1,3 +1,4 @@
+import { defineEventHandler } from 'h3'
 import data from '~/assets/api/railway/corporations.json'
 
 const corporations = data

@@ -4,7 +4,7 @@
   "engines": {
     "node": "24.x"
   },
-  "packageManager": "pnpm@11.6.0",
+  "packageManager": "pnpm@11.8.0",
   "browserslist": [
     "since 2023-03-01 and not Firefox < 121"
   ],
@@ -20,7 +20,7 @@
     "lint:scripts": "eslint .",
     "lint:styles": "stylelint app/**/*.{scss,vue}",
     "test": "vitest",
-    "test:unit": "vitest --project libs --project app",
+    "test:unit": "vitest --project libs --project app --project browser",
     "test:e2e": "vitest --project e2e",
     "script:preview:dist": "jiti ./scripts/preview-server -d ./dist",
     "script:problem": "jiti ./scripts/problem",
@@ -28,10 +28,12 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^1.16.0",
-    "@nuxt/test-utils": "^4.0.3",
+    "@nuxt/test-utils": "https://pkg.pr.new/@nuxt/test-utils@1725",
     "@nuxtjs/seo": "^5.3.0",
     "@types/node": "^24.13.2",
     "@vitejs/plugin-legacy": "^7.2.1",
+    "@vitest/browser": "^4.1.9",
+    "@vitest/browser-playwright": "^4.1.9",
     "@vitest/coverage-v8": "^4.1.8",
     "@vitest/eslint-plugin": "^1.6.20",
     "@vue/test-utils": "^2.4.11",
@@ -57,6 +59,7 @@
     "terser": "^5.48.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.8",
+    "vitest-browser-vue": "^2.1.0",
     "vue": "^3.5.38",
     "vue-component-type-helpers": "^3.3.4",
     "vue-gtag-next": "^1.14.0",

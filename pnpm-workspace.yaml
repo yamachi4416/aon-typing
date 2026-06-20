@@ -8,3 +8,4 @@ allowBuilds:
 shellEmulator: true
 publicHoistPattern:
   - unplugin-vue-router
+blockExoticSubdeps: false
