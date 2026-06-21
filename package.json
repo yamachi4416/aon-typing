@@ -32,7 +32,7 @@
     "@nuxtjs/seo": "^5.3.0",
     "@types/node": "^24.13.2",
     "@vitejs/plugin-legacy": "^7.2.1",
-    "@vitest/coverage-v8": "^4.1.8",
+    "@vitest/coverage-v8": "^4.1.9",
     "@vitest/eslint-plugin": "^1.6.20",
     "@vue/test-utils": "^2.4.11",
     "citty": "^0.2.2",
@@ -42,11 +42,11 @@
     "eslint-plugin-format": "^2.0.1",
     "eslint-plugin-promise": "^7.3.0",
     "google-fonts-helper": "^3.7.4",
-    "happy-dom": "^20.10.3",
+    "happy-dom": "^20.10.6",
     "jiti": "^2.7.0",
-    "knip": "^6.16.1",
+    "knip": "^6.17.1",
     "nuxt": "^4.4.8",
-    "playwright-core": "^1.60.0",
+    "playwright-core": "^1.61.0",
     "prettier": "^3.8.4",
     "sass-embedded": "^1.100.0",
     "stylelint": "^17.13.0",
@@ -56,11 +56,11 @@
     "stylelint-config-standard-scss": "^17.0.0",
     "terser": "^5.48.0",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.8",
+    "vitest": "^4.1.9",
     "vue": "^3.5.38",
-    "vue-component-type-helpers": "^3.3.4",
+    "vue-component-type-helpers": "^3.3.5",
     "vue-gtag-next": "^1.14.0",
     "vue-router": "^5.1.0",
-    "vue-tsc": "^3.3.4"
+    "vue-tsc": "^3.3.5"
   }
 }
