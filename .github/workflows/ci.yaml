@@ -5,8 +5,6 @@ on: push
 permissions: {}
 
 env:
-  PLAYWRIGHT_VERSION: ''
-  PLAYWRIGHT_BROWSERS_PATH: ''
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
 jobs:
@@ -23,6 +21,8 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - uses: ./.github/actions/install-playwright
 
       - name: Lint
         run: pnpm run lint
@@ -44,28 +44,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Set playwright path and Get playwright version
-        run: |
-          echo "PLAYWRIGHT_BROWSERS_PATH=${HOME}/.cache/playwright-bin" >> $GITHUB_ENV
-          PLAYWRIGHT_VERSION="$(pnpm ls --json playwright-core | jq --raw-output '.[0].devDependencies["playwright-core"].version')"
-          echo "PLAYWRIGHT_VERSION=${PLAYWRIGHT_VERSION}" >> $GITHUB_ENV
-
-      - name: Cache playwright bin
-        uses: actions/cache@v5
-        id: playwright-cache
-        with:
-          key: ${{ runner.os }}-playwright-bin-v1-${{ env.PLAYWRIGHT_VERSION }}
-          path: ${{ env.PLAYWRIGHT_BROWSERS_PATH }}
-          restore-keys: |
-            ${{ runner.os }}-playwright-bin-v1-
-
-      - name: Install playwright
-        run: |
-          if ${{ steps.playwright-cache.outputs.cache-hit != 'true' }}; then
-            pnpm playwright-core install --with-deps chromium
-          else
-            pnpm playwright-core install-deps chromium
-          fi
+      - uses: ./.github/actions/install-playwright
 
       - name: Run build
         run: pnpm run build --logLevel=silent

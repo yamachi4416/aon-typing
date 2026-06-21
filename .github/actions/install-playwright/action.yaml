@@ -1,0 +1,30 @@
+name: Install playwright
+description: Install playwright
+
+runs:
+  using: composite
+  steps:
+    - id: playwright-config
+      name: Set playwright path and Get playwright version
+      shell: bash
+      run: |
+        echo "PLAYWRIGHT_BROWSERS_PATH=${HOME}/.cache/playwright-bin" >> $GITHUB_ENV
+        echo "version=$(pnpm ls --json playwright-core | jq --raw-output '.[0].devDependencies["playwright-core"].version')" >> $GITHUB_OUTPUT
+
+    - id: playwright-cache
+      name: Cache playwright bin
+      uses: actions/cache@v5
+      with:
+        key: ${{ runner.os }}-playwright-bin-v1-${{ steps.playwright-config.outputs.version }}
+        path: ${{ env.PLAYWRIGHT_BROWSERS_PATH }}
+        restore-keys: |
+          ${{ runner.os }}-playwright-bin-v1-
+
+    - name: Install playwright
+      shell: bash
+      run: |
+        if ${{ steps.playwright-cache.outputs.cache-hit != 'true' }}; then
+          pnpm playwright-core install --with-deps chromium
+        else
+          pnpm playwright-core install-deps chromium
+        fi
