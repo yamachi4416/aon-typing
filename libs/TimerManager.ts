@@ -27,7 +27,6 @@ export abstract class TimerManager {
   ): TimerManager {
     return new TimerManagerImpl(
       timeProvider,
-      abortManager,
       TimerTicker.create(interval, {
         timeProvider,
         abortManager,
@@ -43,18 +42,15 @@ class TimerManagerImpl implements TimerManager {
   }
 
   private readonly timeProvider: TimeProvider
-  private readonly abortManager: AbortManager
   private readonly timerTicker: TimerTicker
   private paused: boolean = false
   private entries: TimerEntry[] = []
 
   constructor(
     timeProvider: TimeProvider,
-    abortManager: AbortManager,
     timerTicker: TimerTicker,
   ) {
     this.timeProvider = timeProvider
-    this.abortManager = abortManager
     this.timerTicker = timerTicker
   }
 
@@ -78,8 +74,6 @@ class TimerManagerImpl implements TimerManager {
   }
 
   async start() {
-    this.abortManager.throwIfAborted()
-
     this.timerTicker.stop()
 
     const startTime = this.getTime()
