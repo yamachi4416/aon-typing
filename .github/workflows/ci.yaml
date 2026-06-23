@@ -5,6 +5,7 @@ on: push
 permissions: {}
 
 env:
+  DO_NOT_TRACK: '1'
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
 jobs:
