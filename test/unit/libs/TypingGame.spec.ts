@@ -312,7 +312,7 @@ describe('TypingGame', () => {
     expect(info?.totalTypeCount).toBe(20)
   })
 
-  it('Visibilitychange', async () => {
+  it('visibilitychange', async () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)
     const timerManager = TimerManager.create(10)
@@ -325,7 +325,7 @@ describe('TypingGame', () => {
 
     vi.spyOn(document, 'visibilityState', 'get').mockReturnValue('hidden')
     document.dispatchEvent(new Event('visibilitychange'))
-    await vi.advanceTimersByTimeAsync(100000)
+    await vi.advanceTimersByTimeAsync(10000)
 
     vi.spyOn(document, 'visibilityState', 'get').mockReturnValue('visible')
     document.dispatchEvent(new Event('visibilitychange'))

@@ -6,5 +6,3 @@ allowBuilds:
   sharp: false
   vue-demi: false
 shellEmulator: true
-publicHoistPattern:
-  - unplugin-vue-router

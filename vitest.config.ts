@@ -1,6 +1,7 @@
 import { defineVitestProject } from '@nuxt/test-utils/config'
 import type { ViteUserConfig as UserConfig } from 'vitest/config'
 import { defineConfig, mergeConfig } from 'vitest/config'
+import { playwright } from '@vitest/browser-playwright'
 
 const reolveAliasConfig: UserConfig = {
   resolve: {
@@ -19,27 +20,35 @@ export default defineConfig({
     coverage: {
       exclude: ['./test/**/*', './app/assets/**/*'],
     },
+    hookTimeout: 30_000,
+    testTimeout: 30_000,
+    passWithNoTests: true,
     projects: [
       mergeConfig(reolveAliasConfig, {
         test: {
-          name: 'libs',
-          include: ['./test/unit/{data,libs}/**/*.spec.ts'],
+          name: 'unit',
+          dir: './test/unit',
           environment: 'happy-dom',
-          testTimeout: 30_000,
         },
       } satisfies UserConfig),
-      await defineVitestProject({
+      defineVitestProject({
         test: {
-          name: 'app',
-          dir: './test/unit/app',
+          name: 'app:nuxt',
+          dir: './test/app',
           globals: true,
-          testTimeout: 30_000,
-          environmentOptions: {
-            nuxt: {
-              overrides: {
-                sourcemap: true,
-              },
-            },
+        },
+      }),
+      defineVitestProject({
+        test: {
+          name: 'app:browser',
+          dir: './test/browser',
+          environment: 'nuxt',
+          globals: true,
+          browser: {
+            enabled: true,
+            screenshotFailures: false,
+            provider: playwright(),
+            instances: [{ browser: 'chromium' }],
           },
         },
       }),
@@ -49,7 +58,6 @@ export default defineConfig({
           dir: './test/e2e',
           globalSetup: ['./test/e2e/globalSetup.ts'],
           setupFiles: ['./test/e2e/setup.ts'],
-          testTimeout: 30_000,
         },
       } satisfies UserConfig),
     ],
