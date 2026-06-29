@@ -22,7 +22,7 @@ interface Info {
 }
 
 async function loadInfoData({ file }: { file: string }) {
-  const text = await readFile(file, { flag: 'r', encoding: 'utf8' })
+  const text = await readFile(file, { encoding: 'utf8' })
   const info: Info = {
     id: path.basename(file, path.extname(file)),
     file,

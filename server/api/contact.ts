@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
   console.log(body)
   await new Promise((resolve) => setTimeout(resolve, 1000))
   if (body?.name === 'error') {
-    event.node.res.statusCode = 400
+    setResponseStatus(event, 400)
   }
   return null
 })

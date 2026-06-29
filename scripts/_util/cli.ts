@@ -15,7 +15,7 @@ async function applyCommandConfig(args: string[], insertPos: number) {
   if (!file) return
 
   const configArgs = Object.entries(
-    JSON.parse(await fs.readFile(file, { flag: 'r', encoding: 'utf8' })),
+    JSON.parse(await fs.readFile(file, { encoding: 'utf8' })),
   ).map(([key, value]) => `--${key}=${value}`)
 
   args.splice(insertPos, 0, ...configArgs)

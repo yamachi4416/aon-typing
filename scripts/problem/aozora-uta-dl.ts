@@ -228,7 +228,7 @@ async function aozoraDL(args: { url: string, dist: string, word: number }) {
     }
     const dist = path.resolve(distDir, `${page.id}.json`)
     const temp = JSON.parse(
-      await fs.readFile(dist, { flag: 'r', encoding: 'utf8' }),
+      await fs.readFile(dist, { encoding: 'utf8' }),
     )
     if (temp.skip) {
       console.info(`skip write: ${dist}`)

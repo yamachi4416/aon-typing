@@ -2,14 +2,14 @@ import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import type { ProblemDetail } from '~~/types/problems'
 
-export default defineEventHandler(async ({ context, node: { res } }) => {
+export default defineEventHandler(async (event) => {
   try {
-    const id = context.params?.id?.split('.')[0]
-    const { apiDir } = useRuntimeConfig()
-    const buffer = await readFile(join(apiDir, 'problems', `${id}.json`))
-    return JSON.parse(String(buffer)) as ProblemDetail
+    const id = getRouterParam(event, 'id')?.split('.')[0]
+    const { apiDir } = useRuntimeConfig(event)
+    const content = await readFile(join(apiDir, 'problems', `${id}.json`), { encoding: 'utf8' })
+    return JSON.parse(content) as ProblemDetail
   } catch (e) {
     console.error(e)
-    res.statusCode = 404
+    setResponseStatus(event, 404)
   }
 })

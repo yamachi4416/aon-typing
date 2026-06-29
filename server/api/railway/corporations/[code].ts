@@ -13,10 +13,10 @@ const corporations = new Map(
     .map((co) => [co.code, co]),
 )
 
-export default defineEventHandler(({ context, node: { res } }) => {
-  const code = context.params?.code?.split('.')[0]
+export default defineEventHandler((event) => {
+  const code = getRouterParam(event, 'code')?.split('.')[0]
   if (code && corporations.has(code)) {
     return corporations.get(code)
   }
-  res.statusCode = 404
+  setResponseStatus(event, 404)
 })

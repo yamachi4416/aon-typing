@@ -22,10 +22,7 @@ export async function prettyJson(data: unknown) {
 
 export async function readJson<T>(file: string, defaultValue?: T) {
   try {
-    const content = await fs.readFile(file, {
-      flag: 'r',
-      encoding: 'utf8',
-    })
+    const content = await fs.readFile(file, { encoding: 'utf8' })
     return JSON.parse(content) as T
   } catch (e) {
     if (defaultValue) return defaultValue

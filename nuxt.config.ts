@@ -98,6 +98,7 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: {
       include: [
+        '@unhead/schema-org/vue',
         'vue-gtag-next',
       ],
     },
