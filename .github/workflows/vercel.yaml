@@ -10,6 +10,7 @@ permissions: {}
 
 env:
   DO_NOT_TRACK: '1'
+  VERCEL_TELEMETRY_DISABLED: '1'
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
 jobs:
