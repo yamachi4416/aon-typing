@@ -1,0 +1,29 @@
+{
+  "id": "1010591",
+  "title": "神戸新交通六甲アイランド線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2026-06-29",
+  "updatedAt": "2026-06-29",
+  "words": [
+    { "info": "マリンパーク", "info2": "まりんぱーく", "word": "marinpa-ku" },
+    {
+      "info": "アイランドセンター",
+      "info2": "あいらんどせんたー",
+      "word": "airandosenta-"
+    },
+    {
+      "info": "アイランド北口",
+      "info2": "あいらんどきたぐち",
+      "word": "airandokitaguti"
+    },
+    { "info": "南魚崎", "info2": "みなみうおざき", "word": "minamiuozaki" },
+    { "info": "魚崎", "info2": "うおざき", "word": "uozaki" },
+    { "info": "住吉", "info2": "すみよし", "word": "sumiyosi" }
+  ],
+  "optional": { "cd": ["591"], "coCd": ["122"] }
+}

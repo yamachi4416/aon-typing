@@ -1,0 +1,31 @@
+{
+  "id": "1010584",
+  "title": "神鉄公園都市線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2026-06-29",
+  "updatedAt": "2026-06-29",
+  "words": [
+    {
+      "info": "ウッディタウン中央",
+      "info2": "うっでぃたうんちゅうおう",
+      "word": "uddhitauntyuuou"
+    },
+    {
+      "info": "南ウッディタウン",
+      "info2": "みなみうっでぃたうん",
+      "word": "minamiuddhitaunn"
+    },
+    {
+      "info": "フラワータウン",
+      "info2": "ふらわーたうん",
+      "word": "hurawa-taunn"
+    },
+    { "info": "横山", "info2": "よこやま", "word": "yokoyama" }
+  ],
+  "optional": { "cd": ["584"], "coCd": ["119"] }
+}
