@@ -62,7 +62,7 @@ export default defineNuxtConfig({
       },
       meta: [{ name: 'google', content: 'notranslate' }],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-      script: [{ src: '/static/js/index.js' }],
+      script: [{ type: 'module', src: '/static/js/index.mjs' }],
     },
   },
   css: ['~/assets/css/main.scss'],
