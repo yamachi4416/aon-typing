@@ -1,4 +1,4 @@
-import type { KeyLayoutName } from './Keys'
+import type { KeyLayoutName } from './Keys.ts'
 
 export abstract class TypingGameSetting {
   abstract timeLimit: number

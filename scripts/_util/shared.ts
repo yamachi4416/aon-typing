@@ -1,4 +1,4 @@
-export { isFunction } from '../../libs/Util'
+export { isFunction } from '../../libs/Util.ts'
 
 function formatDateValues(date?: Date) {
   const d = date ?? new Date()

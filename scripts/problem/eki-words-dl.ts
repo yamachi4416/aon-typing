@@ -1,8 +1,8 @@
 import { readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
-import { defineCommand } from '../_util/cli'
-import { fetchOperationLine, fetchStations } from './ekispert/api'
-import { prettyJson } from '../_util/io'
+import { defineCommand } from '../_util/cli.ts'
+import { fetchOperationLine, fetchStations } from './ekispert/api.ts'
+import { prettyJson } from '../_util/io.ts'
 
 interface Data {
   title: string

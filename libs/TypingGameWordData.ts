@@ -1,6 +1,6 @@
 import type { ProblemDetailWord } from '~~/types/problems'
-import type { TypingGameWordInfoState } from './TypingGameWordStates'
-import { TypingGameWordState } from './TypingGameWordStates'
+import type { TypingGameWordInfoState } from './TypingGameWordStates.ts'
+import { TypingGameWordState } from './TypingGameWordStates.ts'
 
 export abstract class TypingGameWordData {
   abstract get index(): number

@@ -1,8 +1,8 @@
 import path from 'node:path'
-import { confirm, defineCommand } from '../_util/cli'
-import { fetchOperationLine, fetchStations } from './ekispert/api'
-import { fmtDate, isFileNotFoundError } from '../_util/shared'
-import { isPathExists, readJson, writeJson } from '../_util/io'
+import { confirm, defineCommand } from '../_util/cli.ts'
+import { fetchOperationLine, fetchStations } from './ekispert/api.ts'
+import { fmtDate, isFileNotFoundError } from '../_util/shared.ts'
+import { isPathExists, readJson, writeJson } from '../_util/io.ts'
 
 interface Data {
   title: string

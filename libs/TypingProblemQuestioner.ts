@@ -1,7 +1,7 @@
 import type { ProblemDetail } from '~~/types/problems'
-import type { TypingGameSetting } from './TypingGameSetting'
-import { TypingGameWordData } from './TypingGameWordData'
-import { shuffle } from './Util'
+import type { TypingGameSetting } from './TypingGameSetting.ts'
+import { TypingGameWordData } from './TypingGameWordData.ts'
+import { shuffle } from './Util.ts'
 
 type Problem = Readonly<Pick<ProblemDetail, 'id' | 'type' | 'words'>>
 type Setting = Readonly<Pick<TypingGameSetting, 'problemOrder'>>

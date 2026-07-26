@@ -1,7 +1,7 @@
 import type { ProblemDetail } from '~~/types/problems'
-import type { TypingEventDetail } from './EventManager'
-import type { TypingGameSetting } from './TypingGameSetting'
-import { TypingProblemQuestioner } from './TypingProblemQuestioner'
+import type { TypingEventDetail } from './EventManager.ts'
+import type { TypingGameSetting } from './TypingGameSetting.ts'
+import { TypingProblemQuestioner } from './TypingProblemQuestioner.ts'
 
 class TypingGameStateValue {
   tick = 0

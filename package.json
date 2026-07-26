@@ -22,9 +22,9 @@
     "test": "vitest",
     "test:unit": "vitest --project unit --project app:nuxt --project app:browser",
     "test:e2e": "vitest --project e2e",
-    "script:preview:dist": "jiti ./scripts/preview-server -d ./dist",
-    "script:problem": "jiti ./scripts/problem",
-    "script:problem:generate": "jiti ./scripts/problem generate -i ./data -o ./app/assets/api"
+    "script:preview:dist": "node --experimental-transform-types ./scripts/preview-server.ts -d ./dist",
+    "script:problem": "node --experimental-transform-types ./scripts/problem.ts",
+    "script:problem:generate": "node --experimental-transform-types ./scripts/problem.ts generate -i ./data -o ./app/assets/api"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^1.16.0",
@@ -45,7 +45,6 @@
     "eslint-plugin-promise": "^7.3.0",
     "google-fonts-helper": "^3.7.4",
     "happy-dom": "^20.11.1",
-    "jiti": "^2.7.0",
     "knip": "^6.29.0",
     "nuxt": "^4.5.0",
     "playwright-core": "^1.61.1",

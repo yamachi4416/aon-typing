@@ -1,1 +1,1 @@
-export { kana2Hira } from '../../libs/TypingUtil'
+export { kana2Hira } from '../../libs/TypingUtil.ts'

@@ -1,8 +1,8 @@
 import { mkdir } from 'node:fs/promises'
 import path from 'node:path'
-import { isPathExists, writeJson } from '../_util/io'
-import { defineCommand } from '../_util/cli'
-import { fetchCorporations, fetchOperationLines } from './ekispert/api'
+import { isPathExists, writeJson } from '../_util/io.ts'
+import { defineCommand } from '../_util/cli.ts'
+import { fetchCorporations, fetchOperationLines } from './ekispert/api.ts'
 
 export default defineCommand({
   meta: {

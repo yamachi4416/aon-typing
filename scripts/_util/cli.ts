@@ -5,7 +5,7 @@ import {
 import type { Resolvable } from 'citty'
 import fs from 'node:fs/promises'
 import { createInterface } from 'node:readline/promises'
-import { isFunction } from './shared'
+import { isFunction } from './shared.ts'
 
 async function applyCommandConfig(args: string[], insertPos: number) {
   const index = args.indexOf('--config')

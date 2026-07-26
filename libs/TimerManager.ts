@@ -1,7 +1,8 @@
-import { AbortManager } from './AbortManager'
-import { TimeProvider } from './TimeProvider'
-import { TimerEntry } from './TimerEntry'
-import { TimerTicker } from './TimerTicker'
+import { AbortManager } from './AbortManager.ts'
+import { TimeProvider } from './TimeProvider.ts'
+import { TimerEntry } from './TimerEntry.ts'
+import { TimerTicker } from './TimerTicker.ts'
+import type { TimerTickerOptions } from './TimerTicker.ts'
 
 export abstract class TimerManager {
   public abstract get interval(): number
@@ -23,7 +24,7 @@ export abstract class TimerManager {
       timeProvider = TimeProvider.default(),
       abortManager = AbortManager.create(),
       ...options
-    }: Parameters<typeof TimerTicker.create>[1] = {},
+    }: TimerTickerOptions = {},
   ): TimerManager {
     return new TimerManagerImpl(
       timeProvider,

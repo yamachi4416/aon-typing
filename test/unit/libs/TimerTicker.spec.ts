@@ -1,7 +1,7 @@
 import { AbortManager } from '~~/libs/AbortManager'
-import { timerTicker } from '~~/libs/Util'
+import { TimerTicker } from '~~/libs/TimerTicker'
 
-describe('timerTicker', () => {
+describe('TimerTicker', () => {
   beforeEach(() => {
     vi.useFakeTimers()
   })
@@ -14,7 +14,7 @@ describe('timerTicker', () => {
   it('指定した間隔で実行される', async () => {
     const tick = vi.fn()
 
-    const ticker = timerTicker(1000)
+    const ticker = TimerTicker.create(1000)
     const promise = (async () => {
       for await (const time of ticker.start()) {
         tick(time)
@@ -44,7 +44,7 @@ describe('timerTicker', () => {
   it('stopで停止できる', async () => {
     const tick = vi.fn()
 
-    const ticker = timerTicker(500)
+    const ticker = TimerTicker.create(500)
     const promise = (async () => {
       for await (const time of ticker.start()) {
         tick(time)
@@ -72,7 +72,7 @@ describe('timerTicker', () => {
     const tick = vi.fn()
 
     const abortManager = AbortManager.create()
-    const ticker = timerTicker(500, { abortManager })
+    const ticker = TimerTicker.create(500, { abortManager })
     const promise = (async () => {
       for await (const time of ticker.start()) {
         tick(time)
@@ -95,7 +95,7 @@ describe('timerTicker', () => {
     const tick = vi.fn()
 
     const abortManager = AbortManager.create()
-    const ticker = timerTicker(500, { abortManager, rejectOnAbort: true })
+    const ticker = TimerTicker.create(500, { abortManager, rejectOnAbort: true })
     const promise = (async () => {
       for await (const time of ticker.start()) {
         tick(time)

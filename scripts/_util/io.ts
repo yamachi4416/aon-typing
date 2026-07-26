@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import { format as prettier } from 'prettier'
-import { isFileNotFoundError, isFunction } from './shared'
+import { isFileNotFoundError, isFunction } from './shared.ts'
 
 export async function isPathExists(file: string) {
   try {

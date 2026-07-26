@@ -2,9 +2,9 @@ import { Element, Window } from 'happy-dom'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { TextDecoder } from 'node:util'
-import { defineCommand } from '../_util/cli'
-import { httpFetch } from '../_util/http'
-import { kana2Hira } from '../_util/typing'
+import { defineCommand } from '../_util/cli.ts'
+import { httpFetch } from '../_util/http.ts'
+import { kana2Hira } from '../_util/typing.ts'
 
 const normalizeMap: Record<string, string> = {
   一: '１',

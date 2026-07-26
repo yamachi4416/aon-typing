@@ -1,6 +1,6 @@
-import { AbortManager } from './AbortManager'
-import { TimeProvider } from './TimeProvider'
-import { TimerTickExecutor } from './TimerTickExecutor'
+import { AbortManager } from './AbortManager.ts'
+import { TimeProvider } from './TimeProvider.ts'
+import { TimerTickExecutor } from './TimerTickExecutor.ts'
 
 export type TimerTickerOptions = TimerTickerImpl['options'] & {
   executor?: TimerTickExecutor

@@ -1,5 +1,5 @@
-import { defineCommand, runMain } from './_util/cli'
-import { previewServer } from './lib/preview'
+import { defineCommand, runMain } from './_util/cli.ts'
+import { previewServer } from './lib/preview.ts'
 
 const command = defineCommand({
   meta: {

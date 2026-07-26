@@ -1,4 +1,4 @@
-import { toInvertRecord } from './Util'
+import { toInvertRecord } from './Util.ts'
 
 const Kana2HiraMap = {
   ア: 'あ',

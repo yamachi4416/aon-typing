@@ -1,6 +1,5 @@
-import { TimerManager } from './TimerManager'
-import type { TimerTickerOptions } from './TimerTicker'
-import { TimerTicker } from './TimerTicker'
+import { TimerManager } from './TimerManager.ts'
+import type { TimerTickerOptions } from './TimerTicker.ts'
 
 export function isNumber(num: unknown): num is number {
   return typeof num === 'number' && !isNaN(num)
@@ -21,8 +20,6 @@ export function toInvertRecord<K extends PropertyKey, V extends PropertyKey>(
       .map((key) => [record[key as K], key]),
   ) as Record<V extends number ? `${V}` : V, K extends number ? `${K}` : K>
 }
-
-export const timerTicker = TimerTicker.create
 
 async function intervalTimer(
   count: number,

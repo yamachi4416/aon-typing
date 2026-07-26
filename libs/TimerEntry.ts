@@ -1,4 +1,4 @@
-import { isFunction } from './Util'
+import { isFunction } from './Util.ts'
 
 export abstract class TimerEntry {
   abstract setup(time: number): this

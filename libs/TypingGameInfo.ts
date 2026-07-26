@@ -1,5 +1,5 @@
-import type { TypingGameState } from './TypingGameState'
-import type { TypingGameWordData } from './TypingGameWordData'
+import type { TypingGameState } from './TypingGameState.ts'
+import type { TypingGameWordData } from './TypingGameWordData.ts'
 
 type Rank = {
   id: number

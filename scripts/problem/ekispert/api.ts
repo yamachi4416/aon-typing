@@ -1,5 +1,5 @@
-import { httpFetch } from '../../_util/http'
-import { toArray } from '../../_util/shared'
+import { httpFetch } from '../../_util/http.ts'
+import { toArray } from '../../_util/shared.ts'
 
 interface PagingResult {
   ResultSet: {

@@ -1,10 +1,10 @@
-import { TimerManager } from './TimerManager'
-import { TypingGameEventManager } from './TypingGameEventManager'
-import { TypingGameInfo } from './TypingGameInfo'
-import { TypingGamer } from './TypingGamer'
-import type { TypingGameSetting } from './TypingGameSetting'
-import type { TypingGameState } from './TypingGameState'
-import type { TypingGameWordData } from './TypingGameWordData'
+import { TimerManager } from './TimerManager.ts'
+import { TypingGameEventManager } from './TypingGameEventManager.ts'
+import { TypingGameInfo } from './TypingGameInfo.ts'
+import { TypingGamer } from './TypingGamer.ts'
+import type { TypingGameSetting } from './TypingGameSetting.ts'
+import type { TypingGameState } from './TypingGameState.ts'
+import type { TypingGameWordData } from './TypingGameWordData.ts'
 
 export abstract class TypingGame {
   abstract start(): Promise<TypingGameInfo | undefined>

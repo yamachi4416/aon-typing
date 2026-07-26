@@ -1,5 +1,5 @@
-import type { TypingGameWordData } from './TypingGameWordData'
-import type { TypingGamer } from './TypingGamer'
+import type { TypingGameWordData } from './TypingGameWordData.ts'
+import type { TypingGamer } from './TypingGamer.ts'
 
 export class TypingGamerEnglish implements TypingGamer {
   init(word: TypingGameWordData) {
