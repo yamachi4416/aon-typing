@@ -43,24 +43,8 @@ export function endpointRegister() {
 
 type MountSuspendedOptions = Parameters<typeof mountSuspended<typeof App>>[1]
 
-function setupTeleport() {
-  document.getElementById('teleports')?.remove()
-  const teleports = document.createElement('div')
-  teleports.setAttribute('id', 'teleports')
-  document.body.appendChild(teleports)
-}
-
 export async function mountAppSuspended(options?: MountSuspendedOptions) {
-  setupTeleport()
-  const page = await mountSuspended(App, {
-    ...options,
-    global: {
-      ...options?.global,
-      stubs: {
-        ...options?.global?.stubs,
-      },
-    },
-  })
+  const page = await mountSuspended(App, options)
   await flushPromises()
   return page
 }
