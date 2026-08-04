@@ -9,7 +9,7 @@ runs:
       shell: bash
       run: |
         echo "PLAYWRIGHT_BROWSERS_PATH=${HOME}/.cache/playwright-bin" >> $GITHUB_ENV
-        echo "version=$(pnpm ls --json playwright-core | jq --raw-output '.[0].devDependencies["playwright-core"].version')" >> $GITHUB_OUTPUT
+        echo "version=$(pnpm ls --json playwright | jq --raw-output '.[0].devDependencies["playwright"].version')" >> $GITHUB_OUTPUT
 
     - id: playwright-cache
       name: Cache playwright bin
@@ -24,7 +24,7 @@ runs:
       shell: bash
       run: |
         if ${{ steps.playwright-cache.outputs.cache-hit != 'true' }}; then
-          pnpm playwright-core install --with-deps chromium
+          pnpm playwright install --with-deps chromium
         else
-          pnpm playwright-core install-deps chromium
+          pnpm playwright install-deps chromium
         fi

@@ -47,7 +47,7 @@
     "happy-dom": "^20.11.1",
     "knip": "^6.31.0",
     "nuxt": "^4.5.1",
-    "playwright-core": "^1.61.1",
+    "playwright": "^1.62.1",
     "postcss-html": "^2.0.0",
     "prettier": "^3.9.6",
     "sass-embedded": "^1.100.0",
