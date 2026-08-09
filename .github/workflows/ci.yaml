@@ -23,7 +23,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - uses: ./.github/actions/install-playwright
+      - name: Install Playwright
+        run: pnpm playwright install --with-deps chromium
 
       - name: Lint
         run: pnpm run lint
@@ -45,7 +46,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - uses: ./.github/actions/install-playwright
+      - name: Install Playwright
+        run: pnpm playwright install --with-deps chromium
 
       - name: Run build
         run: pnpm run build --logLevel=silent
