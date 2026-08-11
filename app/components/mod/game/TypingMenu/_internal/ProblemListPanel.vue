@@ -38,12 +38,10 @@ import type { ProblemItemTag, ProblemListItem } from '~~/types/problems'
 defineEmits<{
   select: [item: ProblemListItem]
   detail: [item: ProblemListItem]
-  tag: [item: ProblemItemTag]
   close: []
 }>()
 
-const page = ref(1)
-const tags = ref(new Map<string, ProblemItemTag>())
+const { list: { page, tags } } = useGameMenuState()
 
 const problems = useProblemsFilter(useProblems().problems, {
   tags: computed(() => tags.value.keys()),

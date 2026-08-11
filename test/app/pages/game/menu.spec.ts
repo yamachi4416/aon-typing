@@ -1,4 +1,5 @@
 import problem1000001 from '~/assets/api/problems/1000001.json'
+import problem1000101 from '~/assets/api/problems/1000101.json'
 import { routerSetup, endpointRegister } from './_utils'
 import { MenuPageModel } from './menu.model'
 
@@ -17,7 +18,8 @@ describe('pages/game/menu', () => {
     unregisterEndpoints()
     clearNuxtState()
     useGameSetting().resetSetting()
-    useState('/api/problems.json').value = { problems: [problem1000001] }
+    useGameMenuState().reset()
+    useState('/api/problems.json').value = { problems: [problem1000001, problem1000101] }
     useState('/api/problems/1000001.json').value = problem1000001
     useState('/api/railway/corporations.json').value = []
   })
