@@ -9,7 +9,7 @@
     { "id": "00013", "name": "歴史" }
   ],
   "createdAt": "2021-05-31",
-  "updatedAt": "2025-10-18",
+  "updatedAt": "2026-08-11",
   "words": [
     {
       "info": "（第1代）伊藤 博文",
@@ -405,6 +405,11 @@
       "info": "（第102~103代）石破 茂",
       "info2": "いしば しげる",
       "word": "isiba sigeru"
+    },
+    {
+      "info": "（第104代）高市 早苗",
+      "info2": "たかいち さなえ",
+      "word": "takaiti sanae"
     }
   ]
 }
