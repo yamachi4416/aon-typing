@@ -1,7 +1,6 @@
 import type { Page } from '~~/test/e2e/util'
 import {
   createPage,
-  expectLoadingHidden,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -52,7 +51,7 @@ describe.each([
     await getPageLink(page, 2).click()
 
     await waitForRouterPath(page, pagenateUrl(2))
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
 
     expect(await getItem(page, pageSize).isVisible()).toBeTruthy()
     expect(await getPageListbox(page).inputValue()).toBe('2')
@@ -60,7 +59,7 @@ describe.each([
     await getPageLink(page, 3).click()
 
     await waitForRouterPath(page, pagenateUrl(3))
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
 
     expect(await getPageListbox(page).inputValue()).toBe('3')
     expect(await getItem(page, pageSize * 2).isVisible()).toBeTruthy()
@@ -74,7 +73,7 @@ describe.each([
     await getPageLink(page, lastPage).click()
 
     await waitForRouterPath(page, pagenateUrl(lastPage))
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
 
     expect(await getPageListbox(page).inputValue()).toBe(String(lastPage))
     expect(await getItem(page, problems.length - 1).isVisible()).toBeTruthy()
@@ -93,7 +92,7 @@ describe.each([
     await listbox.selectOption('2')
 
     await waitForRouterPath(page, pagenateUrl(2))
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
 
     expect(await getItem(page, pageSize).isVisible()).toBeTruthy()
     expect(await getPageListbox(page).inputValue()).toBe('2')
@@ -101,7 +100,7 @@ describe.each([
     await listbox.selectOption(String(lastPage))
 
     await waitForRouterPath(page, pagenateUrl(lastPage))
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
 
     expect(await getItem(page, problems.length - 1).isVisible()).toBeTruthy()
     expect(await getPageListbox(page).inputValue()).toBe(String(lastPage))

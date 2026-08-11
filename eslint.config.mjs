@@ -28,15 +28,6 @@ export default createConfigForNuxt({
     ...vitestPlugin.configs.recommended,
     name: 'vitest/recommended/unit',
     files: ['test/**/*.spec.ts'],
-    rules: {
-      ...vitestPlugin.configs.recommended.rules,
-      'vitest/expect-expect': [
-        'error',
-        {
-          assertFunctionNames: ['expect*', 'assert'],
-        },
-      ],
-    },
   },
 ).overrideRules({
   'vue/max-attributes-per-line': [

@@ -1,8 +1,6 @@
 import problems from '~/assets/api/newProblems.json'
 import {
   createPage,
-  expectLoadingHidden,
-  expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -24,12 +22,12 @@ describe.each(problems.slice(0, 2))(
       await button.click()
       await waitForRouterPath(page, `/problems/${problem.id}`)
 
-      await expectPageTitle(page, problem.id)
-      await expectLoadingHidden(page)
+      await expect(page).toPageTitleContain(problem.id)
+      await expect(page).isPageLoadingHidden()
 
       await page.goBack()
       await waitForRouterPath(page, '/problems/news')
-      await expectLoadingHidden(page)
+      await expect(page).isPageLoadingHidden()
     })
 
     it(`No.${problem.id}の問題の'プレイする'ボタンをクリックすると'タイピングメニュー'ページに遷移する`, async () => {
@@ -47,7 +45,7 @@ describe.each(problems.slice(0, 2))(
       await button.click()
       await waitForRouterPath(page, '/game/menu')
 
-      await expectPageTitle(page, 'タイピングメニュー')
+      await expect(page).toPageTitleContain('タイピングメニュー')
 
       const selected = page.getByRole('link', {
         name: problem.title,
@@ -55,11 +53,11 @@ describe.each(problems.slice(0, 2))(
       })
 
       expect(await selected.isVisible()).toBeTruthy()
-      await expectLoadingHidden(page)
+      await expect(page).isPageLoadingHidden()
 
       await page.goBack()
       await waitForRouterPath(page, '/problems/news')
-      await expectLoadingHidden(page)
+      await expect(page).isPageLoadingHidden()
     })
 
     it(`No.${problem.id}の問題の'タグ'ボタンをクリックすると'タグ'ページに遷移する`, async () => {
@@ -77,12 +75,12 @@ describe.each(problems.slice(0, 2))(
       await button.click()
       await waitForRouterPath(page, `/problems/tags/${tag.id}`)
 
-      await expectPageTitle(page, `問題 タグ：${tag.name}`)
-      await expectLoadingHidden(page)
+      await expect(page).toPageTitleContain(`問題 タグ：${tag.name}`)
+      await expect(page).isPageLoadingHidden()
 
       await page.goBack()
       await waitForRouterPath(page, '/problems/news')
-      await expectLoadingHidden(page)
+      await expect(page).isPageLoadingHidden()
     })
   },
 )

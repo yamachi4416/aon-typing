@@ -1,7 +1,6 @@
 import {
   createPage as _createPage,
   waitForRouterPath,
-  expectPageTitle,
 } from '~~/test/e2e/util'
 
 describe('タイピングのメニューページの確認', () => {
@@ -20,7 +19,7 @@ describe('タイピングのメニューページの確認', () => {
   it('遷移するとタイピングメニューが表示される', async () => {
     const page = await createPage()
 
-    await expectPageTitle(page, 'タイピングメニュー')
+    await expect(page).toPageTitleContain('タイピングメニュー')
     const dialog = getMenuPanel(page)
 
     expect(await dialog.isVisible()).toBeTruthy()
@@ -83,7 +82,7 @@ describe('タイピングのメニューページの確認', () => {
     const page = await createPage()
     await page.getByRole('button', { name: 'やめる' }).click()
     await waitForRouterPath(page, '/')
-    await expectPageTitle(page, 'トップページ')
+    await expect(page).toPageTitleContain('トップページ')
   })
 
   it('"やめる"ボタンをクリックすると前のページに戻る', async () => {
@@ -93,6 +92,6 @@ describe('タイピングのメニューページの確認', () => {
 
     await page.getByRole('button', { name: 'やめる' }).click()
     await waitForRouterPath(page, '/problems')
-    await expectPageTitle(page, '問題いちらん')
+    await expect(page).toPageTitleContain('問題いちらん')
   })
 })

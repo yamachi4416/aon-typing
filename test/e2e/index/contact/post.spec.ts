@@ -1,8 +1,6 @@
 import {
   contactUrl,
   createPage,
-  expectLoadingHidden,
-  expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -31,9 +29,9 @@ describe('お問い合わせフォームの送信の確認', () => {
 
     await button.click()
 
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
     await waitForRouterPath(page, '/contact/thanks')
-    await expectPageTitle(page, 'お問い合わせありがとうございます')
+    await expect(page).toPageTitleContain('お問い合わせありがとうございます')
   })
 
   it('フォームの送信に失敗するとエラーメッセージが表示される', async () => {
@@ -59,7 +57,7 @@ describe('お問い合わせフォームの送信の確認', () => {
 
     await button.click()
 
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
     expect(await errorAlert.isVisible()).toBeTruthy()
     expect(await errorAlert.textContent()).contains('送信できませんでした')
   })

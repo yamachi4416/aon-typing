@@ -1,8 +1,6 @@
 import news from '~/assets/api/newProblems.json'
 import {
   createPage,
-  expectLoadingHidden,
-  expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -24,12 +22,12 @@ describe('新着の問題の画面遷移の確認', () => {
 
     await waitForRouterPath(page, '/problems/news')
 
-    await expectPageTitle(page, '問題いちらん（新着順）')
-    await expectLoadingHidden(page)
+    await expect(page).toPageTitleContain('問題いちらん（新着順）')
+    await expect(page).isPageLoadingHidden()
 
     await page.goBack()
     await waitForRouterPath(page, '/')
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
   })
 
   it('\'内容を見る\'ボタンをクリックすると\'問題の内容\'ページに遷移する', async () => {
@@ -55,12 +53,12 @@ describe('新着の問題の画面遷移の確認', () => {
 
     await waitForRouterPath(page, `/problems/${problem.id}`)
 
-    await expectPageTitle(page, `問題 No.${problem.id} ${problem.title}`)
-    await expectLoadingHidden(page)
+    await expect(page).toPageTitleContain(`問題 No.${problem.id} ${problem.title}`)
+    await expect(page).isPageLoadingHidden()
 
     await page.goBack()
     await waitForRouterPath(page, '/')
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
   })
 
   it('\'プレイする\'ボタンをクリックすると\'タイピングメニュー\'ページに遷移する', async () => {
@@ -86,12 +84,12 @@ describe('新着の問題の画面遷移の確認', () => {
 
     await waitForRouterPath(page, '/game/menu')
 
-    await expectPageTitle(page, 'タイピングメニュー')
-    await expectLoadingHidden(page)
+    await expect(page).toPageTitleContain('タイピングメニュー')
+    await expect(page).isPageLoadingHidden()
 
     await page.goBack()
     await waitForRouterPath(page, '/')
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
   })
 
   it('\'タグ\'ボタンをクリックすると\'タグ\'ページに遷移する', async () => {
@@ -120,11 +118,11 @@ describe('新着の問題の画面遷移の確認', () => {
 
     await waitForRouterPath(page, `/problems/tags/${tag.id}`)
 
-    await expectPageTitle(page, `問題 タグ：${tag.name}`)
-    await expectLoadingHidden(page)
+    await expect(page).toPageTitleContain(`問題 タグ：${tag.name}`)
+    await expect(page).isPageLoadingHidden()
 
     await page.goBack()
     await waitForRouterPath(page, '/')
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
   })
 })

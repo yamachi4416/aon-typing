@@ -1,7 +1,6 @@
 import corporations from '~/assets/api/railway/corporations.json'
 import {
   createPage,
-  expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -23,7 +22,7 @@ describe('鉄道の会社の路線のいちらんページの画面遷移の確�
     const page = await createPage(
       `/railway/corporations/${corporation.code.padStart(4, '0')}`,
     )
-    await expectPageTitle(page, `${corporation.name}の路線いちらん`)
+    await expect(page).toPageTitleContain(`${corporation.name}の路線いちらん`)
 
     const link = page
       .getByRole('listitem', {
@@ -36,6 +35,6 @@ describe('鉄道の会社の路線のいちらんページの画面遷移の確�
     await link.click()
 
     await waitForRouterPath(page, `/problems/${operationLine.id}`)
-    await expectPageTitle(page, `問題 No.${operationLine.id}`)
+    await expect(page).toPageTitleContain(`問題 No.${operationLine.id}`)
   })
 })

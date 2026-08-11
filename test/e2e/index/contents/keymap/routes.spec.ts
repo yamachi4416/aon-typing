@@ -1,7 +1,5 @@
 import {
   createPage,
-  expectLoadingHidden,
-  expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -30,7 +28,7 @@ describe('ローマ字タイピング入力表ページの画面遷移の確認'
     await buttonBack.click()
 
     await waitForRouterPath(page, '/')
-    await expectPageTitle(page, 'トップページ')
-    await expectLoadingHidden(page)
+    await expect(page).toPageTitleContain('トップページ')
+    await expect(page).isPageLoadingHidden()
   })
 })

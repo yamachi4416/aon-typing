@@ -1,8 +1,6 @@
 import corporations from '~/assets/api/railway/corporations.json'
 import {
   createPage,
-  expectLoadingHidden,
-  expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -27,11 +25,11 @@ describe.each(
 
     await waitForRouterPath(page, `/railway/corporations/${corporation.code}`)
 
-    await expectPageTitle(page, corporation.name)
-    await expectLoadingHidden(page)
+    await expect(page).toPageTitleContain(corporation.name)
+    await expect(page).isPageLoadingHidden()
 
     await page.goBack()
     await waitForRouterPath(page, '/railway/corporations')
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
   })
 })

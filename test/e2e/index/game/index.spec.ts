@@ -1,6 +1,5 @@
 import {
   createPage,
-  expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -13,7 +12,7 @@ describe('タイピングのインデックスページの確認', () => {
     async ({ path }) => {
       const page = await createPage(path)
       await waitForRouterPath(page, '/game/menu')
-      await expectPageTitle(page, 'タイピングメニュー')
+      await expect(page).toPageTitleContain('タイピングメニュー')
     },
   )
 })

@@ -1,7 +1,5 @@
 import {
   createPage,
-  expectLoadingHidden,
-  expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -36,12 +34,12 @@ describe('トップページのコンテンツの画面遷移の確認', () => {
 
       await waitForRouterPath(page, path)
 
-      await expectPageTitle(page, title)
-      await expectLoadingHidden(page)
+      await expect(page).toPageTitleContain(title)
+      await expect(page).isPageLoadingHidden()
 
       await page.goBack()
       await waitForRouterPath(page, '/')
-      await expectLoadingHidden(page)
+      await expect(page).isPageLoadingHidden()
     },
   )
 })

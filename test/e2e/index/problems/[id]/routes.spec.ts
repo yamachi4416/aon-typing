@@ -1,8 +1,6 @@
 import problem from '~/assets/api/problems/1000001.json'
 import {
   createPage,
-  expectLoadingHidden,
-  expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -27,8 +25,8 @@ describe('問題の内容ページの画面遷移の確認', () => {
 
     await buttonPlay.click()
     await waitForRouterPath(page, '/game/menu')
-    await expectPageTitle(page, 'タイピングメニュー')
-    await expectLoadingHidden(page)
+    await expect(page).toPageTitleContain('タイピングメニュー')
+    await expect(page).isPageLoadingHidden()
 
     const selected = page.getByRole('link', {
       name: problem.title,
@@ -39,7 +37,7 @@ describe('問題の内容ページの画面遷移の確認', () => {
 
     await page.goBack()
     await waitForRouterPath(page, `/problems/${problem.id}`)
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
   })
 
   it('"もどる"ボタンをクリックすると前のページに遷移する', async () => {
@@ -52,7 +50,7 @@ describe('問題の内容ページの画面遷移の確認', () => {
       .click()
 
     await waitForRouterPath(page, `/problems/${problem.id}`)
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
 
     const container = page.getByRole('region', { name: problem.title })
     expect(await container.isVisible()).toBeTruthy()
@@ -65,8 +63,8 @@ describe('問題の内容ページの画面遷移の確認', () => {
 
     await buttonBack.click()
     await waitForRouterPath(page, '/problems')
-    await expectPageTitle(page, '問題いちらん')
-    await expectLoadingHidden(page)
+    await expect(page).toPageTitleContain('問題いちらん')
+    await expect(page).isPageLoadingHidden()
   })
 
   it('"タグ"ボタンをクリックすると"タグ"ページに遷移する', async () => {
@@ -87,12 +85,12 @@ describe('問題の内容ページの画面遷移の確認', () => {
     await buttonTag.click()
     await waitForRouterPath(page, `/problems/tags/${tag.id}`)
 
-    await expectPageTitle(page, `問題 タグ：${tag.name}`)
-    await expectLoadingHidden(page)
+    await expect(page).toPageTitleContain(`問題 タグ：${tag.name}`)
+    await expect(page).isPageLoadingHidden()
 
     await page.goBack()
     await waitForRouterPath(page, `/problems/${problem.id}`)
-    await expectLoadingHidden(page)
+    await expect(page).isPageLoadingHidden()
   })
 
   it('存在しない問題のページにアクセスすると"404"ページに遷移する', async () => {

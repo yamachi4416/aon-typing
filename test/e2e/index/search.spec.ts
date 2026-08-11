@@ -1,7 +1,5 @@
 import {
   createPage,
-  expectLoadingHidden,
-  expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -23,7 +21,7 @@ it('トップページの"検索"フォームから問題を検索すること�
 
   await waitForRouterPath(page, `/problems?kwd=${encodeURIComponent('駅')}`)
 
-  await expectPageTitle(page, '問題いちらん')
+  await expect(page).toPageTitleContain('問題いちらん')
 
   const heading = container.getByRole('heading', {
     name: '駅 の検索結果',
@@ -31,7 +29,7 @@ it('トップページの"検索"フォームから問題を検索すること�
   })
 
   expect(await heading.isVisible()).toBeTruthy()
-  await expectLoadingHidden(page)
+  await expect(page).isPageLoadingHidden()
 
   const hits = problems.filter(({ title }) => title.includes('駅')).length
   const message = container.getByRole('paragraph')
@@ -42,5 +40,5 @@ it('トップページの"検索"フォームから問題を検索すること�
 
   await page.goBack()
   await waitForRouterPath(page, `/?kwd=${encodeURIComponent('駅')}`)
-  await expectLoadingHidden(page)
+  await expect(page).isPageLoadingHidden()
 })

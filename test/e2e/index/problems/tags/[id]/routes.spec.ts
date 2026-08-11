@@ -1,8 +1,6 @@
 import tag from '~/assets/api/tags/00009.json'
 import {
   createPage,
-  expectLoadingHidden,
-  expectPageTitle,
   waitForRouterPath,
 } from '~~/test/e2e/util'
 
@@ -28,12 +26,12 @@ describe(`問題 タグ：${tag.name} ページの画面遷移の確認`, () => 
       await button.click()
       await waitForRouterPath(page, `/problems/${problem.id}`)
 
-      await expectPageTitle(page, problem.id)
-      await expectLoadingHidden(page)
+      await expect(page).toPageTitleContain(problem.id)
+      await expect(page).isPageLoadingHidden()
 
       await page.goBack()
       await waitForRouterPath(page, tagPageUrl)
-      await expectLoadingHidden(page)
+      await expect(page).isPageLoadingHidden()
     },
   )
 
@@ -54,7 +52,7 @@ describe(`問題 タグ：${tag.name} ページの画面遷移の確認`, () => 
       await button.click()
       await waitForRouterPath(page, '/game/menu')
 
-      await expectPageTitle(page, 'タイピングメニュー')
+      await expect(page).toPageTitleContain('タイピングメニュー')
 
       const selected = page.getByRole('link', {
         name: problem.title,
@@ -62,11 +60,11 @@ describe(`問題 タグ：${tag.name} ページの画面遷移の確認`, () => 
       })
 
       expect(await selected.isVisible()).toBeTruthy()
-      await expectLoadingHidden(page)
+      await expect(page).isPageLoadingHidden()
 
       await page.goBack()
       await waitForRouterPath(page, tagPageUrl)
-      await expectLoadingHidden(page)
+      await expect(page).isPageLoadingHidden()
     },
   )
 
@@ -90,12 +88,12 @@ describe(`問題 タグ：${tag.name} ページの画面遷移の確認`, () => 
       await button.click()
       await waitForRouterPath(page, `/problems/tags/${tag.id}`)
 
-      await expectPageTitle(page, `問題 タグ：${tag.name}`)
-      await expectLoadingHidden(page)
+      await expect(page).toPageTitleContain(`問題 タグ：${tag.name}`)
+      await expect(page).isPageLoadingHidden()
 
       await page.goBack()
       await waitForRouterPath(page, tagPageUrl)
-      await expectLoadingHidden(page)
+      await expect(page).isPageLoadingHidden()
     },
   )
 
