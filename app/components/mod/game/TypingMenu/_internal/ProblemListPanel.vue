@@ -14,7 +14,7 @@
         {{ t.name }}
       </button>
     </div>
-    <PartsPagenate
+    <PartsPaginate
       v-slot="{ items }"
       :model-value="page"
       :items="problems"
@@ -28,7 +28,7 @@
           選択する
         </button>
       </ModProblemList>
-    </PartsPagenate>
+    </PartsPaginate>
   </PartsModalContent>
 </template>
 

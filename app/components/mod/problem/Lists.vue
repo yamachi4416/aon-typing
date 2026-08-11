@@ -1,5 +1,5 @@
 <template>
-  <PartsPagenate
+  <PartsPaginate
     v-slot="{ items }"
     v-model="page"
     :items="problems"
@@ -10,7 +10,7 @@
       @detail="(problem) => $emit('detail', problem)"
       @play="(problem) => $emit('play', problem)"
     />
-  </PartsPagenate>
+  </PartsPaginate>
 </template>
 
 <script setup lang="ts">

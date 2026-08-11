@@ -1,8 +1,8 @@
 <template>
   <slot :items="pages.items" />
   <ClientOnly>
-    <div v-if="pages.last > 1" :class="$style.pagenate">
-      <template v-for="p in pages.pagenate" :key="p">
+    <div v-if="pages.last > 1" :class="$style.paginate">
+      <template v-for="p in pages.paginate" :key="p">
         <label v-if="p === page" title="表示するページを選択" selected>
           {{ p }}
           <select v-model.number="page">
@@ -26,7 +26,7 @@
 </template>
 
 <script setup generic="T" lang="ts">
-import { pagenate } from '~~/libs/Util'
+import { paginate } from '~~/libs/Util'
 
 const { items, pageSize = 30 } = defineProps<{
   items: ReadonlyArray<T>
@@ -36,7 +36,7 @@ const { items, pageSize = 30 } = defineProps<{
 const page = defineModel<number>({ required: true })
 
 const pages = computed(() =>
-  pagenate({ items, page: page.value, pageSize }),
+  paginate({ items, page: page.value, pageSize }),
 )
 
 watch(
@@ -55,7 +55,7 @@ watch(
 <style lang="scss" module>
 @use '~/assets/css/cmps';
 
-.pagenate {
+.paginate {
   @include cmps.buttons {
     padding-top: 5px;
     padding-bottom: 8px;

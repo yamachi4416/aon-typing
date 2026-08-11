@@ -1,12 +1,12 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import type { ComponentProps } from 'vue-component-type-helpers'
-import { PartsPagenate } from '#components'
+import { PartsPaginate } from '#components'
 
-describe('PartsPagenate', () => {
-  type Props = ComponentProps<typeof PartsPagenate<number>>
+describe('PartsPaginate', () => {
+  type Props = ComponentProps<typeof PartsPaginate<number>>
 
   async function mountComponent(props?: Props) {
-    return await mountSuspended(PartsPagenate<number>, {
+    return await mountSuspended(PartsPaginate<number>, {
       props,
       slots: {
         default: ({ items }) => h('p', null, items.join(',')),
@@ -14,7 +14,7 @@ describe('PartsPagenate', () => {
     })
   }
 
-  describe('pagenate', () => {
+  describe('paginate', () => {
     it.each([
       { count: 10, pageSize: 10 },
       { count: 30, pageSize: undefined },

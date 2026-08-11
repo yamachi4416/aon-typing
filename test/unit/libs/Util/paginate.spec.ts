@@ -1,14 +1,14 @@
-import { pagenate } from '~~/libs/Util'
+import { paginate } from '~~/libs/Util'
 
-describe('pagenate', () => {
+describe('paginate', () => {
   const items = Array(81)
     .fill(0)
     .map((_, i) => i + 1)
 
   it('空のは配列の場合は空の結果', () => {
-    expect(pagenate({ items: [], page: 1, pageSize: 10 })).toEqual({
+    expect(paginate({ items: [], page: 1, pageSize: 10 })).toEqual({
       items: [],
-      pagenate: [],
+      paginate: [],
       last: 0,
     })
   })
@@ -24,7 +24,7 @@ describe('pagenate', () => {
     [8, [71, 72, 73, 74, 75, 76, 77, 78, 79, 80]],
     [9, [81]],
   ])('ページサイズ10で%dページ目のitemsは%o', (page, expected) => {
-    expect(pagenate({ items, page, pageSize: 10 }).items).toEqual(expected)
+    expect(paginate({ items, page, pageSize: 10 }).items).toEqual(expected)
   })
 
   it.each([
@@ -37,8 +37,8 @@ describe('pagenate', () => {
     [7, [1, 6, 7, 8, 9]],
     [8, [1, 6, 7, 8, 9]],
     [9, [1, 6, 7, 8, 9]],
-  ])('ページサイズ10で%dページ目のpagenateは%o', (page, expected) => {
-    expect(pagenate({ items, page, pageSize: 10 }).pagenate).toEqual(expected)
+  ])('ページサイズ10で%dページ目のpaginateは%o', (page, expected) => {
+    expect(paginate({ items, page, pageSize: 10 }).paginate).toEqual(expected)
   })
 
   it.each([
@@ -54,7 +54,7 @@ describe('pagenate', () => {
     [10, 10, 1],
     [10, 11, 1],
   ])('itemsが%d、pageSizeが%dのlastは%d', (size, pageSize, expected) => {
-    expect(pagenate({ items: Array(size), page: 1, pageSize }).last).toEqual(
+    expect(paginate({ items: Array(size), page: 1, pageSize }).last).toEqual(
       expected,
     )
   })

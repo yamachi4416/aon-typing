@@ -74,7 +74,7 @@ export async function wait(time: number, options: TimerTickerOptions = {}) {
   })
 }
 
-export function pagenate<T>({
+export function paginate<T>({
   items,
   page,
   pageSize,
@@ -82,9 +82,9 @@ export function pagenate<T>({
   items: ReadonlyArray<T>
   page: number
   pageSize: number
-}): { items: T[], pagenate: number[], last: number } {
+}): { items: T[], paginate: number[], last: number } {
   if (!items.length) {
-    return { items: [], pagenate: [], last: 0 }
+    return { items: [], paginate: [], last: 0 }
   }
   const last = Math.ceil(items.length / pageSize)
   const pages = Math.min(page, last)
@@ -97,12 +97,12 @@ export function pagenate<T>({
     return [page - 1, page, page + 1]
   }
 
-  const pagenate = () =>
+  const paginate = () =>
     new Set([1, ...wkpage(), last].filter((p) => p >= 1 && p <= last))
 
   return {
     items: Array.prototype.slice.call(items, start, end),
-    pagenate: [...pagenate()],
+    paginate: [...paginate()],
     last,
   }
 }

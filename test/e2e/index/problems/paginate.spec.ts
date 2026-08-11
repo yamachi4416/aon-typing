@@ -39,7 +39,7 @@ describe.each([
 
   const getPageListbox = (page: Page) => page.getByTitle('表示するページを選択')
 
-  const pagenateUrl = (n: number) =>
+  const paginateUrl = (n: number) =>
     pageUrl.includes('?') ? `${pageUrl}&page=${n}` : `${pageUrl}?page=${n}`
 
   it('Nページ目を表示するリンクの確認', async () => {
@@ -50,7 +50,7 @@ describe.each([
 
     await getPageLink(page, 2).click()
 
-    await waitForRouterPath(page, pagenateUrl(2))
+    await waitForRouterPath(page, paginateUrl(2))
     await expect(page).isPageLoadingHidden()
 
     expect(await getItem(page, pageSize).isVisible()).toBeTruthy()
@@ -58,7 +58,7 @@ describe.each([
 
     await getPageLink(page, 3).click()
 
-    await waitForRouterPath(page, pagenateUrl(3))
+    await waitForRouterPath(page, paginateUrl(3))
     await expect(page).isPageLoadingHidden()
 
     expect(await getPageListbox(page).inputValue()).toBe('3')
@@ -72,7 +72,7 @@ describe.each([
 
     await getPageLink(page, lastPage).click()
 
-    await waitForRouterPath(page, pagenateUrl(lastPage))
+    await waitForRouterPath(page, paginateUrl(lastPage))
     await expect(page).isPageLoadingHidden()
 
     expect(await getPageListbox(page).inputValue()).toBe(String(lastPage))
@@ -91,7 +91,7 @@ describe.each([
 
     await listbox.selectOption('2')
 
-    await waitForRouterPath(page, pagenateUrl(2))
+    await waitForRouterPath(page, paginateUrl(2))
     await expect(page).isPageLoadingHidden()
 
     expect(await getItem(page, pageSize).isVisible()).toBeTruthy()
@@ -99,7 +99,7 @@ describe.each([
 
     await listbox.selectOption(String(lastPage))
 
-    await waitForRouterPath(page, pagenateUrl(lastPage))
+    await waitForRouterPath(page, paginateUrl(lastPage))
     await expect(page).isPageLoadingHidden()
 
     expect(await getItem(page, problems.length - 1).isVisible()).toBeTruthy()
