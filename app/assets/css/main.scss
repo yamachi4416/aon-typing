@@ -105,35 +105,7 @@ form > div {
 
   input,
   textarea {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + 0.7rem + 2px);
-    padding: 0.375rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--color-3);
-    appearance: none;
-    background: var(--color-f);
-    background-clip: padding-box;
-    border: 1px solid var(--color-c);
-    border-radius: 0.6rem;
-    backface-visibility: hidden;
-    transition:
-      border-color 0.15s ease-in-out,
-      box-shadow 0.15s ease-in-out;
-
-    &:disabled,
-    &[disabled] {
-      background-color: var(--color-e);
-    }
-
-    &:focus,
-    &:active {
-      outline: 0;
-      border-color: var(--color-p);
-      box-shadow: 0 0 0 0.2rem var(--input-active-outine);
-    }
+    @include cmps.input;
   }
 }
 
