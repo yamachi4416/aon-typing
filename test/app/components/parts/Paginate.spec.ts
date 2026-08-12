@@ -157,6 +157,9 @@ describe('PartsPaginate', () => {
         modelValue: 2,
         pageSize: 5,
         items: [1, 2, 3, 4, 5, 6],
+        async 'onUpdate:modelValue'(value) {
+          await component.setProps({ modelValue: value })
+        },
       })
 
       const content = component.find('p')
@@ -174,6 +177,9 @@ describe('PartsPaginate', () => {
         modelValue: 2,
         pageSize: 5,
         items: [1, 2, 3, 4, 5, 6],
+        async 'onUpdate:modelValue'(value) {
+          await component.setProps({ modelValue: value })
+        },
       })
 
       const content = component.find('p')
@@ -183,6 +189,7 @@ describe('PartsPaginate', () => {
 
       await component.setProps({ items: [1, 2, 3, 4, 5] })
 
+      expect(component.props('modelValue')).toBe(1)
       expect(content.text()).toBe('1,2,3,4,5')
       expect(component.findAll('a')).toEqual([])
     })
@@ -192,6 +199,9 @@ describe('PartsPaginate', () => {
         modelValue: 2,
         pageSize: 5,
         items: [1, 2, 3, 4, 5, 6],
+        async 'onUpdate:modelValue'(value) {
+          await component.setProps({ modelValue: value })
+        },
       })
 
       const content = component.find('p')
@@ -201,6 +211,7 @@ describe('PartsPaginate', () => {
 
       await component.setProps({ pageSize: 6 })
 
+      expect(component.props('modelValue')).toBe(1)
       expect(content.text()).toBe('1,2,3,4,5,6')
       expect(component.findAll('a')).toEqual([])
     })

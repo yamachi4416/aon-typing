@@ -14,21 +14,17 @@
         {{ t.name }}
       </button>
     </div>
-    <PartsPaginate
-      v-slot="{ items }"
-      :model-value="page"
-      :items="problems"
-      @update:model-value="select"
-    >
-      <ModProblemList v-slot="{ problem }" :problems="items" @tag="addTag">
-        <button @click.self="$emit('detail', problem)">
-          内容を見る
-        </button>
-        <button @click.self="$emit('select', problem)">
-          選択する
-        </button>
-      </ModProblemList>
-    </PartsPaginate>
+    <ModProblemList v-slot="{ problem }" :problems="pages.items" @tag="addTag">
+      <button @click.self="$emit('detail', problem)">
+        内容を見る
+      </button>
+      <button @click.self="$emit('select', problem)">
+        選択する
+      </button>
+    </ModProblemList>
+    <template #footer>
+      <PartsPagination v-model="page" :pages />
+    </template>
   </PartsModalContent>
 </template>
 
@@ -47,13 +43,9 @@ const problems = useProblemsFilter(useProblems().problems, {
   tags: computed(() => tags.value.keys()),
 })
 
-const content = useTemplateRef('content')
+const pages = usePaginate(problems, page)
 
-async function select(p: number) {
-  page.value = p
-  await nextTick()
-  content.value?.scroll({ top: 0 })
-}
+const content = useTemplateRef('content')
 
 function addTag(tag: ProblemItemTag) {
   if (!tags.value.has(tag.id)) {
@@ -66,6 +58,10 @@ function removeTag(tag: ProblemItemTag) {
     tags.value.delete(tag.id)
   }
 }
+
+watch(page, () => {
+  content.value?.scroll({ top: 0 })
+})
 </script>
 
 <style lang="scss" module>

@@ -1,0 +1,63 @@
+<script setup lang="ts">
+defineProps<{
+  pages: {
+    paginate: number[]
+    last: number
+  }
+}>()
+
+const page = defineModel<number>({ required: true })
+</script>
+
+<template>
+  <div v-if="pages.last > 1" :class="$style.paginate">
+    <template v-for="p in pages.paginate" :key="p">
+      <label v-if="p === page" title="表示するページを選択" selected>
+        {{ p }}
+        <select v-model.number="page">
+          <option v-for="c in pages.last" :key="c" :value="c">
+            {{ c }}
+          </option>
+        </select>
+      </label>
+      <a
+        v-else
+        href="#"
+        :title="`${p}ページ目を表示する`"
+        :aria-label="`${p}ページ目を表示する`"
+        @click.prevent="page = p"
+      >
+        {{ p }}
+      </a>
+    </template>
+  </div>
+</template>
+
+<style lang="scss" module>
+@use '~/assets/css/cmps';
+
+.paginate {
+  @include cmps.buttons {
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+
+  a,
+  label {
+    width: 3.8em;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  label {
+    position: relative;
+
+    select {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+  }
+}
+</style>

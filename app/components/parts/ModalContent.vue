@@ -44,12 +44,15 @@ defineEmits<{
   close: []
 }>()
 
-const content = ref<HTMLElement>()
+const content = useTemplateRef('content')
 const uid = useId()
 const titleId = computed(() => `dialog-title-${uid}`)
 
 function scroll(options: ScrollToOptions) {
-  content.value?.scroll(options)
+  const el = content.value
+  if (el && 'scroll' in el && typeof el.scroll === 'function') {
+    el.scroll(options)
+  }
 }
 
 defineExpose({
@@ -87,6 +90,13 @@ defineExpose({
   & > footer {
     position: relative;
     width: 100%;
+  }
+
+  & > header,
+  & > footer {
+    &:empty {
+      display: none;
+    }
   }
 
   & > div {
