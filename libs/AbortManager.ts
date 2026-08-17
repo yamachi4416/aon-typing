@@ -28,7 +28,8 @@ class AbortManagerImpl implements AbortManager {
   abort() {
     if (this.isAborted) return this
     this.isAborted = true
-    this.handlers.forEach((handler) => handler())
+    const handlers = [...this.handlers]
+    handlers.forEach((handler) => handler())
     return this
   }
 

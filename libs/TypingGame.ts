@@ -1,3 +1,4 @@
+import { AbortManager } from './AbortManager.ts'
 import { TimerManager } from './TimerManager.ts'
 import { TypingGameEventManager } from './TypingGameEventManager.ts'
 import { TypingGameInfo } from './TypingGameInfo.ts'
@@ -11,8 +12,8 @@ export abstract class TypingGame {
   abstract cancel(): TypingGameInfo
   abstract pause(): boolean
   abstract resume(): boolean
-  abstract toggle(): unknown
-  abstract dispose(): unknown
+  abstract toggle(): void
+  abstract dispose(): void
 
   static create({
     state,
@@ -28,7 +29,7 @@ export abstract class TypingGame {
 }
 
 class TypingGameImpl implements TypingGame {
-  private _stop: () => void = () => {}
+  private readonly abortManager = AbortManager.create()
 
   constructor(
     private readonly state: TypingGameState,
@@ -52,7 +53,7 @@ class TypingGameImpl implements TypingGame {
       const currentWord = state.currentWord
 
       if (!currentWord) {
-        this._stop()
+        this.abortManager.abort()
         return
       }
 
@@ -72,7 +73,7 @@ class TypingGameImpl implements TypingGame {
       }
 
       if (state.isGoalReached) {
-        this._stop()
+        this.abortManager.abort()
         return
       }
 
@@ -87,7 +88,7 @@ class TypingGameImpl implements TypingGame {
         return
       }
 
-      this._stop()
+      this.abortManager.abort()
     })
   }
 
@@ -168,10 +169,8 @@ class TypingGameImpl implements TypingGame {
   private _setStopPromise() {
     const { resolve, promise } = Promise.withResolvers<TypingGameInfo>()
 
-    this._stop = () => {
+    this.abortManager.addListener(() => {
       const state = this.state
-
-      this._stop = () => {}
       state.running = false
 
       if (state.currentWord && !state.currentWord.endTime) {
@@ -182,7 +181,7 @@ class TypingGameImpl implements TypingGame {
       this.timerManager.clear()
 
       resolve(this._info())
-    }
+    })
 
     return promise
   }
@@ -191,6 +190,8 @@ class TypingGameImpl implements TypingGame {
     this.cancel()
 
     if (!this.state.problem) return
+
+    this.abortManager.reset()
 
     const { words, type } = this.state.problem ?? {}
     const { timeLimit, autoMode } = this.setting
@@ -211,7 +212,7 @@ class TypingGameImpl implements TypingGame {
   }
 
   cancel() {
-    this._stop()
+    this.abortManager.abort()
     this.state.canceled = true
     this.eventManager.clear()
     this.timerManager.clear()
@@ -248,7 +249,7 @@ class TypingGameImpl implements TypingGame {
   }
 
   dispose() {
-    this._stop()
+    this.abortManager.abort()
     this.eventManager.clear()
     this.timerManager.clear()
   }
