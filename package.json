@@ -41,7 +41,6 @@
     "defu": "^6.1.7",
     "eslint": "^10.8.1",
     "eslint-plugin-compat": "^7.0.2",
-    "eslint-plugin-format": "^2.0.1",
     "eslint-plugin-promise": "^7.3.0",
     "google-fonts-helper": "^3.7.4",
     "happy-dom": "^20.11.2",
