@@ -1,27 +1,34 @@
-import { defineConfig, mergeConfig } from 'vitest/config'
+import { defineConfig } from 'vitest/config'
 import { defineVitestProject } from '@nuxt/test-utils/config'
 import { playwright } from '@vitest/browser-playwright'
 
 export default defineConfig({
+  resolve: {
+    tsconfigPaths: true,
+  },
   test: {
+    globals: true,
     coverage: {
       exclude: ['./test/**/*', './app/assets/**/*'],
     },
     projects: [
       {
+        extends: true,
         test: {
           name: 'unit',
           dir: './test/unit',
           environment: 'happy-dom',
         },
       },
-      await defineVitestProject({
+      defineVitestProject({
+        extends: true,
         test: {
           name: 'app:nuxt',
           dir: './test/app',
         },
       }),
-      await defineVitestProject({
+      defineVitestProject({
+        extends: true,
         test: {
           name: 'app:browser',
           dir: './test/browser',
@@ -32,9 +39,11 @@ export default defineConfig({
             provider: playwright(),
             instances: [{ browser: 'chromium' }],
           },
+          setupFiles: ['@nuxt/test-utils/browser'],
         },
       }),
       {
+        extends: true,
         test: {
           name: 'e2e',
           dir: './test/e2e',
@@ -42,19 +51,9 @@ export default defineConfig({
           setupFiles: ['./test/e2e/setup.ts'],
         },
       },
-    ].map((config) => mergeConfig({
-      resolve: {
-        alias: {
-          '~': new URL('./app', import.meta.url).pathname,
-          '~~': new URL('./', import.meta.url).pathname,
-        },
-      },
-      test: {
-        globals: true,
-        hookTimeout: 30_000,
-        testTimeout: 30_000,
-      },
-    } satisfies typeof config, config)),
+    ],
+    hookTimeout: 30_000,
+    testTimeout: 30_000,
     onConsoleLog(log) {
       if (log.includes('<Suspense> is an experimental feature')) {
         return false

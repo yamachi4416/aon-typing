@@ -1,48 +1,50 @@
-import { mountSuspended } from '@nuxt/test-utils/runtime'
+import { page } from 'vitest/browser'
 import type { ComponentProps } from 'vue-component-type-helpers'
+
 import { BasicHeaderTitle } from '#components'
 
 describe('BasicHeaderTitle', () => {
   type Props = ComponentProps<typeof BasicHeaderTitle>
 
-  async function mountComponent(props?: Props) {
-    return await mountSuspended(BasicHeaderTitle, { props })
+  async function render(props?: Props) {
+    const container = document.getElementById('__nuxt') ?? undefined
+    return await page.render(BasicHeaderTitle, { props, container })
   }
 
   it('タイトルに指定した値が表示される', async () => {
-    const component = await mountComponent({
+    const screen = await render({
       name: 'タイピング',
       anim: false,
     })
 
-    const h1 = component.find('h1')
-    expect(h1.exists()).toBe(true)
-    expect(h1.text()).toBe('タイピング')
+    const h1 = screen.getByRole('heading', { level: 1 })
+    await expect.element(h1).toBeInTheDocument()
+    await expect.element(h1).toHaveTextContent('タイピング')
   })
 
   it('タイトルはトップページへのリンク', async () => {
-    const component = await mountComponent({
+    const screen = await render({
       name: 'タイピング',
       anim: false,
     })
 
-    const a = component.find('a')
-    expect(a.exists()).toBe(true)
-    expect(a.attributes('href')).toBe('/')
+    const a = screen.getByRole('link')
+    await expect.element(a).toBeInTheDocument()
+    await expect.element(a).toHaveAttribute('href', '/')
   })
 
-  it('タイトルがアニメーションされる', async () => {
-    using dispose = new DisposableStack()
-    dispose.defer(() => vi.useRealTimers())
+  it('タイトルがアニメーションされる', async ({ onTestFinished }) => {
+    onTestFinished(() => vi.useRealTimers() && undefined)
 
-    vi.useFakeTimers()
-    const component = await mountComponent({
+    const screen = await render({
       name: 'タイピング',
       anim: true,
     })
 
-    const h1 = component.find('h1')
-    expect(h1.exists()).toBe(true)
+    vi.useFakeTimers()
+
+    const h1 = screen.getByRole('heading', { level: 1 })
+    await expect.element(h1).toBeInTheDocument()
 
     for (const text of [
       't',
@@ -55,10 +57,10 @@ describe('BasicHeaderTitle', () => {
       'タイピンgu',
       'タイピング',
     ]) {
-      expect(h1.text()).toBe(text)
+      await expect.element(h1).toHaveTextContent(text)
       await vi.advanceTimersByTimeAsync(100)
     }
 
-    expect(h1.text()).toBe('タイピング')
+    await expect.element(h1).toHaveTextContent('タイピング')
   })
 })

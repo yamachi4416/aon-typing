@@ -1,12 +1,14 @@
-import { mountSuspended } from '@nuxt/test-utils/runtime'
+import { page } from 'vitest/browser'
 import type { ComponentProps } from 'vue-component-type-helpers'
+
 import { BasicHeaderThemeChange } from '#components'
 
 describe('BasicHeaderThemeChange', () => {
   type Props = ComponentProps<typeof BasicHeaderThemeChange>
 
-  async function mountComponent(props?: Props) {
-    return await mountSuspended(BasicHeaderThemeChange, { props })
+  async function render(props?: Props) {
+    const container = document.getElementById('__nuxt') ?? undefined
+    return await page.render(BasicHeaderThemeChange, { props, container })
   }
 
   it('darkボタン', async () => {
@@ -14,15 +16,13 @@ describe('BasicHeaderThemeChange', () => {
     html.classList.remove('dark')
     expect(html.classList.contains('dark')).toBe(false)
 
-    const component = await mountComponent()
+    const screen = await render()
+    const button = screen.getByRole('button', { name: 'dark' })
 
-    const button = component
-      .findAll('button')
-      .find((c) => c.text() === 'dark')
+    await expect.element(button).toBeInTheDocument()
 
-    expect(button?.exists()).toBe(true)
+    await button.click()
 
-    await button?.trigger('click')
     expect(html.classList.contains('dark')).toBe(true)
   })
 
@@ -31,15 +31,13 @@ describe('BasicHeaderThemeChange', () => {
     html.classList.add('dark')
     expect(html.classList.contains('dark')).toBe(true)
 
-    const component = await mountComponent()
+    const screen = await render()
+    const button = screen.getByRole('button', { name: 'light' })
 
-    const button = component
-      .findAll('button')
-      .find((c) => c.text() === 'light')
+    await expect.element(button).toBeInTheDocument()
 
-    expect(button?.exists()).toBe(true)
+    await button.click()
 
-    await button?.trigger('click')
     expect(html.classList.contains('dark')).toBe(false)
   })
 })
