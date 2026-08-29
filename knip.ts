@@ -8,7 +8,6 @@ export default {
   ignoreDependencies: [
     'h3',
     'nitropack',
-    'vitest-environment-nuxt',
     'vue-tsc',
   ],
 } satisfies KnipConfig
