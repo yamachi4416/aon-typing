@@ -8,8 +8,9 @@ export default {
   ],
   plugins: ['stylelint-browser-compat'],
   rules: {
-    'scss/at-mixin-pattern': null,
     'at-rule-no-unknown': null,
+    'at-rule-prelude-no-invalid': null,
+    'scss/at-mixin-pattern': null,
     'scss/at-rule-no-unknown': true,
     'plugin/browser-compat': [
       true,
