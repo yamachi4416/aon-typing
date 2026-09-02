@@ -1,7 +1,10 @@
+import { mockNuxtImport } from '@nuxt/test-utils/runtime'
 import problem1000001 from '~/assets/api/problems/1000001.json'
 import problem1000101 from '~/assets/api/problems/1000101.json'
 import { routerSetup, endpointRegister } from './_utils'
 import { MenuPageModel } from './menu.model'
+
+mockNuxtImport(isEnableAnimation, () => () => false)
 
 describe('pages/game/menu', () => {
   const createPage = MenuPageModel.create

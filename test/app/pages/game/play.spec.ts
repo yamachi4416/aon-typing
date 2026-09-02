@@ -1,7 +1,10 @@
+import { mockNuxtImport } from '@nuxt/test-utils/runtime'
 import _problem1000001 from '~/assets/api/problems/1000001.json'
 import problem1000002 from '~/assets/api/problems/1000002.json'
 import { routerSetup, endpointRegister } from './_utils'
 import { PlayPageModel } from './play.model'
+
+mockNuxtImport(isEnableAnimation, () => () => false)
 
 const problem1000001: typeof _problem1000001 = {
   ..._problem1000001,

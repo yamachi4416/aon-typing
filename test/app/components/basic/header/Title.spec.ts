@@ -31,9 +31,8 @@ describe('BasicHeaderTitle', () => {
     expect(a.attributes('href')).toBe('/')
   })
 
-  it('タイトルがアニメーションされる', async () => {
-    using dispose = new DisposableStack()
-    dispose.defer(() => vi.useRealTimers())
+  it('タイトルがアニメーションされる', async ({ onTestFinished }) => {
+    onTestFinished(() => vi.useRealTimers() && undefined)
 
     vi.useFakeTimers()
     const component = await mountComponent({
