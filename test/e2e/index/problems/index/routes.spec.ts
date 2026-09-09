@@ -7,7 +7,7 @@ import {
 describe.each(problems.slice(0, 2))(
   '問題いちらんページの画面遷移の確認',
   (problem) => {
-    it(`No.${problem.id}の問題の'内容を見る'ボタンをクリックすると'問題の内容'ページに遷移する`, async () => {
+    it(`"No.${problem.id}"の問題の"内容を見る"ボタンをクリックすると"問題の内容"ページに遷移する`, async () => {
       const page = await createPage('/problems')
 
       const item = page.getByRole('article', { name: problem.title }).first()
@@ -30,7 +30,7 @@ describe.each(problems.slice(0, 2))(
       await expect(page).isPageLoadingHidden()
     })
 
-    it(`No.${problem.id}の問題の'プレイする'ボタンをクリックすると'タイピングメニュー'ページに遷移する`, async () => {
+    it(`"No.${problem.id}"の問題の"プレイする"ボタンをクリックすると"タイピングメニュー"ページに遷移する`, async () => {
       const page = await createPage('/problems')
 
       const item = page.getByRole('article', { name: problem.title }).first()
@@ -60,7 +60,7 @@ describe.each(problems.slice(0, 2))(
       await expect(page).isPageLoadingHidden()
     })
 
-    it(`No.${problem.id}の問題の'タグ'ボタンをクリックすると'タグ'ページに遷移する`, async () => {
+    it(`"No.${problem.id}"の問題の"タグ"ボタンをクリックすると"タグ"ページに遷移する`, async () => {
       const tag = problem.tags[0]!
       expect(tag).toBeTruthy()
 

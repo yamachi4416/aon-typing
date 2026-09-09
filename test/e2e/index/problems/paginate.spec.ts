@@ -25,7 +25,7 @@ describe.each([
     pageUrl: `/problems/tags/${tag.id}`,
     problems: tag.problems,
   },
-])('$nameのページングの確認', ({ pageUrl, problems }) => {
+])('"$name"のページングの確認', ({ pageUrl, problems }) => {
   const pageSize = 30
 
   const getItem = (page: Page, i: number) =>

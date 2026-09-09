@@ -8,7 +8,7 @@ describe('タイピングのインデックスページの確認', () => {
     { path: '/game' },
     { path: '/game/' },
   ])(
-    '$pathにアクセスするとタイピングメニューページにリダイレクトされる',
+    '"$path"にアクセスするとタイピングメニューページにリダイレクトされる',
     async ({ path }) => {
       const page = await createPage(path)
       await waitForRouterPath(page, '/game/menu')

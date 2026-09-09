@@ -8,7 +8,7 @@ describe('ページフッターの画面遷移の確認', () => {
     { name: 'サイトポリシー', path: '/policy', title: 'サイトポリシー' },
     { name: 'お問い合わせ', path: '/contact', title: 'お問い合わせ' },
   ])(
-    'フッターの$nameリンクをクリックすると$titleページに遷移する',
+    'フッターの"$name"リンクをクリックすると"$title"ページに遷移する',
     async ({ name, path, title }) => {
       const page = await createPage('/')
 

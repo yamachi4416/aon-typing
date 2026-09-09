@@ -9,7 +9,7 @@ describe('ページヘッダーの画面遷移の確認', () => {
     { name: '問題いちらん', path: '/problems', title: '問題いちらん' },
     { name: 'サイト説明', path: '/about', title: 'サイト説明' },
   ])(
-    'ナビゲーションの$nameリンクをクリックすると$titleページに遷移する',
+    'ナビゲーションの"$name"リンクをクリックすると"$title"ページに遷移する',
     async ({ name, path, title }) => {
       const page = await createPage('/')
 

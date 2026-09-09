@@ -18,7 +18,7 @@ describe('鉄道の会社の路線のいちらんページの画面遷移の確�
   const operationLine = corporation.operationLines.find(({ id }) => id)
   if (!operationLine) return
 
-  it(`${operationLine.name}をクリックすると'タイピングの問題'ページに遷移する`, async () => {
+  it(`"${operationLine.name}"をクリックすると"タイピングの問題"ページに遷移する`, async () => {
     const page = await createPage(
       `/railway/corporations/${corporation.code.padStart(4, '0')}`,
     )
