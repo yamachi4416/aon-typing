@@ -20,7 +20,7 @@
     "lint:scripts": "eslint .",
     "lint:styles": "stylelint app/**/*.{scss,vue}",
     "test": "vitest",
-    "test:unit": "vitest --project unit --project app:nuxt --project app:browser",
+    "test:unit": "vitest --project unit --project app:nuxt --project app:browser --no-isolate",
     "test:e2e": "vitest --project e2e",
     "script:preview:dist": "node --experimental-transform-types ./scripts/preview-server.ts -d ./dist",
     "script:problem": "node --experimental-transform-types ./scripts/problem.ts",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^1.17.0",
-    "@nuxt/test-utils": "^4.3.2",
+    "@nuxt/test-utils": "https://pkg.pr.new/@nuxt/test-utils@1821",
     "@nuxtjs/seo": "^5.3.16",
     "@types/node": "^24.13.4",
     "@vitejs/plugin-legacy": "^8.2.3",

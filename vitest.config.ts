@@ -25,6 +25,12 @@ export default defineConfig({
         test: {
           name: 'app:nuxt',
           dir: './test/app',
+          environmentOptions: {
+            nuxt: {
+              setupScope: 'worker',
+            },
+          },
+          setupFiles: ['./test/app/setup.ts'],
         },
       }),
       defineVitestProject({
@@ -33,6 +39,11 @@ export default defineConfig({
           name: 'app:browser',
           dir: './test/browser',
           environment: 'nuxt',
+          environmentOptions: {
+            nuxt: {
+              setupScope: 'worker',
+            },
+          },
           browser: {
             enabled: true,
             screenshotFailures: false,
