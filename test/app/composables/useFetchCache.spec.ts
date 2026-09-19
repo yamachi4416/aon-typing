@@ -4,10 +4,13 @@ import { endpointRegister } from '~~/test/app/_utils'
 describe('useFetchCache', () => {
   const { registerEndpoint, unregisterEndpoints } = endpointRegister()
 
+  beforeEach(() => {
+    clearNuxtState()
+  })
+
   afterEach(() => {
     vi.restoreAllMocks()
     unregisterEndpoints()
-    clearNuxtState()
   })
 
   it('valueの初期値はundefined', () => {
