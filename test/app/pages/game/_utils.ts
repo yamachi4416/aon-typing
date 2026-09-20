@@ -1,7 +1,5 @@
 import { routerSetup as _routerSetup } from '~~/test/app/_utils'
 
-export { endpointRegister } from '~~/test/app/_utils'
-
 export function routerSetup(targetPath: '' | 'menu' | 'play') {
   return _routerSetup((routes) => {
     const game = routes.find(

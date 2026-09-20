@@ -1,4 +1,5 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
+import { disableAutoUnmount } from '@vue/test-utils'
 import { problems } from '~/assets/api/problems.json'
 import { MenuPanel } from '~/components/mod/game/TypingMenu/_internal'
 
@@ -12,6 +13,8 @@ describe('MenuPanel', () => {
     onOpenProblemSelect: vi.fn(),
   }
 
+  disableAutoUnmount()
+
   beforeAll(async () => {
     useState('/api/problems.json').value = { problems }
     wrapper = await mountSuspended(MenuPanel, {
@@ -19,6 +22,10 @@ describe('MenuPanel', () => {
         ...emits,
       },
     })
+  })
+
+  afterAll(() => {
+    wrapper.unmount()
   })
 
   beforeEach(() => {

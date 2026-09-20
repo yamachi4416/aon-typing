@@ -1,7 +1,7 @@
-import { mockNuxtImport } from '@nuxt/test-utils/runtime'
+import { mockNuxtImport, registerEndpoint } from '@nuxt/test-utils/runtime'
 import problem1000001 from '~/assets/api/problems/1000001.json'
 import problem1000101 from '~/assets/api/problems/1000101.json'
-import { routerSetup, endpointRegister } from './_utils'
+import { routerSetup } from './_utils'
 import { MenuPageModel } from './menu.model'
 
 mockNuxtImport(isEnableAnimation, () => () => false)
@@ -9,7 +9,6 @@ mockNuxtImport(isEnableAnimation, () => () => false)
 describe('pages/game/menu', () => {
   const createPage = MenuPageModel.create
 
-  const { registerEndpoint, unregisterEndpoints } = endpointRegister()
   const { saveRoutes, restoreRoutes, setupRoutes } = routerSetup('menu')
 
   beforeAll(() => {
@@ -18,7 +17,6 @@ describe('pages/game/menu', () => {
 
   beforeEach(() => {
     setupRoutes()
-    unregisterEndpoints()
     clearNuxtState()
     useGameSetting().resetSetting()
     useGameMenuState().reset()
@@ -29,34 +27,35 @@ describe('pages/game/menu', () => {
 
   afterEach(() => {
     restoreRoutes()
-    unregisterEndpoints()
   })
 
   describe('データの取得', () => {
     it('取得済みの場合はAPIから取得しない', async () => {
-      const pr = registerEndpoint('/api/problems.json', () => ({
-        problems: [],
-      }))
-      const cr = registerEndpoint('/api/railway/corporations.json', () => [])
+      const pr = vi.fn(() => ({ problems: [] }))
+      const cr = vi.fn(() => [])
+
+      registerEndpoint('/api/problems.json', pr)
+      registerEndpoint('/api/railway/corporations.json', cr)
 
       await createPage()
 
-      expect(pr.handler).toHaveBeenCalledTimes(0)
-      expect(cr.handler).toHaveBeenCalledTimes(0)
+      expect(pr).toHaveBeenCalledTimes(0)
+      expect(cr).toHaveBeenCalledTimes(0)
     })
 
     it('未取得の場合はAPIから取得する', async () => {
-      const pr = registerEndpoint('/api/problems.json', () => ({
-        problems: [],
-      }))
-      const cr = registerEndpoint('/api/railway/corporations.json', () => [])
+      const pr = vi.fn(() => ({ problems: [] }))
+      const cr = vi.fn(() => [])
+
+      registerEndpoint('/api/problems.json', pr)
+      registerEndpoint('/api/railway/corporations.json', cr)
 
       clearNuxtState(['/api/problems.json', '/api/railway/corporations.json'])
 
       await createPage()
 
-      expect(pr.handler).toHaveBeenCalledTimes(1)
-      expect(cr.handler).toHaveBeenCalledTimes(1)
+      expect(pr).toHaveBeenCalledTimes(1)
+      expect(cr).toHaveBeenCalledTimes(1)
     })
   })
 

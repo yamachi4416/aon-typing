@@ -1,15 +1,10 @@
+import { registerEndpoint } from '@nuxt/test-utils/runtime'
+
 import { problems } from '~/assets/api/problems.json'
-import { endpointRegister } from '~~/test/app/_utils'
 
 describe('useFetchCache', () => {
-  const { registerEndpoint, unregisterEndpoints } = endpointRegister()
-
   beforeEach(() => {
     clearNuxtState()
-  })
-
-  afterEach(() => {
-    unregisterEndpoints()
   })
 
   it('valueの初期値はundefined', () => {

@@ -1,11 +1,11 @@
+import { registerEndpoint } from '@nuxt/test-utils/runtime'
 import problem1000001 from '~/assets/api/problems/1000001.json'
-import { routerSetup, endpointRegister } from './_utils'
+import { routerSetup } from './_utils'
 import { IndexPageModel } from './index.model'
 
 describe('/pages/game/index', () => {
   const createPage = IndexPageModel.create
 
-  const { registerEndpoint, unregisterEndpoints } = endpointRegister()
   const { saveRoutes, restoreRoutes, setupRoutes } = routerSetup('')
 
   beforeAll(() => {
@@ -14,7 +14,6 @@ describe('/pages/game/index', () => {
 
   beforeEach(() => {
     setupRoutes()
-    unregisterEndpoints()
     clearNuxtState()
     useState('/api/problems.json').value = { problems: [problem1000001] }
     useState('/api/railway/corporations.json').value = []
@@ -22,34 +21,35 @@ describe('/pages/game/index', () => {
 
   afterEach(() => {
     restoreRoutes()
-    unregisterEndpoints()
   })
 
   describe('データの取得', () => {
     it('取得済みの場合はAPIから取得しない', async () => {
-      const pr = registerEndpoint('/api/problems.json', () => ({
-        problems: [],
-      }))
-      const cr = registerEndpoint('/api/railway/corporations.json', () => [])
+      const pr = vi.fn(() => ({ problems: [] }))
+      const cr = vi.fn(() => [])
+
+      registerEndpoint('/api/problems.json', pr)
+      registerEndpoint('/api/railway/corporations.json', cr)
 
       await createPage()
 
-      expect(pr.handler).toHaveBeenCalledTimes(0)
-      expect(cr.handler).toHaveBeenCalledTimes(0)
+      expect(pr).toHaveBeenCalledTimes(0)
+      expect(cr).toHaveBeenCalledTimes(0)
     })
 
     it('未取得の場合はAPIから取得する', async () => {
-      const pr = registerEndpoint('/api/problems.json', () => ({
-        problems: [],
-      }))
-      const cr = registerEndpoint('/api/railway/corporations.json', () => [])
+      const pr = vi.fn(() => ({ problems: [] }))
+      const cr = vi.fn(() => [])
+
+      registerEndpoint('/api/problems.json', pr)
+      registerEndpoint('/api/railway/corporations.json', cr)
 
       clearNuxtState(['/api/problems.json', '/api/railway/corporations.json'])
 
       await createPage()
 
-      expect(pr.handler).toHaveBeenCalledTimes(1)
-      expect(cr.handler).toHaveBeenCalledTimes(1)
+      expect(pr).toHaveBeenCalledTimes(1)
+      expect(cr).toHaveBeenCalledTimes(1)
     })
   })
 

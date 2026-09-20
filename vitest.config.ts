@@ -27,6 +27,7 @@ export default defineConfig({
         test: {
           name: 'app:nuxt',
           dir: './test/app',
+          setupFiles: ['./test/app/setup.ts'],
         },
       }),
       defineVitestProject({
@@ -41,7 +42,7 @@ export default defineConfig({
             provider: playwright(),
             instances: [{ browser: 'chromium' }],
           },
-          setupFiles: ['@nuxt/test-utils/browser'],
+          setupFiles: ['./test/browser/setup.ts'],
         },
       }),
       {
