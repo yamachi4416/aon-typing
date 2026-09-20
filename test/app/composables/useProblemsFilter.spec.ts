@@ -1,15 +1,18 @@
-import { defu } from 'defu'
-
 describe('useProblemsFilter', () => {
   type Params = Parameters<typeof useProblemsFilter>
   type Problems = Params[0] extends MaybeRefOrGetter<infer T> ? T : unknown
   type Criteria = { [K in keyof Params[1]]: Params[1][K] extends MaybeRefOrGetter<infer T> ? T : unknown }
 
   function toProblems(items: ReadonlyArray<Partial<Problems[number]>>): Problems {
-    const defaultValue: Problems[number] = {
-      id: '', title: '', chars: 0, words: 0, tags: [], type: 'japanese',
-    }
-    return items.map((v, i) => defu(v, { id: `${i + 1}` }, defaultValue))
+    return items.map((v, i) => ({
+      id: `${i + 1}`,
+      title: '',
+      chars: 0,
+      words: 0,
+      tags: [],
+      type: 'japanese',
+      ...v,
+    }))
   }
 
   const problems = toProblems([

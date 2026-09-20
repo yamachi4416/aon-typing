@@ -1,6 +1,5 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import { DOMWrapper } from '@vue/test-utils'
-import { defu } from 'defu'
 import type { ComponentProps, ComponentSlots } from 'vue-component-type-helpers'
 import { findTableValueCell, toTablesArray } from '~~/test/app/_utils'
 import type { ProblemDetail, RailwayCorporation } from '~~/types/problems'
@@ -14,8 +13,8 @@ describe('ModProblemDetail', () => {
     return await mountSuspended(ModProblemDetail, { props, slots: slots })
   }
 
-  function detailItem(value: Partial<ProblemDetail>) {
-    return defu(value, {
+  function detailItem(value: Partial<ProblemDetail>): ProblemDetail {
+    return {
       id: '',
       title: '',
       type: 'english',
@@ -23,7 +22,8 @@ describe('ModProblemDetail', () => {
       words: [],
       createdAt: '',
       updatedAt: '',
-    } satisfies ProblemDetail)
+      ...value,
+    }
   }
 
   beforeEach(() => {

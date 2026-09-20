@@ -196,9 +196,6 @@ importers:
       citty:
         specifier: ^0.2.2
         version: 0.2.2
-      defu:
-        specifier: ^6.1.7
-        version: 6.1.7
       eslint:
         specifier: ^10.10.0
         version: 10.10.0(jiti@2.7.0)(supports-color@10.2.2)

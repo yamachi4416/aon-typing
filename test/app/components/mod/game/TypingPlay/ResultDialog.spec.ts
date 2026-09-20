@@ -1,5 +1,4 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
-import { defu } from 'defu'
 import type { ComponentProps } from 'vue-component-type-helpers'
 import type { TypingGameInfo } from '~~/libs/TypingGameInfo'
 import { toTablesArray } from '~~/test/app/_utils'
@@ -15,7 +14,7 @@ describe('ResultDialog', () => {
 
   async function openDialog(component: Component, result?: Partial<TypingGameInfo>) {
     return await component.vm.open({
-      result: defu(result, {
+      result: {
         hasNext: false,
         rank: '',
         score: 0,
@@ -25,7 +24,8 @@ describe('ResultDialog', () => {
         missCount: 0,
         correctRate: 0,
         missKeys: [],
-      }),
+        ...result,
+      },
     })
   }
 

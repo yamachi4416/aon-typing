@@ -1,5 +1,4 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime'
-import { defu } from 'defu'
 import type { ComponentProps, ComponentSlots } from 'vue-component-type-helpers'
 import { toTablesArray } from '~~/test/app/_utils'
 import type { ProblemListItem } from '~~/types/problems'
@@ -13,15 +12,16 @@ describe('ListItem', () => {
     return await mountSuspended(ModProblemListItem, { props, slots: slots })
   }
 
-  function listItem(value: Partial<ProblemListItem> = {}) {
-    return defu(value, {
+  function listItem(value: Partial<ProblemListItem> = {}): ProblemListItem {
+    return {
       id: '',
       type: 'english',
       title: '',
       words: 0,
       chars: 0,
       tags: [],
-    } satisfies ProblemListItem)
+      ...value,
+    }
   }
 
   it('問題の基本情報が表示される', async () => {
