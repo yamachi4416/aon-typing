@@ -4,7 +4,7 @@
   "engines": {
     "node": "24.x"
   },
-  "packageManager": "pnpm@12.4.2",
+  "packageManager": "pnpm@12.5.1",
   "browserslist": [
     "since 2023-03-01 and not Firefox < 121"
   ],
