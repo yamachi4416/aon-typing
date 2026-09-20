@@ -27,10 +27,6 @@ describe('TypingGameState', () => {
     state.currentTypingState = { detail: {}, mistake: true }
   }
 
-  afterEach(() => {
-    vi.restoreAllMocks()
-  })
-
   it('初期値が設定される', () => {
     const setting = TypingGameSetting.create()
     const state = TypingGameState.create(setting)

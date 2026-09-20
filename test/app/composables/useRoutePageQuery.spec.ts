@@ -12,13 +12,8 @@ describe('useRoutePageQuery', () => {
 
   const { setupNavigateToMock, waitForNavigateTo } = mockNavigateTo(navigateToMock)
 
-  afterEach(() => {
+  beforeEach(() => {
     setupNavigateToMock()
-  })
-
-  afterEach(() => {
-    vi.resetAllMocks()
-    vi.restoreAllMocks()
   })
 
   it.each<{ query: Params[0]['query'], expected: number }>([

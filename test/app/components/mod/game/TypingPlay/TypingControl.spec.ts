@@ -21,7 +21,6 @@ describe('TypingControl', () => {
 
   afterEach(() => {
     vi.useRealTimers()
-    vi.restoreAllMocks()
   })
 
   describe('data-capslock', () => {

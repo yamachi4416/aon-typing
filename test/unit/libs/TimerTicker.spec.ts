@@ -7,7 +7,6 @@ describe('TimerTicker', () => {
   })
 
   afterEach(() => {
-    vi.restoreAllMocks()
     vi.useRealTimers()
   })
 

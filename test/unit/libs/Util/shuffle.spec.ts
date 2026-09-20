@@ -1,10 +1,6 @@
 import { shuffle } from '~~/libs/Util'
 
 describe('shuffle', () => {
-  afterEach(() => {
-    vi.restoreAllMocks()
-  })
-
   it.each([
     [[], 0.1, []],
     [[1], 0.1, [1]],

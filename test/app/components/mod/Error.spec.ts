@@ -15,10 +15,6 @@ describe('Error', () => {
     return await mountSuspended(ModError, { props })
   }
 
-  afterEach(() => {
-    vi.restoreAllMocks()
-  })
-
   it.each([
     { status: 404 },
     { message: '404 Not Found' },

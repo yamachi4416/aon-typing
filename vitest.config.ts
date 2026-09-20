@@ -8,6 +8,8 @@ export default defineConfig({
   },
   test: {
     globals: true,
+    mockReset: true,
+    restoreMocks: true,
     coverage: {
       exclude: ['./test/**/*', './app/assets/**/*'],
     },

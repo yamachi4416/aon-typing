@@ -25,10 +25,6 @@ describe('MenuPanel', () => {
     useGameSetting().resetSetting()
   })
 
-  afterEach(() => {
-    vi.resetAllMocks()
-  })
-
   describe('制限時間', () => {
     it('選択肢のラベルの確認', () => {
       const labels = wrapper.findAll('label:has(>[name="制限時間"])')

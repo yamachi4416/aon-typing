@@ -15,10 +15,6 @@ describe('TypingProblemQuestioner', () => {
       { problemOrder: 'first', ...setting },
     )
 
-  afterEach(() => {
-    vi.restoreAllMocks()
-  })
-
   describe('create', () => {
     it('初期値（wordsなし）', () => {
       const problem = create(

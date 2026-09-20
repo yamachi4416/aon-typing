@@ -14,11 +14,6 @@ registerEndpoint('/api/contact', {
 })
 
 describe('ModContactForm', () => {
-  afterEach(() => {
-    vi.resetAllMocks()
-    vi.restoreAllMocks()
-  })
-
   type Props = ComponentProps<typeof ModContactForm>
 
   async function mountComponent(props?: Props) {

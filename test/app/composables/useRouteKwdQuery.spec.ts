@@ -1,10 +1,6 @@
 describe('useRouteKwdQuery', () => {
   type Params = Parameters<typeof useRouteKwdQuery>
 
-  afterEach(() => {
-    vi.restoreAllMocks()
-  })
-
   it.each<{ query: Params[0]['query'], expected: string }>([
     { query: {}, expected: '' },
     { query: { kwd: null }, expected: '' },

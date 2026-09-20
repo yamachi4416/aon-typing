@@ -7,7 +7,6 @@ describe('countDown', () => {
   })
 
   afterEach(() => {
-    vi.restoreAllMocks()
     vi.useRealTimers()
   })
 

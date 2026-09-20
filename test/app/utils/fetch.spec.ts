@@ -9,7 +9,6 @@ describe('fetchWithCache', () => {
   })
 
   afterEach(() => {
-    vi.restoreAllMocks()
     unregisterEndpoints()
   })
 

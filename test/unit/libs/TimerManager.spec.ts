@@ -6,7 +6,6 @@ describe('TimerManager', () => {
   })
 
   afterEach(() => {
-    vi.restoreAllMocks()
     vi.useRealTimers()
   })
 

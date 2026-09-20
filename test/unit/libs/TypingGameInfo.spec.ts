@@ -16,10 +16,6 @@ describe('TypingGameInfo', () => {
 
   const toInfo = (state: State = {}) => create(toState(state))
 
-  afterEach(() => {
-    vi.restoreAllMocks()
-  })
-
   it('create(state) は toFixedメソッドを持つ', () => {
     const info = create(toState())
 
