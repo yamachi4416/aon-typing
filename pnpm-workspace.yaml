@@ -9,4 +9,3 @@ shellEmulator: true
 minimumReleaseAgeExclude:
   - '@nuxt/*'
 minimumReleaseAgeExcludePrune: true
-blockExoticSubdeps: false
