@@ -1,3 +1,4 @@
+import { defineEventHandler } from 'nuxt/server'
 import data from '~/assets/api/tags.json'
 import type { ProblemTagSummary } from '~~/types/problems'
 

@@ -1,3 +1,4 @@
+import { defineEventHandler } from 'nuxt/server'
 import data from '~/assets/api/newProblems.json'
 import type { ProblemListItem } from '~~/types/problems'
 

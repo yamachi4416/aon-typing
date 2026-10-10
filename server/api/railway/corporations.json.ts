@@ -1,3 +1,4 @@
+import { defineEventHandler } from 'nuxt/server'
 import data from '~/assets/api/railway/corporations.json'
 
 const corporations = data

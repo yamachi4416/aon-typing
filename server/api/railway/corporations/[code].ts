@@ -1,3 +1,4 @@
+import { defineEventHandler, getRouterParam, setResponseStatus } from 'nuxt/server'
 import data from '~/assets/api/railway/corporations.json'
 
 const corporations = new Map(

@@ -7,5 +7,6 @@ allowBuilds:
   vue-demi: false
 shellEmulator: true
 minimumReleaseAgeExclude:
+  - nuxt
   - '@nuxt/*'
 minimumReleaseAgeExcludePrune: true

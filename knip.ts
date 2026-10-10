@@ -7,7 +7,6 @@ export default {
     'test/**/setup.ts',
   ],
   ignoreDependencies: [
-    'h3',
     'nitropack',
     'vue-tsc',
   ],
