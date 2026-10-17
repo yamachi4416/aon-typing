@@ -35,14 +35,19 @@
         :aria-label="name"
       >
         <NuxtLink
-          :to="id ? { name: 'index-problems-id', params: { id } } : undefined"
-          :title="id ? `${name}の駅いちらんのタイピング問題を表示` : undefined"
+          v-if="id"
+          :to="{ name: 'index-problems-id', params: { id } }"
+          :title="`${name}の駅いちらんのタイピング問題を表示`"
         >
-          <span v-if="id" :class="$style.code">No.{{ id }}</span>
-          <span v-else :class="$style.code">(問題未作成)</span>
+          <span :class="$style.code">No.{{ id }}</span>
           <span :class="$style.yomi">{{ yomi }}</span>
           <div>{{ name }}</div>
         </NuxtLink>
+        <span v-else>
+          <span :class="$style.code">(問題未作成)</span>
+          <span :class="$style.yomi">{{ yomi }}</span>
+          <div>{{ name }}</div>
+        </span>
       </li>
     </ol>
   </div>
@@ -75,7 +80,7 @@ useHead({
 .lists {
   @include cmps.listCard;
 
-  & a:not([href]) * {
+  & li:not(:has([href])) * {
     color: var(--color-9);
   }
 }

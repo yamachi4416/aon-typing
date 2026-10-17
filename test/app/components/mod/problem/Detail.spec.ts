@@ -7,10 +7,10 @@ import { ModProblemDetail } from '#components'
 
 describe('ModProblemDetail', () => {
   type Props = ComponentProps<typeof ModProblemDetail>
-  type Slots = Pick<ComponentSlots<typeof ModProblemDetail>, 'default' | 'right'>
+  type Slots = Pick<ComponentSlots<typeof ModProblemDetail>, 'default' | 'right' | 'railway'>
 
   async function mountComponent(props: Props, slots: Slots = {}) {
-    return await mountSuspended(ModProblemDetail, { props, slots: slots })
+    return await mountSuspended(ModProblemDetail, { props, slots })
   }
 
   function detailItem(value: Partial<ProblemDetail>): ProblemDetail {
@@ -135,32 +135,6 @@ describe('ModProblemDetail', () => {
       const corps = findTableValueCell(component, '鉄道会社').findAll('span')
       expect(corps.map((x) => x.text())).toEqual(['CorporationName'])
     })
-
-    it('onRailwayを指定するとリンクが表示される', async () => {
-      useState('/api/railway/corporations.json').value = [{
-        code: '0001',
-        name: 'CorporationName',
-        operationLines: [],
-      }] satisfies RailwayCorporation[]
-
-      const onRailway = vi.fn()
-
-      const component = await mountComponent({
-        detail: detailItem({ optional: { coCd: ['1'] } }),
-        onRailway,
-      })
-
-      const corps = findTableValueCell(component, '鉄道会社').findAll('a')
-      expect(corps.map((x) => x.text())).toEqual(['CorporationName'])
-
-      await corps[0]?.trigger('click')
-
-      expect(onRailway).toHaveBeenCalledTimes(1)
-      expect(onRailway).toHaveBeenCalledWith({
-        code: '0001',
-        name: 'CorporationName',
-      })
-    })
   })
 
   it('問題のワード一覧が表示される', async () => {
@@ -225,6 +199,25 @@ describe('ModProblemDetail', () => {
 
       const content = new DOMWrapper(component.find('section').element.nextElementSibling)
       expect(content.exists()).toBe(false)
+    })
+  })
+
+  describe('slot.railway', () => {
+    it('指定した場合は表示される', async () => {
+      useState('/api/railway/corporations.json').value = [{
+        code: '0001',
+        name: 'CorporationName',
+        operationLines: [],
+      }] satisfies RailwayCorporation[]
+
+      const component = await mountComponent({
+        detail: detailItem({ optional: { coCd: ['1'] } }),
+      }, {
+        railway: ({ railway }) => h('a', null, railway.name),
+      })
+
+      const corps = findTableValueCell(component, '鉄道会社').findAll('a')
+      expect(corps.map((x) => x.text())).toEqual(['CorporationName'])
     })
   })
 })

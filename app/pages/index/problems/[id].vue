@@ -3,7 +3,6 @@
     <ModProblemDetail
       :detail="detail"
       @tag="navigator.indexTagDetail"
-      @railway="navigator.indexRailwayCorporation"
     >
       <button v-show="navigator.enable" @click="navigator.backOrIndex">
         もどる
@@ -13,6 +12,17 @@
       </button>
       <template #right>
         <ImgNekoUserKeyboard />
+      </template>
+      <template #railway="{ railway }">
+        <NuxtLink
+          :to="{
+            name: 'index-railway-corporations-code',
+            params: { code: railway.code },
+          }"
+          :title="`${railway.name}の路線いちらんを表示`"
+        >
+          {{ railway.name }}
+        </NuxtLink>
       </template>
     </ModProblemDetail>
   </div>

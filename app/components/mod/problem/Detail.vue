@@ -38,14 +38,9 @@
           <tr v-if="railway">
             <th>鉄道会社</th>
             <td>
-              <a
-                v-if="hasOnRailway"
-                :class="$style['railway-link']"
-                @click.prevent="$emit('railway', railway)"
-              >
-                {{ railway.name }}
-              </a>
-              <span v-else>{{ railway.name }}</span>
+              <slot name="railway" :railway>
+                <span>{{ railway.name }}</span>
+              </slot>
             </td>
           </tr>
         </tbody>
@@ -89,13 +84,11 @@ const { detail } = defineProps<{
 
 defineEmits<{
   tag: [tag: ProblemItemTag]
-  railway: [railway: { code: string }]
 }>()
 
 const uid = useId()
 const vnodeProps = computed(() => getCurrentInstance()?.vnode?.props)
 const hasOnTag = computed(() => !!vnodeProps.value?.onTag)
-const hasOnRailway = computed(() => !!vnodeProps.value?.onRailway)
 const { getCorporation } = useRailways()
 const railway = computed(() => getCorporation(detail.optional?.coCd?.[0]))
 </script>
@@ -117,9 +110,5 @@ const railway = computed(() => getCorporation(detail.optional?.coCd?.[0]))
 
 .tags {
   padding: 3px 0;
-}
-
-.railway-link {
-  cursor: pointer;
 }
 </style>
