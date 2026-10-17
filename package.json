@@ -29,7 +29,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^1.17.0",
     "@nuxt/test-utils": "^4.3.4",
-    "@nuxtjs/seo": "^5.3.16",
+    "@nuxtjs/seo": "^6.0.1",
     "@types/node": "^24.19.2",
     "@vitejs/plugin-legacy": "^8.2.3",
     "@vitest/browser-playwright": "^5.0.5",

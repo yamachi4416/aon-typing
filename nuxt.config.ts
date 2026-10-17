@@ -115,6 +115,7 @@ export default defineNuxtConfig({
       })
     },
   },
+  aiReady: false,
   googleFonts: {
     display: 'swap',
     families: {
@@ -124,9 +125,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  ogImage: {
-    enabled: false,
-  },
+  ogImage: false,
   sitemap: {
     zeroRuntime: true,
     credits: false,
