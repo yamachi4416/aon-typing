@@ -1,5 +1,4 @@
-import { setup } from '@nuxt/test-utils'
+import { inject } from 'vitest'
+import { setup } from '@nuxt/test-utils/e2e'
 
-beforeAll(() => {
-  setup({ host: process.env.TEST_ENDPOINT, browser: true })
-})
+await setup({ host: inject('serverUrl'), browser: true })

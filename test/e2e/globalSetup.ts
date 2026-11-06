@@ -1,7 +1,6 @@
 import { resolve } from 'node:path'
+import type { TestProject } from 'vitest/node'
 import { previewServer } from '~~/scripts/lib/preview'
-
-const { close, url } = await getEndpoint()
 
 async function getEndpoint() {
   if (process.env.TEST_ENDPOINT) {
@@ -21,10 +20,18 @@ async function getEndpoint() {
   }
 }
 
-export function setup() {
-  process.env.TEST_ENDPOINT = url
+export default async function setup(project: TestProject) {
+  const { close, url } = await getEndpoint()
+
+  project.provide('serverUrl', url)
+
+  return async () => {
+    await close()
+  }
 }
 
-export async function teardown() {
-  await close()
+declare module 'vitest' {
+  export interface ProvidedContext {
+    serverUrl: string
+  }
 }
