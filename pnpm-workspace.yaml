@@ -10,3 +10,6 @@ minimumReleaseAgeExclude:
   - nuxt
   - '@nuxt/*'
 minimumReleaseAgeExcludePrune: true
+permissions:
+  '@nuxtjs/seo':
+    skills: false
