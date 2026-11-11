@@ -1,0 +1,43 @@
+{
+  "id": "1010670",
+  "title": "北越急行ほくほく線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "words": [
+    { "info": "犀潟", "info2": "さいがた", "word": "saigata" },
+    { "info": "くびき", "info2": "くびき", "word": "kubiki" },
+    {
+      "info": "大池いこいの森",
+      "info2": "おおいけいこいのもり",
+      "word": "ooikeikoinomori"
+    },
+    { "info": "うらがわら", "info2": "うらがわら", "word": "uragawara" },
+    {
+      "info": "虫川大杉",
+      "info2": "むしがわおおすぎ",
+      "word": "musigawaoosugi"
+    },
+    {
+      "info": "ほくほく大島",
+      "info2": "ほくほくおおしま",
+      "word": "hokuhokuoosima"
+    },
+    { "info": "まつだい", "info2": "まつだい", "word": "matudai" },
+    { "info": "十日町", "info2": "とおかまち", "word": "tookamati" },
+    { "info": "しんざ", "info2": "しんざ", "word": "sinza" },
+    { "info": "美佐島", "info2": "みさしま", "word": "misasima" },
+    {
+      "info": "魚沼丘陵",
+      "info2": "うおぬまきゅうりょう",
+      "word": "uonumakyuuryou"
+    },
+    { "info": "六日町", "info2": "むいかまち", "word": "muikamati" }
+  ],
+  "optional": { "cd": ["670"], "coCd": ["175"] }
+}

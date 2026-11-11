@@ -1,0 +1,27 @@
+{
+  "id": "1010790",
+  "title": "しなの鉄道北しなの線の駅いちらん",
+  "type": "japanese",
+  "tags": [
+    { "id": "00009", "name": "日本語" },
+    { "id": "00007", "name": "地理" },
+    { "id": "00019", "name": "駅名" }
+  ],
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "words": [
+    {
+      "info": "妙高高原",
+      "info2": "みょうこうこうげん",
+      "word": "myoukoukougenn"
+    },
+    { "info": "黒姫", "info2": "くろひめ", "word": "kurohime" },
+    { "info": "古間", "info2": "ふるま", "word": "huruma" },
+    { "info": "牟礼", "info2": "むれ", "word": "mure" },
+    { "info": "豊野", "info2": "とよの", "word": "toyono" },
+    { "info": "三才", "info2": "さんさい", "word": "sansai" },
+    { "info": "北長野", "info2": "きたながの", "word": "kitanagano" },
+    { "info": "長野", "info2": "ながの", "word": "nagano" }
+  ],
+  "optional": { "cd": ["790"], "coCd": ["176"] }
+}
